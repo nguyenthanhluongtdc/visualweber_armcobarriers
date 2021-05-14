@@ -50,7 +50,7 @@ server {
     # REQUIREMENTS : Enable PHP Support
     location ~ \.php$ {
         fastcgi_param   NODE_ENV development;
-        fastcgi_param   APP_ENV development;
+        fastcgi_param   APP_ENV local;
         fastcgi_param   APPLICATION_ENV development;
         fastcgi_param   CI_ENV development; ## For CI framework
         fastcgi_param   ENVIRONMENT development; ## For CI framework

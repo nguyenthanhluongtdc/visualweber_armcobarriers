@@ -323,7 +323,7 @@ fi
 ################ without symlink
 (cd $SCRIPT_PATH/../ && $ZIP -r4uy $BACKUP_SOURCENAME . -x \*.buildpath/\* \*.idea/\* \*.project/\* \*nbproject/\* \*.git/\* \*.svn/\* \*.gitignore\* \*.gitattributes\* \*.md \*.MD \*.log \*.zip \*.tar.gz \*.gz \*.tar \*.rar \*.DS_Store \*.lock \*desktop.ini vhost-nginx.conf \*.tmp \*.bat bin/delivery.sh bin/remove-botble.sh readme.html composer.lock wp-config.secure.php)
 
-(cd $SCRIPT_PATH/../ && $MYSQLDUMP -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR --default-character-set utf8 dev_armcobarriers > $BACKUP_SQLNAME)
+(cd $SCRIPT_PATH/../ && $MYSQLDUMP -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p --default-character-set utf8 dev_armcobarriers > $BACKUP_SQLNAME)
 
 ## (cd $SCRIPT_PATH/../ && $CHOWN -R dev:dev .)
 

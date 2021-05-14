@@ -165,14 +165,14 @@ $ bash /home/dev/htdocs/armcobarriers/bin/delivery.sh
 
 - Mysql DB Name: dev_armcobarriers
 - Mysql DB User: userdb.dev.armcobarriers
-- Mysql DB Password: FOGKOcLyNdTqFPBR
+- Mysql DB Password: hOE60pPIXZZxNn0p
 ```
 ##### MongoDB Database:
 
 ```
 - Mongo DB Name: dev_armcobarriers
 - Mongo DB User: userdb.dev.armcobarriers
-- Mongo DB Password: FOGKOcLyNdTqFPBR
+- Mongo DB Password: hOE60pPIXZZxNn0p
 ```
 
 ##### SMTP settings (General projects):
@@ -650,24 +650,24 @@ Mysql basic commandline
 * Backup your MySQL Database
 
 ```
-mysqldump  -hlocalhost -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR dev_armcobarriers > dev_armcobarriers.sql
+mysqldump  -hlocalhost -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p dev_armcobarriers > dev_armcobarriers.sql
 mysqldump  -uuserdb.dev.armcobarriers -p dev_armcobarriers > dev_armcobarriers.sql
-mysqldump  -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR dev_armcobarriers | gzip -9 > dev_armcobarriers.sql.gz
-mysqldump  -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR --default-character-set utf8 dev_armcobarriers  > dev_armcobarriers.mysql
+mysqldump  -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p dev_armcobarriers | gzip -9 > dev_armcobarriers.sql.gz
+mysqldump  -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p --default-character-set utf8 dev_armcobarriers  > dev_armcobarriers.mysql
 ```
 
 * Restoring your MySQL Database
 
 ```
-mysql -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR dev_armcobarriers < dev_armcobarriers.sql
-mysql -h127.0.0.1 -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR --default-character-set utf8 dev_armcobarriers < dev_armcobarriers.sql
+mysql -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p dev_armcobarriers < dev_armcobarriers.sql
+mysql -h127.0.0.1 -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p --default-character-set utf8 dev_armcobarriers < dev_armcobarriers.sql
 
 
 If you need to restore a database that already exists, you'll need to use mysqlimport command. The syntax for mysqlimport is as follows
-mysqlimport -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR dev_armcobarriers < dev_armcobarriers.sql
+mysqlimport -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p dev_armcobarriers < dev_armcobarriers.sql
 
 To restore compressed backup files you can do the following:
-gunzip < dev_armcobarriers.sql.gz | mysql -uuserdb.dev.armcobarriers -pFOGKOcLyNdTqFPBR dev_armcobarriers
+gunzip < dev_armcobarriers.sql.gz | mysql -uuserdb.dev.armcobarriers -phOE60pPIXZZxNn0p dev_armcobarriers
 
 Restore from FILE:
 mysql.exe --defaults-file="c:\users\anonym~1\appdata\local\temp\tmpn3ytli.cnf"  --protocol=tcp --host=127.0.0.1 --user=userdb.dev.armcobarriers --port=3306 --default-character-set=utf8 --comments  < "E:\\dev_armcobarriers.sql"
@@ -685,15 +685,15 @@ Mongo basic commandline
 ```
 - Mongo DB Name: dev_armcobarriers
 - Mongo DB User: userdb.dev.armcobarriers
-- Mongo DB Password: FOGKOcLyNdTqFPBR
+- Mongo DB Password: hOE60pPIXZZxNn0p
 
-sudo mongodump --host localhost:27017 -u userdb.dev.armcobarriers -p FOGKOcLyNdTqFPBR --db dev_armcobarriers --out mongodb-2017-04-09.json
+sudo mongodump --host localhost:27017 -u userdb.dev.armcobarriers -p hOE60pPIXZZxNn0p --db dev_armcobarriers --out mongodb-2017-04-09.json
 ```
 
 * Restore your MongoDB Database
 
 ```
-sudo mongorestore --host localhost:27017 -u userdb.dev.armcobarriers -p FOGKOcLyNdTqFPBR --db dev_armcobarriers --drop /home/jobsin/mongodb-2017-04-09.json/dev_armcobarriers
+sudo mongorestore --host localhost:27017 -u userdb.dev.armcobarriers -p hOE60pPIXZZxNn0p --db dev_armcobarriers --drop /home/jobsin/mongodb-2017-04-09.json/dev_armcobarriers
 ```
 
 * Create users
@@ -708,7 +708,7 @@ $ db
 $ db.createUser( { user: "root",pwd: "your-password",roles: [ "userAdmin"] } )
 
 $ use dev_armcobarriers
-$ db.createUser( { user: "userdb.dev.armcobarriers",pwd: "FOGKOcLyNdTqFPBR",roles: [ {role:"readWrite",db:"dev_armcobarriers"}] } )
+$ db.createUser( { user: "userdb.dev.armcobarriers",pwd: "hOE60pPIXZZxNn0p",roles: [ {role:"readWrite",db:"dev_armcobarriers"}] } )
 ```
 
 * Rockmongo

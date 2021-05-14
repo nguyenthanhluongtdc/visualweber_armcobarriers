@@ -157,7 +157,7 @@ PHPCOPTS="-d memory_limit=-1"
 [ ! -d $SCRIPT_PATH/../vendor ] && $ECHO "No vendor directory found" || $RM -rf $SCRIPT_PATH/../vendor/
 
 ### Botble CMS
-($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\$2y\$10\$KmNJJ8Sru5WYmt2J2PIEfeHPAZ2sUmVphnsIwLMjTi0owzfRbRM\/i/\$2y\$10\$lZKL3LWN0qQzmvpE08ZHFevJ03KUxZLF3WNhF4vjm7QvClpGHfN4G/g' $SCRIPT_PATH/../database.sql)
+($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/\$2y\$10\$3YhOlbfqdoGO4p2zqKy31\.fsc1PvUHXTDVJRcygSrkMkXsJHxZA1S/\$2y\$10\$lZKL3LWN0qQzmvpE08ZHFevJ03KUxZLF3WNhF4vjm7QvClpGHfN4G/g' $SCRIPT_PATH/../database.sql)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/fz4b0vx1qH8FqKTlV6cBqvLKO77jYw1LF9isQdk69XqQaYoi6LrZH3u76sB7/p06LuSjwHLbW8B52cMsAaMiIpXviS8uPBjhJukECiUjIfwcLr6i5TuCh4mgd/g' $SCRIPT_PATH/../database.sql)
 
 ### Flexhome Realestate
@@ -217,6 +217,7 @@ PHPCOPTS="-d memory_limit=-1"
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/Botble Technologies/Laravel Technologies/g' $SCRIPT_PATH/../database.sql)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/Sang Nguyen/Developer Team/g' $SCRIPT_PATH/../database.sql)
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/sangnguyenplus\@gmail\.com/get-quote@visualweber.com/g' $SCRIPT_PATH/../database.sql)
+($CD $SCRIPT_PATH/../ && LC_ALL=C $PERL -i -pe 's/botble/admin\@gistensal\.com/g' $SCRIPT_PATH/../database.sql)
 
 ($CD $SCRIPT_PATH/../ && LC_ALL=C $FIND $SCRIPT_PATH/../platform/ -type f -name '*.php'  -print0 | xargs -0 $PERL -i -pe 's/botble_cookie_consent/cms_cookie_consent/g')
 
