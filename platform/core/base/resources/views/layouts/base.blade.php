@@ -29,11 +29,15 @@
 
     {!! Assets::renderHeader(['core']) !!}
 
+    @if (BaseHelper::siteLanguageDirection() == 'rtl' && false)
+        <link rel="stylesheet" href="{{ asset('vendor/core/core/base/css/rtl.css') }}">
+    @endif
+
     @yield('head')
 
     @stack('header')
 </head>
-<body class="@yield('body-class', 'page-sidebar-closed-hide-logo page-content-white page-container-bg-solid')" style="@yield('body-style')">
+<body @if (BaseHelper::siteLanguageDirection() == 'rtl' && false) dir="rtl" @endif class="@yield('body-class', 'page-sidebar-closed-hide-logo page-content-white page-container-bg-solid')" style="@yield('body-style')">
     {!! apply_filters(BASE_FILTER_HEADER_LAYOUT_TEMPLATE, null) !!}
 
     @yield('page')

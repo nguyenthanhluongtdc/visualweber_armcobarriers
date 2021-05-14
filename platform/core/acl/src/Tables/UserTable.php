@@ -136,7 +136,8 @@ class UserTable extends TableAbstract
             'users.super_user',
         ];
 
-        $query = $model->leftJoin('role_users', 'users.id', '=', 'role_users.user_id')
+        $query = $model
+            ->leftJoin('role_users', 'users.id', '=', 'role_users.user_id')
             ->leftJoin('roles', 'roles.id', '=', 'role_users.role_id')
             ->select($select);
 
@@ -276,9 +277,12 @@ class UserTable extends TableAbstract
         }
 
         if ($inputKey === 'users.status') {
+
+            $hasWarning = false;
+
             foreach ($ids as $id) {
-                if ($inputValue == UserStatusEnum::DEACTIVATED && Auth::user()->getKey() == $id) {
-                    throw new Exception(trans('core/acl::users.lock_user_logged_in'));
+                if ($inputValue == UserStatusEnum::DEACTIVATED && Auth::id() == $id) {
+                    $hasWarning = true;
                 }
 
                 $user = $this->repository->findOrFail($id);
@@ -288,7 +292,12 @@ class UserTable extends TableAbstract
                 } else {
                     app(ActivationInterface::class)->remove($user);
                 }
+
                 event(new UpdatedContentEvent(USER_MODULE_SCREEN_NAME, request(), $user));
+            }
+
+            if ($hasWarning) {
+                throw new Exception(trans('core/acl::users.lock_user_logged_in'));
             }
 
             return true;

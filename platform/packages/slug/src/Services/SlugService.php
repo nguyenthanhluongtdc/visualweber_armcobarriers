@@ -29,7 +29,12 @@ class SlugService
      */
     public function create($name, $slugId = 0, $model = null)
     {
-        $slug = Str::slug($name);
+        if (!SlugHelper::turnOffAutomaticUrlTranslationIntoLatin()) {
+            $slug = Str::slug($name);
+        } else {
+            $slug = $name;
+        }
+
         $index = 1;
         $baseSlug = $slug;
 

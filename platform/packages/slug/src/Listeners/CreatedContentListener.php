@@ -44,7 +44,11 @@ class CreatedContentListener
                 }
 
                 if (!$slug && $event->data->name) {
-                    $slug = Str::slug($event->data->name);
+                    if (!SlugHelper::turnOffAutomaticUrlTranslationIntoLatin()) {
+                        $slug = Str::slug($event->data->name);
+                    } else {
+                        $slug = $event->data->name;
+                    }
                 }
 
                 if (!$slug) {

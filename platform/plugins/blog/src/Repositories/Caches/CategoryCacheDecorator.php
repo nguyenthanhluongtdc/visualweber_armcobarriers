@@ -74,7 +74,7 @@ class CategoryCacheDecorator extends CacheAbstractDecorator implements CategoryI
     /**
      * {@inheritDoc}
      */
-    public function getPopularCategories(int $limit)
+    public function getPopularCategories(int $limit, array $with = ['slugable'], array $withCount = ['posts'])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

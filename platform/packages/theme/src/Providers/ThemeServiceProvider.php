@@ -11,6 +11,7 @@ use Platform\Theme\Commands\ThemeRemoveCommand;
 use Platform\Theme\Contracts\Theme as ThemeContract;
 use Platform\Theme\Http\Middleware\AdminBarMiddleware;
 use Platform\Theme\Theme;
+use Platform\Theme\Commands\ThemeRenameCommand;
 use Event;
 use File;
 use Illuminate\Routing\Events\RouteMatched;
@@ -39,6 +40,7 @@ class ThemeServiceProvider extends ServiceProvider
             ThemeRemoveCommand::class,
             ThemeAssetsPublishCommand::class,
             ThemeAssetsRemoveCommand::class,
+            ThemeRenameCommand::class,
         ]);
     }
 

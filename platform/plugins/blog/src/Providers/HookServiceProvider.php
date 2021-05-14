@@ -6,7 +6,6 @@ use Assets;
 use Platform\Base\Enums\BaseStatusEnum;
 use Platform\Blog\Models\Category;
 use Platform\Blog\Models\Tag;
-use Platform\Blog\Repositories\Interfaces\PostInterface;
 use Platform\Blog\Services\BlogService;
 use Platform\Dashboard\Supports\DashboardWidgetInstance;
 use Platform\Page\Models\Page;
@@ -173,7 +172,7 @@ class HookServiceProvider extends ServiceProvider
      */
     public function renderBlogPosts($shortcode)
     {
-        $posts = $this->app->make(PostInterface::class)->getAllPosts($shortcode->paginate, true, ['slugable', 'categories', 'categories.slugable']);
+        $posts = get_all_posts($shortcode->paginate, true, ['slugable', 'categories', 'categories.slugable', 'author']);
 
         $view = 'plugins/blog::themes.templates.posts';
         $themeView = Theme::getThemeNamespace() . '::views.templates.posts';
@@ -198,7 +197,8 @@ class HookServiceProvider extends ServiceProvider
             if (view()->exists(Theme::getThemeNamespace() . '::views.loop')) {
                 $view = Theme::getThemeNamespace() . '::views.loop';
             }
-            return view($view, ['posts' => get_all_posts()])->render();
+            return view($view, ['posts' => get_all_posts(true, 12, ['slugable', 'categories', 'categories.slugable', 'author'])])
+                ->render();
         }
 
         return $content;

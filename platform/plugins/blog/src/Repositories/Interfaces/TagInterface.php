@@ -14,9 +14,11 @@ interface TagInterface extends RepositoryInterface
 
     /**
      * @param int $limit
-     * @return array
+     * @param array|string[] $with
+     * @param array $withCount
+     * @return mixed
      */
-    public function getPopularTags($limit);
+    public function getPopularTags($limit, array $with = ['slugable'], array $withCount = ['posts']);
 
     /**
      * @param bool $active

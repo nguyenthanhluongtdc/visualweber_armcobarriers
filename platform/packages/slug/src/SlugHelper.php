@@ -151,4 +151,12 @@ class SlugHelper
     {
         return 'permalink-' . Str::slug(str_replace('\\', '_', $model));
     }
+
+    /**
+     * @return bool
+     */
+    public function turnOffAutomaticUrlTranslationIntoLatin(): bool
+    {
+        return setting('slug_turn_off_automatic_url_translation_into_latin', 0) == 1;
+    }
 }

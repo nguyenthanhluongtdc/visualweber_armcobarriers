@@ -102,7 +102,7 @@ class PostController extends BaseController
          * @var Post $post
          */
         $post = $this->postRepository->createOrUpdate(array_merge($request->input(), [
-            'author_id'   => Auth::user()->getKey(),
+            'author_id'   => Auth::id(),
             'author_type' => User::class,
         ]));
 
@@ -208,7 +208,7 @@ class PostController extends BaseController
      */
     public function getWidgetRecentPosts(Request $request, BaseHttpResponse $response)
     {
-        $limit = $request->input('paginate', 10);
+        $limit = (int)$request->input('paginate', 10);
         $posts = $this->postRepository->getModel()
             ->orderBy('posts.created_at', 'desc')
             ->with('slugable')

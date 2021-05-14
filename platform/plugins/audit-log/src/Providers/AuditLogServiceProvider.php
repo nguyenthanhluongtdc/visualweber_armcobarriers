@@ -2,6 +2,7 @@
 
 namespace Platform\AuditLog\Providers;
 
+use Platform\AuditLog\Commands\CleanOldLogsCommand;
 use Platform\AuditLog\Facades\AuditLogFacade;
 use Platform\AuditLog\Models\AuditHistory;
 use Platform\AuditLog\Repositories\Caches\AuditLogCacheDecorator;
@@ -10,6 +11,7 @@ use Platform\AuditLog\Repositories\Interfaces\AuditLogInterface;
 use Platform\Base\Supports\Helper;
 use Platform\Base\Traits\LoadAndPublishDataTrait;
 use Event;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Support\ServiceProvider;
@@ -60,6 +62,10 @@ class AuditLogServiceProvider extends ServiceProvider
 
         $this->app->booted(function () {
             $this->app->register(HookServiceProvider::class);
+
+            $schedule = $this->app->make(Schedule::class);
+
+            $schedule->command(CleanOldLogsCommand::class)->dailyAt('00:30');
         });
     }
 }

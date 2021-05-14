@@ -18,7 +18,7 @@ class TagCacheDecorator extends CacheAbstractDecorator implements TagInterface
     /**
      * {@inheritDoc}
      */
-    public function getPopularTags($limit)
+    public function getPopularTags($limit, array $with = ['slugable'], array $withCount = ['posts'])
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }

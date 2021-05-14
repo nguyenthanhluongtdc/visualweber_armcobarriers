@@ -152,11 +152,11 @@ class CategoryRepository extends RepositoriesAbstract implements CategoryInterfa
     /**
      * {@inheritDoc}
      */
-    public function getPopularCategories(int $limit)
+    public function getPopularCategories(int $limit, array $with = ['slugable'], array $withCount = ['posts'])
     {
         $data = $this->model
-            ->with('slugable')
-            ->withCount('posts')
+            ->with($with)
+            ->withCount($withCount)
             ->orderBy('posts_count', 'desc')
             ->where('categories.status', BaseStatusEnum::PUBLISHED)
             ->limit($limit);

@@ -25,6 +25,7 @@ return [
     'edit'                     => 'Edit',
     'delete'                   => 'Delete',
     'locale'                   => 'Locale',
+    'locale_placeholder'       => 'Ex: en',
     'name'                     => 'Name',
     'default_locale'           => 'Default locale?',
     'actions'                  => 'Actions',
@@ -33,4 +34,5 @@ return [
     'select_language'          => 'Select language',
     'flag'                     => 'Flag',
     'confirm_delete_message'   => 'Do you really want to delete this locale? It will delete all files/folders for this local in /resources/lang!',
+    'folder_is_not_writeable'  => 'Cannot write files! Folder /resources/lang is not writable. Please chmod to make it writable!',
 ];

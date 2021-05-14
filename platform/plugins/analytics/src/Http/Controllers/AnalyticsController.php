@@ -2,11 +2,11 @@
 
 namespace Platform\Analytics\Http\Controllers;
 
+use Analytics;
 use Platform\Analytics\Exceptions\InvalidConfiguration;
 use Platform\Analytics\Period;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
-use Analytics;
 use Carbon\Carbon;
 use Exception;
 use Throwable;
@@ -21,8 +21,8 @@ class AnalyticsController extends BaseController
      */
     public function getGeneral(BaseHttpResponse $response)
     {
-        $startDate = Carbon::today()->startOfDay();
-        $endDate = Carbon::today()->endOfDay();
+        $startDate = today()->startOfDay();
+        $endDate = today()->endOfDay();
         $dimensions = 'hour';
 
         try {
@@ -81,8 +81,8 @@ class AnalyticsController extends BaseController
      */
     public function getTopVisitPages(BaseHttpResponse $response)
     {
-        $startDate = Carbon::today()->startOfDay();
-        $endDate = Carbon::today()->endOfDay();
+        $startDate = today()->startOfDay();
+        $endDate = today()->endOfDay();
 
         try {
             $period = Period::create($startDate, $endDate);
@@ -108,8 +108,8 @@ class AnalyticsController extends BaseController
      */
     public function getTopBrowser(BaseHttpResponse $response)
     {
-        $startDate = Carbon::today()->startOfDay();
-        $endDate = Carbon::today()->endOfDay();
+        $startDate = today()->startOfDay();
+        $endDate = today()->endOfDay();
 
         try {
             $period = Period::create($startDate, $endDate);
@@ -135,8 +135,8 @@ class AnalyticsController extends BaseController
      */
     public function getTopReferrer(BaseHttpResponse $response)
     {
-        $startDate = Carbon::today()->startOfDay();
-        $endDate = Carbon::today()->endOfDay();
+        $startDate = today()->startOfDay();
+        $endDate = today()->endOfDay();
 
         try {
             $period = Period::create($startDate, $endDate);

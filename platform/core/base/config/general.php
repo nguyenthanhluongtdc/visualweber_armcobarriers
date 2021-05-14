@@ -30,6 +30,9 @@ return [
         ],
     ],
     'enable_https_support'      => env('ENABLE_HTTPS_SUPPORT', false),
+    'force_root_url'            => env('FORCE_ROOT_URL'),
+    'force_schema'              => env('FORCE_SCHEMA'),
+    'memory_limit'              => env('CMS_MEMORY_LIMIT'),
     'date_format'               => [
         'date'      => 'Y-m-d',
         'date_time' => 'Y-m-d H:i:s',
@@ -275,7 +278,7 @@ return [
         'Zeyada',
     ],
 
-    'countries'                 => [
+    'countries' => [
         'AF' => 'Afghanistan',
         'AX' => 'Åland Islands',
         'AL' => 'Albania',

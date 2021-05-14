@@ -19,7 +19,7 @@
             </tbody>
         </table>
     </div>
-    @if ($posts->total() > $limit)
+    @if ($posts instanceof Illuminate\Pagination\LengthAwarePaginator && $posts->total() > $limit)
         <div class="widget_footer">
             @include('core/dashboard::partials.paginate', ['data' => $posts, 'limit' => $limit])
         </div>

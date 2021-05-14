@@ -107,7 +107,7 @@ class PostTable extends TableAbstract
                 return rtrim($categories, ', ');
             })
             ->editColumn('author_id', function ($item) {
-                return $item->author ? $item->author->getFullName() : null;
+                return $item->author ? $item->author->name : null;
             })
             ->editColumn('status', function ($item) {
                 if ($this->request()->input('action') === 'excel') {

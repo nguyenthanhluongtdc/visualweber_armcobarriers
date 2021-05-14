@@ -248,15 +248,15 @@ class RvMedia
      * @param bool $relative
      * @return string
      */
-    public function getDefaultImage(bool $relative = true): string
+    public function getDefaultImage(bool $relative = false): string
     {
         $default = config('core.media.media.default_image');
 
-        if ($default && !$relative) {
-            return url($default);
+        if ($relative) {
+            return $default;
         }
 
-        return $default;
+        return $default ? url($default) : $default;
     }
 
     /**
@@ -484,7 +484,7 @@ class RvMedia
 
                 if (!$folder) {
                     $folder = $this->folderRepository->createOrUpdate([
-                        'user_id'   => Auth::check() ? Auth::user()->getKey() : 0,
+                        'user_id'   => Auth::check() ? Auth::id() : 0,
                         'name'      => $this->folderRepository->createName($folderSlug, 0),
                         'slug'      => $this->folderRepository->createSlug($folderSlug, 0),
                         'parent_id' => 0,
@@ -528,7 +528,7 @@ class RvMedia
             $file->size = $data['size'];
             $file->mime_type = $data['mime_type'];
             $file->folder_id = $folderId;
-            $file->user_id = Auth::check() ? Auth::user()->getKey() : 0;
+            $file->user_id = Auth::check() ? Auth::id() : 0;
             $file->options = request()->input('options', []);
             $file = $this->fileRepository->createOrUpdate($file);
 
@@ -624,7 +624,8 @@ class RvMedia
                 setting('watermark_position_y', config('core.media.media.watermark.y'))
             );
 
-            $destinationPath = sprintf('%s/%s', trim(File::dirname($file->url), '/'), File::name($file->url) . '.' . File::extension($file->url));
+            $destinationPath = sprintf('%s/%s', trim(File::dirname($file->url), '/'),
+                File::name($file->url) . '.' . File::extension($file->url));
 
             $this->uploadManager->saveFile($destinationPath, $image->stream()->__toString());
         }
@@ -760,5 +761,36 @@ class RvMedia
         $fileUpload = new UploadedFile($path, $fileName . '.' . $fileExtension, $mimeType, null, true);
 
         return $this->handleUpload($fileUpload, $folderId, $folderSlug);
+    }
+
+    /**
+     * @return string
+     */
+    public function getUploadPath(): string
+    {
+        return public_path('storage');
+    }
+
+    /**
+     * @return string
+     */
+    public function getUploadURL(): string
+    {
+        return str_replace('/index.php', '', url('storage'));
+    }
+
+    /**
+     * @return $this
+     */
+    public function setUploadPathAndURLToPublic(): self
+    {
+        add_action('init', function () {
+            config([
+                'filesystems.disks.public.root' => $this->getUploadPath(),
+                'filesystems.disks.public.url'  => $this->getUploadURL(),
+            ]);
+        }, 124);
+
+        return $this;
     }
 }

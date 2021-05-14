@@ -71,7 +71,7 @@ class PageController extends BaseController
     public function store(PageRequest $request, BaseHttpResponse $response)
     {
         $page = $this->pageRepository->createOrUpdate(array_merge($request->input(), [
-            'user_id' => Auth::user()->getKey(),
+            'user_id' => Auth::id(),
         ]));
 
         event(new CreatedContentEvent(PAGE_MODULE_SCREEN_NAME, $request, $page));

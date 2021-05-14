@@ -2,7 +2,7 @@
 
 namespace Platform\Analytics;
 
-use DateTime;
+use DateTimeInterface;
 use Google_Service_Analytics;
 use Illuminate\Contracts\Cache\Repository;
 
@@ -39,6 +39,7 @@ class AnalyticsClient
      * Set the cache time.
      *
      * @param int $cacheLifeTimeInMinutes
+     *
      * @return self
      */
     public function setCacheLifeTimeInMinutes(int $cacheLifeTimeInMinutes)
@@ -52,8 +53,8 @@ class AnalyticsClient
      * Query the Google Analytics Service with given parameters.
      *
      * @param string $viewId
-     * @param \DateTime $startDate
-     * @param \DateTime $endDate
+     * @param \DateTimeInterface $startDate
+     * @param \DateTimeInterface $endDate
      * @param string $metrics
      * @param array $others
      *
@@ -61,8 +62,8 @@ class AnalyticsClient
      */
     public function performQuery(
         string $viewId,
-        DateTime $startDate,
-        DateTime $endDate,
+        DateTimeInterface $startDate,
+        DateTimeInterface $endDate,
         string $metrics,
         array $others = []
     ) {

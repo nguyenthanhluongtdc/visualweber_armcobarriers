@@ -3,30 +3,33 @@
 if (!function_exists('register_widget')) {
     /**
      * @param string $widgetId
+     * @return \Platform\Widget\Factories\WidgetFactory
      */
     function register_widget($widgetId)
     {
-        Widget::registerWidget($widgetId);
+        return Widget::registerWidget($widgetId);
     }
 }
 
 if (!function_exists('register_sidebar')) {
     /**
      * @param array $args
+     * @return WidgetGroup
      */
     function register_sidebar($args)
     {
-        WidgetGroup::setGroup($args);
+        return WidgetGroup::setGroup($args);
     }
 }
 
 if (!function_exists('remove_sidebar')) {
     /**
      * @param string $sidebarId
+     * @return \Platform\Widget\WidgetGroupCollection
      */
     function remove_sidebar(string $sidebarId)
     {
-        WidgetGroup::removeGroup($sidebarId);
+        return WidgetGroup::removeGroup($sidebarId);
     }
 }
 

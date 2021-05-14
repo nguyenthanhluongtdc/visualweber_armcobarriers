@@ -4,8 +4,11 @@ namespace Platform\Base\Supports;
 
 use Platform\Media\Models\MediaFile;
 use Platform\Media\Models\MediaFolder;
+use Platform\Setting\Models\Setting;
 use File;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 use Mimey\MimeTypes;
 use RvMedia;
 
@@ -30,5 +33,30 @@ class BaseSeeder extends Seeder
         }
 
         return $files;
+    }
+
+    /**
+     * @return array
+     * @throws \Exception
+     */
+    public function activateAllPlugins(): array
+    {
+        Setting::where('key', 'activated_plugins')->delete();
+
+        $plugins = array_values(scan_folder(plugin_path()));
+
+        foreach ($plugins as $key => $plugin) {
+            $content = get_file_data(plugin_path($plugin) . '/plugin.json');
+            if (empty($content) || !Arr::get($content, 'ready', 1)) {
+                Arr::forget($plugins, $key);
+            }
+        }
+
+        Setting::create([
+            'key'   => 'activated_plugins',
+            'value' => json_encode($plugins),
+        ]);
+
+        return $plugins;
     }
 }

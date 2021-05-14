@@ -3,6 +3,7 @@
 namespace Platform\Base\Providers;
 
 use Platform\Base\Commands\ClearLogCommand;
+use Platform\Base\Commands\InstallCommand;
 use Illuminate\Support\ServiceProvider;
 
 class CommandServiceProvider extends ServiceProvider
@@ -11,6 +12,7 @@ class CommandServiceProvider extends ServiceProvider
     {
         $this->commands([
             ClearLogCommand::class,
+            InstallCommand::class,
         ]);
     }
 }

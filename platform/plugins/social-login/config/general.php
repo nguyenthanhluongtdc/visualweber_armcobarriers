@@ -1,9 +1,9 @@
 <?php
 
-use Platform\Ecommerce\Models\Customer;
+use Platform\Member\Models\Member;
 
 return [
     'supported' => [
-        Customer::class,
+        Member::class,
     ],
 ];

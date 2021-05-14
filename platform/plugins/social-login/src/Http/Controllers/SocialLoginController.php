@@ -5,11 +5,10 @@ namespace Platform\SocialLogin\Http\Controllers;
 use Assets;
 use Platform\Base\Http\Controllers\BaseController;
 use Platform\Base\Http\Responses\BaseHttpResponse;
-use Platform\Ecommerce\Repositories\Interfaces\CustomerInterface;
+use Platform\Member\Repositories\Interfaces\MemberInterface;
 use Platform\Setting\Supports\SettingStore;
 use Platform\SocialLogin\Http\Requests\SocialLoginRequest;
 use Exception;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use RvMedia;
 use Socialite;
@@ -44,18 +43,18 @@ class SocialLoginController extends BaseController
         } catch (Exception $ex) {
             return $response
                 ->setError()
-                ->setNextUrl(route('customer.login'))
+                ->setNextUrl(route('public.member.login'))
                 ->setMessage($ex->getMessage());
         }
 
         if (!$oAuth->getEmail()) {
             return $response
                 ->setError()
-                ->setNextUrl(route('customer.login'))
+                ->setNextUrl(route('public.member.login'))
                 ->setMessage(__('Cannot login, no email provided!'));
         }
 
-        $account = app(CustomerInterface::class)->getFirstBy(['email' => $oAuth->getEmail()]);
+        $account = app(MemberInterface::class)->getFirstBy(['email' => $oAuth->getEmail()]);
 
         if (!$account) {
             $avatarId = null;
@@ -71,8 +70,11 @@ class SocialLoginController extends BaseController
                 info($exception->getMessage());
             }
 
-            $account = app(CustomerInterface::class)->createOrUpdate([
-                'name'        => $oAuth->getName(),
+            $firstName = implode(' ', explode(' ', $oAuth->getName(), -1));
+
+            $account = app(MemberInterface::class)->createOrUpdate([
+                'first_name'  => $firstName,
+                'last_name'   => trim(str_replace($firstName, '', $oAuth->getName())),
                 'email'       => $oAuth->getEmail(),
                 'verified_at' => now(),
                 'password'    => bcrypt(Str::random(36)),
@@ -80,10 +82,10 @@ class SocialLoginController extends BaseController
             ]);
         }
 
-        Auth::guard('customer')->login($account, true);
+        auth('member')->login($account, true);
 
         return $response
-            ->setNextUrl(route('customer.overview'))
+            ->setNextUrl(route('public.member.dashboard'))
             ->setMessage(trans('core/acl::auth.login.success'));
     }
 

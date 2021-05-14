@@ -15,6 +15,7 @@ mix
     .sass(source + '/resources/assets/sass/core.scss', dist + '/css')
     .sass(source + '/resources/assets/sass/custom/system-info.scss', dist + '/css')
     .sass(source + '/resources/assets/sass/custom/email.scss', dist + '/css')
+    .sass(source + '/resources/assets/sass/rtl.scss', dist + '/css')
 
     .js(source + '/resources/assets/js/app.js', dist + '/js')
     .js(source + '/resources/assets/js/core.js', dist + '/js')

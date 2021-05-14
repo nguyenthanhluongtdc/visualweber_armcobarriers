@@ -3,6 +3,7 @@
 namespace Platform\PluginManagement\Commands;
 
 use Platform\PluginManagement\Services\PluginService;
+use File;
 use Illuminate\Console\Command;
 
 class PluginActivateAllCommand extends Command
@@ -13,6 +14,7 @@ class PluginActivateAllCommand extends Command
      * @var string
      */
     protected $signature = 'cms:plugin:activate:all';
+
     /**
      * The console command description.
      *
@@ -42,6 +44,12 @@ class PluginActivateAllCommand extends Command
      */
     public function handle()
     {
+        $pluginPath = public_path('vendor/core/plugins');
+
+        if (!File::isDirectory($pluginPath)) {
+            File::makeDirectory($pluginPath, 0755, true);
+        }
+
         foreach (scan_folder(plugin_path()) as $plugin) {
             $this->pluginService->activate($plugin);
         }

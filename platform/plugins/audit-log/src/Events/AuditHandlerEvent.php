@@ -52,7 +52,7 @@ class AuditHandlerEvent extends Event
     public function __construct($module, $action, $referenceId, $referenceName, $type, $referenceUser = 0)
     {
         if ($referenceUser === 0 && Auth::check()) {
-            $referenceUser = Auth::user()->getKey();
+            $referenceUser = Auth::id();
         }
         $this->module = $module;
         $this->action = $action;

@@ -2,7 +2,6 @@
 
 namespace Platform\DevTool\Providers;
 
-use Platform\DevTool\Commands\InstallCommand;
 use Platform\DevTool\Commands\LocaleCreateCommand;
 use Platform\DevTool\Commands\LocaleRemoveCommand;
 use Platform\DevTool\Commands\Make\ControllerMakeCommand;
@@ -36,7 +35,6 @@ class CommandServiceProvider extends ServiceProvider
                 PackageCreateCommand::class,
                 PackageMakeCrudCommand::class,
                 PackageRemoveCommand::class,
-                InstallCommand::class,
                 TestSendMailCommand::class,
                 TruncateTablesCommand::class,
                 RebuildPermissionsCommand::class,

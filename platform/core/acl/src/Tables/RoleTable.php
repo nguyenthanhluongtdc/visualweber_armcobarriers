@@ -76,7 +76,7 @@ class RoleTable extends TableAbstract
                 return BaseHelper::formatDate($item->created_at);
             })
             ->editColumn('created_by', function ($item) {
-                return $item->author->getFullName();
+                return $item->author->name;
             });
 
         return apply_filters(BASE_FILTER_GET_LIST_DATA, $data, $this->repository->getModel())

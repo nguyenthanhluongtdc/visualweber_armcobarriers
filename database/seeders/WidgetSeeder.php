@@ -17,44 +17,160 @@ class WidgetSeeder extends BaseSeeder
     {
         WidgetModel::truncate();
 
-        $widgets = [
-            [
-                'widget_id'  => 'CustomMenuWidget',
-                'sidebar_id' => 'footer_sidebar',
-                'position'   => 1,
-                'data'       => [
-                    'id'      => 'CustomMenuWidget',
-                    'name'    => 'Useful Links',
-                    'menu_id' => 'useful-links',
+        $data = [
+            'en_US' => [
+                [
+                    'widget_id'  => 'RecentPostsWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'RecentPostsWidget',
+                        'name'           => 'Recent Posts',
+                        'number_display' => 5,
+                    ],
+                ],
+                [
+                    'widget_id'  => 'RecentPostsWidget',
+                    'sidebar_id' => 'top_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'RecentPostsWidget',
+                        'name'           => 'Recent Posts',
+                        'number_display' => 5,
+                    ],
+                ],
+                [
+                    'widget_id'  => 'TagsWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'TagsWidget',
+                        'name'           => 'Tags',
+                        'number_display' => 5,
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 1,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Categories',
+                        'menu_id' => 'featured-categories',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 2,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Social',
+                        'menu_id' => 'social',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 1,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Favorite Websites',
+                        'menu_id' => 'favorite-websites',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 2,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'My Links',
+                        'menu_id' => 'my-links',
+                    ],
                 ],
             ],
-            [
-                'widget_id'  => 'CustomMenuWidget',
-                'sidebar_id' => 'footer_sidebar',
-                'position'   => 2,
-                'data'       => [
-                    'id'      => 'CustomMenuWidget',
-                    'name'    => 'Categories',
-                    'menu_id' => 'categories',
+            'vi'    => [
+                [
+                    'widget_id'  => 'RecentPostsWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'RecentPostsWidget',
+                        'name'           => 'Bài viết gần đây',
+                        'number_display' => 5,
+                    ],
                 ],
-            ],
-            [
-                'widget_id'  => 'CustomMenuWidget',
-                'sidebar_id' => 'footer_sidebar',
-                'position'   => 3,
-                'data'       => [
-                    'id'      => 'CustomMenuWidget',
-                    'name'    => 'My Account',
-                    'menu_id' => 'my-account',
+                [
+                    'widget_id'  => 'RecentPostsWidget',
+                    'sidebar_id' => 'top_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'RecentPostsWidget',
+                        'name'           => 'Bài viết gần đây',
+                        'number_display' => 5,
+                    ],
+                ],
+                [
+                    'widget_id'  => 'TagsWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 0,
+                    'data'       => [
+                        'id'             => 'TagsWidget',
+                        'name'           => 'Tags',
+                        'number_display' => 5,
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 1,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Danh mục nổi bật',
+                        'menu_id' => 'danh-muc-noi-bat',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'primary_sidebar',
+                    'position'   => 2,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Mạng xã hội',
+                        'menu_id' => 'social',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 1,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Trang web yêu thích',
+                        'menu_id' => 'trang-web-yeu-thich',
+                    ],
+                ],
+                [
+                    'widget_id'  => 'CustomMenuWidget',
+                    'sidebar_id' => 'footer_sidebar',
+                    'position'   => 2,
+                    'data'       => [
+                        'id'      => 'CustomMenuWidget',
+                        'name'    => 'Liên kết',
+                        'menu_id' => 'lien-ket',
+                    ],
                 ],
             ],
         ];
 
         $theme = Theme::getThemeName();
 
-        foreach ($widgets as $item) {
-            $item['theme'] = $theme;
-            WidgetModel::create($item);
+        foreach ($data as $locale => $widgets) {
+            foreach ($widgets as $item) {
+                $item['theme'] = $locale == 'en_US' ? $theme : ($theme . '-' . $locale);
+                WidgetModel::create($item);
+            }
         }
     }
 }

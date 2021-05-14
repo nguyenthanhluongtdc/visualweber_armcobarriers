@@ -147,6 +147,12 @@ class TranslationController extends BaseController
      */
     public function postPublish(Request $request, BaseHttpResponse $response)
     {
+        if (!File::isWritable(resource_path('lang')) || !File::isWritable(resource_path('lang/vendor'))) {
+            return $response
+                ->setError(true)
+                ->setMessage(trans('plugins/translation::translation.folder_is_not_writeable'));
+        }
+
         $group = $request->input('group');
 
         $this->manager->exportTranslations($group, $group === '_json');
@@ -163,11 +169,18 @@ class TranslationController extends BaseController
 
         Assets::addScriptsDirectly('vendor/core/plugins/translation/js/locales.js');
 
-        $locales = Language::getAvailableLocales();
+        $existingLocales = Language::getAvailableLocales();
         $languages = Language::getListLanguages();
         $flags = Language::getListLanguageFlags();
 
-        return view('plugins/translation::locales', compact('locales', 'languages', 'flags'));
+        $locales = [];
+        foreach ($languages as $item) {
+            if (!in_array($item[0], $locales)) {
+                $locales[$item[0]] = $item[2];
+            }
+        }
+
+        return view('plugins/translation::locales', compact('existingLocales', 'locales', 'flags'));
     }
 
     /**
@@ -177,6 +190,12 @@ class TranslationController extends BaseController
      */
     public function postLocales(LocaleRequest $request, BaseHttpResponse $response)
     {
+        if (!File::isWritable(resource_path('lang')) || !File::isWritable(resource_path('lang/vendor'))) {
+            return $response
+                ->setError(true)
+                ->setMessage(trans('plugins/translation::translation.folder_is_not_writeable'));
+        }
+
         $defaultLocale = resource_path('lang/en');
         $locale = $request->input('locale');
         if (File::exists($defaultLocale)) {
@@ -203,6 +222,13 @@ class TranslationController extends BaseController
     public function deleteLocale($locale, BaseHttpResponse $response)
     {
         if ($locale !== 'en') {
+
+            if (!File::isWritable(resource_path('lang')) || !File::isWritable(resource_path('lang/vendor'))) {
+                return $response
+                    ->setError(true)
+                    ->setMessage(trans('plugins/translation::translation.folder_is_not_writeable'));
+            }
+
             $defaultLocale = resource_path('lang/' . $locale);
             if (File::exists($defaultLocale)) {
                 File::deleteDirectory($defaultLocale);
@@ -332,9 +358,15 @@ class TranslationController extends BaseController
             $json[$translation['key']] = $translation['value'];
         }
 
-        $jsonFile = resource_path('lang/' . $request->input('locale') . '.json');
+        if (!File::isWritable(resource_path('lang'))) {
+            return $response
+                ->setError(true)
+                ->setMessage(trans('plugins/translation::translation.folder_is_not_writeable'));
+        }
 
         ksort($json);
+
+        $jsonFile = resource_path('lang/' . $request->input('locale') . '.json');
 
         File::put($jsonFile, json_encode_prettify($json));
 

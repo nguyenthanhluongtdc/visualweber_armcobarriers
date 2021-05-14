@@ -137,7 +137,7 @@ class DashboardMenu
         $routePrefix = '/' . $prefix;
 
         if (setting('cache_admin_menu_enable', true) && Auth::check()) {
-            $cacheKey = md5('cache-dashboard-menu-' . Auth::user()->getKey());
+            $cacheKey = md5('cache-dashboard-menu-' . Auth::id());
             if (!cache()->has($cacheKey)) {
                 $links = $this->links;
                 cache()->forever($cacheKey, $links);

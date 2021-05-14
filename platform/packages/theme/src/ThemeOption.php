@@ -552,6 +552,9 @@ class ThemeOption
         return $value;
     }
 
+    /**
+     * @return bool|void
+     */
     public function saveOptions()
     {
         return setting()->save();

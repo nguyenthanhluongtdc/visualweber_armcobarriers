@@ -29,6 +29,7 @@ use Illuminate\Routing\ResourceRegistrar;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use MetaBox;
+use URL;
 
 class BaseServiceProvider extends ServiceProvider
 {
@@ -151,6 +152,18 @@ class BaseServiceProvider extends ServiceProvider
         AliasLoader::getInstance()->alias('MacroableModels', MacroableModelsFacade::class);
 
         Paginator::useBootstrap();
+
+        $forceUrl = $this->app->make('config')->get('core.base.general.force_root_url');
+        if (!empty($forceUrl)) {
+            URL::forceRootUrl($forceUrl);
+        }
+
+        $forceSchema = $this->app->make('config')->get('core.base.general.force_schema');
+        if (!empty($forceSchema)) {
+            URL::forceScheme($forceSchema);
+        }
+
+        $this->configureIni();
     }
 
     /**
@@ -186,6 +199,32 @@ class BaseServiceProvider extends ServiceProvider
                 'url'         => route('system.cache'),
                 'permissions' => [ACL_ROLE_SUPER_USER],
             ]);
+    }
+
+    /**
+     * @throws BindingResolutionException
+     */
+    protected function configureIni()
+    {
+        $currentLimit = ini_get('memory_limit');
+        $currentLimitInt = Helper::convertHrToBytes($currentLimit);
+
+        $memoryLimit = $this->app->make('config')->get('core.base.general.memory_limit');
+
+        // Define memory limits.
+        if (!$memoryLimit) {
+            if (false === Helper::isIniValueChangeable('memory_limit')) {
+                $memoryLimit = $currentLimit;
+            } else {
+                $memoryLimit = '32M';
+            }
+        }
+
+        // Set memory limits.
+        $limitInt = Helper::convertHrToBytes($memoryLimit);
+        if (-1 !== $currentLimitInt && (-1 === $limitInt || $limitInt > $currentLimitInt)) {
+            ini_set('memory_limit', $memoryLimit);
+        }
     }
 
     /**

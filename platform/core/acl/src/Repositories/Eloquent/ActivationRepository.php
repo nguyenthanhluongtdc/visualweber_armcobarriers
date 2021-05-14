@@ -35,6 +35,8 @@ class ActivationRepository extends RepositoriesAbstract implements ActivationInt
 
         $activation->save();
 
+        $this->resetModel();
+
         return $activation;
     }
 
@@ -58,6 +60,8 @@ class ActivationRepository extends RepositoriesAbstract implements ActivationInt
         if ($code) {
             $activation->where('code', $code);
         }
+
+        $this->resetModel();
 
         return $activation->first() ?: false;
     }
@@ -92,6 +96,8 @@ class ActivationRepository extends RepositoriesAbstract implements ActivationInt
 
         $activation->save();
 
+        $this->resetModel();
+
         return true;
     }
 
@@ -106,6 +112,8 @@ class ActivationRepository extends RepositoriesAbstract implements ActivationInt
             ->where('user_id', $user->getKey())
             ->where('completed', true)
             ->first();
+
+        $this->resetModel();
 
         return $activation ?: false;
     }
@@ -124,6 +132,8 @@ class ActivationRepository extends RepositoriesAbstract implements ActivationInt
         if ($activation === false) {
             return false;
         }
+
+        $this->resetModel();
 
         return $activation->delete();
     }

@@ -26,12 +26,12 @@ class TagRepository extends RepositoriesAbstract implements TagInterface
     /**
      * {@inheritDoc}
      */
-    public function getPopularTags($limit)
+    public function getPopularTags($limit, array $with = ['slugable'], array $withCount = ['posts'])
     {
         $data = $this->model
-            ->with('slugable')
-            ->orderBy('tags.id', 'DESC')
-            ->select('tags.*')
+            ->with($with)
+            ->withCount($withCount)
+            ->orderBy('posts_count', 'DESC')
             ->limit($limit);
 
         return $this->applyBeforeExecuteQuery($data)->get();

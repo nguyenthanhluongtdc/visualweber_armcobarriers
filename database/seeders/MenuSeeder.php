@@ -4,10 +4,7 @@ namespace Database\Seeders;
 
 use Platform\Base\Supports\BaseSeeder;
 use Platform\Blog\Models\Category;
-use Platform\Blog\Models\Tag;
-use Platform\Ecommerce\Models\Brand;
-use Platform\Ecommerce\Models\ProductCategory;
-use Platform\Ecommerce\Models\ProductTag;
+use Platform\Language\Models\LanguageMeta;
 use Platform\Menu\Models\Menu as MenuModel;
 use Platform\Menu\Models\MenuLocation;
 use Platform\Menu\Models\MenuNode;
@@ -24,159 +21,318 @@ class MenuSeeder extends BaseSeeder
      */
     public function run()
     {
-        $menus = [
-            [
-                'name'     => 'Main menu',
-                'slug'     => 'main-menu',
-                'location' => 'main-menu',
-                'items'    => [
-                    [
-                        'title' => 'Home',
-                        'url'   => '/',
-                    ],
-                    [
-                        'title' => 'Products',
-                        'url'   => '/products',
-                    ],
-                    [
-                        'title'    => 'Shop',
-                        'url'      => '#',
-                        'children' => [
-                            [
-                                'title'          => 'Product Category',
-                                'reference_id'   => 1,
-                                'reference_type' => ProductCategory::class,
-                            ],
-                            [
-                                'title'          => 'Brand',
-                                'reference_id'   => 1,
-                                'reference_type' => Brand::class,
-                            ],
-                            [
-                                'title'          => 'Product Tag',
-                                'reference_id'   => 1,
-                                'reference_type' => ProductTag::class,
-                            ],
-                            [
-                                'title' => 'Product Single',
-                                'url'   => 'products/beat-headphone',
-                            ],
+        $data = [
+            'en_US' => [
+                [
+                    'name'     => 'Main menu',
+                    'slug'     => 'main-menu',
+                    'location' => 'main-menu',
+                    'items'    => [
+                        [
+                            'title' => 'Home',
+                            'url'   => '/',
+                        ],
+                        [
+                            'title'  => 'Purchase',
+                            'url'    => 'mailto:get-quote@visualweber.com',
+                            'target' => '_blank',
+                        ],
+                        [
+                            'title'          => 'Blog',
+                            'reference_id'   => 2,
+                            'reference_type' => Page::class,
+                        ],
+                        [
+                            'title' => 'Galleries',
+                            'url'   => '/galleries',
+                        ],
+                        [
+                            'title'          => 'Contact',
+                            'reference_id'   => 3,
+                            'reference_type' => Page::class,
                         ],
                     ],
-                    [
-                        'title'          => 'Blog',
-                        'reference_id'   => 3,
-                        'reference_type' => Page::class,
-                        'children'       => [
-                            [
-                                'title'          => 'Blog Left Sidebar',
-                                'reference_id'   => 3,
-                                'reference_type' => Page::class,
-                            ],
-                            [
-                                'title'          => 'Blog Category',
-                                'reference_id'   => 1,
-                                'reference_type' => Category::class,
-                            ],
-                            [
-                                'title'          => 'Blog Tag',
-                                'reference_id'   => 1,
-                                'reference_type' => Tag::class,
-                            ],
-                            [
-                                'title' => 'Blog Single',
-                                'url'   => 'news/4-expert-tips-on-how-to-choose-the-right-mens-wallet',
-                            ],
+                ],
+
+                [
+                    'name'  => 'Favorite websites',
+                    'slug'  => 'favorite-websites',
+                    'items' => [
+                        [
+                            'title' => 'Speckyboy Magazine',
+                            'url'   => 'http://speckyboy.com',
+                        ],
+                        [
+                            'title' => 'Tympanus-Codrops',
+                            'url'   => 'http://tympanus.com',
+                        ],
+                        [
+                            'title' => 'Kipalog Blog',
+                            'url'   => '#',
+                        ],
+                        [
+                            'title' => 'SitePoint',
+                            'url'   => 'http://www.sitepoint.com',
+                        ],
+                        [
+                            'title' => 'CreativeBloq',
+                            'url'   => 'http://www.creativebloq.com',
+                        ],
+                        [
+                            'title' => 'Techtalk',
+                            'url'   => 'http://techtalk.vn',
                         ],
                     ],
-                    [
-                        'title'          => 'Contact us',
-                        'reference_id'   => 2,
-                        'reference_type' => Page::class,
+                ],
+
+                [
+                    'name'  => 'My links',
+                    'slug'  => 'my-links',
+                    'items' => [
+                        [
+                            'title' => 'Homepage',
+                            'url'   => '/',
+                        ],
+                        [
+                            'title'          => 'Contact',
+                            'reference_id'   => 3,
+                            'reference_type' => Page::class,
+                        ],
+                        [
+                            'title'          => 'News & Updates',
+                            'reference_id'   => 6,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Projects',
+                            'reference_id'   => 3,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title' => 'Galleries',
+                            'url'   => '/galleries',
+                        ],
+                    ],
+                ],
+
+                [
+                    'name'  => 'Featured Categories',
+                    'slug'  => 'featured-categories',
+                    'items' => [
+                        [
+                            'title'          => 'Events',
+                            'reference_id'   => 2,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Projects',
+                            'reference_id'   => 3,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Business',
+                            'reference_id'   => 4,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'News & Updates',
+                            'reference_id'   => 6,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Resources',
+                            'reference_id'   => 7,
+                            'reference_type' => Category::class,
+                        ],
+                    ],
+                ],
+
+                [
+                    'name'  => 'Social',
+                    'slug'  => 'social',
+                    'items' => [
+                        [
+                            'title'     => 'Facebook',
+                            'url'       => 'https://facebook.com',
+                            'icon_font' => 'fa fa-facebook',
+                            'target'    => '_blank',
+                        ],
+                        [
+                            'title'     => 'Twitter',
+                            'url'       => 'https://twitter.com',
+                            'icon_font' => 'fa fa-twitter',
+                            'target'    => '_blank',
+                        ],
+                        [
+                            'title'     => 'Github',
+                            'url'       => 'https://github.com',
+                            'icon_font' => 'fa fa-github',
+                            'target'    => '_blank',
+                        ],
+
+                        [
+                            'title'     => 'Linkedin',
+                            'url'       => 'https://linkedin.com',
+                            'icon_font' => 'fa fa-linkedin',
+                            'target'    => '_blank',
+                        ],
                     ],
                 ],
             ],
-            [
-                'name'  => 'Useful Links',
-                'slug'  => 'useful-links',
-                'items' => [
-                    [
-                        'title'          => 'About Us',
-                        'reference_id'   => 4,
-                        'reference_type' => Page::class,
-                    ],
-                    [
-                        'title'          => 'FAQ',
-                        'reference_id'   => 5,
-                        'reference_type' => Page::class,
-                    ],
-                    [
-                        'title'          => 'Location',
-                        'reference_id'   => 6,
-                        'reference_type' => Page::class,
-                    ],
-                    [
-                        'title'          => 'Affiliates',
-                        'reference_id'   => 7,
-                        'reference_type' => Page::class,
-                    ],
-                    [
-                        'title'          => 'Contact',
-                        'reference_id'   => 2,
-                        'reference_type' => Page::class,
-                    ],
-                ],
-            ],
-            [
-                'name'  => 'Categories',
-                'slug'  => 'categories',
-                'items' => [
-                    [
-                        'title'          => 'Television',
-                        'reference_id'   => 1,
-                        'reference_type' => ProductCategory::class,
-                    ],
-                    [
-                        'title'          => 'Mobile',
-                        'reference_id'   => 2,
-                        'reference_type' => ProductCategory::class,
-                    ],
-                    [
-                        'title'          => 'Headphone',
-                        'reference_id'   => 3,
-                        'reference_type' => ProductCategory::class,
-                    ],
-                    [
-                        'title'          => 'Watches',
-                        'reference_id'   => 4,
-                        'reference_type' => ProductCategory::class,
-                    ],
-                    [
-                        'title'          => 'Game',
-                        'reference_id'   => 5,
-                        'reference_type' => ProductCategory::class,
+            'vi'    => [
+                [
+                    'name'     => 'Menu chính',
+                    'slug'     => 'menu-chinh',
+                    'location' => 'main-menu',
+                    'items'    => [
+                        [
+                            'title' => 'Trang chủ',
+                            'url'   => '/',
+                        ],
+                        [
+                            'title'  => 'Mua ngay',
+                            'url'    => 'mailto:get-quote@visualweber.com',
+                            'target' => '_blank',
+                        ],
+                        [
+                            'title'          => 'Tin tức',
+                            'reference_id'   => 5,
+                            'reference_type' => Page::class,
+                        ],
+                        [
+                            'title' => 'Thư viện ảnh',
+                            'url'   => '/galleries',
+                        ],
+                        [
+                            'title'          => 'Liên hệ',
+                            'reference_id'   => 7,
+                            'reference_type' => Page::class,
+                        ],
                     ],
                 ],
-            ],
-            [
-                'name'  => 'My Account',
-                'slug'  => 'my-account',
-                'items' => [
-                    [
-                        'title' => 'My profile',
-                        'url'   => '/customer/overview',
+
+                [
+                    'name'  => 'Trang web yêu thích',
+                    'slug'  => 'trang-web-yeu-thich',
+                    'items' => [
+                        [
+                            'title' => 'Speckyboy Magazine',
+                            'url'   => 'http://speckyboy.com',
+                        ],
+                        [
+                            'title' => 'Tympanus-Codrops',
+                            'url'   => 'http://tympanus.com',
+                        ],
+                        [
+                            'title' => 'Kipalog Blog',
+                            'url'   => '#',
+                        ],
+                        [
+                            'title' => 'SitePoint',
+                            'url'   => 'http://www.sitepoint.com',
+                        ],
+                        [
+                            'title' => 'CreativeBloq',
+                            'url'   => 'http://www.creativebloq.com',
+                        ],
+                        [
+                            'title' => 'Techtalk',
+                            'url'   => 'http://techtalk.vn',
+                        ],
                     ],
-                    [
-                        'title' => 'Wishlist',
-                        'url'   => '/wishlist',
+                ],
+
+                [
+                    'name'  => 'Liên kết',
+                    'slug'  => 'lien-ket',
+                    'items' => [
+                        [
+                            'title' => 'Trang chủ',
+                            'url'   => '/',
+                        ],
+                        [
+                            'title'          => 'Liên hệ',
+                            'reference_id'   => 7,
+                            'reference_type' => Page::class,
+                        ],
+                        [
+                            'title'          => 'Tin tức & Cập nhật',
+                            'reference_id'   => 13,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Dự án',
+                            'reference_id'   => 10,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title' => 'Thư viện ảnh',
+                            'url'   => '/galleries',
+                        ],
                     ],
-                    [
-                        'title' => 'Orders',
-                        'url'   => 'customer/orders',
+                ],
+
+                [
+                    'name'  => 'Danh mục nổi bật',
+                    'slug'  => 'danh-muc-noi-bat',
+                    'items' => [
+                        [
+                            'title'          => 'Sự kiện',
+                            'reference_id'   => 9,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Dự án',
+                            'reference_id'   => 10,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Business',
+                            'reference_id'   => 11,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Tin tức & Cập nhật',
+                            'reference_id'   => 13,
+                            'reference_type' => Category::class,
+                        ],
+                        [
+                            'title'          => 'Tài nguyên',
+                            'reference_id'   => 14,
+                            'reference_type' => Category::class,
+                        ],
                     ],
-                    [
-                        'title' => 'Order tracking',
-                        'url'   => '/orders/tracking',
+                ],
+
+                [
+                    'name'  => 'Mạng xã hội',
+                    'slug'  => 'mang-xa-hoi',
+                    'items' => [
+                        [
+                            'title'     => 'Facebook',
+                            'url'       => 'https://facebook.com',
+                            'icon_font' => 'fa fa-facebook',
+                            'target'    => '_blank',
+                        ],
+                        [
+                            'title'     => 'Twitter',
+                            'url'       => 'https://twitter.com',
+                            'icon_font' => 'fa fa-twitter',
+                            'target'    => '_blank',
+                        ],
+                        [
+                            'title'     => 'Github',
+                            'url'       => 'https://github.com',
+                            'icon_font' => 'fa fa-github',
+                            'target'    => '_blank',
+                        ],
+
+                        [
+                            'title'     => 'Linkedin',
+                            'url'       => 'https://linkedin.com',
+                            'icon_font' => 'fa fa-linkedin',
+                            'target'    => '_blank',
+                        ],
                     ],
                 ],
             ],
@@ -185,21 +341,42 @@ class MenuSeeder extends BaseSeeder
         MenuModel::truncate();
         MenuLocation::truncate();
         MenuNode::truncate();
+        LanguageMeta::where('reference_type', MenuModel::class)->delete();
+        LanguageMeta::where('reference_type', MenuLocation::class)->delete();
 
-        foreach ($menus as $index => $item) {
-            $menu = MenuModel::create(Arr::except($item, ['items', 'location']));
+        foreach ($data as $locale => $menus) {
+            foreach ($menus as $index => $item) {
+                $menu = MenuModel::create(Arr::except($item, ['items', 'location']));
 
-            if (isset($item['location'])) {
-                MenuLocation::create([
-                    'menu_id'  => $menu->id,
-                    'location' => $item['location'],
-                ]);
+                if (isset($item['location'])) {
+                    $menuLocation = MenuLocation::create([
+                        'menu_id'  => $menu->id,
+                        'location' => $item['location'],
+                    ]);
+
+                    $originValue = LanguageMeta::where([
+                        'reference_id'   => $locale == 'en_US' ? 1 : 2,
+                        'reference_type' => MenuLocation::class,
+                    ])->value('lang_meta_origin');
+
+                    LanguageMeta::saveMetaData($menuLocation, $locale, $originValue);
+                }
+
+                foreach ($item['items'] as $menuNode) {
+                    $this->createMenuNode($index, $menuNode, $locale);
+                }
+
+                $originValue = null;
+
+                if ($locale !== 'en_US') {
+                    $originValue = LanguageMeta::where([
+                        'reference_id'   => $index + 1,
+                        'reference_type' => MenuModel::class,
+                    ])->value('lang_meta_origin');
+                }
+
+                LanguageMeta::saveMetaData($menu, $locale, $originValue);
             }
-
-            foreach ($item['items'] as $menuNode) {
-                $this->createMenuNode($index, $menuNode);
-            }
-
         }
 
         Menu::clearCacheMenuItems();
@@ -208,11 +385,12 @@ class MenuSeeder extends BaseSeeder
     /**
      * @param int $index
      * @param array $menuNode
+     * @param string $locale
      * @param int $parentId
      */
-    protected function createMenuNode(int $index, array $menuNode, int $parentId = 0): void
+    protected function createMenuNode(int $index, array $menuNode, string $locale, int $parentId = 0): void
     {
-        $menuNode['menu_id'] = $index + 1;
+        $menuNode['menu_id'] = $locale == 'en_US' ? $index + 1 : $index + 6;
         $menuNode['parent_id'] = $parentId;
 
         if (Arr::has($menuNode, 'children')) {
@@ -229,7 +407,7 @@ class MenuSeeder extends BaseSeeder
 
         if ($children) {
             foreach ($children as $child) {
-                $this->createMenuNode($index, $child, $createdNode->id);
+                $this->createMenuNode($index, $child, $locale, $createdNode->id);
             }
         }
     }

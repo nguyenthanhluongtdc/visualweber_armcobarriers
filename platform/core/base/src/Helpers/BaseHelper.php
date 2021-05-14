@@ -3,7 +3,6 @@
 namespace Platform\Base\Helpers;
 
 use Carbon\Carbon;
-use URL;
 
 class BaseHelper
 {

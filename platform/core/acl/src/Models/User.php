@@ -92,8 +92,17 @@ class User extends Authenticatable
 
     /**
      * @return string
+     * @deprecated since v5.15
      */
     public function getFullName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNameAttribute()
     {
         return ucfirst($this->first_name) . ' ' . ucfirst($this->last_name);
     }
@@ -111,7 +120,7 @@ class User extends Authenticatable
      */
     public function getAvatarUrlAttribute()
     {
-        return $this->avatar->url ? RvMedia::url($this->avatar->url) : (new Avatar)->create($this->getFullName())->toBase64();
+        return $this->avatar->url ? RvMedia::url($this->avatar->url) : (new Avatar)->create($this->name)->toBase64();
     }
 
     /**
@@ -186,7 +195,7 @@ class User extends Authenticatable
     public function authorAttributes()
     {
         return [
-            'name'   => $this->getFullName(),
+            'name'   => $this->name,
             'email'  => $this->email,
             'avatar' => $this->avatar_url,
         ];

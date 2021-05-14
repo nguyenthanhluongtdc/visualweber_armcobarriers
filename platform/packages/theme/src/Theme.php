@@ -380,8 +380,9 @@ class Theme implements ThemeContract
             return $this->theme;
         }
 
-        if (setting('theme')) {
-            return setting('theme');
+        $theme = setting('theme');
+        if ($theme) {
+            return $theme;
         }
 
         return Arr::first(scan_folder(theme_path()));
@@ -777,16 +778,21 @@ class Theme implements ThemeContract
     {
         // Fire event global assets.
         $this->fire('asset', $this->asset);
+
         // Fire event before render theme.
         $this->fire('beforeRenderTheme', $this);
+
         // Fire event before render layout.
         $this->fire('beforeRenderLayout.' . $this->layout, $this);
+
         // Keeping arguments.
         $this->arguments = $args;
 
         $content = $this->view->make($view, $args)->render();
+
         // View path of content.
         $this->content = $view;
+
         // Set up a content regional.
         $this->regions['content'] = $content;
 

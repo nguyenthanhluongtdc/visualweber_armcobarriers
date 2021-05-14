@@ -28,5 +28,6 @@ return [
     'plugin_removed'                => 'Plugin is removed!',
     'deactivated_success'           => 'Deactivate plugin successfully!',
     'deactivated_already'           => 'This plugin is deactivated already!',
-
+    'folder_is_not_writeable'       => 'Cannot write files! Folder :name is not writable. Please chmod to make it writable!',
+    'plugin_is_not_ready'           => 'Plugin :name is not ready to use',
 ];
