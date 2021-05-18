@@ -51,12 +51,14 @@ return [
             // });
 
             // You may use this event to set up your assets.
-            $theme->asset()->add('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+            // $theme->asset()->add('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
+            // $theme->asset()->usePath()->add('style', 'css/common.css');
+            // $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
             $theme->asset()->usePath()->add('style', 'css/common.css');
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
             $theme->asset()->container('footer')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->add('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-            $theme->asset()->usePath()->add('style', 'css/common.css',[],[],time());
+            // $theme->asset()->usePath()->add('style', 'css/common.css',[],[],time());
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post'], function (\Platform\Shortcode\View\View $view) {
                     $view->withShortcodes();
