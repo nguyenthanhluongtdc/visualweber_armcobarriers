@@ -24,9 +24,11 @@ mix
         jquery: ['$', 'window.jQuery','window.$'],
     })
     .setPublicPath('public')
+    .copy('platform/themes/armcobarriers/public/images', 'public/themes/armcobarriers/images')
+    .copy('platform/themes/armcobarriers/public/fonts', 'public/themes/armcobarriers/images')
     .js('platform/themes/armcobarriers/assets/js/common.js', 'public/themes/armcobarriers/js/common.js')
     .sass('platform/themes/armcobarriers/assets/sass/common.scss', 'public/themes/armcobarriers/css/common.css')
-    .copy('platform/themes/armcobarriers/public/images', 'public/themes/armcobarriers/images')
+
     .webpackConfig({
         module: {
             rules: [
