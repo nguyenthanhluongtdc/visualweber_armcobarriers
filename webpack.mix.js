@@ -1,23 +1,46 @@
-let mix = require('laravel-mix');
-let glob = require('glob');
-
-mix.options({
-    processCssUrls: false,
-    clearConsole: true,
-    terser: {
-        extractComments: false,
-    }
+const mix = require('laravel-mix')
+ 
+// noinspection JSUnresolvedFunction,JSUnresolvedVariable
+mix.webpackConfig({
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            '@': __dirname + '/platform/themes/main/armcobarriers'
+        },
+    },
 });
+ 
+// noinspection JSUnresolvedFunction
+mix.version().webpackConfig({
+    output: {
+        chunkFilename: 'themes/armcobarriers/js/chunks/[name].js',
+    },
+})
+ 
+// noinspection JSUnresolvedFunction
 
-// Run all webpack.mix.js in app
-glob.sync('./platform/**/**/webpack.mix.js').forEach(item => require(item));
-
-// Run only for a package, replace [package] by the name of package you want to compile assets
-// require('./platform/packages/[package]/webpack.mix.js');
-
-// Run only for a plugin, replace [plugin] by the name of plugin you want to compile assets
-// require('./platform/plugins/[plugin]/webpack.mix.js');
-
-// Run only for themes, you shouldn't modify below config, just uncomment if you want to compile only theme's assets
-// glob.sync('./platform/themes/**/webpack.mix.js').forEach(item => require(item));
-
+mix
+    .autoload({
+        jquery: ['$', 'window.jQuery','window.$'],
+    })
+    .setPublicPath('public')
+    .js('platform/themes/armcobarriers/assets/js/common.js', 'public/themes/armcobarriers/js/common.js')
+    .sass('platform/themes/armcobarriers/assets/sass/common.scss', 'public/themes/armcobarriers/css/common.css')
+    .copy('platform/themes/armcobarriers/public/images', 'public/themes/armcobarriers/images')
+    .webpackConfig({
+        module: {
+            rules: [
+                {
+                    test: /\.tsx?$/,
+                    loader: 'ts-loader',
+                    options: { appendTsSuffixTo: [/\.vue$/] },
+                    exclude: /node_modules/,
+                },
+            ],
+        },
+        resolve: {
+            extensions: ['*', '.js', '.jsx', '.vue', '.ts', '.tsx'],
+        },
+    })
+    .vue()
+    .version();
