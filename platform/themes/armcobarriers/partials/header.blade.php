@@ -13,12 +13,39 @@
         <style>
             :root {
                 --primary-color: {{ theme_option('primary_color', '#ff2b4a') }};
-                --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', sans-serif;
+                /* --primary-font: '{{ theme_option('primary_font', 'Roboto') }}', sans-serif; */
             }
         </style>
 
         {!! Theme::header() !!}
     </head>
-    <body @if (BaseHelper::siteLanguageDirection() == 'rtl') dir="rtl" @endif>
+    <body class="contaier-fluid-customize" @if (BaseHelper::siteLanguageDirection() == 'rtl') dir="rtl" @endif>
         {!! apply_filters(THEME_FRONT_BODY, null) !!}
+
+        <header class="header">
+            <div class="logo">
+                <a href="#" class="logo__link">
+                    <img src="" alt="" class="logo__link-image" />
+                </a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__menu">
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Homepage</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Product</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="toolbar">
+                <ul class="toolbar__box">
+                    <li class="toolbar__item"></li>
+                    <li class="toolbar__item"></li>
+                    <li class="toolbar__item"></li>
+                    <li class="toolbar__item"></li>
+                    <li class="toolbar__item"></li>
+                </ul>
+            </div>
+        </header>
       
