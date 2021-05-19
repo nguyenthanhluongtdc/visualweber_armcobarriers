@@ -57,37 +57,21 @@
                 </ul>
             </nav>
             <div class="toolbar">
-                <ul class="toolbar__box">
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">
+                    <div class="left">
+                        <div class="left-1">
                             <img src="{{ Theme::asset()->url('images/header/iconphone.png') }}" alt="">
-                        </a>
-
-                    </li>
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">1800 808 619</a>
-                    </li>
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">
+                            <span>1800 808 619</span>
+                        </div>
+                        <div class="left-2">
                             <img src="{{ Theme::asset()->url('images/header/iconfind.png') }}" alt="">
-                        </a>
-                    </li>
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">
-                            <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
-                        </a>
-                    </li>
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">
-                            <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
-                        </a>
-                    </li>
-                    <li class="toolbar__item">
-                        <a href="#" class="nav__menu-link">
-                            <img src="{{ Theme::asset()->url('images/header/iconfb.png') }}" alt="">
-                        </a>
-                    </li>
-                </ul>
+    
+                        </div>
+                    </div>
+                    <div class="right">
+                        <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
+                        <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
+                        <img src="{{ Theme::asset()->url('images/header/iconfb.png') }}" alt="">
+                    </div>
             </div>
         </header>
       
