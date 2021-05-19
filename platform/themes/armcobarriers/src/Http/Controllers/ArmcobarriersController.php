@@ -89,7 +89,7 @@ class ArmcobarriersController extends PublicController
         event(new RenderingSingleEvent($slug));
 
         if (!empty($result) && is_array($result)) {
-            return Theme::scope($result['view'], $result['data'], Arr::get($result, 'default_view'))->render();
+            return Theme::scope($result['slug'], $result['data'], Arr::get($result, 'default_view'))->render();
         }
 
         abort(404);

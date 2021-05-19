@@ -25,7 +25,7 @@
         <header class="header">
             <div class="logo">
                 <a href="#" class="logo__link">
-                    <img src="" alt="" class="logo__link-image" />
+                    <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                 </a>
             </div>
             <nav class="nav">
@@ -34,17 +34,59 @@
                         <a href="#" class="nav__menu-link">Homepage</a>
                     </li>
                     <li class="nav__menu-item">
-                        <a href="#" class="nav__menu-link">Product</a>
+                        <a href="#" class="nav__menu-link">About Us</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Products</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Service</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Applications</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Gallery</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">News,Events &Media</a>
+                    </li>
+                    <li class="nav__menu-item">
+                        <a href="#" class="nav__menu-link">Contact Us</a>
                     </li>
                 </ul>
             </nav>
             <div class="toolbar">
                 <ul class="toolbar__box">
-                    <li class="toolbar__item"></li>
-                    <li class="toolbar__item"></li>
-                    <li class="toolbar__item"></li>
-                    <li class="toolbar__item"></li>
-                    <li class="toolbar__item"></li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">
+                            <img src="{{ Theme::asset()->url('images/header/iconphone.png') }}" alt="">
+                        </a>
+
+                    </li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">1800 808 619</a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">
+                            <img src="{{ Theme::asset()->url('images/header/iconfind.png') }}" alt="">
+                        </a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">
+                            <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
+                        </a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">
+                            <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
+                        </a>
+                    </li>
+                    <li class="toolbar__item">
+                        <a href="#" class="nav__menu-link">
+                            <img src="{{ Theme::asset()->url('images/header/iconfb.png') }}" alt="">
+                        </a>
+                    </li>
                 </ul>
             </div>
         </header>

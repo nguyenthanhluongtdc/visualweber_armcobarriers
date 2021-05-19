@@ -24,6 +24,7 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
 
         Route::get('{slug?}' . config('core.base.general.public_single_ending_url'), 'ArmcobarriersController@getView')
             ->name('public.single');
+            
 
     });
 });
