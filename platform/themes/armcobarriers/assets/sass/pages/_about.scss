@@ -1,12 +1,136 @@
-.cont1
-{
-    a{
-        color:black;
-        padding: 20px;
+// .cont1
+// {
+//     a{  font-family:$Arial ;
+//         font-size: 17px;
+//         color:black;
+//         padding-right: 35px;
+//     }
+//     span{
+//         padding-right: 35px;
+//     }
+// }
+// .cont2{
+//     padding: 30px 0px;
+//     h1{
+//         font-family: $FolioStd-Bold;
+//         font-size: 40px;
+//     }
+//     h2{
+//         font-size: 20px;
+//         font-family: $Arial;
+//         font-weight: bold;
+//     }
+// }
+// .cont3{
+//     a{
+//         padding-right: 40px;
+//         font-size: 17px;
+//         font-family: $Arial;
+//     }
+// }
+// .container{
+//     .body{
+//         .row{
+//             .col-sm-4{
+//             position:absolute;
+//             top:800px;
+//         }
+//     }
+   
+//     }
+// }
+// .container-fluid
+// {
+//     .banner
+//     {
+//         padding-bottom: 40px;
+//     }
+// }
+// .container{
+//     .tittle{
+//        padding-bottom: 40px;
+//         h1{
+//             font-size: 40px;
+//             font-family: $FolioStd-Bold;
+//         }
+//             .des1{
+//                 font-size: 20px;
+//                 font-family: $FolioStd-Medium;
+//             }
+//         }
+//     }
+//     }
+// }
+.wrap-top{
+    .cont1{
+        a{
+            font-size: 17px;
+            font-family: $Arial;
+            padding-right: 35px;
+            color:black;
+        }
+        span{
+            padding-right: 35px;
+             }
+    }
+    .cont2{
+        padding: 30px 0px;
+        h1{
+            font-size: 40px;
+            font-family: $FolioStd-Bold;
+        }
+        h2{
+            font-size: 20px;
+            font-family: $Arial;
+            font-weight: bold;
+        }
+    }
+    .cont3{
+        a{
+            padding-right: 40px;
+            font-size: 17px;
+            font-family: $Arial;
+            color:black;
+            }
     }
 }
-.cont2{
-    h1{
-        padding: 20px;
+.wrap-cont{
+    padding-top: 10px;
+    .baner{
+        position: relative;
+        .des{
+            position: absolute;
+            span{
+                font-size: 17px;
+                font-family: $Arial;
+                position: absolute;
+                
+            }
+
+        }
+       
+    }
+}
+.body{
+    .title{
+        padding: 40px 0px;
+        h1{
+            font-size: 40px;
+            font-family: $FolioStd-Bold;
+        
+        }
+    }
+    .des{
+        .design-advice
+        {
+           .design-advice--title h3{
+            font-size: 15px;
+            font-family: $Arial;
+
+           }
+        }
+    
+       
+
     }
 }
