@@ -1,4 +1,7 @@
 @include font-face('Roboto-Bold', '../public/fonts/Roboto-Bold');
-// @include font-face(Roboto-Medium, fonts/Roboto-Medium);
+@include font-face('Roboto-Medium', '../public/fonts/Roboto-Medium');
 @include font-face('Roboto-Regular', '../public/fonts/Roboto-Regular');
-// @include font-face(Montserrat-Bold, fonts/Montserrat-Bold);
+@include font-face('FolioStd-Bold', '../public/fonts/FolioStd-Bold');
+@include font-face('FolioStd-ExtraBold', '../public/fonts/FolioStd-ExtraBold');
+@include font-face('FolioStd-Light', '../public/fonts/FolioStd-Light');
+@include font-face('FolioStd-Medium', '../public/fonts/Roboto-Regular');
