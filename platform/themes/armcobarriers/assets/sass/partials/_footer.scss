@@ -1,0 +1,61 @@
+.footer {
+    .footer-yellow {
+        background-color: #FAD906;
+        .container-customize {
+            .footer__logo {
+                padding-top: 50px;
+                padding-bottom: 15px;
+            }
+            .container-wrapper {
+                padding-bottom: 90px;
+                .protection-solutaion {
+                    .map-protection {
+                        width: max-content;
+                        padding-top: 30px;
+                    }
+                }
+                .contact-location p {
+                    padding: 5px 0;
+                    a {
+                        color: #262626;
+                        padding-left: 10px;
+                    }
+                }
+                .contact-location h3 {
+                    padding-bottom: 20px;
+                    font-size: 20px;
+                    font-family: $FolioStd-Medium;
+                    text-transform: uppercase;
+                }
+                .homepage {
+                    h3 {
+                        padding-bottom: 15px;
+                    }
+                    p {
+                        padding: 10px 0;
+                        a {
+                            color: #262626;
+                        }
+                    }
+                }
+                .applications {
+                    h3 {
+                        padding-bottom: 15px;
+                    }
+                    p {
+                        padding: 10px 0;
+                        a {
+                            color: #262626;
+                        }
+                    }
+                }
+                .connect-us img {
+                    padding-top: 15px;
+                }
+            }
+            .footer-bottom {
+                padding: 40px 0;
+            }
+        }
+    }
+}

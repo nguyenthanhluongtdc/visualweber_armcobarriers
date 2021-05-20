@@ -9,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css?family={{ urlencode(theme_option('primary_font', 'Roboto')) }}" rel="stylesheet" type="text/css">
         <!-- CSS Library-->
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
         <style>
             :root {
@@ -28,7 +30,7 @@
                     <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                 </a>
             </div>
-            <nav class="nav">
+            <nav class="nav contaier-fluid-customize">
                 <ul class="nav__menu">
                     <li class="nav__menu-item">
                         <a href="#" class="nav__menu-link">Homepage</a>
