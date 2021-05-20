@@ -1,67 +1,6 @@
-// .cont1
-// {
-//     a{  font-family:$Arial ;
-//         font-size: 17px;
-//         color:black;
-//         padding-right: 35px;
-//     }
-//     span{
-//         padding-right: 35px;
-//     }
-// }
-// .cont2{
-//     padding: 30px 0px;
-//     h1{
-//         font-family: $FolioStd-Bold;
-//         font-size: 40px;
-//     }
-//     h2{
-//         font-size: 20px;
-//         font-family: $Arial;
-//         font-weight: bold;
-//     }
-// }
-// .cont3{
-//     a{
-//         padding-right: 40px;
-//         font-size: 17px;
-//         font-family: $Arial;
-//     }
-// }
-// .container{
-//     .body{
-//         .row{
-//             .col-sm-4{
-//             position:absolute;
-//             top:800px;
-//         }
-//     }
-   
-//     }
-// }
-// .container-fluid
-// {
-//     .banner
-//     {
-//         padding-bottom: 40px;
-//     }
-// }
-// .container{
-//     .tittle{
-//        padding-bottom: 40px;
-//         h1{
-//             font-size: 40px;
-//             font-family: $FolioStd-Bold;
-//         }
-//             .des1{
-//                 font-size: 20px;
-//                 font-family: $FolioStd-Medium;
-//             }
-//         }
-//     }
-//     }
-// }
 .wrap-top{
+    padding-bottom: 20px;
+    padding-top: 20px;
     .cont1{
         a{
             font-size: 17px;
@@ -95,42 +34,276 @@
     }
 }
 .wrap-cont{
-    padding-top: 10px;
-    .baner{
-        position: relative;
-        .des{
+   .banner{
+       position: relative;
+       .rec{
+           position: absolute;
+           top:0;
+       }
+       .content-about{
+           span{
             position: absolute;
-            span{
-                font-size: 17px;
-                font-family: $Arial;
-                position: absolute;
-                
-            }
-
-        }
-       
-    }
+            top: 35%;
+            left: 11%;
+            width: 32%;
+            font-size: 17px;
+            font-family: $Arial;
+           }
+       }
+   }
 }
-.body{
-    .title{
+.wrap-product{
+    .wrap4{
+        padding-bottom: 40px;
+        display: flex;
+        .icon{
+            padding-right: 25px;
+        }
+        .view{
+            border-bottom: 1px solid #000;
+        }
+    }
+    .wrap3{
+        padding-bottom: 60px;
+        .availability{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+        .australian{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+    }
+    .wrap2{
+        padding-bottom: 60px;
+        .quality{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+        .warranty{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+        .competitive{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+    }
+    .wrap1{
+        padding-bottom: 60px;
+        .innovation{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+    
+        }
+        .installation{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+        .design{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+    }
+    .whatwedo{
         padding: 40px 0px;
-        h1{
-            font-size: 40px;
+        h2{
             font-family: $FolioStd-Bold;
+            font-size: 40px;
         
         }
     }
-    .des{
-        .design-advice
-        {
-           .design-advice--title h3{
+}
+.hero{
+    padding-bottom: 80px;
+}
+.wrap-bot{
+    .bot2{
+        border-bottom: 1px ridge #E1E1E1;
+        padding-bottom: 80px;
+        .product2{
+            img{
+                padding-bottom: 25px;
+                width: 98%;
+            }
+            h3{
+                padding-bottom: 25px;
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            }
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+        .product1{
+            img{ 
+                padding-bottom: 25px;
+                width: 98%;
+            }
+            h3{ 
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+                padding-bottom: 25px;
+            }
+
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+
+        }
+    }
+    .bot1{
+        padding-bottom: 30px;
+        .slogan{
+            p{
+                font-size: 17px;
+            font-family: $Arial;
+            }
+        }
+        .product-quality{
+            h2{
+                font-size: 40px;
+                font-family: $FolioStd-Bold;
+            }
+        }
+    }
+}
+.count{
+    padding-top: 30px;
+    display: flex;
+    .count-customers{
+        p{
+            font-size: 20px;
+            font-family: $Arial;
+            border-bottom: $priamry_color 10px solid;
+            width: 51%;
+            padding-bottom: 40px;
+        }
+        h2{
+           padding-right:180px;
+           font-size: 60px;
+           font-family: $FolioStd-Bold;
+        }
+    }
+    .count-completed{
+        h2{
+            padding-right:130px ;
+            font-size: 60px;
+            font-family: $FolioStd-Bold;
+         }
+         p{
+            font-size: 20px;
+            font-family: $Arial;
+            border-bottom: $priamry_color 10px solid;
+            width: 54%;
+            padding-bottom: 40px;
+        }
+
+    }
+    .count-kilomet{
+        h2{
+            font-size: 60px;
+            font-family: $FolioStd-Bold;
+         }
+         p{
+            font-size: 20px;
+            font-family: $Arial;
+            border-bottom: $priamry_color 10px solid;
+            width: 54%;
+            padding-bottom: 40px;
+        }   
+    }
+}
+.experience{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    .exp{
+        p{
             font-size: 15px;
             font-family: $Arial;
-
-           }
         }
-    
+    }
+}
+.wrap-sign{
+    border: #E1E1E1 1px solid;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    .gr{
+        display: flex;
+        align-items: center;
+        .sign-up{
+            padding-left: 70px;
+            p{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            }
+            h3{
+                font-size: 30px;
+                font-family: $FolioStd-Bold;
+            }
+        }
+        .info-me{
+            input{
+                margin: 60px;
+                background-color:#E1E1E1;
+                border: none;
+            }
+            button{
+                padding: 0px 40px;
+                background-color:$priamry_color;
+            }
        
-
+    }
     }
 }
