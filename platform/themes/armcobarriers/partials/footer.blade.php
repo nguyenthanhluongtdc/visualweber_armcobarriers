@@ -61,7 +61,7 @@
                             abn 21 007 274 464 
                         </p>
                     </div>
-                    <div class="col-lg-1">
+                    <div class="col-lg-2">
                         <a href="">
                             <p>
                                 Privacy Policy
@@ -69,7 +69,7 @@
                         </a>
                         
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <a href="">
                             <p>
                                 Terms and Conditions
