@@ -239,8 +239,6 @@
                 <input type="text" placeholder="Your Company">
                 <button type ="submit">Sign Up</button>
             </div>
-           
-
         </div>
     </div>
 </div>

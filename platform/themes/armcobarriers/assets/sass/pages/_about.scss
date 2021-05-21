@@ -2,6 +2,7 @@
     padding-bottom: 20px;
     padding-top: 40px;
     .cont1{
+        padding-top: 80px;
         a:nth-child(2){
             padding-left: 35px;
            color: #000;
@@ -46,17 +47,54 @@
 .wrap-cont{
    .banner{
        position: relative;
+       img{
+           max-width: 100%;
+       }
        .rec{
            position: absolute;
            top:0;
+           img{
+               max-width: 100%;
+           }
        }
        .content-about{
+           
            span{
             position: absolute;
             top: 35%;
             width: 32%;
             font-size: 17px;
             font-family: $Arial;
+           }
+           @media (max-width:1440px) 
+           {
+                span{
+                 position: absolute;
+                 top: 40%;
+                 width: 60%;
+                 font-size: 17px;
+                 font-family: $Arial;
+                } 
+           }
+           @media(max-width:992px)
+           {
+            span{
+                position: absolute;
+                top: 30%;
+                width: 70%;
+                font-size: 17px;
+                font-family: $Arial;
+               }
+           }
+           @media(max-width: 768px)
+           {
+            span{
+                position: absolute;
+                top: 25%;
+                width: 70%;
+                font-size: 13px;
+                font-family: $Arial;
+               }
            }
        }
    }
@@ -186,6 +224,9 @@
     }
 }
 .hero{
+    img{
+        max-width: 100%;
+    }
     padding-bottom: 80px;
 }
 .wrap-bot{
@@ -255,6 +296,15 @@
                 font-family: $FolioStd-Bold;
             }
         }
+        @media(max-width:992px)
+        {
+            .product-quality{
+                h2{
+                    font-size: 39px;
+                    font-family: $FolioStd-Bold;
+                }
+            }
+        }
     }
 }
 .count{
@@ -294,6 +344,49 @@
            font-size: 60px;
            font-family: $FolioStd-Bold;
         }
+        @media(max-width: 992px){
+            p {
+                text-decoration: none; 
+                position: relative; 
+                padding-bottom: 25px;
+                font-size: 15px;
+                font-family: $Arial;
+              }   
+         
+             p:after {
+                 position: absolute;
+                 content: '';
+                 height: 10px;
+                 bottom: -4px; 
+                 left:0px;  
+                   left: 0;
+                 right: 0;
+                   width: 30%;
+                   background: $priamry_color;
+                   -o-transition:.5s;
+                     -ms-transition:.5s;
+                 -moz-transition:.5s;
+                 -webkit-transition:.5s;
+                 transition:.5s;
+             }
+                p:hover:after {
+                   width: 60%;
+                   background: $priamry_color;
+             }
+            h2{
+                font-size: 40px;
+                font-family: $FolioStd-Bold;
+             }
+             p{
+                a{
+                font-size: 20px;
+                font-family: $Arial;
+                border-bottom: $priamry_color 10px solid;
+                width: 54%;
+                padding-bottom: 40px;
+                }
+            }   
+        }
     }
     .count-completed{
         h2{
@@ -329,6 +422,49 @@
                width: 60%;
                background: $priamry_color;
          }
+         @media(max-width: 992px){
+            p {
+                text-decoration: none; 
+                position: relative; 
+                padding-bottom: 25px;
+                font-size: 15px;
+                font-family: $Arial;
+              }   
+         
+             p:after {
+                 position: absolute;
+                 content: '';
+                 height: 10px;
+                 bottom: -4px; 
+                 left:0px;  
+                   left: 0;
+                 right: 0;
+                   width: 30%;
+                   background: $priamry_color;
+                   -o-transition:.5s;
+                     -ms-transition:.5s;
+                 -moz-transition:.5s;
+                 -webkit-transition:.5s;
+                 transition:.5s;
+             }
+                p:hover:after {
+                   width: 60%;
+                   background: $priamry_color;
+             }
+            h2{
+                font-size: 40px;
+                font-family: $FolioStd-Bold;
+             }
+             p{
+                a{
+                font-size: 20px;
+                font-family: $Arial;
+                border-bottom: $priamry_color 10px solid;
+                width: 54%;
+                padding-bottom: 40px;
+                }
+            }   
+        }
 
     }
     .count-kilomet{
@@ -373,11 +509,60 @@
             padding-bottom: 40px;
             }
         }   
+        @media(max-width: 992px){
+            p {
+                text-decoration: none; 
+                position: relative; 
+                padding-bottom: 25px;
+                font-size: 15px;
+                font-family: $Arial;
+              }   
+         
+             p:after {
+                 position: absolute;
+                 content: '';
+                 height: 10px;
+                 bottom: -4px; 
+                 left:0px;  
+                   left: 0;
+                 right: 0;
+                   width: 30%;
+                   background: $priamry_color;
+                   -o-transition:.5s;
+                     -ms-transition:.5s;
+                 -moz-transition:.5s;
+                 -webkit-transition:.5s;
+                 transition:.5s;
+             }
+                p:hover:after {
+                   width: 60%;
+                   background: $priamry_color;
+             }
+            h2{
+                font-size: 40px;
+                font-family: $FolioStd-Bold;
+             }
+             p{
+                a{
+                font-size: 20px;
+                font-family: $Arial;
+                border-bottom: $priamry_color 10px solid;
+                width: 54%;
+                padding-bottom: 40px;
+                }
+            }   
+        }
+    }
+    @media(max-width:992px)
+    {
+    .count-kilomet{
+        padding-left: 20px;
+    }
     }
 }
 .experience{
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     .exp{
         p{
             font-size: 15px;
@@ -389,11 +574,12 @@
     border: #E1E1E1 1px solid;
     display: flex;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     .gr{
         display: flex;
         align-items: center;
         .sign-up{
+
             padding-left: 30px;
             padding-right: 60px;
             p{
@@ -405,21 +591,97 @@
                 font-family: $FolioStd-Bold;
             }
         }
+        @media(max-width:1290px)
+        {
+            .sign-up{
+                padding-left: 10px;
+                padding-right: 30px;
+        }
+    }
         .info-me{
             input{
                 margin: 28px;
                 background-color:#E1E1E1;
                 border: none;
                 padding: 15px 40px;
+                font-size: 15px;
+                font-family: $Arial;
+            }
+           
+            @media(max-width:1440px)
+            {
+                input{
+                    margin: 10px;
+                    background-color:#E1E1E1;
+                    border: none;
+                    padding: 13px 20px;
+                    font-size: 15px;
+                    font-family: $Arial;
+                }
+            }
+            @media(max-width:1290px)
+            {
+                input{
+                    margin: 7px;
+                    background-color:#E1E1E1;
+                    border: none;
+                    padding: 10px;
+                    font-size: 15px;
+                    font-family: $Arial;
+                }
+            }
+            @media(max-width:992px)
+            {
+                input{
+                    margin: 0px;
+                    background-color:#E1E1E1;
+                    border: none;
+                    padding: 3px;
+                    font-size: 15px;
+                    font-family: $Arial;
+                }
+                button{
+                    font-family: $FolioStd-Bold;
+                    width: 50px;
+                    padding:7px 4px;
+                    margin: 0px;
+                    background-color:$priamry_color;
+                    
+                }
             }
             button{
+                font-size: 20;
+                font-family: $FolioStd-Bold;
                 width: 220px;
                 padding:15px;
                 margin: 30px;
                 background-color:$priamry_color;
                 
             }
-       
+       @media(max-width:1440px)
+       {
+        button{
+            font-size: 20;
+            font-family: $FolioStd-Bold;
+            width: 100px;
+            padding:12px;
+            margin: 10px;
+            background-color:$priamry_color;
+            
+        }
+       }
+       @media(max-width:1290px)
+       {
+        button{
+            font-size: 20;
+            font-family: $FolioStd-Bold;
+            width: 100px;
+            padding:9px;
+            margin: 7px;
+            background-color:$priamry_color;
+            
+        }
+       }
     }
     }
 }
