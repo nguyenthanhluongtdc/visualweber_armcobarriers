@@ -61,18 +61,28 @@
             <div class="toolbar">
                     <div class="left">
                         <div class="left-1">
-                            <img src="{{ Theme::asset()->url('images/header/iconphone.png') }}" alt="">
-                            <span>1800 808 619</span>
+                            <a href="">
+                                <img src="{{ Theme::asset()->url('images/header/iconphone.png') }}" alt="">
+                                <span>1800 808 619</span>
+                            </a>
                         </div>
                         <div class="left-2">
-                            <img src="{{ Theme::asset()->url('images/header/iconfind.png') }}" alt="">
-    
+                            <a href="">
+                                <img src="{{ Theme::asset()->url('images/header/iconfind.png') }}" alt="">
+                            </a>
                         </div>
                     </div>
                     <div class="right">
-                        <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
-                        <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
+                        <a href="">
+                            <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
+                            <span class="header__cart-notice">0</span>
+                        </a>
+                        <a href="">
+                            <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
+                        </a>
+                        <a href="">
                         <img src="{{ Theme::asset()->url('images/header/iconfb.png') }}" alt="">
+                        </a>
                     </div>
             </div>
         </header>

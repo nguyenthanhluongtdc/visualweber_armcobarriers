@@ -3,44 +3,23 @@
         <div  class="swiper-container mySwiper">
             <div class="parallax-bg" data-swiper-parallax="-23%"></div>
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-300">
-            <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
-          </div>
-          <div class="subtitle" data-swiper-parallax="-200">BARRIERS</div>
-          <div class="text" data-swiper-parallax="-100">
-            <p>manufacture, supply & install</p>
-            <p>
-                Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-            </p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-            <div class="title" data-swiper-parallax="-300">
-              <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+          
+            <div class="swiper-slide">
+                <div class="swiper-content">
+                    <div class="logo-slider" data-swiper-parallax="-300">
+                        <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                    </div>
+                    <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
+                    <div class="text-slider" data-swiper-parallax="-100">
+                        <p>manufacture, supply & install</p>
+                        <p>
+                            Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="subtitle" data-swiper-parallax="-200">BARRIERS</div>
-            <div class="text" data-swiper-parallax="-100">
-              <p>manufacture, supply & install</p>
-              <p>
-                  Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="title" data-swiper-parallax="-300">
-              <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
-            </div>
-            <div class="subtitle" data-swiper-parallax="-200">BARRIERS</div>
-            <div class="text" data-swiper-parallax="-100">
-              <p>manufacture, supply & install</p>
-              <p>
-                  Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-              </p>
-            </div>
-          </div>
-        
-      </div>
+
+         
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
@@ -69,7 +48,7 @@
                         </div>
                         <div class="right-content-item">
                             <p>What is ARMCO®?</p>
-                            <img src="{{ Theme::asset()->url('images/home/Icon-arrow.png') }}" alt="">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
                     </div>
                 </div>
@@ -273,6 +252,35 @@
 
             <div class="read-more">
                 <h3>Read More</h3>
+            </div>
+            <div class="container-customize">
+                <div class="count">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="count-customers">
+                                <h2>15,451</h2>
+                                <p>Customers</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="count-completed">
+                                <h2>125,451</h2>
+                                <p>Completed projects</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="count-kilomet">
+                                <h2>1,204</h2>
+                                <p>Kilometres installed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="exp">
+                        <p>At ARMCO® Barriers you deal with people specialising in the safety barrier industry with over 35 years experience. </p>
+                    </div>
+                </div>
             </div>
 
         </div>

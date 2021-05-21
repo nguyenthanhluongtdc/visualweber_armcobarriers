@@ -5,6 +5,9 @@
             .footer__logo {
                 padding-top: 50px;
                 padding-bottom: 15px;
+                .img {
+                    width: 12%;
+                }
             }
             .container-wrapper {
                 padding-bottom: 90px;
@@ -12,6 +15,10 @@
                     .map-protection {
                         width: max-content;
                         padding-top: 30px;
+                    }
+                    .tiltle-protection h3 {
+                        font-size: 20px;
+                        font-family: $FolioStd-Medium;
                     }
                 }
                 .contact-location p {
@@ -35,6 +42,10 @@
                         padding: 10px 0;
                         a {
                             color: #262626;
+                            &:hover {
+                                color: #000;
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
@@ -46,6 +57,10 @@
                         padding: 10px 0;
                         a {
                             color: #262626;
+                            &:hover {
+                                color: #000;
+                                text-decoration: underline;
+                            }
                         }
                     }
                 }
@@ -55,6 +70,13 @@
             }
             .footer-bottom {
                 padding: 40px 0;
+                a {
+                    color: #262626;
+                    &:hover {
+                        color: #000;
+                        text-decoration: underline;
+                    }
+                }
             }
         }
     }
