@@ -21,13 +21,15 @@
             <div class="rec">
                 <img src="{{ Theme::asset()->url('images/about/rec1.png') }}" alt="">
             </div>
-           <div class="content-about">
-            <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
-                Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
-                beginnings, the company now has a clientele base that will only choose ARMCO® for 
-                their safety barrier requirements.  An all Australian family owned business that
-                employs Australians and uses Australian resources, we provide service, support and a
-                knowledge of the product that is second to none and will always see our clients return.</span>
+           <div class="container-customize">
+            <div class="content-about">
+                <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
+                    Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
+                    beginnings, the company now has a clientele base that will only choose ARMCO® for 
+                    their safety barrier requirements.  An all Australian family owned business that
+                    employs Australians and uses Australian resources, we provide service, support and a
+                    knowledge of the product that is second to none and will always see our clients return.</span>
+               </div>
            </div>
         </div>
         
@@ -165,24 +167,30 @@
         <div class="bot2">
             <div class="row">
                 <div class="col-sm-4">
+                   <div class="product0">
+                    <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
+                    <h3>"W" Beam Rails</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
+                        Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                   </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="product1">
                         <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
-                        <h3>Galvanizing</h3>
-                        <p>All materials meet the requirements of relevant State Authority 
-                        standards for crash barriers and are hot dip galvanized to AS/NZS 4680
-                        after manufacture.</p>
+                        <h3>Surface Mounted Post</h3>
+                        <p>It has survived not only five centuries, but also the leap into electronic 
+                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                        with the release of Letraset sheets containing.</p>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="product2">
                         <img src="{{ Theme::asset()->url('images/about/product2.png') }}" alt="">
-                        <h3>Powder Coating</h3>
-                        <p>Armco®  Barriers can offer their entire product range powder coated. 
-                        Safety yellow being the most popular colour requested.</p></br>
-                        <p>A full range of colours is available to suit corporate or environmental
-                         requirements.</p>
+                        <h3>In-Ground posts</h3>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
+                        old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
+                        looked up one of the more obscure Latin words.</p>
                     </div>
                 </div>
             </div>

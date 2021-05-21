@@ -54,7 +54,6 @@
            span{
             position: absolute;
             top: 35%;
-            left: 8%;
             width: 32%;
             font-size: 17px;
             font-family: $Arial;
@@ -225,9 +224,25 @@
             }
 
         }
+        .product0{
+            img{ 
+                padding-bottom: 25px;
+                width: 98%;
+            }
+            h3{ 
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+                padding-bottom: 25px;
+            }
+
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
     }
     .bot1{
-        padding-bottom: 30px;
+        padding: 20px 0px 80px;
         .slogan{
             p{
                 font-size: 17px;
@@ -246,13 +261,34 @@
     padding-top: 30px;
     display: flex;
     .count-customers{
-        p{
+        p {
+            text-decoration: none; 
+            position: relative; 
+            padding-bottom: 40px;
             font-size: 20px;
             font-family: $Arial;
-            border-bottom: $priamry_color 10px solid;
-            width: 51%;
-            padding-bottom: 40px;
-        }
+          }   
+     
+         p:after {
+             position: absolute;
+             content: '';
+             height: 10px;
+             bottom: -4px; 
+             left:0px;  
+               left: 0;
+             right: 0;
+               width: 30%;
+               background: $priamry_color;
+               -o-transition:.5s;
+                 -ms-transition:.5s;
+             -moz-transition:.5s;
+             -webkit-transition:.5s;
+             transition:.5s;
+         }
+            p:hover:after {
+               width: 60%;
+               background: $priamry_color;
+         }
         h2{
            padding-right:180px;
            font-size: 60px;
@@ -265,26 +301,77 @@
             font-size: 60px;
             font-family: $FolioStd-Bold;
          }
-         p{
+         p {
+            text-decoration: none; 
+            position: relative; 
+            padding-bottom: 40px;
             font-size: 20px;
             font-family: $Arial;
-            border-bottom: $priamry_color 10px solid;
-            width: 54%;
-            padding-bottom: 40px;
-        }
+          }   
+     
+         p:after {
+             position: absolute;
+             content: '';
+             height: 10px;
+             bottom: -4px; 
+             left:0px;  
+               left: 0;
+             right: 0;
+               width: 30%;
+               background: $priamry_color;
+               -o-transition:.5s;
+                 -ms-transition:.5s;
+             -moz-transition:.5s;
+             -webkit-transition:.5s;
+             transition:.5s;
+         }
+            p:hover:after {
+               width: 60%;
+               background: $priamry_color;
+         }
 
     }
     .count-kilomet{
+        p {
+            text-decoration: none; 
+            position: relative; 
+            padding-bottom: 40px;
+            font-size: 20px;
+            font-family: $Arial;
+          }   
+     
+         p:after {
+             position: absolute;
+             content: '';
+             height: 10px;
+             bottom: -4px; 
+             left:0px;  
+               left: 0;
+             right: 0;
+               width: 30%;
+               background: $priamry_color;
+               -o-transition:.5s;
+                 -ms-transition:.5s;
+             -moz-transition:.5s;
+             -webkit-transition:.5s;
+             transition:.5s;
+         }
+            p:hover:after {
+               width: 60%;
+               background: $priamry_color;
+         }
         h2{
             font-size: 60px;
             font-family: $FolioStd-Bold;
          }
          p{
+            a{
             font-size: 20px;
             font-family: $Arial;
             border-bottom: $priamry_color 10px solid;
             width: 54%;
             padding-bottom: 40px;
+            }
         }   
     }
 }
@@ -302,12 +389,13 @@
     border: #E1E1E1 1px solid;
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
     .gr{
         display: flex;
         align-items: center;
         .sign-up{
-            padding-left: 70px;
+            padding-left: 30px;
+            padding-right: 60px;
             p{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -319,15 +407,15 @@
         }
         .info-me{
             input{
-                margin: 40px;
+                margin: 28px;
                 background-color:#E1E1E1;
                 border: none;
-                padding: 15px;
+                padding: 15px 40px;
             }
             button{
-                width: 150px;
+                width: 220px;
                 padding:15px;
-                margin: 40px;
+                margin: 30px;
                 background-color:$priamry_color;
                 
             }
