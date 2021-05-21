@@ -1,19 +1,22 @@
 .wrap-top{
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 40px;
     .cont1{
-        a{
+        a:nth-child(2){
+            padding-left: 35px;
+           color: #000;
+        }
+        a:nth-child(1){
             font-size: 17px;
             font-family: $Arial;
             padding-right: 35px;
-            color:black;
+            color:#919191;
+            border-right: 1px solid #919191;
         }
-        span{
-            padding-right: 35px;
-             }
+
     }
     .cont2{
-        padding: 30px 0px;
+        padding: 50px 0px 60px 0px;
         h1{
             font-size: 40px;
             font-family: $FolioStd-Bold;
@@ -25,12 +28,19 @@
         }
     }
     .cont3{
-        a{
+        a:nth-child(1){
             padding-right: 40px;
             font-size: 17px;
             font-family: $Arial;
-            color:black;
+            font-weight: bold;
+            color: #000;
             }
+        a:nth-child(2){
+            padding-right: 40px;
+            font-size: 17px;
+            font-family: $Arial;
+            color:#000;
+                }
     }
 }
 .wrap-cont{
@@ -44,7 +54,7 @@
            span{
             position: absolute;
             top: 35%;
-            left: 11%;
+            left: 8%;
             width: 32%;
             font-size: 17px;
             font-family: $Arial;
@@ -60,12 +70,19 @@
             padding-right: 25px;
         }
         .view{
-            border-bottom: 1px solid #000;
+            a{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+                color:#000;
+                border-bottom: 1px solid #000;
+            }
+            
         }
     }
     .wrap3{
         padding-bottom: 60px;
         .availability{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -76,6 +93,7 @@
             }
         }
         .australian{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -89,6 +107,7 @@
     .wrap2{
         padding-bottom: 60px;
         .quality{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -99,6 +118,7 @@
             }
         }
         .warranty{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -109,6 +129,7 @@
             }
         }
         .competitive{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -122,6 +143,7 @@
     .wrap1{
         padding-bottom: 60px;
         .innovation{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -133,6 +155,7 @@
     
         }
         .installation{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -143,6 +166,7 @@
             }
         }
         .design{
+            margin-right: 70px;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -154,7 +178,7 @@
         }
     }
     .whatwedo{
-        padding: 40px 0px;
+        padding: 60px 0px;
         h2{
             font-family: $FolioStd-Bold;
             font-size: 40px;
@@ -295,13 +319,17 @@
         }
         .info-me{
             input{
-                margin: 60px;
+                margin: 40px;
                 background-color:#E1E1E1;
                 border: none;
+                padding: 15px;
             }
             button{
-                padding: 0px 40px;
+                width: 150px;
+                padding:15px;
+                margin: 40px;
                 background-color:$priamry_color;
+                
             }
        
     }

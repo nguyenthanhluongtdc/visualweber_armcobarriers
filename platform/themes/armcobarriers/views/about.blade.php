@@ -1,21 +1,20 @@
-<div class="container">
+<div class="container-customize">
     <div class="wrap-top">
         <div class="cont1">
             <a href="">Homepage</a>
-            <span>|</span>
             <a href="">About Us</a>
         </div>
         <div class="cont2">
-            <h1>Asset Protection Solutions </h1>
+            <h1>ARMCO - About Us</h1>
             <h2>Roadside,Car Parks,Warehouse</h2>
         </div>
         <div class="cont3">
             <a href="">Company Profile</a>
-            <a href="">Product Quality</a>
+            <a href="">The ARMCO System</a>
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid-customize">
     <div class="wrap-cont">
         <div class="banner">
             <img src="{{ Theme::asset()->url('images/about/img1.png') }}" alt="">
@@ -34,7 +33,7 @@
         
     </div>
 </div>
-<div class="container">
+<div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo">
             <h2> What We Do</h2>
@@ -135,23 +134,23 @@
             <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
            </div>
            <div class="view">
-               <p>VIEW OUR PRODUCT</p>
+                <a href="url">VIEW OUR PRODUCT</a>
            </div>
        </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid-customize">
     <div class="hero">
         <img src="{{ Theme::asset()->url('images/about/hero.png') }}" alt="">
     </div>
 </div>
-<div class="container">
+<div class="container-customize">
     <div class="wrap-bot">
         <div class="bot1">
             <div class="row">
                 <div class="col-sm-4">
                     <div class="product-quality">
-                        <h2>Product Quality</h2>
+                        <h2>The ARMCO</br>"W" Beam System</h2>
                     </div>
                 </div>
                 <div class="col-sm-8">
@@ -190,7 +189,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-customize">
     <div class="count">
         <div class="row">
             <div class="col-sm-4">
@@ -219,7 +218,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container-customize">
     <div class="wrap-sign"> 
        <div class="gr">
             <div class="sign-up">
