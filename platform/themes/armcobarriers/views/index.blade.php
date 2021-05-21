@@ -40,45 +40,45 @@
                         <p>Roadside, Car Parks, Warehouses</p>
                     </div>   
                 </div>
-                <div class="right-content-wrapper">
-                    <div class="right-content">
-                        <div class="col-lg-4">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/header/mid1.png') }}" alt="">
-    
-                        </div>
-                        <div class="right-content-item">
-                            <p>What is ARMCO®?</p>
-                            <i class="fas fa-arrow-right"></i>
+                <div class="col-lg-4">
+                    <div class="right-content-wrapper">
+                        <div class="right-content">
+                                <img class="img-background" src="{{ Theme::asset()->url('images/header/mid1.png') }}" alt="">
+        
+                                <div class="right-content-item">
+                                    <p>What is ARMCO®?</p>
+                                    <a href=""><i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
             <div class="row">
-    
-                <div class="col-lg-4">
-                    <div class="image-mid-1">
-                        <div class="mid-1">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/header/mid2.png') }}" alt="">
+                <div class="office-of-us">
+                    <div class="col-lg-4">
+                        <div class="image-mid-1">
+                            <div class="mid-1">
+                                <img class="img-background" src="{{ Theme::asset()->url('images/header/mid2.png') }}" alt="">
+                            </div>
+                            <p>Car Park</p>
                         </div>
-                        <p>Car Park</p>
+                        
                     </div>
-                    
-                </div>
-                <div class="col-lg-4">
-                    <div class="image-mid-2">
-                        <div class="mid-2">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/header/mid3.png') }}" alt="">
-                        </div>
-                        <p>Factories, Warehouse</p>
-                    </div> 
-                </div>
-                <div class="col-lg-4">
-                    <div class="image-mid-3">
-                        <div class="mid-3">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/header/mid4.png') }}" alt="">
-                        </div>
-                        <p>Roads</p>
+                    <div class="col-lg-4">
+                        <div class="image-mid-2">
+                            <div class="mid-2">
+                                <img class="img-background" src="{{ Theme::asset()->url('images/header/mid3.png') }}" alt="">
+                            </div>
+                            <p>Factories, Warehouse</p>
+                        </div> 
                     </div>
+                    <div class="col-lg-4">
+                        <div class="image-mid-3">
+                            <div class="mid-3">
+                                <img class="img-background" src="{{ Theme::asset()->url('images/header/mid4.png') }}" alt="">
+                            </div>
+                            <p>Roads</p>
+                        </div>  
                 </div>
             </div>
         </div>
@@ -140,9 +140,10 @@
                     <p>Installation, Design Advice, Custom Manufacture</p>
                 </div>   
             </div>
-            <div class="right-content-wrapper">
-                <div class="right-content">
-                    <div class="col-lg-4">
+            <div class="col-lg-4">
+                <div class="right-content-wrapper">
+                    <div class="right-content">
+                    
                         <img class="img-background" src="{{ Theme::asset()->url('images/home/service-right.png') }}" alt="">
 
                     </div>
@@ -154,35 +155,37 @@
             </div>
         </div>
         <div class="row">
-
-            <div class="col-lg-4">
-                <div class="image-mid-1">
-                    <div class="mid-1">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/service-1.png')}}" alt="">
+            <div class="service-of-us">
+                <div class="col-lg-4">
+                    <div class="image-mid-1">
+                        <div class="mid-1">
+                            <img class="img-background" src="{{ Theme::asset()->url('images/home/service-1.png')}}" alt="">
+                        </div>
+                        <p>Armco Request a Quotation</p>
                     </div>
-                    <p>Armco Request a Quotation</p>
+                    
                 </div>
-                
-            </div>
-            <div class="col-lg-4">
-                <div class="image-mid-2">
-                    <div class="mid-2">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/service-2.png') }}" alt="">
+                <div class="col-lg-4">
+                    <div class="image-mid-2">
+                        <div class="mid-2">
+                            <img class="img-background" src="{{ Theme::asset()->url('images/home/service-2.png') }}" alt="">
+                        </div>
+                        <div class="image-mid-item">
+                            <p>Armco Custom Manufacture</p>
+                            <a href=""><i class="fas fa-arrow-right"></i></a>
+                        </div>  
+                    </div> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="image-mid-3">
+                        <div class="mid-3">
+                            <img class="img-background" src="{{ Theme::asset()->url('images/home/service-3.png') }}" alt="">
+                        </div>
+                        <p>ARMCO Design Advise</p>
                     </div>
-                    <div class="image-mid-item">
-                        <p>Armco Custom Manufacture</p>
-                        <img src="{{ Theme::asset()->url('images/home/Icon-arrow.png') }}" alt="">
-                    </div>  
-                </div> 
-            </div>
-            <div class="col-lg-4">
-                <div class="image-mid-3">
-                    <div class="mid-3">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/service-3.png') }}" alt="">
-                    </div>
-                    <p>ARMCO Design Advise</p>
                 </div>
             </div>
+            
         </div>
        </div>
    </div>
