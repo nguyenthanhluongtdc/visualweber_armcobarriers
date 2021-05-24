@@ -364,6 +364,9 @@
         max-width: 100%;
     }
     .news-post--titlte {
+        &:hover {
+            background-color: #FAD906;
+        }
         font-size: 20px;
         font-family: $FolioStd-Medium;
         @media (max-width: 1280px) {
@@ -391,7 +394,7 @@
                 padding: 10px 15px;
                 background-color: $priamry_color;
                 color: #000;
-                img {
+                i {
                     padding: 0 5px;
                 }
             }
