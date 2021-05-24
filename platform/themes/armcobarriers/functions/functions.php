@@ -2,6 +2,8 @@
 
 register_page_template([
     'default' => 'Default',
+    'service' => 'Service',
+
 ]);
 
 register_sidebar([

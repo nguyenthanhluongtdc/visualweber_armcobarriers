@@ -105,4 +105,41 @@ class ArmcobarriersController extends PublicController
         // show your site map (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
         return SiteMapManager::render('xml');
     }
+
+     /**
+     * @return \Illuminate\Http\Response|Response
+     */
+    public function getService()
+    {
+        SeoHelper::setTitle(theme_option('seo_title', 'Armcobarriers'))
+            ->setDescription(theme_option('seo_description', 'Armcobarriers'))
+            ->openGraph()
+            ->setTitle(@theme_option('seo_title'))
+            ->setSiteName(@theme_option('site_title'))
+            ->setUrl(route('public.index'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'),'og'))
+            ->addProperty('image:width', '1200')
+            ->addProperty('image:height', '630');
+
+        // if (defined('PAGE_MODULE_SCREEN_NAME')) {
+        //     $homepageId = BaseHelper::getHomepageId();
+        //     if ($homepageId) {
+        //         $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
+
+        //         if ($slug) {
+        //             $data = (new PageService)->handleFrontRoutes($slug);
+
+        //             return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
+        //         }
+        //     }
+        // }
+
+        SeoHelper::setTitle(theme_option('site_title'));
+
+        Theme::breadcrumb()->add(__('Home'), url('/'));
+
+        event(RenderingHomePageEvent::class);
+
+        return Theme::scope('service')->render();
+    }
 }
