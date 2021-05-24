@@ -1,5 +1,11 @@
 .header {
     height: 90px;
+    @media (max-width: 1440px) {
+        height: 85px
+    }
+    @media (max-width: 1366px) {
+        height: 80px;
+    }
     width: 100%;
     display: flex;
     align-items: center;
@@ -11,6 +17,12 @@
         background: #FAD906;
         height: 100%;
         padding: 25px 74px;
+        @media (max-width: 1440px) {
+            padding: 25px 25px;
+        }
+        @media (max-width:1366px) {
+            padding: 18px 10px;
+        }
     }
     .nav {
         margin-right: 12%;
@@ -20,6 +32,9 @@
             list-style: none;
             flex: 1;
             justify-content: center;
+            @media (max-width: 1680px) {
+                padding-right: 10%;
+            }
             li:first-child {
                 font-weight: bold;
             }
@@ -30,6 +45,12 @@
                     color: #333;
                     font-size: 17px;
                     font-family: $Arial;
+                    @media (max-width: 1680px) {
+                        font-size: 16px;
+                    }
+                    @media (max-width: 1440px) {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -42,6 +63,12 @@
         box-shadow: 0px 2px 6px #ddd;
         display: flex;
         align-items: center;
+        @media (max-width: 1440px) {
+            top: 60%;
+        }
+        @media (max-width: 992px) {
+            display: none;
+        }
         .left {
             display: flex;
             background: #fff;
@@ -49,6 +76,18 @@
             padding: 19px;
             justify-content: space-between;
             width: 240px;
+            @media (max-width: 1680px) {
+                padding: 15px;
+                width: 208px;
+            }
+            @media (max-width: 1440px) {
+                padding: 3px;
+                width: 170px;
+            }
+            @media (max-width:1366px) {
+                padding: 8px;
+                width: 175px;
+            }
             .left-1 {
                 display: flex;
                 align-items: center;
@@ -63,8 +102,14 @@
                 }
                 img {
                     padding-left: 10px;
+                    @media (max: width 1440px) {
+                        padding-left: 3px;
+                    }
                 }
                 span {
+                    @media (max-width: 1440px) {
+                        padding: 0;
+                    }
                     padding-left: 10px;
                     font-family: $Arial;
                     font-weight: bold;
@@ -76,10 +121,23 @@
             background: #FAD906;
             padding: 19px;
             position: relative;
+            @media (max-width: 1680px) {
+                padding: 14px;
+            }
+            @media (max-width: 1440px) {
+                padding: 8px;
+            }
+            @media (max-width:1366px) {
+                padding: 7px;
+            }
             img {
                 padding-left: 15px;
                 padding-right: 12px;
                 max-width: 100%;
+                @media (max-width: 1366px) {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
             }
             .header__cart-notice {
                 position: absolute;
@@ -92,6 +150,10 @@
                 top: 15%;
                 border-radius: 50%;
                 text-align: center;
+                @media (max-width: 1366px) {
+                    left: 25%;
+                    top: 8%;
+                }
             }
         }
     }

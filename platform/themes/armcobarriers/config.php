@@ -59,6 +59,7 @@ return [
             $theme->asset()->container('footer')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->container('footer')->add('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js');
             $theme->asset()->add('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+            $theme->asset()->add('font-awesome-pro', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
             
             // $theme->asset()->usePath()->add('style', 'css/common.css',[],[],time());
             if (function_exists('shortcode')) {

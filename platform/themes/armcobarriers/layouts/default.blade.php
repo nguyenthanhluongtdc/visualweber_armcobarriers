@@ -1,6 +1,6 @@
 {!! Theme::partial('header') !!}
 
-<div class="">
+<div class="page-content">
     {!! Theme::content() !!}
 </div>
 
