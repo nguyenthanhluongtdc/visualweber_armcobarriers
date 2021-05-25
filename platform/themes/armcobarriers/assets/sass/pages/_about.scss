@@ -1,6 +1,5 @@
 .wrap-top{
     padding-bottom: 20px;
-    padding-top: 40px;
     .cont1{
         padding-top: 80px;
         a:nth-child(2){
@@ -17,12 +16,14 @@
 
     }
     .cont2{
-        padding: 50px 0px 60px 0px;
+        padding-bottom: 60px;
         h1{
+            color: #000000;
             font-size: 40px;
             font-family: $FolioStd-Bold;
         }
         h2{
+            color: #000000;
             font-size: 20px;
             font-family: $Arial;
             font-weight: bold;
@@ -65,36 +66,6 @@
             width: 32%;
             font-size: 17px;
             font-family: $Arial;
-           }
-           @media (max-width:1440px) 
-           {
-                span{
-                 position: absolute;
-                 top: 40%;
-                 width: 60%;
-                 font-size: 17px;
-                 font-family: $Arial;
-                } 
-           }
-           @media(max-width:992px)
-           {
-            span{
-                position: absolute;
-                top: 30%;
-                width: 70%;
-                font-size: 17px;
-                font-family: $Arial;
-               }
-           }
-           @media(max-width: 768px)
-           {
-            span{
-                position: absolute;
-                top: 25%;
-                width: 70%;
-                font-size: 13px;
-                font-family: $Arial;
-               }
            }
        }
    }
@@ -217,6 +188,7 @@
     .whatwedo{
         padding: 60px 0px;
         h2{
+            color:#000000;
             font-family: $FolioStd-Bold;
             font-size: 40px;
         
@@ -292,17 +264,9 @@
         }
         .product-quality{
             h2{
+                color:#000000;
                 font-size: 40px;
                 font-family: $FolioStd-Bold;
-            }
-        }
-        @media(max-width:992px)
-        {
-            .product-quality{
-                h2{
-                    font-size: 39px;
-                    font-family: $FolioStd-Bold;
-                }
             }
         }
     }
@@ -344,49 +308,6 @@
            font-size: 60px;
            font-family: $FolioStd-Bold;
         }
-        @media(max-width: 992px){
-            p {
-                text-decoration: none; 
-                position: relative; 
-                padding-bottom: 25px;
-                font-size: 15px;
-                font-family: $Arial;
-              }   
-         
-             p:after {
-                 position: absolute;
-                 content: '';
-                 height: 10px;
-                 bottom: -4px; 
-                 left:0px;  
-                   left: 0;
-                 right: 0;
-                   width: 30%;
-                   background: $priamry_color;
-                   -o-transition:.5s;
-                     -ms-transition:.5s;
-                 -moz-transition:.5s;
-                 -webkit-transition:.5s;
-                 transition:.5s;
-             }
-                p:hover:after {
-                   width: 60%;
-                   background: $priamry_color;
-             }
-            h2{
-                font-size: 40px;
-                font-family: $FolioStd-Bold;
-             }
-             p{
-                a{
-                font-size: 20px;
-                font-family: $Arial;
-                border-bottom: $priamry_color 10px solid;
-                width: 54%;
-                padding-bottom: 40px;
-                }
-            }   
-        }
     }
     .count-completed{
         h2{
@@ -422,50 +343,6 @@
                width: 60%;
                background: $priamry_color;
          }
-         @media(max-width: 992px){
-            p {
-                text-decoration: none; 
-                position: relative; 
-                padding-bottom: 25px;
-                font-size: 15px;
-                font-family: $Arial;
-              }   
-         
-             p:after {
-                 position: absolute;
-                 content: '';
-                 height: 10px;
-                 bottom: -4px; 
-                 left:0px;  
-                   left: 0;
-                 right: 0;
-                   width: 30%;
-                   background: $priamry_color;
-                   -o-transition:.5s;
-                     -ms-transition:.5s;
-                 -moz-transition:.5s;
-                 -webkit-transition:.5s;
-                 transition:.5s;
-             }
-                p:hover:after {
-                   width: 60%;
-                   background: $priamry_color;
-             }
-            h2{
-                font-size: 40px;
-                font-family: $FolioStd-Bold;
-             }
-             p{
-                a{
-                font-size: 20px;
-                font-family: $Arial;
-                border-bottom: $priamry_color 10px solid;
-                width: 54%;
-                padding-bottom: 40px;
-                }
-            }   
-        }
-
     }
     .count-kilomet{
         p {
@@ -509,55 +386,6 @@
             padding-bottom: 40px;
             }
         }   
-        @media(max-width: 992px){
-            p {
-                text-decoration: none; 
-                position: relative; 
-                padding-bottom: 25px;
-                font-size: 15px;
-                font-family: $Arial;
-              }   
-         
-             p:after {
-                 position: absolute;
-                 content: '';
-                 height: 10px;
-                 bottom: -4px; 
-                 left:0px;  
-                   left: 0;
-                 right: 0;
-                   width: 30%;
-                   background: $priamry_color;
-                   -o-transition:.5s;
-                     -ms-transition:.5s;
-                 -moz-transition:.5s;
-                 -webkit-transition:.5s;
-                 transition:.5s;
-             }
-                p:hover:after {
-                   width: 60%;
-                   background: $priamry_color;
-             }
-            h2{
-                font-size: 40px;
-                font-family: $FolioStd-Bold;
-             }
-             p{
-                a{
-                font-size: 20px;
-                font-family: $Arial;
-                border-bottom: $priamry_color 10px solid;
-                width: 54%;
-                padding-bottom: 40px;
-                }
-            }   
-        }
-    }
-    @media(max-width:992px)
-    {
-    .count-kilomet{
-        padding-left: 20px;
-    }
     }
 }
 .experience{
@@ -591,13 +419,6 @@
                 font-family: $FolioStd-Bold;
             }
         }
-        @media(max-width:1290px)
-        {
-            .sign-up{
-                padding-left: 10px;
-                padding-right: 30px;
-        }
-    }
         .info-me{
             input{
                 margin: 28px;
@@ -608,47 +429,6 @@
                 font-family: $Arial;
             }
            
-            @media(max-width:1440px)
-            {
-                input{
-                    margin: 10px;
-                    background-color:#E1E1E1;
-                    border: none;
-                    padding: 13px 20px;
-                    font-size: 15px;
-                    font-family: $Arial;
-                }
-            }
-            @media(max-width:1290px)
-            {
-                input{
-                    margin: 7px;
-                    background-color:#E1E1E1;
-                    border: none;
-                    padding: 10px;
-                    font-size: 15px;
-                    font-family: $Arial;
-                }
-            }
-            @media(max-width:992px)
-            {
-                input{
-                    margin: 0px;
-                    background-color:#E1E1E1;
-                    border: none;
-                    padding: 3px;
-                    font-size: 15px;
-                    font-family: $Arial;
-                }
-                button{
-                    font-family: $FolioStd-Bold;
-                    width: 50px;
-                    padding:7px 4px;
-                    margin: 0px;
-                    background-color:$priamry_color;
-                    
-                }
-            }
             button{
                 font-size: 20;
                 font-family: $FolioStd-Bold;
@@ -658,30 +438,6 @@
                 background-color:$priamry_color;
                 
             }
-       @media(max-width:1440px)
-       {
-        button{
-            font-size: 20;
-            font-family: $FolioStd-Bold;
-            width: 100px;
-            padding:12px;
-            margin: 10px;
-            background-color:$priamry_color;
-            
-        }
-       }
-       @media(max-width:1290px)
-       {
-        button{
-            font-size: 20;
-            font-family: $FolioStd-Bold;
-            width: 100px;
-            padding:9px;
-            margin: 7px;
-            background-color:$priamry_color;
-            
-        }
-       }
-    }
+         }
     }
 }

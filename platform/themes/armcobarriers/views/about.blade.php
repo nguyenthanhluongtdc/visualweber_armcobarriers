@@ -1,9 +1,11 @@
 <div class="container-customize">
     <div class="wrap-top">
-        <div class="cont1">
-            <a href="">Homepage</a>
-            <a href="">About Us</a>
-        </div>
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
+                    <li class="breadcrumb-item">About Us</li>
+                  </ol>
+                </nav> 
         <div class="cont2">
             <h1>ARMCO - About Us</h1>
             <h2>Roadside,Car Parks,Warehouse</h2>
@@ -42,7 +44,7 @@
         </div>
        <div class="wrap1">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6 ">
                <div class="design">
                    <h3>Design Advice</h3></br></br>
                     <p>At ARMCO®  Barriers you deal with people specialising in the road 
@@ -51,7 +53,7 @@
                          project and achieve better solutions at a reduced cost.</p>
                </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="innovation">
                     <h3>Innovation</h3></br></br>
                     <p>Expertise leads to Innovation.  Whilst our competitor’s product remains
@@ -65,7 +67,7 @@
                     practical and economical safety barrier solutions.</p>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="installation">
                     <h3>Installation Service</h3></br></br>
                     <p>ARMCO®  Barriers is leading the way as a manufacturer that offers an 
@@ -80,7 +82,7 @@
     </div>
     <div class="wrap2">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                <div class="competitive">
                    <h3>Competitive Pricing</h3></br></br>
                     <p>Providing better products, design advice, an installation service and
@@ -88,7 +90,7 @@
                     <p>ARMCO Barriers also offers competitive pricing each and every time.</p>
                </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="warranty">
                     <h3>Warranty Statenment</h3></br></br>
                     <p>ARMCO®  Barriers warrants that its products are supplied free of
@@ -98,7 +100,7 @@
                     maintenance-free, safety barrier protection. </p>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="quality">
                     <h3>Quality Assurance</h3></br></br>
                     <p>Product excellence is assured by operating in accordance with Quality 
@@ -112,7 +114,7 @@
        </div>
        <div class="wrap3">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                <div class="availability">
                    <h3>Availability</h3></br></br>
                     <p>Armco®  Barriers is a manufacturer of all of it's products, therefore we
@@ -122,7 +124,7 @@
                     to ensure that a product is available as soon as possible.</p>
                </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4 col-sm-6">
                 <div class="australian">
                     <h3>Australian Owned</h3></br></br>
                     <p>ARMCO®  Barriers is a wholly Australian owned company supplying
@@ -150,12 +152,12 @@
     <div class="wrap-bot">
         <div class="bot1">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="product-quality">
                         <h2>The ARMCO</br>"W" Beam System</h2>
                     </div>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-md-8 col-sm-12">
                     <div class="slogan">
                         <p>Armco®  Barriers Pty Ltd continually make innovations that improve the life, installation time and performance of our product, all the while 
                         maintaining regulatory standards from all government authorities. We constantly research and test our products with structural engineers
@@ -166,7 +168,7 @@
         </div>
         <div class="bot2">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4 col-sm-6">
                    <div class="product0">
                     <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
                     <h3>"W" Beam Rails</h3>
@@ -174,7 +176,7 @@
                         Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                    </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="product1">
                         <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
                         <h3>Surface Mounted Post</h3>
@@ -183,7 +185,7 @@
                         with the release of Letraset sheets containing.</p>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="product2">
                         <img src="{{ Theme::asset()->url('images/about/product2.png') }}" alt="">
                         <h3>In-Ground posts</h3>
@@ -200,19 +202,19 @@
 <div class="container-customize">
     <div class="count">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                 <div class="count-customers">
                     <h2>15,451</h2>
                     <p>Customers</p>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                 <div class="count-completed">
                     <h2>125,451</h2>
                     <p>Completed projects</p>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                 <div class="count-kilomet">
                     <h2>1,204</h2>
                     <p>Kilometres installed</p>

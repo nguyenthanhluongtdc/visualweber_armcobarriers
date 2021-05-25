@@ -1,10 +1,12 @@
-<section style="padding-top:100px">
-    <div class="container-customize">
+<section>
         <div class="wrap-top">
-            <div class="top1">
-                <p><a href="#">Homepage</a></p>
-                <p><a href="#">Services</a></p>
-            </div>
+            <div class="container-customize">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
+                    <li class="breadcrumb-item">Services</li>
+                  </ol>
+                </nav> 
             <div class="top2">
                 <h2>ARMCO - Asset Protection Solutions</h2>
                 <p>Installation, Design Advice, Custom Manufacture</p>
@@ -164,9 +166,8 @@
                         <div class="w-beam">
                             <h3>W Beam &, Thrie Beam</h3>
                             <p>Armco® Barriers can supply all of your wire rope needs,
-                                including installation by our professional and experienced installation teams.
+                                including installation by our professional and experienced installation teams. </p>
                         </div>
-                        </p>
                     </div>
                     <div class="col-md-3 col-sm-6 col-12 ">
                         <div class="post">
@@ -199,6 +200,24 @@
                 </div>
                 <div class="view">
                     <a href="url">VIEW OUR PRODUCT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section style="padding-top:60px">
+    <div class="container-customize">
+        <div class="wrap-sign"> 
+           <div class="gr">
+                <div class="sign-up">
+                    <p>Sign up to receive the</p>
+                    <h3>latest insights</h3>
+                </div>
+                <div class="info-me">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Your Email">
+                    <input type="text" placeholder="Your Company">
+                    <button type ="submit">Sign Up</button>
                 </div>
             </div>
         </div>

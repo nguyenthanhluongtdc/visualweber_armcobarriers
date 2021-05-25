@@ -1,25 +1,4 @@
 .wrap-top{
-    .top1{
-        padding-bottom: 60px;
-        display: flex;
-        p:nth-child(1){
-            padding-right: 40px;
-            border-right: 1px solid #919191 ;
-            a{
-                color:#919191;
-                font-size: 17px;
-                font-family: $Arial;
-            }
-        }
-        p:nth-child(2){
-            padding-left: 40px;
-            a{
-                color: #000000;
-                font-size: 17px;
-                font-family: $Arial;
-            }
-        }
-    }
     .top2{
         padding-bottom: 60px;
         h2{
@@ -111,7 +90,8 @@
 }
 .wrap-car{
     padding: 3% 30% 0% 3%;
-    background-image: url('../../../public/images/service/carpark.png'),url('../../../public/images/service/reccar.png');
+    background-image: url('../../../public/images/service/carpark.png');
+    background-color: #000;
     .wrap-system{
         padding-bottom: 10%;
         .system1{
@@ -226,7 +206,8 @@
 }
 .wrap-roadside
 {   padding:6% 0;
-    background-image:url('../../../public/images/service/roadside.png'),url('../../../public/images/service/recroad.png'); 
+    background-image:url('../../../public/images/service/roadside.png'); 
+    background-color: #000;
         .content{
             width: 60%;
             h3{

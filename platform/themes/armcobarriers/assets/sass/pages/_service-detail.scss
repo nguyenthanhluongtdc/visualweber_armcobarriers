@@ -1,21 +1,119 @@
-.breadcrumb {
-    background: none;
-    padding: 40px 0 60px 0px;
-    margin-bottom: 0;
-    .breadcrumb-item+.breadcrumb-item::before {
-        content: "|";
-        color: $gray;
-        opacity: 20%;
-        padding: 0 40px
-    }
-    .breadcrumb-item {
-        a {
-            color: $gray;
-            text-decoration: none;
+.wrap-install{
+    background-image: url('../../../public/images/service-detail/service.png');
+    height: 460px;
+    background-color: #000;
+    position: relative;
+    .install{
+        position:absolute;
+        top:18%;
+        left:11%;
+        h2{
+            font-size: 20px;
+            font-family: $Arial;
+            font-weight: bold;
+            color: $priamry_color;
+            padding-bottom: 2%;
+        }
+        p{
+            font-size: 17px;
+            font-family: $Arial;
+            color: #fff;
+            width: 49%;
         }
     }
-    .active {
-        color: $gray_text;
-        font-weight: 100;
+}
+.wrap-text{
+    padding-left: 1%;
+    .text1,.text2{
+        ul{
+            li{
+                list-style: disc;
+                padding-bottom: 3%;
+                font-size: 15px;
+                font-family: $Arial;
+            }
+        }
+    }
+}
+.wrap-pic{
+    .re-pow{
+        .request,.powder{
+            img{
+                position: relative;
+                background-color: #000;
+            }
+            h3{
+                position: absolute;
+                top: 78%;
+                z-index: 7;
+                left: 9%;
+                font-family: $FolioStd-Medium;
+                font-size: 20px;
+                color:#fff;
+            }
+        }
+        .powder{
+            img{
+                margin: 0% 0% 2% 5%;
+            }
+        }
+    }
+    .cus-im{
+        h3{
+            position: absolute;
+            top: 83%;
+            z-index: 7;
+            left: 4%;
+            font-family: $FolioStd-Medium;
+            font-size: 20px;
+            color:#fff;
+        }
+        img{
+            position: relative;
+            background-color: #000;
+        }
+        .impact{
+            img{
+                margin: 0% -13%;
+            }
+        }
+    }
+   
+}
+.wrap-product-quality
+{
+    .product-quality{
+        padding-bottom:3%;
+        h2{
+            font-size: 60px;
+            font-family: $FolioStd-Medium;
+            color: #000000;
+        }
+        p{
+            font-size: 20px;
+            font-family: $Arial;
+        }
+    }
+    .australian,.australian,.floor,.guaranteed{
+        h3{
+            font-size: 20px;
+            font-family: $FolioStd-Medium;
+            padding-bottom: 5%;
+            padding-right: 40%;
+        }
+        p{
+            font-size: 15px;
+            font-family: $Arial;
+            padding-right: 3%;
+            padding-bottom: 3%;
+        }
+    }
+    .floor{
+        h3{
+            background-color: $priamry_color;
+            display: inline-block;
+            padding-left: 30px;
+        }
+        
     }
 }
