@@ -24,8 +24,8 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
         Route::get('sitemap.xml', 'ArmcobarriersController@getSiteMap')
             ->name('public.sitemap');
 
-        // Route::get('{slug?}' . config('core.base.general.public_single_ending_url'), 'ArmcobarriersController@getView')
-        //     ->name('public.single');
+        Route::get('{slug?}' . config('core.base.general.public_single_ending_url'), 'ArmcobarriersController@getView')
+            ->name('public.single');
             
 
     });
