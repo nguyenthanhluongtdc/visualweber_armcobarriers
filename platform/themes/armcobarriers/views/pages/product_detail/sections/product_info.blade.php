@@ -1,26 +1,38 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="product_info" class="col-md-12">
     <div class="row">
-        <div class="col-md-1 px-0 slide">
-            <!-- <div class="swiper-container mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+        <div class="col-md-6 gallery">
+            <div class="row">
+                <div class="col-md-2 px-0 slide">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="{{Theme::asset()->url('images/product/product_extra.png')}}" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{Theme::asset()->url('images/product/product_extra2.png')}}" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{Theme::asset()->url('images/product/product_extra3.png')}}" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{Theme::asset()->url('images/product/product_extra5.png')}}" alt="">
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div> -->
+                <div class="col-md-10 main_img">
+                    <img class="img-fluid" src="{{ Theme::asset()->url('images/product/product_detail.png') }}" alt="">
+                </div>
+            </div>
         </div>
-        <div class="col-md-5 px-0">
-            <img class="img-fluid" src="{{ Theme::asset()->url('images/product/product_detail.png') }}" alt="">
-        </div>
+
         <div class="col-md-5 info">
             <p class="product_name">Knuffi Magnetic Flexible Edge Protector </p>
             <p class="product_introduce">
@@ -78,10 +90,11 @@
         })
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 10,
             slidesPerGroup: 1,
-            loop: true,
-            loopFillGroupWithBlank: true,
+            // loop: true,
+            // loopFillGroupWithBlank: true,
+            noSwiping: true,
             direction: "vertical",
             pagination: {
                 el: ".swiper-pagination",
@@ -92,5 +105,6 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+        swiper.disableTouchControl()
     })
 </script>
