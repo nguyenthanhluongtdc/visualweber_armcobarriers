@@ -1,0 +1,33 @@
+#other_products{
+    .title{
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        border-bottom:1px solid #efefef ;
+        &:after{
+            content: "";
+            display: block;
+            width: 5%;
+            height:5px ;
+            background-color: $priamry_color;
+        }
+    }
+    .list_products{
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-column-gap: 2%;
+        .product_item{
+            color: black;
+            .product_name{
+                padding: 3% 0%;
+            }
+            &:hover{
+                .product_name{
+                    color: blue;
+                }
+            }
+          
+        }
+    }
+}

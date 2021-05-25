@@ -142,4 +142,8 @@ class ArmcobarriersController extends PublicController
 
         return Theme::scope('service')->render();
     }
+    public function productDetail()
+    {
+        return Theme::scope('pages/product_detail/index')->render();
+    }
 }
