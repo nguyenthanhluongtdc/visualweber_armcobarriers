@@ -1,0 +1,21 @@
+.breadcrumb {
+    background: none;
+    padding: 40px 0 60px 0px;
+    margin-bottom: 0;
+    .breadcrumb-item+.breadcrumb-item::before {
+        content: "|";
+        color: $gray;
+        opacity: 20%;
+        padding: 0 40px
+    }
+    .breadcrumb-item {
+        a {
+            color: $gray;
+            text-decoration: none;
+        }
+    }
+    .active {
+        color: $gray_text;
+        font-weight: 100;
+    }
+}
