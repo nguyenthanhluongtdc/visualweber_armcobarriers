@@ -210,7 +210,7 @@
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">
-                                <a href="">Share <img src="{{ Theme::asset()->url('images/home/Icon-share.png') }}" alt=""> </a>
+                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -228,7 +228,7 @@
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">
-                                <a href="">Share <img src="{{ Theme::asset()->url('images/home/Icon-share.png') }}" alt=""> </a>
+                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +246,7 @@
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">
-                                <a href="">Share <img src="{{ Theme::asset()->url('images/home/Icon-share.png') }}" alt=""> </a>
+                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
                             </div>
                         </div>
                     </div>

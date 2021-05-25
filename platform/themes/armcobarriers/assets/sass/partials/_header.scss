@@ -1,11 +1,32 @@
 .header {
+    .nav__bar {
+        display: flex;
+        align-items: center;
+    }
+    position: unset;
+    padding: 0;
+    .logo__link {
+        padding: 39px 74px;
+        background-color: $priamry_color;
+    }
+    .navbar-nav {
+        padding-left: 13%;
+        .nav-item {
+            padding: 0 15px;
+            font-size: 17px;
+            font-family: $Arial;
+            a {
+                color: $gray_text
+            }
+        }
+        li:first-child {
+            a {
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
     height: 90px;
-    @media (max-width: 1440px) {
-        height: 85px
-    }
-    @media (max-width: 1366px) {
-        height: 80px;
-    }
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,51 +34,9 @@
     z-index: 10;
     background-color: #fff;
     box-shadow: 2px 0.5px 10px #ddd;
-    .logo {
-        background: #FAD906;
-        height: 100%;
-        padding: 25px 74px;
-        @media (max-width: 1440px) {
-            padding: 25px 25px;
-        }
-        @media (max-width:1366px) {
-            padding: 18px 10px;
-        }
-    }
-    .nav {
-        margin-right: 12%;
-        .nav__menu {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            flex: 1;
-            justify-content: center;
-            @media (max-width: 1680px) {
-                padding-right: 10%;
-            }
-            li:first-child {
-                font-weight: bold;
-            }
-            li {
-                padding: 0 15px;
-                a {
-                    text-decoration: none;
-                    color: #333;
-                    font-size: 17px;
-                    font-family: $Arial;
-                    @media (max-width: 1680px) {
-                        font-size: 16px;
-                    }
-                    @media (max-width: 1440px) {
-                        font-size: 14px;
-                    }
-                }
-            }
-        }
-    }
     .toolbar {
         position: absolute;
-        right: 2%;
+        right: 10%;
         top: 50%;
         background: white;
         box-shadow: 0px 2px 6px #ddd;
