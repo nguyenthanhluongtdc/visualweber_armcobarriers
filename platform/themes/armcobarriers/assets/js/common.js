@@ -6,6 +6,10 @@ require('./bootstrap')
 var swiper = new Swiper(".mySwiper", {
     speed: 600,
     // parallax: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

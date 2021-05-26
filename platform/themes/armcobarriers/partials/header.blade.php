@@ -26,19 +26,14 @@
     <body class="contaier-fluid-customize" @if (BaseHelper::siteLanguageDirection() == 'rtl') dir="rtl" @endif>
         {!! apply_filters(THEME_FRONT_BODY, null) !!}
         <header class="header">
-            <div class="contaier-fluid-customize">
-                <div class="row nav__bar">
-                    <div class="col-md-2">
-                        <a href="#" class="logo__link">
-                            <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-md-7">
-                        <nav class="navbar navbar-expand-sm">
-                    
+            <div class="contaier-fluid-customize">     
+                        <nav class="navbar navbar-expand-lg">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                               <i class="fas fa-bars"></i>
                             </button>
+                            <a href="#" class="logo__link">
+                                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                            </a>
                           
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -89,39 +84,33 @@
                             </ul>             
                             </div>
                         </nav>
-                    </div>
-                    <div class="col-md-3">
                         <div class="toolbar">
                             <div class="left">
                                 <div class="left-1">
                                     <a href="">
-                                        <img src="{{ Theme::asset()->url('images/header/iconphone.png') }}" alt="">
+                                        <i class="fas fa-phone-alt"></i>
                                         <span>1800 808 619</span>
                                     </a>
                                 </div>
                                 <div class="left-2">
                                     <a href="">
-                                        <img src="{{ Theme::asset()->url('images/header/iconfind.png') }}" alt="">
+                                        <i class="fas fa-search"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="right">
                                 <a href="">
-                                    <img src="{{ Theme::asset()->url('images/header/icon.png') }}" alt="">
+                                    <i class="fal fa-shopping-cart"></i>
                                     <span class="header__cart-notice">0</span>
                                 </a>
                                 <a href="">
-                                    <img src="{{ Theme::asset()->url('images/header/iconpeople.png') }}" alt="">
+                                    <i class="fal fa-user"></i>
                                 </a>
                                 <a href="">
-                                <img src="{{ Theme::asset()->url('images/header/iconfb.png') }}" alt="">
+                                    <i class="fab fa-facebook-f"></i>
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
-            
             </div>
-            
         </header>
       

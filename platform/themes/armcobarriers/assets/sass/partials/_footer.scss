@@ -4,6 +4,9 @@
     }
     .footer-yellow {
         background-color: #FAD906;
+        @media(max-width: 480px) {
+            text-align: center;
+        }
         .container-customize {
             .footer__logo {
                 padding-top: 50px;
@@ -16,7 +19,6 @@
                 padding-bottom: 90px;
                 .protection-solutaion {
                     .map-protection {
-                        width: max-content;
                         padding-top: 30px;
                     }
                     .tiltle-protection h3 {
@@ -67,17 +69,88 @@
                         }
                     }
                 }
-                .connect-us img {
+                .connect-us a i {
                     padding-top: 15px;
+                    font-size: 20px;
+                    color: $gray-text;
                 }
             }
             .footer-bottom {
+                @media(max-width: 480px) {
+                    font-size: 13px;
+                    padding: 20px 45px;
+                }
                 padding: 40px 0;
                 a {
                     color: #262626;
                     &:hover {
                         color: #000;
                         text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .footer {
+        .footer-yellow {
+            .container-customize {
+                .container-wrapper {
+                    padding-bottom: 10px;
+                    .protection-solutaion {
+                        .tiltle-protection {
+                            h3 {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .contact-location {
+                        h3 {
+                            font-size: 15px;
+                        }
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                    .homepage {
+                        font-size: 13px;
+                    }
+                    .applications {
+                        font-size: 13px;
+                    }
+                    .connect-us {
+                        font-size: 13px;
+                    }
+                }
+                .footer__logo {
+                    width: 100%;
+                    img {
+                        @media(max-width: 480px) {
+                            width: 35%;
+                        }
+                        width: 15%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .footer {
+        .footer-yellow {
+            .container-customize {
+                .container-wrapper {
+                    .homepage {
+                        padding-top: 10px;
+                    }
+                    .applications {
+                        padding-top: 10px;
+                    }
+                    .connect-us {
+                        padding-top: 10px;
                     }
                 }
             }

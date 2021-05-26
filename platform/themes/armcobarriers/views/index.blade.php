@@ -18,6 +18,20 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-slide">
+                <div class="swiper-content">
+                    <div class="logo-slider" data-swiper-parallax="-300">
+                        <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                    </div>
+                    <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
+                    <div class="text-slider" data-swiper-parallax="-100">
+                        <p>manufacture, supply & install</p>
+                        <p>
+                            Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                        </p>
+                    </div>
+                </div>
+            </div>
 
          
         <div class="swiper-button-next"></div>
@@ -47,7 +61,7 @@
         
                                 <div class="right-content-item">
                                     <p>What is ARMCO®?</p>
-                                    <a href=""><i class="fas fa-arrow-right"></i></a>
+                                    <a href=""><i class="fal fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +69,7 @@
             </div>
             <div class="row">
                 <div class="office-of-us">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4 col-12">
                         <div class="image-mid-1">
                             <div class="mid-1">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid2.png') }}" alt="">
@@ -64,7 +78,7 @@
                         </div>
                         
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4 col-12">
                         <div class="image-mid-2">
                             <div class="mid-2">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid3.png') }}" alt="">
@@ -72,7 +86,7 @@
                             <p>Factories, Warehouse</p>
                         </div> 
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="col-md-4 col-sm-4 col-12">
                         <div class="image-mid-3">
                             <div class="mid-3">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid4.png') }}" alt="">
@@ -104,7 +118,7 @@
                         <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification, Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                     </div>
                     <div class="col-md-3 col-sm-6">
-                        <div class="wheelstop">
+                        <div>
                             <h4>Wheelstops & Floorgards</h4>
                             <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) works optimally in conjunction with Armco® Railgard™.</p>
                         </div> 
@@ -119,10 +133,12 @@
                 
             </div>
             <div class="product-view">
-                <img src="{{ Theme::asset()->url('images/home/Icon-arrow-black.png') }}" alt="">
-                <h3 class="product-view-title">
-                    View Our Product
-                </h3>
+                <a href="/product">
+                    <img src="{{ Theme::asset()->url('images/home/Icon-arrow-black.png') }}" alt="">
+                    <h3 class="product-view-title">
+                        View Our Product
+                    </h3>
+                </a>
             </div>
         </div>
     </div>
@@ -172,7 +188,7 @@
                         </div>
                         <div class="image-mid-item">
                             <p>Armco Custom Manufacture</p>
-                            <a href=""><i class="fas fa-arrow-right"></i></a>
+                            <i class="fal fa-long-arrow-right"></i>
                         </div>  
                     </div> 
                 </div>
