@@ -17,13 +17,8 @@
     </div>
 </div>
 <div class="container-fluid-customize">
-    <div class="wrap-cont">
-        <div class="banner">
-            <img src="{{ Theme::asset()->url('images/about/img1.png') }}" alt="">
-            <div class="rec">
-                <img src="{{ Theme::asset()->url('images/about/rec1.png') }}" alt="">
-            </div>
-           <div class="container-customize">
+    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.png') }})">
+        <div class="container-customize">
             <div class="content-about">
                 <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
                     Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
@@ -31,12 +26,10 @@
                     their safety barrier requirements.  An all Australian family owned business that
                     employs Australians and uses Australian resources, we provide service, support and a
                     knowledge of the product that is second to none and will always see our clients return.</span>
-               </div>
-           </div>
+            </div>
         </div>
-        
     </div>
-</div>
+ </div>
 <div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo">
@@ -138,7 +131,7 @@
             <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
            </div>
            <div class="view">
-                <a href="url">VIEW OUR PRODUCT</a>
+                <a href="/product">VIEW OUR PRODUCT</a>
            </div>
        </div>
     </div>
@@ -228,7 +221,7 @@
         </div>
     </div>
 </div>
-<div class="container-customize">
+{{-- <div class="container-customize">
     <div class="wrap-sign"> 
        <div class="gr">
             <div class="sign-up">
@@ -243,5 +236,20 @@
             </div>
         </div>
     </div>
+</div> --}}
+<div class="container-customize">
+    <div class="wrap-sign">
+            <div class="info-me">
+                <div class="sign-up">
+                    <p>Sign up to receive the</p>
+                    <h3>latest insights</h3>
+                </div>
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Full Name">
+                <button type ="submit">Sign Up</button>
+            </div>
+    </div>
 </div>
+
     

@@ -1,20 +1,5 @@
 .wrap-top{
     padding-bottom: 20px;
-    .cont1{
-        padding-top: 80px;
-        a:nth-child(2){
-            padding-left: 35px;
-           color: #000;
-        }
-        a:nth-child(1){
-            font-size: 17px;
-            font-family: $Arial;
-            padding-right: 35px;
-            color:#919191;
-            border-right: 1px solid #919191;
-        }
-
-    }
     .cont2{
         padding-bottom: 60px;
         h1{
@@ -46,30 +31,19 @@
     }
 }
 .wrap-cont{
-   .banner{
-       position: relative;
-       img{
-           max-width: 100%;
-       }
-       .rec{
-           position: absolute;
-           top:0;
-           img{
-               max-width: 100%;
-           }
-       }
+        position: relative;
+        height: 460px;
        .content-about{
-           
-           span{
+            span{
             position: absolute;
             top: 35%;
-            width: 32%;
+             width: 32%;
             font-size: 17px;
             font-family: $Arial;
-           }
-       }
-   }
+        }
+    }
 }
+
 .wrap-product{
     .wrap4{
         padding-bottom: 40px;
@@ -399,17 +373,8 @@
     }
 }
 .wrap-sign{
-    border: #E1E1E1 1px solid;
-    display: flex;
-    align-items: center;
     margin-bottom: 100px;
-    .gr{
-        display: flex;
-        align-items: center;
         .sign-up{
-
-            padding-left: 30px;
-            padding-right: 60px;
             p{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -420,24 +385,66 @@
             }
         }
         .info-me{
+            border: #E1E1E1 1px solid;
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            // align-items: center;
             input{
-                margin: 28px;
+                max-width: 100%;
+                width: 20%;
+                padding: 1%;
+                margin: 3% 1%;
                 background-color:#E1E1E1;
                 border: none;
-                padding: 15px 40px;
                 font-size: 15px;
                 font-family: $Arial;
             }
            
             button{
-                font-size: 20;
+                font-size: 20px;
                 font-family: $FolioStd-Bold;
-                width: 220px;
-                padding:15px;
-                margin: 30px;
                 background-color:$priamry_color;
+                padding: 0.8% 4%;
                 
             }
-         }
+       }
+}
+@media(max-width:1290px){
+    .wrap-cont{
+        .content-about{
+            span{
+                top:20%;
+                width: 45%;
+            }
+        }
+    } 
+}
+@media(max-width:991px)
+{
+    .count{
+        .count-customers{
+            h2{
+                padding-right: 0px;
+            }
+
+        }
+        .count-completed{
+            h2{
+                padding-right: 0px; 
+            }
+        }
+    } 
+}
+@media(max-width:768px)
+{
+    .wrap-cont {
+        .content-about {
+            span{
+                top: 18%;
+                width: 60%;
+                font-size: 15px;
+            }
+        }
     }
 }

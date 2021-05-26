@@ -92,34 +92,29 @@
     <div class="container-customize">
         <div class="wrap-pic">
             <div class="re-pow">
-                <div class="row">
-                    <div class="col-md-4 request">
-                        <h3>Request a free Quotation</h3>
-                       <img class="image" src="{{ Theme::asset()->url('images/service-detail/request.png') }}" alt="">
-                   </div>
-                   <div class="col-md-8 powder">
-                       <h3>Request a free Quotation</h3>
-                       <img class="image" src="{{ Theme::asset()->url('images/service-detail/powder.png') }}" alt="">
-                       {{-- <img src="{{ Theme::asset()->url('images/service-detail/powder.png') }}" class="img-fluid" alt="Responsive image"> --}}
-                   </div> 
+                <div class="request">
+                    <img src="{{ Theme::asset()->url('images/service-detail/request.png') }}" alt="">
+                    <h3>Request a free Quotation</h3>
                 </div>
-                <div class="cus-im">
-                    <div class="row">
-                        <div class="col-md-8 custom">
-                            <h3>Request a free Quotation</h3>
-                            <img class="image" src="{{ Theme::asset()->url('images/service-detail/custom.png') }}" alt="">
-                        </div>
-                        <div class="col-md-4 impact">
-                            <h3>Request a free Quotation</h3>
-                            <img class="image" src="{{ Theme::asset()->url('images/service-detail/impact.png') }}" alt="">
-                        </div>
-                    </div>
+                <div class="powder">
+                    <img src="{{ Theme::asset()->url('images/service-detail/powder.png') }}" alt="">
+                    <h3>Powder-Coating</h3>
                 </div>
             </div>
-         </div>
+            <div class="cus-im">
+                <div class="custom">
+                    <img src="{{ Theme::asset()->url('images/service-detail/custom.png') }}" alt="">
+                    <h3>Custom Manufacture & Design Advice</h3>
+                </div>
+               <div class="impact">
+                <img src="{{ Theme::asset()->url('images/service-detail/impact.png') }}" alt="">
+                <h3>Impact Force Calculator</h3>
+               </div>
+            </div>
+        </div>
     </div>
 </section>
-<section style="padding: 2% 0px">
+<section style="padding: 2%">
     <div class="container-customize">
         <div class="wrap-product-quality">
             <div class="product-quality">
@@ -160,7 +155,7 @@
                     <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="url">VIEW OUR PRODUCT</a>
+                    <a href="/product">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

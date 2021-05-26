@@ -37,48 +37,77 @@
 }
 .wrap-pic{
     .re-pow{
-        .request,.powder{
-            img{
-                position: relative;
-                background-color: #000;
-            }
+        display: flex;
+        .request{
+            margin:0% 1.5% 1.5% 0%;
+            position: relative;
             h3{
-                position: absolute;
-                top: 78%;
-                z-index: 7;
-                left: 9%;
                 font-family: $FolioStd-Medium;
                 font-size: 20px;
                 color:#fff;
+                position: absolute;
+                top:84%;
+                left: 5%;
+            }
+            img{
+                max-width: 100%;
+                background-color: #000;
             }
         }
         .powder{
-            img{
-                margin: 0% 0% 2% 5%;
+            margin: 0% 0% 1.5% 0;
+            position: relative;
+            h3{
+                font-family: $FolioStd-Medium;
+                font-size: 20px;
+                color:#fff;
+                position: absolute;
+                top:84%;
+                left: 3%;
+
             }
+            img{
+                max-width: 100%;
+                background-color: #000;
+            } 
         }
     }
-    .cus-im{
-        h3{
-            position: absolute;
-            top: 83%;
-            z-index: 7;
-            left: 4%;
-            font-family: $FolioStd-Medium;
-            font-size: 20px;
-            color:#fff;
-        }
-        img{
+    .cus-im
+    {
+        display: flex;
+        .custom{
+            margin: 0% 1.5% 1.5% 0%;
             position: relative;
-            background-color: #000;
+            h3{
+                font-family: $FolioStd-Medium;
+                font-size: 20px;
+                color:#fff;
+                position: absolute;
+                top:84%;
+                left: 3%;
+            }
+            img{
+                max-width: 100%;
+                background-color: #000;
+            }
         }
         .impact{
-            img{
-                margin: 0% -13%;
+            margin-bottom: 1.5%;
+            position: relative;
+            h3{
+                font-family: $FolioStd-Medium;
+                font-size: 20px;
+                color:#fff;
+                position: absolute;
+                top:84%;
+                left: 6%;
             }
+            img{
+                max-width: 100%;
+                background-color: #000;
+            } 
         }
     }
-   
 }
 .wrap-product-quality
 {
@@ -116,4 +145,44 @@
         }
         
     }
+}
+@media(max-width:991px)
+{
+    .wrap-pic{
+        .re-pow {
+            .powder,.request{
+                h3 {
+                    top:80%;
+                    font-size: 15px;
+                }
+            }
+        }
+        .cus-im{
+            .custom,.impact{
+                h3{
+                    top:80%;
+                    font-size: 15px; 
+                }
+            }
+        } 
+    } 
+}
+@media(max-width:640px)
+{
+    .wrap-pic{
+        .re-pow {
+            .powder,.request{
+                h3 {
+                    font-size: 10px;
+                }
+            }
+        }
+        .cus-im{
+            .custom,.impact{
+                h3{
+                    font-size: 10px; 
+                }
+            }
+        } 
+    } 
 }
