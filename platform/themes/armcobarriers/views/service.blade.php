@@ -89,49 +89,42 @@
             <div class="service">
                 <p>Our's Services</p>
             </div>
-            <div class="four-picture">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12 asset">
-
-                        <div class="pic1">
-                            <div class="icon">
-                                <a href=""><i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                            <img src="{{ Theme::asset()->url('images/service/pic1.png') }}" alt="">
-                            <p>Asset Protection for Factories</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 asset">
+                    <a href="/service-detail">
+                        <div class="icon">
+                            <i class="fal fa-long-arrow-right"></i>
                         </div>
-
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12 asset">
-                        <div class="pic1">
-                            <div class="icon">
-                                <a href=""><i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                            <img src="{{ Theme::asset()->url('images/service/pic2.png') }}" alt="">
+                    </a>
+                    <img src="{{ Theme::asset()->url('images/service/pic1.png') }}" alt="">
                             <p>Asset Protection for Factories</p>
+                </div>
+                <div class="col-md-3 col-sm-6 asset">
+                    <a href="/service-detail">
+                        <div class="icon">
+                            <i class="fal fa-long-arrow-right"></i>
                         </div>
-
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12 asset">
-                        <div class="pic1">
-                            <div class="icon">
-                                <a href=""><i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                            <img src="{{ Theme::asset()->url('images/service/pic3.png') }}" alt="">
-                            <p>Asset Protection for Factories</p>
+                    </a>
+                    <img src="{{ Theme::asset()->url('images/service/pic2.png') }}" alt="">
+                    <p>Gas and Fuel Tank Solutions</p>
+                </div>
+                <div class="col-md-3 col-sm-6 asset">
+                    <a href="/service-detail">
+                        <div class="icon">
+                            <i class="fal fa-long-arrow-right"></i>
                         </div>
-
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-12 asset">
-                        <div class="pic1">
-                            <div class="icon">
-                                <a href=""><i class="fas fa-long-arrow-alt-right"></i></a>
-                            </div>
-                            <img src="{{ Theme::asset()->url('images/service/pic4.png') }}" alt="">
-                            <p>Asset Protection for Factories</p>
+                    </a>
+                    <img src="{{ Theme::asset()->url('images/service/pic3.png') }}" alt="">
+                            <p>Impact protection for Warehouses</p>
+                </div>
+                <div class="col-md-3 col-sm-6 asset">
+                    <a href="/service-detail">
+                        <div class="icon">
+                            <i class="fal fa-long-arrow-right"></i>
                         </div>
-
-                    </div>
+                    </a>
+                    <img src="{{ Theme::asset()->url('images/service/pic4.png') }}" alt="">
+                    <p>ARMCO Design Advise</p>
                 </div>
             </div>
         </div>
@@ -163,43 +156,50 @@
             <div class="wrap-descrip">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-12 ">
-                        <div class="w-beam">
-                            <h3>W Beam &, Thrie Beam</h3>
-                            <p>Armco® Barriers can supply all of your wire rope needs,
-                                including installation by our professional and experienced installation teams. </p>
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>W Beam &, Thrie Beam</h3>
+                            </div>
+                            <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-12 ">
                         <div class="post">
-                            <h3>Posts & Bollards</h3>
+                            <div class="post-title">
+                                <h3>Posts & Bollards</h3>
+                            </div>
                             <p>ARMCO® Bollards are versatile in their many applications.</p>
                             <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification,
                                 Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-12">
-                        <div class="wheepstop">
-                            <h3>Wheelstops & Floorgards</h3>
-                            <p>Armco® Floorgard™is an ideal application where walls need to be protected against forklift damage,
-                                being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures)
-                                works optimally in conjunction with Armco® Railgard™.</p>
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>Wheelstops & Floorgards</h3>
+                            </div>
+                            <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, 
+                            being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) 
+                            works optimally in conjunction with Armco® Railgard™.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6 col-12">
-                        <div class="handrail">
-                            <h3>Handrail, Gates & Pipegards</h3>
-                            <p>Armco® Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
-                            <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco® product.</p>
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>Handrail, Gates & Pipegards</h3>
+                            </div>
+                            <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
+                            <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product. </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="view-product">
+            <div class="wrap2">
                 <div class="icon">
-                    <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                 <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="/product">VIEW OUR PRODUCT</a>
+                     <a href="/product">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

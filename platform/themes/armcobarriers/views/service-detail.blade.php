@@ -123,23 +123,31 @@
             </div>
             <div class="row">
                 <div class="col-md-3 col-sm-6 col-12 australian">
-                    <h3>Australian Made</h3>
+                    <div class="title">
+                        <h3>Australian Made</h3>
+                       </div>
                     <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and
                      experienced installation teams.</p>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 australian">
-                    <h3>Galvanised in Australia to ASXXXXX</h3>
+                    <div class="title">
+                        <h3>Galvanised in Australia to ASXXXXX</h3>
+                    </div>
                     <p>ARMCO® Bollards are versatile in their many applications.</p>
                     <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification, 
                     Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 floor">
-                    <h3>Floor Anchors</h3>
+                <div class="col-md-3 col-sm-6 col-12 australian">
+                    <div class="title">
+                        <h3>Floor Anchors</h3>
+                    </div>
                     <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, being most commonly 
                     used in warehousing and cool room applications.Floorgard™(as shown in the pictures) works optimally in conjunction with Armco® Railgard™.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 guaranteed">
-                    <h3>Guaranteed for years of trouble free service.</h3>
+                <div class="col-md-3 col-sm-6 col-12 australian">
+                    <div class="title">
+                        <h3>Guaranteed for years of trouble free service.</h3>
+                    </div>
                     <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
                     <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product.  </p>
                 </div>
@@ -150,12 +158,12 @@
 <section style="padding-top:60px">
     <div class="container-customize">
         <div class="wrap-product">
-            <div class="view-product">
+            <div class="wrap2">
                 <div class="icon">
-                    <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                 <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="/product">VIEW OUR PRODUCT</a>
+                     <a href="/product">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

@@ -141,68 +141,55 @@
     }
 .wrap-our{
     .service{
-        padding:50px 0px 50px 0px;
+        padding:60px 0px 60px;
         font-size: 40px;
         font-family: $FolioStd-Bold;
         color:#000000;
     }
     .asset{
-        padding-bottom: 20px;
-        .pic1{
-            .icon{
-                
-                border-radius: 50%;
-                border: 0.01px solid rgba(0, 0, 0, 0.3) ; 
-                width: 80px;
-                height: 80px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                top:50%;
-                z-index:34 ;
-                left:44%;
-                border-radius:1px solid 50% #000;
-                background: rgba(0, 0, 0, 0.5);
-                opacity: 0;
-                i{
-                    color: $priamry_color;
-                }
-            }
-            &:hover {
-                p{
-                    color:$priamry_color;
-                }
-                .icon{
-                    opacity: 1;
-                   
-                }
-            }
+        margin-bottom: 30px;
+        img{
+            background-color: #000000;
             position: relative;
-            img{
-                width: 100%;
-            }
-            p{
-                position: absolute;
-                bottom: 5%;
-                width: 100%;
-                text-align: center;
-                color: white;
-                padding: 0 10px;
-                z-index: 33;
-            }
+            max-width: 100%;
+           
         }
-        .pic1::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.678);
-            z-index: 2;
-        }
+       p{
+           position: absolute;
+           bottom: 5%;
+           width: 100%;
+           text-align: center;
+           color: white;
+           font-size: 20px;
+           font-family: $FolioStd-Medium;
+       }
+       .icon{
+                
+        border-radius: 50%;
+        background-color:rgba(0, 0, 0, 0.5) ;  ;
+        width: 20%;
+        height: 14%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        top:45%;
+        left:43%;
+        z-index: 12;
+        color: $priamry_color;
+        font-size: 25px;
+        visibility: hidden;
     }
+
+    }
+   
+    .asset:hover .icon{
+        visibility: inherit;
+    }
+    .asset:hover p{
+        color: $priamry_color;
+    }
+   
 }
 .wrap-roadside
 {   padding:6% 0;
@@ -227,8 +214,7 @@
                 padding-bottom: 3%;
             }
 
-        }
-    // }
+     }
 }
 .wrap-product
 {   padding-bottom: 20px;
@@ -262,15 +248,24 @@
     }
     .wrap-descrip{
         padding-bottom: 80px;
+        .post{
+            &:hover{
+                .post-title{
+                    transition: 0.3s;
+                    background-color:$priamry_color;
+                    display: inline-block;
+                    padding: 10px;
+                }
+            }
+        }
         .wheepstop{
-            h3
+        h3
         {   display: inline-block;
             background-color: $priamry_color;
-            padding:10px;
+            // padding:10px;
         }
         }
         h3{
-            padding-bottom: 30px;
             font-size: 20px;
             font-family: $FolioStd-Medium;
             color:#000000;
@@ -278,8 +273,9 @@
         p{
             font-size: 15px;
             font-family: $Arial;
-            padding: 0% 8% 0% 0%;
-            padding-bottom: 21px;
+            // padding: 10% 8% 0% 0%;
+            margin:10% 8% 0% 0% ;
         }
     }
 }
+

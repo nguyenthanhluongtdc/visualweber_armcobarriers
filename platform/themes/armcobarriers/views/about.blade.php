@@ -11,7 +11,7 @@
             <h2>Roadside,Car Parks,Warehouse</h2>
         </div>
         <div class="cont3">
-            <a href="">Company Profile</a>
+            <a href="#whatwedo">Company Profile</a>
             <a href="#wrap-bot">The ARMCO System</a>
         </div>
     </div>
@@ -32,7 +32,7 @@
  </div>
 <div class="container-customize">
     <div class="wrap-product">
-        <div class="whatwedo">
+        <div class="whatwedo"id="whatwedo">
             <h2> What We Do</h2>
         </div>
                 <div class="wrap1">
