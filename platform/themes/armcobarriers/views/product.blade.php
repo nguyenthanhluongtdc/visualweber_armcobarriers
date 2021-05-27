@@ -1,6 +1,7 @@
 <section>
+  @includeIf("theme.armcobarriers::views.breadcrumb")
   <div class="container-customize">
-    @includeIf("theme.armcobarriers::views.breadcrumb")
+   
     <div class="introduction-product">
       <div class="introduction-product-title">
         <h2>Product Range</h2>
@@ -96,7 +97,7 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-1.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -113,7 +114,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-2.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -130,7 +131,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-3.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -147,7 +148,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-4.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -166,7 +167,7 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-5.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -183,7 +184,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-6.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -200,7 +201,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-7.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -217,7 +218,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-8.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -236,7 +237,7 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-1.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -253,7 +254,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-2.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -270,7 +271,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-3.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -287,7 +288,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-4.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -306,7 +307,7 @@
                 <div class="row">
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-5.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -323,7 +324,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-6.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -340,7 +341,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-7.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -357,7 +358,7 @@
                   </div>
                   <div class="col-md-3">
                     <div class="product-item-wrapper">
-                      <a href="">
+                      <a href="{{url('/product-detail')}}">
                         <div class="product-item">
                           <img class="product-image" src="{{ Theme::asset()->url('images/product/product-8.png') }}" alt="">
                           <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
