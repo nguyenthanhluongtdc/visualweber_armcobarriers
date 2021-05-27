@@ -22,7 +22,7 @@
                                 <a class="nav-link" href="#">Overview</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Installation</a>
+                                <a class="nav-link" href="/service-detail">Installation</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Request a Quotation</a>
@@ -31,7 +31,7 @@
                                 <a class="nav-link" href="#">Custom Manufacture</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Car Parks</a>
+                                <a class="nav-link" href="/service">Car Parks</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Factories & Industrial</a>
@@ -207,19 +207,17 @@
 </section>
 <section style="padding-top:60px">
     <div class="container-customize">
-        <div class="wrap-sign"> 
-           <div class="gr">
-                <div class="sign-up">
-                    <p>Sign up to receive the</p>
-                    <h3>latest insights</h3>
-                </div>
+        <div class="wrap-sign">
                 <div class="info-me">
+                    <div class="sign-up">
+                        <p>Sign up to receive the</p>
+                        <h3>latest insights</h3>
+                    </div>
                     <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Your Email">
-                    <input type="text" placeholder="Your Company">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Full Name">
                     <button type ="submit">Sign Up</button>
                 </div>
-            </div>
         </div>
     </div>
 </section>

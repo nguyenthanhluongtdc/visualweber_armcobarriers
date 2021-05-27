@@ -12,7 +12,7 @@
         </div>
         <div class="cont3">
             <a href="">Company Profile</a>
-            <a href="">The ARMCO System</a>
+            <a href="#wrap-bot">The ARMCO System</a>
         </div>
     </div>
 </div>
@@ -35,98 +35,74 @@
         <div class="whatwedo">
             <h2> What We Do</h2>
         </div>
-       <div class="wrap1">
-        <div class="row">
-            <div class="col-md-4 col-sm-6 ">
-               <div class="design">
-                   <h3>Design Advice</h3></br></br>
-                    <p>At ARMCO®  Barriers you deal with people specialising in the road 
+                <div class="wrap1">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 design">
+                        <h3>Design Advice</h3></br></br>
+                        <p>At ARMCO®  Barriers you deal with people specialising in the road 
                         safety barrier industry with over 20 years experience.</p></br>
-                    <p>Many clients take advantage of our expertise prior to planning their
-                         project and achieve better solutions at a reduced cost.</p>
-               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="innovation">
-                    <h3>Innovation</h3></br></br>
-                    <p>Expertise leads to Innovation.  Whilst our competitor’s product remains
-                    largely unchanged, ARMCO®  Barriers continue to innovate.
-                    Innovations such as symmetrical holes in the post for easier installation,
-                    or internal storage to prevent white rust are all reasons why ARMCO®
-                    Barriers is the preferred supplier for more and more customers.</p></br>
-                    <p>The development of new and relevant products such as the Stubby
-                    Nose™ terminal, Pipegard™, Cornergard™ , Bollards and Handrails
-                    reduce your Occupational Health & Safety concerns whilst providing
-                    practical and economical safety barrier solutions.</p>
+                        <p>Many clients take advantage of our expertise prior to planning their
+                        project and achieve better solutions at a reduced cost.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 innovation">
+                        <h3>Innovation</h3></br></br>
+                        <p>Expertise leads to Innovation.  Whilst our competitor’s product remains
+                        largely unchanged, ARMCO®  Barriers continue to innovate.
+                        Innovations such as symmetrical holes in the post for easier installation,
+                        or internal storage to prevent white rust are all reasons why ARMCO®
+                        Barriers is the preferred supplier for more and more customers.</p></br>
+                        <p>The development of new and relevant products such as the Stubby
+                        Nose™ terminal, Pipegard™, Cornergard™ , Bollards and Handrails
+                        reduce your Occupational Health & Safety concerns whilst providing
+                        practical and economical safety barrier solutions.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 installation">
+                        <h3>Installation Service</h3></br></br>
+                        <p>ARMCO®  Barriers is leading the way as a manufacturer that offers an 
+                        Installation service by its own staff with total product knowledge.
+                        Our teams are first aid, Traffic Management and OH&S trained to
+                        ensure the job is performed safely and to specifications.</p></br>
+                        <p>Selecting the manufacturer to install the product has the benefit of faster
+                        installation and the assurance that it has been correctly installed.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 competitive">
+                        <h3>Competitive Pricing</h3></br></br>
+                        <p>Providing better products, design advice, an installation service and
+                        superior Customer Service is our standard practice. </p></br>
+                        <p>ARMCO Barriers also offers competitive pricing each and every time.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 warranty">
+                        <h3>Warranty Statenment</h3></br></br>
+                        <p>ARMCO®  Barriers warrants that its products are supplied free of
+                        defects in workmanship and materials.</p></br>
+                        <p>Provided it is correctly installed, is not damaged in a collision
+                        nor subject to misuse, all ARMCO®  products should give many years of
+                        maintenance-free, safety barrier protection. </p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 quality">
+                        <h3>Quality Assurance</h3></br></br>
+                        <p>Product excellence is assured by operating in accordance with Quality 
+                        Assurance System AS/NZS ISO 9000.2 . Our products meet the
+                        requirements of Australian Standards and/or local Road Authority Standards. </p></br>
+                        <p>All product is hot dipped Galvanized to conform to AS/NZS 4680. Our 
+                        installation services also meet the requirements of each State Road Authority. </p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 availability">
+                        <h3>Availability</h3></br></br>
+                        <p>Armco®  Barriers is a manufacturer of all of it's products, therefore we
+                        carry stock and availability is not an issue. </p></br>
+                        <p>Custom products or 'specials' can also be available in a very short time 
+                        frame, due to accessibility to production, material and professional personnel
+                        to ensure that a product is available as soon as possible.</p>
+                        </div>
+                        <div class="col-md-4 col-sm-6 australian">
+                        <h3>Australian Owned</h3></br></br>
+                        <p>ARMCO®  Barriers is a wholly Australian owned company supplying
+                        and operating throughout the nation and will satisfy your safety barrier requirements Australia wide.  </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="installation">
-                    <h3>Installation Service</h3></br></br>
-                    <p>ARMCO®  Barriers is leading the way as a manufacturer that offers an 
-                    Installation service by its own staff with total product knowledge.
-                    Our teams are first aid, Traffic Management and OH&S trained to
-                    ensure the job is performed safely and to specifications.</p></br>
-                    <p>Selecting the manufacturer to install the product has the benefit of faster
-                    installation and the assurance that it has been correctly installed.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="wrap2">
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-               <div class="competitive">
-                   <h3>Competitive Pricing</h3></br></br>
-                    <p>Providing better products, design advice, an installation service and
-                    superior Customer Service is our standard practice. </p></br>
-                    <p>ARMCO Barriers also offers competitive pricing each and every time.</p>
-               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="warranty">
-                    <h3>Warranty Statenment</h3></br></br>
-                    <p>ARMCO®  Barriers warrants that its products are supplied free of
-                    defects in workmanship and materials.</p></br>
-                    <p>Provided it is correctly installed, is not damaged in a collision
-                    nor subject to misuse, all ARMCO®  products should give many years of
-                    maintenance-free, safety barrier protection. </p>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="quality">
-                    <h3>Quality Assurance</h3></br></br>
-                    <p>Product excellence is assured by operating in accordance with Quality 
-                    Assurance System AS/NZS ISO 9000.2 . Our products meet the
-                    requirements of Australian Standards and/or local Road Authority Standards. </p></br>
-                    <p>All product is hot dipped Galvanized to conform to AS/NZS 4680. Our 
-                    installation services also meet the requirements of each State Road Authority. </p>
-                </div>
-            </div>
-        </div>
-       </div>
-       <div class="wrap3">
-        <div class="row">
-            <div class="col-md-4 col-sm-6">
-               <div class="availability">
-                   <h3>Availability</h3></br></br>
-                    <p>Armco®  Barriers is a manufacturer of all of it's products, therefore we
-                    carry stock and availability is not an issue. </p></br>
-                    <p>Custom products or 'specials' can also be available in a very short time 
-                    frame, due to accessibility to production, material and professional personnel
-                    to ensure that a product is available as soon as possible.</p>
-               </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="australian">
-                    <h3>Australian Owned</h3></br></br>
-                    <p>ARMCO®  Barriers is a wholly Australian owned company supplying
-                    and operating throughout the nation and will satisfy your safety barrier requirements Australia wide.  </p>
-                </div>
-            </div>
-        </div>
-       </div>
-       <div class="wrap4">
+       <div class="wrap2">
            <div class="icon">
             <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
            </div>
@@ -141,7 +117,7 @@
         <img src="{{ Theme::asset()->url('images/about/hero.png') }}" alt="">
     </div>
 </div>
-<div class="container-customize">
+<div class="container-customize" id="wrap-bot">
     <div class="wrap-bot">
         <div class="bot1">
             <div class="row">
@@ -221,22 +197,6 @@
         </div>
     </div>
 </div>
-{{-- <div class="container-customize">
-    <div class="wrap-sign"> 
-       <div class="gr">
-            <div class="sign-up">
-                <p>Sign up to receive the</p>
-                <h3>latest insights</h3>
-            </div>
-            <div class="info-me">
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Company">
-                <button type ="submit">Sign Up</button>
-            </div>
-        </div>
-    </div>
-</div> --}}
 <div class="container-customize">
     <div class="wrap-sign">
             <div class="info-me">
@@ -253,3 +213,4 @@
 </div>
 
     
+

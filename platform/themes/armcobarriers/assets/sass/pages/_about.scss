@@ -45,87 +45,11 @@
 }
 
 .wrap-product{
-    .wrap4{
-        padding-bottom: 40px;
-        display: flex;
-        .icon{
-            padding-right: 25px;
-        }
-        .view{
-            a{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-                color:#000;
-                border-bottom: 1px solid #000;
-            }
-            
-        }
-    }
-    .wrap3{
-        padding-bottom: 60px;
-        .availability{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-        .australian{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-    }
-    .wrap2{
-        padding-bottom: 60px;
-        .quality{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-        .warranty{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-        .competitive{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-    }
     .wrap1{
         padding-bottom: 60px;
-        .innovation{
-            margin-right: 70px;
+        .innovation,.installation,.design,.quality,.warranty,.competitive,.availability,.australian{
+          padding:0px 65px 75px 0px;
+
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -135,27 +59,20 @@
                 font-family: $Arial;
             }
     
+         }
+    }
+    .wrap2{
+        display: flex;
+        .icon{
+            padding: 10px 40px 0px 0px;
         }
-        .installation{
-            margin-right: 70px;
-            h3{
+        .view{
+            a{ 
+                padding-bottom: 12px;
+                border-bottom: 1px solid #000000;
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-        .design{
-            margin-right: 70px;
-            h3{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-            } 
-            p{
-                font-size: 15px;
-                font-family: $Arial;
+                color: #000000;
             }
         }
     }
@@ -394,7 +311,7 @@
                 max-width: 100%;
                 width: 20%;
                 padding: 1%;
-                margin: 3% 1%;
+                margin: 3% 0%;
                 background-color:#E1E1E1;
                 border: none;
                 font-size: 15px;
@@ -405,7 +322,7 @@
                 font-size: 20px;
                 font-family: $FolioStd-Bold;
                 background-color:$priamry_color;
-                padding: 0.8% 4%;
+                padding: 0.7% 4%;
                 
             }
        }
@@ -419,20 +336,35 @@
             }
         }
     } 
+    .wrap-sign{
+        .info-me{
+            input{
+                width:17%
+            }
+            button{
+                padding: 0.7% 2%;
+            }
+        }
+        .sign-up {
+            p{
+                font-size: 15px;
+            }
+            h3{
+                font-size: 25px;
+            }
+        }
+
+    } 
 }
+
 @media(max-width:991px)
 {
     .count{
-        .count-customers{
+        .count-customers,.count-completed,.count-kilomet{
             h2{
-                padding-right: 0px;
+                font-size: 40px;
             }
-
-        }
-        .count-completed{
-            h2{
-                padding-right: 0px; 
-            }
+            p{font-size: 15px;}
         }
     } 
 }
