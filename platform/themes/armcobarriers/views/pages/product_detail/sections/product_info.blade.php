@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<div id="product_info" class="col-md-12">
+<div id="product_info" class="col-sm-12 col-md-12">
     <div class="row">
-        <div class="col-md-6 gallery">
+        <div class="col-12 col-sm-6 col-md-6 gallery">
             <div class="row">
-                <div class="col-md-2 px-0 slide">
+                <div class="col-2 col-md-2 px-0 slide">
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-container mySwiper">
                         <div class="swiper-wrapper">
@@ -27,13 +27,13 @@
                     </div>
                     <div class="swiper-button-next"></div>
                 </div>
-                <div class="col-md-10 main_img">
+                <div class="col-10 col-md-10 main_img">
                     <img class="img-fluid" src="{{ Theme::asset()->url('images/product/product_detail.png') }}" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="col-md-5 info">
+        <div class="col-12 col-sm-5 col-md-5 info">
             <p class="product_name">Knuffi Magnetic Flexible Edge Protector </p>
             <p class="product_introduce">
                 SafetyRail 2000 is a non-penetrating, passive fall
@@ -73,6 +73,8 @@
         </div>
     </div>
 </div>
+
+
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

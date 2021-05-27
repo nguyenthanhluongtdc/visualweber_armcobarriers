@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="product_info" class="col-md-12">
     <div class="row">
-        <div class="col-md-1 px-0 bg-danger">
+        <div class="col-2 col-md-1 px-0 bg-danger">
             slide
         </div>
-        <div class="col-md-5 px-0">
+        <div class="col-10 col-md-5 px-0">
             <img class="img-fluid" src="{{ Theme::asset()->url('images/product/product_detail.png') }}" alt="">
         </div>
-        <div class="col-md-6">
-            <p class="product_name">Knuffi Magnetic Flexible Edge Protector </p>
+        <div class="col-6 col-md-6">
+            <p class="product_name">sssKnuffi Magnetic Flexible Edge Protector </p>
             <p class="product_introduce">
                 SafetyRail 2000 is a non-penetrating, passive fall
                 protection system for workplace safety that can be used from

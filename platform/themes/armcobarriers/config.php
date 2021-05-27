@@ -60,6 +60,8 @@ return [
             $theme->asset()->container('footer')->add('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js');
             $theme->asset()->add('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
             $theme->asset()->add('font-awesome-pro', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+            $theme->asset()->add('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
+            $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js');
             
             // $theme->asset()->usePath()->add('style', 'css/common.css',[],[],time());
             if (function_exists('shortcode')) {

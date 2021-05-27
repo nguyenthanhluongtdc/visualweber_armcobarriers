@@ -1,17 +1,19 @@
-<div id="more_info" class="col-md-12">
+<div id="more_info" class=" col-sm-12 col-md-12">
     <div class="row">
-        <div class="col-md-10" id="tab">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specifications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Specifications</a>
-                </li>
-            </ul>
+        <div class="col-12 col-sm-10 col-md-10" id="tab">
+            <div class="row">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Specifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Specifications</a>
+                    </li>
+                </ul>
+            </div>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, illo!
@@ -24,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-sm-2 col-md-2">
             <div id="related_products">
                 <p class="title">Related products</p>
                 <div class="list_products">
@@ -44,6 +46,4 @@
             </div>
         </div>
     </div>
-
-
 </div>

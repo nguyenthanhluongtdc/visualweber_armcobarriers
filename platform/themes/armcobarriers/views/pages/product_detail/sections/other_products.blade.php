@@ -1,4 +1,4 @@
-<div id="other_products" class="col-md-12">
+<div id="other_products" class="col-12 col-sm-12 col-md-12">
     <p class="title">Other products</p>
     <div class="list_products">
         <a href="" class="product_item">
