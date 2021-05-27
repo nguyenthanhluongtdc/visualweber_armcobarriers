@@ -44,7 +44,10 @@
                                 <li class="nav-link nav-item ">
                                     <a href="/about" class="nav__menu-link">About Us</a>
                                 </li>
-                                <li class="nav-link nav-item dropdown dmenu">
+                                <li class="nav-link nav-item ">
+                                    <a href="/about" class="nav__menu-link">Products</a>
+                                </li>
+                                {{-- <li class="nav-link nav-item dropdown dmenu">
                                     <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="/product">Products</a>
                                     <div class="dropdown-menu sm-menu">
                                         <div class="row">
@@ -182,9 +185,9 @@
                                            </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li class="nav-link nav-item ">
-                                    <a href="/service" class="nav__menu-link">Service</a>
+                                    <a href="/service" class="nav__menu-link">Services</a>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/application" class="nav__menu-link">Applications</a>

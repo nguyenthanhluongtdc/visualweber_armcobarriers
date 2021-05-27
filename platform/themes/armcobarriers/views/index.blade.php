@@ -1,6 +1,6 @@
 <section>
     <div class="container-fluid-customize">
-        <div  class="swiper-container mySwiper">
+        <div  class="swiper-container mySwiper" style="--swiper-navigation-color:#FAD906; --swiper-pagination-color:#FAD906;">
             <div class="parallax-bg" data-swiper-parallax="-23%"></div>
       <div class="swiper-wrapper">
           
@@ -32,12 +32,30 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-slide">
+                <div class="swiper-content">
+                    <div class="logo-slider" data-swiper-parallax="-300">
+                        <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                    </div>
+                    <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
+                    <div class="text-slider" data-swiper-parallax="-100">
+                        <p>manufacture, supply & install</p>
+                        <p>
+                            Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                        </p>
+                    </div>
+                </div>
+            </div>
+
 
          
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>  
+        
+     </div> 
+     <div class="swiper-button-next"></div>
+     <div class="swiper-button-prev"></div>
+     <div class="swiper-pagination"></div> 
+    </div>
+       
     </div>
 </section>
 

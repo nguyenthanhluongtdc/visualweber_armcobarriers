@@ -14,7 +14,7 @@
                 bottom: 40%;
                 align-items: center;
                 left: 45px;
-                max-width: 100%;
+                width: 100%;
                 h2 {
                     font-size: 40px;
                     font-family: $FolioStd-Medium;
@@ -192,7 +192,7 @@
                 bottom: 40%;
                 align-items: center;
                 left: 45px;
-                max-width: 100%;
+                width: 100%;
                 h2 {
                     font-size: 40px;
                     font-family: $FolioStd-Medium;
@@ -472,6 +472,37 @@
         padding-top: 41%;
     }
     
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        width: unset;
+        bottom: 11%;
+        right: 4%;
+        left: unset;
+    }
+    
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            transition: 0.1s;
+            background-color: white;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            transition: 0.1s;
+            background-color: $priamry_color;
+        }
+    }
+    
+    .swiper-button-prev:after {
+        font-size: 50px;
+        position: absolute;
+        left: 50px;
+    }
+    
+    .swiper-button-next:after {
+        font-size: 50px;
+        position: absolute;
+        right: 50px;
+    }
+    
     .swiper-slide {
         position: relative;
         color: #fff;
@@ -592,6 +623,16 @@
                     width: 100%;
                 }
             }
+        }
+        .swiper-button-prev:after {
+            display: none;
+        }
+        .swiper-button-next:after {
+            display: none;
+        }
+        .swiper-container-horizontal>.swiper-pagination-bullets {
+            left: 0;
+            bottom: 0;
         }
         .service-us-wrapper {
             .left-content-wrapper {
