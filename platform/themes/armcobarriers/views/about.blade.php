@@ -10,9 +10,9 @@
             <h1>ARMCO - About Us</h1>
             <h2>Roadside,Car Parks,Warehouse</h2>
         </div>
-        <div class="cont3">
-            <a href="#whatwedo">Company Profile</a>
-            <a href="#wrap-bot">The ARMCO System</a>
+        <div class="cont3" id="cont3">
+            <a id="click1" >Company Profile</a>
+            <a id="click2">The ARMCO System</a>
         </div>
     </div>
 </div>
