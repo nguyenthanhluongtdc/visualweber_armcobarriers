@@ -25,53 +25,48 @@
       <div class="container-customize">
         <div class="row">
           <div class="col-md-3 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0">     
-            <nav id="sidebar" class="">
-  
+            <div id="sidebar" class="">
               <ul class="list-unstyled">
                   <li class="active">
-                      <div class="category-type">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Guardrail - Railgard TM </a>
-                        <i class="fas fa-chevron-down"></i>
-                      </div> 
+                      
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                          <p>Guardrail - Railgard TM </p>
+                          <i class="fas fa-chevron-down"></i> 
+                        </a>
+                        
+                    
                       <ul class="list-unstyled list-categories collapse show" id="homeSubmenu" style="">
                           <li>
-                              <a href="#">Guardrail - RailgardTM-Curving
-                              </a>
+                              <a href="#">Guardrail - RailgardTM-Curving</a>
                           </li>
                           <li>
                               <a href="#">Guardrail - Railgard curvature details</a>
                           </li>
                           <li>
-                              <a href="#">Guardrail - Measuring Curvature
-                              </a>
+                              <a href="#">Guardrail - Measuring Curvature</a>
                           </li>
                           <li>
-                            <a href="#">Guardrail -  RailgardTM-Drawings
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Multiple Height Guardrail
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Guardrail End Treatments
-                            </a>
-                        </li>
-                        <li>
-                          <a href="#">National Guardrail Applications
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">Armco Corner Treatments
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">Armco End Treatments
-                          </a>
-                      </li>
+                              <a href="#">Guardrail -  RailgardTM-Drawings </a>
+                          </li>
+                          <li>
+                              <a href="#">Multiple Height Guardrail</a>
+                          </li>
+                          <li>
+                              <a href="#">Guardrail End Treatments </a>
+                          </li>
+                          <li>
+                              <a href="#">National Guardrail Applications</a>
+                          </li>
+                          <li>
+                              <a href="#">Armco Corner Treatments</a>
+                          </li>
+                          <li>
+                              <a href="#">Armco End Treatments</a>
+                          </li>
+                      </ul>
                     </li>
                 </ul>            
-          </nav>
+            </div>
           </div>
           <div class="col-md-9">
             

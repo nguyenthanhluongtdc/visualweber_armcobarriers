@@ -131,3 +131,74 @@
 .map-location {
     margin-bottom: -20px;
 }
+
+@media(max-width:380px) {
+    .contact-banner {
+        .title-contact {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+    .list-group {
+        font-size: 10px;
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width:768px) {
+    .contact-banner {
+        .title-contact {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+    .list-group {
+        font-size: 10px;
+        padding-bottom: 40px;
+        margin-top: -40px;
+    }
+    .tab-content {
+        h4 {
+            font-size: 12px;
+        }
+    }
+    .let-talk {
+        margin-top: 30px;
+        h3 {
+            font-size: 20px;
+        }
+        .form-contact-us {
+            margin-left: 0px;
+            .policy {
+                display: unset;
+                button {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .form-group input {
+            margin: 10px 0;
+        }
+        .message input {
+            margin: 10px 0;
+        }
+    }
+    .list-group-item.active span:after {
+        bottom: -12px;
+    }
+}
+
+@media(max-width:991px) {
+    .form-contact-us {
+        margin-left: 20%;
+    }
+}

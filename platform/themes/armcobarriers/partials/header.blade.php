@@ -37,26 +37,7 @@
                           
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                                {{-- <li class="nav-item active">
-                                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown
-                                  </a>
-                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                  </div>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link disabled" href="#">Disabled</a>
-                                </li> --}}
+            
                                 <li class="nav-link nav-item">
                                     <a href="/" class="nav__menu-link">Homepage</a>
                                 </li>
@@ -64,7 +45,143 @@
                                     <a href="/about" class="nav__menu-link">About Us</a>
                                 </li>
                                 <li class="nav-link nav-item dropdown dmenu">
-                                    <a href="/product" class="nav__menu-link">Products</a>
+                                    <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="/product">Products</a>
+                                    <div class="dropdown-menu sm-menu">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                               <div class="title-product">
+                                                <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range.
+                                                   
+                                                </p>
+                                                <p> We are the specialists in custom designing barrier systems for unusual and non-standard applications.</p>
+                                                <p>
+                                                    Please browse through our product range and select the product of interest from the menu above. 
+                                                </p> 
+                                               </div>
+                                            </div>
+                        
+                                
+                                        </div>
+                                        <div class="row">
+                                           <div class="col-md-12">
+                                               <div class="row">
+                                                   <div class="col-md-3">
+                                                    <ul class="list-unstyled">
+                                                        <li class="active">
+                                                              <div class="category-type">
+                                                                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Guardrail - Railgard TM </a>
+                                                                <i class="fal fa-angle-right"></i>
+                                                              </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#Bollards" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bollards</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Bridge Rail - Bridgegard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Wire Rope</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Post & Post with Base</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Cornagard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Wheelgard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Speedgard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Floorgard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Handrail </a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pipegard TM</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Delineators</a>
+                                                              <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                        <li class="">
+                                                            <div class="category-type">
+                                                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Temporary Barrier</a>
+                                                                <i class="fal fa-angle-right"></i>
+                                                            </div> 
+                                                        </li>
+                                                    </ul>
+                                                   </div>
+                                                   <div class="col-md-4 ">
+                                                        <ul class="list-unstyled list-categories collapse show" id="homeSubmenu" style="">
+                                                            <li>
+                                                                <a href="#">Guardrail - RailgardTM-Curving </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Guardrail - Railgard curvature details</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Guardrail - Measuring Curvature</a>
+                                                            </li>
+                                                            <li>
+                                                            <a href="#">Guardrail -  RailgardTM-Drawings</a>
+                                                            </li>
+                                                            <li>
+                                                            <a href="#">Multiple Height Guardrail</a>
+                                                            </li>
+                                                            <li>
+                                                            <a href="#">Guardrail End Treatments</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">National Guardrail Applications</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Armco Corner Treatments</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Armco End Treatments</a>
+                                                            </li>
+                                                        </ul>
+                                                   </div>
+                                               </div>
+                                           </div>
+                                        </div>
+                                    </div>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/service" class="nav__menu-link">Service</a>

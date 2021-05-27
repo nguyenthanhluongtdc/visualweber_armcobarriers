@@ -74,7 +74,11 @@
                             <div class="mid-1">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid2.png') }}" alt="">
                             </div>
-                            <p>Car Park</p>
+                            <div class="mid-1-content">
+                                <p>Car Park</p>
+                                <a href=""><i class="fal fa-long-arrow-right"></i></a>
+                            </div>
+                            
                         </div>
                         
                     </div>
@@ -83,7 +87,10 @@
                             <div class="mid-2">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid3.png') }}" alt="">
                             </div>
-                            <p>Factories, Warehouse</p>
+                            <div class="mid-2-content">
+                                <p>Factories, Warehouse</p>
+                                <a href=""><i class="fal fa-long-arrow-right"></i></a>
+                            </div>
                         </div> 
                     </div>
                     <div class="col-md-4 col-sm-4 col-12">
@@ -91,7 +98,11 @@
                             <div class="mid-3">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/header/mid4.png') }}" alt="">
                             </div>
-                            <p>Roads</p>
+                            <div class="mid-3-content">
+                                <p>Road</p>
+                                <a href=""><i class="fal fa-long-arrow-right"></i></a>
+                            </div>
+                        </div> 
                         </div>  
                 </div>
             </div>
@@ -165,7 +176,7 @@
                     </div>
                     <div class="right-content-item">
                         <p>Armco Installation</p>
-                        
+                        <a href=""><i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -177,7 +188,11 @@
                         <div class="mid-1">
                             <img class="img-background" src="{{ Theme::asset()->url('images/home/service-1.png')}}" alt="">
                         </div>
-                        <p>Armco Request a Quotation</p>
+                        <div class="mid-1-content">
+                            <p>Armco Request a Quotation</p>
+                            <a href=""><i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                        
                     </div>
                     
                 </div>
@@ -186,7 +201,7 @@
                         <div class="mid-2">
                             <img class="img-background" src="{{ Theme::asset()->url('images/home/service-2.png') }}" alt="">
                         </div>
-                        <div class="image-mid-item">
+                        <div class="mid-2-content">
                             <p>Armco Custom Manufacture</p>
                             <i class="fal fa-long-arrow-right"></i>
                         </div>  
@@ -197,7 +212,11 @@
                         <div class="mid-3">
                             <img class="img-background" src="{{ Theme::asset()->url('images/home/service-3.png') }}" alt="">
                         </div>
-                        <p>ARMCO Design Advise</p>
+                        <div class="mid-3-content">
+                            <p>ARMCO Design Advise</p>
+                            <i class="fal fa-long-arrow-right"></i>
+                        </div>  
+                        
                     </div>
                 </div>
             </div>

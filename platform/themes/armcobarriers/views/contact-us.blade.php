@@ -43,26 +43,26 @@
         <div class="tab-content" id="nav-tab-content">
             <div class="row">
             
-              <div class="col-lg-1">
+              <div class="col-lg-1 col-sm-2 col-5">
                   <h4>Richard Keller</h4>
                   <p>Phone</p>
                   <p>Fax</p>
                   <p>Email</p>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-4 col-7">
                   <h4>MANAGING DIRECTOR / SALES</h4>
                 <p><a href="tel:(03) 9311 1312">(03) 9311 1312</a></p> 
                 <p><a href="tel:(03) 9311 5152">(03) 9311 5152</a></p> 
                 <p><a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p> 
               </div>
-              <div class="col-lg-1">
+              <div class="col-lg-1 col-sm-2 col-5">
                   <h4>Ivan Van De Geer</h4>
                   <p>Phone</p>
                   <p>Fax</p>
                   <p>Mobile</p>
                   <p>Email</p>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-sm-4 col-7">
                   <h4>SALES QLD & NORTHERN NSW</h4>
                 <p><a href="tel:(07) 5597 5111">(07) 5597 5111</a></p> 
                 <p><a href="tel:(03) 9311 5152">(07) 5597 1611</a></p> 
@@ -118,8 +118,13 @@
   
 </section>
 <div class="container-fluid-customize">
-    <div class="map-location">
+<div class="row">
+  <div class="col-sm-12">
+    {{-- <div class="map-location">
       <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d6305.055274219454!2d144.8330826!3d-37.8011084!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-37.801133799999995!2d144.83739559999998!4m5!1s0x6ad6608e5f3ff44b%3A0x5aff404637360531!2s3%20Fourth%20Ave%2C%20Sunshine%20VIC%203020%2C%20%C3%9Ac!3m2!1d-37.801117!2d144.83746!5e0!3m2!1svi!2s!4v1621937699192!5m2!1svi!2s" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div> --}}
   </div>
+</div>
+   
   
 </div>
