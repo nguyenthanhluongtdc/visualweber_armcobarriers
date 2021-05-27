@@ -203,7 +203,7 @@
                         </div>
                         <div class="mid-2-content">
                             <p>Armco Custom Manufacture</p>
-                            <i class="fal fa-long-arrow-right"></i>
+                          <a href=""><i class="fal fa-long-arrow-right"></i></a>
                         </div>  
                     </div> 
                 </div>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="mid-3-content">
                             <p>ARMCO Design Advise</p>
-                            <i class="fal fa-long-arrow-right"></i>
+                            <a href=""><i class="fal fa-long-arrow-right"></i></a>
                         </div>  
                         
                     </div>
@@ -229,7 +229,7 @@
     <div class="news-event-wrapper">
         <div class="container-customize">
             <div class="news-event--title">
-                <h2>News & Events</h2>
+                <h2>News <br>& Events</h2>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4">
