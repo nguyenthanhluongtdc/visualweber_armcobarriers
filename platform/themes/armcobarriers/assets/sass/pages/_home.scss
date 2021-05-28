@@ -368,10 +368,11 @@
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
                 &:hover {
-                    background-color: $priamry_color;
-                    width: max-content;
-                    text-align: center;
-                    padding: 10px 20px;
+                    // background-color: $priamry_color;
+                    // width: max-content;
+                    // text-align: center;
+                    // padding: 10px 20px;
+                    font-weight: bold;
                 }
                 @media (max-width: 1366px) {
                     font-size: 17px;
@@ -403,6 +404,11 @@
     }
     
     .news-event-wrapper {
+        .news-post {
+            a {
+                color: $gray-text;
+            }
+        }
         .news-event--title {
             padding: 100px 0 70px 0;
             h2 {

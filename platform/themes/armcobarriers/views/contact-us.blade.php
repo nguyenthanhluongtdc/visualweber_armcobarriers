@@ -219,9 +219,9 @@
 <div class="container-fluid-customize">
 <div class="row">
   <div class="col-sm-12">
-    {{-- <div class="map-location">
+    <div class="map-location">
       <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d6305.055274219454!2d144.8330826!3d-37.8011084!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-37.801133799999995!2d144.83739559999998!4m5!1s0x6ad6608e5f3ff44b%3A0x5aff404637360531!2s3%20Fourth%20Ave%2C%20Sunshine%20VIC%203020%2C%20%C3%9Ac!3m2!1d-37.801117!2d144.83746!5e0!3m2!1svi!2s!4v1621937699192!5m2!1svi!2s" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div> --}}
+    </div>
   </div>
 </div>
    

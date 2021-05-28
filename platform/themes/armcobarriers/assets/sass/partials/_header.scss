@@ -79,9 +79,13 @@
                 }
             }
         }
-        li:focus {
-            color: #000;
-            font-weight: bold;
+        li {
+            &:hover {
+                a {
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
         }
         li:first-child {
             a {

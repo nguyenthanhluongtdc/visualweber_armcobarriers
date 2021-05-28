@@ -252,7 +252,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="news-post">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-1.png') }}" alt="">
+                        <a href="">
+                            <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-1.png') }}" alt="">
                         <div class="news-post--titlte">
                             <h4>Om Wire and Wire Products Industries is a reputed
                                 Highway Crash Barrier, Crash Barrier</h4>
@@ -260,6 +261,7 @@
                         <div class="news-post--content">
                             <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
                         </div>
+                        </a>
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">
@@ -270,14 +272,16 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="news-post">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-2.png') }}" alt="">
-                        <div class="news-post--titlte">
-                            <h4 class="color-mid">Om Wire and Wire Products Industries is a reputed
-                                Highway Crash Barrier, Crash Barrier</h4>
-                        </div>
-                        <div class="news-post--content">
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
-                        </div>
+                       <a href="">
+                            <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-2.png') }}" alt="">
+                            <div class="news-post--titlte">
+                                <h4 class="color-mid">Om Wire and Wire Products Industries is a reputed
+                                    Highway Crash Barrier, Crash Barrier</h4>
+                            </div>
+                            <div class="news-post--content">
+                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
+                            </div>
+                       </a>
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">
@@ -288,14 +292,16 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="news-post">
-                        <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-3.png') }}" alt="">
-                        <div class="news-post--titlte">
-                            <h4>Om Wire and Wire Products Industries is a reputed
-                                Highway Crash Barrier, Crash Barrier</h4>
-                        </div>
-                        <div class="news-post--content">
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
-                        </div>
+                        <a href="">
+                                <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-3.png') }}" alt="">
+                            <div class="news-post--titlte">
+                                <h4>Om Wire and Wire Products Industries is a reputed
+                                    Highway Crash Barrier, Crash Barrier</h4>
+                            </div>
+                            <div class="news-post--content">
+                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
+                            </div>
+                        </a>
                         <div class="news-post-time">
                             <span>21 Apr 2020</span>
                             <div class="btn-share">

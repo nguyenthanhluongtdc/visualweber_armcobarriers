@@ -112,12 +112,12 @@ button:focus {
 
 html,
 body {
-    // -ms-overflow-style: none;
+    // -ms-overflow-style: block;
     // /* IE and Edge */
-    // scrollbar-width: none;
+    // scrollbar-width: block;
     // /* Firefox */
     // &::-webkit-scrollbar {
-    //     display: none;
+    //     display: block;
     // }
     font-size: 15px;
     color: $gray-text;
