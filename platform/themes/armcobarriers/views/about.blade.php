@@ -229,7 +229,7 @@
                 <input type="text" placeholder="Full Name">
                 <input type="text" placeholder="Full Name">
                 <button type ="submit">Sign Up</button>
-            </div>
+        </div>
     </div>
 </div>
 
