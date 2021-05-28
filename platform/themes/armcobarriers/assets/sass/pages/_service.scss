@@ -125,6 +125,7 @@
    
     .asset:hover .icon{
         visibility: inherit;
+        transition: 0.5s ease;
     }
     .asset:hover p{
         color: $priamry_color;
