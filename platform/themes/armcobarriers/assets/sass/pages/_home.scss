@@ -614,6 +614,62 @@
         background-image: url('../../../public/images/header/footer.png');
     }
     
+    @media(max-width:1024px) {
+        .location-office-wrapper {
+            .left-content-wrapper {
+                .left-content h2 {
+                    font-size: 30px;
+                }
+            }
+            .right-content {
+                .right-content-item {
+                    width: 80%;
+                }
+            }
+            .office-of-us {
+                .image-mid-1 {
+                    .mid-1-content {
+                        width: 80%;
+                    }
+                }
+                .image-mid-2 {
+                    .mid-2-content {
+                        width: 80%;
+                    }
+                }
+                .image-mid-3 {
+                    .mid-3-content {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .service-us-wrapper {
+            .right-content-wrapper {
+                .right-content-item {
+                    left: 20px;
+                }
+            }
+            .service-of-us {
+                .image-mid-1 {
+                    .mid-1-content {
+                        left: 20px;
+                    }
+                }
+                .image-mid-2 {
+                    .mid-2-content {
+                        left: 20px;
+                    }
+                }
+                .image-mid-3 {
+                    .mid-3-content {
+                        left: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
     @media (max-width:991px) {
         .swiper-slide {
             .swiper-content {
@@ -663,12 +719,10 @@
                     }
                 }
                 .image-mid-2 {
-                    .image-mid-item {
+                    p {
+                        font-size: 13px;
                         bottom: 16px;
                         left: 20px;
-                        p {
-                            font-size: 13px;
-                        }
                     }
                 }
                 .image-mid-3 {
@@ -891,9 +945,7 @@
                 }
                 .text-slider {
                     p:nth-child(1):after {
-                        left: 29%;
-                        top: 15%;
-                        height: 29px;
+                        display: none;
                     }
                 }
             }
@@ -982,5 +1034,21 @@
                     }
                 }
             }
+        }
+    }
+    
+    @media(max-width:380px) {
+        .location-office-wrapper {
+            .left-content-wrapper {
+                .left-content h2 {
+                    font-size: 12px;
+                }
+            }
+        }
+        .service-us-wrapper .left-content-wrapper .left-content img {
+            width: 30%;
+        }
+        .service-us-wrapper .service-of-us .image-mid-2 .mid-2-content {
+            font-size: 13px;
         }
     }

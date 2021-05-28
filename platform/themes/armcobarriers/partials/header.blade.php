@@ -28,13 +28,45 @@
         <header class="header">
             <div class="contaier-fluid-customize">     
                         <nav class="navbar navbar-expand-lg">
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                              <i class="fas fa-bars"></i>
-                            </button>
                             <a href="#" class="logo__link">
                                 <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                             </a>
-                          
+                            
+                            
+                            <div class="toolbar-mobile">
+                              <ul class="list-tool">
+                                  <li>
+                                    <a href="">
+                                        <i class="fas fa-phone-alt"></i>
+                                        {{-- <span>1800 808 619</span> --}}
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                  </li>
+                                  <li>   
+                                    <a href="">
+                                        <i class="fal fa-shopping-cart"></i>
+                                        <span class="header__cart-notice">0</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                        <i class="fal fa-user"></i>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                              </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             
