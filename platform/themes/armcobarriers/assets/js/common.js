@@ -19,6 +19,7 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
 function clickToScroll(elButtom, elContent, minusPixel, timeScroll) {
     $(elButtom).click(function() {
         $(this).data('clicked', true)
@@ -28,6 +29,7 @@ function clickToScroll(elButtom, elContent, minusPixel, timeScroll) {
     });
 }
 $(document).ready(function() {
-        clickToScroll('#click1', '.whatwedo', 80, 1000)
-        clickToScroll('#click2', '.bot1', 100, 1200)
-    })
+    clickToScroll('#click1', '.whatwedo', 80, 1000)
+    clickToScroll('#click2', '.bot1', 100, 1200)
+})
+AOS.init();

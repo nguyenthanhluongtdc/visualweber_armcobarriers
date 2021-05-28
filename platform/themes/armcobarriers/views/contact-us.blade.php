@@ -27,7 +27,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action aos-init aos-animate" id="head-office" data-toggle="list" href="#head-office-content" role="tab" aria-controls="home" aria-selected="false">ARMCO®<br>
+                    <a class="list-group-item list-group-item-action aos-init aos-animate" id="head-office" data-toggle="list" href="#home" role="tab" aria-controls="home" aria-selected="true">ARMCO®<br>
                        <span>Head Office</span> </a>
                     <a class="list-group-item list-group-item-action aos-animate active show" id="sales-team" data-toggle="list" href="#sales-team-content" role="tab" aria-controls="profile" aria-selected="true">ARMCO®<br> 
                       <span>SALES TEAM</span>  </a>
@@ -41,6 +41,101 @@
             </div>
         </div>
         <div class="tab-content" id="nav-tab-content">
+          <div class="head-office" id="head-office-content">
+            {{-- <div class="row">
+            
+              <div class="col-lg-1 col-sm-2 col-5">
+                  <h4>Richard Keller</h4>
+                  <p>Phone</p>
+                  <p>Fax</p>
+                  <p>Email</p>
+              </div>
+              <div class="col-lg-3 col-sm-4 col-7">
+                  <h4>MANAGING DIRECTOR / SALES</h4>
+                <p><a href="tel:(03) 9311 1312">(03) 9311 1312</a></p> 
+                <p><a href="tel:(03) 9311 5152">(03) 9311 5152</a></p> 
+                <p><a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p> 
+              </div>
+              <div class="col-lg-1 col-sm-2 col-5">
+                  <h4>Ivan Van De Geer</h4>
+                  <p>Phone</p>
+                  <p>Fax</p>
+                  <p>Mobile</p>
+                  <p>Email</p>
+              </div>
+              <div class="col-lg-3 col-sm-4 col-7">
+                  <h4>SALES QLD & NORTHERN NSW</h4>
+                <p><a href="tel:(07) 5597 5111">(07) 5597 5111</a></p> 
+                <p><a href="tel:(03) 9311 5152">(07) 5597 1611</a></p> 
+                <p><a href="tel:0438 760 469">0438 760 469</a></p> 
+                <p><a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p>
+              </div>
+            </div> --}}
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Richard Keller</th>
+                        <th scope="col">MANAGING DIRECTOR / SALES</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">Phone</td>
+                        <td>(03) 9311 1312</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Fax</td>
+                        <td>(03) 9311 5152</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Email</td>
+                        <td>sales@armcobarriers.com.au </td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>     
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Ivan Van De Geer</th>
+                        <th scope="col">SALES QLD & NORTHERN NSW</th>
+                       
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td scope="row">Phone</td>
+                        <td>(07) 5597 5111</td>
+                      </tr>
+                      <tr>
+                        <td scope="row">Fax</td>
+                        <td>(07) 5597 1611</td>
+                      </tr>
+                      <tr>
+                        <tr>
+                          <td scope="row">Fax</td>
+                          <td>0438 760 469</td>
+                        </tr>
+                        <tr>
+                        <td scope="row">Email</td>
+                        <a href=""><td>sales@armcobarriers.com.au</td></a>
+                      </tr>
+                      
+                    </tbody>
+                  </table>     
+                </div>
+              </div>
+            </div>
+          </div>
+          {{-- <div class="sales-team" id="sale-team-content" >
             <div class="row">
             
               <div class="col-lg-1 col-sm-2 col-5">
@@ -70,6 +165,7 @@
                 <p><a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p>
               </div>
             </div>
+          </div>        --}}
         </div>
         
     <div class="let-talk">
@@ -98,7 +194,10 @@
         </div>
         <div class="policy custom-checkbox">
           
-          <label for="terms"><input type="checkbox" id="terms"><a href="">I have read and accept the Privacy Policy</a></label>
+          <label class="customcheck">
+            <input type="checkbox" checked="checked"><a href="">I have read and accept the Privacy Policy</a>
+            <span class="checkmark"></span>
+          </label>
         
         <button class="bsend-button" id="submit" type="submit" value="SEND">
           <div class="button">

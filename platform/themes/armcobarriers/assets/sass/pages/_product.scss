@@ -158,13 +158,13 @@
             //     font-size: 12px;
             //     transform: rotate(90deg);
             // } 
-            .form-control{
+            .form-control {
                 box-shadow: none;
             }
             padding-left: 25px;
             position: relative;
             select {
-                &::after{
+                &::after {
                     content: "▼";
                     font-size: 1rem;
                     top: 10px;
@@ -192,7 +192,6 @@
                 // padding: 5px 30px 8px 10px;
                 margin-right: 20px;
                 width: 100%;
-
                 option {
                     font-size: 16px;
                     font-family: $Arial;
@@ -272,12 +271,19 @@ a[data-toggle="collapse"] {
             padding: 0;
         }
         .page-link {
+            &:focus {
+                border: none;
+            }
             border: unset;
             &:hover {
                 background-color: #000;
                 border-radius: 5px;
                 color: #FAD906;
+                transition: 0.5s ease;
             }
+        }
+        .page-item {
+            padding: 0 5px;
         }
         .page-link-last {
             width: 110px;
@@ -290,6 +296,14 @@ a[data-toggle="collapse"] {
             text-align: center;
             font-family: $Arial;
             border-radius: 4px;
+            &:hover {
+                background-color: #000;
+                opacity: 1;
+                a {
+                    color: #FAD906;
+                    transition: 0.5s ease;
+                }
+            }
             a {
                 padding: 17px 0;
             }

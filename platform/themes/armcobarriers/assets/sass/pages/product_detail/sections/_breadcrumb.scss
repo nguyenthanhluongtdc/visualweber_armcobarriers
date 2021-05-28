@@ -1,32 +1,32 @@
-.product_breadcrumb{
-    margin-top: 5%;
-    padding-bottom: 4%;
+.product_breadcrumb {
+    margin-top: 21%;
+    padding-bottom: 16%;
     display: flex;
-    p:nth-child(1){
+    p:nth-child(1) {
         padding-right: 40px;
-        border-right: 1px solid #919191 ;
-        a{
-            color:#919191;
+        border-right: 1px solid #919191;
+        a {
+            color: #919191;
             font-size: 17px;
             font-family: $Arial;
         }
     }
-    p:nth-child(2){
+    p:nth-child(2) {
         padding-left: 40px;
-        a{
+        a {
             color: #000000;
             font-size: 17px;
             font-family: $Arial;
         }
     }
 }
-.top_title{
-    p{
+
+.top_title {
+    p {
         font-size: 40px;
         font-family: $FolioStd-Bold;
     }
-    a{
+    a {
         color: $gray_text;
-
     }
 }

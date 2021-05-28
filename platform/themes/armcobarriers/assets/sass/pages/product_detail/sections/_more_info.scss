@@ -1,10 +1,10 @@
-#more_info{
+#more_info {
     // margin-top: 30px;
-    #tab{
-        .nav-tabs{
-            .nav-item{
+    #tab {
+        .nav-tabs {
+            .nav-item {
                 margin-right: 5%;
-                .nav-link{
+                .nav-link {
                     border: none;
                     padding: 0;
                     padding-bottom: 2%;
@@ -12,7 +12,7 @@
                     font-size: 20px;
                     color: $gray;
                 }
-                &:after{
+                &:after {
                     content: "";
                     display: block;
                     width: 50%;
@@ -20,49 +20,51 @@
                     background-color: $priamry_color;
                     transition: all 0.5s ease-in-out;
                 }
-                &:hover{
-                    &:after{
+                &:hover {
+                    &:after {
                         width: 100%;
                     }
                 }
-                .active{
+                .active {
                     color: black;
                 }
-    
             }
         }
-        .tab-content{
+        .nav {
+            flex-wrap: unset;
+            margin-top: 100px;
+        }
+        .tab-content {
             margin-top: 3%;
         }
     }
-    #related_products{
-        .title{
+    #related_products {
+        .title {
             font-size: 20px;
             font-weight: bold;
             display: block;
-            border-bottom:1px solid #efefef ;
-            &:after{
+            border-bottom: 1px solid #efefef;
+            &:after {
                 content: "";
                 display: block;
                 width: 30%;
-                height:5px ;
+                height: 5px;
                 background-color: $priamry_color;
             }
         }
-        .list_products{
+        .list_products {
             margin-top: 3%;
-            .product_item{
+            .product_item {
                 color: black;
-                .product_name{
+                .product_name {
                     padding: 3% 0%;
                 }
-                &:hover{
-                    .product_name{
+                &:hover {
+                    .product_name {
                         color: blue;
                     }
                 }
             }
-
         }
     }
 }

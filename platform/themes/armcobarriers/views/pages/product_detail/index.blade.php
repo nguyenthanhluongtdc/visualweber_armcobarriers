@@ -10,7 +10,7 @@
             </section>
             <div class="top_title col-md-12">
                 <p>Product Range</p>
-                <a href="">
+                <a href="{{url('/product')}}">
                     <i class="fas fa-chevron-left"></i>
                     <span>Guardrail - Railgard curvature details</span>
                 </a>
