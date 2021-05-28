@@ -32,4 +32,3 @@ $(document).ready(function() {
     clickToScroll('#click1', '.whatwedo', 80, 1000)
     clickToScroll('#click2', '.bot1', 100, 1200)
 })
-AOS.init();
