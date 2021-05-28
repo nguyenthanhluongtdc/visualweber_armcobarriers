@@ -10,26 +10,47 @@
             <h1>ARMCO - About Us</h1>
             <h2>Roadside,Car Parks,Warehouse</h2>
         </div>
-        <div class="cont3" id="cont3">
-            <a id="click1" >Company Profile</a>
-            <a id="click2">The ARMCO System</a>
-        </div>
     </div>
-</div>
-<div class="container-fluid-customize">
-    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.png') }})">
-        <div class="container-customize">
-            <div class="content-about">
-                <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
-                    Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
-                    beginnings, the company now has a clientele base that will only choose ARMCO® for 
-                    their safety barrier requirements.  An all Australian family owned business that
-                    employs Australians and uses Australian resources, we provide service, support and a
-                    knowledge of the product that is second to none and will always see our clients return.</span>
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a class="nav-item nav-link active" id="nav-company-profile" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Company Profile</a>
+              <a class="nav-item nav-link" id="nav-armco-system" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">The ARMCO System</a>
             </div>
-        </div>
-    </div>
- </div>
+        </nav>
+</div>
+     <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="container-fluid-customize">
+                <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.jpg') }})">
+                    <div class="container-customize">
+                        <div class="content-about">
+                                <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
+                                    Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
+                                    beginnings, the company now has a clientele base that will only choose ARMCO® for 
+                                    their safety barrier requirements.  An all Australian family owned business that
+                                    employs Australians and uses Australian resources, we provide service, support and a
+                                    knowledge of the product that is second to none and will always see our clients return.</span>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="container-fluid-customize">
+                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/hero.png') }})">
+                        <div class="container-customize">
+                            <div class="content-about">
+                                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, est. Non, possimus autem ut 
+                                    unde necessitatibus distinctio saepe dicta vitae praesentium. Quasi sint, veniam totam minus id quam dolores corporis maxime modi soluta,
+                                    ipsa fugiat facilis placeat itaque fugit asperiores optio culpa iste, numquam eveniet magnam molestiae quia amet. Est sint nisi voluptate
+                                    ullam alias non voluptates illum laborum, cum dolor molestiae dignissimos? Aperiam doloribus nemo similique est nostrum expedita iusto corporis
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+            </div>
+          </div>
 <div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo"id="whatwedo">
@@ -114,7 +135,7 @@
 </div>
 <div class="container-fluid-customize">
     <div class="hero">
-        <img src="{{ Theme::asset()->url('images/about/hero.png') }}" alt="">
+        <img src="{{ Theme::asset()->url('images/about/hero.jpg') }}" alt="">
     </div>
 </div>
 <div class="container-customize" id="wrap-bot">
@@ -139,7 +160,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                    <div class="product0">
-                    <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
                     <h3>"W" Beam Rails</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
                         Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
@@ -147,7 +168,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="product1">
-                        <img src="{{ Theme::asset()->url('images/about/product1.png') }}" alt="">
+                        <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
                         <h3>Surface Mounted Post</h3>
                         <p>It has survived not only five centuries, but also the leap into electronic 
                         typesetting, remaining essentially unchanged. It was popularised in the 1960s

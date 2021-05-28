@@ -12,54 +12,23 @@
                 <h2>ARMCO® Services</h2>
                 <p>Installation, Design Advice, Custom Manufacture</p>
             </div>
-            <div class="menu">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/service-detail">Installation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Request a Quotation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Custom Manufacture</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/service">Car Parks</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Factories & Industrial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Roadside</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
         </div>
     </div>
 </section>
-<section style="padding-bottom: 60px">
-    <div class="container-fluid-customize">
-        <div class="wrap-install">
-            <div class="container-customize">
-                <div class="install">
-                    <h2>Installation</h2>
-                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                    </div>
-            </div>
-        </div>
-    </div>
+<div class="container-customize">
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>
+        <a class="nav-item nav-link" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
+        <a class="nav-item nav-link" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
+        <a class="nav-item nav-link" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
+        <a class="nav-item nav-link  active" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
+        <a class="nav-item nav-link" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
+        <a class="nav-item nav-link" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
+      </div>
+    </nav>
+</div>
 </section>
+@includeIf("theme.armcobarriers::views.tab")
 <section>
     <div class="container-customize">
         <div class="wrap-text">
@@ -93,21 +62,21 @@
         <div class="wrap-pic">
             <div class="re-pow">
                 <div class="request">
-                    <img src="{{ Theme::asset()->url('images/service-detail/request.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service-detail/request.jpg') }}" alt="">
                     <h3>Request a free Quotation</h3>
                 </div>
                 <div class="powder">
-                    <img src="{{ Theme::asset()->url('images/service-detail/powder.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service-detail/powder.jpg') }}" alt="">
                     <h3>Powder-Coating</h3>
                 </div>
             </div>
             <div class="cus-im">
                 <div class="custom">
-                    <img src="{{ Theme::asset()->url('images/service-detail/custom.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service-detail/custom.jpg') }}" alt="">
                     <h3>Custom Manufacture & Design Advice</h3>
                 </div>
                <div class="impact">
-                <img src="{{ Theme::asset()->url('images/service-detail/impact.png') }}" alt="">
+                <img src="{{ Theme::asset()->url('images/service-detail/impact.jpg') }}" alt="">
                 <h3>Impact Force Calculator</h3>
                </div>
             </div>

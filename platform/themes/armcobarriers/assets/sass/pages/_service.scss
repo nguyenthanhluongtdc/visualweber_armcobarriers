@@ -14,84 +14,23 @@
         }
     }
     .menu{
-        .navbar{
-            padding-left: 0px;
-        }
-
-        ul{
-            li{
-                a{
-                 padding-right: 50px;
-                 font-size: 17px;
-                 color:#000000 ;
-                 font-family: $Arial;
-               }
+        .nav-tabs{
+            border-bottom: 0px solid #dee2e6;
+            .nav-link{
+                padding: 0px 50px 0px 0px;
+                font-size: 17px;
+                color:#000000 ;
+                font-family: $Arial;
             }
-            display: flex;
-            li:nth-child(5){
-                a{ 
+            .nav-link.active{
                 font-weight: bold;
-                padding-right: 50px;
-                 font-size: 17px;
-                 color:#000000 ;
-                 font-family: $Arial;
-                }
-            }
-            li:nth-child(7){
-                a{ 
-                 padding-right: 50px;
-                 font-size: 17px;
-                 color:#000000 ;
-                 font-family: $Arial;
-                }
-            }
-            li:nth-child(6){
-                a{ 
-                    padding-right: 50px;
-                    font-size: 17px;
-                    color:#000000 ;
-                    font-family: $Arial;
-                }
-            }
-            li:nth-child(4){
-                a{ 
-                    padding-right: 50px;
-                    font-size: 17px;
-                    color:#000000 ;
-                    font-family: $Arial;
-                }
-            }
-            li:nth-child(3){
-                a{ 
-                    padding-right: 50px;
-                    font-size: 17px;
-                    color:#000000 ;
-                    font-family: $Arial;
-                }
-            }
-            li:nth-child(2){
-                a{ 
-                 padding-right: 50px;
-                 font-size: 17px;
-                 color:#000000 ;
-                 font-family: $Arial;
-                }
-            }
-            li:nth-child(1){
-                a{  padding-left: 0px;
-                    padding-right: 50px;
-                    font-size: 17px;
-                    color:#000000 ;
-                    font-family: $Arial;
-                }
             }
         }
     }
 }
 .wrap-car{
     padding: 3% 30% 0% 3%;
-    background-image: url('../../../public/images/service/carpark.png');
-    background-color: #000;
+    background-image:url('../../../public/images/service/carpark.jpg');
     .wrap-system{
         padding-bottom: 10%;
         .system1{
@@ -123,7 +62,7 @@
             font-size: 20px;
             font-family: $Arial;
             font-weight: bold;
-            padding-bottom: 4%;
+            padding:2% 0% 3%;
         }
         p{
             font-size: 17px;
@@ -141,7 +80,7 @@
     }
 .wrap-our{
     .service{
-        padding:60px 0px 60px;
+        padding-bottom: 60px;
         font-size: 40px;
         font-family: $FolioStd-Bold;
         color:#000000;
@@ -162,6 +101,7 @@
            color: white;
            font-size: 20px;
            font-family: $FolioStd-Medium;
+           right: 0.2%;
        }
        .icon{
                 
@@ -175,7 +115,7 @@
         position:absolute;
         top:45%;
         left:43%;
-        z-index: 12;
+        z-index: 8;
         color: $priamry_color;
         font-size: 25px;
         visibility: hidden;
@@ -193,8 +133,7 @@
 }
 .wrap-roadside
 {   padding:6% 0;
-    background-image:url('../../../public/images/service/roadside.png'); 
-    background-color: #000;
+    background-image:url('../../../public/images/service/roadside.jpg');
         .content{
             width: 60%;
             h3{
@@ -246,34 +185,27 @@
             font-family: $FolioStd-Medium;
         }
     }
-    .wrap-descrip{
+    .wrap-descrip
+    {
         padding-bottom: 80px;
         .post{
             &:hover{
                 .post-title{
-                    transition: 0.3s;
-                    background-color:$priamry_color;
-                    display: inline-block;
-                    padding: 10px;
+                    transition: 0.3s ease;
+                    font-weight: bold;
                 }
             }
         }
-        .wheepstop{
-        h3
-        {   display: inline-block;
-            background-color: $priamry_color;
-            // padding:10px;
-        }
-        }
         h3{
+
             font-size: 20px;
             font-family: $FolioStd-Medium;
             color:#000000;
+            padding: 10px 0px;
         }
         p{
             font-size: 15px;
             font-family: $Arial;
-            // padding: 10% 8% 0% 0%;
             margin:10% 8% 0% 0% ;
         }
     }

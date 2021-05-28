@@ -10,79 +10,22 @@
             <div class="top2">
                 <h2>ARMCO - Asset Protection Solutions</h2>
                 <p>Installation, Design Advice, Custom Manufacture</p>
-            </div>
-            <div class="menu">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/service-detail">Installation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Request a Quotation</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Custom Manufacture</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/service">Car Parks</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Factories & Industrial</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Roadside</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+            </div> 
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>
+                      <a class="nav-item nav-link" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
+                      <a class="nav-item nav-link" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
+                      <a class="nav-item nav-link" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
+                      <a class="nav-item nav-link  active" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
+                      <a class="nav-item nav-link" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
+                      <a class="nav-item nav-link" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
+                   </div>
+                  </nav>
             </div>
         </div>
     </div>
 </section>
-<section>
-    <div class="container-fluid-customize">
-        <div class="wrap-car">
-            <div class="container-customize">
-                <div class="car-park">
-                    <h2>Car Park Solutions</h2>
-                    <p>Armco® Barriers provide a range of services to support both the customer and our product. Our services are of a superior standard due to
-                        the intimate knowledge of the Armco® product that our service providers have.</p>
-                    <p>Our Installation teams are 'in house' trained and all have had experience in manufacture to understand the product better.
-                        Our design team have over 20 years experience in designing and assisting customers with protective barrier systems. We have civil and structural
-                        engineers on staff to assure that our products are manufactured and designed to the highest standard of both safety and tolerance.</p>
-                </div>
-                <div class="wrap-system">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="system1">
-                                <h3>30kN System</h3>
-                                <p>Our Installation teams are 'in house' trained and all have had experience in manufacture to understand the product better.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="system2">
-                                <h3>40kN System</h3>
-                                <p>Our Installation teams are 'in house' trained and all have had experience in manufacture to understand the product better.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-12">
-                            <div class="system3">
-                                <h3>120kN System</h3>
-                                <p>Our Installation teams are 'in house' trained and all have had experience in manufacture to understand the product better.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-</section>
+@includeIf("theme.armcobarriers::views.tab")
 <section>
     <div class="container-customize">
         <div class="wrap-our">
@@ -96,7 +39,7 @@
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
                     </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic1.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service/pic1.jpg') }}" alt="">
                             <p>Asset Protection for Factories</p>
                 </div>
                 <div class="col-md-3 col-sm-6 asset">
@@ -105,7 +48,7 @@
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
                     </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic2.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service/pic2.jpg') }}" alt="">
                     <p>Gas and Fuel Tank Solutions</p>
                 </div>
                 <div class="col-md-3 col-sm-6 asset">
@@ -114,7 +57,7 @@
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
                     </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic3.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service/pic3.jpg') }}" alt="">
                             <p>Impact protection for Warehouses</p>
                 </div>
                 <div class="col-md-3 col-sm-6 asset">
@@ -123,7 +66,7 @@
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
                     </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic4.png') }}" alt="">
+                    <img src="{{ Theme::asset()->url('images/service/pic4.jpg') }}" alt="">
                     <p>ARMCO Design Advise</p>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 .wrap-install{
-    background-image: url('../../../public/images/service-detail/service.png');
+    background-image: url('../../../public/images/service-detail/services.jpg');
     height: 460px;
     background-color: #000;
     position: relative;
@@ -126,17 +126,14 @@
     .australian{
         &:hover{
             .title{
-                transition: 0.3s;
-                background-color:$priamry_color;
-                display: inline-block;
-                padding: 10px;
+                transition: 0.3s ease;
+                font-weight: bold;
             }
         }
         h3{
             font-size: 20px;
             font-family: $FolioStd-Medium;
-            // padding-bottom: 5%;
-            // padding-right: 40%;
+            padding: 10px 0px ;
         }
         p{
             font-size: 15px;
