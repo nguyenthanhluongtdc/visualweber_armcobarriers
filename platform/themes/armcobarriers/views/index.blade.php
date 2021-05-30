@@ -1,56 +1,67 @@
 <section>
     <div class="container-fluid-customize">
         <div  class="swiper-container mySwiper-home" style="--swiper-navigation-color:#FAD906; --swiper-pagination-color:#FAD906;">
-                        <div class="swiper-slide">
-                            <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/home/slider-1.jpg')}})">
-                                <div class="container-customize">
-                                    <div class="swiper-content">
-                                        
-                                        <div class="logo-slider" data-swiper-parallax="-300">
-                                            <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/home/slider-1.jpg')}})">
+                                    <div class="container-customize">
+                                        <div class="swiper-content">
+                                            
+                                            <div class="logo-slider">
+                                                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                                            </div>
+                                            <div class="title-slider">BARRIERS</div>
+                                            <div class="text-slider">
+                                                <p>manufacture, supply & install</p>
+                                                <p>
+                                                    Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
-                                        <div class="text-slider" data-swiper-parallax="-100">
-                                            <p>manufacture, supply & install</p>
-                                            <p>
-                                                Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-                                            </p>
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/about/hero.jpg')}})">
+                                    <div class="container-customize">
+                                        <div class="swiper-content">
+                                            
+                                            <div class="logo-slider">
+                                                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                                            </div>
+                                            <div class="title-slider">BARRIERS</div>
+                                            <div class="text-slider">
+                                                <p>The ARMCO "W" Beam System</p>
+                                                <p>
+                                                    Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>  
+                                    </div>  
+                                </div>
                             </div>
-                           
+                            <div class="swiper-slide">
+                                <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/service-detail/powder.jpg')}})">
+                                    <div class="container-customize">
+                                        <div class="swiper-content">
+                                            
+                                            <div class="logo-slider">
+                                                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+                                            </div>
+                                            <div class="title-slider">BARRIERS</div>
+                                            <div class="text-slider">
+                                                <p>Galvanised in Australia to ASXXXXX</p>
+                                                <p>
+                                                    Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                            
+                            
                         </div>
-                        {{-- <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/home/slider-1.jpg')}})"></div>
-                                <div class="logo-slider" data-swiper-parallax="-300">
-                                    <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
-                                </div>
-                                <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
-                                <div class="text-slider" data-swiper-parallax="-100">
-                                    <p>manufacture, supply & install</p>
-                                    <p>
-                                        Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-content">
-                                <div class="bg-slider" style="background-image:url({{ Theme::asset()->url('images/home/slider-1.jpg')}})"></div>
-                                <div class="logo-slider" data-swiper-parallax="-300">
-                                    <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
-                                </div>
-                                <div class="title-slider" data-swiper-parallax="-200">BARRIERS</div>
-                                <div class="text-slider" data-swiper-parallax="-100">
-                                    <p>manufacture, supply & install</p>
-                                    <p>
-                                        Armco® guardrail, safety barriers, bollards and protection systems for Roads, Bridges, Car parks, Warehouses and Factories
-                                    </p>
-                                </div>
-                            </div>
-                        </div> --}}
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div> 

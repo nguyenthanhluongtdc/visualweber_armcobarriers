@@ -543,6 +543,10 @@
                 grid-template-columns: auto auto;
                 align-items: center;
                 gap: 70px;
+                @media (max-width: 991px) {
+                    grid-template-columns: unset;
+                    gap: 20px;
+                }
                 p:nth-child(1) {
                     font-size: 40px;
                     font-family: $FolioStd-Medium;
@@ -1026,4 +1030,19 @@
         .service-us-wrapper .service-of-us .image-mid-2 .mid-2-content {
             font-size: 13px;
         }
+    }
+    
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .swiper-slide img {
+        display: block;
+        width: 100%;
     }

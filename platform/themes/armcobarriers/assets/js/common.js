@@ -4,12 +4,13 @@ require('./bootstrap')
 // const helloWorld = require("./hello-world").helloWorld();
 // console.log(helloWorld);
 var swiper = new Swiper(".mySwiper-home", {
-    speed: 1000,
+    speed: 800,
     // parallax: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -17,6 +18,22 @@ var swiper = new Swiper(".mySwiper-home", {
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+    },
+});
+var swiper2 = new Swiper(".mySwiper1", {
+    spaceBetween: 30,
+    effect: "fade",
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
     },
 });
 
