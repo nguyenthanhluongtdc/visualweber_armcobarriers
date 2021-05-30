@@ -94,6 +94,10 @@
             slidesPerView: 3,
             spaceBetween: 10,
             slidesPerGroup: 1,
+                autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             // loop: true,
             // loopFillGroupWithBlank: true,
             noSwiping: true,

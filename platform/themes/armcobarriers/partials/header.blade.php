@@ -28,7 +28,7 @@
         <header class="header">
             <div class="contaier-fluid-customize">     
                         <nav class="navbar navbar-expand-lg">
-                            <a href="#" class="logo__link">
+                            <a href="/" class="logo__link">
                                 <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                             </a>
                             

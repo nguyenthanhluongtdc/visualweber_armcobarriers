@@ -473,9 +473,10 @@
         }
     }
     
-    .swiper-container {
-        width: 100%;
-        padding-top: 41%;
+    .bg-slider {
+        padding-top: 40%;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
     .swiper-container-horizontal>.swiper-pagination-bullets {
@@ -513,10 +514,8 @@
         position: relative;
         color: #fff;
         .swiper-content {
-            position: absolute;
+            position: relative;
             bottom: 70px;
-            left: 160px;
-            width: 100%;
             .logo-slider {
                 img {
                     width: 14%;
@@ -540,11 +539,10 @@
                 }
             }
             .text-slider {
-                width: 80%;
-                display: flex;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: auto auto;
                 align-items: center;
-                position: relative;
+                gap: 70px;
                 p:nth-child(1) {
                     font-size: 40px;
                     font-family: $FolioStd-Medium;
@@ -563,26 +561,10 @@
                     &:after {
                         content: "";
                         position: absolute;
-                        right: -10px;
                         background-color: #fff;
                         width: 2px;
                         height: 20px;
-                        left: 36.5%;
-                        top: 42%;
-                        @media (max-width: 1680px) {
-                            left: 31.5%;
-                            top: 32%;
-                        }
-                        @media (max-width: 1440px) {
-                            left: 30.5%;
-                            top: 27%;
-                        }
-                        @media (max-width: 1366px) {
-                            left: 27%;
-                            top: 27%;
-                            height: 15px;
-                        }
-                        @media (max-width:1280px) {
+                        @media (max-width: 1280px) {
                             font-size: 13px;
                         }
                     }
@@ -606,18 +588,6 @@
                 }
             }
         }
-    }
-    
-    .parallax-bg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-background-size: cover;
-        background-size: cover;
-        background-position: center;
-        background-image: url('../../../public/images/header/footer.png');
     }
     
     @media(max-width:1024px) {
@@ -680,7 +650,6 @@
         .swiper-slide {
             .swiper-content {
                 bottom: 50px;
-                left: 5%;
                 .text-slider {
                     width: 100%;
                 }

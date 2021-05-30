@@ -3,13 +3,13 @@ require('./bootstrap')
 
 // const helloWorld = require("./hello-world").helloWorld();
 // console.log(helloWorld);
-var swiper = new Swiper(".mySwiper", {
-    speed: 600,
+var swiper = new Swiper(".mySwiper-home", {
+    speed: 1000,
     // parallax: true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

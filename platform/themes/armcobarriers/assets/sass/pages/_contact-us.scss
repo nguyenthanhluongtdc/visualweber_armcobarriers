@@ -25,6 +25,9 @@
     padding-bottom: 90px;
     flex-direction: row;
     .list-group-item {
+        &:focus {
+            background-color: unset;
+        }
         border: unset;
         text-transform: uppercase;
         padding: unset;
@@ -46,6 +49,12 @@
         width: 15%;
         background: #FAD906;
         transition: 0.5s;
+    }
+}
+
+.list-group-item-action {
+    &:hover {
+        background-color: unset;
     }
 }
 
@@ -253,6 +262,9 @@
     .tab-content {
         h4 {
             font-size: 12px;
+            @media (max-width: 480px) {
+                font-size: 10px;
+            }
         }
     }
     .let-talk {
@@ -288,13 +300,24 @@
     }
 }
 
-.table {
-    thead th {
-        border-bottom: unset;
+.info-wrapper {
+    @media(min-width: 1620px) {
+        grid-template-columns: 8% 36% 10% 36%;
     }
-    td,
-    th {
-        border-top: unset;
+    @media(max-width: 991px) {
+        font-size: 13px;
+    }
+    display: grid;
+    grid-template-columns: 17% 36% 17% 36%;
+    @media(max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10%;
+    }
+    @media(max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10%;
+        column-gap: 5%;
+        align-items: center;
     }
 }
 
