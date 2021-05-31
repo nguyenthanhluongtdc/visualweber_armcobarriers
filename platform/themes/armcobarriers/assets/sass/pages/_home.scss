@@ -650,6 +650,12 @@
         }
     }
     
+    @media(max-width:1280px) {
+        .location-office-wrapper .left-content-wrapper .left-content h2 {
+            font-size: 30px;
+        }
+    }
+    
     @media (max-width:991px) {
         .swiper-slide {
             .swiper-content {
@@ -821,9 +827,13 @@
         }
         .location-office-wrapper {
             .left-content-wrapper {
+                padding: 14%;
+                p {
+                    font-size: 10px;
+                }
                 .left-content {
                     h2 {
-                        font-size: 20px;
+                        font-size: 15px;
                     }
                 }
                 p {
@@ -834,6 +844,10 @@
         .service-us-wrapper {
             padding-top: 50px;
             .left-content-wrapper {
+                padding: 14%;
+                p {
+                    font-size: 10px;
+                }
                 .left-content {
                     h2 {
                         font-size: 20px;
@@ -847,8 +861,9 @@
         .news-event-wrapper {
             .news-post {
                 .news-post-time {
+                    display: unset;
                     .btn-share {
-                        margin-left: 15px;
+                        margin: 20px 0px 0px 0px;
                     }
                 }
             }
@@ -879,6 +894,25 @@
                     }
                 }
             }
+            .office-of-us {
+                display: block;
+                padding-top: 0;
+                .image-mid-2 {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+                .image-mid-1 {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+                .image-mid-3 {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+            }
         }
         .product-range-wrapper {
             .product-range-content {
@@ -896,6 +930,25 @@
                 .left-content {
                     h2 {
                         font-size: 15px;
+                    }
+                }
+            }
+            .office-of-us {
+                display: block;
+                padding-top: 0;
+                .image-mid-2 {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+                .image-mid-1 {
+                    img {
+                        margin-top: 30px;
+                    }
+                }
+                .image-mid-3 {
+                    img {
+                        margin-top: 30px;
                     }
                 }
             }
@@ -984,7 +1037,7 @@
                 .left-content {
                     bottom: 50%;
                     img {
-                        width: 46%;
+                        width: 30%;
                     }
                 }
             }

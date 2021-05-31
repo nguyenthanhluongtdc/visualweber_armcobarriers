@@ -36,7 +36,7 @@
                             <div class="toolbar-mobile">
                               <ul class="list-tool">
                                   <li>
-                                    <a href="">
+                                    <a href="tel:1800 808 619">
                                         <i class="fas fa-phone-alt"></i>
                                         {{-- <span>1800 808 619</span> --}}
                                     </a>
@@ -239,7 +239,7 @@
                         <div class="toolbar">
                             <div class="left">
                                 <div class="left-1">
-                                    <a href="">
+                                    <a href="tel:1800 808 619">
                                         <i class="fas fa-phone-alt"></i>
                                         <span>1800 808 619</span>
                                     </a>
