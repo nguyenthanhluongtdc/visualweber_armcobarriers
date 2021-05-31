@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="container-fluid-customize">
-    <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ Theme::asset()->url('images/product/banner-product.png')}})">
+    <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ Theme::asset()->url('images/product/banner-product.jpg')}})">
     <div class="container-customize">
       <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
       </p>
@@ -32,9 +32,11 @@
                       
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                           <p>Guardrail - Railgard TM </p>
-                          <i class="fas fa-chevron-down"></i> 
+                          <i class="fas fa-chevron-down icon-menulf"></i> 
                         </a>
-                        
+                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                          <i class="fa fa-bars"></i>
+                        </a>
                     
                       <ul class="list-unstyled list-categories collapse show" id="homeSubmenu" style="">
                           <li>
