@@ -10,7 +10,7 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
         Route::get('services', 'ArmcobarriersController@getService')
         ->name('public.service');
         Route::get('product-detail','ArmcobarriersController@productDetail')->name('public.productDetail');
-        Route::get('services-detail', 'ArmcobarriersController@getService');
+
 
     });
 });
