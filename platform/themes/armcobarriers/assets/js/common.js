@@ -36,6 +36,17 @@ var swiper2 = new Swiper(".mySwiper1", {
         clickable: true,
     },
 });
+var swiper_gallery = new Swiper(".mySwiper-left", {
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 
 function clickToScroll(elButtom, elContent, minusPixel, timeScroll) {
     $(elButtom).click(function() {
