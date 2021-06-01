@@ -330,6 +330,10 @@
                 border: none;
                 font-size: 15px;
                 font-family: $Arial;
+                color:#000000;
+                ::placeholder{
+                    color:#000000;
+                }
             }
            
             button{
