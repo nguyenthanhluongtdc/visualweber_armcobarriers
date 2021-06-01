@@ -1,0 +1,101 @@
+.new-all-wrapper {
+    padding-bottom: 40px;
+    .news-post {
+        a {
+            color: $gray-text;
+        }
+    }
+    .news-event--title {
+        padding: 0px 0 70px 0;
+        h2 {
+            font-size: 60px;
+            font-family: $FolioStd-Medium;
+        }
+    }
+    .news-post img {
+        max-width: 100%;
+    }
+    .news-post--titlte {
+        &:hover {
+            background-color: #FAD906;
+        }
+        font-size: 20px;
+        font-family: $FolioStd-Medium;
+        @media (max-width: 1280px) {
+            font-size: 17px;
+        }
+        h4 {
+            padding: 25px 15px 25px 15px;
+            @media (max-width: 1680px) {
+                padding: 15px;
+            }
+            &:hover {
+                background-color: $priamry_color;
+            }
+        }
+    }
+    .news-post {
+        .news-post--content {
+            padding-bottom: 40px;
+        }
+        .news-post-time {
+            display: flex;
+            align-items: center;
+            .btn-share {
+                margin-left: 30px;
+                a {
+                    padding: 10px 15px;
+                    background-color: $priamry_color;
+                    color: #000;
+                    i {
+                        padding: 0 5px;
+                    }
+                }
+            }
+            .btn-event {
+                margin-left: 30px;
+                a {
+                    padding: 10px 15px;
+                    background-color: $gray-text;
+                    color: $priamry_color;
+                }
+            }
+        }
+    }
+}
+
+.list-news-wrapper {
+    padding-top: 30px;
+    border-top: 1px solid #EDEDED;
+    .right-content {
+        margin-left: 20px;
+        .list-new__title {
+            margin-bottom: 30px;
+            font-size: 17px;
+            font-family: $FolioStd-Medium;
+        }
+        .list-new__content {
+            margin-top: 20px;
+        }
+        .btn-event {
+            padding: 10px 15px;
+            background-color: #262626;
+            color: $priamry_color;
+            margin-left: 20px;
+        }
+    }
+    .img-left-3 {
+        position: relative;
+        i {
+            position: absolute;
+            top: 33%;
+            left: 42%;
+            color: #fff;
+            font-size: 50px;
+        }
+    }
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}

@@ -43,6 +43,7 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                             <span class="text">Product</span>
+                            <div class="slider-pagination-custom"></div>
                         </div>
                         
                         
@@ -80,7 +81,7 @@
   </section>
 
   <section>
-      <div class="news-event-wrapper">
+      <div class="news-event-gallery-wrapper">
           <div class="container-customize">
             <div class="news-event--title">
                 <h2 data-aos="fade-left" data-aos-delay="200">News <br>& Events</h2>
@@ -149,7 +150,7 @@
             </div>
 
             <div class="read-more">
-                <h3 data-aos="fade-left" data-aos-delay="200">Read More</h3>
+                <a href="{{url('/news-all')}}"><h3 data-aos="fade-left" data-aos-delay="200">Read More</h3></a>
             </div>
           </div>
       </div>

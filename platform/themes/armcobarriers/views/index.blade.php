@@ -324,7 +324,7 @@
             </div>
 
             <div class="read-more">
-                <h3 data-aos="fade-left" data-aos-delay="200">Read More</h3>
+                <a href="{{url('/news-all')}}"><h3 data-aos="fade-left" data-aos-delay="200">Read More</h3></a>
             </div>
             <div class="container-customize">
                 <div class="count">

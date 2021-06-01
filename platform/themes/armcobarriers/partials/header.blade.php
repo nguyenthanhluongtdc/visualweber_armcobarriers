@@ -222,13 +222,13 @@
                                     <a href="/service" class="nav__menu-link">Services</a>
                                 </li>
                                 <li class="nav-link nav-item ">
-                                    <a href="/application" class="nav__menu-link">Applications</a>
+                                    <a href="/applications" class="nav__menu-link">Applications</a>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/gallery" class="nav__menu-link">Gallery</a>
                                 </li>
                                 <li class="nav-link nav-item ">
-                                    <a href="/news" class="nav__menu-link">News,Events &Media</a>
+                                    <a href="/news-media" class="nav__menu-link">News,Events &Media</a>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/contact-us" class="nav__menu-link">Contact Us</a>
