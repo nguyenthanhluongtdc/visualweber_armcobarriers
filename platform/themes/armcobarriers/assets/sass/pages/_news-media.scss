@@ -27,7 +27,7 @@ $gray_text: #262626;
                 h3 {
                     font-size: 20px;
                     color: $gray_text;
-                    padding: 30px 15px;
+                    padding: 25px 15px;
                 }
                 h3:hover {
                     background-color: #fad906;
@@ -107,7 +107,7 @@ $gray_text: #262626;
             .active {
                 background-color: transparent !important;
                 border: none !important;
-                color: green !important;
+                color: #734D37 !important;
             }
         }
 
@@ -202,16 +202,26 @@ $gray_text: #262626;
     
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   
   /* CSS */
 
   .pages-news-media .box-media .content .item .options {
         display: inherit;
+        padding-top: 10px;
 
         >div:first-child {
             display: block;
+            text-align: right;
         }     
+
+        .share {
+            margin-left: 0;
+        }
+
+        .type {
+            margin: 0;
+        }
   }
   
 }

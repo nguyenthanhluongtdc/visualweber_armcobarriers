@@ -15,7 +15,7 @@
         <div class="box-media pt-5 pb-5">
             <div class="content">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-sm-5">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="">
                                 <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-sm-5">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="">
                                 <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-sm-5">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="">
                                 <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
@@ -102,10 +102,10 @@
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6 mb-md-line">
+                        <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -118,9 +118,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-md-line p0-md">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -137,9 +137,9 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6 mb-md-line">
+                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -152,9 +152,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-md-line p0-md">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -171,9 +171,9 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6 mb-md-line">
+                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-3.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -186,9 +186,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-md-line p0-md">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-3.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -205,9 +205,9 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6 mb-md-line">
+                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-4.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -220,9 +220,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-md-line p0-md">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-4.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -239,9 +239,9 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6 mb-md-line">
+                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-5.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -254,9 +254,9 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 mb-md-line p0-md">
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-5.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6">
@@ -276,52 +276,47 @@
                     <div class="box-media">
                         <div class="content">
                             <div class="row">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="">
                                             <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier
                                             </h3>
-                                            <p>
-                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                            </p>
                                         </a>
 
                                         <div class="options pt-0 pb-0">
-                                            <div class="date"> 21 Apr 2020 </div>
+                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="">
                                             <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier
                                             </h3>
-                                            <p>
-                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                            </p>
                                         </a>
+
+                                        <div class="options pt-0 pb-0">
+                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="">
                                             <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier
                                             </h3>
-                                            <p>
-                                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                            </p>
                                         </a>
 
                                         <div class="options pt-0 pb-0">
-                                            <div class="date"> 21 Apr 2020 </div>
+                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
                                         </div>
                                     </div>
                                 </div>
