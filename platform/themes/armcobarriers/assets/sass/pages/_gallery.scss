@@ -39,6 +39,7 @@
             position: absolute;
             left: -40%;
             bottom: 25px;
+            z-index: 1;
         }
         .text {
             z-index: 15;
@@ -87,6 +88,44 @@
         }
         .swiper-button-next {
             left: 17%;
+        }
+    }
+}
+
+.mySwiper-right {
+    .pagination-wrapper {
+        .swiper-pagination-fraction {
+            color: $priamry_color;
+            bottom: 19px;
+            z-index: 1;
+            width: 55%;
+            left: 0;
+        }
+        .text-2 {
+            z-index: 15;
+            color: white;
+            position: absolute;
+            left: 7%;
+            top: 94%;
+            font-size: 20px;
+        }
+        .swiper-button-next {
+            position: absolute;
+            left: 17%;
+            color: #fff;
+            &::after {
+                font-size: 40px;
+                font-weight: bold;
+            }
+        }
+        .swiper-button-prev {
+            position: absolute;
+            left: -2%;
+            color: #fff;
+            &::after {
+                font-size: 40px;
+                font-weight: bold;
+            }
         }
     }
 }

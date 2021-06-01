@@ -19,58 +19,62 @@
                 <a class="nav-item nav-link" id="nav-applications-tab" data-toggle="tab" href="#nav-applications" role="tab" aria-controls="nav-installation" aria-selected="false">Applications</a>
                 <a class="nav-item nav-link" id="nav-warranty-tab" data-toggle="tab" href="#nav-warranty" role="tab" aria-controls="nav-request" aria-selected="false">Warranty</a>
                 <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-custom" aria-selected="false">Design</a>
-            
             </div>
             </nav>
         </div>
-          <div class="slider-gallery-wrapper">
-            <div class="swiper-container mySwiper-left">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide img-right">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="home-tab">
+                <div class="slider-gallery-wrapper">
+                    <div class="swiper-container mySwiper-left">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide img-right">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
+                          </div>
+                          <div class="swiper-slide img-right">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
+                          </div>
+                          <div class="swiper-slide img-right">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
+                          </div>
+                         
+                        </div>
+                        <div class="pagination-wrapper">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                            <span class="text">Product</span>
+                        </div>
+                        
+                        
+                    </div> 
+                    <div class="swiper-container mySwiper-right">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide img-left">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
+                          </div>
+                          <div class="swiper-slide img-left">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
+                          </div>
+                          <div class="swiper-slide img-left">
+                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
+                          </div>
+                        </div>
+                        <div class="pagination-wrapper">
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                           
+                            <span class="text-2">Applications</span>
+                        </div>
+                        
+                    </div> 
                   </div>
-                  <div class="swiper-slide img-right">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
-                  </div>
-                  <div class="swiper-slide img-right">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
-                  </div>
-                 
-                </div>
-                <div class="pagination-wrapper">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                    <span class="text">Product</span>
-                </div>
-                
-                
-            </div> 
-            <div class="swiper-container mySwiper-right">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide img-left">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
-                  </div>
-                  <div class="swiper-slide img-left">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
-                  </div>
-                  <div class="swiper-slide img-left">
-                    <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
-                  </div>
-                </div>
-                <div class="pagination-wrapper">
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination"></div>
-                   
-                    <span>Applications</span>
-                </div>
-                
-            </div> 
-            
-                
-                
-          </div>
+            </div>
+            <div class="tab-pane fade" id="nav-applications" role="tabpanel" aria-labelledby="profile-tab">Applications</div>
+            <div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="contact-tab">Warranty</div>
+            <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="setting-tab">Design</div>
+        </div>
+          
 
       </div>
   </section>
