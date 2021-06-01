@@ -1,5 +1,12 @@
 $gray_text: #262626;
 
+@mixin str_split {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
 .pages-news-media {
     .my-7 {
         margin-top: 5rem;
@@ -36,48 +43,53 @@ $gray_text: #262626;
                     padding-bottom: 20px;
                     display: flex;
 
-                > div {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    height: 35px;
-                    line-height: 35px;
-                    margin-left: 10px;
-                    margin-right: 10px;
-                }
-                > div:first-child {
-                    padding-left: 0;
-                    margin-left: 0;
-                }
+                    > div, >a {
+                        display: inline-block;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        height: 35px;
+                        line-height: 35px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
 
-                .date {
-                    color: $gray_text;
-                    font-size: 15px;
-                }
+                    > div:first-child {
+                        padding-left: 0;
+                        margin-left: 0;
+                    }
 
-                .share {
-                    background-color: #fad906;
-                }
+                    .date {
+                        color: $gray_text;
+                        font-size: 15px;
+                    }
 
-                .type {
-                    background-color: #262626;
-                    color: white;
+                    .share {
+                        background-color: #fad906;
+                        color: $gray_text;
+                    }
+
+                    .share::after {
+                        font-family: "Font Awesome 5 Pro";
+                        content: "\f1e0";
+                    }
+
+                    .type {
+                        background-color: #262626;
+                        color: $priamry_color;
+                    }
                 }
             }
-        }
         }
     }
     #tile-1 {
 
         .nav-tabs {
             position: relative;
-            border-bottom: $gray;
             background-color: #fff;
-            /*   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14);
             border-radius: 6px;
             margin-bottom: 20px;
-        }
 
-        .nav-tabs {
             li {
                 margin: 0px !important;
             }
@@ -86,9 +98,10 @@ $gray_text: #262626;
                 position: relative;
                 margin-right: 0px !important;
                 padding: 20px 40px 20px 0;
-                font-size: 16px;
+                font-size: 35px;
                 border: none !important;
-                color: #333;
+                color: $gray_text;
+                font-family: "FolioStd-Medium";
             }
 
             .active {
@@ -119,6 +132,8 @@ $gray_text: #262626;
             h5 {
                 font-size: 17px;
                 color: $gray_text;
+                @include str_split();
+                -webkit-line-clamp: 1;
             }
 
             .date, .des{
@@ -127,11 +142,8 @@ $gray_text: #262626;
                 color: $gray_text;
                 font-size: 15px;
                 
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
+                @include str_split;
                 -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
             }
 
             .tab-pane {
@@ -173,9 +185,34 @@ $gray_text: #262626;
   ##Screen = B/w 1025px to 1280px
 */
 
+@media (max-width: 1024px) {
+  
+    /* CSS */
+    .p0-md {
+        padding-left: 0;
+    }
+
+    .pages-news-media #tile-1 .tab-content .tab-pane .item-row{
+        margin-bottom: 0;
+    }
+
+    .mb-md-line {
+        margin-bottom: 20px;
+    }
+    
+}
+
 @media (min-width: 1025px) and (max-width: 1280px) {
   
   /* CSS */
+
+  .pages-news-media .box-media .content .item .options {
+        display: inherit;
+
+        >div:first-child {
+            display: block;
+        }     
+  }
   
 }
 

@@ -32,7 +32,6 @@
                                 <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                             </a>
                             
-                            
                             <div class="toolbar-mobile">
                               <ul class="list-tool">
                                   <li>

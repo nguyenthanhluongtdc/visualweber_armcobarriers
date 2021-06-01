@@ -29,8 +29,8 @@
 
                             <div class="options">
                                 <div class="date"> 21 Apr 2020 </div>
-                                <div class="share"> Share </div>
-                                <div class="type"> Event </div>
+                                <a class="share"> Share </a>
+                                <a class="type"> Event </a>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,7 @@
 
                             <div class="options">
                                 <div class="date"> 21 Apr 2020 </div>
-                                <div class="share"> Share </div>
-                                <div class="type"> Event </div>
+                                <a class="share"> Share </a>
                             </div>
                         </div>
                     </div>
@@ -69,8 +68,7 @@
 
                             <div class="options">
                                 <div class="date"> 21 Apr 2020 </div>
-                                <div class="share"> Share </div>
-                                <div class="type"> Event </div>
+                                <a class="share"> Share </a>
                             </div>
                         </div>
                     </div>
@@ -105,12 +103,12 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -120,46 +118,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line p0-md">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -173,12 +137,12 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -188,12 +152,12 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line p0-md">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -207,12 +171,12 @@
 
                     <div class="item-row">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-3.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -222,12 +186,80 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 mb-md-line p0-md">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-5 col-sm-6">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-3.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-8 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <div class="date"> 21 Apr 2020 </div>
+                                        <p class="des">
+                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="row">
+                            <div class="col-lg-6 mb-md-line">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-4.jpg') }}" alt="">
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <div class="date"> 21 Apr 2020 </div>
+                                        <p class="des">
+                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-md-line p0-md">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-4.jpg') }}" alt="">
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <div class="date"> 21 Apr 2020 </div>
+                                        <p class="des">
+                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-row">
+                        <div class="row">
+                            <div class="col-lg-6 mb-md-line">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-5.jpg') }}" alt="">
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <div class="date"> 21 Apr 2020 </div>
+                                        <p class="des">
+                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mb-md-line p0-md">
+                                <div class="row">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0">
+                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-5.jpg') }}" alt="">
+                                    </div>
+                                    <div class="col-lg-7 col-md-7 col-sm-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
