@@ -35,12 +35,15 @@
                   <div class="swiper-slide img-right">
                     <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
                   </div>
+                 
                 </div>
                 <div class="pagination-wrapper">
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
+                    <span class="text">Product</span>
                 </div>
+                
                 
             </div> 
             <div class="swiper-container mySwiper-right">
@@ -59,6 +62,8 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
+                   
+                    <span>Applications</span>
                 </div>
                 
             </div> 
