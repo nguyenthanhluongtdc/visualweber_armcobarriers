@@ -1,0 +1,224 @@
+$gray_text: #262626;
+
+.pages-news-media {
+    .my-7 {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .box-media {
+
+        .content {
+            .item {
+                img {
+                    max-width: 100%;
+                }
+                h3 {
+                    font-size: 20px;
+                    color: $gray_text;
+                    padding: 30px 15px;
+                }
+                h3:hover {
+                    background-color: #fad906;
+                }
+
+                p {
+                    color: $gray_text;
+                    font-size: 15px;
+                }
+
+                .options {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    display: flex;
+
+                > div {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    height: 35px;
+                    line-height: 35px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                > div:first-child {
+                    padding-left: 0;
+                    margin-left: 0;
+                }
+
+                .date {
+                    color: $gray_text;
+                    font-size: 15px;
+                }
+
+                .share {
+                    background-color: #fad906;
+                }
+
+                .type {
+                    background-color: #262626;
+                    color: white;
+                }
+            }
+        }
+        }
+    }
+    #tile-1 {
+
+        .nav-tabs {
+            position: relative;
+            border-bottom: $gray;
+            background-color: #fff;
+            /*   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .nav-tabs {
+            li {
+                margin: 0px !important;
+            }
+
+            li a {
+                position: relative;
+                margin-right: 0px !important;
+                padding: 20px 40px 20px 0;
+                font-size: 16px;
+                border: none !important;
+                color: #333;
+            }
+
+            .active {
+                background-color: transparent !important;
+                border: none !important;
+                color: green !important;
+            }
+        }
+
+        .nav-tabs a:hover {
+            background-color: #fff !important;
+            border: none;
+        }
+
+        .slider {
+            display: inline-block;
+            width: 30px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: yellow;
+            position: absolute;
+            z-index: 1200;
+            bottom: 0;
+            transition: all 0.4s linear;
+        }
+
+        .tab-content {
+            h5 {
+                font-size: 17px;
+                color: $gray_text;
+            }
+
+            .date, .des{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                color: $gray_text;
+                font-size: 15px;
+                
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+
+            .tab-pane {
+                .item-row {
+                    >.row {
+                        >div:first-child {
+                            padding-left: 0;
+                        }
+                    }
+
+                    margin-bottom: 20px;
+
+                    >.row {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1281px) {
+  
+    .pages-news-media #tile-1 .tab-content .tab-pane .item-row > .row {
+        >div:first-child {
+            padding-right: 30px !important;
+        }
+        >div:last-child {
+            padding-left: 30px !important;
+        }
+    }
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+  
+}
