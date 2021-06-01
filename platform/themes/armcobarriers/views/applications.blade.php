@@ -160,7 +160,7 @@
                             <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
                             <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product. </p>
                         </div>
-                    </div>
+                    </div   >
                 </div>
             </div>
             <div class="wrap2">
@@ -190,5 +190,3 @@
         </div>
     </div>
 </section>
-
-
