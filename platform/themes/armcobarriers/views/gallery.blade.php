@@ -38,12 +38,14 @@
                           </div>
                          
                         </div>
-                        <div class="pagination-wrapper">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
-                            <span class="text">Product</span>
-                            <div class="slider-pagination-custom"></div>
+                        <div class="pagination-wrapper">  
+                          
+                            <div class="slider-pagination-custom">
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                                    <div class="swiper-pagination">
+                                    </div>
+                            </div>
                         </div>
                         
                         
@@ -61,11 +63,17 @@
                           </div>
                         </div>
                         <div class="pagination-wrapper">
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                            <div class="swiper-pagination"></div>
+                            <div class="slider-custom-right">
+                                <div class="swiper-button-next"><i class="fas fa-chevron-right"></i></div>
+                                <div class="swiper-button-prev"><i class="fas fa-chevron-left"></i></div>
+                            </div>
+                            <div class="custom-right-bottom">
+                                <span>Applications</span>
+                                <div class="swiper-pagination"></div>
+                                
+                            </div>
                            
-                            <span class="text-2">Applications</span>
+                           
                         </div>
                         
                     </div> 
@@ -81,80 +89,84 @@
   </section>
 
   <section>
-      <div class="news-event-gallery-wrapper">
+      <div class="gallery-wrapper">
           <div class="container-customize">
-            <div class="news-event--title">
-                <h2 data-aos="fade-left" data-aos-delay="200">News <br>& Events</h2>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="news-post" data-aos="fade-up" data-aos-delay="200">
-                        <a href="">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-1.png') }}" alt="">
-                        <div class="news-post--titlte">
-                            <h4>Om Wire and Wire Products Industries is a reputed
-                                Highway Crash Barrier, Crash Barrier</h4>
+            <h2> New <br> & Events </h2>
+            <div class="box-media pt-5 pb-5">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                            <div class="item">
+                                <a href="">
+                                    <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
+                                    <h3>Om Wire and Wire Products Industries is a reputed
+                                        Highway Crash Barrier, Crash Barrier
+                                    </h3>
+                                    <p>
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+                                    </p>
+                                </a>
+    
+                                <div class="options">
+                                    <div class="date"> 21 Apr 2020 </div>
+                                    <a class="share"> Share </a>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <div class="news-post--content">
-                            <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
+    
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                            <div class="item">
+                                <a href="">
+                                    <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
+                                    <h3>Om Wire and Wire Products Industries is a reputed
+                                        Highway Crash Barrier, Crash Barrier
+                                    </h3>
+                                    <p>
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+                                    </p>
+                                </a>
+    
+                                <div class="options">
+                                    <div class="date"> 21 Apr 2020 </div>
+                                    <a class="share"> Share </a>
+                                </div>
+                            </div>
                         </div>
-                        </a>
-                        <div class="news-post-time">
-                            <span>21 Apr 2020</span>
-                            <div class="btn-share">
-                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
+    
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                            <div class="item">
+                                <a href="">
+                                    <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
+                                    <h3>Om Wire and Wire Products Industries is a reputed
+                                        Highway Crash Barrier, Crash Barrier
+                                    </h3>
+                                    <p>
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+                                    </p>
+                                </a>
+    
+                                <div class="options">
+                                    <div class="date"> 21 Apr 2020 </div>
+                                    <a class="share"> Share </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="news-post" data-aos="fade-up" data-aos-delay="600">
-                       <a href="">
-                            <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-2.png') }}" alt="">
-                            <div class="news-post--titlte">
-                                <h4 class="color-mid">Om Wire and Wire Products Industries is a reputed
-                                    Highway Crash Barrier, Crash Barrier</h4>
-                            </div>
-                            <div class="news-post--content">
-                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
-                            </div>
-                       </a>
-                        <div class="news-post-time">
-                            <span>21 Apr 2020</span>
-                            <div class="btn-share">
-                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="news-post" data-aos="fade-up" data-aos-delay="1000">
-                        <a href="">
-                                <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-3.png') }}" alt="">
-                            <div class="news-post--titlte">
-                                <h4>Om Wire and Wire Products Industries is a reputed
-                                    Highway Crash Barrier, Crash Barrier</h4>
-                            </div>
-                            <div class="news-post--content">
-                                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...</p>
-                            </div>
-                        </a>
-                        <div class="news-post-time">
-                            <span>21 Apr 2020</span>
-                            <div class="btn-share">
-                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="read-more">
+                    <a href="">
+                        <h3>Read more</h3>
+                    </a>
                 </div>
-            </div>
-
-            <div class="read-more">
-                <a href="{{url('/news-all')}}"><h3 data-aos="fade-left" data-aos-delay="200">Read More</h3></a>
             </div>
           </div>
       </div>
+      
   </section>
+
+
   <section>
     <div class="container-customize">
         <div class="wrap-sign">

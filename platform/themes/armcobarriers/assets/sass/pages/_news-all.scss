@@ -1,101 +1,173 @@
-.new-all-wrapper {
-    padding-bottom: 40px;
-    .news-post {
-        a {
-            color: $gray-text;
-        }
-    }
-    .news-event--title {
-        padding: 0px 0 70px 0;
-        h2 {
-            font-size: 60px;
-            font-family: $FolioStd-Medium;
-        }
-    }
-    .news-post img {
-        max-width: 100%;
-    }
-    .news-post--titlte {
-        &:hover {
-            background-color: #FAD906;
-        }
-        font-size: 20px;
-        font-family: $FolioStd-Medium;
-        @media (max-width: 1280px) {
-            font-size: 17px;
-        }
-        h4 {
-            padding: 25px 15px 25px 15px;
-            @media (max-width: 1680px) {
-                padding: 15px;
-            }
-            &:hover {
-                background-color: $priamry_color;
-            }
-        }
-    }
-    .news-post {
-        .news-post--content {
-            padding-bottom: 40px;
-        }
-        .news-post-time {
-            display: flex;
-            align-items: center;
-            .btn-share {
-                margin-left: 30px;
-                a {
-                    padding: 10px 15px;
-                    background-color: $priamry_color;
-                    color: #000;
-                    i {
-                        padding: 0 5px;
+.news-all-wrapper {
+    .box-media {
+        .content {
+            .item {
+                img {
+                    max-width: 100%;
+                }
+                h3 {
+                    font-size: 20px;
+                    color: $gray_text;
+                    padding: 25px 15px;
+                }
+                h3:hover {
+                    background-color: #fad906;
+                }
+                p {
+                    color: $gray_text;
+                    font-size: 15px;
+                }
+                .options {
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    display: flex;
+                    >div,
+                    >a {
+                        display: inline-block;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        height: 35px;
+                        line-height: 35px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                    >div:first-child {
+                        padding-left: 0;
+                        margin-left: 0;
+                    }
+                    .date {
+                        color: $gray_text;
+                        font-size: 15px;
+                    }
+                    .share {
+                        background-color: #fad906;
+                        color: $gray_text;
+                    }
+                    .share::after {
+                        font-family: "Font Awesome 5 Pro";
+                        content: "\f1e0";
+                    }
+                    .type {
+                        background-color: #262626;
+                        color: $priamry_color;
                     }
                 }
             }
-            .btn-event {
-                margin-left: 30px;
-                a {
-                    padding: 10px 15px;
-                    background-color: $gray-text;
-                    color: $priamry_color;
-                }
-            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    .news-all-wrapper .box-media .content .item .options {
+        display: inherit;
+        padding-top: 10px;
+        >div:first-child {
+            display: block;
+            text-align: right;
+        }
+        .share {
+            margin-left: 0;
+        }
+        .type {
+            margin: 0;
         }
     }
 }
 
 .list-news-wrapper {
-    padding-top: 30px;
-    border-top: 1px solid #EDEDED;
-    .right-content {
-        margin-left: 20px;
-        .list-new__title {
-            margin-bottom: 30px;
-            font-size: 17px;
-            font-family: $FolioStd-Medium;
-        }
-        .list-new__content {
-            margin-top: 20px;
-        }
-        .btn-event {
-            padding: 10px 15px;
-            background-color: #262626;
-            color: $priamry_color;
-            margin-left: 20px;
-        }
+    h5 {
+        font-size: 17px;
+        color: $gray_text;
+        @include str_split();
+        -webkit-line-clamp: 1;
     }
-    .img-left-3 {
-        position: relative;
-        i {
-            position: absolute;
-            top: 33%;
-            left: 42%;
-            color: #fff;
-            font-size: 50px;
+    .date,
+    .des {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: $gray_text;
+        font-size: 15px;
+        @include str_split;
+        -webkit-line-clamp: 2;
+    }
+    a {
+        padding: 5px 15px;
+        background-color: $gray-text;
+        color: $priamry_color;
+        margin-left: 20px;
+    }
+    .item-row {
+        >.row {
+            >div:first-child {
+                padding-left: 0;
+            }
+        }
+        margin-bottom: 20px;
+        >.row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .right-3 {
+            position: relative;
+            i {
+                position: absolute;
+                top: 33%;
+                left: 42%;
+                color: #fff;
+                font-size: 50px;
+            }
         }
     }
 }
 
-.mb-40 {
-    margin-bottom: 40px;
+@media (min-width: 1692px) {
+    .col-lg-28 {
+        width: 28%;
+        flex: 28%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .col-lg-16 {
+        width: 16%;
+        flex: 16%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1281px) {
+    .list-news-wrapper .item-row>.row {
+        >div:first-child {
+            padding-right: 30px !important;
+        }
+        >div:last-child {
+            padding-left: 30px !important;
+        }
+    }
+}
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (max-width: 1024px) {
+    /* CSS */
+    .p0-md {
+        padding-left: 0;
+    }
+    .list-news-wrapper .item-row {
+        margin-bottom: 0;
+    }
+    .mb-md-line {
+        margin-bottom: 20px;
+    }
+}
+
+.pagination_news-all {
+    .pagination_style1 {
+        margin: 0;
+        padding: 0 0 80px 0;
+    }
 }
