@@ -1,268 +1,253 @@
-.wrap-top{
-    .top2{
+.wrap-top {
+    .top2 {
         padding-bottom: 60px;
-        h2{
+        h2 {
             font-size: 40px;
             font-family: $FolioStd-Bold;
             color: #000000;
         }
-        p{
+        p {
             font-size: 20px;
             font-weight: bold;
             font-family: $Arial;
             color: #000000;
         }
     }
-    .menu{
-        .nav-tabs{
+    .menu {
+        .nav-tabs {
             border-bottom: 0px solid #dee2e6;
-            .nav-link{
+            .nav-link {
                 padding: 0px 50px 0px 0px;
                 font-size: 17px;
-                color:#000000 ;
+                color: #000000;
                 font-family: $Arial;
             }
-            .nav-link.active{
+            .nav-link.active {
                 font-weight: bold;
             }
         }
     }
 }
-.wrap-car{
-    padding: 3% 30% 0% 3%;
-    background-image:url('../../../public/images/service/carpark.jpg');
-    .wrap-system{
-        padding-bottom: 10%;
-        .system1{
-            padding-right: 4%;
-        }
-        .system2{
-            padding-right: 4%;
-        }
-        .system3{
-            padding-right: 4%;
-        }
 
-        h3{
-            color:$priamry_color;
-            font-size: 20px;
-            font-family: $Arial;
-            font-weight: bold;
+.wrap-car {
+    padding: 3% 30% 0% 3%;
+    background-image: url('../../../public/images/service/carpark.jpg');
+    .wrap-system {
+        padding-bottom: 10%;
+        .system1 {
+            padding-right: 4%;
         }
-        p{
-            color:#FFFFFF;
-            font-size: 17px;
-            font-family: $Arial;
+        .system2 {
+            padding-right: 4%;
         }
-    }
-   
-    .car-park{
-        h2{
+        .system3 {
+            padding-right: 4%;
+        }
+        h3 {
             color: $priamry_color;
             font-size: 20px;
             font-family: $Arial;
             font-weight: bold;
-            padding:2% 0% 3%;
         }
-        p{
+        p {
+            color: #FFFFFF;
             font-size: 17px;
             font-family: $Arial;
         }
-        p:nth-child(2){
-            padding-bottom: 4%;
-            color:#FFFFFF;
+    }
+    .car-park {
+        h2 {
+            color: $priamry_color;
+            font-size: 20px;
+            font-family: $Arial;
+            font-weight: bold;
+            padding: 2% 0% 3%;
         }
-        p:nth-child(3){
+        p {
+            font-size: 17px;
+            font-family: $Arial;
+        }
+        p:nth-child(2) {
+            padding-bottom: 4%;
+            color: #FFFFFF;
+        }
+        p:nth-child(3) {
             padding-bottom: 6%;
-            color:#FFFFFF;
-            }
+            color: #FFFFFF;
         }
     }
-.wrap-our{
-    .service{
+}
+
+.wrap-our {
+    .service {
         padding-bottom: 60px;
         font-size: 40px;
         font-family: $FolioStd-Bold;
-        color:#000000;
+        color: #000000;
     }
-    .asset{
+    .asset {
         margin-bottom: 30px;
-        img{
+        img {
             background-color: #000000;
             position: relative;
             max-width: 100%;
-           
         }
-       p{
-           position: absolute;
-           bottom: 5%;
-           width: 100%;
-           text-align: center;
-           color: white;
-           font-size: 20px;
-           font-family: $FolioStd-Medium;
-           right: 0.2%;
-       }
-       .icon{
-                
-        border-radius: 50%;
-        background-color:rgba(0, 0, 0, 0.5) ;  ;
-        width: 21%;
-        height: 16%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position:absolute;
-        top:45%;
-        left:43%;
-        z-index: 8;
-        color: $priamry_color;
-        font-size: 25px;
-        visibility: hidden;
+        p {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-family: $FolioStd-Medium;
+            right: 0.2%;
+        }
+        .icon {
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            ;
+            width: 21%;
+            height: 16%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 45%;
+            left: 43%;
+            z-index: 8;
+            color: $priamry_color;
+            font-size: 25px;
+            visibility: hidden;
+        }
     }
-
-    }
-   
-    .asset:hover .icon{
+    .asset:hover .icon {
         visibility: inherit;
         transition: 0.5s ease;
     }
-    .asset:hover p{
+    .asset:hover p {
         color: $priamry_color;
     }
-   
 }
-.wrap-roadside
-{   padding:6% 0;
-    background-image:url('../../../public/images/service/roadside.jpg');
-        .content{
-            width: 60%;
-            h3{
-                font-size: 20px;
-                font-family: $Arial;
-                font-weight: bold;
-                color: $priamry_color;
-                padding-bottom: 3%;
-            }
-            p{
-                font-size: 17px;
-                font-family: $Arial;
-                color:#FFFFFF;
-            }
-            p:nth-child(2)
-            {
-                padding-bottom: 3%;
-            }
 
-     }
+.wrap-roadside {
+    padding: 6% 0;
+    background-image: url('../../../public/images/service/roadside.jpg');
+    .content {
+        width: 60%;
+        h3 {
+            font-size: 20px;
+            font-family: $Arial;
+            font-weight: bold;
+            color: $priamry_color;
+            padding-bottom: 3%;
+        }
+        p {
+            font-size: 17px;
+            font-family: $Arial;
+            color: #FFFFFF;
+        }
+        p:nth-child(2) {
+            padding-bottom: 3%;
+        }
+    }
 }
-.wrap-product
-{   padding-bottom: 20px;
-    .view-product{
+
+.wrap-product {
+    padding-bottom: 20px;
+    .view-product {
         display: flex;
-        .icon{
+        .icon {
             padding-right: 30px;
         }
-        .view{
+        .view {
             padding-bottom: 5px;
             border-bottom: 2px solid #262626;
-            a{  
+            a {
                 color: #262626;
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
             }
         }
     }
-    .product-range
-    {
-        padding-bottom:  50px;
-        h2{
+    .product-range {
+        padding-bottom: 50px;
+        h2 {
             font-size: 60px;
             font-family: $FolioStd-Medium;
-            color:#000000;
+            color: #000000;
         }
-        p{
+        p {
             font-size: 20px;
             font-family: $FolioStd-Medium;
         }
     }
-    .wrap-descrip
-    {
+    .wrap-descrip {
         padding-bottom: 80px;
-        .post{
-            &:hover{
-                .post-title{
+        .post {
+            &:hover {
+                .post-title {
                     transition: 0.3s ease;
                     font-weight: bold;
                 }
             }
         }
-        h3{
-
+        h3 {
             font-size: 20px;
             font-family: $FolioStd-Medium;
-            color:#000000;
+            color: #000000;
             padding: 10px 0px;
         }
-        p{
+        p {
             font-size: 15px;
             font-family: $Arial;
-            margin:10% 8% 0% 0% ;
+            margin: 10% 8% 0% 0%;
         }
     }
 }
+
 // respon
-@media(max-width:575px)
-{
-    .wrap-our{
-        .asset{
-            p{
+@media(max-width:575px) {
+    .wrap-our {
+        .asset {
+            p {
                 font-size: 20px !important;
-                right:8.2%;
-            }
-       }
-   }
-}
-@media (max-width:1240px) 
-{
-.nav-tabs{
-    .nav-link{
-        font-size: 15px;
-        }
-    }
-.wrap-our{
-    .asset{
-        p{
-            font-size: 13px !important;
-        }
-    }
-}        
-}
-@media (max-width:1440px)
-{
-    .wrap-our{
-        .asset{
-            p{
-                font-size: 15px !important;
+                right: 8.2%;
             }
         }
-    }        
-            
- }
+    }
+}
 
-
-@media (max-width:1680px)
-{
-    .wrap-our{
-        .asset{
-            p{
+@media (max-width:1680px) {
+    .wrap-our {
+        .asset {
+            p {
                 font-size: 17px;
             }
         }
-    }        
-            
- }
+    }
+}
 
+@media (max-width:1440px) {
+    .wrap-our {
+        .asset {
+            p {
+                font-size: 15px !important;
+            }
+        }
+    }
+}
 
-
-
+@media (max-width:1240px) and (min-width:991px) {
+    .nav-tabs {
+        .nav-link {
+            font-size: 15px;
+        }
+    }
+    .wrap-our {
+        .asset {
+            p {
+                font-size: 12px !important;
+            }
+        }
+    }
+}
