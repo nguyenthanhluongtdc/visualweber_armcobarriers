@@ -312,11 +312,11 @@
                     font-size: 19px;
                 }
                 &:after {
-                    content: "";
-                    position: absolute;
-                    background-color: #fff;
-                    width: 2px;
-                    height: 20px;
+                    // content: "";
+                    // position: absolute;
+                    // background-color: #fff;
+                    // width: 2px;
+                    // height: 20px;
                     @media (max-width: 1280px) {
                         font-size: 13px;
                     }
@@ -672,6 +672,11 @@
                 width: 19%;
             }
             .text-slider {
+                @media(max-width: 1920px) {
+                    p:nth-child(1):after {
+                        display: none;
+                    }
+                }
                 p:nth-child(1):after {
                     display: none;
                 }
