@@ -37,7 +37,7 @@
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <div class="container-fluid-customize">
-                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/hero.png') }})">
+                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/hero.jpg') }})">
                         <div class="container-customize">
                             <div class="content-about">
                                     <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, est. Non, possimus autem ut 
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="product2">
-                        <img src="{{ Theme::asset()->url('images/about/product2.png') }}" alt="">
+                        <img src="{{ Theme::asset()->url('images/about/product2.jpg') }}" alt="">
                         <h3>In-Ground posts</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
                         in a piece of classical Latin literature from 45 BC, making it over 2000 years
