@@ -33,7 +33,7 @@
                 <p>Our's Services</p>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 asset">
+                <div class="col-lg-3 col-md-6 col-sm-6 asset">
                     <a href="/services-detail">
                         <div class="icon">
                             <i class="fal fa-long-arrow-right"></i>
@@ -42,7 +42,7 @@
                     <img src="{{ Theme::asset()->url('images/service/pic1.jpg') }}" alt="">
                             <p>Asset Protection for Factories</p>
                 </div>
-                <div class="col-md-3 col-sm-6 asset">
+                <div class="col-lg-3 col-md-6 col-sm-6 asset">
                     <a href="/services-detail">
                         <div class="icon">
                             <i class="fal fa-long-arrow-right"></i>
@@ -51,7 +51,7 @@
                     <img src="{{ Theme::asset()->url('images/service/pic2.jpg') }}" alt="">
                     <p>Gas and Fuel Tank Solutions</p>
                 </div>
-                <div class="col-md-3 col-sm-6 asset">
+                <div class="col-lg-3 col-md-6 col-sm-6 asset">
                     <a href="/services-detail">
                         <div class="icon">
                             <i class="fal fa-long-arrow-right"></i>
@@ -60,7 +60,7 @@
                     <img src="{{ Theme::asset()->url('images/service/pic3.jpg') }}" alt="">
                             <p>Impact protection for Warehouses</p>
                 </div>
-                <div class="col-md-3 col-sm-6 asset">
+                <div class="col-lg-3 col-md-6 col-sm-6 asset">
                     <a href="/services-detail">
                         <div class="icon">
                             <i class="fal fa-long-arrow-right"></i>
@@ -98,7 +98,7 @@
             </div>
             <div class="wrap-descrip">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="post">
                             <div class="post-title">
                                 <h3>W Beam &, Thrie Beam</h3>
@@ -106,7 +106,7 @@
                             <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 ">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Posts & Bollards</h3>
@@ -116,7 +116,7 @@
                                 Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Wheelstops & Floorgards</h3>
@@ -126,7 +126,7 @@
                             works optimally in conjunction with Armco® Railgard™.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Handrail, Gates & Pipegards</h3>
@@ -151,16 +151,27 @@
 <section style="padding-top:60px">
     <div class="container-customize">
         <div class="wrap-sign">
-                <div class="info-me">
-                    <div class="sign-up">
+                <div class="info-me flex-wrap py-5">
+                    <div class="sign-up col-lg-3 col-12">
                         <p>Sign up to receive the</p>
                         <h3>latest insights</h3>
                     </div>
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Full Name">
-                    <button type ="submit">Sign Up</button>
-                </div>
-        </div>
+                <form action="#" method="POST" class="col-lg-9 col-12 px-0">
+                    <div class="form-flex-lg">
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Full Name">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Email">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Company">
+                        </p>
+                        <p class="col-lg-16 col-lg-6 col-12 my-2"> 
+                            <button class="button__field" type ="submit">Sign Up</button>
+                        </p>
+                    </div>
+                </form> 
+         </div>
     </div>
 </section>

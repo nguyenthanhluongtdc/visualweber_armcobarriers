@@ -211,4 +211,58 @@
         }
     }
 }
+// respon
+@media(max-width:575px)
+{
+    .wrap-our{
+        .asset{
+            p{
+                font-size: 20px !important;
+                right:8.2%;
+            }
+       }
+   }
+}
+@media (max-width:1240px) 
+{
+.nav-tabs{
+    .nav-link{
+        font-size: 15px;
+        }
+    }
+.wrap-our{
+    .asset{
+        p{
+            font-size: 13px !important;
+        }
+    }
+}        
+}
+@media (max-width:1440px)
+{
+    .wrap-our{
+        .asset{
+            p{
+                font-size: 15px !important;
+            }
+        }
+    }        
+            
+ }
+
+
+@media (max-width:1680px)
+{
+    .wrap-our{
+        .asset{
+            p{
+                font-size: 17px;
+            }
+        }
+    }        
+            
+ }
+
+
+
 
