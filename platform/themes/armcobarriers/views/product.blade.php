@@ -1,7 +1,6 @@
 <section>
   @includeIf("theme.armcobarriers::views.breadcrumb")
   <div class="container-customize">
-   
     <div class="introduction-product">
       <div class="introduction-product-title">
         <h2>Product Range</h2>
@@ -25,8 +24,8 @@
   <div class="product-wrapper">
       <div class="container-customize">
         <div class="row">
-          <div class="col-md-3 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0">     
-            <div id="sidebar" class="">
+          <div class="col-lg-3 col-12 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0 mb-3 mb-lg-0">     
+            <div id="sidebar" class="mw-100">
               <ul class="list-unstyled">
                   <li class="active">
                       
@@ -71,33 +70,36 @@
                 </ul>            
             </div>
           </div>
-          <div class="col-md-9">
-            
-            <div class="row">
-                <div class="col-md-12">
-                  <div class="product-filter">
-                    <div class="product_filter--search">
-                        <input type="text" class="header__search-input form-control form-control-sm submit-form-on-change first_null not_chosen"  placeholder="Search Product"/>
-                        <button class="btn btn-secondary" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
+          <div class="col-lg-9 col-12">
+              <div class="row">
+                  <div class="col-md-12">
+                    <div class="product-filter justify-content-lg-end">
+                      <div class="product_filter--search">
+                        <form action="#" method="POST" class="form__search">
+                          <input type="text" class="header__search-input form-control form-control-sm submit-form-on-change first_null not_chosen"  placeholder="Search Product"/>
+                          <button class="btn btn-secondary" type="submit">
+                              <i class="fas fa-search"></i>
+                          </button>
+                        </form>
                       </div>
                       <div class="custom_select">
-                        <select class="form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
+                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
                             <option value="">Showing 1 - 10 of 10 products</option>
                         </select>
+                        <span class="down"></span>
                       </div>
                       <div class="custom_sort">
-                        <select class="form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
+                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
                             <option value="">Sort by Featured</option>
                         </select>
+                        <span class="down"></span>
                       </div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -114,7 +116,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -131,7 +133,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -148,7 +150,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -165,9 +167,7 @@
                       
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -184,7 +184,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -201,7 +201,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -218,7 +218,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -235,9 +235,7 @@
                       
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -254,7 +252,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -271,7 +269,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -288,7 +286,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -305,9 +303,7 @@
                       
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -324,7 +320,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -341,7 +337,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
@@ -358,7 +354,7 @@
                       
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-4 col-6">
                     <div class="product-item-wrapper">
                       <a href="{{url('/product-detail')}}">
                         <div class="product-item">
