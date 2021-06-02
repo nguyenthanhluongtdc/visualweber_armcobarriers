@@ -10,75 +10,29 @@
                 <div class="swiper-container gallery-main">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="gallery-title">Vertical<br>Swiper</div>
-                            <img src="https://picsum.photos/seed/slide1/600/300" alt="Slide 01">
+                            <img src="{{Theme::asset()->url('images/product/product_detail.png')}}" alt="Slide 01">
                         </div>
                         <div class="swiper-slide">
-                            <div class="gallery-title">Slide 02</div>
-                            <img src="https://picsum.photos/seed/slide2/600/300" alt="Slide 02">
+                            <img src="{{Theme::asset()->url('images/product/product_detail.png')}}" alt="Slide 01">
                         </div>
                         <div class="swiper-slide">
-                            <div class="gallery-title">Slide 03</div>
-                            <img src="https://picsum.photos/seed/slide3/600/300" alt="Slide 03">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 04</div>
-                            <img src="https://picsum.photos/seed/slide4/600/300" alt="Slide 04">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 04</div>
-                            <img src="https://picsum.photos/seed/slide5/600/300" alt="Slide 05">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 06</div>
-                            <img src="https://picsum.photos/seed/slide6/600/300" alt="Slide 06">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 07</div>
-                            <img src="https://picsum.photos/seed/slide7/600/300" alt="Slide 07">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 08</div>
-                            <img src="https://picsum.photos/seed/slide8/600/300" alt="Slide 08">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 09</div>
-                            <img src="https://picsum.photos/seed/slide9/600/300" alt="Slide 09">
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="gallery-title">Slide 10</div>
-                            <img src="https://picsum.photos/seed/slide10/600/300" alt="Slide 10">
+                            <img src="{{Theme::asset()->url('images/product/product_detail.png')}}" alt="Slide 01">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-container gallery-thumbs">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide1/115/100" alt="Slide 01"></div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide2/115/100" alt="Slide 02"></div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide3/115/100" alt="Slide 03"></div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide4/115/100" alt="Slide 04">
+                            <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="Slide 01">
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide5/115/100" alt="Slide 05">
+                            <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="Slide 01">
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide6/115/100" alt="Slide 06">
+                            <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="Slide 01">
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide7/115/100" alt="Slide 07">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide8/115/100" alt="Slide 08">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide9/115/100" alt="Slide 09">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://picsum.photos/seed/slide10/115/100" alt="Slide 10">
+                            <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="Slide 01">
                         </div>
                     </div>
                     <div class="swiper-button-prev"></div>
