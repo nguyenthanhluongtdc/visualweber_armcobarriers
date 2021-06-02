@@ -1,5 +1,6 @@
 #more_info {
-    // margin-top: 30px;
+    margin-top: 50px;
+
     #tab {
         .nav-tabs {
             .nav-item {
@@ -32,7 +33,6 @@
         }
         .nav {
             flex-wrap: unset;
-            margin-top: 100px;
         }
         .tab-content {
             margin-top: 3%;
@@ -44,6 +44,7 @@
             font-weight: bold;
             display: block;
             border-bottom: 1px solid #efefef;
+            margin-bottom: 10px;
             &:after {
                 content: "";
                 display: block;
@@ -56,6 +57,9 @@
             margin-top: 3%;
             .product_item {
                 color: black;
+                margin-bottom: 10px;
+                display: block;
+
                 .product_name {
                     padding: 3% 0%;
                 }

@@ -1,39 +1,93 @@
+<style>
+
+</style>
+
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="product_info" class="col-sm-12 col-md-12">
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 gallery">
-            <div class="row">
-                <div class="col-2 col-md-2 px-0 slide">
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-container mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/product/product_extra.png')}}" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/product/product_extra2.png')}}" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/product/product_extra3.png')}}" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/product/product_extra4.png')}}" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="{{Theme::asset()->url('images/product/product_extra5.png')}}" alt="">
-                            </div>
-                           
+        <div class="col-12 col-lg-6 gallery">
+            <div class="gallery-container">
+                <div class="swiper-container gallery-main">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Vertical<br>Swiper</div>
+                            <img src="https://picsum.photos/seed/slide1/600/300" alt="Slide 01">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 02</div>
+                            <img src="https://picsum.photos/seed/slide2/600/300" alt="Slide 02">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 03</div>
+                            <img src="https://picsum.photos/seed/slide3/600/300" alt="Slide 03">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 04</div>
+                            <img src="https://picsum.photos/seed/slide4/600/300" alt="Slide 04">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 04</div>
+                            <img src="https://picsum.photos/seed/slide5/600/300" alt="Slide 05">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 06</div>
+                            <img src="https://picsum.photos/seed/slide6/600/300" alt="Slide 06">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 07</div>
+                            <img src="https://picsum.photos/seed/slide7/600/300" alt="Slide 07">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 08</div>
+                            <img src="https://picsum.photos/seed/slide8/600/300" alt="Slide 08">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 09</div>
+                            <img src="https://picsum.photos/seed/slide9/600/300" alt="Slide 09">
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="gallery-title">Slide 10</div>
+                            <img src="https://picsum.photos/seed/slide10/600/300" alt="Slide 10">
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="col-10 col-md-10 main_img">
-                    <img class="img-fluid" src="{{ Theme::asset()->url('images/product/product_detail.png') }}" alt="">
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide1/115/100" alt="Slide 01"></div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide2/115/100" alt="Slide 02"></div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide3/115/100" alt="Slide 03"></div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide4/115/100" alt="Slide 04">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide5/115/100" alt="Slide 05">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide6/115/100" alt="Slide 06">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide7/115/100" alt="Slide 07">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide8/115/100" alt="Slide 08">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide9/115/100" alt="Slide 09">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://picsum.photos/seed/slide10/115/100" alt="Slide 10">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-sm-5 col-md-5 info">
+        <div class="col-12 col-lg-6 info">
             <p class="product_name">Knuffi Magnetic Flexible Edge Protector </p>
             <p class="product_introduce">
                 SafetyRail 2000 is a non-penetrating, passive fall
@@ -90,27 +144,40 @@
             document.querySelector('input[type="number"]').stepUp()
 
         })
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            slidesPerGroup: 1,
-                autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            // loop: true,
-            // loopFillGroupWithBlank: true,
-            noSwiping: true,
-            direction: "vertical",
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
+        var galleryThumbs = new Swiper(".gallery-thumbs", {
+                centeredSlides: true,
+                centeredSlidesBounds: true,
+                slidesPerView: 3,
+                watchOverflow: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                direction: 'vertical'
+            });
+
+            var galleryMain = new Swiper(".gallery-main", {
+                watchOverflow: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                preventInteractionOnTransition: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                    fadeEffect: {
+                    crossFade: true
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
+
+            galleryMain.on('slideChangeTransitionStart', function() {
+            galleryThumbs.slideTo(galleryMain.activeIndex);
+            });
+
+            galleryThumbs.on('transitionStart', function(){
+            galleryMain.slideTo(galleryThumbs.activeIndex);
         });
-        swiper.disableTouchControl()
     })
 </script>

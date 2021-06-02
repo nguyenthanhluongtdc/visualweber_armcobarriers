@@ -1,7 +1,7 @@
 <div id="more_info" class=" col-sm-12 col-md-12">
     <div class="row">
-        <div class="col-12 col-sm-10 col-md-10" id="tab">
-            <div class="row">
+        <div class="col-12 col-lg-9 mb-5" id="tab">
+            <div class="row ml-0">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
@@ -16,7 +16,11 @@
             </div>
             <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, illo!
+                Floor angle guide rail helps keep traffic away from racking and shelving, walls, storage areas, offices, and other work areas
+
+                The sturdy 5" H x 3" W x 1/4" D angle iron comes with holes to anchor to the floor
+
+                Protectors can be customized to any oth
                 </div>
                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quos nobis maxime voluptas pariatur sit. Saepe voluptatum veniam maiores nam, officiis voluptate architecto porro voluptatem earum accusantium voluptatibus illo eligendi nisi hic tempore magni sunt culpa, nulla ducimus corrupti exercitationem. Hic eos dolore architecto explicabo rerum magni aperiam harum quidem! Qui temporibus excepturi rerum quam animi rem sunt necessitatibus, quos sint, earum, vitae ipsam nam! Voluptas dolores soluta modi esse quas enim adipisci, ex rerum? Ratione inventore, dolores temporibus iure ducimus nulla expedita pariatur, a illum commodi animi accusantium? Nesciunt quia rem reiciendis ex possimus, unde provident totam a alias.
@@ -26,19 +30,19 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-2 col-md-2">
+        <div class="col-12 col-lg-3 mb-5">
             <div id="related_products">
                 <p class="title">Related products</p>
-                <div class="list_products">
-                    <a href ="" class="product_item">
+                <div class="list_products row">
+                    <a href ="" class="product_item col-6 col-lg-12">
                         <img class="img-fluid" src="{{Theme::asset()->url('images/product/product-1.png')}}" alt="">
                         <p class="product_name">W Beam Guardrail</p>
                     </a>
-                    <a href ="" class="product_item">
+                    <a href ="" class="product_item col-6 col-lg-12">
                         <img class="img-fluid" src="{{Theme::asset()->url('images/product/product-2.png')}}" alt="">
                         <p class="product_name">W Beam Guardrail</p>
                     </a>
-                    <a href ="" class="product_item">
+                    <a href ="" class="product_item col-6 col-lg-12">
                         <img class="img-fluid" src="{{Theme::asset()->url('images/product/product-3.png')}}" alt="">
                         <p class="product_name">W Beam Guardrail</p>
                     </a>

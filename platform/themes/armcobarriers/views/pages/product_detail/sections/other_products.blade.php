@@ -1,6 +1,6 @@
 <div id="other_products" class="col-12 col-sm-12 col-md-12">
     <p class="title">Other products</p>
-    <div class="list_products">
+    <div class="list_products row">
         <a href="" class="product_item">
             <div class="box-img">
                 <img class="img-fluid" src="{{Theme::asset()->url('images/product/product-8.png')}}" alt="">
