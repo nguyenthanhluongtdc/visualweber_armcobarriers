@@ -124,10 +124,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>German enterprises in Vietnam remain positive despite pandemicArmco Steel price rise 'unusual' amid plentiful supply: construction ministry   </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            Nano Technologies, a startup that has developed an app which allows workers to access accrued wages without waiting for payday, has raised $3 million in pre-seed and seed funding.  
                                         </p>
                                     </div>
                                 </div>
@@ -143,10 +143,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            Steel prices have surged by 40-50 percent this year though there is no shortage, the Ministry of Construction said, calling it "unusual."  
                                         </p>
                                     </div>
                                 </div>
@@ -158,10 +158,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Ford to cease production of Tourneo minivan in Vietnam </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            U.S. automaker Ford will stop assembling its Tourneo minivan in Vietnam from June as demand for it plunges amid the Covid-19 pandemic.  
                                         </p>
                                     </div>
                                 </div>
@@ -177,10 +177,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-3.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Thai conglomerate reports surge in Vietnam revenues</h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            Thai-owned Siam Cement Group reported a 34 percent year-on-year jump in first quarter revenues to VND8.2 trillion ($354 million), mostly driven by its packaging and chemicals businesses.  
                                         </p>
                                     </div>
                                 </div>
@@ -192,10 +192,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-3.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Seafood exporters call for delaying HCMC port fee collection until year end </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            The seafood industry business group wants collection of port fees in HCMC delayed until year end since exporters still feel the pinch from the Covid-19 pandemic.  
                                         </p>
                                     </div>
                                 </div>
@@ -226,10 +226,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-4.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry   </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            Nano Technologies, a startup that has developed an app which allows workers to access accrued wages without waiting for payday, has raised $3 million in pre-seed and seed funding.  
                                         </p>
                                     </div>
                                 </div>
@@ -245,10 +245,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-5.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            Steel prices have surged by 40-50 percent this year though there is no shortage, the Ministry of Construction said, calling it "unusual."  
                                         </p>
                                     </div>
                                 </div>
@@ -260,10 +260,10 @@
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-5.jpg') }}" alt="">
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5>Ford to cease production of Tourneo minivan in Vietnam </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            U.S. automaker Ford will stop assembling its Tourneo minivan in Vietnam from June as demand for it plunges amid the Covid-19 pandemic.  
                                         </p>
                                     </div>
                                 </div>
