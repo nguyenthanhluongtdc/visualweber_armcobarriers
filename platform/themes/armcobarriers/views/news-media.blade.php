@@ -105,10 +105,10 @@
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -120,10 +120,10 @@
 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -139,10 +139,10 @@
                         <div class="row">
                             <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -154,10 +154,10 @@
 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -173,10 +173,10 @@
                         <div class="row">
                             <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-3.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -188,10 +188,10 @@
 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-3.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -207,10 +207,10 @@
                         <div class="row">
                             <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-4.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -222,10 +222,10 @@
 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-4.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -241,10 +241,10 @@
                         <div class="row">
                             <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-5.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -256,10 +256,10 @@
 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 pr-0 mb-3 mb-sm-0">
+                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
                                         <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-5.jpg') }}" alt="">
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6">
+                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                         <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
@@ -353,15 +353,27 @@
         </div>
 
         <div class="wrap-sign">
-            <div class="info-me">
-                <div class="sign-up">
+            <div class="info-me flex-wrap py-5">
+                <div class="sign-up col-lg-3 col-12">
                     <p>Sign up to receive the</p>
                     <h3>latest insights</h3>
                 </div>
-                <input type="text" placeholder="Full Name">
-                <input type="text" placeholder="Your Email">
-                <input type="text" placeholder="Your Company">
-                <button type ="submit">Sign Up</button>
+                <form action="#" method="POST" class="col-lg-9 col-12 px-0">
+                    <div class="form-flex-lg">
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Full Name">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Email">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Company">
+                        </p>
+                        <p class="col-lg-16 col-lg-6 col-12 my-2"> 
+                            <button class="button__field" type ="submit">Sign Up</button>
+                        </p>
+                    </div>
+                </form> 
             </div>
         </div>
     </div>

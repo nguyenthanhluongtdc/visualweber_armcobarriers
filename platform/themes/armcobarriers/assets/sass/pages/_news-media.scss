@@ -21,6 +21,7 @@ $gray_text: #262626;
 
         .content {
             .item {
+
                 img {
                     max-width: 100%;
                 }
@@ -166,6 +167,36 @@ $gray_text: #262626;
     }
 }
 
+.wrap-sign {
+    .form-flex-lg {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .input__field, .button__field {
+        width: 100% !important;
+        padding: 15px 25px !important;
+        margin: 0px !important;
+        font-size: 15px !important;
+    }
+}
+
+
+@media (min-width: 1692px){
+    .col-lg-28 {
+        width: 28%;
+        flex: 28%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .col-lg-16 {
+        width: 16%;
+        flex: 16%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
 
 @media (min-width: 1281px) {
   
@@ -201,6 +232,7 @@ $gray_text: #262626;
     }
     
 }
+
 
 @media (min-width: 768px) and (max-width: 1280px) {
   
