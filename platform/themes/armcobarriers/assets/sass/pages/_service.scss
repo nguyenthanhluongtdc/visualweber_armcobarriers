@@ -15,6 +15,11 @@
     }
     .menu {
         .nav-tabs {
+            .nav-item.show{
+                .nav-link{
+                    background: none;
+                }
+            } 
             border-bottom: 0px solid #dee2e6;
             .nav-link {
                 padding: 0px 50px 0px 0px;
