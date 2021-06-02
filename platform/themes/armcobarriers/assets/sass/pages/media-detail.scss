@@ -1,0 +1,141 @@
+ .description-media {
+     .news {
+         border-bottom: 1px solid #9999;
+         padding-bottom: 15px;
+         h2 {
+             font-size: 35px;
+             font-family: $FolioStd-Medium;
+         }
+         h2:after {
+             position: absolute;
+             content: '';
+             height: 5px;
+             top: 53px;
+             left: 15px;
+             right: 0;
+             width: 3.5%;
+             background: $priamry_color;
+             -o-transition: .5s;
+             -ms-transition: .5s;
+             -moz-transition: .5s;
+             -webkit-transition: .5s;
+             transition: .5s;
+         }
+     }
+     .top-news {
+         border-bottom: 1px solid #9999;
+         padding-bottom: 15px;
+         h2 {
+             font-size: 35px;
+             font-family: $FolioStd-Medium;
+         }
+         h2:after {
+             position: absolute;
+             content: '';
+             height: 5px;
+             top: 53px;
+             left: 15px;
+             right: 0;
+             width: 7%;
+             background: $priamry_color;
+             -o-transition: .5s;
+             -ms-transition: .5s;
+             -moz-transition: .5s;
+             -webkit-transition: .5s;
+             transition: .5s;
+         }
+     }
+     .cambodia {
+         padding-top: 4%;
+         h1 {
+             font-size: 35px;
+             font-family: $FolioStd-Medium;
+             padding-bottom: 2%;
+         }
+     }
+     .time {
+         p {
+             padding-bottom: 2%;
+             font-size: 15px;
+             font-family: $Arial;
+             color: #9999;
+         }
+     }
+     .the-ministry {
+         p {
+             font-size: 17px;
+             font-family: $Arial;
+             font-weight: bold;
+             padding-bottom: 5%;
+         }
+     }
+     .according {
+         p {
+             padding-bottom: 2%;
+             font-size: 17px;
+             font-family: $Arial;
+         }
+     }
+     .img1 {
+         position: relative;
+         img {
+             max-width: 100%;
+         }
+         i {
+             position: absolute;
+             top: 46%;
+             left: 43%;
+             color: #fff;
+             font-size: 60px;
+         }
+     }
+     .pakistan {
+         p {
+             padding: 5% 0;
+             font-size: 17px;
+             font-weight: bold;
+         }
+     }
+     .author {
+         display: flex;
+         float: right;
+         align-items: center;
+         padding-bottom: 3%;
+         .by {
+             background-color: #fff;
+             p {
+                 color: #9999;
+                 font-size: 15px;
+                 font-family: $Arial;
+             }
+         }
+         .btn-share {
+             background-color: $priamry_color;
+             margin-left: 20px;
+             padding: 5px 20px;
+             a {
+                 color: #000000;
+                 font-size: 15px;
+                 font-family: $Arial;
+             }
+         }
+     }
+     .related {
+         clear: right;
+         display: flex;
+         padding-top: 5%;
+         border-top: 1px solid #9999;
+         .title-related {
+             padding-right: 5%;
+             h4 {
+                 font-size: 17px;
+                 font-family: $Arial;
+                 font-weight: bold;
+             }
+         }
+         li {
+             font-size: 17px;
+             font-family: $Arial;
+         }
+     }
+ }
