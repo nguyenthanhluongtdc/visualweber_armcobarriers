@@ -21,7 +21,7 @@
             margin-bottom: 3%;
         }
         .list_info {
-            margin-top: 2%;
+            margin-top: 20px;
             li {
                 padding: 1% 0%;
                 border-top: 1px solid #707070;
@@ -33,7 +33,8 @@
             }
         }
         form {
-            margin-top: 3%;
+            margin-top: 30px;
+            margin-bottom: 10px;
             display: flex;
             .input_field {
                 width: 30%;
