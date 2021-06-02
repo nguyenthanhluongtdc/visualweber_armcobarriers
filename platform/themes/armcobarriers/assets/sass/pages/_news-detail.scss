@@ -1,4 +1,11 @@
  
+ @mixin str_split {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
 .description{
     .news{
         border-bottom: 1px solid #9999;
@@ -152,6 +159,8 @@
             font-weight: bold;
             font-family: $FolioStd-Medium;
             color:#000000;
+            @include str_split();
+            -webkit-line-clamp: 1;
         }
         p:nth-child(2)
             {
@@ -161,6 +170,9 @@
             padding-top: 3%;
             font-size: 15px;
             font-family: $Arial;
+            @include str_split();
+            -webkit-line-clamp: 2;
+
         }
     }
 }
