@@ -138,6 +138,7 @@
     margin-right: 15px;
     padding-left: 15px;
     border: 1px solid #ccc;
+    border-right: none;
     padding: 30px 10px !important;
     background-color: white;
 
@@ -155,6 +156,7 @@
             color: #000;
             left: 0;
             font-size: 20px;
+            right: auto;
             @include center_horizontal();
         }
     }
