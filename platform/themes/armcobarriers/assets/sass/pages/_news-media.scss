@@ -178,25 +178,11 @@ $gray_text: #262626;
         padding: 15px 25px !important;
         margin: 0px !important;
         font-size: 15px !important;
+        height: 100%;
     }
 }
 
 
-@media (min-width: 1692px){
-    .col-lg-28 {
-        width: 28%;
-        flex: 28%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .col-lg-16 {
-        width: 16%;
-        flex: 16%;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
 
 @media (min-width: 1281px) {
   
@@ -267,6 +253,22 @@ $gray_text: #262626;
   
   /* CSS */
   
+}
+
+@media (min-width: 991px){
+    .col-lg-28 {
+        width: 28%;
+        flex: 28%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .col-lg-16 {
+        width: 16%;
+        flex: 16%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* 
