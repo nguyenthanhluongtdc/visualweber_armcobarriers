@@ -175,14 +175,17 @@ $gray_text: #262626;
 
     .input__field, .button__field {
         width: 100% !important;
-        padding: 15px 25px !important;
         margin: 0px !important;
         font-size: 15px !important;
         height: 100%;
     }
 }
 
-
+@media (min-width: 1500px) {
+    .input__field, .button__field {
+        padding: 15px 25px !important;
+    }
+}
 
 @media (min-width: 1281px) {
   
