@@ -218,7 +218,7 @@
                                     </div>
                                 </li> --}}
                                 <li class="nav-link nav-item ">
-                                    <a href="/service" class="nav__menu-link">Services</a>
+                                    <a href="/services" class="nav__menu-link">Services</a>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/applications" class="nav__menu-link">Applications</a>
