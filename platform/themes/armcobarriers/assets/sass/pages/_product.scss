@@ -1,12 +1,12 @@
 .breadcrumb {
     background: none;
-    padding: 40px 0 60px 0px;
+    padding: 3% 0 3% 0;
     margin-bottom: 0;
     .breadcrumb-item+.breadcrumb-item::before {
         content: "|";
         color: $gray;
         opacity: 20%;
-        padding: 0 40px
+        padding: 0 25px
     }
     .breadcrumb-item {
         a {
@@ -64,9 +64,7 @@
         background: #EFEFEF;
         color: #000;
         transition: all 0.3s;
-        
         .list-unstyled {
-            
             .dropdown-toggle {
                 display: flex;
                 align-items: center;
@@ -113,7 +111,6 @@
     .product-filter {
         display: flex;
         justify-content: space-between;
-
         >div {
             margin-right: 10px;
         }
@@ -121,7 +118,7 @@
             margin-right: 0;
         }
         .product_filter--search {
-            >.form__search{
+            >.form__search {
                 width: 370px;
                 height: 50px;
                 display: flex;
@@ -181,7 +178,6 @@
             .form-control {
                 box-shadow: none;
             }
-            
             position: relative;
             select {
                 padding: 0;
@@ -215,7 +211,6 @@
                     font-family: $Arial;
                 }
             }
-
             span.down::before {
                 content: "\f107";
                 font-family: "Font Awesome 5 Pro";
@@ -351,12 +346,10 @@ a[data-toggle="collapse"] {
 
 @media screen and(min-width: 1059px) and (max-width: 1176px) {
     .custom_select {
-        .form-control {
-        }
+        .form-control {}
     }
     .custom_sort {
-        .form-control {
-        }
+        .form-control {}
     }
 }
 
@@ -368,8 +361,7 @@ a[data-toggle="collapse"] {
         }
     }
     .custom_sort {
-        .form-control {
-        }
+        .form-control {}
     }
 }
 
@@ -419,7 +411,7 @@ a[data-toggle="collapse"] {
 }
 
 //left menu
-@media screen and(min-width: 772px){
+@media screen and(min-width: 772px) {
     .dropdown-toggle {
         p {
             overflow: hidden;
@@ -455,29 +447,22 @@ a[data-toggle="collapse"] {
 }
 
 @media (max-width: 768px) {
-    .product-wrapper 
-    .product-filter 
-    .custom_select, 
-    .product-wrapper 
-    .product-filter 
-    .custom_sort {
+    .product-wrapper .product-filter .custom_select,
+    .product-wrapper .product-filter .custom_sort {
         padding-top: 12px;
         padding-bottom: 12px;
     }
-
     .product-wrapper .product-filter {
         flex-wrap: wrap;
-        > div {
+        >div {
             margin-right: 0;
             margin-bottom: 10px;
-    
             &:first-child {
                 width: 100%;
-    
                 form {
                     width: 100% !important;
                 }
-            }       
+            }
         }
     }
 }
