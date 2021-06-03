@@ -53,7 +53,7 @@
                         </section>
                     </div>
                     <div class="tab-pane fade" id="nav-off" role="tabpanel" aria-labelledby="nav-off-tab">
-                        <section style="padding-bottom: 60px">
+                        <section style="padding-bottom: 80px">
                             <div class="container-fluid-customize content">
                                 <div class="road-applications">
                                     <div class="container-customize">
@@ -68,7 +68,7 @@
                         </section>
                     </div>
                     <div class="tab-pane fade" id="nav-bridges" role="tabpanel" aria-labelledby="nav-bridges-tab">
-                        <section style="padding-bottom: 60px">
+                        <section style="padding-bottom: 80px">
                             <div class="container-fluid-customize content">
                                 <div class="road-applications">
                                     <div class="container-customize">
@@ -83,7 +83,7 @@
                         </section>
                     </div>
                     <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
-                        <section style="padding-bottom: 60px">
+                        <section style="padding-bottom: 80px">
                             <div class="container-fluid-customize content">
                                 <div class="road-applications">
                                     <div class="container-customize">
@@ -136,7 +136,7 @@
             </div>
             <div class="wrap-descrip pb-3 pb-md-5">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="post post-applications">
                             <div class="post-title">
                                 <h3>W Beam &, Thrie Beam</h3>
@@ -144,7 +144,7 @@
                             <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Posts & Bollards</h3>
@@ -154,7 +154,7 @@
                                 Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Wheelstops & Floorgards</h3>
@@ -164,7 +164,7 @@
                             works optimally in conjunction with Armco® Railgard™.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Handrail, Gates & Pipegards</h3>
