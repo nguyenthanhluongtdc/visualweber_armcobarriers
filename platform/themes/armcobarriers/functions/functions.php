@@ -2,8 +2,8 @@
 
 register_page_template([
     'default' => 'Default',
+    'about-us' => 'About Us',
     'service' => 'Service',
-
 ]);
 
 register_sidebar([
