@@ -136,15 +136,15 @@
             </div>
             <div class="wrap-descrip pb-3 pb-md-5">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-12 mb-3">
-                        <div class="post">
+                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                        <div class="post post-applications">
                             <div class="post-title">
                                 <h3>W Beam &, Thrie Beam</h3>
                             </div>
                             <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Posts & Bollards</h3>
@@ -154,7 +154,7 @@
                                 Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Wheelstops & Floorgards</h3>
@@ -164,7 +164,7 @@
                             works optimally in conjunction with Armco® Railgard™.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 col-12 mb-3">
+                    <div class="col-md-3 col-sm-6 col-12 mb-lg-0 mb-5">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Handrail, Gates & Pipegards</h3>
