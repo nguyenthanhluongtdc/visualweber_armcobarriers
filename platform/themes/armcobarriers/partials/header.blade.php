@@ -73,10 +73,10 @@
                                     <a href="/" class="nav__menu-link">Homepage</a>
                                 </li>
                                 <li class="nav-link nav-item ">
-                                    <a href="/about" class="nav__menu-link">About Us</a>
+                                    <a href="/about-us" class="nav__menu-link">About Us</a>
                                 </li>
                                 <li class="nav-link nav-item ">
-                                    <a href="/product" class="nav__menu-link">Products</a>
+                                    <a href="/products" class="nav__menu-link">Products</a>
                                 </li>
                                 {{-- <li class="nav-link nav-item dropdown dmenu">
                                     <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="/product">Products</a>

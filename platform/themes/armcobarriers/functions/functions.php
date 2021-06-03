@@ -2,8 +2,20 @@
 
 register_page_template([
     'default' => 'Default',
-    'about-us' => 'About Us',
     'service' => 'Service',
+    'applications' => 'Applications',
+    'gallery' => 'Gallery',
+    'contact-us' => 'Contact-us',
+    'products' => 'Products',
+    'about' => 'About',
+    'media-details' =>'Media-details',
+    'news-all' => 'News-all',
+    'news-media' => 'News-media',
+    'news-detail' => 'News-detail',
+    'product-details' => 'Product-details',
+    'service-details' => 'Service-details',
+    'page/index'
+
 ]);
 
 register_sidebar([

@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="product_info" class="col-sm-12 col-md-12">
     <div class="row">
@@ -89,6 +85,14 @@
 <!-- Initialize Swiper -->
 <script>
     $(document).ready(function() {
+        $(window).resize(function() {
+            $height = $('.gallery-main').height();
+            console.log($height)
+            $('.gallery-thumbs').height($height-62);
+            console.log($('.gallery-main').height())
+        });
+        $(window).trigger('resize');
+
         $('button.minus').click(function(e) {
             e.preventDefault();
             document.querySelector('input[type="number"]').stepDown()
