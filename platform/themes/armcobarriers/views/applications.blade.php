@@ -17,82 +17,91 @@
             <div class="decription">
                 <p>Armco® Barriers can satisfy your protection and barrier requirements by the many product options we offer. </p>
                 <p>Please browse the menu above for the application that best suits your needs</p>   
-                
-            </div>
-            <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
-              <a class="nav-item nav-link active mb-lg-0 mb-3"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
-              <a class="nav-item nav-link mb-lg-0 mb-3"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>
-              <a class="nav-item nav-link mb-lg-0 mb-3"style="color :#000000" id="nav-bridges-tab" data-toggle="tab" href="#nav-bridges" role="tab" aria-controls="nav-bridges" aria-selected="false">Bridges & Culverts </a>
-              <a class="nav-item nav-link mb-lg-0 mb-3"style="color :#000000" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">Design Specials</a>
             </div>
         <div>
     </div>
 </section>
 
 <section>
-    <div class="container-fluid-customize">
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade  show active" id="nav-road" role="tabpanel" aria-labelledby="nav-road-tab">
-                <section style="padding-bottom: 80px">
-                    <div class="container-fluid-customize">
-                        <div class="road-applications">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <p>Guardrail is widely acknowledged as one of the world’s most effective roadside and protective barrier systems.</p>
-                                    <p>ARMCO® Railgard™ is widely used and accepted by State highway authorities, municipal councils and numerous government departments.  It is manufactured to all relevant State or Federal and Traffic & Parking standards.</p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <div class="d-lg-block d-flex flex-nowrap ">
+        <div class="left-tab-md overflow-auto col-3 col-lg-12 pl-lg-0 pl-3 border-right"> 
+            <div class="container-customize">
+                <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
+                <a class="nav-item nav-link active mb-lg-0 mb-2"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
+                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>
+                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-bridges-tab" data-toggle="tab" href="#nav-bridges" role="tab" aria-controls="nav-bridges" aria-selected="false">Bridges & Culverts </a>
+                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">Design Specials</a>
+                </div>
             </div>
-            <div class="tab-pane fade" id="nav-off" role="tabpanel" aria-labelledby="nav-off-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
-                        <div class="road-applications">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Installation</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
+        </div>
+
+        <div class="right-tab-md col-9 col-lg-12">
+            <div class="container-fluid-customize">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade  show active" id="nav-road" role="tabpanel" aria-labelledby="nav-road-tab">
+                        <section style="padding-bottom: 80px">
+                            <div class="container-fluid-customize content">
+                                <div class="road-applications">
+                                    <div class="container-customize">
+                                        <div class="install">
+                                            <p>Guardrail is widely acknowledged as one of the world’s most effective roadside and protective barrier systems.</p>
+                                            <p>ARMCO® Railgard™ is widely used and accepted by State highway authorities, municipal councils and numerous government departments.  It is manufactured to all relevant State or Federal and Traffic & Parking standards.</p>
+                                        </div>
                                     </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade" id="nav-bridges" role="tabpanel" aria-labelledby="nav-bridges-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
-                        <div class="road-applications">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Request a Quotation</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
-                        <div class="road-applications">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Custom Manufacture </h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
                                 </div>
                             </div>
-                        </div>
+                        </section>
                     </div>
-                </section>
+                    <div class="tab-pane fade" id="nav-off" role="tabpanel" aria-labelledby="nav-off-tab">
+                        <section style="padding-bottom: 60px">
+                            <div class="container-fluid-customize content">
+                                <div class="road-applications">
+                                    <div class="container-customize">
+                                        <div class="install">
+                                            <h2>Installation</h2>
+                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
+                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-bridges" role="tabpanel" aria-labelledby="nav-bridges-tab">
+                        <section style="padding-bottom: 60px">
+                            <div class="container-fluid-customize content">
+                                <div class="road-applications">
+                                    <div class="container-customize">
+                                        <div class="install">
+                                            <h2>Request a Quotation</h2>
+                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
+                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
+                        <section style="padding-bottom: 60px">
+                            <div class="container-fluid-customize content">
+                                <div class="road-applications">
+                                    <div class="container-customize">
+                                        <div class="install">
+                                            <h2>Custom Manufacture </h2>
+                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
+                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-<section>
+</section>
 
 <section>
     <div class="container-customize">
@@ -101,7 +110,7 @@
                 <div class="col-md-4 col-12 pic mb-md-0 mb-4">
                     <img src="{{ Theme::asset()->url('images/applications/img1.jpg') }}" alt="">
                 </div>
-                <div class="col-md-4 col-12 pic mb-md-0 mb-4">
+                <div class="col-md-4 col-12 pic mb-md-0 mb-">
                     <img src="{{ Theme::asset()->url('images/applications/img2.jpg') }}" alt="">
                 </div>
                 <div class="col-md-4 col-12 pic">
@@ -205,3 +214,18 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        elem = $(".right-tab-md .content")[0];
+        let resizeObserver = new ResizeObserver(() => {
+            $('.left-tab-md').height($(".right-tab-md .content").height())
+        });
+
+        resizeObserver.observe(elem);
+       
+    })
+
+</script>
