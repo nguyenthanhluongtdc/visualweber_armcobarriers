@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="">
+                            <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
                                 <h3>Om Wire and Wire Products Industries is a reputed
                                     Highway Crash Barrier, Crash Barrier
@@ -37,7 +37,7 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="">
+                            <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
                                 <h3>Om Wire and Wire Products Industries is a reputed
                                     Highway Crash Barrier, Crash Barrier
@@ -56,7 +56,7 @@
 
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="">
+                            <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
                                 <h3>Om Wire and Wire Products Industries is a reputed
                                     Highway Crash Barrier, Crash Barrier
@@ -106,10 +106,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
+                                        <a href="/news-detail">
+                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
+                                        </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
+                                        <h5> <a href="/news-detail">German enterprises in Vietnam remain positive despite pandemic</a> </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
                                             A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
@@ -121,10 +123,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
+                                        <a href="/news-detail">
+                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
+                                        </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemicArmco Steel price rise 'unusual' amid plentiful supply: construction ministry   </h5>
+                                        <h5> <a href="/news-detail">German enterprises in Vietnam remain positive despite pandemicArmco Steel price rise 'unusual' amid plentiful supply: construction ministry </a> </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
                                             Nano Technologies, a startup that has developed an app which allows workers to access accrued wages without waiting for payday, has raised $3 million in pre-seed and seed funding.  
@@ -140,10 +144,12 @@
                             <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
+                                        <a href="/news-detail">
+                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
+                                        </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry </h5>
+                                        <h5> <a href="/news-detail">Steel price rise 'unusual' amid plentiful supply: construction ministry</a> </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
                                             Steel prices have surged by 40-50 percent this year though there is no shortage, the Ministry of Construction said, calling it "unusual."  
@@ -155,10 +161,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
+                                        <a href="/news-detail">
+                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
+                                        </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Ford to cease production of Tourneo minivan in Vietnam </h5>
+                                        <h5> <a href="/news-detail">Ford to cease production of Tourneo minivan in Vietnam</a> </h5>
                                         <div class="date"> 21 Apr 2020 </div>
                                         <p class="des">
                                             U.S. automaker Ford will stop assembling its Tourneo minivan in Vietnam from June as demand for it plunges amid the Covid-19 pandemic.  
@@ -278,7 +286,7 @@
                             <div class="row">
                                 <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
-                                        <a href="">
+                                        <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier
@@ -293,7 +301,7 @@
 
                                 <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
-                                        <a href="">
+                                        <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier
@@ -308,7 +316,7 @@
 
                                 <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
                                     <div class="item">
-                                        <a href="">
+                                        <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
                                             <h3>Om Wire and Wire Products Industries is a reputed
                                                 Highway Crash Barrier, Crash Barrier

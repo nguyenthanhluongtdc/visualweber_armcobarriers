@@ -138,15 +138,8 @@
 
 .gallery-wrapper {
     h2 {
-        font-size: 60px;
         font-family: "FolioStd-Medium";
         padding: 4% 0 2% 0;
-        @media(max-width: 1440px) {
-            font-size: 40px;
-        }
-        @media(max-width: 991px) {
-            font-size: 25px;
-        }
     }
     .box-media {
         .content {

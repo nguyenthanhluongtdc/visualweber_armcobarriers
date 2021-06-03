@@ -3,7 +3,7 @@
         <div class="contact-banner" style="background-image:url({{ Theme::asset()->url('images/contact/bg-top.png')}})">
         <div class="container-customize">
           <div class="title-contact">
-            <h3>Contact Us</h3>
+            <h1>Contact Us</h1>
             <p>We continually strive to be the best in the guardrail and safety barrier industry, and that makes
               ARMCO® BARRIERS try harder to satisfy your requirements.
             </p>

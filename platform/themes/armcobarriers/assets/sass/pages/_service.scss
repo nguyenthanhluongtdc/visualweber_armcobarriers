@@ -23,7 +23,7 @@
             border-bottom: 0px solid #dee2e6;
             .nav-link {
                 padding: 0px 50px 0px 0px;
-                font-size: 17px;
+                font-size: 17px !important;
                 color: #000000;
                 font-family: $Arial;
             }
@@ -175,9 +175,7 @@
         }
     }
     .product-range {
-        padding-bottom: 50px;
         h2 {
-            font-size: 60px;
             font-family: $FolioStd-Medium;
             color: #000000;
         }
@@ -240,7 +238,7 @@
 @media (max-width:1240px) and (min-width:991px) {
     .nav-tabs {
         .nav-link {
-            font-size: 15px;
+            font-size: 15px !important;
         }
     }
     .wrap-our {

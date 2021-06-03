@@ -130,13 +130,13 @@
 <section style="padding-top:60px">
     <div class="container-customize">
         <div class="wrap-product">
-            <div class="product-range">
+            <div class="product-range mb-lg-5 mb-4">
                 <h2>Product Range</h2>
                 <p>Roadside, Car Parks, Warehouses</p>
             </div>
-            <div class="wrap-descrip pb-3 pb-md-5">
+            <div class="wrap-descrip pb-0 pb-md-5">
                 <div class="row">
-                    <div class="col-lg-3 col-sm-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-sm-6 col-12 mb-lg-0 mb-3">
                         <div class="post post-applications">
                             <div class="post-title">
                                 <h3>W Beam &, Thrie Beam</h3>
@@ -144,7 +144,7 @@
                             <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Posts & Bollards</h3>
@@ -154,7 +154,7 @@
                                 Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Wheelstops & Floorgards</h3>
@@ -164,7 +164,7 @@
                             works optimally in conjunction with Armco® Railgard™.</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-5">
+                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
                         <div class="post">
                             <div class="post-title">
                                 <h3>Handrail, Gates & Pipegards</h3>
@@ -186,7 +186,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:60px">
+<section class="mt-4">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.components.form-signup")
     </div>

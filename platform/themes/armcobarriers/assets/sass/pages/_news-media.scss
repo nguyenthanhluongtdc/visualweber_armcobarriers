@@ -13,10 +13,6 @@ $gray_text: #262626;
         margin-bottom: 5rem;
     }
 
-    h1 {
-        font-size: 60px;
-    }
-
     .box-media {
 
         .content {
@@ -99,7 +95,6 @@ $gray_text: #262626;
                 position: relative;
                 margin-right: 0px !important;
                 padding: 20px 40px 20px 0;
-                font-size: 35px;
                 border: none !important;
                 color: $gray_text;
                 font-family: "FolioStd-Medium";
@@ -132,9 +127,12 @@ $gray_text: #262626;
         .tab-content {
             h5 {
                 font-size: 17px;
-                color: $gray_text;
                 @include str_split();
                 -webkit-line-clamp: 1;
+
+                a {
+                    color: $gray_text;
+                }
             }
 
             .date, .des{
@@ -298,9 +296,7 @@ $gray_text: #262626;
 }
 
 @media (max-width: 576px) {
-    .pages-news-media #tile-1 .nav-tabs li a {
-        font-size: 15px;
-    }
+    
 }
 
 /* 

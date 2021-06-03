@@ -1,0 +1,23 @@
+
+//title
+h1,h2 {
+    font-size: $rem4;
+}
+
+.nav-tabs a.nav-link{
+    font-size: $rem2-5;
+}
+
+footer {
+    margin-top: 70px !important;
+}
+
+@media (max-width: 992px) {
+    h1, h2 {
+        font-size: $rem2;
+    }
+
+    .nav-tabs a.nav-link{
+        font-size: $rem1-5;
+    }
+}
