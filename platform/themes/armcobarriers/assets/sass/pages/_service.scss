@@ -188,6 +188,11 @@
     }
     .wrap-descrip {
         padding-bottom: 80px;
+        .post:nth-child(4){
+            p{
+                padding-right: 0px !important;
+            }
+        }
         .post {
             &:hover {
                 .post-title {
@@ -202,25 +207,15 @@
             color: #000000;
             padding: 10px 0px;
         }
-        p {
+        p{
             font-size: 15px;
             font-family: $Arial;
-            margin: 10% 8% 0% 0%;
+            padding-right: 9%;
         }
     }
 }
 
 // respon
-@media(max-width:575px) {
-    .wrap-our {
-        .asset {
-            p {
-                font-size: 20px !important;
-                right: 8.2%;
-            }
-        }
-    }
-}
 
 @media (max-width:1680px) {
     .wrap-our {
@@ -252,6 +247,29 @@
         .asset {
             p {
                 font-size: 12px !important;
+            }
+        }
+    }
+}
+@media(max-width:768px) {
+    .wrap-our {
+        .asset {
+            justify-content: center;
+            display: flex;
+        }
+    }
+    .wrap-descrip{
+        .post{
+            padding-bottom: 5%;
+        }
+    }
+}
+@media(max-width:575px) {
+    .wrap-our {
+        .asset {
+            p {
+                font-size: 17px !important;
+                right: 0.2%;
             }
         }
     }
