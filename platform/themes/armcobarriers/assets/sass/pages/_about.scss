@@ -383,7 +383,24 @@
 
 }
 @media(max-width:768px)
-{
+{   .wrap-bot{
+        .bot1{
+             padding: 20px 0px 5% !important;
+            .product-quality{
+                h2{
+                    font-size: 30px !important;
+                    padding-bottom: 10% !important;
+                }
+            }
+            .slogan{
+                p{
+                    font-size: 14px !important;                }
+            }
+        }
+}
+    .hero{
+        padding:5% 0 !important;
+    }
     .wrap-cont {
         .content-about {
             span{
