@@ -7,14 +7,13 @@ register_page_template([
     'gallery' => 'Gallery',
     'contact-us' => 'Contact-us',
     'products' => 'Products',
-    'about-us' => 'About Us',
+    'products-detail' => 'Products-detail',
+    'about' => 'About',
     'media-details' =>'Media-details',
     'news-all' => 'News-all',
     'news-media' => 'News-media',
     'news-detail' => 'News-detail',
-    'product-details' => 'Product-details',
-    'service-details' => 'Service-details',
-    'page/index'
+    'services-detail' => 'Services-detail',
 
 ]);
 
