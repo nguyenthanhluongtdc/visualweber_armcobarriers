@@ -2,8 +2,8 @@
     <div class="container-fluid-customize">
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
+                <section>
+                    <div class="container-fluid-customize content ">
                         <div class="wrap-install">
                             <div class="container-customize">
                                 <div class="install">
@@ -17,8 +17,8 @@
                 </section>
             </div>
             <div class="tab-pane fade" id="nav-installation" role="tabpanel" aria-labelledby="nav-installation-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
+                <section>
+                    <div class="container-fluid-customize content">
                         <div class="wrap-install">
                             <div class="container-customize">
                                 <div class="install">
@@ -32,8 +32,8 @@
                 </section>
             </div>
             <div class="tab-pane fade" id="nav-request" role="tabpanel" aria-labelledby="nav-request-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
+                <section>
+                    <div class="container-fluid-customize content">
                         <div class="wrap-install">
                             <div class="container-customize">
                                 <div class="install">
@@ -47,8 +47,8 @@
                 </section>
             </div>
             <div class="tab-pane fade" id="nav-custom" role="tabpanel" aria-labelledby="nav-custom-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
+                <section>
+                    <div class="container-fluid-customize content">
                         <div class="wrap-install">
                             <div class="container-customize">
                                 <div class="install">
@@ -62,9 +62,9 @@
                 </section>
             </div>
             <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
-                <section style="padding-bottom:60px" >                           
+                <section >                           
                         <div class="wrap-car">
-                            <div class="container-customize">
+                            <div class="container-fluid-customize content">
                                 <div class="car-park">
                                     <h2>Car Park Solutions</h2>
                                     <p>Armco® Barriers provide a range of services to support both the customer and our product. Our services are of a superior standard due to
@@ -99,8 +99,8 @@
                         </div>
                 </section>
             </div>
-            <div class="tab-pane fade" id="nav-factories" role="tabpanel" aria-labelledby="nav-factories-tab"><section style="padding-bottom: 60px">
-                <div class="container-fluid-customize">
+            <div class="tab-pane fade" id="nav-factories" role="tabpanel" aria-labelledby="nav-factories-tab"><section>
+                <div class="container-fluid-customize content">
                     <div class="wrap-install">
                         <div class="container-customize">
                             <div class="install">
@@ -113,8 +113,8 @@
                 </div>
             </section></div>
             <div class="tab-pane fade" id="nav-roadside" role="tabpanel" aria-labelledby="nav-roadside-tab">
-                <section style="padding-bottom: 60px">
-                    <div class="container-fluid-customize">
+                <section>
+                    <div class="container-fluid-customize content">
                         <div class="wrap-install">
                             <div class="container-customize">
                                 <div class="install">

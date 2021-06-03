@@ -124,6 +124,7 @@
         }
     }
     .australian{
+        margin-bottom: 25px;
         &:hover{
             .title{
                 transition: 0.3s ease;
@@ -138,7 +139,7 @@
         p{
             font-size: 15px;
             font-family: $Arial;
-            padding:8% 3% 3% 0%;
+            margin-top: 7px;
             // padding-right: 3%;
             // padding-bottom: 3%;
         }
