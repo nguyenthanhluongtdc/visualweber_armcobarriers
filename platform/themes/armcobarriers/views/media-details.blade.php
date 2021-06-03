@@ -119,7 +119,6 @@
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        
                     </div>
                 </div>    
             </div>

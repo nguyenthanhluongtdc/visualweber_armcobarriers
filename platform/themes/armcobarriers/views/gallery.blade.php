@@ -169,17 +169,6 @@
 
   <section>
     <div class="container-customize">
-        <div class="wrap-sign">
-                <div class="info-me">
-                    <div class="sign-up">
-                        <p>Sign up to receive the</p>
-                        <h3>latest insights</h3>
-                    </div>
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Your Email">
-                    <input type="text" placeholder="Your Company">
-                    <button type ="submit">Sign Up</button>
-            </div>
-        </div>
+        @includeIf("theme.armcobarriers::views.components.form-signup")
     </div>
   </section>
