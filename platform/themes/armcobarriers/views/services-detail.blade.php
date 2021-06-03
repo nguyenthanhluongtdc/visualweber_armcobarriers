@@ -21,7 +21,7 @@
         <a class="nav-item nav-link"style="color:#000000" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
         <a class="nav-item nav-link"style="color:#000000" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
         <a class="nav-item nav-link"style="color:#000000" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
-        <a class="nav-item nav-link  active"style="color:#000000" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
+        <a class="nav-item nav-link  active"style="background:none" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
         <a class="nav-item nav-link"style="color:#000000" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
         <a class="nav-item nav-link"style="color:#000000" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
       </div>
@@ -91,14 +91,14 @@
                 <p>Roadside, Car Parks, Warehouses</p>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-12 australian">
+                <div class="col-lg-3 col-md-6 australian">
                     <div class="title">
                         <h3>Australian Made</h3>
                        </div>
                     <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and
                      experienced installation teams.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 australian">
+                <div class="col-lg-3 col-md-6 australian">
                     <div class="title">
                         <h3>Galvanised in Australia to ASXXXXX</h3>
                     </div>
@@ -106,14 +106,14 @@
                     <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification, 
                     Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 australian">
+                <div class="col-lg-3 col-md-6 australian">
                     <div class="title">
                         <h3>Floor Anchors</h3>
                     </div>
                     <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, being most commonly 
                     used in warehousing and cool room applications.Floorgard™(as shown in the pictures) works optimally in conjunction with Armco® Railgard™.</p>
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 australian">
+                <div class="col-lg-3 col-md-6 australian">
                     <div class="title">
                         <h3>Guaranteed for years of trouble free service.</h3>
                     </div>
@@ -141,16 +141,27 @@
 <section style="padding-top:60px">
     <div class="container-customize">
         <div class="wrap-sign">
-                <div class="info-me">
-                    <div class="sign-up">
+                <div class="info-me flex-wrap py-5">
+                    <div class="sign-up col-lg-3 col-12">
                         <p>Sign up to receive the</p>
                         <h3>latest insights</h3>
                     </div>
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Full Name">
-                    <button type ="submit">Sign Up</button>
-                </div>
-        </div>
+                <form action="#" method="POST" class="col-lg-9 col-12 px-0">
+                    <div class="form-flex-lg">
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Full Name">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Email">
+                        </p>
+                        <p class="col-lg-28 col-lg-6 col-12 my-2">
+                            <input class="input__field" type="text" placeholder="Your Company">
+                        </p>
+                        <p class="col-lg-16 col-lg-6 col-12 my-2"> 
+                            <button class="button__field" type ="submit">Sign Up</button>
+                        </p>
+                    </div>
+                </form> 
+         </div>
     </div>
 </section>
