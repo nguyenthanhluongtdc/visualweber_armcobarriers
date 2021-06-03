@@ -7,7 +7,7 @@ register_page_template([
     'gallery' => 'Gallery',
     'contact-us' => 'Contact-us',
     'products' => 'Products',
-    'about' => 'About',
+    'about-us' => 'About Us',
     'media-details' =>'Media-details',
     'news-all' => 'News-all',
     'news-media' => 'News-media',
