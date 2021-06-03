@@ -5,8 +5,17 @@ register_page_template([
     'service' => 'Service',
     'applications' => 'Applications',
     'gallery' => 'Gallery',
-    'contact' => 'Contact',
-    'products' => 'Products'
+    'contact-us' => 'Contact-us',
+    'products' => 'Products',
+    'about' => 'About',
+    'media-details' =>'Media-details',
+    'news-all' => 'News-all',
+    'news-media' => 'News-media',
+    'news-detail' => 'News-detail',
+    'product-details' => 'Product-details',
+    'service-details' => 'Service-details',
+    'page/index'
+
 ]);
 
 register_sidebar([
