@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-12 col-lg-9 mb-5" id="tab">
             <div class="row ml-0">
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
                     </li>

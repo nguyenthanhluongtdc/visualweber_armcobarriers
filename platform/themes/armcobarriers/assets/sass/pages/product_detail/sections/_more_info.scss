@@ -3,8 +3,11 @@
 
     #tab {
         .nav-tabs {
+
             .nav-item {
                 margin-right: 20%;
+                margin-bottom: 10px;
+
                 .nav-link {
                     border: none;
                     padding: 0;
@@ -30,10 +33,12 @@
                     color: black;
                 }
             }
+            
+            .nav-item:last-child {
+                margin-right: 0;
+            }
         }
-        .nav {
-            flex-wrap: unset;
-        }
+        
         .tab-content {
             margin-top: 3%;
         }
