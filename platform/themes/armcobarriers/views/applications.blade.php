@@ -110,7 +110,7 @@
                 <div class="col-md-4 col-12 pic mb-md-0 mb-4">
                     <img src="{{ Theme::asset()->url('images/applications/img1.jpg') }}" alt="">
                 </div>
-                <div class="col-md-4 col-12 pic mb-md-0 mb-">
+                <div class="col-md-4 col-12 pic mb-md-0 mb-4">
                     <img src="{{ Theme::asset()->url('images/applications/img2.jpg') }}" alt="">
                 </div>
                 <div class="col-md-4 col-12 pic">
