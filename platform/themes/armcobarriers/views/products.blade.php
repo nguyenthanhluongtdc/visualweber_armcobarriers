@@ -1,3 +1,5 @@
+@php Theme::layout('default') @endphp
+
 <section>
   @includeIf("theme.armcobarriers::views.breadcrumb")
   <div class="container-customize">

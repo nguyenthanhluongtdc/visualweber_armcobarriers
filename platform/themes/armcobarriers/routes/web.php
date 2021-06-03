@@ -7,10 +7,9 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
 
         // Add your custom route here
         // Ex: Route::get('hello', 'ArmcobarriersController@getHello');
-        Route::get('services', 'ArmcobarriersController@getService')
-        ->name('public.service');
-        Route::get('product-detail','ArmcobarriersController@productDetail')->name('public.productDetail');
-
+        // Route::get('services', 'ArmcobarriersController@getService')
+        // ->name('public.service');
+        // Route::get('product-detail','ArmcobarriersController@productDetail')->name('public.productDetail');
 
     });
 });
