@@ -5,7 +5,8 @@ register_page_template([
     'service' => 'Service',
     'applications' => 'Applications',
     'gallery' => 'Gallery',
-    'contact' => 'Contact'
+    'contact' => 'Contact',
+    'products' => 'Products'
 ]);
 
 register_sidebar([
