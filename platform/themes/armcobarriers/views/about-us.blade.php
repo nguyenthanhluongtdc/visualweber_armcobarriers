@@ -159,7 +159,7 @@
         </div>
         <div class="bot2">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6">
                    <div class="product0">
                     <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
                     <h3>"W" Beam Rails</h3>
@@ -167,7 +167,7 @@
                         Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                    </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="product1">
                         <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
                         <h3>Surface Mounted Post</h3>
@@ -176,7 +176,7 @@
                         with the release of Letraset sheets containing.</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="product2">
                         <img src="{{ Theme::asset()->url('images/about/product2.jpg') }}" alt="">
                         <h3>In-Ground posts</h3>

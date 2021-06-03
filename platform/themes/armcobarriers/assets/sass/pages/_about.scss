@@ -62,8 +62,9 @@
 
 .wrap-product{
     .wrap1{
-        .innovation,.installation,.design,.quality,.warranty,.competitive,.availability,.australian{
+        .innovation,.design,.competitive,.availability,.australian,.warranty{
             padding-bottom: 60px;
+            padding-right: 4%;
             h3{
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
@@ -73,6 +74,17 @@
                 font-family: $Arial;
             }
     
+         }
+         .installation,.quality{
+            h3{
+                font-size: 20px;
+                font-family: $FolioStd-Medium;
+            } 
+            p{
+                font-size: 15px;
+                font-family: $Arial;
+            }
+
          }
     }
     .wrap2{
@@ -110,8 +122,9 @@
 .wrap-bot{
     .bot2{
         border-bottom: 1px ridge #E1E1E1;
-        padding-bottom: 80px;
-        .product2{
+        padding-bottom: 60px;
+        .product2,.product1,.product0{
+            padding-bottom: 40px;
             img{
                 padding-bottom: 25px;
                 width: 98%;
@@ -121,39 +134,6 @@
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
             }
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-        }
-        .product1{
-            img{ 
-                padding-bottom: 25px;
-                width: 98%;
-            }
-            h3{ 
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-                padding-bottom: 25px;
-            }
-
-            p{
-                font-size: 15px;
-                font-family: $Arial;
-            }
-
-        }
-        .product0{
-            img{ 
-                padding-bottom: 25px;
-                width: 98%;
-            }
-            h3{ 
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
-                padding-bottom: 25px;
-            }
-
             p{
                 font-size: 15px;
                 font-family: $Arial;
@@ -353,26 +333,6 @@
                 width: 45%;
             }
         }
-    // } 
-    // .wrap-sign{
-    //     .info-me{
-    //         input{
-    //             width:17%
-    //         }
-    //         button{
-    //             padding: 0.7% 2%;
-    //         }
-    //     }
-    //     .sign-up {
-    //         p{
-    //             font-size: 15px;
-    //         }
-    //         h3{
-    //             font-size: 25px;
-    //         }
-    //     }
-
-    // } 
     .wrap-top{
         .cont2{
             padding-bottom: 40px;
@@ -381,7 +341,14 @@
 }
 
 @media(max-width:991px)
-{   
+{   .wrap-product{
+    .innovation,.competitive,.quality,.australian{
+        padding-right: 15px !important;
+    }
+    .installation,.warranty{
+        padding-right: 4%;
+    }
+}
     .wrap-top{
         .cont2{
 
@@ -422,6 +389,22 @@
                 top: 18%;
                 width: 60%;
                 font-size: 15px;
+            }
+        }
+    }
+    .wrap-product{
+        .design,.installation,.warranty,.availability{
+            padding-right: 15px !important;
+        }
+        .quality,.installation{
+            padding-bottom: 60px !important;
+        }
+        .wrap2{
+            .view{
+                a{
+                    padding-bottom: 10px;
+                    font-size: 15px;
+                }
             }
         }
     }
