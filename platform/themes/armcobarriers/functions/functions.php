@@ -3,7 +3,9 @@
 register_page_template([
     'default' => 'Default',
     'service' => 'Service',
-
+    'applications' => 'Applications',
+    'gallery' => 'Gallery',
+    'contact' => 'Contact'
 ]);
 
 register_sidebar([
