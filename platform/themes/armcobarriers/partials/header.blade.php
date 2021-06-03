@@ -73,7 +73,7 @@
                                     <a href="/" class="nav__menu-link">Homepage</a>
                                 </li>
                                 <li class="nav-link nav-item ">
-                                    <a href="/about" class="nav__menu-link">About Us</a>
+                                    <a href="/about-us" class="nav__menu-link">About Us</a>
                                 </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/products" class="nav__menu-link">Products</a>
