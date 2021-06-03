@@ -219,12 +219,16 @@
 <script>
     $(document).ready(function(){
 
-        elem = $(".right-tab-md .content")[0];
-        let resizeObserver = new ResizeObserver(() => {
-            $('.left-tab-md').height($(".right-tab-md .content").height())
-        });
+        $widthWindow = $(window).width();
+        if($widthWindow < 992){
+            elem = $(".right-tab-md")[0];
 
-        resizeObserver.observe(elem);
+            let resizeObserver = new ResizeObserver(() => {
+                $('.left-tab-md').height($(".right-tab-md .active .content").height())
+            });
+
+            resizeObserver.observe(elem);
+        }
        
     })
 
