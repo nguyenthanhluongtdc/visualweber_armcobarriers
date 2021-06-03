@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div id="product_info" class="col-sm-12 col-md-12">
     <div class="row">
