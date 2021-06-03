@@ -7,26 +7,38 @@
                     <li class="breadcrumb-item">Services</li>
                   </ol>
                 </nav> 
-            <div class="top2">
-                <h2>ARMCO - Asset Protection Solutions</h2>
-                <p>Installation, Design Advice, Custom Manufacture</p>
-            </div> 
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
-                      <a class="nav-item nav-link  active"style="color:#000000" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
-                      <a class="nav-item nav-link"style="color:#000000" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
-                   </div>
-                  </nav>
+                <div class="top2">
+                    <h2>ARMCO - Asset Protection Solutions</h2>
+                    <p>Installation, Design Advice, Custom Manufacture</p>
+                </div> 
             </div>
         </div>
     </div>
 </section>
-@includeIf("theme.armcobarriers::views.tab")
-<section>
+
+<div class="services-detail-tabs d-lg-block d-flex flex-nowrap">
+    <div class="left-tab-md overflow-auto col-3 col-lg-12 pl-lg-0 pl-3 border-right">
+        <div class="container-customize">
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
+                    <a class="nav-item nav-link active"style="background:none" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
+                    <a class="nav-item nav-link"style="color:#000000" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="item-tab-content right-tab-md col-9 col-lg-12">
+        @includeIf("theme.armcobarriers::views.tab")
+    </div>
+</div>
+
+<section class="mt-5">
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service">
@@ -175,3 +187,21 @@
          </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $widthWindow = $(window).width();
+        if($widthWindow < 992){
+            elem = $(".right-tab-md")[0];
+
+            let resizeObserver = new ResizeObserver(() => {
+                $('.left-tab-md').height($(".right-tab-md .active .content").height())
+            });
+
+            resizeObserver.observe(elem);
+        }
+
+    })
+</script>

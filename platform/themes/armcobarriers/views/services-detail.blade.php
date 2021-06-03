@@ -176,20 +176,3 @@
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    $(document).ready(function(){
-
-        $widthWindow = $(window).width();
-        if($widthWindow < 992){
-            elem = $(".right-tab-md")[0];
-
-            let resizeObserver = new ResizeObserver(() => {
-                $('.left-tab-md').height($(".right-tab-md .active .content").height())
-            });
-
-            resizeObserver.observe(elem);
-        }
-
-    })
-</script>
