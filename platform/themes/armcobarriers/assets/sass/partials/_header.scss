@@ -261,3 +261,32 @@
         }
     }
 }
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        height: 100vh;
+        background-color: $priamry_color;
+        padding-top: 50px;
+
+        .nav-item {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+
+            a {
+                position: relative;
+                text-transform: uppercase;
+            }
+        }
+
+        .nav-item.active a::before {
+            content: "\f0a4";
+            font-family: "Font Awesome 5 Pro";
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            z-index: 1;
+            left: -25px;
+        }
+    }
+}
