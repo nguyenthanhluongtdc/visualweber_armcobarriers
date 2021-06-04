@@ -181,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap2">
+            <div class="wrap2 my-5">
                 <div class="icon">
                  <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
@@ -192,7 +192,7 @@
         </div>
     </div>
 </section>
-<section class="mt-lg-5">
+<section >
    {{-- <div class="service-us-wrapper">
        <div class="container-customize">
         <div class="row">
