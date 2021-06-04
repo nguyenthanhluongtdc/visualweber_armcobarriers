@@ -12,15 +12,17 @@
   </section>
   <section>
       <div class="container-fluid-customize">
-        <div class="container-customize">
-            <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-overview" aria-selected="false">Products</a>
-                <a class="nav-item nav-link" id="nav-applications-tab" data-toggle="tab" href="#nav-applications" role="tab" aria-controls="nav-installation" aria-selected="false">Applications</a>
-                <a class="nav-item nav-link" id="nav-warranty-tab" data-toggle="tab" href="#nav-warranty" role="tab" aria-controls="nav-request" aria-selected="false">Warranty</a>
-                <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-custom" aria-selected="false">Design</a>
+        <div class="tabs-scroll">
+            <div class="container-customize">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-overview" aria-selected="false">Products</a>
+                        <a class="nav-item nav-link" id="nav-applications-tab" data-toggle="tab" href="#nav-applications" role="tab" aria-controls="nav-installation" aria-selected="false">Applications</a>
+                        <a class="nav-item nav-link" id="nav-warranty-tab" data-toggle="tab" href="#nav-warranty" role="tab" aria-controls="nav-request" aria-selected="false">Warranty</a>
+                        <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-custom" aria-selected="false">Design</a>
+                    </div>
+                </nav>
             </div>
-            </nav>
         </div>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="home-tab">
@@ -83,8 +85,6 @@
             <div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="contact-tab">Warranty</div>
             <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="setting-tab">Design</div>
         </div>
-          
-
       </div>
   </section>
 

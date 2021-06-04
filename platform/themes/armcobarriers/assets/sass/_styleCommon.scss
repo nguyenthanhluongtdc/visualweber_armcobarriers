@@ -12,6 +12,15 @@ footer {
     margin-top: 70px !important;
 }
 
+.tabs-scroll {
+    overflow-x: scroll;
+    
+    .nav-tabs {
+        flex-wrap: nowrap !important;
+        width: max-content;
+    }
+}
+
 @media (max-width: 992px) {
     h1, h2 {
         font-size: $rem2;
@@ -19,5 +28,8 @@ footer {
 
     .nav-tabs a.nav-link{
         font-size: $rem1-5;
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 80px;
     }
 }

@@ -16,8 +16,8 @@
     </div>
 </section>
 
-<div class="services-detail-tabs d-lg-block d-flex flex-nowrap">
-    <div class="left-tab-md overflow-auto col-3 col-lg-12 pl-lg-0 pl-3 border-right">
+<div class="services-detail-tabs d-lg-block ">
+    <div class="left-tab-md tabs-scroll">
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <div class="item-tab-content right-tab-md col-9 col-lg-12">
+    <div class="item-tab-content right-tab-md">
         @includeIf("theme.armcobarriers::views.tab")
     </div>
 </div>
@@ -168,18 +168,18 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    $(document).ready(function(){
+    // $(document).ready(function(){
 
-        $widthWindow = $(window).width();
-        if($widthWindow < 992){
-            elem = $(".right-tab-md")[0];
+    //     $widthWindow = $(window).width();
+    //     if($widthWindow < 992){
+    //         elem = $(".right-tab-md")[0];
 
-            let resizeObserver = new ResizeObserver(() => {
-                $('.left-tab-md').height($(".right-tab-md .active .content").height())
-            });
+    //         let resizeObserver = new ResizeObserver(() => {
+    //             $('.left-tab-md').height($(".right-tab-md .active .content").height())
+    //         });
 
-            resizeObserver.observe(elem);
-        }
+    //         resizeObserver.observe(elem);
+    //     }
 
-    })
+    // })
 </script>
