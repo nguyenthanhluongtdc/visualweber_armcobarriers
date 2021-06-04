@@ -85,7 +85,6 @@
 
 .wrap-our {
     .service {
-        padding-bottom: 30px;
         font-size: 40px;
         font-family: $FolioStd-Bold;
         color: #000000;
@@ -274,9 +273,6 @@
           }
       }
   }
-  .post{
-      padding-bottom: 3% !important;
-  }
 }
 @media(max-width:768px) {
     .wrap-top{
@@ -296,11 +292,6 @@
         .asset {
             justify-content: center;
             display: flex;
-        }
-    }
-    .wrap-descrip{
-        .post{
-            padding-bottom: 5%;
         }
     }
 }

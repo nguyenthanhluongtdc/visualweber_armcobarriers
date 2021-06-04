@@ -207,7 +207,7 @@
     }
     .read-more {
         margin-top: 80px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
 
         a {
             color: $gray-text;
@@ -609,8 +609,8 @@
             font-size: 13px;
         }
         .read-more {
-            margin-top: 50px;
-            margin-bottom: 50px;
+            margin-top: 0;
+            margin-bottom: 30px;
         }
     }
 }
@@ -674,6 +674,10 @@
             }
             
         }
+    }
+    
+    .experience{
+        padding-top: 20px !important;
     }
 }
 
@@ -757,6 +761,11 @@
             margin: 0;
         }
     } 
+
+    .news-event-wrapper .read-more {
+        margin-top: -15px;
+        margin-bottom: 25px;
+    }
 }
 
 .swiper-container {
