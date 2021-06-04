@@ -62,8 +62,9 @@
                 </section>
             </div>
             <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
-                <section >                           
-                        <div class="wrap-car">
+                <section >                  
+                    <div class="wrap-car" style="padding: 60px 0;">
+                        <div class="container-customize"> 
                             <div class="container-fluid-customize content">
                                 <div class="car-park">
                                     <h2>Car Park Solutions</h2>
@@ -97,6 +98,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
             </div>
             <div class="tab-pane fade" id="nav-factories" role="tabpanel" aria-labelledby="nav-factories-tab"><section>

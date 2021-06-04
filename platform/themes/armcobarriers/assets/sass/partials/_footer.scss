@@ -1,17 +1,19 @@
 .footer {
     margin-top: 70px !important;
+    
+
     .footer-bottom-boder {
         border: 2px solid #ccc;
     }
     .footer-yellow {
+        padding-top: 50px;
+        padding-bottom: 50px;
         background-color: #FAD906;
         @media(max-width: 480px) {
             text-align: center;
         }
         .container-customize {
             .footer__logo {
-                padding-top: 50px;
-                padding-bottom: 15px;
                 .img {
                     width: 12%;
                 }
@@ -79,9 +81,7 @@
             .footer-bottom {
                 @media(max-width: 480px) {
                     font-size: 13px;
-                    padding: 20px 45px;
                 }
-                padding: 40px 0;
                 a {
                     color: #262626;
                     &:hover {
@@ -128,12 +128,7 @@
                 }
                 .footer__logo {
                     width: 100%;
-                    img {
-                        @media(max-width: 480px) {
-                            width: 35%;
-                        }
-                        width: 15%;
-                    }
+                    
                 }
             }
         }
