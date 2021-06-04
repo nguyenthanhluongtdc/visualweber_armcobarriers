@@ -19,11 +19,27 @@ footer {
         flex-wrap: nowrap !important;
         width: max-content;
     }
+
+    .fa-hand-point-right {
+        display: none;
+    }
 }
 
 @media (max-width: 992px) {
     h1, h2 {
         font-size: $rem2;
+    }
+
+    .main-scroll {
+        position: relative;
+        padding-top: 30px;
+    }
+
+    .tabs-scroll .fa-hand-point-right{
+        font-size: $rem1-5;
+        position: absolute;
+        top: 0;
+        display: inline-block;
     }
 
     .nav-tabs a.nav-link{

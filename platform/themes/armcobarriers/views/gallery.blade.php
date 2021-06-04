@@ -11,9 +11,10 @@
         </div> 
   </section>
   <section>
-      <div class="container-fluid-customize">
+      <div class="container-fluid-customize main-scroll">  
         <div class="tabs-scroll">
             <div class="container-customize">
+            <i class="fal fa-hand-point-right"></i> 
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-overview" aria-selected="false">Products</a>
