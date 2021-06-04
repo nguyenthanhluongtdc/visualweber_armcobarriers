@@ -369,6 +369,15 @@ a[data-toggle="collapse"] {
 }
 
 @media screen and(min-width: 912px) and (max-width: 990px) {
+    .pagination_style1{
+        padding-top: 4% !important;
+    }
+    .product-wrapper{
+        padding-bottom: 0 !important;
+    }
+    .product-item-wrapper {
+        padding-top: 12% !important;
+    }
     .custom_select {
         .form-control {
             text-overflow: ellipsis;
