@@ -83,59 +83,58 @@
                         <h2>Top News</h2>
                     </div>
                     <div class="row wrap-news">
-                        <div class="col-6 img">
+                        <div class="col-lg-6 col-md-4 col-sm-4  img">
                             <img src="{{ Theme::asset()->url('images/news-detail/img2.jpg') }}" alt="">
                         </div>
-                        <div class="col-6 description">
+                        <div class="col-lg-6 col-md-8 col-sm-8  description">
                             <a href="#" title="#">Origin fraud risks rise as Chinese steel continues to pour into Vietnam</a>
                             <p>21 Apr 2020</p>
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        <div class="col-6 img">
+                        <div class="col-lg-6 col-md-4 col-sm-4  img">
                             <img src="{{ Theme::asset()->url('images/news-detail/img3.jpg') }}" alt="">
                         </div>
-                        <div class="col-6 description">
+                        <div class="col-lg-6 col-md-8 col-sm-8  description">
                             <a href="#" title="#">Seafood exporters call for delaying HCMC port fee collection until year end</a>
                             <p>21 Apr 2020</p>
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        <div class="col-6 img">
+                        <div class="col-lg-6 col-md-4 col-sm-4  img">
                             <img src="{{ Theme::asset()->url('images/news-detail/img4.jpg') }}" alt="">
                         </div>
-                        <div class="col-6 description">
+                        <div class="col-lg-6 col-md-8 col-sm-8  description">
                             <a href="#" title="#">Pakistan begins anti-dumping investigation on Vietnam steel</a>
                             <p>21 Apr 2020</p>
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        <div class="col-6 img">
+                        <div class="col-lg-6 col-md-4 col-sm-4  img">
                             <img src="{{ Theme::asset()->url('images/news-detail/img5.jpg') }}" alt="">
                         </div>
-                        <div class="col-6 description">
+                        <div class="col-lg-6 col-md-8 col-sm-8  description">
                             <a href="#" title="#">Steel giant to manufacture containers for first time in Vietnam</a>
                             <p>21 Apr 2020</p>
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        <div class="col-6 img">
+                        <div class="col-lg-6 col-md-4 col-sm-4  img">
                             <img src="{{ Theme::asset()->url('images/news-detail/img6.jpg') }}" alt="">
                         </div>
-                        <div class="col-6 description">
+                        <div class="col-lg-6 col-md-8 col-sm-8 description">
                             <a href="#" title="#">Steel shield, grills add looks, safety to new Saigon house</a>
                             <p>21 Apr 2020</p>
                             <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
                             since exporters still feel the pinch from the Covid-19 pandemic. </p>
                         </div>
-                        
                     </div>
                 </div>    
             </div>
         </div>
     </div>
 </section>
-<section style="padding-top:60px">
+<section style="padding-top:3%">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.components.form-signup")
     </div>
