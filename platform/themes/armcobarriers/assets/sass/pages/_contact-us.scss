@@ -133,7 +133,7 @@
 }
 
 .let-talk {
-    margin-top: 140px;
+    padding-top: 9%;
     h3 {
         font-size: 25px;
         font-family: $FolioStd-Medium;
@@ -309,10 +309,10 @@
     .contact-banner {
         .title-contact {
             h1 {
-                font-size: 25px;
+                font-size: 24px;
             }
             p {
-                font-size: 11px;
+                font-size: 10px;
             }
         }
     }
@@ -352,5 +352,25 @@
 .map-location {
     iframe {
         width: 100vw;
+    }
+}
+// respon
+@media(max-width:991px)
+{
+    .let-talk{
+        padding-top: 4% !important;
+    }
+}
+@media(max-width:640px)
+{
+    .contact-banner {
+        .title-contact{
+            h1{
+                font-size: 35px !important;
+            }
+            p{
+                font-size: 11px !important;
+            }
+        } 
     }
 }
