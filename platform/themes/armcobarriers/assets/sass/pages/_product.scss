@@ -237,7 +237,7 @@ a[data-toggle="collapse"] {
     &:hover .product-name {
         font-weight: bold;
     }
-    padding-top: 60px;
+    padding-top: 15%;
     a {
         .product-item {
             position: relative;
@@ -309,6 +309,18 @@ a[data-toggle="collapse"] {
     }
 }
 
+@media(max-width:991px)
+{
+    .pagination_style1{
+        padding-top: 4% !important;
+    }
+    .product-wrapper{
+        padding-bottom: 0 !important;
+    }
+    .product-item-wrapper {
+        padding-top: 12% !important;
+    }
+}
 @media screen and(min-width: 912px) and (max-width: 990px) {
     .custom_select {
         .form-control {
