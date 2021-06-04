@@ -377,7 +377,7 @@
                 
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="mt-3 pagination_style1">
+                    <div class="pagination_style1">
                       <nav aria-label="...">
                         <ul class="pagination">
                           {{-- <li class="page-item disabled">

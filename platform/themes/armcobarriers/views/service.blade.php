@@ -102,7 +102,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:4%">
+<section class="product-range-children">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrap2">
+            <div class="wrap2 my-5">
                 <div class="icon">
                  <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
@@ -161,7 +161,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:4%">
+<section >
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.components.form-signup")
     </div>
