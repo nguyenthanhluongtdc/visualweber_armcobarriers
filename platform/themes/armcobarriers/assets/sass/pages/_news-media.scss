@@ -165,7 +165,10 @@ $gray_text: #262626;
     }
 }
 
-.wrap-sign {
+.wrap-sign {    
+    .sign-up {
+        text-align: center;
+    }
     .form-flex-lg {
         display: flex;
         flex-wrap: wrap;
