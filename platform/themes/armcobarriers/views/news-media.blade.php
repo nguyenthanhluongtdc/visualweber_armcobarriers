@@ -12,7 +12,7 @@
 <div class="pages-news-media">
     <div class="container-customize">
         <h1> Lastest <br> New & Events </h1>
-        <div class="box-media pt-5 pb-5">
+        <div class="box-media pt-5 pb-lg-5">
             <div class="content">
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-4 mb-md-0">
                         <div class="item">
                             <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
@@ -335,7 +335,7 @@
             </div>
         </div>
 
-        <div class="my-7">
+        <div class="my-7 mt-n20">
             <div class="row">
                 <div class="col-md-12">
                 <div class="pt-0 mt-0 pagination_style1">
