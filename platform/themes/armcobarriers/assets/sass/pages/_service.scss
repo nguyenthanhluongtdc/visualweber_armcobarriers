@@ -333,3 +333,13 @@
         }
     }
 }
+
+@media(max-width:380px) {
+    .wrap-top{
+        .top2{
+            p{
+                font-size: 13px !important;
+            }
+        }
+    }
+}

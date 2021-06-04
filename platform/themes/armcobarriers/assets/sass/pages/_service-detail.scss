@@ -185,3 +185,13 @@
         } 
     } 
 }
+@media(max-width:480px) {
+    .wrap-product-quality
+    {
+        .product-quality{
+            h2{
+                font-size: 40px !important;
+            }
+        }
+    }
+    }
