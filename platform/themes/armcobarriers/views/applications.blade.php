@@ -26,7 +26,6 @@
     <div class="main-scroll">
         <div class="left-tab-md tabs-scroll"> 
             <div class="container-customize">
-                <i class="fal fa-hand-point-right"></i> 
                 <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
                     <a class="nav-item nav-link active mb-lg-0 mb-2"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
                     <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>

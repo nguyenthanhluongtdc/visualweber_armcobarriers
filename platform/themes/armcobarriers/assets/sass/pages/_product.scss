@@ -44,14 +44,7 @@
     justify-self: end;
     display: flex;
     justify-content: flex-end;
-    p {
-        position: absolute;
-        max-width: 650px;
-        left: 8%;
-        top: 40%;
-        font-size: 17px;
-        font-family: $Arial;
-    }
+    
 }
 
 
@@ -234,7 +227,7 @@ a[data-toggle="collapse"] {
 }
 
 .product-item-wrapper {
-    &:hover .product-name {
+    .product-name {
         font-weight: bold;
     }
     padding-top: 15%;
@@ -311,9 +304,6 @@ a[data-toggle="collapse"] {
 
 @media(max-width:991px)
 {
-    .pagination_style1{
-        padding-top: 4% !important;
-    }
     .product-wrapper{
         padding-bottom: 0 !important;
     }

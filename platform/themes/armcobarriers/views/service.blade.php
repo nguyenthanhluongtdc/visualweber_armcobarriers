@@ -19,7 +19,6 @@
 <div class="services-detail-tabs main-scroll">
     <div class="left-tab-md tabs-scroll">
         <div class="container-customize">
-            <i class="fal fa-hand-point-right"></i> 
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-item nav-link"style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>

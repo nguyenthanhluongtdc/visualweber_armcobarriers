@@ -14,8 +14,10 @@
   <div class="container-fluid-customize">
     <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ Theme::asset()->url('images/product/banner-product.jpg')}})">
     <div class="container-customize">
-      <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
-      </p>
+      <div class="d-flex align-items-center h-100 col-lg-7 col-12">
+        <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
+        </p>
+      </div>
     </div>
     <div>
   </div>
