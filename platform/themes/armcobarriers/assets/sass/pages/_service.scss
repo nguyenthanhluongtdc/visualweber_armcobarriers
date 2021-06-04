@@ -111,8 +111,8 @@
             border-radius: 50%;
             background-color: rgba(0, 0, 0, 0.5);
             ;
-            width: 21%;
-            height: 16%;
+            width: 60px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -175,6 +175,7 @@
         }
     }
     .product-range {
+        padding-bottom: 3%;
         h2 {
             font-family: $FolioStd-Medium;
             color: #000000;
@@ -249,8 +250,49 @@
         }
     }
 }
+@media(max-width:991px){
+    .asset{
+        display: flex;
+        justify-content: center;
+    }
+    .container-customize{
+        padding: 0 15px  !important;
+    }
+  .wrap-top{
+      .top2{
+          h2{
+              font-size: 36px;
+          }
+          padding-bottom: 3% !important;
+      }
+  }
+  .wrap-product{
+      .wrap-descrip{
+          padding-bottom: 3% !important;
+          p{
+              padding-right: 0 !important;
+          }
+      }
+  }
+  .post{
+      padding-bottom: 3% !important;
+  }
+}
 @media(max-width:768px) {
+    .wrap-top{
+        .top2{
+            h2{
+                font-size: 30px;
+            }
+            p{
+                font-size: 17px !important;
+            }
+        }
+    }
     .wrap-our {
+        .service{
+            font-size: 30px;
+        }
         .asset {
             justify-content: center;
             display: flex;
@@ -263,6 +305,13 @@
     }
 }
 @media(max-width:575px) {
+    .wrap-top{
+        .top2{
+            p{
+                font-size: 15px !important;
+            }
+        }
+    }
     .wrap-our {
         .asset {
             p {

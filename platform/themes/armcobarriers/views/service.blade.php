@@ -85,7 +85,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:100px">
+<section style="padding-top:6%">
     <div class="container-fluid-customize">
         <div class="wrap-roadside">
             <div class="container-customize">
@@ -101,7 +101,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:60px">
+<section style="padding-top:4%">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
@@ -160,7 +160,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:60px">
+<section style="padding-top:4%">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.components.form-signup")
     </div>
