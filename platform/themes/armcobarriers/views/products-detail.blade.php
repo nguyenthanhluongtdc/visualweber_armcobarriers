@@ -15,10 +15,7 @@
                     <span>Guardrail - Railgard curvature details</span>
                 </a>
             </div>
-            <!-- @includeIf("theme.armcobarriers::views.pages.product_detail.sections.product_info")
-            @includeIf("theme.armcobarriers::views.pages.product_detail.sections.more_info")
-            @includeIf("theme.armcobarriers::views.pages.product_detail.sections.other_products") -->
-
+           
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
             <!---product infomation-->
             <div id="product_info" class="col-sm-12 col-md-12">
