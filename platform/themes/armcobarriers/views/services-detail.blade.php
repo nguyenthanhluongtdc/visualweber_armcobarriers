@@ -40,7 +40,7 @@
 </div>
 
 
-<section class="mt-5">
+<section >
     <div class="container-customize">
         <div class="wrap-text">
             <div class="row">
@@ -68,7 +68,7 @@
         </div>
     </div>
 </section>
-<section class="mt-5">
+<section >
     <div class="container-customize">
         <div class="wrap-pic">
             <div class="re-pow">
@@ -94,7 +94,7 @@
         </div>
     </div>
 </section>
-<section class="mt-5">
+<section>
     <div class="container-customize">
         <div class="wrap-product-quality">
             <div class="product-quality">

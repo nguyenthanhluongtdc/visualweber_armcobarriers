@@ -42,7 +42,7 @@
 <section">
     <div class="container-customize">
         <div class="wrap-our">
-            <div class="service my-5 pb-0">
+            <div class="service ">
                 <p>Our's Services</p>
             </div>
             <div class="row">
@@ -102,7 +102,7 @@
         </div>
     </div>
 </section>
-<section class="product-range-children">
+<section style="padding-top:4%">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">

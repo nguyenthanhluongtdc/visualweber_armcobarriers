@@ -85,6 +85,7 @@
 
 .wrap-our {
     .service {
+        padding: 3% 0;
         font-size: 40px;
         font-family: $FolioStd-Bold;
         color: #000000;
@@ -161,6 +162,9 @@
 }
 
 .wrap-product {
+    .wrap2{
+        padding-bottom: 3%;
+    }
     .view-product {
         display: flex;
         .icon {
@@ -177,7 +181,7 @@
         }
     }
     .product-range {
-        margin-bottom: 30px;
+        margin-bottom: 2%;
         h2 {
             font-family: $FolioStd-Medium;
             color: #000000;
