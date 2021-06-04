@@ -69,7 +69,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             
-                                <li class="nav-link nav-item">
+                                <li class="nav-link nav-item active">
                                     <a href="/" class="nav__menu-link">Homepage</a>
                                 </li>
                                 <li class="nav-link nav-item ">
