@@ -280,7 +280,7 @@
     }
 }
 .experience{
-    padding-top: 40px;
+    padding:3% 0;
     .exp{
         p{
             font-size: 15px;
@@ -482,6 +482,15 @@
         }
     }
 }
+@media (max-width:640px) {
+    .nav-tabs{
+        a.nav-link{
+            padding-right: 30px !important;
+            font-size: 13px !important;
+        }
+    }
+}
+
 @media (max-width:480px) {
     .wrap-cont{
         .content-about{
