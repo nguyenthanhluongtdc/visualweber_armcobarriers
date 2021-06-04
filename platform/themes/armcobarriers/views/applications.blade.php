@@ -23,19 +23,20 @@
 </section>
 
 <section>
-    <div class="d-lg-block d-flex flex-nowrap ">
-        <div class="left-tab-md overflow-auto col-3 col-lg-12 pl-lg-0 pl-3 border-right"> 
+    <div class="main-scroll">
+        <div class="left-tab-md tabs-scroll"> 
             <div class="container-customize">
+                <i class="fal fa-hand-point-right"></i> 
                 <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
-                <a class="nav-item nav-link active mb-lg-0 mb-2"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
-                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>
-                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-bridges-tab" data-toggle="tab" href="#nav-bridges" role="tab" aria-controls="nav-bridges" aria-selected="false">Bridges & Culverts </a>
-                <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">Design Specials</a>
+                    <a class="nav-item nav-link active mb-lg-0 mb-2"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
+                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>
+                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-bridges-tab" data-toggle="tab" href="#nav-bridges" role="tab" aria-controls="nav-bridges" aria-selected="false">Bridges & Culverts </a>
+                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">Design Specials</a>
                 </div>
             </div>
         </div>
 
-        <div class="right-tab-md col-9 col-lg-12">
+        <div class="right-tab-md">
             <div class="container-fluid-customize">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade  show active" id="nav-road" role="tabpanel" aria-labelledby="nav-road-tab">
@@ -192,7 +193,7 @@
     </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
 
@@ -209,4 +210,4 @@
        
     })
 
-</script>
+</script> -->
