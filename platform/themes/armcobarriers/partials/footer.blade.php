@@ -1,23 +1,21 @@
 <footer class="footer contaier-fluid-customize">
     <div class="footer-yellow"> 
         <div class="container-customize">
-            
+            <div class="footer__logo">
+                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="logo">     
+            </div>
             <div class="container-wrapper">
                 <div class="row">
-                    <div class="col-lg-12 col-7 mb-5">
+                    <div class="col-lg-3 col-md-5 col-12 mb-lg-0 mb-5">
                         <div class="protection-solutaion">
-                            <div class="footer__logo">
-                                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="logo">     
+                            <div class="tiltle-protection">
+                                <h3>Asset Protection Solutions</h3>
+                            </div>
+                            <div class="map-protection">
+                                <img src="{{ Theme::asset()->url('images/footer/map-footer.png') }}" alt="map">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-5 mb-5">
-                        <div class="tiltle-protection">
-                            <h3>Asset Protection Solutions</h3>
-                        </div>
-                        <div class="map-protection">
-                            <img src="{{ Theme::asset()->url('images/footer/map-footer.png') }}" alt="map">
-                        </div>
+                        
                     </div>
                     <div class="col-lg-3 col-md-7 col-12 mb-lg-0 mb-5">
                         <div class="contact-location">
