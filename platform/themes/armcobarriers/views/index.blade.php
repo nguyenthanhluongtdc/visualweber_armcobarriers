@@ -133,46 +133,61 @@
     </div>
     
 </section>
-<section>
-    <div class="product-range-wrapper">
-        <div class="container-customize">
-            <div class="product-range-title">
-                <h2 data-aos="" data-aos-delay="200">Product Range</h2>
-                <p data-aos="" data-aos-delay="400">Roadside, Car Parks, Warehouses</p>
+<section style="padding-top:4%">
+    <div class="container-customize">
+        <div class="wrap-product">
+            <div class="product-range">
+                <h2>Product Range</h2>
+                <p>Roadside, Car Parks, Warehouses</p>
             </div>
-            <div class="product-range-content mb-lg-5">
+            <div class="wrap-descrip">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-4">
-                        <h4 data-aos="" data-aos-delay="200">W Beam &, Thrie Beam</h4>
-                        <p data-aos="" data-aos-delay="400">Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>W Beam &, Thrie Beam</h3>
+                            </div>
+                            <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-4">
-                        <h4 data-aos="" data-aos-delay="200">Posts & Bollards</h4>
-                        <p data-aos="">ARMCO® Bollards are versatile in their many applications.</p>
-                        <p data-aos="" data-aos-delay="400">Manufactured in 5.4mm steel to meet both traffic and parking and customer specification, Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>Posts & Bollards</h3>
+                            </div>
+                            <p>ARMCO® Bollards are versatile in their many applications.</p>
+                            <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification,
+                                Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-4">
-                        <div>
-                            <h4 data-aos="" data-aos-delay="200">Wheelstops & Floorgards</h4>
-                            <p data-aos="" data-aos-delay="600">Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) works optimally in conjunction with Armco® Railgard™.</p>
-                        </div> 
-                        
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>Wheelstops & Floorgards</h3>
+                            </div>
+                            <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, 
+                            being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) 
+                            works optimally in conjunction with Armco® Railgard™.</p>
+                        </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-4">
-                        <h4 data-aos="" data-aos-delay="200">Handrail, Gates & Pipegards</h4>
-                        <p data-aos="">Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
-                        <p data-aos="" data-aos-delay="600">We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product.</p>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>Handrail, Gates & Pipegards</h3>
+                            </div>
+                            <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
+                            <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product. </p>
+                        </div>
                     </div>
                 </div>
-                
             </div>
-            <div class="product-view my-5">
-                <a href="/product">
-                    <img src="{{ Theme::asset()->url('images/home/Icon-arrow-black.png') }}" alt="">
-                    <h3 class="product-view-title" data-aos="" data-aos-delay="200">
-                        View Our Product
-                    </h3>
-                </a>
+            <div class="wrap2">
+                <div class="icon">
+                 <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                </div>
+                <div class="view">
+                     <a href="/product">VIEW OUR PRODUCT</a>
+                </div>
             </div>
         </div>
     </div>
