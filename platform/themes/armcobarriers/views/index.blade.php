@@ -112,8 +112,6 @@
                             <p>Factories, Warehouse</p>
                         <i class="fal fa-long-arrow-right"></i>
                         </div>
-                        
-                        
                     </a>
                 </div>
                 <div class="grid__item gallery__item">
@@ -123,8 +121,6 @@
                             <p>Road</p>
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
-                        
-                        
                     </a>
                 </div>
             </div>

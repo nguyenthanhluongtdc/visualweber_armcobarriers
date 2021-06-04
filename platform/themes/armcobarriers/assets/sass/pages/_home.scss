@@ -1,6 +1,7 @@
 .location-office-wrapper,
 .service-us-wrapper {
     .location-office {
+        margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-row-gap: 5%;
