@@ -6,7 +6,7 @@
             </div>
             <div class="container-wrapper">
                 <div class="row">
-                    <div class="col-lg-3 col-md-2 col-sm-6">
+                    <div class="col-lg-3 col-md-5 col-12 mb-lg-0 mb-5">
                         <div class="protection-solutaion">
                             <div class="tiltle-protection">
                                 <h3>Asset Protection Solutions</h3>
@@ -17,7 +17,7 @@
                         </div>
                         
                     </div>
-                    <div class="col-md-4 col-sm-6">
+                    <div class="col-lg-3 col-md-7 col-12 mb-lg-0 mb-5">
                         <div class="contact-location">
                             <h3>ARMCO® Head Office</h3>
                             <p>3 FOURTH AVENUE, SUNSHINE, VICTORIA.3020. AUSTRALIA </p>
@@ -26,7 +26,7 @@
                             <p>Email<a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p>
                         </div>
                     </div>
-                    <div class="col-lg-1 col-md-2 col-sm-4">
+                    <div class="col-lg-2 col-md-5 col-6 mb-lg-0 mb-5">
                         <div class="homepage">
                             <h3>Homepage</h3>
                             <p><a href="{{url('/about')}}">About Us</a></p>
@@ -34,7 +34,7 @@
                             <p><a href="{{url('/service')}}">Services</a></p>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-lg-2 col-md-7 col-6 mb-lg-0 mb-5">
                         <div class="applications">
                             <h3>Applications</h3>
                             <p><a href="{{url('/gallery')}}">Gallery</a></p>
@@ -42,7 +42,7 @@
                             <p><a href="{{url('/contact-us')}}">Contact Us</a></p>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4">
+                    <div class="col-lg-2 col-md-2 mb-lg-0">
                         <div class="connect-us">
                             <h3>Connect with us</h3>
                             <a href="">
@@ -55,13 +55,13 @@
             
             <div class="footer-bottom">
                 <div class="row">
-                    <div class="col-md-7 col-sm-7">
+                    <div class="col-md-7 col-12 order-md-1 order-3">
                         <p>
                             Copyright © 2021 ARMCO BARRIERS Pty Ltd  
                             abn 21 007 274 464 
                         </p>
                     </div>
-                    <div class="col-md-2 col-sm-2">
+                    <div class="col-md-2 col-12 order-md-2 order-1">
                         <a href="">
                             <p>
                                 Privacy Policy
@@ -69,7 +69,7 @@
                         </a>
                         
                     </div>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-3 col-12 order-md-3 order-2">
                         <a href="">
                             <p>
                                 Terms and Conditions

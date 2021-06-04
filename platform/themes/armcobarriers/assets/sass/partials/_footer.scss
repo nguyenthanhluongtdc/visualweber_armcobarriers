@@ -140,6 +140,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .footer .footer-yellow {
+        text-align: center;
+    }
+}
+
 @media(max-width:576px) {
     .footer {
         .footer-yellow {
