@@ -127,7 +127,7 @@
         </div>
     </div>
 </section>
-<section style="padding-top:60px">
+<section class="mt-lg-6 mt-4">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range mb-lg-5 mb-4">
