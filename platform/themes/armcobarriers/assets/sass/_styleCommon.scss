@@ -13,7 +13,6 @@ footer {
 }
 
 .tabs-scroll {
-    overflow-x: scroll;
     
     .nav-tabs {
         flex-wrap: nowrap !important;
@@ -35,11 +34,14 @@ footer {
         padding-top: 30px;
     }
 
-    .tabs-scroll .fa-hand-point-right{
-        font-size: $rem1-5;
-        position: absolute;
-        top: 0;
-        display: inline-block;
+    .tabs-scroll {
+        overflow-x: scroll;
+        .fa-hand-point-right{
+            font-size: $rem1-5;
+            position: absolute;
+            top: 0;
+            display: inline-block;
+        }
     }
 
     .nav-tabs a.nav-link{
