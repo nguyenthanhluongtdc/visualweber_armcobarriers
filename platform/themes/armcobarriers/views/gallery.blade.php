@@ -89,15 +89,15 @@
   </section>
 
   <section>
-      <div class="gallery-wrapper">
+      <div class="gallery-wrapper mt-5">
           <div class="container-customize">
             <h2> New <br> & Events </h2>
-            <div class="box-media pt-5 pb-5">
+            <div class="box-media pt-4">
                 <div class="content">
                     <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                             <div class="item">
-                                <a href="">
+                                <a href="/news-detail">
                                     <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
                                     <h3>Om Wire and Wire Products Industries is a reputed
                                         Highway Crash Barrier, Crash Barrier
@@ -106,18 +106,17 @@
                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
                                     </p>
                                 </a>
-    
+
                                 <div class="options">
                                     <div class="date"> 21 Apr 2020 </div>
                                     <a class="share"> Share </a>
-                                    
                                 </div>
                             </div>
                         </div>
-    
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                             <div class="item">
-                                <a href="">
+                                <a href="/news-detail">
                                     <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
                                     <h3>Om Wire and Wire Products Industries is a reputed
                                         Highway Crash Barrier, Crash Barrier
@@ -126,7 +125,7 @@
                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
                                     </p>
                                 </a>
-    
+
                                 <div class="options">
                                     <div class="date"> 21 Apr 2020 </div>
                                     <a class="share"> Share </a>
@@ -134,9 +133,9 @@
                             </div>
                         </div>
     
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                             <div class="item">
-                                <a href="">
+                                <a href="/news-detail">
                                     <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
                                     <h3>Om Wire and Wire Products Industries is a reputed
                                         Highway Crash Barrier, Crash Barrier
@@ -145,7 +144,7 @@
                                     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
                                     </p>
                                 </a>
-    
+
                                 <div class="options">
                                     <div class="date"> 21 Apr 2020 </div>
                                     <a class="share"> Share </a>

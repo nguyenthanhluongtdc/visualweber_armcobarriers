@@ -192,21 +192,21 @@
 </div>
 <div class="container-customize">
     <div class="count">
-        <div class="row">
+        <div class="row w-100 mx-0">
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="count-customers">
+                <div class="box-count count-customers">
                     <h2>15,451</h2>
                     <p>Customers</p>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="count-completed">
+                <div class="box-count count-completed">
                     <h2>125,451</h2>
                     <p>Completed projects</p>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="count-kilomet">
+                <div class="box-count count-kilomet">
                     <h2>1,204</h2>
                     <p>Kilometres installed</p>
                 </div>

@@ -1,6 +1,5 @@
 .location-office-wrapper,
 .service-us-wrapper {
-    margin-top: 5%;
     .location-office {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -98,8 +97,9 @@
 
 .product-range-wrapper {
     .product-range-title {
-        padding-top: 100px;
-        padding-bottom: 60px;
+        margin-top: 120px;
+        margin-bottom: 30px;
+
         h2 {
             font-size: 60px;
             font-family: $FolioStd-Medium;
@@ -135,7 +135,7 @@
             align-items: center;
             color: $gray-text;
         }
-        padding-top: 50px;
+        
         h3 {
             font-size: 20px;
             text-transform: uppercase;
@@ -186,7 +186,7 @@
     }
     .news-post {
         .news-post--content {
-            padding-bottom: 40px;
+            padding-bottom: 20px;
         }
         .news-post-time {
             display: flex;
@@ -194,6 +194,7 @@
             .btn-share {
                 margin-left: 30px;
                 a {
+                    display: inline-block;
                     padding: 10px 15px;
                     background-color: $priamry_color;
                     color: #000;
@@ -205,9 +206,9 @@
         }
     }
     .read-more {
-        padding-top: 100px;
-        padding-left: 50px;
-        padding-bottom: 100px;
+        margin-top: 80px;
+        margin-bottom: 80px;
+
         a {
             color: $gray-text;
             h3 {
@@ -533,6 +534,19 @@
 }
 
 @media (max-width:991px) {
+    .count {
+        .box-count {
+            text-align: center;
+            margin-bottom: 50px;
+
+            p::after{
+                left: 50% !important;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+
     .swiper-slide {
         .swiper-content {
             bottom: 50px;
@@ -553,7 +567,8 @@
     }
     .product-range-wrapper {
         .product-range-title {
-            padding: 50px 0 30px 0;
+            margin-top: 80px;
+            margin-bottom: 20px;
             h2 {
                 font-size: 30px;
             }
@@ -594,7 +609,8 @@
             font-size: 13px;
         }
         .read-more {
-            padding: 50px 0px;
+            margin-top: 50px;
+            margin-bottom: 50px;
         }
     }
 }
@@ -603,10 +619,8 @@
     .news-event-wrapper {
         .news-post {
             .news-post-time {
-                display: unset;
-                .btn-share {
-                    margin: 20px 0px 0px 0px;
-                }
+                display: flex;
+                
             }
         }
     }
@@ -642,6 +656,11 @@
         }
     }
     .product-range-wrapper {
+        .product-range-title {
+            margin-top: 60px;
+            margin-bottom: 0;
+        }
+
         .product-range-content {
             p:nth-child(3) {
                 padding-bottom: 10px;
@@ -653,17 +672,34 @@
             .news-post--titlte {
                 font-size: 15px;
             }
-            .news-post-time {
-                display: flex;
-                justify-content: space-evenly;
-                margin-bottom: 30px;
-                .btn-share {
-                    margin: 0;
-                }
-            }
+            
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  
+    /* CSS */
+  
+    .news-event-wrapper .news-post .news-post-time {
+          display: inherit;
+          padding-top: 10px;
+  
+          >span:first-child {
+              display: block;
+              text-align: right;
+          }     
+  
+          .btn-share {
+              margin-left: 0;
+          }
+  
+          .type {
+              margin: 0;
+          }
+    }
+    
+  }
 
 @media(max-width:480px) {
     .swiper-slide {
@@ -690,9 +726,7 @@
     }
     .news-event-wrapper {
         .news-post {
-            .news-post--content {
-                padding-bottom: 20px;
-            }
+            
             .news-post-time {
                 justify-content: space-between;
                 align-items: center;
@@ -704,6 +738,25 @@
             }
         }
     }
+
+    /* CSS */
+    .news-event-wrapper .news-post .news-post-time{
+        display: inherit;
+        padding-top: 10px;
+
+        > span:first-child {
+            display: block;
+            text-align: right;
+        }
+
+        .btn-share {
+            margin-left: 0;
+        }
+
+        .type {
+            margin: 0;
+        }
+    } 
 }
 
 .swiper-container {

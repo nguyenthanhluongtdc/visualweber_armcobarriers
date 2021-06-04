@@ -140,25 +140,25 @@
                 <h2 data-aos="" data-aos-delay="200">Product Range</h2>
                 <p data-aos="" data-aos-delay="400">Roadside, Car Parks, Warehouses</p>
             </div>
-            <div class="product-range-content">
+            <div class="product-range-content mb-lg-5">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-5">
                         <h4 data-aos="" data-aos-delay="200">W Beam &, Thrie Beam</h4>
                         <p data-aos="" data-aos-delay="400">Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-5">
                         <h4 data-aos="" data-aos-delay="200">Posts & Bollards</h4>
                         <p data-aos="">ARMCO® Bollards are versatile in their many applications.</p>
                         <p data-aos="" data-aos-delay="400">Manufactured in 5.4mm steel to meet both traffic and parking and customer specification, Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-5">
                         <div>
                             <h4 data-aos="" data-aos-delay="200">Wheelstops & Floorgards</h4>
                             <p data-aos="" data-aos-delay="600">Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) works optimally in conjunction with Armco® Railgard™.</p>
                         </div> 
                         
                     </div>
-                    <div class="col-md-3 col-sm-6 mt-4">
+                    <div class="col-md-3 col-sm-6 mt-lg-2 mt-5">
                         <h4 data-aos="" data-aos-delay="200">Handrail, Gates & Pipegards</h4>
                         <p data-aos="">Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
                         <p data-aos="" data-aos-delay="600">We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product.</p>
@@ -166,7 +166,7 @@
                 </div>
                 
             </div>
-            <div class="product-view">
+            <div class="product-view my-5">
                 <a href="/product">
                     <img src="{{ Theme::asset()->url('images/home/Icon-arrow-black.png') }}" alt="">
                     <h3 class="product-view-title" data-aos="" data-aos-delay="200">
@@ -177,7 +177,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="mt-lg-5">
    {{-- <div class="service-us-wrapper">
        <div class="container-customize">
         <div class="row">
@@ -316,7 +316,7 @@
                 <h2 data-aos="" data-aos-delay="200">News <br>& Events</h2>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="200">
                         <a href="">
                             <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-1.png') }}" alt="">
@@ -336,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="600">
                        <a href="">
                             <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-2.png') }}" alt="">
@@ -356,7 +356,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="1000">
                         <a href="">
                                 <img class="img-background" src="{{ Theme::asset()->url('images/home/news-event-3.png') }}" alt="">
@@ -381,23 +381,22 @@
             <div class="read-more">
                 <a href="{{url('/news-all')}}"><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
-            <div class="container-customize">
                 <div class="count">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                            <div class="count-customers" data-aos="" data-aos-delay="400">
+                    <div class="row w-100 mx-0">
+                        <div class="col-lg-4 col-12">
+                            <div class="box-count count-customers" data-aos="" data-aos-delay="400">
                                 <h2>15,451</h2>
                                 <p>Customers</p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                            <div class="count-completed" data-aos="" data-aos-delay="400">
+                        <div class="col-lg-4 col-12">
+                            <div class="box-count count-completed" data-aos="" data-aos-delay="400">
                                 <h2>125,451</h2>
                                 <p>Completed projects</p>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                            <div class="count-kilomet" data-aos="" data-aos-delay="400">
+                        <div class="col-lg-4 col-12">
+                            <div class="box-count count-kilomet" data-aos="" data-aos-delay="400">
                                 <h2>1,204</h2>
                                 <p>Kilometres installed</p>
                             </div>
@@ -409,8 +408,6 @@
                         <p>At ARMCO® Barriers you deal with people specialising in the safety barrier industry with over 35 years experience. </p>
                     </div>
                 </div>
-            </div>
-
         </div>
     </div>
 </section>

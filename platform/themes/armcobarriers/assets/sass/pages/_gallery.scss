@@ -1,5 +1,5 @@
 .title-gallery {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     max-width: 1030px;
     font-size: 17px;
 }
@@ -120,9 +120,8 @@
 }
 
 .read-more {
-    padding-top: 1%;
-    padding-left: 2%;
-    padding-bottom: 4%;
+    margin-bottom: 50px;
+
     a {
         color: $gray-text;
         h3 {
@@ -139,7 +138,6 @@
 .gallery-wrapper {
     h2 {
         font-family: "FolioStd-Medium";
-        padding: 4% 0 2% 0;
     }
     .box-media {
         .content {
@@ -198,6 +196,53 @@
         }
     }
 }
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  
+    /* CSS */
+  
+    .gallery-wrapper  .box-media .content .item .options {
+          display: inherit;
+          padding-top: 10px;
+  
+          >div:first-child {
+              display: block;
+              text-align: right;
+          }     
+  
+          .share {
+              margin-left: 0;
+          }
+  
+          .type {
+              margin: 0;
+          }
+    }
+    
+  }
+
+  @media  (max-width: 480px) {
+  
+    /* CSS */
+      .gallery-wrapper  .box-media .content .item .options > div:first-child {
+          display: block;
+          text-align: right;
+      }
+  
+      .gallery-wrapper  .box-media .content .item .options .share {
+          margin-left: 0;
+      }
+  
+      .gallery-wrapper  .box-media .content .item .options .type {
+          margin: 0;
+      }
+  
+      .gallery-wrapper  .box-media .content .item .options {
+          display: inherit;
+          padding-top: 10px;
+      }
+    
+  }
 
 @media(max-width:576px) {
     .mySwiper-left {
