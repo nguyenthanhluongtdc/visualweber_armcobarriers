@@ -141,6 +141,12 @@
         padding-bottom: 25px;
         border-bottom: 1px solid rgba(112, 112, 112, .1);
     }
+    .form-group,
+    .message {
+        .form-control:focus {
+            box-shadow: none;
+        }
+    }
 }
 
 .visit-title {
@@ -244,23 +250,23 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-@media(max-width:991px)
-{
-    .let-talk{
+
+@media(max-width:991px) {
+    .let-talk {
         padding-top: 4% !important;
     }
 }
-@media(max-width:640px)
-{
+
+@media(max-width:640px) {
     .contact-banner {
-        .title-contact{
-            h1{
-                font-size: 35px !important;
+        .title-contact {
+            h1 {
+                font-size: 30px !important;
             }
-            p{
+            p {
                 font-size: 11px !important;
             }
-        } 
+        }
     }
 }
 
@@ -324,7 +330,6 @@
     }
 }
 
-
 @media(max-width:991px) {
     .form-contact-us {
         margin-left: 20%;
@@ -357,12 +362,13 @@
         width: 100vw;
     }
 }
+
 // respon
 @media(max-width:380px) {
     .contact-banner {
         .title-contact {
             h1 {
-                font-size: 24px;
+                font-size: 20px!important;
             }
             p {
                 font-size: 11px;
