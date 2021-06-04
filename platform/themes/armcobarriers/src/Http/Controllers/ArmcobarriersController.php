@@ -10,6 +10,7 @@ use Platform\Theme\Events\RenderingSingleEvent;
 use Platform\Theme\Events\RenderingHomePageEvent;
 use Platform\Theme\Events\RenderingSiteMapEvent;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Platform\Page\Repositories\Interfaces\PageInterface;
 use Illuminate\Support\Arr;
 use Response;
 use SeoHelper;
@@ -23,8 +24,12 @@ class ArmcobarriersController extends PublicController
     /**
      * @return \Illuminate\Http\Response|Response
      */
+    public function __construct(Page $page){
+        $this->page=$page;
+    }
     public function getIndex()
     {
+
         SeoHelper::setTitle(theme_option('seo_title', 'Armcobarriers'))
             ->setDescription(theme_option('seo_description', 'Armcobarriers'))
             ->openGraph()
@@ -37,12 +42,13 @@ class ArmcobarriersController extends PublicController
 
         if (defined('PAGE_MODULE_SCREEN_NAME')) {
             $homepageId = BaseHelper::getHomepageId();
+    
+
             if ($homepageId) {
                 $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
-
+               
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
-
                     return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
                 }
             }
@@ -53,8 +59,21 @@ class ArmcobarriersController extends PublicController
         Theme::breadcrumb()->add(__('Home'), url('/'));
 
         event(RenderingHomePageEvent::class);
+        try{
+            $data = [];
+            $data['page'] = $this->page->where('id', 1)->first();
+            // dd($data);
+            
+            return Theme::scope('index',$data)->render();
+            
 
-        return Theme::scope('index')->render();
+
+        }catch (\Throwable $throwAble) {
+            \Log::error('Có lỗi xảy ra thực hiện chức năng ' . __CLASS__ . '@' . __FUNCTION__, [$throwAble->getMessage()]);
+            return view('theme.main::views.500');
+        }
+
+        // return Theme::scope('index')->render();
     }
 
     /**
@@ -98,10 +117,12 @@ class ArmcobarriersController extends PublicController
 
         event(new RenderingSingleEvent($slug));
         Theme::layout('default');
+       
 
         if (!empty($result) && is_array($result)) {
             return Theme::scope(Arr::get($result, 'data.page')->template, $result['data'], Arr::get($result, 'default_view'))->render();
         }
+       
 
         abort(404);
     }
@@ -157,4 +178,5 @@ class ArmcobarriersController extends PublicController
     // {
     //     return Theme::scope('pages/product_detail/index')->render();
     // }
+    
 }
