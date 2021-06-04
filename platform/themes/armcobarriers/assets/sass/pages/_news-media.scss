@@ -207,8 +207,10 @@ $gray_text: #262626;
   ##Screen = B/w 1025px to 1280px
 */
 
-@media (max-width: 1024px) {
-  
+@media (max-width: 991px) {
+    .pages-news-media .box-media .content .item h3 {
+        padding: 20px 0;
+    }
     /* CSS */
     .p0-md {
         padding-left: 0;
@@ -225,7 +227,7 @@ $gray_text: #262626;
 }
 
 
-@media (min-width: 768px) and (max-width: 1280px) {
+@media  (max-width: 1280px) and (min-width: 576px) {
   
   /* CSS */
 
@@ -235,7 +237,7 @@ $gray_text: #262626;
 
         >div:first-child {
             display: block;
-            text-align: right;
+            text-align: left;
         }     
 
         .share {
@@ -274,6 +276,8 @@ $gray_text: #262626;
         margin-top: 0;
         margin-bottom: 0;
     }
+
+    
 }
 
 /* 
@@ -302,30 +306,28 @@ $gray_text: #262626;
     
 }
 
+@media (max-width: 380px) {
+    .pages-news-media .box-media .content .item .options {
+        display: inherit;
+        padding-top: 10px;
+
+        >div:first-child {
+            display: block;
+            text-align: left;
+        }     
+
+        .share {
+            margin-left: 0;
+        }
+
+        .type {
+            margin: 0;
+        }
+    }
+}
+
 /* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  /* CSS */
-    .pages-news-media .box-media .content .item .options > div:first-child {
-        display: block;
-        text-align: right;
-    }
-
-    .pages-news-media .box-media .content .item .options .share {
-        margin-left: 0;
-    }
-
-    .pages-news-media .box-media .content .item .options .type {
-        margin: 0;
-    }
-
-    .pages-news-media .box-media .content .item .options {
-        display: inherit;
-        padding-top: 10px;
-    }
-  
-}

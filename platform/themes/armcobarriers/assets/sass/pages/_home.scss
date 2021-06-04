@@ -532,6 +532,10 @@
 }
 
 @media (max-width:991px) {
+    .news-event-wrapper .news-post--titlte h4 {
+        padding: 15px 0;
+    }
+
     .count {
         .box-count {
             text-align: center;
@@ -684,17 +688,7 @@
     /* CSS */
   
     .news-event-wrapper .news-post .news-post-time {
-          display: inherit;
           padding-top: 10px;
-  
-          >span:first-child {
-              display: block;
-              text-align: right;
-          }     
-  
-          .btn-share {
-              margin-left: 0;
-          }
   
           .type {
               margin: 0;
@@ -730,7 +724,6 @@
         .news-post {
             
             .news-post-time {
-                justify-content: space-between;
                 align-items: center;
                 margin-bottom: 30px;
                 display: flex;
@@ -743,17 +736,7 @@
 
     /* CSS */
     .news-event-wrapper .news-post .news-post-time{
-        display: inherit;
         padding-top: 10px;
-
-        > span:first-child {
-            display: block;
-            text-align: right;
-        }
-
-        .btn-share {
-            margin-left: 0;
-        }
 
         .type {
             margin: 0;

@@ -279,14 +279,16 @@
         }
 
         .nav-item.active a::before {
-            content: "\f0a4";
-            font-family: "Font Awesome 5 Pro";
+            content: "";
             display: block;
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
             z-index: 1;
             left: -25px;
+            width: 15px;
+            height: 2px;
+            background-color: $gray-text;
         }
     }
 }

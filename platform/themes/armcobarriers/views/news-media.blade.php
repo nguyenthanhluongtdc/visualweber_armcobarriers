@@ -15,7 +15,7 @@
         <div class="box-media pt-5 pb-5">
             <div class="content">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
@@ -54,7 +54,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5 mb-md-0">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="/news-detail">
                                 <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
@@ -284,7 +284,7 @@
                     <div class="box-media">
                         <div class="content">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
+                                <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
@@ -299,7 +299,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
+                                <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
@@ -314,7 +314,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 mb-5 mb-md-0">
+                                <div class="col-lg-4 col-md-4 mb-5 col-sm-6 mb-md-0">
                                     <div class="item">
                                         <a href="/news-detail">
                                             <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
@@ -338,7 +338,7 @@
         <div class="my-7">
             <div class="row">
                 <div class="col-md-12">
-                <div class="pt-0 pagination_style1">
+                <div class="pt-0 mt-0 pagination_style1">
                     <nav aria-label="...">
                     <ul class="pagination">
                         {{-- <li class="page-item disabled">
