@@ -24,7 +24,7 @@
             <div class="container-fluid-customize">
                 <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.jpg') }})">
                     <div class="container-customize">
-                        <div class="content-about">
+                        <div class="content-about d-flex align-items-center h-100">
                                 <span>With the experience of over 25 years in guardrail and barrier systems, Armco® 
                                     Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
                                     beginnings, the company now has a clientele base that will only choose ARMCO® for 
