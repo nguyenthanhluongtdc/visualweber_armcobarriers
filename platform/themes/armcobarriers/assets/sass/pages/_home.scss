@@ -31,38 +31,6 @@
                 font-weight: bold;
             }
         }
-        .right-content {
-            .gallery__item {
-                position: relative;
-                &:hover .gallery__item-text {
-                    color: $priamry_color;
-                    i {
-                        display: block;
-                    }
-                }
-                img {
-                    width: 100%;
-                }
-                a {
-                    display: block;
-                }
-                .gallery__item-text {
-                    position: absolute;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    max-width: 100%;
-                    width: 87%;
-                    bottom: 9%;
-                    left: 7%;
-                    font-size: 20px;
-                    color: #fff;
-                    i {
-                        display: none;
-                    }
-                }
-            }
-        }
         .grid__item {
             position: relative;
             &:hover .gallery__item-text {
@@ -100,7 +68,6 @@
     .product-range-title {
         margin-top: 120px;
         margin-bottom: 30px;
-
         h2 {
             font-size: 60px;
             font-family: $FolioStd-Medium;
@@ -115,13 +82,8 @@
             font-size: 20px;
             font-family: $FolioStd-Medium;
             &:hover {
-                // background-color: $priamry_color;
-                // width: max-content;
-                // text-align: center;
-                // padding: 10px 20px;
                 font-weight: bold;
             }
-           
         }
         p {
             padding-top: 10px;
@@ -134,7 +96,6 @@
             align-items: center;
             color: $gray-text;
         }
-        
         h3 {
             font-size: 20px;
             text-transform: uppercase;
@@ -207,7 +168,6 @@
     .read-more {
         margin-top: 80px;
         margin-bottom: 50px;
-
         a {
             color: $gray-text;
             h3 {
@@ -312,11 +272,6 @@
                     font-size: 19px;
                 }
                 &:after {
-                    // content: "";
-                    // position: absolute;
-                    // background-color: #fff;
-                    // width: 2px;
-                    // height: 20px;
                     @media (max-width: 1280px) {
                         font-size: 13px;
                     }
@@ -385,13 +340,6 @@
                     margin-top: 10px;
                 }
             }
-            .right-content {
-                .gallery__item {
-                    .gallery__item-text {
-                        font-size: 17px;
-                    }
-                }
-            }
             .grid__item {
                 a {
                     .gallery__item-text {
@@ -428,13 +376,6 @@
                     margin-top: 5px;
                 }
             }
-            .right-content {
-                .gallery__item {
-                    .gallery__item-text {
-                        font-size: 15px;
-                    }
-                }
-            }
             .grid__item {
                 a {
                     .gallery__item-text {
@@ -456,21 +397,11 @@
                         h2 {
                             font-size: 17px;
                         }
-                        // img {
-                        //     width: 20%;
-                        // }
                     }
                 }
                 p {
                     font-size: 13px;
                     margin-top: 5px;
-                }
-            }
-            .right-content {
-                .gallery__item {
-                    .gallery__item-text {
-                        font-size: 13px;
-                    }
                 }
             }
             .grid__item {
@@ -492,7 +423,6 @@
             flex-direction: column;
             .left-content {
                 height: 191px;
-                margin-bottom: 30px;
                 .gallery__item {
                     bottom: 37%;
                     left: 6%;
@@ -504,21 +434,11 @@
                                 margin-left: 10px;
                             }
                         }
-                        // img {
-                        //     width: 20%;
-                        // }
                     }
                 }
                 p {
                     font-size: 13px;
                     margin-top: 5px;
-                }
-            }
-            .right-content {
-                .gallery__item {
-                    .gallery__item-text {
-                        font-size: 13px;
-                    }
                 }
             }
             .grid__item {
@@ -537,20 +457,16 @@
     .news-event-wrapper .news-post--titlte h4 {
         padding: 15px 0;
     }
-
     .count {
         .box-count {
             text-align: center;
             margin-bottom: 50px;
-
-            p::after{
+            p::after {
                 left: 50% !important;
                 transform: translateX(-50%);
             }
         }
     }
-
-
     .swiper-slide {
         .swiper-content {
             bottom: 50px;
@@ -624,7 +540,6 @@
         .news-post {
             .news-post-time {
                 display: flex;
-                
             }
         }
     }
@@ -664,7 +579,6 @@
             margin-top: 60px;
             margin-bottom: 0;
         }
-
         .product-range-content {
             p:nth-child(3) {
                 padding-bottom: 10px;
@@ -676,28 +590,22 @@
             .news-post--titlte {
                 font-size: 15px;
             }
-            
         }
     }
-    
-    .experience{
+    .experience {
         padding-top: 20px !important;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {
-  
     /* CSS */
-  
     .news-event-wrapper .news-post .news-post-time {
-          padding-top: 10px;
-  
-          .type {
-              margin: 0;
-          }
+        padding-top: 10px;
+        .type {
+            margin: 0;
+        }
     }
-    
-  }
+}
 
 @media(max-width:480px) {
     .swiper-slide {
@@ -724,7 +632,6 @@
     }
     .news-event-wrapper {
         .news-post {
-            
             .news-post-time {
                 align-items: center;
                 margin-bottom: 30px;
@@ -735,16 +642,13 @@
             }
         }
     }
-
     /* CSS */
-    .news-event-wrapper .news-post .news-post-time{
+    .news-event-wrapper .news-post .news-post-time {
         padding-top: 10px;
-
         .type {
             margin: 0;
         }
-    } 
-
+    }
     .news-event-wrapper .read-more {
         margin-top: -15px;
         margin-bottom: 25px;

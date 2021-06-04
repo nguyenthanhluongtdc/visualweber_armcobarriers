@@ -19,6 +19,17 @@ if (!function_exists('get_featured_posts')) {
         return app(PostInterface::class)->getFeatured($limit, $with);
     }
 }
+if (!function_exists('get_post_is_featured')) {
+    /**
+     * @param bool $convertToList
+     * @return array
+     */
+    function get_post_is_featured()
+    {
+       return app(PostInterface::class)->getModel()->where('is_featured', 1)->take(3)->get();
+    }
+}
+    
 
 if (!function_exists('get_latest_posts')) {
     /**
