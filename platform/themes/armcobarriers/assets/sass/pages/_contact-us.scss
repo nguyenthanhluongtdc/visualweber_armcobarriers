@@ -133,7 +133,7 @@
 }
 
 .let-talk {
-    margin-top: 140px;
+    padding-top: 9%;
     h3 {
         font-size: 25px;
         font-family: $FolioStd-Medium;
@@ -244,6 +244,25 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+@media(max-width:991px)
+{
+    .let-talk{
+        padding-top: 4% !important;
+    }
+}
+@media(max-width:640px)
+{
+    .contact-banner {
+        .title-contact{
+            h1{
+                font-size: 35px !important;
+            }
+            p{
+                font-size: 11px !important;
+            }
+        } 
+    }
+}
 
 @media(max-width:768px) {
     .contact-banner {
@@ -305,22 +324,6 @@
     }
 }
 
-@media(max-width:380px) {
-    .contact-banner {
-        .title-contact {
-            h1 {
-                font-size: 25px;
-            }
-            p {
-                font-size: 11px;
-            }
-        }
-    }
-    .list-group {
-        font-size: 10px;
-        padding-bottom: 40px;
-    }
-}
 
 @media(max-width:991px) {
     .form-contact-us {
@@ -352,5 +355,22 @@
 .map-location {
     iframe {
         width: 100vw;
+    }
+}
+// respon
+@media(max-width:380px) {
+    .contact-banner {
+        .title-contact {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+    .list-group {
+        font-size: 10px;
+        padding-bottom: 40px;
     }
 }
