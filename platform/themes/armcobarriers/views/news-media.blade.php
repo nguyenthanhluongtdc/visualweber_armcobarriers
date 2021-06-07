@@ -1,13 +1,4 @@
-<section>
-    <div class="container-customize">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-          <li class="breadcrumb-item active" aria-current="page">News media</li>
-        </ol>
-      </nav> 
-</section>
-
+@includeIf("theme.armcobarriers::views.components.breadcrumb")
 <!--title-->
 <div class="pages-news-media">
     <div class="container-customize">
@@ -15,63 +6,27 @@
         <div class="box-media pt-5 pb-lg-5">
             <div class="content">
                 <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
-                        <div class="item">
-                            <a href="/news-detail">
-                                <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
-                                <h3>Om Wire and Wire Products Industries is a reputed
-                                    Highway Crash Barrier, Crash Barrier
-                                </h3>
-                                <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                </p>
-                            </a>
+                    @foreach(get_posts_by_category(2,3) as $event)
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
+                            <div class="item">
+                                <a href="/news-detail">
+                                    <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
+                                    <h3>
+                                        {{$event->name}}
+                                    </h3>
+                                    <p>
+                                        {{$event->description}}
+                                    </p>
+                                </a>
 
-                            <div class="options">
-                                <div class="date"> 21 Apr 2020 </div>
-                                <a class="share"> Share </a>
-                                <a class="type"> Event </a>
+                                <div class="options">
+                                    <div class="date"> {{$event->created_at->format('j F Y') }} </div>
+                                    <a class="share"> Share </a>
+                                    <a class="type"> Event </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
-                        <div class="item">
-                            <a href="/news-detail">
-                                <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
-                                <h3>Om Wire and Wire Products Industries is a reputed
-                                    Highway Crash Barrier, Crash Barrier
-                                </h3>
-                                <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                </p>
-                            </a>
-
-                            <div class="options">
-                                <div class="date"> 21 Apr 2020 </div>
-                                <a class="share"> Share </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-4 mb-md-0">
-                        <div class="item">
-                            <a href="/news-detail">
-                                <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
-                                <h3>Om Wire and Wire Products Industries is a reputed
-                                    Highway Crash Barrier, Crash Barrier
-                                </h3>
-                                <p>
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                </p>
-                            </a>
-
-                            <div class="options">
-                                <div class="date"> 21 Apr 2020 </div>
-                                <a class="share"> Share </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -103,179 +58,24 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="item-row">
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
+                            @foreach(get_posts_by_category(6,12) as $new)
+                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-1.jpg') }}" alt="">
+                                        <a href="{{$new->slug}}">
+                                            <img class="mw-100" src="{{ RvMedia::getImageUrl($new->image) }}" alt="">
                                         </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="/news-detail">German enterprises in Vietnam remain positive despite pandemic</a> </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
+                                        <h5> <a href="/news-detail">{{$new->name}}</a> </h5>
+                                        <div class="date"> {{$new->created_at->format('j F Y')}} </div>
                                         <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
+                                            {{$new->description}} 
                                         </p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-1.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="/news-detail">German enterprises in Vietnam remain positive despite pandemicArmco Steel price rise 'unusual' amid plentiful supply: construction ministry </a> </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            Nano Technologies, a startup that has developed an app which allows workers to access accrued wages without waiting for payday, has raised $3 million in pre-seed and seed funding.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-2.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="/news-detail">Steel price rise 'unusual' amid plentiful supply: construction ministry</a> </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            Steel prices have surged by 40-50 percent this year though there is no shortage, the Ministry of Construction said, calling it "unusual."  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <a href="/news-detail">
-                                            <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-2.jpg') }}" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="/news-detail">Ford to cease production of Tourneo minivan in Vietnam</a> </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            U.S. automaker Ford will stop assembling its Tourneo minivan in Vietnam from June as demand for it plunges amid the Covid-19 pandemic.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Thai conglomerate reports surge in Vietnam revenues</h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            Thai-owned Siam Cement Group reported a 34 percent year-on-year jump in first quarter revenues to VND8.2 trillion ($354 million), mostly driven by its packaging and chemicals businesses.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Seafood exporters call for delaying HCMC port fee collection until year end </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            The seafood industry business group wants collection of port fees in HCMC delayed until year end since exporters still feel the pinch from the Covid-19 pandemic.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-4.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>German enterprises in Vietnam remain positive despite pandemic  </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            A survey has found 66 percent of German business in Vietnam expecting economic improvement in the country this year, up 20 percentage points from last year. 
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-4.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry   </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            Nano Technologies, a startup that has developed an app which allows workers to access accrued wages without waiting for payday, has raised $3 million in pre-seed and seed funding.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item-row">
-                        <div class="row">
-                            <div class="col-lg-6 mb-md-line pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/left-5.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Steel price rise 'unusual' amid plentiful supply: construction ministry </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            Steel prices have surged by 40-50 percent this year though there is no shortage, the Ministry of Construction said, calling it "unusual."  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <img class="mw-100" src="{{ Theme::asset()->url('images/news-media/right-5.jpg') }}" alt="">
-                                    </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5>Ford to cease production of Tourneo minivan in Vietnam </h5>
-                                        <div class="date"> 21 Apr 2020 </div>
-                                        <p class="des">
-                                            U.S. automaker Ford will stop assembling its Tourneo minivan in Vietnam from June as demand for it plunges amid the Covid-19 pandemic.  
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -284,50 +84,19 @@
                     <div class="box-media">
                         <div class="content">
                             <div class="row">
+                            @foreach(get_posts_by_category(15,12) as $media)
                                 <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="/news-detail">
-                                            <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
-                                            <h3>Om Wire and Wire Products Industries is a reputed
-                                                Highway Crash Barrier, Crash Barrier
-                                            </h3>
+                                            <img src="{{ RvMedia::getImageUrl($media->image) }}" alt="">
+                                            <h3> {{$media->name}} </h3>
                                         </a>
-
                                         <div class="options pt-0 pb-0">
-                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
+                                            <div class="date my-0 text-left"> {{$media->created_at->format('j F Y')}} </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
-                                    <div class="item">
-                                        <a href="/news-detail">
-                                            <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
-                                            <h3>Om Wire and Wire Products Industries is a reputed
-                                                Highway Crash Barrier, Crash Barrier
-                                            </h3>
-                                        </a>
-
-                                        <div class="options pt-0 pb-0">
-                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-4 mb-5 col-sm-6 mb-md-0">
-                                    <div class="item">
-                                        <a href="/news-detail">
-                                            <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
-                                            <h3>Om Wire and Wire Products Industries is a reputed
-                                                Highway Crash Barrier, Crash Barrier
-                                            </h3>
-                                        </a>
-
-                                        <div class="options pt-0 pb-0">
-                                            <div class="date my-0 text-left"> 21 Apr 2020 </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            @endforeach
                             </div>
                         </div>
                     </div>

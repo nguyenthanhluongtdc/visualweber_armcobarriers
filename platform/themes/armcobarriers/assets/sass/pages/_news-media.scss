@@ -149,7 +149,7 @@ $gray_text: #262626;
             .tab-pane {
                 .item-row {
                     >.row {
-                        >div:first-child {
+                        >div:nth-child(odd) {
                             padding-left: 0;
                         }
                     }
@@ -193,10 +193,10 @@ $gray_text: #262626;
 @media (min-width: 1281px) {
   
     .pages-news-media #tile-1 .tab-content .tab-pane .item-row > .row {
-        >div:first-child {
+        >div:nth-child(odd) {
             padding-right: 30px !important;
         }
-        >div:last-child {
+        >div:nth-child(even) {
             padding-left: 30px !important;
         }
     }
