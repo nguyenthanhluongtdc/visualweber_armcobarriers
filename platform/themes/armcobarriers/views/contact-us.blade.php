@@ -1,11 +1,10 @@
 <section>
     <div class="container-fluid-customize">
-        <div class="contact-banner" style="background-image:url({{ Theme::asset()->url('images/contact/bg-top.png')}})">
+        <div class="contact-banner" style="background-image:url({{ get_object_image(get_field($page,'picture'))}})">
         <div class="container-customize">
           <div class="title-contact">
             <h1>Contact Us</h1>
-            <p>We continually strive to be the best in the guardrail and safety barrier industry, and that makes
-              ARMCO® BARRIERS try harder to satisfy your requirements.
+            <p>{{get_field($page ,'contact_us_desc')}}
             </p>
           </div>
         </div>
@@ -27,144 +26,61 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action aos-init aos-animate" id="head-office" data-toggle="list" href="head-office-content" role="tab" aria-controls="home" aria-selected="true">ARMCO®<br>
-                       <span>Head Office</span> </a>
-                    <a class="list-group-item list-group-item-action aos-animate active show" id="sales-team" data-toggle="list" href="#sales-team-content" role="tab" aria-controls="profile" aria-selected="true">ARMCO®<br> 
-                      <span>SALES TEAM</span>  </a>
                   
-                    <a class="list-group-item list-group-item-action aos-animate" id="installation" data-toggle="list" href="#installation-content" role="tab" aria-controls="profile" aria-selected="false">ARMCO®<br>
-                       <span>Installation / Operations</span> </a>
-                    
-                    <a class="list-group-item list-group-item-action aos-animate" id="administration" data-toggle="list" href="#administration-content" role="tab" aria-controls="profile" aria-selected="false">ARMCO®<br>
-                       <span>Administration  &  Accounts</span> </a>
+                  @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
+                  @if(has_sub_field($item_contact,'tabs_title'))
+                      <a class="list-group-item list-group-item-action aos-init aos-animate {{ $key == 0 ? 'active' : '' }}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" data-toggle="list" href="#{{  Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tab" aria-controls="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" aria-selected="true">ARMCO®<br>
+                          <span>{{get_sub_field($item_contact,'tabs_title')}}</span> 
+                      </a>
+                  @endif
+                  @endforeach
+             
                 </div>
             </div>
         </div>
+       
         <div class="tab-content" id="nav-tab-content">
-          <div class=" tab-pane fade head-office" id="head-office-content" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="info-wrapper">
-              <div class="info-prefix">
-                <h4> Richard Keller</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Email</p>
+          @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
+       
+         
+          
+          <div class=" tab-pane fade {{get_sub_field($item_contact,'tabs_title')=="Head Office" ? "active show":""}}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="head-office">
+            @foreach(get_sub_field($item_contact,'content_tabs') as $item1)
+            
+              <div class="info-wrapper">
+                <div class="info-prefix">
+                 
+                  <h4>{{get_sub_field($item1,'name')}}</h4>
+                  <p>Phone</p>
+                  <p>Fax</p>
+                  @if(has_sub_field($item1,'mobile'))
+                  <p style="padding: 0">Mobile</p>
+                    @endif
+                  <p>Email</p>
+                  
+                </div>
+                <div class="info-sunfix">
+                  <h4>{{get_sub_field($item1,'position')}}</h4>
+                  <p>{{get_sub_field($item1,'phone')}}</p>
+                  <p>{{get_sub_field($item1,'fax')}}</p>
+                  <p  style="padding: 0"> @if(has_sub_field($item1,'mobile'))
+                    {{get_sub_field($item1,'mobile')}}
+                    @endif
+                  </p>
+                  <p>{{get_sub_field($item1,'email')}}</p>
+                 
+                </div>
               </div>
-              <div class="info-sunfix">
-                <h4>MANAGING DIRECTOR / SALES</h4>
-                <p>(03) 9311 1312</p>
-                <p>(03) 9311 5152</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-              <div class="info-prefix">
-                <h4>Ivan Van De Geer</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Mobile</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>SALES QLD & NORTHERN NSW</h4>
-                <p>(07) 5597 5111</p>
-                <p>(07) 5597 1611)</p>
-                <p>0438 760 469</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
+            
+            
+            @endforeach
             </div>
           </div>
-          <div class=" tab-pane fade head-office active show" id="sales-team-content" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="info-wrapper">
-              <div class="info-prefix">
-                <h4> Richard Keller</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>MANAGING DIRECTOR / SALES</h4>
-                <p>(03) 9311 1312</p>
-                <p>(03) 9311 5152</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-              <div class="info-prefix">
-                <h4>Ivan Van De Geer</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Mobile</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>SALES QLD & NORTHERN NSW</h4>
-                <p>(07) 5597 5111</p>
-                <p>(07) 5597 1611)</p>
-                <p>0438 760 469</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-            </div>
-          </div>
-           
-          <div class=" tab-pane fade head-office" id="installation-content" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="info-wrapper">
-              <div class="info-prefix">
-                <h4> Richard Keller</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>MANAGING DIRECTOR / SALES</h4>
-                <p>(03) 9311 1312</p>
-                <p>(03) 9311 5152</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-              <div class="info-prefix">
-                <h4>Ivan Van De Geer</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Mobile</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>SALES QLD & NORTHERN NSW</h4>
-                <p>(07) 5597 5111</p>
-                <p>(07) 5597 1611)</p>
-                <p>0438 760 469</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-            </div>
-          </div>
-          <div class=" tab-pane fade head-office" id="administration-content" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="info-wrapper">
-              <div class="info-prefix">
-                <h4> Richard Keller</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>MANAGING DIRECTOR / SALES</h4>
-                <p>(03) 9311 1312</p>
-                <p>(03) 9311 5152</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-              <div class="info-prefix">
-                <h4>Ivan Van De Geer</h4>
-                <p>Phone</p>
-                <p>Fax</p>
-                <p>Mobile</p>
-                <p>Email</p>
-              </div>
-              <div class="info-sunfix">
-                <h4>SALES QLD & NORTHERN NSW</h4>
-                <p>(07) 5597 5111</p>
-                <p>(07) 5597 1611)</p>
-                <p>0438 760 469</p>
-                <p>sales@armcobarriers.com.au</p>
-              </div>
-            </div>
-          </div>
-
+          @endforeach
         </div>
-        
+       
+               
     <div class="let-talk">
       <h3>Let’s talk</h3>
       <form id="contact-form" class="form-horizontal form-contact-us" role="form">
@@ -215,7 +131,7 @@
 </section>
 <div class="container-fluid-customize">
     <div class="map-location">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d6305.055274219454!2d144.8330826!3d-37.8011084!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d-37.801133799999995!2d144.83739559999998!4m5!1s0x6ad6608e5f3ff44b%3A0x5aff404637360531!2s3%20Fourth%20Ave%2C%20Sunshine%20VIC%203020%2C%20%C3%9Ac!3m2!1d-37.801117!2d144.83746!5e0!3m2!1svi!2s!4v1621937699192!5m2!1svi!2s" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="{{get_field($page,'link_map')}}" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
    

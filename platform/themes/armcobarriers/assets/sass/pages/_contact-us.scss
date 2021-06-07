@@ -330,6 +330,13 @@
     }
 }
 
+@media(min-width: 992px) {
+    .head-office {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
 @media(max-width:991px) {
     .form-contact-us {
         margin-left: 20%;
@@ -337,17 +344,14 @@
 }
 
 .info-wrapper {
-    @media(min-width: 1620px) {
-        grid-template-columns: 8% 36% 10% 36%;
-    }
-    @media(max-width: 991px) {
-        font-size: 13px;
-    }
     display: grid;
-    grid-template-columns: 17% 36% 17% 36%;
-    @media(max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10%;
+    grid-template-columns: 20% 36% 20% 36%;
+    gap: 3%;
+    @media(max-width: 991px) {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        font-size: 13px;
     }
     @media(max-width: 480px) {
         grid-template-columns: repeat(2, 1fr);
