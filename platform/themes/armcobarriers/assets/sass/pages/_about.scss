@@ -4,7 +4,7 @@
         padding-bottom: 60px;
         h1{
             color: #000000;
-            font-size: 40px;
+            font-size: $rem4;
             font-family: $FolioStd-Bold;
         }
         h2{
@@ -104,7 +104,7 @@
         }
     }
     .whatwedo{
-        padding: 60px 0px;
+        padding: 3% 0px;
         h2{
             color:#000000;
             font-family: $FolioStd-Bold;
@@ -354,7 +354,11 @@
 }
 
 @media(max-width:991px)
-{   .wrap-product{
+{   
+    .wrap-top .cont2 h1 {
+        font-size: $rem2-5;
+    }
+    .wrap-product{
     .whatwedo{
         padding:3% 0;
     }

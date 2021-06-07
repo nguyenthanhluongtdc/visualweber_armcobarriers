@@ -90,7 +90,7 @@ h1,h2 {
     }
 
     h1, h2 {
-        font-size: $rem2;
+        font-size: $rem2-5;
     }
 
     .main-scroll {
@@ -99,6 +99,7 @@ h1,h2 {
 
     .tabs-scroll {
         overflow-x: scroll;
+        overflow-y: hidden;
         .fa-hand-point-right{
             font-size: $rem1-5;
             position: absolute;
