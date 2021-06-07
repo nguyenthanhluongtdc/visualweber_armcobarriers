@@ -7,7 +7,7 @@
         </ol>
       </nav>
       <div class="title-gallery">
-        There are many applications for Armco® Railgard™ and components.  Please browse through the gallery of some innovative solutions for a variety of protection requirements and standard applications for public roadways.
+        {{$page->description}}
         </div> 
   </section>
   <section>
@@ -16,10 +16,9 @@
             <div class="container-customize">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-overview" aria-selected="false">Products</a>
-                        <a class="nav-item nav-link" id="nav-applications-tab" data-toggle="tab" href="#nav-applications" role="tab" aria-controls="nav-installation" aria-selected="false">Applications</a>
-                        <a class="nav-item nav-link" id="nav-warranty-tab" data-toggle="tab" href="#nav-warranty" role="tab" aria-controls="nav-request" aria-selected="false">Warranty</a>
-                        <a class="nav-item nav-link" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-custom" aria-selected="false">Design</a>
+                        @foreach(get_field($page,'gallery_tabs') as $key =>$gallery_item)
+                        <a class="nav-item nav-link" id="nav-{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}-tab" data-toggle="tab" href="#nav-{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}" role="tab" aria-controls="{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}" aria-selected="false">{{(get_sub_field($gallery_item,'tabs_title')) }}</a>
+                        @endforeach
                     </div>
                 </nav>
             </div>
@@ -28,18 +27,18 @@
             <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="home-tab">
                 <div class="slider-gallery-wrapper">
                     <div class="swiper-container mySwiper-left">
+                        
                         <div class="swiper-wrapper">
+                            @foreach (get_field($page, 'gallery_tabs') as $item)
+                            @foreach (get_sub_field($item, 'slide_product') as $item1)
                           <div class="swiper-slide img-right">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
+                            <img src="{{get_object_image(get_sub_field($item1, 'picture_product'))}}" alt="">
+                            {{-- <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt=""> --}}
                           </div>
-                          <div class="swiper-slide img-right">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
-                          </div>
-                          <div class="swiper-slide img-right">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-left.jpg')}}" alt="">
-                          </div>
-                         
+                            @endforeach
+                            @endforeach
                         </div>
+                        
                         <div class="pagination-wrapper">  
                           
                             <div class="slider-pagination-custom">
@@ -54,15 +53,13 @@
                     </div> 
                     <div class="swiper-container mySwiper-right">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide img-left">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
+                            @foreach (get_field($page, 'gallery_tabs') as $item_app)
+                            @foreach (get_sub_field($item_app, 'silde_applications') as $item_app1)
+                          <div class="swiper-slide img-right">
+                            <img src="{{get_object_image(get_sub_field( $item_app1, 'picture_applications'))}}" alt="">
                           </div>
-                          <div class="swiper-slide img-left">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
-                          </div>
-                          <div class="swiper-slide img-left">
-                            <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt="">
-                          </div>
+                            @endforeach
+                            @endforeach
                         </div>
                         <div class="pagination-wrapper">
                             <div class="slider-custom-right">
@@ -95,67 +92,32 @@
             <div class="box-media pt-4">
                 <div class="content">
                     <div class="row">
+                        @foreach (get_post_is_featured() as $post)
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                             <div class="item">
                                 <a href="/news-detail">
-                                    <img src="{{ Theme::asset()->url('images/news-media/news1.png') }}" alt="">
-                                    <h3>Om Wire and Wire Products Industries is a reputed
-                                        Highway Crash Barrier, Crash Barrier
+                                    <img src="{{ RvMedia::getImageUrl($post->image) }}" alt="">
+                                    <h3>{{ $post->name }}
                                     </h3>
                                     <p>
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
+                                        {{ $post->description }}
                                     </p>
                                 </a>
 
                                 <div class="options">
-                                    <div class="date"> 21 Apr 2020 </div>
+                                    <div class="date">{{$post->created_at->format('j F Y') }}</div>
                                     <a class="share"> Share </a>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
 
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
-                            <div class="item">
-                                <a href="/news-detail">
-                                    <img src="{{ Theme::asset()->url('images/news-media/news2.png') }}" alt="">
-                                    <h3>Om Wire and Wire Products Industries is a reputed
-                                        Highway Crash Barrier, Crash Barrier
-                                    </h3>
-                                    <p>
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                    </p>
-                                </a>
-
-                                <div class="options">
-                                    <div class="date"> 21 Apr 2020 </div>
-                                    <a class="share"> Share </a>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
-                            <div class="item">
-                                <a href="/news-detail">
-                                    <img src="{{ Theme::asset()->url('images/news-media/news3.png') }}" alt="">
-                                    <h3>Om Wire and Wire Products Industries is a reputed
-                                        Highway Crash Barrier, Crash Barrier
-                                    </h3>
-                                    <p>
-                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum...
-                                    </p>
-                                </a>
-
-                                <div class="options">
-                                    <div class="date"> 21 Apr 2020 </div>
-                                    <a class="share"> Share </a>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
                 </div>
                 </div>
                 <div class="read-more">
-                    <a href="">
+                    <a href="/new-all">
                         <h3>Read more</h3>
                     </a>
                 </div>
