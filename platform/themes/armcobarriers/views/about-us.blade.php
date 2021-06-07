@@ -59,69 +59,12 @@
         </div>
                 <div class="wrap1">
                     <div class="row">
+                    @foreach (get_field($page, 'what_we_do') as $item)
                         <div class="col-lg-4 col-md-6 design">
-                        <h3>Design Advice</h3>
-                        <p>At ARMCO®  Barriers you deal with people specialising in the road 
-                        safety barrier industry with over 20 years experience.</p>
-                        <p>Many clients take advantage of our expertise prior to planning their
-                        project and achieve better solutions at a reduced cost.</p>
+                            <h3>{{get_sub_field($item , 'tabs_title')}}</h3>
+                            <p>{!!get_sub_field($item, 'tabs_description')!!}</p>
                         </div>
-                        <div class="col-lg-4 col-md-6 innovation">
-                        <h3>Innovation</h3>
-                        <p>Expertise leads to Innovation.  Whilst our competitor’s product remains
-                        largely unchanged, ARMCO®  Barriers continue to innovate.
-                        Innovations such as symmetrical holes in the post for easier installation,
-                        or internal storage to prevent white rust are all reasons why ARMCO®
-                        Barriers is the preferred supplier for more and more customers.</p>
-                        <p>The development of new and relevant products such as the Stubby
-                        Nose™ terminal, Pipegard™, Cornergard™ , Bollards and Handrails
-                        reduce your Occupational Health & Safety concerns whilst providing
-                        practical and economical safety barrier solutions.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 installation">
-                        <h3>Installation Service</h3>
-                        <p>ARMCO®  Barriers is leading the way as a manufacturer that offers an 
-                        Installation service by its own staff with total product knowledge.
-                        Our teams are first aid, Traffic Management and OH&S trained to
-                        ensure the job is performed safely and to specifications.</p>
-                        <p>Selecting the manufacturer to install the product has the benefit of faster
-                        installation and the assurance that it has been correctly installed.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 competitive">
-                        <h3>Competitive Pricing</h3>
-                        <p>Providing better products, design advice, an installation service and
-                        superior Customer Service is our standard practice. </p>
-                        <p>ARMCO Barriers also offers competitive pricing each and every time.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 warranty">
-                        <h3>Warranty Statenment</h3>
-                        <p>ARMCO®  Barriers warrants that its products are supplied free of
-                        defects in workmanship and materials.</p>
-                        <p>Provided it is correctly installed, is not damaged in a collision
-                        nor subject to misuse, all ARMCO®  products should give many years of
-                        maintenance-free, safety barrier protection. </p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 quality">
-                        <h3>Quality Assurance</h3>
-                        <p>Product excellence is assured by operating in accordance with Quality 
-                        Assurance System AS/NZS ISO 9000.2 . Our products meet the
-                        requirements of Australian Standards and/or local Road Authority Standards. </p>
-                        <p>All product is hot dipped Galvanized to conform to AS/NZS 4680. Our 
-                        installation services also meet the requirements of each State Road Authority. </p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 availability">
-                        <h3>Availability</h3>
-                        <p>Armco®  Barriers is a manufacturer of all of it's products, therefore we
-                        carry stock and availability is not an issue. </p>
-                        <p>Custom products or 'specials' can also be available in a very short time 
-                        frame, due to accessibility to production, material and professional personnel
-                        to ensure that a product is available as soon as possible.</p>
-                        </div>
-                        <div class="col-lg-4 col-md-6 australian">
-                        <h3>Australian Owned</h3>
-                        <p>ARMCO®  Barriers is a wholly Australian owned company supplying
-                        and operating throughout the nation and will satisfy your safety barrier requirements Australia wide.  </p>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
        <div class="wrap2">
@@ -145,47 +88,27 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="product-quality">
-                        <h2>The ARMCO "W" Beam System</h2>
+                        <h2>{{get_field( $page ,'title')}}</h2>
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-12">
                     <div class="slogan">
-                        <p>Armco®  Barriers Pty Ltd continually make innovations that improve the life, installation time and performance of our product, all the while 
-                        maintaining regulatory standards from all government authorities. We constantly research and test our products with structural engineers
-                        and authorized testing facilities to ensure that the customer will be purchasing the best product available.</p>
+                        <p>{{get_field( $page ,'description')}}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="bot2">
             <div class="row">
+            @foreach (get_field($page, 'key_feature') as $item)
                 <div class="col-lg-4 col-md-6">
                    <div class="product0">
-                    <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
-                    <h3>"W" Beam Rails</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem 
-                        Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <img src="{{ get_object_image(get_sub_field( $item ,'image'))}}" alt="">
+                    <h3>{{get_sub_field($item , 'title')}}</h3>
+                    <p>{{get_sub_field($item , 'description')}}</p>
                    </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="product1">
-                        <img src="{{ Theme::asset()->url('images/about/product1.jpg') }}" alt="">
-                        <h3>Surface Mounted Post</h3>
-                        <p>It has survived not only five centuries, but also the leap into electronic 
-                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
-                        with the release of Letraset sheets containing.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="product2">
-                        <img src="{{ Theme::asset()->url('images/about/product2.jpg') }}" alt="">
-                        <h3>In-Ground posts</h3>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
-                        in a piece of classical Latin literature from 45 BC, making it over 2000 years
-                        old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, 
-                        looked up one of the more obscure Latin words.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -193,29 +116,19 @@
 <div class="container-customize">
     <div class="count">
         <div class="row w-100 mx-0">
+        @foreach (get_field($page, 'statistic') as $item)
             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                 <div class="box-count count-customers">
-                    <h2>15,451</h2>
-                    <p>Customers</p>
+                    <h2>{{get_sub_field($item , 'title')}}</h2>
+                    <p>{{get_sub_field($item , 'description')}}</p>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="box-count count-completed">
-                    <h2>125,451</h2>
-                    <p>Completed projects</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="box-count count-kilomet">
-                    <h2>1,204</h2>
-                    <p>Kilometres installed</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="experience">
         <div class="exp">
-            <p>At ARMCO® Barriers you deal with people specialising in the safety barrier industry with over 35 years experience. </p>
+            <p>{{get_field( $page ,'description_16226544671')}} </p>
         </div>
     </div>
 </div>
