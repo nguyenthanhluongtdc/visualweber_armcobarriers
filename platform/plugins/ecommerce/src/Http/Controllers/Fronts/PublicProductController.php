@@ -119,12 +119,14 @@ class PublicProductController
         $products = $productService->getProduct($request, null, null,
             ['slugable', 'variations', 'productCollections', 'variationAttributeSwatchesForProductList', 'promotions']);
 
+        $categories = ProductCategory::all();
+
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
         SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
 
-        return Theme::scope('ecommerce.products', compact('products'),
+        return Theme::scope('ecommerce.products', compact(['products','categories']),
             'plugins/ecommerce::themes.products')->render();
     }
 
