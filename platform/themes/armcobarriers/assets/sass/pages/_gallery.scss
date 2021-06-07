@@ -244,6 +244,12 @@
     
   }
 
+@media (max-width: 991px) {
+    .title-gallery {
+        margin-bottom: 40px;
+    }
+}
+
 @media(max-width:576px) {
     .mySwiper-left {
         .pagination-wrapper {
