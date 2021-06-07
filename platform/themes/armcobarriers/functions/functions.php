@@ -8,7 +8,7 @@ register_page_template([
     'contact-us' => 'Contact-us',
     'products' => 'Products',
     'products-detail' => 'Products-detail',
-    'about' => 'About',
+    'about-us' => 'About-us',
     'media-details' =>'Media-details',
     'news-all' => 'News-all',
     'news-media' => 'News-media',

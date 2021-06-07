@@ -15,8 +15,7 @@
     <div class="container-customize">
         <div class="wrap-top">
             <div class="decription">
-                <p>Armco® Barriers can satisfy your protection and barrier requirements by the many product options we offer. </p>
-                <p>Please browse the menu above for the application that best suits your needs</p>   
+                <p>{!!get_field($page,'descriptions')!!}</p>   
             </div>
         <div>
     </div>
@@ -107,15 +106,11 @@
     <div class="container-customize">
         <div class="wrap-3img">
             <div class="row">
+            @foreach (get_field($page, 'applications_demonstration_image') as $item) 
                 <div class="col-md-4 col-12 pic mb-md-0 mb-4">
-                    <img src="{{ Theme::asset()->url('images/applications/img1.jpg') }}" alt="">
+                    <img src="{{ get_object_image(get_sub_field( $item ,'picture'))}}" alt="">
                 </div>
-                <div class="col-md-4 col-12 pic mb-md-0 mb-4">
-                    <img src="{{ Theme::asset()->url('images/applications/img2.jpg') }}" alt="">
-                </div>
-                <div class="col-md-4 col-12 pic">
-                    <img src="{{ Theme::asset()->url('images/applications/img3.jpg') }}" alt="">
-                </div>
+            @endforeach
             </div>
         </div>
     </div>
@@ -136,43 +131,16 @@
             </div>
             <div class="wrap-descrip pb-0 pb-md-5">
                 <div class="row">
+                @foreach (get_field($page, 'product_range_16227107061') as $item) 
                     <div class="col-lg-3 col-sm-6 col-12 mb-lg-0 mb-3">
                         <div class="post post-applications">
                             <div class="post-title">
-                                <h3>W Beam &, Thrie Beam</h3>
+                                <h3>{{get_sub_field($item , 'product_range_title')}}</h3>
                             </div>
-                            <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
+                            <p>{!!get_sub_field($item , 'product_range_description')!!}</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Posts & Bollards</h3>
-                            </div>
-                            <p>ARMCO® Bollards are versatile in their many applications.</p>
-                            <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification,
-                                Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Wheelstops & Floorgards</h3>
-                            </div>
-                            <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, 
-                            being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) 
-                            works optimally in conjunction with Armco® Railgard™.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-3">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Handrail, Gates & Pipegards</h3>
-                            </div>
-                            <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
-                            <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product. </p>
-                        </div>
-                    </div   >
+                    @endforeach
                 </div>
             </div>
             <div class="wrap2">
