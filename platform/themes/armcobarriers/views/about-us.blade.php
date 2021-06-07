@@ -39,13 +39,13 @@
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                 <div class="container-fluid-customize">
                     <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/hero.jpg') }})">
-                        <div class="container-customize">
-                            <div class="content-about">
-                                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, est. Non, possimus autem ut 
+                        <div class="container-customize h-100">
+                            <div class="content-about d-flex align-items-center h-100">
+                                    <p class="col-lg-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, est. Non, possimus autem ut 
                                     unde necessitatibus distinctio saepe dicta vitae praesentium. Quasi sint, veniam totam minus id quam dolores corporis maxime modi soluta,
                                     ipsa fugiat facilis placeat itaque fugit asperiores optio culpa iste, numquam eveniet magnam molestiae quia amet. Est sint nisi voluptate
                                     ullam alias non voluptates illum laborum, cum dolor molestiae dignissimos? Aperiam doloribus nemo similique est nostrum expedita iusto corporis
-                                    </span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
