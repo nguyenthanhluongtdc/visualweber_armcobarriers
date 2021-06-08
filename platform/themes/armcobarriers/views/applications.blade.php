@@ -1,3 +1,6 @@
+@php
+    $tabs_applications = get_field($page, 'applications');
+@endphp
 <section>
     <div class="wrap-top">
         <div class="container-customize">
@@ -26,21 +29,19 @@
         <div class="left-tab-md tabs-scroll"> 
             <div class="container-customize">
                 <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
-                    <a class="nav-item nav-link active mb-lg-0 mb-2"style="color :#000000" id="nav-road-tab" data-toggle="tab" href="#nav-road" role="tab" aria-controls="nav-road" aria-selected="false">Road Applications </a>
-                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> Off Road Applications</a>
-                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-bridges-tab" data-toggle="tab" href="#nav-bridges" role="tab" aria-controls="nav-bridges" aria-selected="false">Bridges & Culverts </a>
-                    <a class="nav-item nav-link mb-lg-0 mb-2"style="color :#000000" id="nav-design-tab" data-toggle="tab" href="#nav-design" role="tab" aria-controls="nav-design" aria-selected="false">Design Specials</a>
+                @foreach($tabs_applications as $key => $tab)
+                    <a class="nav-item nav-link {{$key==0?'active':''}} mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> {{get_sub_field($tab,'tabs_title')}}</a>
+                @endforeach
                 </div>
             </div>
         </div>
-
         <div class="right-tab-md">
             <div class="container-fluid-customize">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade  show active" id="nav-road" role="tabpanel" aria-labelledby="nav-road-tab">
                         <section style="padding-bottom: 80px">
                             <div class="container-fluid-customize content">
-                                <div class="road-applications">
+                                <div class="road-applications"style="background-image: url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
                                     <div class="container-customize">
                                         <div class="install">
                                             <p>Guardrail is widely acknowledged as one of the world’s most effective roadside and protective barrier systems.</p>
@@ -57,7 +58,6 @@
                                 <div class="road-applications">
                                     <div class="container-customize">
                                         <div class="install">
-                                            <h2>Installation</h2>
                                             <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
                                             That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
                                             </div>
@@ -72,7 +72,6 @@
                                 <div class="road-applications">
                                     <div class="container-customize">
                                         <div class="install">
-                                            <h2>Request a Quotation</h2>
                                             <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
                                             That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
                                         </div>
@@ -87,7 +86,6 @@
                                 <div class="road-applications">
                                     <div class="container-customize">
                                         <div class="install">
-                                            <h2>Custom Manufacture </h2>
                                             <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
                                             That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
                                         </div>
