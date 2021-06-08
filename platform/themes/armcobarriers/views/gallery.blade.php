@@ -95,7 +95,7 @@
                         @foreach (get_post_is_featured() as $post)
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                             <div class="item">
-                                <a href="/news-detail">
+                                <a href="{{$post->url}}">
                                     <img src="{{ RvMedia::getImageUrl($post->image) }}" alt="">
                                     <h3>{{ $post->name }}
                                     </h3>

@@ -10,56 +10,41 @@
         </div>
     </div>
 </section>
+@php
+    $featured = get_featured_posts(5, [
+        'author',
+        'categories' => function ($query) { $query->limit(1); },
+    ]);
+
+    $featuredList = [];
+    if (!empty($featured)) {
+        $featuredList = $featured->pluck('id')->all();
+    }
+@endphp
+
 <section>
     <div class="container-customize">
         <div class="description">
             <div class="row">
                 <div class="col-xl-7 col-lg-8 col-md-12 col-sm-12"style="padding-right:5%">
                     <div class="news">
-                        <h2>News</h2>
+                        <h2>{{$post->categories->first()->name}}</h2>
                     </div>
                     <div class="cambodia">
-                        <h1>Cambodia slaps temporary anti-dumping duty on Malaysian steel product</h1>
+                        <h1>{{$post->name}}</h1>
                     </div>
                     <div class="time">
-                        <p>21 Apr 2020</p>
+                        <p>{{$post->created_at->format('j F Y') }}</p>
                     </div>
                     <div class="the-ministry">
-                        <p>The Ministry of Industry and Trade has imposed a temporary anti-dumping tariff 
-                        of 10.2 percent on H-shaped steel beams imported from Malaysia. </p>
+                        <p>{{ $post->description }} </p>
                     </div>
-                    <div class="according">
-                        <p>
-                        According to the General Department of Vietnam Customs, the import of the product
-                        from Malaysia almost quadrupled from 17,000 tons in 2019 to nearly 65,000 tons last
-                        year. The decision followed eight months of investigation from August 2020.</p>
-                        <p>
-                        The Trade Remedies Authority of Vietnam concluded that this surge in import of H-shaped
-                        steel beams from Malaysia has severely affected domestic producers.
-                        </p>
-                        <p>
-                        It said the temporary tariff would be in place until the investigation is complete, possibly
-                        by the end of the second quarter this year.</p>
-                    </div>
-                    <div class="img1">
-                        <img src="{{ Theme::asset()->url('images/news-detail/img1.jpg') }}" alt="">
-                    </div>
-                    <div class="pakistan">
-                        <p>Pakistan has initiated an anti-dumping investigation on cold-rolled steel 
-                        products from Vietnam with a proposed duty of 27.98 percent.</p>
-                        <p>Its trade authorities have asked China Steel and Nippon Steel Vietnam, based in
-                        the southern province of Ba Ria–Vung Tau, to provide feedback to dumping allegations
-                        within 45 days starting February 25.</p>
-                        <p>The alleged dumping of these products has hurt local producers, according to the 
-                        Pakistan National Tariffs Commission.</p>
-                        <p>Pakistan will issue a preliminary determination at the end of April.</p>
-                        <p>Other markets that face similar allegations are China, the E.U. and South Korea.</p>
-                        <p>In January, Malaysia revised duties on cold-rolled coils of alloy and non-alloy steel 
-                        from Vietnam to 7.42-33.7 percent for the period between January 24 and May 23.</p>
+                    <div class="news-content">
+                        {!!$post->content!!}
                     </div>
                     <div class="author">
                         <div class="by">
-                            <p>By Viweb</p>
+                            <p>{{$post->author->name}}</p>
                         </div>
                         <div class="btn-share">
                             <a href="">Share <i class="fal fa-share-alt"></i> </a>
@@ -70,11 +55,9 @@
                             <h4>Related Post</h4>
                         </div>
                         <div class="ul">
-                            <li>Steel giant to manufacture containers for first time in Vietnam</li>
-                            <li>Indonesia slaps anti-dumping duties on cold steel sheets imported from Vietnam</li>
-                            <li>Steel giant to manufacture containers for first time in Vietnam</li>
-                            <li>Hoa Phat’s dizzy growth seems set to continue</li>
-                            <li>Investment funds take profits as Hoa Phat share keeps rising</li>
+                            @foreach (get_related_posts($post->id,5) as $post_releted)
+                            <a href="{{$post_releted->url}}"><li>{{$post_releted->name}}</li></a>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -83,51 +66,18 @@
                         <h2>Top News</h2>
                     </div>
                     <div class="row wrap-news">
-                        <div class="col-lg-6 col-md-4 col-sm-4  img">
-                            <img src="{{ Theme::asset()->url('images/news-detail/img2.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-8  description">
-                            <a href="#" title="#">Origin fraud risks rise as Chinese steel continues to pour into Vietnam</a>
-                            <p>21 Apr 2020</p>
-                            <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
-                            since exporters still feel the pinch from the Covid-19 pandemic. </p>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-4  img">
-                            <img src="{{ Theme::asset()->url('images/news-detail/img3.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-8  description">
-                            <a href="#" title="#">Seafood exporters call for delaying HCMC port fee collection until year end</a>
-                            <p>21 Apr 2020</p>
-                            <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
-                            since exporters still feel the pinch from the Covid-19 pandemic. </p>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-4  img">
-                            <img src="{{ Theme::asset()->url('images/news-detail/img4.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-8  description">
-                            <a href="#" title="#">Pakistan begins anti-dumping investigation on Vietnam steel</a>
-                            <p>21 Apr 2020</p>
-                            <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
-                            since exporters still feel the pinch from the Covid-19 pandemic. </p>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-4  img">
-                            <img src="{{ Theme::asset()->url('images/news-detail/img5.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-8  description">
-                            <a href="#" title="#">Steel giant to manufacture containers for first time in Vietnam</a>
-                            <p>21 Apr 2020</p>
-                            <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
-                            since exporters still feel the pinch from the Covid-19 pandemic. </p>
-                        </div>
-                        <div class="col-lg-6 col-md-4 col-sm-4  img">
-                            <img src="{{ Theme::asset()->url('images/news-detail/img6.jpg') }}" alt="">
-                        </div>
-                        <div class="col-lg-6 col-md-8 col-sm-8 description">
-                            <a href="#" title="#">Steel shield, grills add looks, safety to new Saigon house</a>
-                            <p>21 Apr 2020</p>
-                            <p>The seafood industry business group wants collection of port fees in HCMC delayed until year end
-                            since exporters still feel the pinch from the Covid-19 pandemic. </p>
-                        </div>
+                        @foreach ($featured as $featureItem)
+                            <div class="col-lg-6 col-md-4 col-sm-4  img">
+                                <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="">
+                            </div>
+                            <div class="col-lg-6 col-md-8 col-sm-8  description">
+                                <a href="{{$featureItem->url}}" title="#">{{$featureItem->name}}</a>
+                                <p>{{$featureItem->created_at->format('j F Y')}}</p>
+                                <p>{{$featureItem->description}} </p>
+                            </div>
+                        @endforeach
+                       
+                        
                     </div>
                 </div>    
             </div>
