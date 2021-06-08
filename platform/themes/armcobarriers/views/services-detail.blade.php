@@ -48,9 +48,9 @@
             <div class="row">
                 @if(!empty($information_list))
                     @foreach($information_list as $item)
-                        <div class="col-lg-6 col-md-6 col-12">
+                        <div class="col-lg-6 col-md-6 col-12 text">
                             <code>
-                            @php echo has_sub_field($item, 'list') @endphp
+                            {!!has_sub_field($item, 'list')!!}
                             </code>
                         </div>
                     @endforeach
@@ -63,11 +63,13 @@
     <div class="container-customize">
         <div class="wrap-pic">
             <div class="re-pow">
+                @foreach (get_field($page, 'services_detail_image') as $item)
                 <div class="request">
-                    <img src="{{ Theme::asset()->url('images/service-detail/request.jpg') }}" alt="">
-                    <h3>Request a free Quotation</h3>
+                    <img src="{{ get_object_image(get_sub_field( $item ,'image'))}}" alt="">
+                    <h3>{{get_sub_field($item , 'title_image')}}</h3>
                 </div>
-                <div class="powder">
+                @endforeach
+                {{-- <div class="powder">
                     <img src="{{ Theme::asset()->url('images/service-detail/powder.jpg') }}" alt="">
                     <h3>Powder-Coating</h3>
                 </div>
@@ -81,7 +83,7 @@
                 <img src="{{ Theme::asset()->url('images/service-detail/impact.jpg') }}" alt="">
                 <h3>Impact Force Calculator</h3>
                </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

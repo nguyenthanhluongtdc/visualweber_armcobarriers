@@ -24,25 +24,21 @@
         }
     }
 }
-.wrap-text{
+.list{
     padding-top: 30px;
     padding-bottom: 30px;
 
     code {
         color: $gray-text;
     }
-
-    .text1{
-        padding-right: 5%;
-    }
-    .text2{
+    .text:nth-child(2){
         padding-left: 5%;
     }
-    .text1,.text2{
+    .text{
+        padding-left:30px ;
         ul{
             li{
                 list-style: disc;
-                padding-bottom: 3%;
                 font-size: 15px;
                 font-family: $Arial;
             }
