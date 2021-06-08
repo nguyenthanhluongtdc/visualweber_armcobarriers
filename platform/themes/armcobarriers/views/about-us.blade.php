@@ -1,3 +1,7 @@
+@php
+    $tabs_about = get_field($page, 'about_us');
+@endphp
+
 
 <div class="container-customize">
     <div class="wrap-top">
@@ -14,44 +18,29 @@
     </div>
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-              <a class="nav-item nav-link active" id="nav-company-profile" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Company Profile</a>
-              <a class="nav-item nav-link" id="nav-armco-system" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">The ARMCO System</a>
+                @foreach($tabs_about as $key => $tab)
+                    <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-company-profile" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-tab{{$key}}" aria-selected="true"> {{get_sub_field($tab,'tabs_title')}} </a>
+                @endforeach
             </div>
         </nav>
 </div>
-     <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="container-fluid-customize">
-                <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.jpg') }})">
-                    <div class="container-customize h-100">
-                        <div class="content-about d-flex align-items-center h-100">
-                                <p class="col-lg-6">With the experience of over 25 years in guardrail and barrier systems, Armco® 
-                                    Barriers Pty Ltd has become the leader in the safety barrier market.  From humble 
-                                    beginnings, the company now has a clientele base that will only choose ARMCO® for 
-                                    their safety barrier requirements.  An all Australian family owned business that
-                                    employs Australians and uses Australian resources, we provide service, support and a
-                                    knowledge of the product that is second to none and will always see our clients return.</p>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-            </div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="tab-content" id="nav-tabContent">
+        @foreach($tabs_about as $key => $tab)
+            <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
                 <div class="container-fluid-customize">
-                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/hero.jpg') }})">
+                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.jpg') }})">
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
-                                    <p class="col-lg-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, est. Non, possimus autem ut 
-                                    unde necessitatibus distinctio saepe dicta vitae praesentium. Quasi sint, veniam totam minus id quam dolores corporis maxime modi soluta,
-                                    ipsa fugiat facilis placeat itaque fugit asperiores optio culpa iste, numquam eveniet magnam molestiae quia amet. Est sint nisi voluptate
-                                    ullam alias non voluptates illum laborum, cum dolor molestiae dignissimos? Aperiam doloribus nemo similique est nostrum expedita iusto corporis
-                                    </p>
+                                <div class="col-lg-6">
+                                    @php echo get_sub_field($tab, 'tabs_description') @endphp
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
+                </div>
             </div>
-          </div>
+        @endforeach
+        </div>
 <div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo"id="whatwedo">
