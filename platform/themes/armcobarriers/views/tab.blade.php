@@ -9,7 +9,7 @@
                                 <div class="container-customize">
                                     <div class="install">
                                         <h2>{{get_sub_field($tab,'tabs_title')}}</h2>
-                                        @php echo get_sub_field($tab, 'tabs_decription') @endphp
+                                        @php echo get_sub_field($tab, 'tabs_description') @endphp
                                     </div>
                                 </div>
                             </div>
