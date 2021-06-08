@@ -32,7 +32,7 @@
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
                                 <div class="col-lg-6">
-                                    @php echo get_sub_field($tab, 'tabs_description') @endphp
+                                    @php echo get_sub_field($tab, 'tabs_decription') @endphp
                                 </div>
                             </div>
                         </div>
