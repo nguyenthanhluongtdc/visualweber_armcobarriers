@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="home-tab">
                 <div class="slider-gallery-wrapper">
                     <div class="swiper-container mySwiper-left">
                         
