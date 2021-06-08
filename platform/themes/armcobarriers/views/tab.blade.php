@@ -1,67 +1,23 @@
 <section>
     <div class="container-fluid-customize">
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
-                <section>
-                    <div class="container-fluid-customize content ">
-                        <div class="wrap-install">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Overview</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
+            @foreach($tabs as $key => $tab)
+                <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
+                    <section>
+                        <div class="container-fluid-customize content ">
+                            <div class="wrap-install" style="background-image: url({{get_sub_field($tab,'picture')}})">
+                                <div class="container-customize">
+                                    <div class="install">
+                                        <h2>{{get_sub_field($tab,'tabs_title')}}</h2>
+                                        @php echo get_sub_field($tab, 'tabs_decription') @endphp
                                     </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade" id="nav-installation" role="tabpanel" aria-labelledby="nav-installation-tab">
-                <section>
-                    <div class="container-fluid-customize content">
-                        <div class="wrap-install">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Installation</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade" id="nav-request" role="tabpanel" aria-labelledby="nav-request-tab">
-                <section>
-                    <div class="container-fluid-customize content">
-                        <div class="wrap-install">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Request a Quotation</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade" id="nav-custom" role="tabpanel" aria-labelledby="nav-custom-tab">
-                <section>
-                    <div class="container-fluid-customize content">
-                        <div class="wrap-install">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Custom Manufacture </h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
+                    </section>
+                </div>
+            @endforeach
+            <!-- <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
                 <section >                  
                     <div class="wrap-car" style="padding: 60px 0;">
                         <div class="container-customize"> 
@@ -100,35 +56,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
-            <div class="tab-pane fade" id="nav-factories" role="tabpanel" aria-labelledby="nav-factories-tab"><section>
-                <div class="container-fluid-customize content">
-                    <div class="wrap-install">
-                        <div class="container-customize">
-                            <div class="install">
-                                <h2>Factories & Industrial</h2>
-                                <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </section></div>
-            <div class="tab-pane fade" id="nav-roadside" role="tabpanel" aria-labelledby="nav-roadside-tab">
-                <section>
-                    <div class="container-fluid-customize content">
-                        <div class="wrap-install">
-                            <div class="container-customize">
-                                <div class="install">
-                                    <h2>Roadside</h2>
-                                    <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                    That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div> -->
         </div>
     </div>
-</div>
 </section>
