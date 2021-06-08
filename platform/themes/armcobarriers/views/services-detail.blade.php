@@ -1,5 +1,5 @@
 @php 
-    $tabs_services = get_field($page, 'services');
+    $tabs_services_detail = get_field($page, 'services_detail');
 @endphp
 <section >
     <div class="container-customize" id="install">
@@ -25,7 +25,7 @@
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                @foreach($tabs_services as $key => $tab)
+                @foreach($tabs_services_detail as $key => $tab)
                     <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-overview" aria-selected="false"> {{get_sub_field($tab, 'tabs_title')}} </a>
                 @endforeach
                 </div>
@@ -34,7 +34,7 @@
     </div>
 
     <div class="item-tab-content right-tab-md">
-        @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
+        @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services_detail])
     </div>
 </div>
 
