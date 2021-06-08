@@ -1,7 +1,7 @@
 <section>
     <div class="container-fluid-customize">
         <div class="tab-content" id="nav-tabContent">
-            <!-- @foreach($tabs as $key => $tab)
+            @foreach($tabs as $key => $tab)
                 <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
                     <section>
                         <div class="container-fluid-customize content ">
@@ -16,8 +16,8 @@
                         </div>
                     </section>
                 </div>
-            @endforeach -->
-            <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
+            @endforeach
+            <!-- <div class="tab-pane fade show active" id="nav-car" role="tabpanel" aria-labelledby="nav-car-tab">
                 <section >                  
                     <div class="wrap-car" style="padding: 60px 0;">
                         <div class="container-customize"> 
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </div>
+            </div> -->
+        </div> 
     </div>
 </section>

@@ -2,7 +2,6 @@
     $tabs_about = get_field($page, 'about_us');
 @endphp
 
-
 <div class="container-customize">
     <div class="wrap-top">
                 <nav aria-label="breadcrumb">

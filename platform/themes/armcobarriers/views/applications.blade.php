@@ -24,79 +24,32 @@
     </div>
 </section>
 
-<section>
-    <div class="main-scroll">
-        <div class="left-tab-md tabs-scroll"> 
-            <div class="container-customize">
-                <div class="nav nav-tabs" id="nav-tab"style="border:none" role="tablist">
+<section  style="padding-bottom: 5%">
+    <div class="container-customize">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
                 @foreach($tabs_applications as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}} mb-lg-0 mb-2"style="color :#000000" id="nav-off-tab" data-toggle="tab" href="#nav-off" role="tab" aria-controls="nav-off" aria-selected="false"> {{get_sub_field($tab,'tabs_title')}}</a>
+                    <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-company-profile" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-tab{{$key}}" aria-selected="true"> {{get_sub_field($tab,'tabs_title')}} </a>
                 @endforeach
-                </div>
             </div>
-        </div>
-        <div class="right-tab-md">
+        </nav>
+    </div>
+    <div class="tab-content" id="nav-tabContent">
+    @foreach($tabs_applications as $key => $tab)
+        <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
             <div class="container-fluid-customize">
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade  show active" id="nav-road" role="tabpanel" aria-labelledby="nav-road-tab">
-                        <section style="padding-bottom: 80px">
-                            <div class="container-fluid-customize content">
-                                <div class="road-applications"style="background-image: url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
-                                    <div class="container-customize">
-                                        <div class="install">
-                                            <p>Guardrail is widely acknowledged as one of the world’s most effective roadside and protective barrier systems.</p>
-                                            <p>ARMCO® Railgard™ is widely used and accepted by State highway authorities, municipal councils and numerous government departments.  It is manufactured to all relevant State or Federal and Traffic & Parking standards.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                <div class="wrap-cont" style="background-image: url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
+                    <div class="container-customize h-100">
+                        <div class="content-about d-flex align-items-center h-100">
+                            <div class="col-lg-6" style="font-size:17px;color:#fff;font-weight:$Arial">
+                                <p>{!!get_sub_field($tab, 'tabs_description')!!}</p>
                             </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane fade" id="nav-off" role="tabpanel" aria-labelledby="nav-off-tab">
-                        <section style="padding-bottom: 80px">
-                            <div class="container-fluid-customize content">
-                                <div class="road-applications">
-                                    <div class="container-customize">
-                                        <div class="install">
-                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane fade" id="nav-bridges" role="tabpanel" aria-labelledby="nav-bridges-tab">
-                        <section style="padding-bottom: 80px">
-                            <div class="container-fluid-customize content">
-                                <div class="road-applications">
-                                    <div class="container-customize">
-                                        <div class="install">
-                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="nav-design-tab">
-                        <section style="padding-bottom: 80px">
-                            <div class="container-fluid-customize content">
-                                <div class="road-applications">
-                                    <div class="container-customize">
-                                        <div class="install">
-                                            <p>ARMCO® Barriers are the only manufacturer to offer an 'in-house' trained Installation service for it’s own product. 
-                                            That is because we understand that the way that it is installed, greatly affects the performance of any barrier system. </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    @endforeach
     </div>
 </section>
 
