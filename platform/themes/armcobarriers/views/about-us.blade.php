@@ -27,11 +27,11 @@
         @foreach($tabs_about as $key => $tab)
             <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
                 <div class="container-fluid-customize">
-                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%), url({{ Theme::asset()->url('images/about/img1.jpg') }})">
+                    <div class="wrap-cont" style="background-image:url({{ get_object_image(get_sub_field( $tab ,'picture'))}}),linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 0%) 57%, rgb(255 255 255 / 68%) 68%)">
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
                                 <div class="col-lg-6">
-                                   <p style="font-size:17px;font-family:Arial"> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
+                                   <p style="font-size:17px;font-:Arial"> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
                                 </div>
                             </div>
                         </div>
