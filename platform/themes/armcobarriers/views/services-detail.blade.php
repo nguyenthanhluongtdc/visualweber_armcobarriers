@@ -1,5 +1,5 @@
 @php 
-    $tabs_services_detail = get_field($page, 'services_detail');
+    $tabs_services_detail = get_field($page, 'services');
 @endphp
 <section >
     <div class="container-customize" id="install">
