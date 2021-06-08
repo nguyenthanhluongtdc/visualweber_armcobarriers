@@ -1,5 +1,8 @@
 @php 
     $tabs_services_detail = get_field($page, 'services');
+
+    $information_list = has_field($page, 'services_detail_list');
+
 @endphp
 <section >
     <div class="container-customize" id="install">
@@ -41,28 +44,17 @@
 
 <section >
     <div class="container-customize">
-        <div class="wrap-text">
+        <div class="wrap-text list">
             <div class="row">
-                <div class="col-md-6 text1">
-                <ul>
-                    <li>Using our pneumatic post ramming technology we provide a  more rapid and efficient system providing 
-                    our clients with cost savings as well as peace of mind. Up to 4 times faster than conventional ramming. </li>
-                    <li>The ARMCO® Barriers Installation Service is the most professional in the market, factory trained to
-                     ensure that ARMCO® Railgard™ is installed to meet all State Road Authority Standards.</li>
-                    <li>Installation team are uniformed and arrive in identifiable company vehicles.</li>
-                    <li>All electrical equipment is tagged as per Australian Standards and Occupational Health & Safety practices.</li>
-                    <li>All machinery with Reverse Signals and Flashing lights</li>
-                </ul>
-            </div>
-                <div class="col-md-6 text2">
-                    <ul>
-                        <li>Machinery is fitted with basic safety equipment such as First Aid kits and fire fighting equipment.</li>
-                        <li>All OH&S Procedures in place.</li>
-                        <li>Public Liability Insurance and Work Cover Insurance current.  Documents can be provided.</li>
-                        <li>All installation staff are OH&S trained for each state. (Blue, Red & Green Cards)</li>
-                        <li>Installation staff are Level 2 First Aid Trained.</li>
-                    </ul>
-                </div>
+                @if(!empty($information_list))
+                    @foreach($information_list as $item)
+                        <div class="col-lg-6 col-md-6 col-12">
+                            <code>
+                            @php echo has_sub_field($item, 'list') @endphp
+                            </code>
+                        </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>

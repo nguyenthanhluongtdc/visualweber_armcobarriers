@@ -25,7 +25,13 @@
     }
 }
 .wrap-text{
-    padding:1% 0 0 1%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    code {
+        color: $gray-text;
+    }
+
     .text1{
         padding-right: 5%;
     }
