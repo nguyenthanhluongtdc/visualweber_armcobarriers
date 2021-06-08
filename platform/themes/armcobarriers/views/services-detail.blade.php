@@ -1,3 +1,6 @@
+@php 
+    $tabs_services = get_field($page, 'services');
+@endphp
 <section >
     <div class="container-customize" id="install">
         <div class="wrap-top">
@@ -17,24 +20,21 @@
 </section>
 
 <div class="services-detail-tabs main-scroll">
-    <div class="left-tab-md tabs-scroll">
+    <div class="left-t
+    ab-md tabs-scroll">
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab" aria-controls="nav-overview" aria-selected="false">Overview</a>
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-installation-tab" data-toggle="tab" href="#nav-installation" role="tab" aria-controls="nav-installation" aria-selected="false">Installation</a>
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-request-tab" data-toggle="tab" href="#nav-request" role="tab" aria-controls="nav-request" aria-selected="false">Request a Quotation</a>
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-custom-tab" data-toggle="tab" href="#nav-custom" role="tab" aria-controls="nav-custom" aria-selected="false">Custom Manufacture</a>
-                    <a class="nav-item nav-link active"style="background:none" id="nav-car-tab" data-toggle="tab" href="#nav-car" role="tab" aria-controls="nav-car" aria-selected="true">Car Parks</a>
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-factories-tab" data-toggle="tab" href="#nav-factories" role="tab" aria-controls="nav-factories" aria-selected="false">Factories & Industrial</a>
-                    <a class="nav-item nav-link"style="color:#000000" id="nav-roadside-tab" data-toggle="tab" href="#nav-roadside" role="tab" aria-controls="nav-roadside" aria-selected="false">Roadside</a>
+                @foreach($tabs_services as $key => $tab)
+                    <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-overview" aria-selected="false"> {{get_sub_field($tab, 'tabs_title')}} </a>
+                @endforeach
                 </div>
             </nav>
         </div>
     </div>
 
     <div class="item-tab-content right-tab-md">
-        @includeIf("theme.armcobarriers::views.tab")
+        @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
     </div>
 </div>
 

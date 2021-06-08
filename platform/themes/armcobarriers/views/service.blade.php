@@ -21,7 +21,6 @@
         </div>
     </div>
 </section>
-
 <div class="services-detail-tabs main-scroll">
     <div class="left-t
     ab-md tabs-scroll">
