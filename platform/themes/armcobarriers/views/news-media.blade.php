@@ -62,12 +62,12 @@
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                        <a href="{{$new->slug}}">
+                                        <a href="{{$new->url}}">
                                             <img class="mw-100" src="{{ RvMedia::getImageUrl($new->image) }}" alt="">
                                         </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="/news-detail">{{$new->name}}</a> </h5>
+                                        <h5> <a href="{{$new->slug}}">{{$new->name}}</a> </h5>
                                         <div class="date"> {{$new->created_at->format('j F Y')}} </div>
                                         <p class="des">
                                             {{$new->description}} 
@@ -87,7 +87,7 @@
                             @foreach(get_posts_by_category(15,12) as $media)
                                 <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
                                     <div class="item">
-                                        <a href="/news-detail">
+                                        <a href="{{$media->url}}">
                                             <img src="{{ RvMedia::getImageUrl($media->image) }}" alt="">
                                             <h3> {{$media->name}} </h3>
                                         </a>
