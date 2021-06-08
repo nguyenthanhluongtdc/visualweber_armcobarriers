@@ -5,11 +5,11 @@
                 <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
                     <section>
                         <div class="container-fluid-customize content ">
-                            <div class="wrap-install" style="background-image: url({{get_sub_field($tab,'picture')}})">
+                            <div class="wrap-install" style="background-image: url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
                                 <div class="container-customize">
                                     <div class="install">
                                         <h2>{{get_sub_field($tab,'tabs_title')}}</h2>
-                                        @php echo get_sub_field($tab, 'tabs_description') @endphp
+                                        <p>@php echo get_sub_field($tab, 'tabs_description') @endphp</p>
                                     </div>
                                 </div>
                             </div>
