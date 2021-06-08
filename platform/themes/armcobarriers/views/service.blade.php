@@ -45,57 +45,28 @@
                 <p>Our's Services</p>
             </div>
             <div class="row">
+            @foreach (get_field($page, 'ours_service') as $item)
                 <div class="col-lg-3 col-md-6 col-sm-6 asset">
                     <a href="/services-detail">
                         <div class="icon">
                             <i class="fal fa-long-arrow-right"></i>
                         </div>
                     </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic1.jpg') }}" alt="">
-                            <p>Asset Protection for Factories</p>
+                    <img src="{{ get_object_image(get_sub_field( $item ,'picture_service'))}}" alt="">
+                            <p>{{get_sub_field($item , 'service_name')}}</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                    <a href="/services-detail">
-                        <div class="icon">
-                            <i class="fal fa-long-arrow-right"></i>
-                        </div>
-                    </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic2.jpg') }}" alt="">
-                    <p>Gas and Fuel Tank Solutions</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                    <a href="/services-detail">
-                        <div class="icon">
-                            <i class="fal fa-long-arrow-right"></i>
-                        </div>
-                    </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic3.jpg') }}" alt="">
-                            <p>Impact protection for Warehouses</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                    <a href="/services-detail">
-                        <div class="icon">
-                            <i class="fal fa-long-arrow-right"></i>
-                        </div>
-                    </a>
-                    <img src="{{ Theme::asset()->url('images/service/pic4.jpg') }}" alt="">
-                    <p>ARMCO Design Advise</p>
-                </div>
+               @endforeach
             </div>
         </div>
     </div>
 </section>
 <section style="padding-top:6%">
     <div class="container-fluid-customize">
-        <div class="wrap-roadside">
+        <div class="wrap-roadside"style="background-image:url({{ get_object_image(get_field( $page ,'services_solutions_picture'))}})">
             <div class="container-customize">
                 <div class="content">
-                    <h3>Roadside Solutions</h3>
-                    <p>Armco® Barriers provide a range of services to support both the customer and our product. Our services are of
-                        a superior standard due to the intimate knowledge of the Armco® product that our service providers have.</p>
-                    <p>Our Installation teams are 'in house' trained and all have had experience in manufacture to understand the product better.
-                        Our design team have over 20 years experience in designing and assisting customers with protective barrier systems. We have civil
-                        and structural engineers on staff to assure that our products are manufactured and designed to the highest standard of both safety and tolerance.</p>
+                    <h3> {{get_field( $page ,'services_solutions')}}</h3>
+                    <p>{!!get_field( $page ,'services_solutions_desc')!!}</p>
                 </div>
             </div>
         </div>
@@ -110,43 +81,16 @@
             </div>
             <div class="wrap-descrip">
                 <div class="row">
+                @foreach (get_field($page, 'product_range') as $item) 
                     <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
                         <div class="post">
                             <div class="post-title">
-                                <h3>W Beam &, Thrie Beam</h3>
+                                <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
                             </div>
-                            <p>Armco®  Barriers can supply all of your wire rope needs, including installation by our professional and experienced installation teams.</p>
+                            <p>{!!get_sub_field($item ,'product_range_description')!!}</p>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Posts & Bollards</h3>
-                            </div>
-                            <p>ARMCO® Bollards are versatile in their many applications.</p>
-                            <p>Manufactured in 5.4mm steel to meet both traffic and parking and customer specification,
-                                Armco® Bollards are then Hot Dipped Galvanized to produce a quality product that is durable and safe...</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Wheelstops & Floorgards</h3>
-                            </div>
-                            <p>Armco®  Floorgard™is an ideal application where walls need to be protected against forklift damage, 
-                            being most commonly used in warehousing and cool room applications.Floorgard™(as shown in the pictures) 
-                            works optimally in conjunction with Armco® Railgard™.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>Handrail, Gates & Pipegards</h3>
-                            </div>
-                            <p>Armco®  Barriers Pty Ltd will supply Guardrail for all of your on and off road requirements.</p>
-                            <p>We have trademarked the name Railgard™ so as our customer can be assured of receiving the superior Armco®  product. </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="wrap2 my-5">

@@ -127,8 +127,6 @@
 </section>
 <section style="padding-top:3%">
     <div class="container-customize">
-    <div class="container-customize">
         @includeIf("theme.armcobarriers::views.components.form-signup")
-    </div>
     </div>
 </section>

@@ -79,7 +79,7 @@
 </div>
 <div class="container-fluid-customize">
     <div class="hero">
-        <img src="{{ Theme::asset()->url('images/about/hero.jpg') }}" alt="">
+        <img src="{{ get_object_image(get_field( $page ,'image'))}}" alt="">
     </div>
 </div>
 <div class="container-customize" id="wrap-bot">
