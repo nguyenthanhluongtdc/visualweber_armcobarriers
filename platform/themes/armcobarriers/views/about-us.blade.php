@@ -31,7 +31,7 @@
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
                                 <div class="col-lg-6">
-                                   <p> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
+                                   <p style="font-size:17px;font-family:Arial"> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
                                 </div>
                             </div>
                         </div>
