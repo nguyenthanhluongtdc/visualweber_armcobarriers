@@ -7,13 +7,13 @@ return [
         'notice' => [
             'title'       => 'plugins/contact::contact.settings.email.templates.notice_title',
             'description' => 'plugins/contact::contact.settings.email.templates.notice_description',
-            'subject'     => 'New contact from {{ site_title }}',
+            // 'subject'     => 'New contact from {{ site_title }}',
             'can_off'     => true,
         ],
     ],
     'variables'   => [
         'contact_name'    => 'Contact name',
-        'contact_subject' => 'Contact subject',
+        // 'contact_subject' => 'Contact subject',
         'contact_email'   => 'Contact email',
         'contact_phone'   => 'Contact phone',
         'contact_address' => 'Contact address',

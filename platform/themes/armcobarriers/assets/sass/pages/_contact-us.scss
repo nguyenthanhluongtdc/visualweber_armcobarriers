@@ -347,6 +347,9 @@
     display: grid;
     grid-template-columns: 20% 36% 20% 36%;
     gap: 3%;
+    @media (max-width: 1600px) {
+        grid-template-columns: 30% 57%;
+    }
     @media(max-width: 991px) {
         display: flex;
         justify-content: space-around;
