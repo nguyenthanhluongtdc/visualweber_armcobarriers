@@ -58,6 +58,6 @@
 </div> -->
 
 <a href ="" class="product_item col-6 col-lg-12">
-    <img class="img-fluid" src="{{$product->url}}" alt="">
+    <img class="img-fluid" src="{{$product->image}}" alt="">
     <p class="product_name"> {{$product->name}} </p>
 </a>
