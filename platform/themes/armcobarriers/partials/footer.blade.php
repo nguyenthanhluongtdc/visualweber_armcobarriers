@@ -28,17 +28,17 @@
                     </div>
                     <div class="col-lg-2 col-md-5 col-6 mb-lg-0 mb-5">
                         <div class="homepage">
-                            <h3>Homepage</h3>
-                            <p><a href="{{url('/about')}}">About Us</a></p>
-                            <p><a href="{{url('/product')}}">Products</a></p>
-                            <p><a href="{{url('/service')}}">Services</a></p>
+                            <p><a href="{{url('/')}}">Homepage</a></p>
+                            <p><a href="{{url('/about-us')}}">About Us</a></p>
+                            <p><a href="{{url('/products')}}">Products</a></p>
+                            <p><a href="{{url('/services')}}">Services</a></p>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-7 col-6 mb-lg-0 mb-5">
                         <div class="applications">
-                            <h3>Applications</h3>
+                            <p><a href="{{url('/applications')}}">Applications</a></p>
                             <p><a href="{{url('/gallery')}}">Gallery</a></p>
-                            <p><a href="{{url('/news')}}">News, Events & Media</a></p>
+                            <p><a href="{{url('/news-media')}}">News, Events & Media</a></p>
                             <p><a href="{{url('/contact-us')}}">Contact Us</a></p>
                         </div>
                     </div>
