@@ -119,7 +119,9 @@
                                 <h4 class="product-name">
                                     {{$product->name}}
                                 </h4>
+                                <code>
                                 <?php echo $product->description ?>
+                                </code>
                             </a>
                             
                             </div>
