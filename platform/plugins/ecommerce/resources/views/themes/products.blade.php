@@ -28,7 +28,7 @@
 
 @php Theme::layout('default') @endphp
 <section>
-  @includeIf("theme.armcobarriers::views.breadcrumb")
+  @includeIf("theme.armcobarriers::views.components.breadcrumb")
   <div class="container-customize">
     <div class="introduction-product">
       <div class="introduction-product-title">
@@ -41,7 +41,8 @@
     <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ Theme::asset()->url('images/product/banner-product.jpg')}})">
     <div class="container-customize">
       <div class="d-flex align-items-center h-100 col-lg-7 col-12">
-        <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
+        <p>
+          {!! get_field($product, 'content_banner') !!}
         </p>
       </div>
     </div>
@@ -110,7 +111,7 @@
                     @foreach($products as $product)
                         <div class="col-lg-3 col-md-4 col-6">
                             <div class="product-item-wrapper">
-                            <a href="{{url('/products-detail')}}">
+                            <a href="{{$product->url}}">
                                 <div class="product-item">
                                 <img class="product-image" src="{{rvMedia::getImageUrl($product->image)}}" alt="">
                                 <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
@@ -126,31 +127,9 @@
                     @endforeach
                 </div>
                 
-                <div class="row">
-                  <div class="col-md-12">
-                    <div class="pagination_style1">
-                      <nav aria-label="...">
-                        <ul class="pagination">
-                          {{-- <li class="page-item disabled">
-                              <a class="page-link" href="#" tabindex="-1">Previous</a>
-                          </li> --}}
-                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item">
-                              <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item"><a class="page-link" href="#">4</a></li>
-                          <li class="page-item page-link-last">
-                            <a class="" href="#">Next page</a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </div>
-                  </div>
-                 
-                </div>
+                {{ $products->links('vendor.pagination.custom') }}
+
             </div>
-            
           </div>
         </div>
       </div>

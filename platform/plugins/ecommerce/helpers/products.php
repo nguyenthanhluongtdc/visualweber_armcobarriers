@@ -375,6 +375,22 @@ if (!function_exists('get_related_products')) {
     }
 }
 
+if (!function_exists('get_other_products')) {
+    /**
+     * Get related products of $product
+     * @param Product $product
+     * @param int $limit
+     * @return array
+     */
+    function get_other_products($limit = 4)
+    {
+        $other_product = Product::all()->random($limit);
+
+        return $other_product;
+    }
+}
+
+
 if (!function_exists('get_cross_sale_products')) {
     /**
      * @param Product $product

@@ -10,254 +10,255 @@
             $productImages = $product->images;
         }
     }
+
+    //get custom field tabs
+    $hasFieldTabs = has_field($product, 'tabs_product');
+
+    //create a new array tags
+    $tags = [];
+    foreach($product->tags as $tag) {
+        array_push($tags, $tag->name);
+    }
+
+    //var_dump(Cart::instance('cart')->count()); exit();
+
 @endphp
 
-<!-- Page Content Wrapper -->
-<div class="page-content-wraper">
-    <!-- Bread Crumb -->
-    {!! Theme::breadcrumb()->render() !!}
-    <!-- Bread Crumb -->
+@includeIf("theme.armcobarriers::views.components.breadcrumb")
 
-    <!-- Page Content -->
-    <section id="product-detail-page" class="content-page single-product-content">
-        <!-- Product -->
-        <div id="product-detail" class="container">
-            <div class="row">
-                <!-- Product Image -->
-                <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
-                    <div class="product-page-image">
-                        <!-- Slick Image Slider -->
-                        <div class="product-image-slider product-image-gallery" id="product-image-gallery"
-                             data-pswp-uid="3">
-                            @foreach ($productImages as $img)
-                                <div class="item">
-                                    <img src="{{ RvMedia::getImageUrl($img, 'product_detail') }}"
-                                         data-zoom-image="{{ RvMedia::getImageUrl($img, 'product_detail') }}"
-                                         alt="{{ $originalProduct->name }}"/>
+<div id="product_detail">
+    <div class="container-customize">
+        <div class="row">
+            <div class="top_title col-md-12">
+                <p>Product Range</p>
+                <a href="">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Guardrail - Railgard curvature details</span>
+                </a>
+            </div>
+           
+            <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+            <!---product infomation-->
+            <div id="product_info" class="col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="col-12 col-lg-6 gallery">
+                        <div class="gallery-container">
+                            <div class="swiper-container gallery-main">
+                                <div class="swiper-wrapper">
+                                @foreach($productImages as $img)
+                                    <div class="swiper-slide">
+                                        <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="Slide 01">
+                                    </div>
+                                @endforeach
                                 </div>
-                            @endforeach
+                            </div>
+                            <div class="swiper-container gallery-thumbs">
+                                <div class="swiper-wrapper">
+                                @foreach($productImages as $thumb)
+                                    <div class="swiper-slide">
+                                        <img src="{{rvMedia::getImageUrl($thumb, 'product')}}" alt="Slide 01">
+                                    </div>
+                                @endforeach
+                                </div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Slick Thumb Slider -->
-                    <div class="product-image-slider-thumbnails">
-                        @foreach ($productImages as $thumb)
-                            <div class="item">
-                                <img src="{{ RvMedia::getImageUrl($thumb,'product') }}"
-                                     alt="{{ $originalProduct->name }}"/>
+                    <div class="col-12 col-lg-6 info">
+                        <p class="product_name"> {{$product->name}} </p>
+                        @php 
+                            echo $product->description
+                        @endphp
+                        <ul class="list_info">
+                            <li>
+                                <p>Model</p>
+                                <p>{{ has_field($product, 'model_product') }}</p>
+                            </li>
+                            <li>
+                                <p>Brand</p>
+                                @if(!empty($product->brand))
+                                    <p> {{$product->brand->name}} </p>
+                                @endif
+                            </li>
+                            <li>
+                                <p>Price</p>
+
+                                @if ($originalProduct->front_sale_price !== $originalProduct->price)
+                                    <del>{{ human_price_text($originalProduct->front_sale_price, "$") }}</del>
+                                    <p>
+                                        {{ human_price_text($originalProduct->front_sale_price, "$") }}
+                                    </p>
+                                @else
+                                    <p>
+                                        {{ human_price_text($originalProduct->price, "$")}}
+                                    </p>
+                                @endif
+                            </li>
+                            <li>
+                                <p>Tags</p>
+                                <p> {{implode(", ",$tags)}} </p>
+                            </li>
+                        </ul>
+                        <form action="">
+                            <div class="input_field">
+                                <button class="minus">-</button>
+                                <input class="quantity" min="0" title="Quantity" name="qty" value="1" type="number">
+                                <button class="plus">+</button>
+                            </div>
+                            <button class="add_to_cart">Add to cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!---more info-->
+            <div id="more_info" class=" col-sm-12 col-md-12">
+                <div class="row">
+                    <div class="col-12 col-lg-9 mb-5" id="tab">
+                        <div class="row ml-0">
+                            <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
+                                @if(!empty($hasFieldTabs))
+                                    @foreach($hasFieldTabs as $key => $tab)
+                                    <li class="nav-item">
+                                        <a class="nav-link {{$key==0?'active':''}}" id="tab{{$key}}-tab" data-toggle="tab" href="#tab{{$key}}" role="tab" aria-controls="tab{{$key}}" aria-selected="true"> {{has_sub_field($tab,'tabs_title')}} </a>
+                                    </li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="myTabContent">
+                            @if(!empty($hasFieldTabs))
+                                @foreach($hasFieldTabs as $key => $tab)
+                                    <div class="tab-pane fade {{$key==0?'active show':''}}" id="tab{{$key}}" role="tabpanel" aria-labelledby="tab{{$key}}-tab">
+                                        {{has_sub_field($tab,'tabs_content')}}
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </div>
+                    @php
+                        $relatedProducts = get_related_products($product);
+                    @endphp
+                    <div class="col-12 col-lg-3 mb-5">
+                        <div id="related_products">
+                            <p class="title">Related products</p>
+                            @if(!empty($relatedProducts))
+                                <div class="list_products row">
+                                    @foreach ($relatedProducts as $related)
+                                        @include('plugins/ecommerce::themes.includes.default-product', ['product' => $related])
+                                    @endforeach
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--other product-->
+
+            @php $other_product = get_other_products(5); @endphp
+            <div id="other_products" class="col-12 col-sm-12 col-md-12">
+                <p class="title">Other products</p>
+                <div class="swiper-container otherSwiper">
+                    <div class="swiper-wrapper list_products">
+                        @foreach($other_product as $other_pro)
+                            <div class="swiper-slide product_item">
+                                <div class="box-img">
+                                    <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="">
+                                    <p class="overlay"><i class="far fa-chevron-circle-right"></i></p>
+                                </div>
+                                <p class="product_name"> {!! $other_pro->name !!} </p>
+                                <p class="description"> {!! $other_pro->description !!} </p> 
                             </div>
                         @endforeach
                     </div>
-                    <!-- End Slick Thumb Slider -->
                 </div>
-                <!-- End Product Image -->
-
-                <!-- Product Content -->
-                <div class="col-lg-6 col-md-6 col-sm-12 mb-30">
-                    <div class="product-page-content">
-                        <h2 class="product-title">{{ $originalProduct->name }}</h2>
-                        @if (EcommerceHelper::isReviewEnabled())
-                            <div class="product-rating">
-                                <div class="star-rating" itemprop="reviewRating" itemscope=""
-                                     itemtype="http://schema.org/Rating"
-                                     title="Rated {{ get_average_star_of_product($product->id) }} out of 5">
-                                    <span style="width: {{ get_average_star_of_product($product->id) * 20 }}%"></span>
-                                </div>
-                                    <div class="product-rating-count"><a href="#list-reviews">( <span
-                                                    class="count">{{ get_count_reviewed_of_product($originalProduct->id) }}</span>
-                                            {{ __('Reviews') }} )</a>
-                                    </div>
-                            </div>
-                        @endif
-                        <div class="product-price">
-                            @if ($originalProduct->front_sale_price !== $originalProduct->price)
-                                <del>{{ format_price($originalProduct->front_sale_price) }}</del>
-                                <span>
-                                    <span class="product-price-text">{{ format_price($originalProduct->front_sale_price) }}</span>
-                                </span>
-                            @else
-                                <span>
-                                    <span class="product-price-text">{{ format_price($originalProduct->price) }}</span>
-                                </span>
-                            @endif
-                        </div>
-                        <p class="product-description" id="detail-description">
-                            {!! $product->description !!}
-                        </p>
-
-                        <div class="text-warning"></div>
-                        <div class="row product-filters">
-                            @if ($product->variations()->count() > 0)
-                                {!! render_product_swatches($product, [
-                                    'selected' => $selectedAttrs,
-                                ]) !!}
-                            @endif
-                        </div>
-                        <form class="single-variation-wrap">
-                            @csrf
-                            {!! apply_filters(ECOMMERCE_PRODUCT_DETAIL_EXTRA_HTML, null) !!}
-                            <input type="hidden" name="product_is_out_of_stock"
-                                   value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock"/>
-                            <input type="hidden" name="id" id="hidden-product-id" value="{{ $originalProduct->id }}"/>
-                            <div class="product-quantity">
-                                <span data-value="+" class="quantity-btn quantityPlus"></span>
-                                <input class="quantity input-lg" step="1" min="1" max="20" name="qty" value="1"
-                                       title="Quantity" type="number"/>
-                                <span data-value="-" class="quantity-btn quantityMinus"></span>
-                            </div>
-                            <button id="btn-add-cart" class="btn btn-lg btn-black"><i class="fa fa-shopping-bag"
-                                                                                      aria-hidden="true"></i>{{ __('Add to cart') }}
-                            </button>
-                        </form>
-                        <div class="product-meta">
-                            @if ($originalProduct->sku)
-                                <span>{{ __('SKU') }} : <span id="product-sku" class="sku"
-                                                  itemprop="sku">{{ $originalProduct->sku }}</span></span>
-                            @endif
-                            <span><span
-                                        id="is-out-of-stock">{{ ! $originalProduct->isOutOfStock() ? __('In stock') : __('Out of stock') }}</span></span>
-
-                            @if (!$product->categories->isEmpty())
-                                <span>{{ __('Categories') }} :
-                                    @foreach ($product->categories as $category)
-                                        <a href="{{ $category->url }}"> {{ $category->name }}
-                                            @if (! $loop->last) , @endif
-                                        </a>
-                                    @endforeach
-                                </span>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /row -->
-        </div> <!-- product-detail -->
-        <!-- End Product -->
-
-        <!-- Product Content Tab -->
-        <div class="product-tabs-wrapper container">
-            <ul class="product-content-tabs nav nav-tabs" role="tablist">
-
-                <li class="nav-item">
-                    <a class="active" href="#tab_description" role="tab" data-toggle="tab">{{ __('Description') }}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="#tab_additional_information" role="tab"
-                       data-toggle="tab">{{ theme_option('product-bonus-title')}}</a>
-                </li>
-                @if (EcommerceHelper::isReviewEnabled())
-                    <li class="nav-item">
-                        <a class="" href="#tab_reviews" role="tab" data-toggle="tab">{{ __('Reviews') }}
-                            (<span> {{ get_count_reviewed_of_product($product->id) }}</span>)</a>
-                    </li>
-                @endif
-                <li class="nav-item">
-                    <a class="" href="#tab_more_products" role="tab" data-toggle="tab">{{ __('Related products') }}</a>
-                </li>
-
-            </ul>
-            <div class="product-content-Tabs_wraper tab-content container">
-                <div id="tab_description" role="tabpanel" class="tab-pane fade in active">
-                    <!-- Accordion Title -->
-                    <h6 class="product-collapse-title" data-toggle="collapse" data-target="#tab_description-coll">
-                        {{ __('Description') }}</h6>
-                    <!-- End Accordion Title -->
-                    <!-- Accordion Content -->
-                    <div id="tab_description-coll" class="shop_description product-collapse collapse container">
-                        <div class="row">
-                            <div class=" col-md-12">
-                                {!! clean($product->content) !!}
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Accordion Content -->
-                </div>
-
-                <div id="tab_additional_information" role="tabpanel" class="tab-pane fade">
-                    <!-- Accordion Title -->
-                    <h6 class="product-collapse-title" data-toggle="collapse"
-                        data-target="#tab_additional_information-coll">{{ theme_option('product-bonus-title')}}</h6>
-                    <!-- End Accordion Title -->
-                    <!-- Accordion Content -->
-                    <div id="tab_additional_information-coll" class="container product-collapse collapse">
-
-                        {!! theme_option('product-bonus') !!}
-
-                    </div>
-                    <!-- End Accordion Content -->
-                </div>
-
-                @if (EcommerceHelper::isReviewEnabled())
-                    <div id="tab_reviews" role="tabpanel" class="tab-pane fade">
-                    <!-- Accordion Title -->
-                    <h6 class="product-collapse-title" data-toggle="collapse" data-target="#tab_reviews-coll">{{ __('Reviews') }}
-                        ({{ get_count_reviewed_of_product($product->id) }})</h6>
-                    <!-- End Accordion Title -->
-                    <!-- Accordion Content -->
-                    <div id="tab_reviews-coll" class=" product-collapse collapse container">
-                        <div class="row">
-                            <div class="review-form-wrapper col-md-12">
-                                {!! render_review_form($product->id) !!}
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Accordion Content -->
-                </div>
-                @endif
-
-                <div id="tab_more_products" role="tabpanel" class="tab-pane fade">
-                    <!-- Accordion Content -->
-
-                    <div class="row">
-                        <!-- Product Carousel -->
-                        @php
-                            $up_sale_products = get_up_sale_products($product);
-                        @endphp
-
-                        @if (! empty($up_sale_products))
-
-                            <div class="container product-carousel">
-                                <div id="new-tranding" class="product-item-4 owl-carousel owl-theme nf-carousel-themé">
-                                    <!-- item.1 -->
-
-                                    @foreach ($up_sale_products as $up_id)
-                                        @php
-                                            $up_sale = get_product_by_id($up_id);
-                                        @endphp
-                                        @include('plugins/ecommerce::themes.includes.default-product', ['product' => $up_sale])
-                                    @endforeach
-                                </div>
-                            </div>
-
-                    @endif
-                    <!-- End Product Carousel -->
-                    </div>
-
-                    <!-- End Accordion Content -->
-                </div>
-
             </div>
         </div>
-        <!-- End Product Content Tab -->
-
-        <!-- Product Carousel -->
-        @php
-            $relatedProducts = get_related_products($product);
-        @endphp
-
-        @if (!empty($relatedProducts))
-
-            <div class="container product-carousel">
-                <h2 class="page-title">{{ __('Related products') }}</h2>
-                <div id="new-tranding" class="product-item-4 owl-carousel owl-theme nf-carousel-theme1">
-                    @foreach ($relatedProducts as $related)
-                        @include('plugins/ecommerce::themes.includes.default-product', ['product' => $related])
-                    @endforeach
-
-                </div>
-            </div>
-
-         @endif
-    <!-- End Product Carousel -->
-    </section>
+    </div>
 </div>
-<!-- End Page Content Wrapper -->
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    $(document).ready(function() {
+        $(window).resize(function() {
+            $height = $('.gallery-main').height();
+            console.log($height)
+            $('.gallery-thumbs').height($height-62);
+        });
+        $(window).trigger('resize');
+
+        $('button.minus').click(function(e) {
+            e.preventDefault();
+            document.querySelector('input[type="number"]').stepDown()
+        })
+        $('button.plus').click(function(e) {
+            e.preventDefault();
+            document.querySelector('input[type="number"]').stepUp()
+
+        })
+        var galleryThumbs = new Swiper(".gallery-thumbs", {
+                centeredSlides: true,
+                centeredSlidesBounds: true,
+                slidesPerView: 3,
+                watchOverflow: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                direction: 'vertical'
+            });
+
+            var galleryMain = new Swiper(".gallery-main", {
+                watchOverflow: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+                preventInteractionOnTransition: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                effect: 'fade',
+                    fadeEffect: {
+                    crossFade: true
+                },
+                thumbs: {
+                    swiper: galleryThumbs
+                }
+            });
+
+            galleryMain.on('slideChangeTransitionStart', function() {
+            galleryThumbs.slideTo(galleryMain.activeIndex);
+            });
+
+            galleryThumbs.on('transitionStart', function(){
+            galleryMain.slideTo(galleryThumbs.activeIndex);
+        });
+
+        var otherSwiper = new Swiper(".otherSwiper", {
+            slidesPerView: 1.5,
+            spaceBetween: 10,
+            breakpoints: {
+            "320": {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            "480": {
+                slidesPerView: 2.5,
+                spaceBetween: 10,
+            },
+            "640": {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            },
+            "992": {
+                slidesPerView: 5.5,
+                spaceBetween: 10,
+            },
+            }
+        });
+    })
+</script>

@@ -105,6 +105,7 @@ class PublicProductController
     {
         $query = $request->get('q');
 
+        //
         if ($query) {
             $products = $productService->getProduct($request);
 
