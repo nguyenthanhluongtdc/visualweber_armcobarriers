@@ -76,7 +76,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="product-quality">
-                        <h2>{{get_field( $page ,'title')}}</h2>
+                        <h2>{!!get_field( $page ,'title')!!}</h2>
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-12">
@@ -92,7 +92,7 @@
                 <div class="col-lg-4 col-md-6">
                    <div class="product0">
                     <img src="{{ get_object_image(get_sub_field( $item ,'image'))}}" alt="">
-                    <h3>{{get_sub_field($item , 'title')}}</h3>
+                    <h3>{{!!get_sub_field($item , 'title')}}</h3>
                     <p>{{get_sub_field($item , 'description')}}</p>
                    </div>
                 </div>
