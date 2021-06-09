@@ -37,6 +37,10 @@ var swiper2 = new Swiper(".mySwiper1", {
     },
 });
 var swiper_gallery = new Swiper(".mySwiper-left", {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -45,8 +49,14 @@ var swiper_gallery = new Swiper(".mySwiper-left", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    observer: true,
+    observeParents: true,
 });
 var swiper_gallery = new Swiper(".mySwiper-right", {
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -55,6 +65,8 @@ var swiper_gallery = new Swiper(".mySwiper-right", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    observer: true,
+    observeParents: true,
 });
 
 
@@ -73,10 +85,9 @@ $(document).ready(function() {
 
 $("#tile-1 .nav-tabs a").click(function() {
     var position = $(this).parent().position();
-    var width = $(this).parent().width()*0.3;
-      $("#tile-1 .slider").css({"left":+ position.left,"width":width});
+    var width = $(this).parent().width() * 0.3;
+    $("#tile-1 .slider").css({ "left": +position.left, "width": width });
 });
-var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width()*0.3;
+var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width() * 0.3;
 var actPosition = $("#tile-1 .nav-tabs .active").position();
-$("#tile-1 .slider").css({"left":+ actPosition.left,"width": actWidth});
-  
+$("#tile-1 .slider").css({ "left": +actPosition.left, "width": actWidth });
