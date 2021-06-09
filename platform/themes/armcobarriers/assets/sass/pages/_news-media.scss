@@ -30,9 +30,11 @@ $gray_text: #262626;
                     background-color: #fad906;
                 }
 
-                p {
+                code {
                     color: $gray_text;
                     font-size: 15px;
+                    @include str_split();
+                    -webkit-line-clamp: 3;
                 }
 
                 .options {
@@ -73,6 +75,12 @@ $gray_text: #262626;
                     .type {
                         background-color: #262626;
                         color: $priamry_color;
+                        max-width: 85px;
+                    }
+
+                    .date, .type, .share {
+                        @include str_split();
+                        -webkit-line-clamp: 1;
                     }
                 }
             }

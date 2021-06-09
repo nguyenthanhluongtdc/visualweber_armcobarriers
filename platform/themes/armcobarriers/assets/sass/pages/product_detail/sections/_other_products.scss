@@ -19,10 +19,24 @@
         grid-template-columns: auto auto auto auto auto;
         grid-column-gap: 2%;
         .product_item {
-            &:hover .product_name {
-                font-weight: bold;
-              
+            a {color: $gray-text; font-weight: bold;}
+
+            code {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
             }
+            .product_name {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                min-height: 44px;
+            }
+            
             .box-img{
                 position: relative;
                 margin-bottom: 10px;

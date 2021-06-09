@@ -20,6 +20,11 @@ h1,h2 {
     }
 }
 
+code {
+    font-family: "Arial";
+    color: $gray-text;
+}
+
 .pagination_style1 {
     margin: 0;
     margin-top: 70px;
@@ -87,6 +92,9 @@ h1,h2 {
             a, span{
                 color: black;
                 padding: 17px 0;
+                width: 100%;
+                vertical-align: middle;
+                line-height: 20px;
             }
         }
 

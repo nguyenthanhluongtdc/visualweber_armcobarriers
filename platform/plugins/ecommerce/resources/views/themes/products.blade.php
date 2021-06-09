@@ -42,7 +42,7 @@
     <div class="container-customize">
       <div class="d-flex align-items-center h-100 col-lg-7 col-12">
         <p>
-          {!! get_field($product, 'content_banner') !!}
+        ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
         </p>
       </div>
     </div>

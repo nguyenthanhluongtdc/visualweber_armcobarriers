@@ -68,9 +68,11 @@
 
                     <div class="col-12 col-lg-6 info">
                         <p class="product_name"> {{$product->name}} </p>
-                        @php 
-                            echo $product->description
-                        @endphp
+                        <code>
+                            @php 
+                                echo $product->description
+                            @endphp
+                        </code>
                         <ul class="list_info">
                             <li>
                                 <p>Model</p>
@@ -166,11 +168,11 @@
                         @foreach($other_product as $other_pro)
                             <div class="swiper-slide product_item">
                                 <div class="box-img">
-                                    <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="">
+                                    <a href="{{ $other_pro->url }}"> <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt=""> </a>
                                     <p class="overlay"><i class="far fa-chevron-circle-right"></i></p>
                                 </div>
-                                <p class="product_name"> {!! $other_pro->name !!} </p>
-                                <p class="description"> {!! $other_pro->description !!} </p> 
+                                <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
+                                <code class="description"> {!! $other_pro->description !!} </code> 
                             </div>
                         @endforeach
                     </div>

@@ -67,12 +67,14 @@
 
                 .product_name {
                     padding: 3% 0%;
+                    color: $gray-text; 
+                    font-weight: bold;
                 }
-                &:hover {
-                    .product_name {
-                        font-weight: bold;
-                    }
-                }
+                // &:hover {
+                //     .product_name {
+                //         font-weight: bold;
+                //     }
+                // }
             }
         }
     }

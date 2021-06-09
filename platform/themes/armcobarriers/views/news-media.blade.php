@@ -6,7 +6,7 @@
         <div class="box-media pt-5 pb-lg-5">
             <div class="content">
                 <div class="row">
-                    @foreach(get_posts_by_category(2,3) as $event)
+                    @foreach(get_posts_by_category(17,3) as $event)
                         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
                             <div class="item">
                                 <a href="/news-detail">
@@ -14,15 +14,15 @@
                                     <h3>
                                         {{$event->name}}
                                     </h3>
-                                    <p>
+                                    <code>
                                         {{$event->description}}
-                                    </p>
+                                    </code>
                                 </a>
 
                                 <div class="options">
                                     <div class="date"> {{$event->created_at->format('j F Y') }} </div>
                                     <a class="share"> Share </a>
-                                    <a class="type"> Event </a>
+                                    <a class="type"> {!! $event->categories->first()->name !!} </a>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="item-row">
                         <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
-                            @foreach(get_posts_by_category(6,12) as $new)
+                            @foreach(get_posts_by_category(16,12) as $new)
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
@@ -84,7 +84,7 @@
                     <div class="box-media">
                         <div class="content">
                             <div class="row">
-                            @foreach(get_posts_by_category(15,12) as $media)
+                            @foreach(get_posts_by_category(18,9) as $media)
                                 <div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="{{$media->url}}">
@@ -111,7 +111,7 @@
                     <nav aria-label="...">
                     <ul class="pagination">
                         {{-- <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            <a class="page-link" href="#" tabindex="-1">← Prev</a>
                         </li> --}}
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
                         <li class="page-item">
@@ -120,7 +120,7 @@
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">4</a></li>
                         <li class="page-item page-link-last">
-                        <a class="" href="#">Next page</a>
+                        <a class="" href="#">Next →</a>
                         </li>
                     </ul>
                     </nav>
