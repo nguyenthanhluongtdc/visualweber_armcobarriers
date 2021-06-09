@@ -230,6 +230,16 @@ a[data-toggle="collapse"] {
     .product-name {
         font-weight: bold;
     }
+
+    code {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        font-family: "Arial";
+    }
+
     padding-top: 15%;
     a {
         .product-item {
