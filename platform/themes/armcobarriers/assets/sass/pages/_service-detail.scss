@@ -177,7 +177,9 @@
     }
 }
 @media(max-width:991px)
-{   
+{   .australian{
+    padding-right: 15px !important;
+    }
     .wrap-install{
         .install{
             width: 100% !important;
