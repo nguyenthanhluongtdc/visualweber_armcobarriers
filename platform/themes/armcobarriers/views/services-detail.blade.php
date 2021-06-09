@@ -23,8 +23,7 @@
 </section>
 
 <div class="services-detail-tabs main-scroll">
-    <div class="left-t
-    ab-md tabs-scroll">
+    <div class="left-tab-md tabs-scroll">
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
