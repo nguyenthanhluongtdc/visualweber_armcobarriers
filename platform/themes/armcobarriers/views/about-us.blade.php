@@ -92,7 +92,7 @@
                 <div class="col-lg-4 col-md-6">
                    <div class="product0">
                     <img src="{{ get_object_image(get_sub_field( $item ,'image'))}}" alt="">
-                    <h3>{{!!get_sub_field($item , 'title')}}</h3>
+                    <h3>{{get_sub_field($item , 'title')}}</h3>
                     <p>{{get_sub_field($item , 'description')}}</p>
                    </div>
                 </div>
