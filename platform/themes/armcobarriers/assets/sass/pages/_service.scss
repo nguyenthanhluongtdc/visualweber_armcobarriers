@@ -136,6 +136,7 @@
 .wrap-roadside {
     padding: 5% 0;
     .content {
+        width: 65%;
         h3 {
             font-size: 20px;
             font-family: $Arial;
@@ -254,6 +255,11 @@
     }
 }
 @media(max-width:991px){
+    .wrap-roadside {
+        .content{
+            width: 100%;
+        }
+    }
     .wrap-product .wrap-descrip p {
         font-size: 13px;
     }

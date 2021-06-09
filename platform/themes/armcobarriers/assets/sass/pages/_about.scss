@@ -4,7 +4,7 @@
         padding-bottom: 60px;
         h1{
             color: #000000;
-            font-size: $rem4;
+            font-size: 40px;
             font-family: $FolioStd-Bold;
         }
         h2{
@@ -154,7 +154,6 @@
                 color:#000000;
                 font-size: 40px;
                 font-family: $FolioStd-Bold;
-                margin-right: 26%;
             }
         }
     }
@@ -330,8 +329,14 @@
         .bot1{
             .product-quality{
                 h2{
-                    margin-right: 16% !important;
+                    font-size: 35px;
                 }
+            }
+            .slogan{
+                p{
+                    font-size: 15px;
+                }
+                
             }
         }
     }
@@ -341,14 +346,31 @@
         .bot1{
             .product-quality{
                 h2{
-                    margin-right: 0 !important;
+                    font-size: 30px;
                 }
+            }
+            .slogan{
+                p{
+                    font-size: 13px;
+                }
+                
             }
         }
     }
     .wrap-top{
         .cont2{
             padding-bottom: 40px;
+        }
+    }
+}
+@media(max-width:1080px){
+    .wrap-bot{
+        .bot1{
+            .product-quality{
+                h2{
+                    font-size: 28px;
+                }
+            }
         }
     }
 }

@@ -25,14 +25,18 @@
 </section>
 
 <section  style="padding-bottom: 5%">
-    <div class="container-customize">
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                @foreach($tabs_applications as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-company-profile" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-tab{{$key}}" aria-selected="true"> {{get_sub_field($tab,'tabs_title')}} </a>
-                @endforeach
+    <div class="services-detail-tabs main-scroll">
+        <div class="left-tab-md tabs-scroll">
+            <div class="container-customize">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        @foreach($tabs_applications as $key => $tab)
+                            <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-company-profile" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-tab{{$key}}" aria-selected="true"> {{get_sub_field($tab,'tabs_title')}} </a>
+                        @endforeach
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </div>
     </div>
     <div class="tab-content" id="nav-tabContent">
     @foreach($tabs_applications as $key => $tab)

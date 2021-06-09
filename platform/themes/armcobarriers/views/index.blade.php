@@ -160,29 +160,19 @@
             </div>
                 <div class="count">
                     <div class="row w-100 mx-0">
-                        <div class="col-lg-4 col-12">
-                            <div class="box-count count-customers" data-aos="" data-aos-delay="400">
-                                <h2>15,451</h2>
-                                <p>Customers</p>
+                    @foreach (get_field($page, 'statistic_home') as $item)
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                            <div class="box-count count-customers">
+                                <h2>{{get_sub_field($item , 'title')}}</h2>
+                                <p>{{get_sub_field($item , 'description_home')}}</p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-12">
-                            <div class="box-count count-completed" data-aos="" data-aos-delay="400">
-                                <h2>125,451</h2>
-                                <p>Completed projects</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-12">
-                            <div class="box-count count-kilomet" data-aos="" data-aos-delay="400">
-                                <h2>1,204</h2>
-                                <p>Kilometres installed</p>
-                            </div>
-                        </div>
+                    @endforeach
                     </div>
                 </div>
                 <div class="experience">
-                    <div class="exp" data-aos="" data-aos-delay="200">
-                        <p>At ARMCO® Barriers you deal with people specialising in the safety barrier industry with over 35 years experience. </p>
+                    <div class="exp">
+                        <p>{{get_field( $page ,'description_home')}} </p>
                     </div>
                 </div>
         </div>
