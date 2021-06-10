@@ -55,6 +55,29 @@
                     }
                     padding-bottom: 30px;
                 }
+                .sub-menu-child {
+                    list-style: none;
+                    display: none;
+                    position: absolute;
+                    margin-left: 280px;
+                    li {
+                        padding: 5px 0;
+                        a {
+                            font-size: 17px;
+                            padding: 10px;
+                            &:hover {
+                                background-color: $priamry_color;
+                            }
+                        }
+                    }
+                }
+                .menu {
+                    display: flex;
+                }
+                .menu:hover .sub-menu-child,
+                .menu:focus .sub-menu-child {
+                    display: block;
+                }
                 .list-unstyled {
                     li {
                         margin-bottom: 15px;
@@ -62,7 +85,12 @@
                     .category-type {
                         display: flex;
                         align-items: center;
-                        justify-content: space-between;
+                        width: max-content;
+                        padding: 5px 0px;
+                        margin-right: 20px;
+                        &:hover {
+                            background-color: $priamry_color;
+                        }
                         a {
                             font-size: 17px;
                             padding: 0px 20px
@@ -72,26 +100,27 @@
                         }
                     }
                 }
-                .list-unstyled .active {
-                    padding: 10px;
-                    background-color: $priamry_color;
+                .list-unstyled li a {
+                    padding: 5px 0;
+                }
+            }
+            li {
+                padding: 0 5px;
+                &:hover {
+                    a {
+                        color: #000;
+                    }
                 }
             }
         }
-        li {
-            &:hover {
-                a {
-                    color: #000;
-                    opacity: 0.7;
-                }
-            }
-        }
-        li:first-child {
-            a {
-                color: #000;
-                font-weight: bold;
-            }
-        }
+        // li {
+        //     &:hover {
+        //         a {
+        //             color: #000;
+        //             opacity: 0.7;
+        //         }
+        //     }
+        // }
     }
     .toolbar {
         position: absolute;
@@ -267,17 +296,14 @@
         height: 100vh;
         background-color: $priamry_color;
         padding-top: 50px;
-
         .nav-item {
             padding-top: 10px !important;
             padding-bottom: 10px !important;
-
             a {
                 position: relative;
                 text-transform: uppercase;
             }
         }
-
         .nav-item.active a::before {
             content: "";
             display: block;

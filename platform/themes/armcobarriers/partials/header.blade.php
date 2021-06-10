@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <style>
             :root {
@@ -27,7 +28,7 @@
         {!! apply_filters(THEME_FRONT_BODY, null) !!}
         <header class="header">
             <div class="contaier-fluid-customize">     
-                        <nav class="navbar navbar-expand-lg">
+                        {{-- <nav class="navbar navbar-expand-lg">
                             <a href="/" class="logo__link">
                                 <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
                             </a>
@@ -37,7 +38,7 @@
                                   <li>
                                     <a href="tel:1800 808 619">
                                         <i class="fas fa-phone-alt"></i>
-                                        {{-- <span>1800 808 619</span> --}}
+                                   
                                     </a>
                                   </li>
                                   <li>
@@ -65,7 +66,7 @@
                             </div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <i class="fas fa-bars"></i>
-                              </button>
+                            </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             
@@ -78,7 +79,7 @@
                                 <li class="nav-link nav-item ">
                                     <a href="/products" class="nav__menu-link">Products</a>
                                 </li>
-                                {{-- <li class="nav-link nav-item dropdown dmenu">
+                                <li class="nav-link nav-item dropdown dmenu">
                                     <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="/product">Products</a>
                                     <div class="dropdown-menu sm-menu">
                                         <div class="row">
@@ -216,7 +217,7 @@
                                            </div>
                                         </div>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <li class="nav-link nav-item ">
                                     <a href="/services" class="nav__menu-link">Services</a>
                                 </li>
@@ -234,7 +235,14 @@
                                 </li>
                             </ul>             
                             </div>
-                        </nav>
+                        </nav> --}}
+                        {!!
+                            Menu::renderMenuLocation('main-menu', [
+                                'options' => [],
+                                'theme' => true,
+                                'view' => 'custom-menu',
+                            ])
+                        !!}
                         <div class="toolbar">
                             <div class="left">
                                 <div class="left-1">
