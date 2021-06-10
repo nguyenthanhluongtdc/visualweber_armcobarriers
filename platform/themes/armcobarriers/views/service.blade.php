@@ -1,9 +1,3 @@
-
-@php 
-    $tabs_services = get_field($page, 'services');
-@endphp
-
-
 <section>
         <div class="wrap-top">
             <div class="container-customize">
@@ -28,9 +22,11 @@
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                @foreach($tabs_services as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-overview" aria-selected="false"> {{get_sub_field($tab, 'tabs_title')}} </a>
-                @endforeach
+                    @if($tabs_services = get_field($page, 'services'))
+                        @foreach($tabs_services as $key => $tab)
+                            <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-overview" aria-selected="false"> {{get_sub_field($tab, 'tabs_title')}} </a>
+                        @endforeach
+                    @endif
                 </div>
             </nav>
         </div>
@@ -48,17 +44,19 @@
                 <p>Our's Services</p>
             </div>
             <div class="row">
-            @foreach (get_field($page, 'ours_service') as $item)
-                <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                    <a href="/services-detail">
-                        <div class="icon">
-                            <i class="fal fa-long-arrow-right"></i>
+                @if($services = get_field($page, 'ours_service') )
+                    @foreach ($services as $item)
+                        <div class="col-lg-3 col-md-6 col-sm-6 asset">
+                            <a href="/services-detail">
+                                <div class="icon">
+                                    <i class="fal fa-long-arrow-right"></i>
+                                </div>
+                            </a>
+                            <img src="{{ get_object_image(get_sub_field( $item ,'picture_service'))}}" alt="">
+                                    <p>{{get_sub_field($item , 'service_name')}}</p>
                         </div>
-                    </a>
-                    <img src="{{ get_object_image(get_sub_field( $item ,'picture_service'))}}" alt="">
-                            <p>{{get_sub_field($item , 'service_name')}}</p>
-                </div>
-               @endforeach
+                    @endforeach
+                @endif
             </div>
         </div>
     </div>
