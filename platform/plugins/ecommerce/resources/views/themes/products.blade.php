@@ -101,7 +101,7 @@
                   <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$category->name!!} </h1>
                 @endif
                 
-                @if(!empty($products))
+                @if(count($products) > 0)
                   <div class="row">
                       @foreach($products as $product)
                           <div class="col-lg-3 col-md-4 col-6">
@@ -125,6 +125,8 @@
                   </div>
                   
                   {{ $products->links('vendor.pagination.custom') }}
+
+                  @else 
 
                   <p> There are no matching products for this option </p>
 
