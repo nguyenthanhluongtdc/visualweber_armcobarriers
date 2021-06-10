@@ -45,10 +45,10 @@
         @foreach($menu_nodes as $key => $row)
         @if ($row->has_child)
         <li class="nav-link nav-item dropdown dmenu">
-            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{ $row->url }}">{{ $row->name }}</a>
+            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{ $row->has_child!=0?'javascript:void(0);':$row->url }}">{{ $row->name }}</a>
             <div class="dropdown-menu sm-menu">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-8">
                        <div class="title-product">
                         <p>ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range.
                            
@@ -68,8 +68,10 @@
                                     <ul class="list-unstyled">
                                         <li class="">
                                             <div class="category-type">
-                                                <a href="{{ $child->url }}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">{{ $child->name }}</a>
+                                                <a href="{{ $child->url }}" data-toggle="collapse" aria-expanded="true" >{{ $child->name }}</a>
+                                                @if ($child->has_child)
                                                 <i class="fal fa-angle-right"></i>
+                                                @endif
                                             </div> 
                                         </li>
                                     </ul>
@@ -77,9 +79,9 @@
                                         <div class="">
                                             @if ($child->has_child)
                                                 @foreach($child->child as $key => $grandChild)
-                                                        <li>
-                                                            <a href="{{$grandChild->url}}">{{$grandChild->name}}</a>
-                                                        </li>
+                                                    <li>
+                                                        <a href="{{$grandChild->url}}">{{$grandChild->name}}</a>
+                                                    </li>
                                                 @endforeach
                                             @endif
                                         </div> 
