@@ -68,7 +68,7 @@
                                     <ul class="list-unstyled">
                                         <li class="">
                                             <div class="category-type">
-                                                <a href="{{ $child->url }}" data-toggle="collapse" aria-expanded="true" >{{ $child->name }}</a>
+                                                <a href="{{ $child->url }}"  aria-expanded="true" >{{ $child->name }}</a>
                                                 @if ($child->has_child)
                                                 <i class="fal fa-angle-right"></i>
                                                 @endif
