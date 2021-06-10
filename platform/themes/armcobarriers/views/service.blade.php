@@ -22,9 +22,9 @@
         <div class="container-customize">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    @if($tabs_services = get_field($page, 'services'))
+                    @if($tabs_services = get_services())
                         @foreach($tabs_services as $key => $tab)
-                            <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" id="nav-overview-tab" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-overview" aria-selected="false"> {{get_sub_field($tab, 'tabs_title')}} </a>
+                            <a class="nav-item nav-link {{$key==0?'active':''}} "style="color:#000000" href="{{ $tab->url }}">{{ $tab->name }}</a>
                         @endforeach
                     @endif
                 </div>
@@ -32,9 +32,9 @@
         </div>
     </div>
 
-    <div class="item-tab-content right-tab-md">
+    {{-- <div class="item-tab-content right-tab-md">
         @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
-    </div>
+    </div> --}}
 </div>
 
 <section>

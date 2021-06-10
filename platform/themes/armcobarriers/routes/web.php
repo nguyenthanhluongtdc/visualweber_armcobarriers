@@ -2,20 +2,19 @@
 
 // Custom routes
 // You can delete this route group if you don't need to add your custom routes.
+
+use Illuminate\Support\Facades\Route;
+use Platform\Service\Models\Service;
+
 Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
-
-        // Add your custom route here
-        // Ex: Route::get('hello', 'ArmcobarriersController@getHello');
-        // Route::get('services', 'ArmcobarriersController@getService')
-        // ->name('public.service');
-        // Route::get('product-detail','ArmcobarriersController@productDetail')->name('public.productDetail');
-
         Route::get('/news-all', 'ArmcobarriersController@getPosts')
-        ->name('public.custom.post');
+            ->name('public.custom.post');
 
-        //Route::get('/services-detail/{slug?}', 'ArmcobarriersController@getServicesDetail')->name('public.custom.services');
-
+        Route::get(\SlugHelper::getPrefix(Service::class) . '/{slug}', [
+            'as' => 'service-detail',
+            'uses' => 'ArmcobarriersController@getServices',
+        ]);
     });
 });
 

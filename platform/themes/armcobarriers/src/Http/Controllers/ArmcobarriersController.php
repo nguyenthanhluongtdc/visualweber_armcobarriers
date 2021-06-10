@@ -20,6 +20,7 @@ use Theme;
 use RvMedia;
 use Platform\Blog\Models\Post;
 use Platform\Blog\Services\BlogService;
+use Platform\Service\Models\Service;
 
 class ArmcobarriersController extends PublicController
 {
@@ -146,22 +147,19 @@ class ArmcobarriersController extends PublicController
 
     }
 
-    // public function getServicesDetail($slug, BlogService $blogService) {
-    //     $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Post::class));
+    public function getServices($slug) {
+        $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
 
-    //     if (!$slug) {
-    //         abort(404);
-    //     }
+        if (!$slug) {
+            abort(404);
+        }
 
-    //     $data = $blogService->handleFrontRoutes($slug);
+        $data['service'] = $slug->reference;
 
-    //     if (isset($data['slug']) && $data['slug'] !== $slug->key) {
-    //         return redirect()->to(route('public.single', SlugHelper::getPrefix(Post::class) . '/' . $data['slug']));
-    //     }   
+        if(blank($data)) {
+            abort(404);
+        }
 
-    //     $data['view']= "services-detail";
-    //     return Theme::scope($data['view'], $data['data'], $data['default_view'])
-    //         ->render();
-
-    // }
+        return Theme::scope('services-detail', $data)->render();
+    }
 }
