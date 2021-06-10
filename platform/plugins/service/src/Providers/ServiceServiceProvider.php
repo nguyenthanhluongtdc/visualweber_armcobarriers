@@ -49,10 +49,12 @@ class ServiceServiceProvider extends ServiceProvider
                 'permissions' => ['service.index'],
             ]);
         });
+
+        \SlugHelper::registerModule(Service::class);
+        \SlugHelper::setPrefix(Service::class, 'services');
+        \SeoHelper::registerModule(Service::class);
+
         $this->app->booted(function () {
-            \SlugHelper::registerModule(Service::class);
-            \SlugHelper::setPrefix(Service::class, 'services');
-            
             if (defined('SERVICE_MODULE_SCREEN_NAME')) {
                 \CustomField::registerModule(Service::class)
                     ->registerRule('basic', __('Service'), Service::class, function () {
