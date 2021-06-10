@@ -14,6 +14,8 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
         Route::get('/news-all', 'ArmcobarriersController@getPosts')
         ->name('public.custom.post');
 
+        //Route::get('/services-detail/{slug?}', 'ArmcobarriersController@getServicesDetail')->name('public.custom.services');
+
     });
 });
 

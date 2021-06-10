@@ -19,6 +19,7 @@ use SlugHelper;
 use Theme;
 use RvMedia;
 use Platform\Blog\Models\Post;
+use Platform\Blog\Services\BlogService;
 
 class ArmcobarriersController extends PublicController
 {
@@ -141,8 +142,26 @@ class ArmcobarriersController extends PublicController
     public function getPosts() {
         
         $posts = Post::paginate(6);
-
         return Theme::scope('news-all',compact('posts'))->render();
 
     }
+
+    // public function getServicesDetail($slug, BlogService $blogService) {
+    //     $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Post::class));
+
+    //     if (!$slug) {
+    //         abort(404);
+    //     }
+
+    //     $data = $blogService->handleFrontRoutes($slug);
+
+    //     if (isset($data['slug']) && $data['slug'] !== $slug->key) {
+    //         return redirect()->to(route('public.single', SlugHelper::getPrefix(Post::class) . '/' . $data['slug']));
+    //     }   
+
+    //     $data['view']= "services-detail";
+    //     return Theme::scope($data['view'], $data['data'], $data['default_view'])
+    //         ->render();
+
+    // }
 }
