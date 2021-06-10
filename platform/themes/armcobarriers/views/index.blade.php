@@ -45,15 +45,18 @@
                         <p  data-aos="" data-aos-delay="400">{{ get_field( $page ,'location') }}</p>
                     </div>
                 </div>
-                @foreach (get_field($page, 'lists_of_image') as $item)
+                @foreach (get_field($page, 'lists_of_image') as $key=> $item)
                     <div class="grid__item">
-                        <a href="">
+                        
+                        
+                        <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
                             <img class="img-background mw-100" src="{{ get_object_image(get_sub_field( $item ,'picture'))}}" alt="">
                            <div class="gallery__item-text">
                                 <p>{{ get_sub_field( $item ,'location_text') }}</p>
                                 <i class="fal fa-arrow-right"></i>
                             </div> 
                         </a>
+                        
                     </div>
                 @endforeach
             </div>
@@ -108,7 +111,7 @@
             </div>
             @foreach(get_field($page, 'lists_of_image_service') as $item)
                 <div class="grid__item">
-                    <a href="">
+                    <a href="{{ has_sub_field($item,'link_service') ? get_sub_field($item,'link_service') :''}}">
                         <img class="img-background mw-100" src="{{ get_object_image(get_sub_field( $item ,'picture'))}}" alt="">
                        <div class="gallery__item-text">
                             <p>{{ get_sub_field( $item ,'service_name')}}</p>
@@ -178,3 +181,39 @@
         </div>
     </div>
 </section>
+<script>
+    // menu header
+//     $(document).ready(function() {
+//     $('.dmenu').hover(function() {
+//         $(this).find('.sm-menu').first().stop(true, true).slideDown(200);
+//         $(this).find('.nav-link').first().stop(true, true).css('color', 'rgb(204, 206, 85)')
+//         $(this).find('.list-unstyled').hover(function() {
+//                 $(this).find('.category-type').first().css('color', 'black')
+//             }, function() {
+//                 $(this).find('.category-type').first().css('color', 'black')
+//             })
+//             // $(this).find('.sm-menu').first
+//     }, function() {
+//         $(this).find('.sm-menu').first().stop(true, true).slideUp(200)
+//         $(this).find('.nav-link').first().stop(true, true).css('background-color', 'yellow')
+//     });
+// });
+
+// $(document).ready(function() {
+//     $('.nav-item .dropdown-toggle').click(function(e) {
+//         e.preventDefault()
+//         const element = $(this).parent().children('.sm-menu')
+//         if (!element) return
+
+//         if (element.hasClass('is-show')) {
+//             element.toggleClass('is-show')
+//             element.css('display', 'none')
+//         } else {
+//             element.toggleClass('is-show')
+//             element.css('display', 'block')
+//         }
+//     });
+// });
+
+//end menu
+</script>

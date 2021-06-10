@@ -82,9 +82,11 @@
         </div>
     </div>
 </footer>
+
         {!! Theme::footer() !!}
         <script>
             AOS.init(); 
        </script>
+      
     </body>
 </html>
