@@ -18,6 +18,7 @@ use SiteMapManager;
 use SlugHelper;
 use Theme;
 use RvMedia;
+use Platform\Blog\Models\Post;
 
 class ArmcobarriersController extends PublicController
 {
@@ -135,5 +136,13 @@ class ArmcobarriersController extends PublicController
 
         // show your site map (options: 'xml' (default), 'html', 'txt', 'ror-rss', 'ror-rdf')
         return SiteMapManager::render('xml');
+    }
+
+    public function getPosts() {
+        
+        $posts = Post::paginate(6);
+
+        return Theme::scope('news-all',compact('posts'))->render();
+
     }
 }

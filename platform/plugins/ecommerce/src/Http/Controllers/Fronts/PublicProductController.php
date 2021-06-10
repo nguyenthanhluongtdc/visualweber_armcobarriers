@@ -30,6 +30,7 @@ use RvMedia;
 use SeoHelper;
 use SlugHelper;
 use Theme;
+use Illuminate\Support\Facades\DB;
 
 class PublicProductController
 {
@@ -120,14 +121,14 @@ class PublicProductController
         $products = $productService->getProduct($request, null, null,
             ['slugable', 'variations', 'productCollections', 'variationAttributeSwatchesForProductList', 'promotions']);
 
-        $categories = ProductCategory::all();
+        //$categories = ProductCategory::all();
 
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
         SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
 
-        return Theme::scope('ecommerce.products', compact(['products','categories']),
+        return Theme::scope('ecommerce.products', compact(['products']),
             'plugins/ecommerce::themes.products')->render();
     }
 
@@ -343,9 +344,15 @@ class PublicProductController
             ->add(__('Products'), route('public.products'))
             ->add($category->name, $category->url);
 
+        $id = $category->id;
+
+        $categories = ProductCategory::
+                    whereIn('parent_id', [$id])->orderBy('created_at','desc')
+                    ->get();
+
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
 
-        return Theme::scope('ecommerce.product-category', compact('category', 'products'),
+        return Theme::scope('ecommerce.product-category', compact('category', 'products','categories'),
             'plugins/ecommerce::themes.product-category')->render();
     }
 

@@ -37,11 +37,20 @@
                     }
                     .date {
                         color: $gray_text;
-                        font-size: 15px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
                     }
                     .share {
                         background-color: #fad906;
                         color: $gray_text;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
                     }
                     .share::after {
                         font-family: "Font Awesome 5 Pro";
@@ -49,6 +58,11 @@
                     }
                     .type {
                         background-color: #262626;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
                         color: $priamry_color;
                     }
                 }
