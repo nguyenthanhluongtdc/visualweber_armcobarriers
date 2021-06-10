@@ -48,7 +48,7 @@
                         <div class="content">
                             <div class="row">';
                             foreach(get_posts_by_category($menu_nodes[$ini]->reference_id,9) as $media){
-                                echo '<div class="col-lg-4 col-md-4 col-sm-6 mb-5 mb-md-0">
+                                echo '<div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                                     <div class="item">
                                         <a href="'.$media->url.'">
                                             <img src="'. RvMedia::getImageUrl($media->image) ,'" alt="">

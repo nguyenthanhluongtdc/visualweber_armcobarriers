@@ -8,7 +8,7 @@
             <div class="content">
                 <div class="row">
                     @foreach(get_posts_by_category(17,3) as $event)
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5 mb-md-0">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                             <div class="item">
                                 <a href="/news-detail">
                                     <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
