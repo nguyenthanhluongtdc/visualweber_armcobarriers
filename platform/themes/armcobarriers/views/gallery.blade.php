@@ -16,27 +16,28 @@
             <div class="container-customize">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        @foreach(get_field($page,'gallery_tabs') as $key =>$gallery_item)
-                        <a class="nav-item nav-link" id="nav-{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}-tab" data-toggle="tab" href="#nav-{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}" role="tab" aria-controls="{{ Str::slug(get_sub_field($gallery_item,'tabs_title')) }}" aria-selected="false">{{(get_sub_field($gallery_item,'tabs_title')) }}</a>
+                        @foreach(get_field($page,'gallery_tabs') as $key =>$item)
+                        <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-{{ Str::slug(get_sub_field($item,'tabs_title')) }}-tab" data-toggle="tab" href="#nav-{{ Str::slug(get_sub_field($item,'tabs_title')) }}" role="tab" aria-controls="{{ Str::slug(get_sub_field($item,'tabs_title')) }}" aria-selected="false">{{(get_sub_field($item,'tabs_title')) }}</a>
                         @endforeach
                     </div>
                 </nav>
             </div>
         </div>
         <div class="tab-content">
-            <div class="tab-pane fade show active" id="nav-product" role="tabpanel" aria-labelledby="home-tab">
+            @foreach (get_field($page, 'gallery_tabs') as $key1 => $items)
+            <div class="tab-pane fade {{$key1==0?'active show':''}}" id="nav-{{ Str::slug(get_sub_field($items,'tabs_title')) }}" role="tabpanel" aria-labelledby="home-tab">
                 <div class="slider-gallery-wrapper">
                     <div class="swiper-container mySwiper-left">
                         
                         <div class="swiper-wrapper">
-                            @foreach (get_field($page, 'gallery_tabs') as $item)
-                            @foreach (get_sub_field($item, 'slide_product') as $item1)
+                          
+                            @foreach (get_sub_field($items, 'slide_product') as $item1)
                           <div class="swiper-slide img-right">
                             <img src="{{get_object_image(get_sub_field($item1, 'picture_product'))}}" alt="">
                             {{-- <img src="{{Theme::asset()->url('images/gallery/slider-right.jpg')}}" alt=""> --}}
                           </div>
                             @endforeach
-                            @endforeach
+                           
                         </div>
                         
                         <div class="pagination-wrapper">  
@@ -53,13 +54,12 @@
                     </div> 
                     <div class="swiper-container mySwiper-right">
                         <div class="swiper-wrapper">
-                            @foreach (get_field($page, 'gallery_tabs') as $item_app)
-                            @foreach (get_sub_field($item_app, 'silde_applications') as $item_app1)
+                            @foreach (get_sub_field($items, 'silde_applications') as $item)
                           <div class="swiper-slide img-right">
-                            <img src="{{get_object_image(get_sub_field( $item_app1, 'picture_applications'))}}" alt="">
+                            <img src="{{get_object_image(get_sub_field( $item, 'picture_applications'))}}" alt="">
                           </div>
                             @endforeach
-                            @endforeach
+                            
                         </div>
                         <div class="pagination-wrapper">
                             <div class="slider-custom-right">
@@ -78,9 +78,10 @@
                     </div> 
                   </div>
             </div>
-            <div class="tab-pane fade" id="nav-applications" role="tabpanel" aria-labelledby="profile-tab">Applications</div>
+            @endforeach
+            {{-- <div class="tab-pane fade" id="nav-applications" role="tabpanel" aria-labelledby="profile-tab">Applications</div>
             <div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="contact-tab">Warranty</div>
-            <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="setting-tab">Design</div>
+            <div class="tab-pane fade" id="nav-design" role="tabpanel" aria-labelledby="setting-tab">Design</div> --}}
         </div>
       </div>
   </section>
