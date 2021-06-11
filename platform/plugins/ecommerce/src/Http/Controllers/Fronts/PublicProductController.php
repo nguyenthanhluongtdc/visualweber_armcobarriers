@@ -121,14 +121,14 @@ class PublicProductController
         $products = $productService->getProduct($request, null, null,
             ['slugable', 'variations', 'productCollections', 'variationAttributeSwatchesForProductList', 'promotions']);
 
-        //$categories = ProductCategory::all();
+        $categories = ProductCategory::all();
 
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
         SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
 
-        return Theme::scope('ecommerce.products', compact(['products']),
+        return Theme::scope('ecommerce.products', compact(['products','categories']),
             'plugins/ecommerce::themes.products')->render();
     }
 
@@ -352,8 +352,8 @@ class PublicProductController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
 
-        return Theme::scope('ecommerce.product-category', compact('category', 'products','categories'),
-            'plugins/ecommerce::themes.product-category')->render();
+        return Theme::scope('ecommerce.products', compact('category', 'products'),
+            'plugins/ecommerce::themes.products')->render();
     }
 
     /**

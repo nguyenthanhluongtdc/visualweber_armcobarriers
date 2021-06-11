@@ -24,8 +24,16 @@
             </div>
         </div>
     </div>
+
+    
 </section> -->
 
+{{--  Menu::renderMenuLocation('categories-product-menu', [ // 
+        'options' => [],
+        'theme'   => true,
+        'view' => 'sidebar-categories',
+])--}}
+                  
 
 @php Theme::layout('default') @endphp
 <section>
@@ -56,18 +64,18 @@
   <div class="product-wrapper">
       <div class="container-customize">
         <div class="row">
-          <div class="col-lg-3 col-12 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0 mb-3 mb-lg-0">     
-            @if(!empty($categories))
-              @includeIf('plugins/ecommerce::themes.sidebar', ['categories'=> $categories])
-            @else 
-              {!!
-                Menu::renderMenuLocation('categories-product-menu', [ // 
-                    'options' => [],
-                    'theme'   => true,
-                    'view' => 'sidebar-categories',
-                ])
-              !!}
-            @endif
+          <div class="col-lg-3 col-12 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0 mb-3 mb-lg-0">    
+            <div id="sidebar" class="mw-100">
+              <ul class="list-unstyled"> 
+                @if(isset($categories))
+                  @foreach($categories as $category)
+                    @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category])
+                  @endforeach
+                @elseif(isset($category))
+                  @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category,'show'=>[]])
+                @endif
+              </ul>            
+            </div>
           </div>
           <div class="col-lg-9 col-12">
               <div class="row">
@@ -97,8 +105,10 @@
                   </div>
                 </div>
 
-                @if(!empty($category))
+                @if(!isset($categories))
                   <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$category->name!!} </h1>
+                @else
+                  <h1 style="font-size: 2rem; margin-top: 40px;"> All Product </h1>
                 @endif
                 
                 @if(count($products) > 0)

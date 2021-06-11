@@ -16,6 +16,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Theme;
 use Throwable;
+use Platform\Ecommerce\Models\ProductCategory;
 
 class Menu
 {
@@ -361,6 +362,29 @@ class Menu
         return view('packages/menu::partials.select', compact('items', 'model', 'options'))->render();
     }
 
+    public function generateSidebar(array $args = []) {
+
+        if (Arr::has($args, 'parent_id')) {
+            $categories = ProductCategory::where('parent_id', Arr::get($args, 'parent_id'))
+                    ->orderBy('created_at', 'desc')->get();
+        } else {
+            return null;
+        }
+
+        return view('plugins/ecommerce::themes.child', compact('categories'))->render();
+    }
+
+    public function checkChild(array $args = []) {
+        if (Arr::has($args, 'parent_id')) {
+            $categories = ProductCategory::where('parent_id', Arr::get($args, 'parent_id'))
+                    ->orderBy('created_at', 'desc')->get();
+        } else {
+            return false;
+        }
+
+        return count($categories)>0 ? true : false;
+    }
+
     /**
      * @param string $model
      * @return $this
@@ -417,4 +441,6 @@ class Menu
 
         return $this;
     }
+
+    
 }
