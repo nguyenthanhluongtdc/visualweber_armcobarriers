@@ -181,39 +181,3 @@
         </div>
     </div>
 </section>
-<script>
-    // menu header
-//     $(document).ready(function() {
-//     $('.dmenu').hover(function() {
-//         $(this).find('.sm-menu').first().stop(true, true).slideDown(200);
-//         $(this).find('.nav-link').first().stop(true, true).css('color', 'rgb(204, 206, 85)')
-//         $(this).find('.list-unstyled').hover(function() {
-//                 $(this).find('.category-type').first().css('color', 'black')
-//             }, function() {
-//                 $(this).find('.category-type').first().css('color', 'black')
-//             })
-//             // $(this).find('.sm-menu').first
-//     }, function() {
-//         $(this).find('.sm-menu').first().stop(true, true).slideUp(200)
-//         $(this).find('.nav-link').first().stop(true, true).css('background-color', 'yellow')
-//     });
-// });
-
-// $(document).ready(function() {
-//     $('.nav-item .dropdown-toggle').click(function(e) {
-//         e.preventDefault()
-//         const element = $(this).parent().children('.sm-menu')
-//         if (!element) return
-
-//         if (element.hasClass('is-show')) {
-//             element.toggleClass('is-show')
-//             element.css('display', 'none')
-//         } else {
-//             element.toggleClass('is-show')
-//             element.css('display', 'block')
-//         }
-//     });
-// });
-
-//end menu
-</script>

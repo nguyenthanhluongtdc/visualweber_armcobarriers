@@ -46,7 +46,7 @@
         @if ($row->has_child)
         <li class="nav-link nav-item dropdown dmenu">
             <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{$row->url }}">{{ $row->name }}</a>
-            <div class="dropdown-menu sm-menu">
+            <div class="dropdown-menu sm-menu menu-pc-dropdown">
                 <div class="row">
                     <div class="col-8">
                        <div class="title-product">
@@ -60,36 +60,52 @@
                        </div>
                     </div>
                 </div>
-           
                 <div class="row">
                    <div class="col-md-12">
                         @foreach($row->child as $key => $child)
-                                <div class="menu">
-                                    <ul class="list-unstyled">
-                                        <li class="">
-                                            <div class="category-type">
-                                                <a href="{{ $child->url }}" data-toggle="{{$child->has_child ? 'collapse' : ''}}  " aria-expanded="true" >{{ $child->name }}</a>
-                                                @if ($child->has_child)
-                                                <i class="fal fa-angle-right"></i>
-                                                @endif
-                                            </div> 
-                                        </li>
-                                    </ul>
-                                    <ul class="sub-menu-child">
-                                        <div class="">
+                        <div class="menu-pc">
+                            <div class="menu">
+                                <ul class="list-unstyled">
+                                    <li class="">
+                                        <div class="category-type">
+                                            <a href="{{ $child->url }}" data-toggle="{{$child->has_child ? 'collapse' : ''}}  " aria-expanded="true" >{{ $child->name }}</a>
                                             @if ($child->has_child)
-                                                @foreach($child->child as $key => $grandChild)
-                                                    <li>
-                                                        <a href="{{$grandChild->url}}">{{$grandChild->name}}</a>
-                                                    </li>
-                                                @endforeach
+                                            <i class="fal fa-angle-right"></i>
                                             @endif
                                         </div> 
-                                    </ul>
-                                </div>
-                            @endforeach
+                                    </li>
+                                </ul>
+                                <ul class="sub-menu-child">
+                                    <div class="">
+                                        @if ($child->has_child)
+                                            @foreach($child->child as $key => $grandChild)
+                                                <li>
+                                                    <a href="{{$grandChild->url}}">{{$grandChild->name}}</a>
+                                                </li>
+                                            @endforeach
+                                        @endif
+                                    </div> 
+                                </ul>
+                            </div>
+                        </div>
+                               
+                        @endforeach
                    </div>
                 </div>
+                @foreach($row->child as $key => $child)
+                <div class="menu-mb" style="display: none">
+                    <a href="{{ $child->url }}" class="dropdown-toggle caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ $child->name }}</a>
+                    
+                    <ul class="dropdown-menu">
+                        @if ($child->has_child)
+                        @foreach($child->child as $key => $grandChild)
+                        <li><a href="{{$grandChild->url}}">{{$grandChild->name}}</a></li>
+                        @endforeach
+                        @endif
+                    </ul>
+                    
+                </div>
+                @endforeach
             </div>
         </li>
         
@@ -107,4 +123,5 @@
         @endforeach
     </ul>             
     </div>
+    <div class="overlay_background"></div>    
 </nav>
