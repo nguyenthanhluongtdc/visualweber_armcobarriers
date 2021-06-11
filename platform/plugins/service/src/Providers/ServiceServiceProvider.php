@@ -48,6 +48,7 @@ class ServiceServiceProvider extends ServiceProvider
                 'url'         => route('service.index'),
                 'permissions' => ['service.index'],
             ]);
+           
         });
 
         \SlugHelper::registerModule(Service::class);
