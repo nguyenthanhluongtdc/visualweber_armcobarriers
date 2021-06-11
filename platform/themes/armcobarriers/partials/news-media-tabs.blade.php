@@ -42,7 +42,7 @@
         @endif
 
         @if(!empty($menu_nodes[1]))
-            <div class="tab-pane fade active" id="tab{{$menu_nodes[1]->reference_id}}" role="tabpanel" aria-labelledby="tab{{$menu_nodes[1]->reference_id}}-tab">
+            <div class="tab-pane fade" id="tab{{$menu_nodes[1]->reference_id}}" role="tabpanel" aria-labelledby="tab{{$menu_nodes[1]->reference_id}}-tab">
                 <div class="item-row">
                     <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
                         @foreach(get_posts_by_category($menu_nodes[1]->reference_id,12) as $event) 
