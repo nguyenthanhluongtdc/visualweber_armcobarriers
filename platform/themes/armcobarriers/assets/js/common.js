@@ -1,5 +1,17 @@
 import 'bootstrap';
 require('./bootstrap')
+    // menu header
+$(document).ready(function() {
+    // $(this).find('.sm-menu').first().stop(true, true).slideUp(500)
+    $('.dmenu').hover(function() {
+        $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
+
+    }, function() {
+        $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
+    });
+});
+
+//end menu
 
 // const helloWorld = require("./hello-world").helloWorld();
 // console.log(helloWorld);
@@ -37,10 +49,10 @@ var swiper2 = new Swiper(".mySwiper1", {
     },
 });
 var swiper_gallery = new Swiper(".mySwiper-left", {
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -49,14 +61,14 @@ var swiper_gallery = new Swiper(".mySwiper-left", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    observer: true,
-    observeParents: true,
+    // observer: true,
+    // observeParents: true,
 });
 var swiper_gallery = new Swiper(".mySwiper-right", {
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -65,8 +77,8 @@ var swiper_gallery = new Swiper(".mySwiper-right", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    observer: true,
-    observeParents: true,
+    // observer: true,
+    // observeParents: true,
 });
 
 

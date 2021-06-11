@@ -45,7 +45,7 @@
         @foreach($menu_nodes as $key => $row)
         @if ($row->has_child)
         <li class="nav-link nav-item dropdown dmenu">
-            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{ $row->has_child!=0?'javascript:void(0);':$row->url }}">{{ $row->name }}</a>
+            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{$row->url }}">{{ $row->name }}</a>
             <div class="dropdown-menu sm-menu">
                 <div class="row">
                     <div class="col-8">
@@ -68,7 +68,7 @@
                                     <ul class="list-unstyled">
                                         <li class="">
                                             <div class="category-type">
-                                                <a href="{{ $child->url }}"  aria-expanded="true" >{{ $child->name }}</a>
+                                                <a href="{{ $child->url }}" data-toggle="collapse"  aria-expanded="true" >{{ $child->name }}</a>
                                                 @if ($child->has_child)
                                                 <i class="fal fa-angle-right"></i>
                                                 @endif
@@ -95,7 +95,7 @@
         
         @else
         <li class="nav-link nav-item active  @if ($row->url == Request::url()) current @endif">
-            <a href="{{ $row->url }}" class="nav__menu-link" target="{{ $row->target }}">
+            <a href="{{ $key==0 ? route('public.index') : $row->url  }}" class="nav__menu-link" target="{{ $row->target }}">
                 @if (!blank($row->icon_font))
                 <i class='{{ trim($row->icon_font) }}'></i>
                 @endif
