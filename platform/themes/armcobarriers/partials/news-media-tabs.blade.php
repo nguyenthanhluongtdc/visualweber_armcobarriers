@@ -1,5 +1,5 @@
 
-@php $number_per_page = theme_option('number_of_products_per_page'); @endphp
+@php $number_per_tabs = theme_option('number_of_posts_in_a_tabs'); @endphp
 
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
@@ -20,7 +20,7 @@
             <div class="tab-pane fade show active" id="tab{{$menu_nodes[0]->reference_id}}" role="tabpanel" aria-labelledby="tab{{$menu_nodes[0]->reference_id}}-tab">
                 <div class="item-row">
                     <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
-                        @foreach(get_posts_by_category($menu_nodes[0]->reference_id,12) as $new) 
+                        @foreach(get_posts_by_category($menu_nodes[0]->reference_id, $number_per_tabs) as $new) 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
@@ -47,7 +47,7 @@
             <div class="tab-pane fade" id="tab{{$menu_nodes[1]->reference_id}}" role="tabpanel" aria-labelledby="tab{{$menu_nodes[1]->reference_id}}-tab">
                 <div class="item-row">
                     <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
-                        @foreach(get_posts_by_category($menu_nodes[1]->reference_id,12) as $event) 
+                        @foreach(get_posts_by_category($menu_nodes[1]->reference_id, $number_per_tabs) as $event) 
                             <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                                 <div class="row">
                                     <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
@@ -75,7 +75,7 @@
                 <div class="box-media">
                     <div class="content">
                         <div class="row">
-                            @foreach(get_posts_by_category($menu_nodes[2]->reference_id,9) as $media)
+                            @foreach(get_posts_by_category($menu_nodes[2]->reference_id, $number_per_tabs) as $media)
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
                                     <div class="item">
                                         <a href="{{$media->url}}">
