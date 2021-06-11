@@ -8,7 +8,7 @@
         <a href="#side{{$category->id}}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
          
             @if(Menu::checkChild(['parent_id' => $category->id]))
-               @php echo "<i class='fas fa-chevron-down show icon-menulf'></i> <i class='fas fa-chevron-up icon-menulf'></i>"; @endphp
+               @php echo "<i class='fas fa-chevron-down show icon-menulf'></i> "; @endphp
             @endif
             
         </a>
