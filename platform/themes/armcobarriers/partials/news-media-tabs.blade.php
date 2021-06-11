@@ -1,4 +1,6 @@
 
+@php $number_per_page = theme_option('number_of_products_per_page'); @endphp
+
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">

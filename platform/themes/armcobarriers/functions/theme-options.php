@@ -36,4 +36,17 @@ theme_option()
             'name'  => 'primary_color',
             'value' => '#ff2b4a',
         ],
+    ])
+    ->setField([ // Set field for section
+        'id' => 'number_of_posts_in_a_tabs',
+        'section_id' => 'opt-text-subsection-blog',
+        'type' => 'number',
+        'label' => __('Number of posts per tabs in news-media page'),
+        'attributes' => [
+            'name' => 'number_of_posts_in_a_tabs',
+            'value' => '6',
+            'options' => [
+                'class' => 'form-control',
+            ]
+        ],
     ]);
