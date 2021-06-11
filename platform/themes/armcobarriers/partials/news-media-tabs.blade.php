@@ -76,7 +76,7 @@
                     <div class="content">
                         <div class="row">
                             @foreach(get_posts_by_category($menu_nodes[2]->reference_id, $number_per_tabs) as $media)
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5">
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                                     <div class="item">
                                         <a href="{{$media->url}}">
                                             <img src="{{RvMedia::getImageUrl($media->image)}}" alt="">
