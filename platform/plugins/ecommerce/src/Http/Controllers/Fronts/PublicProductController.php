@@ -346,13 +346,13 @@ class PublicProductController
 
         $id = $category->id;
 
-        $categories = ProductCategory::
-                    whereIn('parent_id', [$id])->orderBy('created_at','desc')
-                    ->get();
+        $categories = ProductCategory::all();
+
+        $catego = $category;
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
 
-        return Theme::scope('ecommerce.products', compact('category', 'products'),
+        return Theme::scope('ecommerce.products', compact('categories','catego', 'products'),
             'plugins/ecommerce::themes.products')->render();
     }
 

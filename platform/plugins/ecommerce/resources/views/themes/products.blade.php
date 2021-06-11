@@ -33,7 +33,10 @@
         'theme'   => true,
         'view' => 'sidebar-categories',
 ])--}}
-                  
+       
+@if(!isset($catego))
+@php $catego = []; @endphp
+@endif
 
 @php Theme::layout('default') @endphp
 <section>
@@ -69,10 +72,8 @@
               <ul class="list-unstyled"> 
                 @if(isset($categories))
                   @foreach($categories as $category)
-                    @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category])
+                    @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category, 'catego'=>$catego])
                   @endforeach
-                @elseif(isset($category))
-                  @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category,'show'=>[]])
                 @endif
               </ul>            
             </div>
@@ -105,8 +106,8 @@
                   </div>
                 </div>
 
-                @if(!isset($categories))
-                  <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$category->name!!} </h1>
+                @if(isset($categories) && !empty($catego))
+                  <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$catego->name!!} </h1>
                 @else
                   <h1 style="font-size: 2rem; margin-top: 40px;"> All Product </h1>
                 @endif

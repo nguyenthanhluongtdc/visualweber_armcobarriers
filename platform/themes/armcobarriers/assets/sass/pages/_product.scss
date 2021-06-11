@@ -56,7 +56,18 @@
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-
+.fa-chevron-down.show{
+    display: block !important;
+}
+.fa-chevron-down{
+    display: none !important;
+}
+.fa-chevron-up.show{
+    display: block !important;
+}
+.fa-chevron-up{
+    display: none !important;
+}
 .product-wrapper {
     padding-top: 3.5%;
     #sidebar {
