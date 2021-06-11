@@ -138,7 +138,7 @@
 
                   @else 
 
-                  <p> There are no matching products for this option </p>
+                  <p class="set-height"> There are no matching products for this option </p>
 
                   @endif
 
