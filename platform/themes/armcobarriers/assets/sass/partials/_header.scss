@@ -60,6 +60,12 @@
                 color: $gray_text
             }
         }
+        .nav-item.current {
+            a {
+                color: #000;
+                font-weight: bold;
+            }
+        }
         .dropdown {
             position: unset;
             .dropdown-menu.show+body {
@@ -422,7 +428,7 @@
                 transform: rotate(45deg);
                 -webkit-transform: rotate(45deg);
                 position: absolute;
-                margin: 5px;
+                margin: 7px;
             }
             .dropdown .menu-pc-dropdown {
                 @media(min-width: 576px) {

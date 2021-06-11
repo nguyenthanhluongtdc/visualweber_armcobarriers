@@ -2,7 +2,6 @@ import 'bootstrap';
 require('./bootstrap')
     // menu header
 $(document).ready(function() {
-    // $(this).find('.sm-menu').first().stop(true, true).slideUp(500)
     $('.dmenu').hover(function() {
         $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
 
@@ -10,6 +9,23 @@ $(document).ready(function() {
         $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
     });
 });
+$(document).ready(function() {
+    $('.nav-item .dropdown-toggle').click(function(e) {
+        e.preventDefault()
+        const element = $(this).parent().children('.sm-menu')
+        if (!element) return
+
+        if (element.hasClass('is-show')) {
+            element.toggleClass('is-show')
+            element.css('display', 'none')
+        } else {
+            element.toggleClass('is-show')
+            element.css('display', 'block')
+        }
+    })
+})
+
+
 
 //end menu
 
