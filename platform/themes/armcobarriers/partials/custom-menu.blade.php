@@ -68,7 +68,7 @@
                                     <ul class="list-unstyled">
                                         <li class="">
                                             <div class="category-type">
-                                                <a href="{{ $child->url }}" data-toggle="collapse"  aria-expanded="true" >{{ $child->name }}</a>
+                                                <a href="{{ $child->url }}" data-toggle="{{$child->has_child ? 'collapse' : ''}}  " aria-expanded="true" >{{ $child->name }}</a>
                                                 @if ($child->has_child)
                                                 <i class="fal fa-angle-right"></i>
                                                 @endif
@@ -95,7 +95,7 @@
         
         @else
         <li class="nav-link nav-item active  @if ($row->url == Request::url()) current @endif">
-            <a href="{{ $key==0 ? route('public.index') : $row->url  }}" class="nav__menu-link" target="{{ $row->target }}">
+            <a href="{{ $key==0 ? '' : $row->url  }}" class="nav__menu-link" target="{{ $row->target }}">
                 @if (!blank($row->icon_font))
                 <i class='{{ trim($row->icon_font) }}'></i>
                 @endif

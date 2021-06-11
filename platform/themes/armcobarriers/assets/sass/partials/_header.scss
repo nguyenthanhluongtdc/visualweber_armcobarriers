@@ -54,12 +54,12 @@
             .dropdown-menu {
                 padding-top: 30px;
                 top: 96%;
-                padding-left: 25%;
-                width: calc(100% - 15px);
+                padding-left: 27.5%;
+                width: 100%;
                 z-index: 1250;
                 overflow-x: hidden;
                 height: auto;
-                max-height: 70vh;
+                max-height: 75vh;
                 overflow-y: auto;
                 .title-product {
                     p:last-child {
@@ -68,15 +68,31 @@
                     padding-bottom: 30px;
                 }
                 .sub-menu-child {
-                    left: 100%;
+                    @media(max-width: 1500px) {
+                        left: 68%;
+                        font-size: 15px;
+                    }
+                    @media(max-width:1250px) {
+                        left: 76%;
+                    }
+                    @media(max-width:1100px) {
+                        left: 82%;
+                    }
+                    left: 55%;
+                    font-size: 17px;
                     width: max-content;
                     list-style: none;
                     display: none;
                     position: absolute;
+                    z-index: 1250;
                     li {
                         padding-left: 20px;
-                        padding-top: 14.5px;
-                        padding-bottom: 14.5px;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        @media(max-width: 1400px) {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                        }
                         a {
                             &:hover {
                                 font-weight: bold;
@@ -95,7 +111,7 @@
                     display: block;
                 }
                 .list-unstyled {
-                    min-width: 60%;
+                    min-width: 45%;
                     li {
                         width: 100%;
                         padding: 0;
@@ -106,8 +122,12 @@
                         align-items: center;
                         margin-right: 20px;
                         padding-left: 20px;
-                        padding-top: 7.5px;
-                        padding-bottom: 7.5px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        @media(max-width: 1400px) {
+                            padding-top: 0px;
+                            padding-bottom: 0px;
+                        }
                         justify-content: space-between;
                         &:hover {
                             background-color: $priamry_color;
@@ -119,9 +139,12 @@
                         a {
                             font-size: 17px;
                             padding-right: 40px;
+                            @media(max-width: 1400px) {
+                                font-size: 15px;
+                            }
                         }
                         i {
-                            margin-right: 20px;
+                            margin-right: 1vw;
                             font-size: 20px;
                         }
                     }
@@ -321,6 +344,23 @@
 
 @media (max-width: 991px) {
     .navbar-nav {
+        .dropdown {
+            .dropdown-menu {
+                background-color: $priamry_color;
+                .menu {
+                    .list-unstyled {
+                        .category-type {
+                            a {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                    .sub-menu-child {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
         height: 100vh;
         background-color: $priamry_color;
         padding-top: 50px;
