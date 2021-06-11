@@ -106,6 +106,10 @@ class PublicProductController
     {
         $query = $request->get('q');
 
+        $slug = SlugHelper::getSlug('products');
+        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
+        $page = Arr::get($result, 'data.page');
+
         //
         if ($query) {
             $products = $productService->getProduct($request);
@@ -128,7 +132,7 @@ class PublicProductController
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
 
-        return Theme::scope('ecommerce.products', compact(['products','categories']),
+        return Theme::scope('ecommerce.products', compact(['products','categories','page']),
             'plugins/ecommerce::themes.products')->render();
     }
 
@@ -350,9 +354,13 @@ class PublicProductController
 
         $catego = $category;
 
+        $slug = SlugHelper::getSlug('products');
+        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
+        $page = Arr::get($result, 'data.page');
+
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
 
-        return Theme::scope('ecommerce.products', compact('categories','catego', 'products'),
+        return Theme::scope('ecommerce.products', compact('categories','catego', 'products','page'),
             'plugins/ecommerce::themes.products')->render();
     }
 

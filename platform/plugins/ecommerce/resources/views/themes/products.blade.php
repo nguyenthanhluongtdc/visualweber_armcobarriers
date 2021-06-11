@@ -38,6 +38,13 @@
 @php $catego = []; @endphp
 @endif
 
+@if(isset($page))
+  @php 
+    $content_banner = get_field($page, 'content_banner');
+    $img_banner = get_field($page, 'image_banner');
+  @endphp
+@endif
+
 @php Theme::layout('default') @endphp
 <section>
   @includeIf("theme.armcobarriers::views.components.breadcrumb")
@@ -50,11 +57,11 @@
     </div>
   </div>
   <div class="container-fluid-customize">
-    <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ Theme::asset()->url('images/product/banner-product.jpg')}})">
+    <div class="introduction-product-banner" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ rvMedia::getImageUrl($img_banner) }})">
     <div class="container-customize">
       <div class="d-flex align-items-center h-100 col-lg-7 col-12">
         <p>
-        ARMCO® Barriers can provide all of your barrier and protection requirements with our vast and readily available product range. We are the specialists in custom designing barrier systems for unusual and non-standard applications.
+          {!! $content_banner !!}
         </p>
       </div>
     </div>

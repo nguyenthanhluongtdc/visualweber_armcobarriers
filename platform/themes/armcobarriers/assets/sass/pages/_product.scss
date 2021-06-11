@@ -93,6 +93,9 @@
                 font-weight: bold;
             }
         }
+        a.active {
+            font-weight: bold;
+        }
         
         .list-categories {
             line-height: 1.4;
@@ -112,7 +115,6 @@
                     color: $gray-text;
                     &:hover {
                         color: $gray-text;
-                        background: $priamry_color;
                     }
                 }
             }
