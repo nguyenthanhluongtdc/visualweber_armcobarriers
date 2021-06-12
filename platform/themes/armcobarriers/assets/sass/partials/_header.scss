@@ -53,11 +53,24 @@
             @media(max-width: 1600px) {
                 font-size: 16px;
             }
+            @media(max-width: 1100px) {
+                font-size: 15px;
+            }
             @media(max-width: 1500px) {
                 padding: 0 10px;
             }
             a {
                 color: $gray_text
+            }
+            #nav-bar-dropdown::after {
+                content: "";
+                border: solid #262626;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate( 45deg);
+                margin-left: 8px;
             }
         }
         .nav-item.current {
@@ -88,6 +101,7 @@
                 height: auto;
                 max-height: 75vh;
                 overflow-y: auto;
+                display: none;
                 .title-product {
                     p:last-child {
                         padding-top: 30px;
@@ -176,6 +190,9 @@
                         }
                     }
                 }
+                // .list-unstyled:hover~.sub-menu-child {
+                //     display: block;
+                // }
                 .list-unstyled li a,
                 .sub-menu-child li a {
                     padding: 5px 0;
@@ -420,20 +437,11 @@
     }
 }
 
-@media(max-width:800px) {
+@media(max-width:991px) {
     .header {
         .navbar-nav {
-            .dmenu::after {
-                content: "";
-                border: solid black;
-                border-width: 0 1px 1px 0;
-                display: inline-block;
-                padding: 3px;
-                transform: rotate(45deg);
-                -webkit-transform: rotate(45deg);
-                position: absolute;
-                margin: 7px;
-            }
+            overflow-y: scroll;
+            scroll-behavior: smooth;
             .dropdown .menu-pc-dropdown {
                 @media(min-width: 576px) {
                     margin-left: 43.5vw;
@@ -448,14 +456,18 @@
                 display: none;
             }
             .menu-mb {
-                display: block!important;
                 a {
                     display: block;
                     padding: 8px 0!important;
                 }
+                display: block!important;
                 ul {
                     li {
                         padding: 5px 0!important;
+                        a {
+                            display: block;
+                            padding: 8px 0px 8px 1.5vw!important;
+                        }
                     }
                 }
                 .dropdown-menu {
