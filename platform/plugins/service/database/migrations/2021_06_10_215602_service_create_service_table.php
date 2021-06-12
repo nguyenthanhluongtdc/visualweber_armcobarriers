@@ -17,6 +17,7 @@ class ServiceCreateServiceTable extends Migration
             $table->string('name', 255);
             $table->string('status', 60)->default('published');
             $table->timestamps();
+            // $table->string('image', 255)->nullable();
         });
     }
 
@@ -28,5 +29,9 @@ class ServiceCreateServiceTable extends Migration
     public function down()
     {
         Schema::dropIfExists('services');
+        Schema::table('services', function (Blueprint $table) {
+            $table->string('image');
+            
+        });
     }
 }

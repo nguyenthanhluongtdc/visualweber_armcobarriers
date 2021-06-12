@@ -1,17 +1,26 @@
 import 'bootstrap';
 require('./bootstrap')
-    // menu header
+    //menu header
 $(document).ready(function() {
-    // $(this).find('.sm-menu').first().stop(true, true).slideUp(500)
-    $('.dmenu').hover(function() {
-        $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
+    if (screen.width <= 991)
+        $('.nav-item .dropdown-toggle').click(function(e) {
+            e.preventDefault()
+            const element = $(this).parent().children('.sm-menu')
+            if (!element) return
 
-    }, function() {
-        $(this).find('.sm-menu').first().stop(true, true).slideToggle(300);
-    });
-});
+            if (element.hasClass('is-show')) {
+                element.toggleClass('is-show')
+                element.css('display', 'none')
+            } else {
+                element.toggleClass('is-show')
+                element.css('display', 'block')
+            }
+        })
+})
 
-//end menu
+
+
+//end menu  
 
 // const helloWorld = require("./hello-world").helloWorld();
 // console.log(helloWorld);
