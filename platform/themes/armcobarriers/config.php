@@ -55,7 +55,10 @@ return [
             // $theme->asset()->usePath()->add('style', 'css/common.css');
             // $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
             $theme->asset()->usePath()->add('style', 'css/common.css');
+            $theme->asset()->container('footer')->usePath()->add('custom', 'js/splide.min.js', array('core-script'));
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
+            
+           
             $theme->asset()->container('footer')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->container('footer')->add('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js');
             $theme->asset()->add('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');

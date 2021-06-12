@@ -26,6 +26,7 @@
 
 @includeIf("theme.armcobarriers::views.components.breadcrumb")
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 <div id="product_detail">
     <div class="container-customize">
         <div class="row">
@@ -40,28 +41,31 @@
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
             <!---product infomation-->
             <div id="product_info" class="col-sm-12 col-md-12">
-                <div class="row">
-                    <div class="col-12 col-lg-6 gallery">
-                        <div class="gallery-container">
-                            <div class="swiper-container gallery-main">
-                                <div class="swiper-wrapper">
-                                @foreach($productImages as $img)
-                                    <div class="swiper-slide">
-                                        <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="Slide 01">
-                                    </div>
-                                @endforeach
+                <div class="row ml-0">
+                    <div class="col-12 col-lg-6">
+                        <div class="row">
+                            <div id="large-slider" class="col-10 pl-0">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        @foreach($productImages as $img)
+                                            <li class="splide__slide">
+                                                <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="">
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="swiper-container gallery-thumbs">
-                                <div class="swiper-wrapper">
-                                @foreach($productImages as $thumb)
-                                    <div class="swiper-slide">
-                                        <img src="{{rvMedia::getImageUrl($thumb, 'product')}}" alt="Slide 01">
-                                    </div>
-                                @endforeach
+                        
+                            <div id="secondary-slider" class="splide col-2">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                    @foreach($productImages as $thumb)
+                                        <li class="splide__slide">
+                                            <img src="{{rvMedia::getImageUrl($thumb, 'product')}}">
+                                        </li>
+                                    @endforeach
+                                    </ul>
                                 </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
                         </div>
                     </div>
@@ -185,6 +189,7 @@
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
 <!-- Initialize Swiper -->
 <script>
     $(document).ready(function() {
@@ -204,41 +209,79 @@
             document.querySelector('input[type="number"]').stepUp()
 
         })
-        var galleryThumbs = new Swiper(".gallery-thumbs", {
-                centeredSlides: true,
-                centeredSlidesBounds: true,
-                slidesPerView: 3,
-                watchOverflow: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                direction: 'vertical'
-            });
 
-            var galleryMain = new Swiper(".gallery-main", {
-                watchOverflow: true,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                preventInteractionOnTransition: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
+            // Create and mount the thumbnails slider.
+            var secondarySlider = new Splide( '#secondary-slider', {
+            autoHeight  : true,
+            rewind      : false,
+            fixedWidth  : 60,
+            fixedHeight : 24,
+            isNavigation: true,
+            gap         : 5,
+            focus       : 'center',
+            pagination  : false,
+            cover       : true,
+            perPage     : 4,
+            direction: 'ttb',
+            height      : '20rem',
+            type        : 'loop',
+            breakpoints : {
+                1920: {
+                    fixedWidth  : 95,
+                    height      : '30rem',
+                    perPage     : 5,
                 },
-                effect: 'fade',
-                    fadeEffect: {
-                    crossFade: true
+                1600: {
+                    fixedWidth  : 75,
+                    height      : '25rem',
                 },
-                thumbs: {
-                    swiper: galleryThumbs
+                1400: {
+                    height      : '20rem',
+                },
+                1200: {
+                    fixedWidth  : 55,
+                    height      : '17rem',
+                },
+                992: {
+                    fixedWidth  : 100,
+                    height      : '32rem',
+                },
+                768: {
+                    fixedWidth  : 70,
+                    height      : '25rem',
+                },
+                576: {
+                    fixedWidth  : 50,
+                    height      : '17rem',
+                },
+                480: {
+                    fixedWidth  : 40,
+                    height      : '12rem',
+                },
+                400: {
+                    fixedWidth  : 30,
+                    height      : '10rem',
                 }
-            });
+            }
+        } ).mount();
 
-            galleryMain.on('slideChangeTransitionStart', function() {
-            galleryThumbs.slideTo(galleryMain.activeIndex);
-            });
+        // Create the main slider.
+        var primarySlider = new Splide( '#large-slider', {
+            type       : 'fade',
+            heightRatio: 0.5,
+            pagination : false,
+            arrows     : false,
+            cover      : true,
+            autoHeight : true,
+            height     : "20rem",
+            breakpoints : {
+                992: {
+                }
+            }
+        } );
 
-            galleryThumbs.on('transitionStart', function(){
-            galleryMain.slideTo(galleryThumbs.activeIndex);
-        });
+        // Set the thumbnails slider as a sync target and then call mount.
+        primarySlider.sync( secondarySlider ).mount();
 
         var otherSwiper = new Swiper(".otherSwiper", {
             slidesPerView: 1.5,

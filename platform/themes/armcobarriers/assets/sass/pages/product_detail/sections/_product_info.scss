@@ -225,6 +225,46 @@
   .gallery-thumbs .swiper-slide-thumb-active img {
     margin-left: 0 !important;
   }
+
+
+  .splide__slide img {
+    width : 100%;
+    height: auto;
+    display: block !important;
+}
+
+
+#large-slider {
+    order: 1;
+}
+#secondary-slider {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+#secondary-slider .splide__list {
+}
+
+#secondary-slider ul, #secondary-slider ul li {
+    margin-right: 0 !important;
+}
+
+#secondary-slider-track {
+    margin: 0 auto;
+}
+
+.splide__arrow.splide__arrow--prev {
+    bottom: 0;
+    top: inherit;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.splide__arrow.splide__arrow--next {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+}
   
 // html,
 // body {
