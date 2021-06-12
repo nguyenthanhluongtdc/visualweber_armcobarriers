@@ -45,7 +45,7 @@
         @foreach($menu_nodes as $key => $row)
         @if ($row->has_child)
         <li class="nav-link nav-item dropdown dmenu">
-            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" data-toggle="dropdown" href="{{$row->url }}">{{ $row->name }}</a>
+            <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" href="{{$row->url }}">{{ $row->name }}</a>
             <div class="dropdown-menu sm-menu menu-pc-dropdown">
                 <div class="row">
                     <div class="col-8">

@@ -190,6 +190,10 @@
                 }
             }
         }
+        .dmenu:hover .menu-pc-dropdown {
+            display: block;
+            transition: all 0.5s ease;
+        }
         // li {
         //     &:hover {
         //         a {
