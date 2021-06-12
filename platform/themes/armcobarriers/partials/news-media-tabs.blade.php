@@ -29,7 +29,7 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                        <h5> <a href="'.$new->slug.'"> {{$new->name}} </a> </h5>
+                                        <h5> <a href="{{$new->slug}}"> {{$new->name}} </a> </h5>
                                         <div class="date"> {{$new->created_at->format('j F Y')}} </div>
                                         <p class="des">
                                             {{$new->description}} 

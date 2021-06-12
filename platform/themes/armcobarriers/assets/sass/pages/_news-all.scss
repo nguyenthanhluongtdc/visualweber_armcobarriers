@@ -90,11 +90,15 @@
 }
 
 .list-news-wrapper {
-    h5 {
+    h5 a {
         font-size: 17px;
         color: $gray_text;
         @include str_split();
         -webkit-line-clamp: 1;
+
+        &:hover {
+            font-weight: bold;
+        }
     }
     .date,
     .des {
@@ -106,7 +110,7 @@
         -webkit-line-clamp: 2;
         word-wrap: break-word;
     }
-    a {
+    a.type {
         padding: 5px 15px;
         background-color: $gray-text;
         color: $priamry_color;

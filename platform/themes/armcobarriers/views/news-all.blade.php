@@ -17,7 +17,7 @@
                 @foreach (get_post_is_featured() as $post)
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="">
+                            <a href="{{$post->url}}">
                                 <img src="{{rvMedia::getImageUrl($post->image)}}" alt="">
                                 <h3>
                                     {{$post->name}}
@@ -30,7 +30,7 @@
                             <div class="options">
                                 <div class="date"> {{$post->created_at->format('j F Y')}} </div>
                                 <a class="share"> Share </a>
-                                <a class="type"> {!! $post->categories->first()->name !!} </a>
+                                <a href="{{$post->categories->first()->url}}" class="type"> {!! $post->categories->first()->name !!} </a>
                             </div>
                         </div>
                     </div>
@@ -53,11 +53,13 @@
                     <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                                <img class="mw-100" src="{{ rvMedia::getImageUrl($post->image) }}" alt="">
+                                <a href="{{$post->url}}">
+                                    <img class="mw-100" src="{{ rvMedia::getImageUrl($post->image) }}" alt="">
+                                </a>
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                                <h5> {!! $post->name !!} </h5>
-                                <div class="date"> {!! $post->created_at->format('j F Y') !!} <a class="btn-event" href=""> {!! $post->categories->first()->name !!} </a> </div>
+                                <h5> <a href="{{$post->url}}"> {!! $post->name !!} </a> </h5>
+                                <div class="date"> {!! $post->created_at->format('j F Y') !!} <a class="type btn-event" href=""> {!! $post->categories->first()->name !!} </a> </div>
                                 <p class="des">
                                     @php echo $post->description @endphp 
                                 </p>
