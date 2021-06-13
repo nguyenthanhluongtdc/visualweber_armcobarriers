@@ -74,7 +74,7 @@
             <div class="wrap-descrip">
                 <div class="row">
                     @foreach (get_field($page, 'product_range_home') as $item)
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 fade-right">
                         <div class="post">
                             <div class="post-title">
                                 <h3>{{get_sub_field($item, 'product_range_title')}}</h3>

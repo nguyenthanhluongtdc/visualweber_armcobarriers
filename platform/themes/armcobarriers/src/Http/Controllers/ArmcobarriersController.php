@@ -21,6 +21,8 @@ use RvMedia;
 use Platform\Blog\Models\Post;
 use Platform\Blog\Services\BlogService;
 use Platform\Service\Models\Service;
+use Illuminate\Http\Request;
+use Platform\Blog\Repositories\Interfaces\PostInterface;
 
 class ArmcobarriersController extends PublicController
 {
@@ -161,5 +163,19 @@ class ArmcobarriersController extends PublicController
         }
 
         return Theme::scope('services-detail', $data)->render();
+    }
+
+    public function getPostAjax(Request $request) {
+        if($request->ajax()) {
+            $categoryId = $request->type;
+            $paginate   = $request->num;
+            $order      = $request->order;
+            $tabs       = app(PostInterface::class)->getByCategory($categoryId, $paginate, 0);
+            if($order!=1){
+                return view('theme.armcobarriers::partials.tabs.tab2', compact('tabs','categoryId'))->render();
+            }else {
+                return view('theme.armcobarriers::partials.tabs.tab1', compact('tabs','categoryId'))->render();
+            }
+        }
     }
 }

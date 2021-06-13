@@ -15,6 +15,8 @@ Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware
             'as' => 'service-detail',
             'uses' => 'ArmcobarriersController@getServices',
         ]);
+
+        Route::get('/news-media/ajax','ArmcobarriersController@getPostAjax')->name('public.post.ajax');
     });
 });
 

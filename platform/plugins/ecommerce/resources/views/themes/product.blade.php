@@ -44,7 +44,7 @@
                 <div class="row ml-0">
                     <div class="col-12 col-lg-6">
                         <div class="row">
-                            <div id="large-slider" class="col-10 pl-0">
+                            <div id="large-slider" class="col-lg-10 col-9 pl-0">
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         @foreach($productImages as $img)
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         
-                            <div id="secondary-slider" class="splide col-2">
+                            <div id="secondary-slider" class="splide col-lg-2 col-3">
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                     @foreach($productImages as $thumb)
@@ -224,7 +224,6 @@
             perPage     : 4,
             direction: 'ttb',
             height      : '20rem',
-            type        : 'loop',
             breakpoints : {
                 1920: {
                     fixedWidth  : 95,
@@ -247,20 +246,21 @@
                     height      : '32rem',
                 },
                 768: {
-                    fixedWidth  : 70,
-                    height      : '25rem',
+                    fixedWidth  : 100,
+                    height      : '23rem',
+                    gap         : 10,
                 },
                 576: {
-                    fixedWidth  : 50,
-                    height      : '17rem',
+                    fixedWidth  : 90,
+                    height      : '15rem',
                 },
                 480: {
-                    fixedWidth  : 40,
+                    fixedWidth  : 70,
                     height      : '12rem',
                 },
                 400: {
-                    fixedWidth  : 30,
-                    height      : '10rem',
+                    fixedWidth  : 50,
+                    height      : '8rem',
                 }
             }
         } ).mount();
