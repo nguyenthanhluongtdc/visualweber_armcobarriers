@@ -391,8 +391,18 @@
 }
 
 @media (max-width: 991px) {
+    .navbar{
+        height: 63px;
+    }
     .header {
         .navbar-nav {
+            position: fixed;
+            top: 55px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow-y: auto!important;
+            height: auto;
             .dropdown {
                 .dropdown-menu {
                     background-color: $priamry_color;
@@ -410,7 +420,7 @@
                     }
                 }
             }
-            height: 100vh;
+          
             background-color: $priamry_color;
             padding-top: 50px;
             .nav-item {
@@ -440,8 +450,7 @@
 @media(max-width:991px) {
     .header {
         .navbar-nav {
-            overflow-y: scroll;
-            scroll-behavior: smooth;
+         
             .dropdown .menu-pc-dropdown {
                 @media(min-width: 576px) {
                     margin-left: 43.5vw;
