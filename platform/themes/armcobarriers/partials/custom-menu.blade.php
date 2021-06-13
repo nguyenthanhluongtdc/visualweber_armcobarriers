@@ -123,5 +123,4 @@
         @endforeach
     </ul>             
     </div>
-    <div class="overlay_background"></div>    
 </nav>
