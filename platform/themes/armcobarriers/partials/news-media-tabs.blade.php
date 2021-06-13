@@ -53,14 +53,13 @@
     $(document).ready(function(){
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
-            let page = $(this).attr('href').split('page=')[1];
-            let type = $(this).attr('href').split('type=')[1];
-            let order = $(this).attr('href').split('order=')[1];
-            fetch_data(page, type, order);
+            let path = $(this).attr('href').split('page=')[1];
+            fetch_data(path);
         });
 
-        function fetch_data(page, type, order)
+        function fetch_data(path)
         {
+            path = "?page="+path+"&num={{$number_per_tabs}}";
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -68,9 +67,13 @@
             });
 
             $.ajax({
-            url:"/news-media/ajax?page="+page+"&type="+type+"&num={{$number_per_tabs}}&order="+order,
+            url:"/news-media/ajax"+path,
             success:function(response){
                     $('.tab-pane.active').html(response)
+                    if(response){
+                        console.log(path)
+                        window.history.pushState({}, '', path);
+                    }
                 }
             });
         }
