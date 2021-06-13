@@ -18,6 +18,48 @@ $(document).ready(function() {
         })
 })
 
+$('#nav-bar-dropdown').hover(function(e) {
+    const element = $('.menu-pc-dropdown');
+    if (!element) return
+    if (element.hasClass('is-show')) {
+        element.toggleClass('is-show')
+    } else {
+        element.toggleClass('is-show')
+    }
+
+    const elementOverLay = $('.overlay_background')
+    if (!elementOverLay) return
+    elementOverLay.css('display', 'block')
+    element.hasClass('is-show') ? elementOverLay.css('display', 'block') : elementOverLay.css('display', 'none')
+});
+
+$('.menu-pc-dropdown').hover(function() {
+    const element = $('.menu-pc-dropdown');
+    if (!element) return
+    if (element.hasClass('is-show')) {
+        element.toggleClass('is-show')
+    } else {
+        element.toggleClass('is-show')
+    }
+
+    const elementOverLay = $('.overlay_background')
+    if (!elementOverLay) return
+    elementOverLay.css('display', 'block')
+    element.hasClass('is-show') ? elementOverLay.css('display', 'block') : elementOverLay.css('display', 'none')
+
+
+})
+
+$(document).on('click', '.overlay_background', function(e) {
+    e.preventDefault()
+    const elementOverLay = $('.overlay_background')
+    if (!elementOverLay) return
+
+    elementOverLay.toggleClass('overlay_background_active')
+
+})
+
+
 
 
 //end menu  
