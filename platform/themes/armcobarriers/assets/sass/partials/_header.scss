@@ -100,6 +100,7 @@
                 overflow-x: hidden;
                 height: auto;
                 max-height: 75vh;
+                padding-bottom: 20px;
                 overflow-y: auto;
                 display: none;
                 .title-product {
@@ -197,6 +198,16 @@
                 .sub-menu-child li a {
                     padding: 5px 0;
                 }
+            }
+            .menu-pc-dropdown::before{
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 14vh;
+                background-color: rgba(0, 0, 0, 0.4);
+                content: '';
+                position: fixed;
+                z-index: -1;
             }
             li {
                 padding: 0;
