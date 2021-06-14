@@ -51,7 +51,7 @@
                             {{theme_option('footer-copyright')}}
                         </p>
                     </div>
-                    <div class="col-md-2 col-12 order-md-2 order-1">
+                    {{-- <div class="col-md-2 col-12 order-md-2 order-1">
                         <a href="">
                             <p>
                                 Privacy Policy
@@ -65,7 +65,14 @@
                                 Terms and Conditions
                             </p>
                         </a>
-                    </div>
+                    </div> --}}
+                    {!!
+                        Menu::renderMenuLocation('policy-terms-conditions', [
+                            'options' => [],
+                            'theme' => true,
+                            'view' => 'policy-terms-condition',
+                        ])
+                    !!}
                     
                 </div>
             </div>
