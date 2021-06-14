@@ -2,50 +2,41 @@
     <div class="footer-yellow"> 
         <div class="container-customize">
             <div class="footer__logo">
-                <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="logo">     
+                <img src="{{ RvMedia::getImageUrl(theme_option('logo_footer'))}}" alt="logo">     
             </div>
             <div class="container-wrapper">
                 <div class="row">
                     <div class="col-lg-3 col-md-5 col-12 mb-lg-0 mb-5">
                         <div class="protection-solutaion">
                             <div class="tiltle-protection">
-                                <h3>Asset Protection Solutions</h3>
+                                <h3>{{theme_option('footer-title')}}</h3>
                             </div>
                             <div class="map-protection">
-                                <img src="{{ Theme::asset()->url('images/footer/map-footer.png') }}" alt="map">
+                                <img src="{{ RvMedia::getImageUrl(theme_option('footer-map-image'))}}" alt="map">
                             </div>
                         </div>
                         
                     </div>
                     <div class="col-lg-3 col-md-7 col-12 mb-lg-0 mb-5">
                         <div class="contact-location">
-                            <h3>ARMCO® Head Office</h3>
-                            <p>3 FOURTH AVENUE, SUNSHINE, VICTORIA.3020. AUSTRALIA </p>
-                            <p>Phone<a href="tel:(03) 9311 1312">(03) 9311 1312</a></p>
-                            <p>International<a href="tel:+61 3 9311 1312">+61 3 9311 1312</a></p>
-                            <p>Email<a href="mailto:sales@armcobarriers.com.au">sales@armcobarriers.com.au</a></p>
+                            <h3>{{theme_option('footer-title-office')}}</h3>
+                            <p>{{theme_option('footer-office-position')}} </p>
+                            <p>Phone<a href="tel:{{theme_option('footer-phone')}}">{{theme_option('footer-phone')}}</a></p>
+                            <p>International<a href="tel:{{theme_option('footer-phone-international')}}">{{theme_option('footer-phone-international')}}</a></p>
+                            <p>Email<a href="mailto:{{theme_option('footer-email')}}">{{theme_option('footer-email')}}</a></p>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-5 col-6 mb-lg-0 mb-5">
-                        <div class="homepage">
-                            <p><a href="{{url('/')}}">Homepage</a></p>
-                            <p><a href="{{url('/about-us')}}">About Us</a></p>
-                            <p><a href="{{url('/products')}}">Products</a></p>
-                            <p><a href="{{url('/services')}}">Services</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-7 col-6 mb-lg-0 mb-5">
-                        <div class="applications">
-                            <p><a href="{{url('/applications')}}">Applications</a></p>
-                            <p><a href="{{url('/gallery')}}">Gallery</a></p>
-                            <p><a href="{{url('/news-media')}}">News, Events & Media</a></p>
-                            <p><a href="{{url('/contact-us')}}">Contact Us</a></p>
-                        </div>
-                    </div>
+                    {!!
+                        Menu::renderMenuLocation('footer-menu', [
+                            'options' => [],
+                            'theme' => true,
+                            'view' => 'menu-footer',
+                        ])
+                    !!}
                     <div class="col-lg-2 col-md-2 mb-lg-0">
                         <div class="connect-us">
-                            <h3>Connect with us</h3>
-                            <a href="">
+                            <p><h3>Connect with us</h3></p>
+                            <a href="{{theme_option('footer-social')}}">
                                 <i class="fab fa-facebook-square"></i>
                             </a>
                         </div>
@@ -57,8 +48,7 @@
                 <div class="row">
                     <div class="col-md-7 col-12 order-md-1 order-3">
                         <p>
-                            Copyright © 2021 ARMCO BARRIERS Pty Ltd  
-                            abn 21 007 274 464 
+                            {{theme_option('footer-copyright')}}
                         </p>
                     </div>
                     <div class="col-md-2 col-12 order-md-2 order-1">
