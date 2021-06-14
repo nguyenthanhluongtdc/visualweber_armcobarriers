@@ -47,7 +47,7 @@
                                     </a>
                                   </li>
                                   <li>   
-                                    <a href="">
+                                    <a href="{{route('public.cart')}}">
                                         <i class="fal fa-shopping-cart"></i>
                                         <span class="header__cart-notice">0</span>
                                     </a>
@@ -258,7 +258,7 @@
                                 </div>
                             </div>
                             <div class="right">
-                                <a href="">
+                                <a href="{{route('public.cart')}}">
                                     <i class="fal fa-shopping-cart"></i>
                                     <span class="header__cart-notice">0</span>
                                 </a>
