@@ -44,7 +44,6 @@ $('.menu-pc-dropdown').hover(function() {
 
     const elementOverLay = $('.overlay_background')
     if (!elementOverLay) return
-    elementOverLay.css('display', 'block')
     element.hasClass('is-show') ? elementOverLay.css('display', 'block') : elementOverLay.css('display', 'none')
 
 
@@ -56,6 +55,8 @@ $(document).on('click', '.overlay_background', function(e) {
     if (!elementOverLay) return
 
     elementOverLay.toggleClass('overlay_background_active')
+    elementOverLay.css('display', 'none')
+
 
 })
 
@@ -98,6 +99,21 @@ var swiper2 = new Swiper(".mySwiper1", {
         el: ".swiper-pagination",
         clickable: true,
     },
+});
+var swiper_gallery = new Swiper(".Swiper-Gallery", {
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    // observer: true,
+    // observeParents: true,
 });
 var swiper_gallery = new Swiper(".mySwiper-left", {
     // autoplay: {

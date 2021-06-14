@@ -97,6 +97,12 @@
                 }
             }
             .footer-bottom {
+                .policy-terms {
+                    @media(min-width: 768px) {
+                        display: flex;
+                        justify-content: space-around;
+                    }
+                }
                 @media(max-width: 480px) {
                     font-size: 13px;
                 }
