@@ -244,6 +244,7 @@
                             ])
                         !!}
                         <div class="toolbar">
+                           <div class="topp">
                             <div class="left">
                                 <div class="left-1">
                                     <a href="tel:1800 808 619">
@@ -251,10 +252,15 @@
                                         <span>1800 808 619</span>
                                     </a>
                                 </div>
-                                <div class="left-2">
-                                    <a href="">
-                                        <i class="fas fa-search"></i>
-                                    </a>
+                                <div class="left-2 hover_search">
+                                      
+                                    <i class="fas fa-search"></i>
+                              
+                                </div>
+                                <div class="left-2 close_search">
+                                
+                                    <i class="fas fa-times"></i>
+                            
                                 </div>
                             </div>
                             <div class="right">
@@ -269,9 +275,35 @@
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </div>
+                           </div>
+                           <div class="search_content">
+                            <form method="get" action="">
+                                <div class="search-box input-group">
+                                    <input type="text" name="query" value="" aria-label="Search" class="" placeholder="Search">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-secondary" type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         </div>
             </div>
         </header>
         <div class="overlay_background"></div>    
 
       
+        <script>
+
+            $('.hover_search').click(function(){
+                $('.search_content').show(200);
+                $('.close_search').show();
+                $('.hover_search').hide();
+            })
+            $('.close_search').click(function(){
+                $('.search_content').hide(200);
+                $('.close_search').hide();
+                $('.hover_search').show();
+            })
+        </script>
