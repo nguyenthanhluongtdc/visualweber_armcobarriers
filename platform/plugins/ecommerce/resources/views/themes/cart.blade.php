@@ -206,7 +206,11 @@
                 </div>
             @endif
         @else
-            <p class="text-center">{{ __('Your cart is empty!') }}</p>
+            <div class="box-cart-empty text-center">
+                <i class="fal fa-dolly-flatbed-empty"></i>
+                <p class="text-center">{{ __('Your cart is empty!') }}</p>
+                <a href="/" class="backhome">Back Home</a>
+            </div>
         @endif
     </div>
 </div>

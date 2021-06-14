@@ -10,6 +10,7 @@ button.btn.btn-fill-out, button.btn-line-fill {
 
         input {
             border: 1px solid #ccc;
+            border-radius: none;
         }
 
         input[type=button] {
@@ -21,5 +22,29 @@ button.btn.btn-fill-out, button.btn-line-fill {
         input[type=text] {
             text-align: center;
         }
+    }
+}
+
+.box-cart-empty {
+    margin-top: 100px;
+    i {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    a {
+        width: 50%;
+        margin-top: 10px;
+        border: 1px solid $gray_text;
+        display: inline-block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: $gray_text;
+        font-weight: bold;
+        background-color: $priamry_color;
     }
 }
