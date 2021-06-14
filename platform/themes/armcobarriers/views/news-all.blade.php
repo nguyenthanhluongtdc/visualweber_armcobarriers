@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-lg-7 col-md-7 col-sm-6 col-6">
                                 <h5> <a href="{{$post->url}}"> {!! $post->name !!} </a> </h5>
-                                <div class="date"> {!! $post->created_at->format('j F Y') !!} <a class="type btn-event" href=""> {!! $post->categories->first()->name !!} </a> </div>
+                                <div class="date"> <span class="time">{!! $post->created_at->format('j F Y') !!}</span> <a class="type btn-event" href=""> {!! $post->categories->first()->name !!} </a> </div>
                                 <p class="des">
                                     @php echo $post->description @endphp 
                                 </p>

@@ -22,8 +22,10 @@
 
                                 <div class="options">
                                     <div class="date"> {{$event->created_at->format('j F Y') }} </div>
-                                    <a class="share"> Share </a>
-                                    <a class="type"> {!! $event->categories->first()->name !!} </a>
+                                    <div class="box">
+                                        <a class="share"> Share </a>
+                                        <a class="type"> {!! $event->categories->first()->name !!} </a>
+                                </div>
                                 </div>
                             </div>
                         </div>

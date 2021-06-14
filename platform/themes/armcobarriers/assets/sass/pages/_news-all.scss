@@ -116,6 +116,7 @@
         color: $priamry_color;
         margin-left: 20px;
     }
+    
     .item-row {
         >.row {
             >div:nth-child(odd) {
@@ -187,5 +188,36 @@
 @media (max-width: 991px) {
     .list-news-wrapper .item-row{
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-news-wrapper {
+        a.type {
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        span.time {
+            margin-right: 10px;
+        }
+    
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .news-all-wrapper .box-media .content .item .options {
+        display: inherit;
+
+        .share{
+            display: inline-block;
+            margin-left: 0;
+        }
+        .type {
+            float: right;
+            margin-left: 0;
+        }
+        
     }
 }

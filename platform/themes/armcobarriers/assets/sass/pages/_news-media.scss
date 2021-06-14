@@ -41,9 +41,8 @@ $gray_text: #262626;
                 .options {
                     padding-top: 20px;
                     padding-bottom: 20px;
-                    display: flex;
 
-                    > div, >a {
+                    > div {
                         display: inline-block;
                         padding-left: 20px;
                         padding-right: 20px;
@@ -51,6 +50,20 @@ $gray_text: #262626;
                         line-height: 35px;
                         margin-left: 10px;
                         margin-right: 10px;
+                    }
+
+                    >div:last-child {
+                        padding-left: 0;
+                        margin-left: 0;
+                        .share{
+                            display: inline-block;
+                            margin-right: 20px;
+                            margin-bottom: 10px;
+                        }
+
+                        .type {
+                            display: inline-block;
+                        }
                     }
 
                     > div:first-child {
@@ -61,11 +74,14 @@ $gray_text: #262626;
                     .date {
                         color: $gray_text;
                         font-size: 15px;
+                        
                     }
 
                     .share {
                         background-color: #fad906;
                         color: $gray_text;
+                        padding-left: 20px;
+                        padding-right: 20px;
                     }
 
                     .share::after {
@@ -76,13 +92,11 @@ $gray_text: #262626;
                     .type {
                         background-color: #262626;
                         color: $priamry_color;
-                        max-width: 85px;
+                        padding-left: 20px;
+                        padding-right: 20px;
                     }
 
-                    .date, .type, .share {
-                        @include str_split();
-                        -webkit-line-clamp: 1;
-                    }
+                  
                 }
             }
         }
@@ -313,10 +327,6 @@ $gray_text: #262626;
 }
 
 @media (max-width: 576px) {
-    
-}
-
-@media (max-width: 380px) {
     .pages-news-media .box-media .content .item .options {
         display: inherit;
         padding-top: 10px;
@@ -328,12 +338,18 @@ $gray_text: #262626;
 
         .share {
             margin-left: 0;
+            display: inline-block;
         }
 
         .type {
             margin: 0;
+            float: right;
         }
     }
+}
+
+@media (max-width: 380px) {
+    
 }
 
 /* 
