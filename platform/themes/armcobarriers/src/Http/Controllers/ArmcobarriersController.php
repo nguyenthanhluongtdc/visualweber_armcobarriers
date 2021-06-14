@@ -23,7 +23,6 @@ use Platform\Blog\Services\BlogService;
 use Platform\Service\Models\Service;
 use Illuminate\Http\Request;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
-use BaseHelper;
 
 class ArmcobarriersController extends PublicController
 {
