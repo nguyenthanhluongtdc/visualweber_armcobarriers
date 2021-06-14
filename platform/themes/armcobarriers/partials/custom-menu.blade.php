@@ -1,4 +1,16 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar_mobie">
+    <div class="search_mobie-ct">
+        <form action="{{ route('public.products') }}" method="GET">
+            <div class="search-box input-group">
+                <input class="" name="q" value="{{ request()->input('q') }}" placeholder="{{ __('Search Product') }}..." required  type="text">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
     <a href="/" class="logo__link">
         
         <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
@@ -12,10 +24,11 @@
            
             </a>
           </li>
-          <li>
-            <a href="">
-                <i class="fas   fa-search"></i>
-            </a>
+          <li class="search_mobie">
+
+                <i class="fas   fa-search open_s_mb"></i>
+                <i class="fas fa-times close_s_mb"></i>
+            
           </li>
           <li>   
             <a href="">
@@ -34,6 +47,7 @@
             </a>
           </li>
       </ul>
+    
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
@@ -124,3 +138,16 @@
     </ul>             
     </div>
 </nav>
+<script>
+
+    $('.open_s_mb').click(function(){
+        $('.search_mobie-ct').show(200);
+        $('.close_s_mb').show();
+        $('.open_s_mb').hide();
+    })
+    $('.close_s_mb').click(function(){
+        $('.search_mobie-ct').hide(200);
+        $('.close_s_mb').hide();
+        $('.open_s_mb').show();
+    })
+</script>
