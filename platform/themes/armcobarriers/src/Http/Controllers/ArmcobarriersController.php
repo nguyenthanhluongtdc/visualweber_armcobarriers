@@ -126,7 +126,7 @@ class ArmcobarriersController extends PublicController
        
         if (!empty($result) && is_array($result)) {
             if(BaseHelper::isHomepage(Arr::get($result, 'data.page')->id)) {
-                return Theme::scope('index', $result['data'], Arr::get($result, 'default_view'))->render()
+                return Theme::scope('index', $result['data'], Arr::get($result, 'default_view'))->render();
             }
 
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
