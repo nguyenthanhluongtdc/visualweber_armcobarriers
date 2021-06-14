@@ -105,11 +105,11 @@ class PublicProductController
     public function getProducts(Request $request, GetProductService $productService)
     {
         
-        $num = $request->num;
-        $query = $request->get('q');
+        $num = Arr::get($request,'num', 0);
+        $query = Arr::get($request,'q', "");
         $viewSearch = false;
 
-        $slug = SlugHelper::getSlug('products');
+        $slug = SlugHelper::getSlug('our-products');
         $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
         $page = Arr::get($result, 'data.page');
 
@@ -135,10 +135,10 @@ class PublicProductController
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
         if($request->ajax()){
-            return view('plugins/ecommerce::themes.box-product', compact('products','num'))->render();
+            return view('plugins/ecommerce::themes.box-product', compact('products','num','query'))->render();
         }
         
-        return Theme::scope('ecommerce.products', compact(['products','categories','page','query']),
+        return Theme::scope('ecommerce.products', compact(['products','categories','page','query','num']),
             'plugins/ecommerce::themes.products')->render();
     }
 
@@ -305,7 +305,7 @@ class PublicProductController
         ProductCategoryInterface $categoryRepository,
         GetProductService $getProductService
     ) {
-        $num = $request->num;
+        $num = Arr::get($request,'num', 0);
         $slug = $this->slugRepository->getFirstBy([
             'key'            => $slug,
             'reference_type' => ProductCategory::class,
@@ -361,7 +361,7 @@ class PublicProductController
 
         $catego = $category;
 
-        $slug = SlugHelper::getSlug('products');
+        $slug = SlugHelper::getSlug('our-products');
         $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
         $page = Arr::get($result, 'data.page');
 
@@ -369,7 +369,7 @@ class PublicProductController
         if($request->ajax()){
             return view('plugins/ecommerce::themes.box-product', compact('products','num'))->render();
         }
-        return Theme::scope('ecommerce.products', compact('categories','catego', 'products','page'),
+        return Theme::scope('ecommerce.products', compact('categories','catego', 'products','page','num'),
             'plugins/ecommerce::themes.products')->render();
     }
 

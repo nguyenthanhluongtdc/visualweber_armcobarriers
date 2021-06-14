@@ -20,7 +20,11 @@
     @endforeach
 </div>
 
-@if(isset($num))
+@if(isset($num) && $num!=0 && isset($query) && $query!="")
+{{ $products->links('vendor.pagination.custom', ['num'=>$num,'query'=>$query]) }}
+@elseif(isset($query) && $query!="")
+{{ $products->links('vendor.pagination.custom', ['query'=>$query]) }}
+@elseif(isset($num) && $num!=0)
 {{ $products->links('vendor.pagination.custom', ['num'=>$num]) }}
 @else
 {{ $products->links('vendor.pagination.custom') }}
