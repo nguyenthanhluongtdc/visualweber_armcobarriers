@@ -1,6 +1,7 @@
 
 @if ($paginator->hasPages())
 @php $num = isset($num) ? "&num=$num" : "" @endphp
+@php $query = isset($query) ? "&q=$query" : "" @endphp
 
 <div class="row">
     <div class="col-lg-12">
@@ -11,7 +12,7 @@
                 @if ($paginator->onFirstPage())
                     <li class="disabled page-link-last"><span>← Prev</span></li>
                 @else
-                    <li class="page-link-last"><a href="{{ $paginator->previousPageUrl().$num }}" rel="prev">← Prev</a></li>
+                    <li class="page-link-last"><a href="{{ $paginator->previousPageUrl().$num.$query }}" rel="prev">← Prev</a></li>
                 @endif
 
                 @foreach ($elements as $element)
@@ -26,7 +27,7 @@
                                 <li class="active page-item"><span class="page-link">{{ $page }}</span></li>
                             @else
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $url.$num}}">{{ $page }}</a>
+                                    <a class="page-link" href="{{ $url.$num.$query}}">{{ $page }}</a>
                                 </li>
                             @endif
                         @endforeach
@@ -34,7 +35,7 @@
                 @endforeach
 
                 @if ($paginator->hasMorePages())
-                    <li class="page-link-last"><a href="{{ $paginator->nextPageUrl().$num }}" rel="next">Next →</a></li>
+                    <li class="page-link-last"><a href="{{ $paginator->nextPageUrl().$num.$query }}" rel="next">Next →</a></li>
                 @else
                     <li class="page-link-last disabled">
                         <span> Next → </span>

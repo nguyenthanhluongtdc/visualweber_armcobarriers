@@ -42,6 +42,7 @@
   @php 
     $content_banner = get_field($page, 'content_banner');
     $img_banner = get_field($page, 'image_banner');
+    $query = isset($query) ? $query : "";
   @endphp
 @endif
 
@@ -90,7 +91,7 @@
                   <div class="col-md-12">
                     <div class="product-filter justify-content-lg-end">
                       <div class="product_filter--search">
-                        <form action="/products" method="GET" class="form__search">
+                        <form action="/our-products" method="GET" class="form__search">
                           <input type="text" class="header__search-input form-control form-control-sm submit-form-on-change first_null not_chosen"  placeholder="Search Product" name="q"/>
                           <button class="btn btn-secondary" type="submit">
                               <i class="fas fa-search"></i>
@@ -134,7 +135,7 @@
                 
                 @if(count($products) > 0)
                 <div class="box-products">
-                  @includeIf("plugins/ecommerce::themes.box-product",['products'=>$products])
+                  @includeIf("plugins/ecommerce::themes.box-product",['products'=>$products,'num'=>$num,'query'=>$query])
                 </div>
                 @else 
                 <p class="set-height"> There are no matching products for this option </p>
@@ -146,20 +147,19 @@
   </div>
 </section>
 
-
 <script>
 
   $(document).ready(function() {
     let path = "";
     $("select[name='num']").on('change',function(){
       path = window.location.pathname;
-      num = $(this).val();
+      let num = $(this).val();
       fetch_data(path, num)
     })
 
     function fetch_data(path, num) {
       $.ajax({
-        url: path+"?num="+num,
+        url: path+"?num="+num+"&q={{$query}}",
         success: function(response) {
           $('.box-products').html(response)
         }
