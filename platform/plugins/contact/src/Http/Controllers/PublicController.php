@@ -36,6 +36,9 @@ class PublicController extends Controller
         try {
             $contact = $this->contactRepository->getModel();
             $contact->fill($request->input());
+            $contact['name'] = $contact->name ?? "";
+            $contact['email'] = $contact->email ?? "";
+            $contact['content'] = $contact->content ?? "";
             $this->contactRepository->createOrUpdate($contact);
 
             event(new SentContactEvent($contact));

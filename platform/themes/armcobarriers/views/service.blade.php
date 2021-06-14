@@ -8,8 +8,8 @@
                 </ol>
             </nav>
             <div class="top2">
-                <h2>ARMCO - Asset Protection Solutions</h2>
-                <p>Installation, Design Advice, Custom Manufacture</p>
+                <h2>{{$page->name}}</h2>
+                <p>{{$page->description}}</p>
             </div>
         </div>
     </div>
@@ -33,10 +33,35 @@
         </div>
     </div>
 
+
     {{-- <div class="item-tab-content right-tab-md">
         @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
     </div> --}}
 </div>
+<?php $item_sv = get_field($page, 'services')[0]  ?>
+    <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
+        <div class="container-customize">
+            <h3 class="over_view"> {{ get_sub_field($item_sv, 'tabs_title') }} </h3>
+            <div class="content">
+                <?php $item_content =  get_sub_field($item_sv, 'description')[0] ?>
+                <div class="desc">
+                    {!! get_sub_field($item_content, 'description_text') !!}
+                </div>
+                <?php if(!empty(get_sub_field($item_content, 'description_colum'))) { ?>
+                <div class="dev_3_column">
+                    @foreach (get_sub_field($item_content, 'description_colum') as $item)
+                       <div class="item_column">
+                        <h5>{{ get_sub_field($item, 'title') }}</h5>
+                        <p>{!! get_sub_field($item, 'description') !!}</p>
+                       </div>
+                    @endforeach
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+       
+    </div>
+    
 
 <section>
     <div class="container-customize">

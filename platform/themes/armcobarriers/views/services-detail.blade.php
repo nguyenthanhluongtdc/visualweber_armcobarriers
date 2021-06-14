@@ -10,8 +10,8 @@
             </nav>
             
             <div class="top2">
-                <h2>ARMCO® Services</h2>
-                <p>Installation, Design Advice, Custom Manufacture</p>
+                <h2>{{ $service-> name}}</h2>
+                <p> {{ get_field($service, 'short_description') }}</p>
             </div>
             <!-- <img src="{{ RvMedia::getImageUrl(get_field($service, 'img_service_item')) }}" alt=""> -->
         </div>
@@ -87,7 +87,7 @@
             </div>
             <div class="row">
                 @foreach (get_field($service, 'product_quality_16233289513') as $item)
-                    <div class="col-md-3">
+                    <div class="col-md-3 item_img_sv">
                         <h3 class="title">
                             {{get_sub_field($item,'title')}}
                         </h3>
