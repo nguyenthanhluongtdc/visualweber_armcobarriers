@@ -154,14 +154,18 @@
     $("select[name='num']").on('change',function(){
       path = window.location.pathname;
       let num = $(this).val();
-      fetch_data(path, num)
+      let query = "{{$query}}"
+      query = query!=""?`&q=${query}`:'';
+      path +=`?num=${num}${query}`;
+      fetch_data(path);
     })
 
-    function fetch_data(path, num) {
+    function fetch_data(path) {
       $.ajax({
-        url: path+"?num="+num+"&q={{$query}}",
+        url: path,
         success: function(response) {
           $('.box-products').html(response)
+          window.history.pushState({},'',path);
         }
       })
     }
