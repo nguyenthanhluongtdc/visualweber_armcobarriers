@@ -100,6 +100,16 @@
                       <div class="custom_select">
                         <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
                             <option value="">Showing 1 - 10 of 10 products</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
                         </select>
                         <span class="down"></span>
                       </div>
@@ -115,41 +125,20 @@
 
                 @if(isset($categories) && !empty($catego))
                   <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$catego->name!!} </h1>
-                @else
-                  <h1 style="font-size: 2rem; margin-top: 40px;"> All Product </h1>
+                @elseif(!empty($query))
+                  <h1 style="font-size: 2rem; margin-top: 40px;">
+                  Search results for keyword: <span class="text-danger">'{!!$query!!}'</span> </h1>
+                @else 
+                  <h1 style="font-size: 2rem; margin-top: 40px;"> All product </h1>
                 @endif
                 
                 @if(count($products) > 0)
-                  <div class="row">
-                      @foreach($products as $product)
-                          <div class="col-lg-3 col-md-4 col-6">
-                              <div class="product-item-wrapper">
-                              <a href="{{$product->url}}">
-                                  <div class="product-item">
-                                  <img class="product-image" src="{{rvMedia::getImageUrl($product->image)}}" alt="">
-                                  <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
-                                  </div>
-                                  <h4 class="product-name">
-                                      {{$product->name}}
-                                  </h4>
-                                  <code>
-                                  <?php echo $product->description ?>
-                                  </code>
-                              </a>
-                              
-                              </div>
-                          </div>
-                      @endforeach
-                  </div>
-                  
-                  {{ $products->links('vendor.pagination.custom') }}
-
-                  @else 
-
-                  <p class="set-height"> There are no matching products for this option </p>
-
-                  @endif
-
+                <div class="box-products">
+                  @includeIf("plugins/ecommerce::themes.box-product",['products'=>$products])
+                </div>
+                @else 
+                <p class="set-height"> There are no matching products for this option </p>
+                @endif
             </div>
           </div>
         </div>
@@ -160,6 +149,22 @@
 
 <script>
 
-  
+  $(document).ready(function() {
+    let path = "";
+    $("select[name='num']").on('change',function(){
+      path = window.location.pathname;
+      num = $(this).val();
+      fetch_data(path, num)
+    })
+
+    function fetch_data(path, num) {
+      $.ajax({
+        url: path+"?num="+num,
+        success: function(response) {
+          $('.box-products').html(response)
+        }
+      })
+    }
+  })
 
 </script>

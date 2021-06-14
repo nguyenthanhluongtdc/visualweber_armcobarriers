@@ -71,7 +71,6 @@
             success:function(response){
                     $('.tab-pane.active').html(response)
                     if(response){
-                        console.log(path)
                         window.history.pushState({}, '', path);
                     }
                 }

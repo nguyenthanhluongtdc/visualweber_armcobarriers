@@ -43,7 +43,7 @@ class GetProductService
             'max_price'   => $request->input('max_price'),
             'min_price'   => $request->input('min_price'),
             'sort_by'     => $request->input('sort-by'),
-            'num'         => $request->input('num') ? (int)$request->input('num') : 8,
+            'num'         => $request->input('num') ? (int)$request->input('num') : 6,
         ];
 
         //(int)theme_option('number_of_products_per_page',12)

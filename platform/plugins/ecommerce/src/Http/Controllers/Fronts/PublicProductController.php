@@ -104,14 +104,17 @@ class PublicProductController
      */
     public function getProducts(Request $request, GetProductService $productService)
     {
+        
+        $num = $request->num;
         $query = $request->get('q');
+        $viewSearch = false;
 
         $slug = SlugHelper::getSlug('products');
         $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
         $page = Arr::get($result, 'data.page');
 
         //
-        if ($query) {
+        if ($query && $viewSearch) {
             $products = $productService->getProduct($request);
 
             SeoHelper::setTitle(__('Search result "' . $query . '" '))
@@ -131,8 +134,11 @@ class PublicProductController
         SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
-
-        return Theme::scope('ecommerce.products', compact(['products','categories','page']),
+        if($request->ajax()){
+            return view('plugins/ecommerce::themes.box-product', compact('products','num'))->render();
+        }
+        
+        return Theme::scope('ecommerce.products', compact(['products','categories','page','query']),
             'plugins/ecommerce::themes.products')->render();
     }
 
@@ -299,6 +305,7 @@ class PublicProductController
         ProductCategoryInterface $categoryRepository,
         GetProductService $getProductService
     ) {
+        $num = $request->num;
         $slug = $this->slugRepository->getFirstBy([
             'key'            => $slug,
             'reference_type' => ProductCategory::class,
@@ -359,7 +366,9 @@ class PublicProductController
         $page = Arr::get($result, 'data.page');
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
-
+        if($request->ajax()){
+            return view('plugins/ecommerce::themes.box-product', compact('products','num'))->render();
+        }
         return Theme::scope('ecommerce.products', compact('categories','catego', 'products','page'),
             'plugins/ecommerce::themes.products')->render();
     }
