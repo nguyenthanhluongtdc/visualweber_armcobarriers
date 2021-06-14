@@ -108,12 +108,19 @@
                             </li>
                         </ul>
                         <form action="">
+                            @csrf
+                            {!! apply_filters(ECOMMERCE_PRODUCT_DETAIL_EXTRA_HTML, null) !!}
+                            <input type="hidden" name="product_is_out_of_stock"
+                                   value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock"/>
+                            <input type="hidden" name="id" id="hidden-product-id" value="{{ $originalProduct->id }}"/>
+                            
+                            </button>
                             <div class="input_field">
                                 <button class="minus">-</button>
-                                <input class="quantity" min="0" title="Quantity" name="qty" value="1" type="number">
+                                <input class="quantity" title="Quantity" name="qty" min="1" value="1" type="number">
                                 <button class="plus">+</button>
                             </div>
-                            <button class="add_to_cart">Add to cart</button>
+                            <button id="btn-add-cart" class="add_to_cart">Add to cart</button>
                         </form>
                     </div>
                 </div>
