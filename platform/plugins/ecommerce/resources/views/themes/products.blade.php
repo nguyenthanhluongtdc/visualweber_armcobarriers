@@ -115,8 +115,10 @@
                         <span class="down"></span>
                       </div>
                       <div class="custom_sort">
-                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
-                            <option value="">Sort by Featured</option>
+                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="featured">
+                            <option value="0">Select sort featured</option>
+                            <option value="1">Sort</option>
+                            <option value="0">Unsort</option>
                         </select>
                         <span class="down"></span>
                       </div>
@@ -151,17 +153,28 @@
 
   $(document).ready(function() {
     let path = "";
+    let num = '';
+    let query = '';
+    let featured = '';
+
     $("select[name='num']").on('change',function(){
-      
-      path = window.location.pathname;
+      num = $(this).val();
+      num = num!=0?`num=${num}`:'';
+      featured = $("select[name='featured']").val();
+      featured = featured!=0?`sort-by=featured`:'';
+      initPath(num, featured);
+      fetch_data(path);
+    })
 
-      let num = $(this).val();
-      num = num!=0?`?num=${num}`:'';
+    $("select[name='featured']").on('change',function(){
+      featured = $(this).val();
+      featured = featured!=0?`sort-by=featured`:'';
 
-      let query = "{{$query}}"
-      query = query!=""?`&q=${query}`:'';
+      num = $("select[name='num']").val();
+      num = num!=0?`num=${num}`:'';
+      initPath(num, featured);
 
-      path +=`${num}${query}`;
+      console.log(path)
 
       fetch_data(path);
     })
@@ -175,6 +188,19 @@
         }
       })
     }
+
+    function initPath(num, featured) {
+      query = "{{$query}}";
+      query = query!=""?`&q=${query}`:'';
+
+      path = window.location.pathname;
+      if(num!='' && featured!=''){
+        path +=`?${num}&${featured}${query}`;
+      }else {
+        path +=`?${num}${featured}${query}`;
+      }
+    }
+
   })
 
 </script>

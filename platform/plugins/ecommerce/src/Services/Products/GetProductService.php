@@ -65,6 +65,11 @@ class GetProductService
         }
 
         switch ($queryVar['sort_by']) {
+            case 'featured':
+                $orderBy = [
+                    'ec_products.is_featured' => 'desc',
+                ];
+                break;
             case 'date_asc':
                 $orderBy = [
                     'ec_products.created_at' => 'asc',

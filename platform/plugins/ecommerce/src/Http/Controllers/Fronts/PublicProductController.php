@@ -107,6 +107,7 @@ class PublicProductController
         
         $num = Arr::get($request,'num', 0);
         $query = Arr::get($request,'q', "");
+
         $viewSearch = false;
         $page = $this->getPage();
 
