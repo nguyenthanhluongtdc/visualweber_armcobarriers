@@ -29,11 +29,9 @@ class ArmcobarriersController extends PublicController
     /**
      * @return \Illuminate\Http\Response|Response
      */
-    public function __construct(Page $page){
-        $this->page=$page;
-    }
     public function getIndex()
     {
+
         SeoHelper::setTitle(theme_option('seo_title', 'Armcobarriers'))
             ->setDescription(theme_option('seo_description', 'Armcobarriers'))
             ->openGraph()
@@ -50,7 +48,7 @@ class ArmcobarriersController extends PublicController
 
             if ($homepageId) {
                 $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
-
+               
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
                     return Theme::scope('index', $data['data'], $data['default_view'])->render();
@@ -63,19 +61,6 @@ class ArmcobarriersController extends PublicController
         Theme::breadcrumb()->add(__('Home'), url('/'));
 
         event(RenderingHomePageEvent::class);
-
-        try{
-            $data = [];
-            $data['page'] = $this->page->where('id', 1)->first();
-            
-            return Theme::scope('index',$data)->render();
-            
-        }catch (\Throwable $throwAble) {
-            \Log::error('Có lỗi xảy ra thực hiện chức năng ' . __CLASS__ . '@' . __FUNCTION__, [$throwAble->getMessage()]);
-            return view('theme.main::views.500');
-        }
-
-        // return Theme::scope('index')->render();
     }
 
     /**
@@ -120,6 +105,7 @@ class ArmcobarriersController extends PublicController
         event(new RenderingSingleEvent($slug));
         Theme::layout('default');
        
+
         if (!empty($result) && is_array($result)) {
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
         }
@@ -140,7 +126,8 @@ class ArmcobarriersController extends PublicController
 
     public function getPosts() {
         
-        
+        $posts = Post::paginate(6);
+        return Theme::scope('news-all',compact('posts'))->render();
 
     }
 

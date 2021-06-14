@@ -130,7 +130,7 @@
         
         @else
         <li class="nav-link nav-item @if ($row->url == Request::url()) active current  @endif">
-            <a href="{{ $key==0 ? route('public.index') : $row->url  }}" class="nav__menu-link" target="{{ $row->target }}">
+            <a href="{{$row->url}}" class="nav__menu-link" target="{{ $row->target }}">
                 @if (!blank($row->icon_font))
                 <i class='{{ trim($row->icon_font) }}'></i>
                 @endif
