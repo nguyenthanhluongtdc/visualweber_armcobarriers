@@ -107,9 +107,8 @@
                                 <p> {{implode(", ",$tags)}} </p>
                             </li>
                         </ul>
-                        <form action="">
+                        <form class="add-to-cart-form" method="POST" action="{{ route('public.cart.add-to-cart') }}">
                             @csrf
-                            {!! apply_filters(ECOMMERCE_PRODUCT_DETAIL_EXTRA_HTML, null) !!}
                             <input type="hidden" name="product_is_out_of_stock"
                                    value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock"/>
                             <input type="hidden" name="id" id="hidden-product-id" value="{{ $originalProduct->id }}"/>
@@ -120,8 +119,19 @@
                                 <input class="quantity" title="Quantity" name="qty" min="1" value="1" type="number">
                                 <button class="plus">+</button>
                             </div>
-                            <button id="btn-add-cart" class="add_to_cart">Add to cart</button>
+                            <button id="btn-add-cart" class="add_to_cart btn btn-fill-out btn-addtocart" type="submit">Add to cart</button>
+
+                            <div class="success-message text-success text-center" style="display: none;">
+                                    <span></span>
+                            </div>
+                            <div class="error-message text-danger text-center" style="display: none;">
+                                <span></span>
+                            </div>
                         </form>
+                        
+                        <!----form---->
+                        <!---end form---->
+
                     </div>
                 </div>
             </div>
