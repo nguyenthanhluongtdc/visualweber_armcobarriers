@@ -9,7 +9,7 @@
                 @if ($paginator->onFirstPage())
                     <li class="disabled page-link-last"><span>← Prev</span></li>
                 @else
-                    <li class="page-link-last"><a href="{{ $paginator->previousPageUrl() }}&type={{$type}}&order={{$order}}" rel="prev">← Prev</a></li>
+                    <li class="page-link-last"><a href="{{ $paginator->previousPageUrl() }}&cate={{$cate}}&order={{$order}}" rel="prev">← Prev</a></li>
                 @endif
 
                 @foreach ($elements as $element)
@@ -24,7 +24,7 @@
                                 <li class="active page-item"><span class="page-link">{{ $page }}</span></li>
                             @else
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $url }}&type={{$type}}&order={{$order}}">{{ $page }}</a>
+                                    <a class="page-link" href="{{ $url }}&cate={{$cate}}&order={{$order}}">{{ $page }}</a>
                                 </li>
                             @endif
                         @endforeach
@@ -32,7 +32,7 @@
                 @endforeach
 
                 @if ($paginator->hasMorePages())
-                    <li class="page-link-last"><a href="{{ $paginator->nextPageUrl() }}&type={{$type}}&order={{$order}}" rel="next">Next →</a></li>
+                    <li class="page-link-last"><a href="{{ $paginator->nextPageUrl() }}&cate={{$cate}}&order={{$order}}" rel="next">Next →</a></li>
                 @else
                     <li class="page-link-last disabled">
                         <span> Next → </span>

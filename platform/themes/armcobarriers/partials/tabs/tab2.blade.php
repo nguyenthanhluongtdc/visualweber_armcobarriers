@@ -19,4 +19,4 @@
         </div>
     </div>
 </div>
-{!! $tabs->links('vendor.pagination.tabs-custom',['type' => $categoryId, 'order'=>2]) !!}
+{!! $tabs->links('vendor.pagination.tabs-custom',['cate' => $categoryId, 'order'=>2]) !!}
