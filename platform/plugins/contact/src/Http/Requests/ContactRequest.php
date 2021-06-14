@@ -18,15 +18,15 @@ class ContactRequest extends Request
         if (setting('enable_captcha') && is_plugin_active('captcha')) {
             return [
                 'name'                 => 'required',
-                'email'                => 'required|email',
-                'content'              => 'required',
-                'g-recaptcha-response' => 'required|captcha',
+                // 'email'                => 'required|email',
+                // 'content'              => 'required',
+                // 'g-recaptcha-response' => 'required|captcha',
             ];
         }
         return [
             'name'    => 'required',
-            'email'   => 'required|email',
-            'content' => 'required',
+            // 'email'   => 'required|email',
+            // 'content' => 'required',
         ];
     }
 

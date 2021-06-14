@@ -298,9 +298,65 @@
             }
         } 
     } 
+
+    .service-detail-banner{
+        height: 350px;
+        margin-top: 5px;
+    }
+    .service-detail-banner::before{
+        height: 350px;
+    }
+    .service_detail-imglist .item_img{
+        height: 250px;
+    }
+}
+@media(max-width : 768px){
+    .wrap-product-quality h3{
+        height: 110px;
+    }
+    .service_detail-content .item{
+        width: 100%;
+    }
+    .service_detail-imglist .item_img:first-child, .service_detail-imglist .item_img:nth-child(4), .service_detail-imglist .item_img:nth-child(5), .service_detail-imglist .item_img:nth-child(8){
+        width: 49%;
+    }
+    .service_detail-imglist .item_img:nth-child(2), .service_detail-imglist .item_img:nth-child(3), .service_detail-imglist .item_img:nth-child(6), .service_detail-imglist .item_img:nth-child(7){
+        width: 49%;
+    }
 }
 @media(max-width:640px)
 {
+    .service-detail-banner{
+        background: black;
+        height: auto;
+        .left{
+            width: 100%;
+            padding: 50px 20px;
+        }
+        .right{
+            width: 0px;
+        }
+    }
+    .service-detail-banner::before{
+        display: none;
+    }
+    .service_detail-imglist .item_img{
+        height: 190px;
+        
+    }
+    .service_detail-imglist .item_img h5{
+        font-size: 15px;
+    }
+    .item_img_sv{
+        margin-bottom: 15px;
+
+    }
+    .wrap-product-quality h3{
+        height: auto;
+    }
+    .wrap-product-quality h3:hover{
+        padding: 10px;
+    }
     .wrap-pic{
         .re-pow {
             .powder,.request{
@@ -319,6 +375,12 @@
     } 
 }
 @media(max-width:480px) {
+    .service_detail-imglist .item_img:first-child, .service_detail-imglist .item_img:nth-child(4), .service_detail-imglist .item_img:nth-child(5), .service_detail-imglist .item_img:nth-child(8){
+        width: 100%;
+    }
+    .service_detail-imglist .item_img:nth-child(2), .service_detail-imglist .item_img:nth-child(3), .service_detail-imglist .item_img:nth-child(6), .service_detail-imglist .item_img:nth-child(7){
+        width: 100%;
+    }
     .wrap-product-quality
     {
         .product-quality{
