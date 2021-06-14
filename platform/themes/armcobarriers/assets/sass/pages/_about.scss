@@ -302,6 +302,10 @@
                 align-items: center;
                 justify-content: space-between;
                 padding-right: 20px;
+                flex-wrap: wrap;
+                .alert{
+                    width: 100%;
+                }
                 .contact-form-group{
                     width: 25%;
                 }
@@ -392,6 +396,27 @@
 
 @media(max-width:991px)
 {   
+    .wrap-sign .info-me .form_sign .contact-form-group{
+    width: 100%;
+
+}
+.wrap-sign .info-me input{
+    margin-left: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+.wrap-sign .info-me .form_sign .submit-form{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-items: center;
+    margin-top: 20px;
+    width: 50%;
+}
+.wrap-sign .info-me button{
+    padding: 15px;
+    font-size: 17px;
+}
     .wrap-top .cont2 h1 {
         font-size: $rem2-5;
     }
