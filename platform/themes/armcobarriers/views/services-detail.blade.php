@@ -109,7 +109,7 @@
                     <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="/product">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>
