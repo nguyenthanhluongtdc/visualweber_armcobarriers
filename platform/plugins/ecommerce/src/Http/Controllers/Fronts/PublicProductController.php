@@ -108,10 +108,7 @@ class PublicProductController
         $num = Arr::get($request,'num', 0);
         $query = Arr::get($request,'q', "");
         $viewSearch = false;
-
-        $slug = SlugHelper::getSlug('our-products');
-        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
-        $page = Arr::get($result, 'data.page');
+        $page = $this->getPage();
 
         //
         if ($query && $viewSearch) {
@@ -356,14 +353,9 @@ class PublicProductController
             ->add($category->name, $category->url);
 
         $id = $category->id;
-
         $categories = ProductCategory::all();
-
         $catego = $category;
-
-        $slug = SlugHelper::getSlug('our-products');
-        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
-        $page = Arr::get($result, 'data.page');
+        $page = $this->getPage();
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
         if($request->ajax()){
@@ -572,5 +564,15 @@ class PublicProductController
 
         return Theme::scope('ecommerce.order-tracking', compact('order'),
             'plugins/ecommerce::themes.order-tracking')->render();
+    }
+
+    public function getPage(){
+
+        $pathname = SlugHelper::getPrefix(Product::class, 'products');
+        $slug = SlugHelper::getSlug($pathname);
+        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
+        $page = Arr::get($result, 'data.page');
+
+        return $page;
     }
 }
