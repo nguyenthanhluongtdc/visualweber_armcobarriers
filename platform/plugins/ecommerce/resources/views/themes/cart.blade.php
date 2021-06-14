@@ -93,7 +93,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="product-subtotal" data-title="Total">{{ format_price($cartItem->price * $cartItem->qty) }}</td>
-                                                <td class="product-remove" data-title="Remove"><a href="{{ route('public.cart.remove', $cartItem->rowId) }}" class="remove-cart-button"><i class="ti-close"></i></a></td>
+                                                <td class="product-remove" data-title="Remove"><a href="{{ route('public.cart.remove', $cartItem->rowId) }}" class="remove-cart-button"><i class="fal fa-trash-alt"></i></a></td>
                                             </tr>
                                         @endif
                                     @endforeach

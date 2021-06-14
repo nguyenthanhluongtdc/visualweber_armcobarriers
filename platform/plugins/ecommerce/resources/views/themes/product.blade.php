@@ -92,13 +92,13 @@
                                 <p>Price</p>
 
                                 @if ($originalProduct->front_sale_price !== $originalProduct->price)
-                                    <del>{{ human_price_text($originalProduct->front_sale_price, "$") }}</del>
+                                    <del>{{ format_price($originalProduct->front_sale_price) }}</del>
                                     <p>
-                                        {{ human_price_text($originalProduct->front_sale_price, "$") }}
+                                        {{ format_price($originalProduct->front_sale_price) }}
                                     </p>
                                 @else
                                     <p>
-                                        {{ human_price_text($originalProduct->price, "$")}}
+                                        {{ format_price($originalProduct->price)}}
                                     </p>
                                 @endif
                             </li>
