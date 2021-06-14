@@ -23,6 +23,7 @@ use Platform\Blog\Services\BlogService;
 use Platform\Service\Models\Service;
 use Illuminate\Http\Request;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
+use BaseHelper;
 
 class ArmcobarriersController extends PublicController
 {
@@ -123,8 +124,11 @@ class ArmcobarriersController extends PublicController
         event(new RenderingSingleEvent($slug));
         Theme::layout('default');
        
-
         if (!empty($result) && is_array($result)) {
+            if(BaseHelper::isHomepage(Arr::get($result, 'data.page')->id)) {
+                return Theme::scope('index', $result['data'], Arr::get($result, 'default_view'))->render()
+            }
+
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
         }
 
