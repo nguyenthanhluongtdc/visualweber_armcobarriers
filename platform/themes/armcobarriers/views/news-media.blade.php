@@ -10,7 +10,7 @@
                     @foreach(get_posts_by_category(17,3) as $event)
                         <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                             <div class="item">
-                                <a href="/news-detail">
+                                <a href="{{$event->url}}">
                                     <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
                                     <h3>
                                         {{$event->name}}

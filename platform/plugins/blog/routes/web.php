@@ -66,6 +66,11 @@ Route::group(['namespace' => 'Platform\Blog\Http\Controllers', 'middleware' => [
                 'uses' => 'PublicController@getTag',
             ]);
 
+            Route::get(SlugHelper::getPrefix(Post::class), [
+                'as'   => 'public.posts',
+                'uses' => 'PublicController@getAllPosts',
+            ]);
+
             if (SlugHelper::getPrefix(Post::class)) {
                 Route::get(SlugHelper::getPrefix(Post::class) . '/{slug}', [
                     'uses' => 'PublicController@getPost',

@@ -65,6 +65,10 @@ class PublicController extends Controller
      * @param BlogService $blogService
      * @return \Illuminate\Http\RedirectResponse|Response
      */
+    public function getAllPosts() {
+        $posts = Post::paginate(6);
+        return Theme::scope('news-all',compact('posts'))->render();
+    }
     public function getPost($slug, BlogService $blogService)
     {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Post::class));

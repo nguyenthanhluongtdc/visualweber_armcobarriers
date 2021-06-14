@@ -11,7 +11,7 @@
                         </a>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                        <h5> <a href="{{$post->slug}}"> {{$post->name}} </a> </h5>
+                        <h5> <a href="{{$post->url}}"> {{$post->name}} </a> </h5>
                         <div class="date"> {{$post->created_at->format('j F Y')}} </div>
                         <p class="des">
                             {{$post->description}} 

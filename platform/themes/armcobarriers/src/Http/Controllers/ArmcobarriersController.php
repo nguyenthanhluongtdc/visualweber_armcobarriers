@@ -144,8 +144,7 @@ class ArmcobarriersController extends PublicController
 
     public function getPosts() {
         
-        $posts = Post::paginate(6);
-        return Theme::scope('news-all',compact('posts'))->render();
+        
 
     }
 
