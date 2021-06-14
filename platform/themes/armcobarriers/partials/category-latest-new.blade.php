@@ -1,4 +1,4 @@
-<h1> Lastest <br> New & Events </h1>
+<h1> Lastest <br> New & {{$menu_nodes[0]->title}} </h1>
 <div class="box-media pt-5 pb-lg-5">
     <div class="content">
         <div class="row">
