@@ -37,9 +37,14 @@
             </a>
           </li>
           <li>
-            <a href="">
-                <i class="fal fa-user"></i>
-            </a>
+            <ul class="header_list">
+                @if (!auth('customer')->check())
+                    <li><a href="{{ route('customer.login') }}"><span><i class="fal fa-user"></i></span></a></li>
+                @else
+                    <li class="img-user"><a href="{{ route('customer.overview') }}"><img class="br2" src="{{ auth('customer')->user()->avatar_url }}" alt="{{ auth('customer')->user()->name }}" ></a></li>
+                    <li class="logout"><a href="{{ route('customer.logout') }}"><span>{{ __('Logout') }}</span></a></li>
+                @endif
+            </ul>
           </li>
           <li>
             <a href="">
