@@ -1,37 +1,22 @@
 <?php
 
 theme_option()
-    ->setField([
-            'id' => 'infofooter',
-            'section_id' => 'opt-text-subsection-section-id',
-            'type' => 'editor',
-            'label' => __('Info'),
-            'attributes' => [
-                'name' => 'info',
-                'value' => null, // Default value
-                'options' => [ // Optional
-                    'class' => 'form-control theme-option-textarea',
-                    'row' => '10',
-                ],
-            ],
-            'helper' => __('Info on footer'),
-    ])
-    ->setField([
-        'id'         => 'copyright',
-        'section_id' => 'opt-text-subsection-general',
-        'type'       => 'text',
-        'label'      => __('Copyright'),
-        'attributes' => [
-            'name'    => 'copyright',
-            'value'   => '© 2021 Laravel Technologies. All right reserved.',
-            'options' => [
-                'class'        => 'form-control',
-                'placeholder'  => __('Change copyright'),
-                'data-counter' => 250,
-            ],
-        ],
-        'helper'     => __('Copyright on footer of site'),
-    ])
+    // ->setField([
+    //     'id'         => 'copyright',
+    //     'section_id' => 'opt-text-subsection-general',
+    //     'type'       => 'text',
+    //     'label'      => __('Copyright'),
+    //     'attributes' => [
+    //         'name'    => 'copyright',
+    //         'value'   => '© 2021 Laravel Technologies. All right reserved.',
+    //         'options' => [
+    //             'class'        => 'form-control',
+    //             'placeholder'  => __('Change copyright'),
+    //             'data-counter' => 250,
+    //         ],
+    //     ],
+    //     'helper'     => __('Copyright on footer of site'),
+    // ])
     ->setField([
         'id'         => 'primary_font',
         'section_id' => 'opt-text-subsection-general',
@@ -65,6 +50,21 @@ theme_option()
             ]
         ],
     ])
+    ->setField([
+        'id'         => 'hotline',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'text',
+        'label'      => 'Hotline',
+        'attributes' => [
+            'name'  => 'hotline',
+            'value' => null,
+            'options' => [
+                            'class'       => 'form-control',
+                            'placeholder'  => __('enter hotline...')
+                        ],
+        ],
+        'helper' => __('hotline'),
+    ])
     ->setSection([ // Set section with no field
         'title' => __('Footer infomation'),
         'desc' => __('Footer infomation'),
@@ -88,7 +88,7 @@ theme_option()
         'id'         => 'footer-title',
         'section_id' => 'footer_left',
         'type'       => 'text',
-        'label'      => 'Footer-Title',
+        'label'      => 'Footer Title',
         'attributes' => [
             'name'  => 'footer-title',
             'value' => null,

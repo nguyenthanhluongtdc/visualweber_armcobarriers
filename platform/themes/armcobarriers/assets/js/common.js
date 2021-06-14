@@ -29,7 +29,6 @@ $('#nav-bar-dropdown').hover(function(e) {
 
     const elementOverLay = $('.overlay_background')
     if (!elementOverLay) return
-    elementOverLay.css('display', 'block')
     element.hasClass('is-show') ? elementOverLay.css('display', 'block') : elementOverLay.css('display', 'none')
 });
 
@@ -107,6 +106,7 @@ var swiper_gallery = new Swiper(".Swiper-Gallery", {
     // },
     pagination: {
         el: ".swiper-pagination",
+
     },
     navigation: {
         nextEl: ".swiper-button-next",
