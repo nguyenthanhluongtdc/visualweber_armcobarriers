@@ -1,5 +1,6 @@
 @php Theme::set('pageName', __('Shopping Cart')); $crossSellProducts = []; @endphp
 
+@includeIf("theme.armcobarriers::views.components.breadcrumb");
 <div class="section">
     <div class="container">
         @if (Cart::instance('cart')->count() > 0)

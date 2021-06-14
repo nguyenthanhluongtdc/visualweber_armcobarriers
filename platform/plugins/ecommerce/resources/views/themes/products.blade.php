@@ -152,11 +152,17 @@
   $(document).ready(function() {
     let path = "";
     $("select[name='num']").on('change',function(){
+      
       path = window.location.pathname;
+
       let num = $(this).val();
+      num = num!=0?`?num=${num}`:'';
+
       let query = "{{$query}}"
       query = query!=""?`&q=${query}`:'';
-      path +=`?num=${num}${query}`;
+
+      path +=`${num}${query}`;
+
       fetch_data(path);
     })
 
