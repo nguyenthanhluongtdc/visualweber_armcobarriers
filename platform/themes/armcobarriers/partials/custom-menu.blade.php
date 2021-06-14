@@ -31,9 +31,9 @@
             
           </li>
           <li>   
-            <a href="">
+            <a href="{{route('public.cart')}}">
                 <i class="fal fa-shopping-cart"></i>
-                <span class="header__cart-notice">0</span>
+                <span class="header__cart-notice"> {{Cart::instance('cart')->count()}} </span>
             </a>
           </li>
           <li>
