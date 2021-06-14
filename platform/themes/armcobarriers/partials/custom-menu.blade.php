@@ -11,15 +11,15 @@
             </div>
         </form>
     </div>
-    <a href="/" class="logo__link">
+    <a href="{{route('public.index')}}" class="logo__link">
         
-        <img src="{{ Theme::asset()->url('images/header/logo.png') }}" alt="">
+        <img src="{{ RvMedia::getImageUrl(theme_option('logo')) }}" alt="">
     </a>
     
     <div class="toolbar-mobile">
       <ul class="list-tool">
           <li>
-            <a href="tel:1800 808 619">
+            <a href="{{theme_option('hotline')}}">
                 <i class="fas fa-phone-alt"></i>
            
             </a>
