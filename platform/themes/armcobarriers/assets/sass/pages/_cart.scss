@@ -3,3 +3,23 @@ button.btn.btn-fill-out, button.btn-line-fill {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.product-quantity {
+    .quantity {
+        display: flex;
+
+        input {
+            border: 1px solid #ccc;
+        }
+
+        input[type=button] {
+            width: 40px;
+            background-color: transparent;
+           
+        }
+    
+        input[type=text] {
+            text-align: center;
+        }
+    }
+}
