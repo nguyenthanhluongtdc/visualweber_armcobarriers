@@ -277,9 +277,9 @@
                             </div>
                            </div>
                            <div class="search_content">
-                            <form method="get" action="">
+                            <form action="{{ route('public.products') }}" method="GET">
                                 <div class="search-box input-group">
-                                    <input type="text" name="query" value="" aria-label="Search" class="" placeholder="Search">
+                                    <input class="" name="q" value="{{ request()->input('q') }}" placeholder="{{ __('Search Product') }}..." required  type="text">
                                     <div class="input-group-append">
                                         <button class="btn btn-secondary" type="submit">
                                             <i class="fa fa-search"></i>
