@@ -62,8 +62,10 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
     /**
      * {@inheritDoc}
      */
-    public function getByCategory($categoryId, $paginate = 12, $limit = 0)
+    public function getByCategory($categoryId, $paginate = 12, $limit = 0, $refresh = true)
     {
+        
+
         if (!is_array($categoryId)) {
             $categoryId = [$categoryId];
         }
@@ -77,6 +79,11 @@ class PostRepository extends RepositoriesAbstract implements PostInterface
             ->distinct()
             ->with('slugable')
             ->orderBy('posts.created_at', 'desc');
+
+
+        if(!$refresh && $paginate!=0){
+            return $this->applyBeforeExecuteQuery($data)->paginate($paginate, ['*'], 'page', 1);
+        }
 
         if ($paginate != 0) {
             return $this->applyBeforeExecuteQuery($data)->paginate($paginate);

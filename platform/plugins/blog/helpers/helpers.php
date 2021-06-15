@@ -62,9 +62,9 @@ if (!function_exists('get_posts_by_category')) {
      * @param int $limit
      * @return \Illuminate\Support\Collection
      */
-    function get_posts_by_category($categoryId, $paginate = 12, $limit = 0)
+    function get_posts_by_category($categoryId, $paginate = 12, $limit = 0, $refresh = true)
     {
-        return app(PostInterface::class)->getByCategory($categoryId, $paginate, $limit);
+        return app(PostInterface::class)->getByCategory($categoryId, $paginate, $limit, $refresh);
     }
 }
 
