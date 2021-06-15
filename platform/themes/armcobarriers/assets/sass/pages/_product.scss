@@ -142,7 +142,8 @@
                     font-size: 16px;
                     font-family: $Arial;
                     width: 100%;
-                    color: $gray_text;
+                    color: $gray_text !important;
+                    -webkit-text-fill-color: $gray-text !important;
                     height: 100%;
                     background-color: transparent;
                     padding-left: 20px;
@@ -194,7 +195,9 @@
             position: relative;
             select {
                 padding: 0;
+                color: $gray-text;
                 margin-right: 10px;
+                font-size: 16px;
                 &::after {
                     font-size: 1rem;
                     top: 10px;

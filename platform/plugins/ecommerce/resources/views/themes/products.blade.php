@@ -35,7 +35,7 @@
 ])--}}
        
 @if(!isset($catego))
-@php $catego = []; @endphp
+  @php $catego = []; @endphp
 @endif
 
 @if(isset($page))
@@ -45,6 +45,8 @@
     $query = isset($query) ? $query : "";
   @endphp
 @endif
+
+@php $number_select = 10; @endphp
 
 @php Theme::layout('default') @endphp
 <section>
@@ -99,25 +101,18 @@
                         </form>
                       </div>
                       <div class="custom_select">
-                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="num">
+                        <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" value="2" name="num">
                             <option value="">Showing 1 - 10 of 10 products</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
+                            @for($i = 1; $i <= $number_select; $i++)
+                            <option value="{{$i}}" <?php if($num==$i){echo "selected";} ?> >{{$i}}</option>
+                            @endfor
                         </select>
                         <span class="down"></span>
                       </div>
                       <div class="custom_sort">
                         <select class="down form-control form-control-sm submit-form-on-change first_null not_chosen" name="featured">
                             <option value="0">Select sort featured</option>
-                            <option value="1">Sort</option>
+                            <option value="1" class="sort">Sort</option>
                             <option value="0">Unsort</option>
                         </select>
                         <span class="down"></span>
@@ -174,8 +169,6 @@
       num = num!=0?`num=${num}`:'';
       initPath(num, featured);
 
-      console.log(path)
-
       fetch_data(path);
     })
 
@@ -199,6 +192,11 @@
       }else {
         path +=`?${num}${featured}${query}`;
       }
+    }
+
+    let sort_featured = window.location.href.split('sort-by')[1];
+    if(sort_featured!=undefined){
+      $("select[name='featured'] .sort").prop("selected",true);
     }
 
   })
