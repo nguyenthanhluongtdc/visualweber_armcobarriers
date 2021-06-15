@@ -92,7 +92,7 @@
                     <div class="product-filter justify-content-lg-end">
                       <div class="product_filter--search">
                         <form action="{{route('public.products')}}" method="GET" class="form__search">
-                          <input type="text" class="header__search-input form-control form-control-sm submit-form-on-change first_null not_chosen"  placeholder="Search Product" name="q"/>
+                          <input type="text" class="header__search-input form-control form-control-sm submit-form-on-change first_null not_chosen"  placeholder="{{$query!=''?$query:'Search Product'}}" name="q"/>
                           <button class="btn btn-secondary" type="submit">
                               <i class="fas fa-search"></i>
                           </button>

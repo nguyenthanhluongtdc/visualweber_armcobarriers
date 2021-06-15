@@ -101,10 +101,10 @@
                                 <a class="add_wishlist js-add-to-wishlist-button" href="{{ route('public.wishlist.add', $product->id) }}"><i class="icon-heart"></i></a>
                             </div>
                             <br>
-                            <div class="success-message text-success" style="display: none;">
+                            <div class="newsletter-success-message success-message text-success" style="display: none;">
                                 <span></span>
                             </div>
-                            <div class="error-message text-danger" style="display: none;">
+                            <div class="newsletter-error-message error-message text-danger" style="display: none;">
                                 <span></span>
                             </div>
                         </form>
