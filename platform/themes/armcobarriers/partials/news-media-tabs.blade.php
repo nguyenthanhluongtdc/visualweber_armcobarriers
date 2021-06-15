@@ -8,7 +8,7 @@
         @foreach($menu_nodes as $key => $row)
             <li class="item">
                  <a class="nav-link {{$key==0?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
-                        {{ $row->title }}
+                    {{ $row->title }}
                 </a>
             </li>
         @endforeach

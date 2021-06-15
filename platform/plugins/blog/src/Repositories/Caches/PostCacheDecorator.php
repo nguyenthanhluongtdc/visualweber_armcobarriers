@@ -79,6 +79,14 @@ class PostCacheDecorator extends CacheAbstractDecorator implements PostInterface
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
 
+     /**
+     * {@inheritDoc}
+     */
+    public function getByCategoryUnpaginate($categoryId, $limit = 3)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
     /**
      * {@inheritDoc}
      */

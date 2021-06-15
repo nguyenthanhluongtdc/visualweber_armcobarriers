@@ -68,6 +68,19 @@ if (!function_exists('get_posts_by_category')) {
     }
 }
 
+if (!function_exists('get_posts_by_category_unpaginate')) {
+    /**
+     * @param int $categoryId
+     * @param int $paginate
+     * @param int $limit
+     * @return \Illuminate\Support\Collection
+     */
+    function get_posts_by_category_unpaginate($categoryId, $limit = 3)
+    {
+        return app(PostInterface::class)->getByCategoryUnpaginate($categoryId, $limit);
+    }
+}
+
 if (!function_exists('get_posts_by_tag')) {
     /**
      * @param string $slug

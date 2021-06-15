@@ -43,6 +43,13 @@ interface PostInterface extends RepositoryInterface
      */
     public function getByUserId($authorId, $limit = 6);
 
+     /**
+     * @param int $categoryId
+     * @param int $limit
+     * @return mixed
+     */
+    public function getByCategoryUnpaginate($categoryId, $limit);
+
     /**
      * @return mixed
      */
