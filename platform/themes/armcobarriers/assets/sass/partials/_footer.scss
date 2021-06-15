@@ -68,6 +68,9 @@
                 .connect-us {
                     .widget {
                         display: unset;
+                        li {
+                            width: 100%;
+                        }
                     }
                 }
             }

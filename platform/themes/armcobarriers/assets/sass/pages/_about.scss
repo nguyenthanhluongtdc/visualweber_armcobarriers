@@ -1,100 +1,106 @@
-.wrap-top{
+.wrap-top {
     padding-bottom: 20px;
-    .cont2{
+    .cont2 {
         padding-bottom: 60px;
-        h1{
+        h1 {
             color: #000000;
             font-size: 40px;
             font-family: $FolioStd-Bold;
         }
-        h2{
+        h2 {
             color: #000000;
             font-size: 20px;
             font-family: $Arial;
             font-weight: bold;
         }
     }
-    .cont3{
-        a:nth-child(1){
+    .cont3 {
+        a:nth-child(1) {
             padding-right: 40px;
             font-size: 17px;
             font-family: $Arial;
             font-weight: bold;
             color: #000;
-            }
-        a:nth-child(2){
+        }
+        a:nth-child(2) {
             padding-right: 40px;
             font-size: 17px;
             font-family: $Arial;
-            color:#000;
-                }
+            color: #000;
+        }
     }
 }
-.nav-tabs{
+
+.nav-tabs {
     border-bottom: none;
-   .nav-link{
-       transition: 0.3;
-       padding:0px 25px 0px 0px;
-       color:#000000;
-       font-size: 17px !important;
-       font-family: $Arial;
-       padding-bottom: 20px;
-       border: 0px;
-   }
-   .nav-link.active{
-       color:#000000;
-       font-weight: bold;
-   }
-} 
-.wrap-cont{
-        position: relative;
-        height: 460px;
-       .content-about{
-            span{
+    .nav-link {
+        transition: 0.3;
+        padding: 0px 25px 0px 0px;
+        color: #000000;
+        font-size: 17px !important;
+        font-family: $Arial;
+        padding-bottom: 20px;
+        border: 0px;
+    }
+    .nav-link.active {
+        color: #000000;
+        font-weight: bold;
+    }
+}
+
+.wrap-cont {
+    position: relative;
+    height: 460px;
+    .content-about {
+        span {
             font-size: 17px;
             font-family: $Arial;
         }
     }
 }
 
-.wrap-product{
-    .wrap1{
-        .innovation,.design,.competitive,.availability,.australian,.warranty{
+.wrap-product {
+    .wrap1 {
+        .innovation,
+        .design,
+        .competitive,
+        .availability,
+        .australian,
+        .warranty {
             padding-bottom: 5%;
             padding-right: 4%;
-            h3{
+            h3 {
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
                 padding-bottom: 5%;
-            } 
-            p{
+            }
+            p {
                 font-size: 15px;
                 font-family: $Arial;
                 padding-bottom: 4%;
             }
-    
-         }
-         .installation,.quality{
-            h3{
+        }
+        .installation,
+        .quality {
+            h3 {
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
                 padding-bottom: 5%;
-            } 
-            p{
+            }
+            p {
                 font-size: 15px;
                 font-family: $Arial;
                 padding-bottom: 4%;
             }
-
-         }
+        }
     }
-    .wrap2{
+    .wrap2 {
         display: flex;
-        .icon{
+        .icon {
             padding: 10px 40px 0px 0px;
         }
-        .view{
-            a{ 
+        .view {
+            a {
                 padding-bottom: 12px;
                 border-bottom: 1px solid #000000;
                 font-size: 20px;
@@ -103,290 +109,291 @@
             }
         }
     }
-    .whatwedo{
+    .whatwedo {
         padding: 3% 0px;
-        h2{
-            color:#000000;
+        h2 {
+            color: #000000;
             font-family: $FolioStd-Bold;
             font-size: 40px;
-        
         }
     }
 }
-.hero{
-    img{
+
+.hero {
+    img {
         max-width: 100%;
     }
-
     padding:60px 0px 80px;
 }
-.wrap-bot{
-    .bot2{
+
+.wrap-bot {
+    .bot2 {
         border-bottom: 1px ridge #E1E1E1;
         padding-bottom: 60px;
-        .product2,.product1,.product0{
+        .product2,
+        .product1,
+        .product0 {
             padding-bottom: 40px;
-            img{
+            img {
                 padding-bottom: 25px;
                 width: 98%;
             }
-            h3{
+            h3 {
                 padding-bottom: 25px;
                 font-size: 20px;
                 font-family: $FolioStd-Medium;
             }
-            p{
+            p {
                 font-size: 15px;
                 font-family: $Arial;
             }
         }
     }
-    .bot1{
+    .bot1 {
         padding: 20px 0px 80px;
-        .slogan{
-            p{
+        .slogan {
+            p {
                 font-size: 17px;
-            font-family: $Arial;
+                font-family: $Arial;
             }
         }
-        .product-quality{
-            h2{
-                color:#000000;
+        .product-quality {
+            h2 {
+                color: #000000;
                 font-size: 40px;
                 font-family: $FolioStd-Bold;
             }
         }
     }
 }
-.count{
+
+.count {
     padding-top: 30px;
     display: flex;
-    .count-customers{
+    .count-customers {
         p {
-            text-decoration: none; 
-            position: relative; 
+            text-decoration: none;
+            position: relative;
             padding-bottom: 40px;
             font-size: 20px;
             font-family: $Arial;
-          }   
-     
-         p:after {
-             position: absolute;
-             content: '';
-             height: 10px;
-             bottom: -4px; 
-             left:0px;  
-               left: 0;
-             right: 0;
-               width: 30%;
-               background: $priamry_color;
-               -o-transition:.5s;
-                 -ms-transition:.5s;
-             -moz-transition:.5s;
-             -webkit-transition:.5s;
-             transition:.5s;
-         }
-            p:hover:after {
-               width: 60%;
-               background: $priamry_color;
-         }
-        h2{
-           padding-right:180px;
-           font-size: 60px;
-           font-family: $FolioStd-Bold;
+        }
+        p:after {
+            position: absolute;
+            content: '';
+            height: 10px;
+            bottom: -4px;
+            left: 0px;
+            left: 0;
+            right: 0;
+            width: 30%;
+            background: $priamry_color;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+        p:hover:after {
+            width: 60%;
+            background: $priamry_color;
+        }
+        h2 {
+            padding-right: 180px;
+            font-size: 60px;
+            font-family: $FolioStd-Bold;
         }
     }
-    .count-completed{
-        h2{
-            padding-right:130px ;
+    .count-completed {
+        h2 {
+            padding-right: 130px;
             font-size: 60px;
             font-family: $FolioStd-Bold;
-         }
-         p {
-            text-decoration: none; 
-            position: relative; 
-            padding-bottom: 40px;
-            font-size: 20px;
-            font-family: $Arial;
-          }   
-     
-         p:after {
-             position: absolute;
-             content: '';
-             height: 10px;
-             bottom: -4px; 
-             left:0px;  
-               left: 0;
-             right: 0;
-               width: 30%;
-               background: $priamry_color;
-             -o-transition:.5s;
-             -ms-transition:.5s;
-             -moz-transition:.5s;
-             -webkit-transition:.5s;
-             transition:.5s;
-         }
-            p:hover:after {
-               width: 60%;
-               background: $priamry_color;
-         }
-    }
-    .count-kilomet{
+        }
         p {
-            text-decoration: none; 
-            position: relative; 
+            text-decoration: none;
+            position: relative;
             padding-bottom: 40px;
             font-size: 20px;
             font-family: $Arial;
-          }   
-     
-         p:after {
-             position: absolute;
-             content: '';
-             height: 10px;
-             bottom: -4px; 
-             left:0px;  
-               left: 0;
-             right: 0;
-               width: 30%;
-               background: $priamry_color;
-               -o-transition:.5s;
-                 -ms-transition:.5s;
-             -moz-transition:.5s;
-             -webkit-transition:.5s;
-             transition:.5s;
-         }
-            p:hover:after {
-               width: 60%;
-               background: $priamry_color;
-         }
-        h2{
+        }
+        p:after {
+            position: absolute;
+            content: '';
+            height: 10px;
+            bottom: -4px;
+            left: 0px;
+            left: 0;
+            right: 0;
+            width: 30%;
+            background: $priamry_color;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+        p:hover:after {
+            width: 60%;
+            background: $priamry_color;
+        }
+    }
+    .count-kilomet {
+        p {
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 40px;
+            font-size: 20px;
+            font-family: $Arial;
+        }
+        p:after {
+            position: absolute;
+            content: '';
+            height: 10px;
+            bottom: -4px;
+            left: 0px;
+            left: 0;
+            right: 0;
+            width: 30%;
+            background: $priamry_color;
+            -o-transition: .5s;
+            -ms-transition: .5s;
+            -moz-transition: .5s;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+        p:hover:after {
+            width: 60%;
+            background: $priamry_color;
+        }
+        h2 {
             font-size: 60px;
             font-family: $FolioStd-Bold;
-         }
-         p{
-            a{
-            font-size: 20px;
-            font-family: $Arial;
-            border-bottom: $priamry_color 10px solid;
-            width: 54%;
-            padding-bottom: 40px;
+        }
+        p {
+            a {
+                font-size: 20px;
+                font-family: $Arial;
+                border-bottom: $priamry_color 10px solid;
+                width: 54%;
+                padding-bottom: 40px;
             }
-        }   
+        }
     }
 }
-.experience{
-    padding:3% 0;
-    .exp{
-        p{
+
+.experience {
+    padding: 3% 0;
+    .exp {
+        p {
             font-size: 15px;
             font-family: $Arial;
         }
     }
 }
-.wrap-sign{
-        .sign-up{
-            p{
-                font-size: 20px;
-                font-family: $FolioStd-Medium;
+
+.wrap-sign {
+    .sign-up {
+        p {
+            font-size: 20px;
+            font-family: $FolioStd-Medium;
+        }
+        h3 {
+            font-size: 30px;
+            font-family: $FolioStd-Bold;
+        }
+    }
+    .info-me {
+        padding-right: 30px;
+        .form_sign {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 20px;
+            flex-wrap: wrap;
+            .alert {
+                width: 100%;
             }
-            h3{
-                font-size: 30px;
-                font-family: $FolioStd-Bold;
+            .contact-form-group {
+                width: 25%;
+            }
+            .submit-form {
+                width: 20%;
             }
         }
-        .info-me{
-            padding-right: 30px;
-            .form_sign{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding-right: 20px;
-                flex-wrap: wrap;
-                .alert{
-                    width: 100%;
-                }
-                .contact-form-group{
-                    width: 25%;
-                }
-                .submit-form{
-                    width: 20%;
-                }
+        border: #E1E1E1 1px solid;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        // align-items: center;
+        input {
+            padding: 15px;
+            max-width: 100%;
+            width: 100%;
+            margin: 3% 0%;
+            background-color: #E1E1E1;
+            border: none;
+            font-size: 15px;
+            font-family: $Arial;
+            color: #000000;
+             ::placeholder {
+                color: #000000;
             }
-            border: #E1E1E1 1px solid;
-            align-items: center;
-            display: flex;
-            justify-content: space-around;
-            // align-items: center;
-            input{
-                padding: 15px;
-                max-width: 100%;
-                width: 100%;
-                margin: 3% 0%;
-                background-color:#E1E1E1;
-                border: none;
-                font-size: 15px;
-                font-family: $Arial;
-                color:#000000;
-                ::placeholder{
-                    color:#000000;
-                }
-            }
-           
-            button{
-                font-size: 20px;
-                font-family: $FolioStd-Bold;
-                background-color:$priamry_color;
-                padding: 11px;
-                width: 100%;
-                
-            }
-       }
+        }
+        button {
+            font-size: 20px;
+            font-family: $FolioStd-Bold;
+            background-color: $priamry_color;
+            padding: 11px;
+            width: 100%;
+        }
+    }
 }
-@media(max-width:1440px){
-    .wrap-bot{
-        .bot1{
-            .product-quality{
-                h2{
+
+@media(max-width:1440px) {
+    .wrap-bot {
+        .bot1 {
+            .product-quality {
+                h2 {
                     font-size: 35px;
                 }
             }
-            .slogan{
-                p{
+            .slogan {
+                p {
                     font-size: 15px;
                 }
-                
             }
         }
     }
 }
-@media(max-width:1290px){
-    .wrap-bot{
-        .bot1{
-            .product-quality{
-                h2{
+
+@media(max-width:1290px) {
+    .wrap-bot {
+        .bot1 {
+            .product-quality {
+                h2 {
                     font-size: 30px;
                 }
             }
-            .slogan{
-                p{
+            .slogan {
+                p {
                     font-size: 13px;
                 }
-                
             }
         }
     }
-    .wrap-top{
-        .cont2{
+    .wrap-top {
+        .cont2 {
             padding-bottom: 40px;
         }
     }
 }
-@media(max-width:1080px){
-    .wrap-bot{
-        .bot1{
-            .product-quality{
-                h2{
+
+@media(max-width:1080px) {
+    .wrap-bot {
+        .bot1 {
+            .product-quality {
+                h2 {
                     font-size: 28px;
                 }
             }
@@ -394,134 +401,159 @@
     }
 }
 
-@media(max-width:991px)
-{   
-    .wrap-sign .info-me .form_sign .contact-form-group{
-    width: 100%;
-
-}
-.wrap-sign .info-me input{
-    margin-left: 15px;
-    padding: 20px;
-    margin-bottom: 10px;
-}
-.wrap-sign .info-me .form_sign .submit-form{
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-    justify-items: center;
-    margin-top: 20px;
-    width: 50%;
-}
-.wrap-sign .info-me button{
-    padding: 15px;
-    font-size: 17px;
-}
+@media(max-width:991px) {
+    .wrap-sign .info-me .form_sign .contact-form-group {
+        width: 100%;
+    }
+    .wrap-sign .info-me input {
+        margin-left: 15px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .wrap-sign .info-me .form_sign .submit-form {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        justify-items: center;
+        margin-top: 20px;
+        width: 50%;
+    }
+    .wrap-sign .info-me button {
+        padding: 15px;
+        font-size: 17px;
+    }
     .wrap-top .cont2 h1 {
         font-size: $rem2-5;
     }
-    .wrap-product{
-    .whatwedo{
-        padding:3% 0;
+    .wrap-product {
+        .whatwedo {
+            padding: 3% 0;
+        }
+        .innovation,
+        .competitive,
+        .quality,
+        .australian {
+            padding-right: 15px !important;
+        }
+        .installation,
+        .warranty,
+        .quality {
+            padding-right: 4%;
+            padding-bottom: 5% !important;
+        }
     }
-    .innovation,.competitive,.quality,.australian{
-        padding-right: 15px !important;
-    }
-    .installation,.warranty,.quality{
-        padding-right: 4%;
-        padding-bottom: 5% !important;
-    }
-}
-    .wrap-top{
-        .cont2{
+    .wrap-top {
+        .cont2 {
             padding-bottom: 3%;
         }
     }
-    .count{
-        .count-customers,.count-completed,.count-kilomet{
-            h2{
+    .count {
+        .count-customers,
+        .count-completed,
+        .count-kilomet {
+            h2 {
                 font-size: 40px;
                 padding-right: 10px;
             }
-            p{font-size: 15px;
-             padding-bottom: 20px;
+            p {
+                font-size: 15px;
+                padding-bottom: 20px;
             }
-            p:after{
+            p:after {
                 width: 9%;
                 padding-top: 10px;
-                
             }
             p:hover:after {
-                width: 25%;}
+                width: 25%;
+            }
         }
-    } 
-    .wrap-bot{
-        .bot1{
+    }
+    .wrap-bot {
+        .bot1 {
             padding: 0 0 5% !important;
             .product-quality {
-                h2{
+                h2 {
                     margin-right: 0% !important;
                 }
             }
         }
-        .bot2{
+        .bot2 {
             padding-bottom: 0 !important;
         }
     }
-    .hero{
-        padding:5% 0;
+    .hero {
+        padding: 5% 0;
     }
-
 }
-@media(max-width:768px)
-{   .wrap-bot{
-        .bot1{
-             padding: 20px 0px 5% !important;
-            .product-quality{
-                h2{
+
+@media(max-width:768px) {
+    .wrap-bot {
+        .bot1 {
+            padding: 20px 0px 5% !important;
+            .product-quality {
+                h2 {
                     font-size: 30px !important;
                     padding-bottom: 10% !important;
                 }
             }
-            .slogan{
-                p{
-                    font-size: 14px !important;                }
+            .slogan {
+                p {
+                    font-size: 14px !important;
+                }
             }
         }
-}
-    .hero{
-        padding:5% 0 !important;
+    }
+    .hero {
+        padding: 5% 0 !important;
     }
     .wrap-cont {
         .content-about {
-            span{
+            >div {
+                display: -webkit-box;
+                -webkit-line-clamp: 15;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            span {
                 font-size: 15px;
             }
         }
     }
-    .wrap-product{
-        .whatwedo{
-            h2{
+    .wrap-product {
+        .whatwedo {
+            h2 {
                 font-size: 30px !important;
             }
         }
-        .design,.installation,.warranty,.availability{
+        .design,
+        .installation,
+        .warranty,
+        .availability {
             padding-right: 15px !important;
         }
-        .quality,.installation{
+        .quality,
+        .installation {
             padding-bottom: 60px !important;
         }
-        .wrap1{
-            .design,.installation,.warranty,.availability,.innovation,.competitive,.quality,.australian{
+        .wrap1 {
+            .design,
+            .installation,
+            .warranty,
+            .availability,
+            .innovation,
+            .competitive,
+            .quality,
+            .australian {
                 padding-bottom: 4% !important;
-               h3{
-                padding-bottom: 2% !important;
-               } 
+                h3 {
+                    padding-bottom: 2% !important;
+                }
             }
         }
-        .wrap2{
-            .view{
-                a{
+        .wrap2 {
+            .view {
+                a {
                     padding-bottom: 10px;
                     font-size: 15px;
                 }
@@ -529,9 +561,10 @@
         }
     }
 }
+
 @media (max-width:640px) {
-    .nav-tabs{
-        a.nav-link{
+    .nav-tabs {
+        a.nav-link {
             padding-right: 30px !important;
             font-size: 13px !important;
         }
@@ -539,21 +572,20 @@
 }
 
 @media (max-width:480px) {
-   
     .wrap-top {
-        .cont2{
-            h1{
+        .cont2 {
+            h1 {
                 font-size: 35px;
             }
-            h2{
+            h2 {
                 font-size: 18px;
             }
-        } 
+        }
     }
-    .wrap-bot{
-        .bot1{
-            .product-quality{
-                h2{
+    .wrap-bot {
+        .bot1 {
+            .product-quality {
+                h2 {
                     font-size: 35px;
                 }
             }
