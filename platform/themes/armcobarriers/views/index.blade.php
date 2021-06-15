@@ -3,19 +3,20 @@
    
     <div  class="swiper-container mySwiper-home" style="--swiper-navigation-color:#FAD906; --swiper-pagination-color:#FAD906;">
         <div class="swiper-wrapper">
+            @if(has_field($page, 'home_slide_main'))
             @foreach (get_field($page, 'home_slide_main') as $item)
             <div class="swiper-slide">
-                <div class="bg-slider" style="background-image:url({{get_object_image(get_sub_field($item , 'picture'))}})">
+                <div class="bg-slider" style="background-image:url({{ has_sub_field($item , 'picture') ? get_object_image(get_sub_field($item , 'picture')) :''}})">
                     <div class="container-customize">
                         <div class="swiper-content">
                             <div class="logo-slider">
-                                <img src="{{get_object_image(get_sub_field($item , 'logo'))}}" alt="">
+                                <img src="{{has_sub_field($item , 'logo') ? get_object_image(get_sub_field($item , 'logo')):''}}" alt="">
                             </div>
-                            <div class="title-slider">{{get_sub_field($item , 'slide_title')}}</div>
+                            <div class="title-slider">{{get_sub_field($item , 'slide_title') ? get_sub_field($item , 'slide_title'):''}}</div>
                             <div class="text-slider">
-                                <p>{{get_sub_field($item , 'text_of_service')}}</p>
+                                <p>{{has_sub_field($item , 'text_of_service') ? get_sub_field($item , 'text_of_service') : ''}}</p>
                                 <p>
-                                    {{get_sub_field($item , 'service_description')}}
+                                    {{ get_sub_field($item , 'service_description') ? get_sub_field($item , 'service_description'):''}}
                                 </p>
                             </div>
                         </div>
@@ -23,6 +24,7 @@
                 </div>
             </div>
             @endforeach
+            @endif
             
         </div>
             <div class="swiper-button-next"></div>
@@ -39,26 +41,28 @@
                 <div class="left-content">
                     <div class="gallery__item">
                         <div class="gallery__item-group">
-                            <img class="mw-100" src="{{ get_object_image(get_field( $page ,'logo'))}}" alt="">
-                            <h2 data-aos="" data-aos-delay="200">{{ get_field( $page ,'asset_protection_solutions') }}</h2>
+                            <img class="mw-100" src="{{has_field( $page ,'logo') ? get_object_image(get_field( $page ,'logo')):''}}" alt="">
+                            <h2 data-aos="" data-aos-delay="200">{{has_field($page ,'asset_protection_solutions') ? get_field($page ,'asset_protection_solutions'):'' }}</h2>
                         </div> 
-                        <p  data-aos="" data-aos-delay="400">{{ get_field( $page ,'location') }}</p>
+                        <p  data-aos="" data-aos-delay="400">{{has_field( $page ,'location') ? get_field( $page ,'location'):'' }}</p>
                     </div>
                 </div>
+                @if(has_field($page, 'lists_of_image'))
                 @foreach (get_field($page, 'lists_of_image') as $key=> $item)
                     <div class="grid__item">
                         
                         
                         <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
-                            <img class="img-background mw-100" src="{{ get_object_image(get_sub_field( $item ,'picture'))}}" alt="">
+                            <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="">
                            <div class="gallery__item-text">
-                                <p>{{ get_sub_field( $item ,'location_text') }}</p>
+                                <p>{{has_sub_field( $item ,'location_text')? get_sub_field( $item ,'location_text'):'' }}</p>
                                 <i class="fal fa-arrow-right"></i>
                             </div> 
                         </a>
                         
                     </div>
                 @endforeach
+                @endif
             </div>
         </div>
     </div>
@@ -73,16 +77,18 @@
             </div>
             <div class="wrap-descrip">
                 <div class="row">
+                    @if(has_field($page, 'product_range_home'))
                     @foreach (get_field($page, 'product_range_home') as $item)
                     <div class="col-lg-3 col-md-6 col-sm-6 mt-4 fade-right">
                         <div class="post">
                             <div class="post-title">
-                                <h3>{{get_sub_field($item, 'product_range_title')}}</h3>
+                                <h3>{{has_sub_field($item, 'product_range_title') ? get_sub_field($item, 'product_range_title'):''}}</h3>
                             </div>
-                            <p>{!!get_sub_field($item, 'product_range_description')!!}</p>
+                            <p>{!!get_sub_field($item, 'product_range_description') ? get_sub_field($item, 'product_range_description'):''!!}</p>
                         </div>
                     </div>
                     @endforeach
+                    @endif
                 </div>
             </div>
             <div class="wrap2 my-5">
@@ -103,12 +109,13 @@
             <div class="left-content">
                 <div class="gallery__item">
                     <div class="gallery__item-group">
-                        <img class="mw-100" src="{{ get_object_image(get_field( $page ,'logo_service'))}}" alt="">
+                        <img class="mw-100" src="{{has_field( $page ,'logo_service') ? get_object_image(get_field( $page ,'logo_service')):''}}" alt="">
                         <h2 data-aos="" data-aos-delay="200">Services</h2>
                     </div> 
-                    <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service')}}</p>
+                    <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
                 </div>
             </div>
+            @if(has_field($page, 'lists_of_image_service'))
             @foreach(get_field($page, 'lists_of_image_service') as $item)
                 <div class="grid__item">
                     <a href="{{ has_sub_field($item,'link_service') ? get_sub_field($item,'link_service') :''}}">
@@ -122,6 +129,7 @@
                
             
             @endforeach
+            @endif
         </div>
 
     </div>
@@ -135,6 +143,7 @@
                 <h2 data-aos="" data-aos-delay="200">News <br>& Events</h2>
             </div>
             <div class="row">
+                @if(get_post_is_featured())
                 @foreach (get_post_is_featured() as $post)
                 <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="200">
@@ -156,6 +165,7 @@
                     </div>
                 </div>
                 @endforeach
+                @endif
             </div>
 
             <div class="read-more">
@@ -163,19 +173,21 @@
             </div>
                 <div class="count">
                     <div class="row w-100 mx-0">
+                    @if(has_field($page, 'statistic_home'))
                     @foreach (get_field($page, 'statistic_home') as $item)
                         <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
                             <div class="box-count count-customers">
-                                <h2>{{get_sub_field($item , 'title')}}</h2>
-                                <p>{{get_sub_field($item , 'description_home')}}</p>
+                                <h2>{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h2>
+                                <p>{{has_sub_field($item , 'description_home') ? get_sub_field($item , 'description_home'):''}}</p>
                             </div>
                         </div>
                     @endforeach
+                    @endif
                     </div>
                 </div>
                 <div class="experience">
                     <div class="exp">
-                        <p>{{get_field( $page ,'description_home')}} </p>
+                        <p>{{get_field( $page ,'description_home') ? get_field( $page ,'description_home'):''}} </p>
                     </div>
                 </div>
         </div>
