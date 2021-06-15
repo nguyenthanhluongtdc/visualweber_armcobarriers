@@ -13,8 +13,8 @@
     
 @endphp
 
+@php $active = false; @endphp
 @foreach($menu_nodes as $row)
-        @php $active = false; @endphp
     @if($row->reference_id==$cateId) 
         @php $active = true; @endphp 
     @endif
@@ -26,7 +26,7 @@
         <div class="slider"></div>
         @foreach($menu_nodes as $key => $row)
             <li class="item">
-                 <a class="nav-link {{($key==0&&!$active)?'active':($cateId==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                 <a class="nav-link {{($key==0&&$active==false)?'active':($cateId==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
                     {{ $row->title }}
                 </a>
             </li>
