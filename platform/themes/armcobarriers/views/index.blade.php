@@ -115,13 +115,12 @@
                     <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
                 </div>
             </div>
-            <?php $tabs_services = get_services() ?>
+            <?php $tabs_services = get_services(); ?>
            @if(!empty($tabs_services))
-               
           
+           <?php $a = '["show"]' ?>
             @foreach($tabs_services as $key => $service_show)
-               
-                <?php if(get_field($service_show, 'show_home_page') != NULL) { ?>
+                <?php if(get_field($service_show, 'show_home_page') == $a) { ?>
                     <div class="grid__item item_sv_home" style="background-image: url('{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}')">
                         <a href="{{ $service_show->url }}">
                             {{-- <img class="img-background mw-100" src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
