@@ -265,6 +265,7 @@ a[data-toggle="collapse"] {
     padding-top: 15%;
     a {
         .product-item {
+            height: 250px;
             position: relative;
             &:hover .overlay {
                 opacity: 1;
@@ -272,8 +273,10 @@ a[data-toggle="collapse"] {
         }
         color: $gray-text;
         img {
+            height: 100%;
             max-width: 100%;
             display: block;
+            width: 100%;
         }
         .overlay {
             position: absolute;
