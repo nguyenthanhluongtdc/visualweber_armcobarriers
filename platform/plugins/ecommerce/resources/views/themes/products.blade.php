@@ -40,8 +40,8 @@
 
 @if(isset($page))
   @php 
-    $content_banner = get_field($page, 'content_banner');
-    $img_banner = get_field($page, 'image_banner');
+    $content_banner = has_field($page, 'content_banner');
+    $img_banner = has_field($page, 'image_banner');
     $query = isset($query) ? $query : "";
   @endphp
 @endif
