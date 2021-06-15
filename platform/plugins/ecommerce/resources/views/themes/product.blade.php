@@ -107,7 +107,7 @@
                                 <p> {{implode(", ",$tags)}} </p>
                             </li>
                         </ul>
-                        <form class="add-to-cart-form" method="POST" action="{{ route('public.cart.add-to-cart') }}">
+                        <form class="add-to-cart-form flex-wrap" method="POST" action="{{ route('public.cart.add-to-cart') }}">
                             @csrf
                             <input type="hidden" name="product_is_out_of_stock"
                                    value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock"/>
@@ -120,14 +120,16 @@
                                 <button class="plus">+</button>
                             </div>
                             <button id="btn-add-cart" class="add_to_cart btn btn-fill-out btn-addtocart" type="submit">Add to cart</button>
-
-                            <div class="success-message text-success text-center" style="display: none;">
-                                    <span></span>
-                            </div>
-                            <div class="error-message text-danger text-center" style="display: none;">
+                            
+                            <p class="success-message text-success text-center mt-3" style="display: none;">
                                 <span></span>
-                            </div>
+                            </p>
+                            <p class="error-message text-danger text-center mt-3" style="display: none;">
+                                <span></span>
+                            </p>
                         </form>
+
+                       
                         
                         <!----form---->
                         <!---end form---->
@@ -322,5 +324,62 @@
             },
             }
         });
-    })
+    });
+
+
+    $(document).on('click', '.add-to-cart-form button[type=submit]', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            let _self = $(this);
+
+            if (!$('#hidden-product-id').val()) {
+                _self.prop('disabled', true).addClass('btn-disabled');
+                return;
+            }
+
+            _self.prop('disabled', true).addClass('btn-disabled').addClass('button-loading');
+
+            _self.closest('form').find('.error-message').hide();
+            _self.closest('form').find('.success-message').hide();
+
+            $.ajax({
+                type: 'POST',
+                cache: false,
+                url: _self.closest('form').prop('action'),
+                data: new FormData(_self.closest('form')[0]),
+                contentType: false,
+                processData: false,
+                success: res => {
+                    _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
+
+                    if (res.error) {
+                        _self.closest('form').find('.error-message').html(res.message).show();
+                        return false;
+                    }
+
+                    _self.closest('form').find('.success-message').html(res.message).show();
+                    $("#link-cart").load(location.href +" #reload");
+
+                    if (_self.prop('name') === 'checkout' && res.data.next_url !== undefined) {
+                        window.location.href = res.data.next_url;
+                    } else {
+                        $.ajax({
+                            url: window.siteUrl + '/ajax/cart',
+                            method: 'GET',
+                            success: function (response) {
+                                if (!response.error) {
+                                    $('.cart_box').html(response.data.html);
+                                    $('.btn-shopping-cart span').text(response.data.count);
+                                }
+                            }
+                        });
+                    }
+                },
+                error: res => {
+                    _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
+                    handleError(res, _self.closest('form'));
+                }
+            });
+        });
 </script>

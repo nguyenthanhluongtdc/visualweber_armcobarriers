@@ -56,9 +56,11 @@
                                 </div>
                             </div>
                             <div class="right">
-                                <a href="{{route('public.cart')}}">
-                                    <i class="fal fa-shopping-cart"></i>
-                                    <span class="header__cart-notice">{{Cart::instance('cart')->count()}}</span>
+                                <a href="{{route('public.cart')}}" id="link-cart">
+                                   <div id="reload"> 
+                                       <i class="fal fa-shopping-cart"></i>
+                                        <span class="header__cart-notice">{{Cart::instance('cart')->count()}}</span>
+                                    </div>
                                 </a>
                                 <ul class="header_list">
                                     @if (!auth('customer')->check())
