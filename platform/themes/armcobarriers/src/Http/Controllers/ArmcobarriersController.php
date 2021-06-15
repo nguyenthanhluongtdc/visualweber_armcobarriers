@@ -124,13 +124,6 @@ class ArmcobarriersController extends PublicController
         return SiteMapManager::render('xml');
     }
 
-    public function getPosts() {
-        
-        $posts = Post::paginate(6);
-        return Theme::scope('news-all',compact('posts'))->render();
-
-    }
-
     public function getServices($slug) {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
 
