@@ -93,6 +93,9 @@
             margin-top: 30px;
             padding-left: 0;
         }
+        input:-webkit-autofill {
+            -webkit-text-fill-color: unset;
+        }
     }
     .message {
         input {
@@ -101,6 +104,9 @@
             margin-top: 30px;
             border-radius: unset;
             padding-left: 0;
+        }
+        input:-webkit-autofill {
+            -webkit-text-fill-color: unset;
         }
     }
     .policy {

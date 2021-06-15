@@ -22,5 +22,16 @@ register_sidebar([
     'name'        => 'Second sidebar',
     'description' => 'This is a sample sidebar for armcobarriers theme',
 ]);
+register_sidebar([
+    'id'          => 'footer_sidebar',
+    'name'        => __('Footer Sidebar'),
+    'description' => __('This the description for widget area'),
+]);
+register_sidebar([
+    'id'          => 'fanpage',
+    'name'        => __('Fanpage'),
+    'description' => __('This the description for widget area'),
+]);
 
 RvMedia::setUploadPathAndURLToPublic();
+
