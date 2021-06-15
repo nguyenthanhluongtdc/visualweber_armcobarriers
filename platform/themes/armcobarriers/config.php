@@ -54,6 +54,9 @@ return [
             // $theme->asset()->add('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css');
             // $theme->asset()->usePath()->add('style', 'css/common.css');
             // $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
+            $theme->asset()->add('carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css');
+            $theme->asset()->add('carousel_thumb', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
+            $theme->asset()->add('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
             $theme->asset()->usePath()->add('style', 'css/common.css');
             $theme->asset()->container('footer')->usePath()->add('custom', 'js/splide.min.js', array('core-script'));
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
@@ -65,7 +68,9 @@ return [
             $theme->asset()->add('font-awesome-pro', 'https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
             $theme->asset()->add('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
             $theme->asset()->container('footer')->add('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js');
-            
+            $theme->asset()->container('footer')->add('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js');
+            $theme->asset()->container('footer')->add('carousel', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'); 
+            $theme->asset()->container('footer')->add('carousel_thumb', 'https://cdn.jsdelivr.net/npm/owl.carousel2.thumbs@0.1.8/dist/owl.carousel2.thumbs.min.js');      
             // $theme->asset()->usePath()->add('style', 'css/common.css',[],[],time());
             if (function_exists('shortcode')) {
                 $theme->composer(['index', 'page', 'post'], function (\Platform\Shortcode\View\View $view) {
