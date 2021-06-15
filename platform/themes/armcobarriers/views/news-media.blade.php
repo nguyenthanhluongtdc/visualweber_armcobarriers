@@ -1,5 +1,5 @@
 
-@includeIf("theme.armcobarriers::views.components.breadcrumb")
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 <!--title-->
 <div class="pages-news-media">
     <div class="container-customize">
@@ -20,7 +20,7 @@
         !!}
 
 
-        @includeIf("theme.armcobarriers::views.components.form-signup") 
+        @includeIf("theme.armcobarriers::views.modules.form-signup") 
         
     </div>
 </div>

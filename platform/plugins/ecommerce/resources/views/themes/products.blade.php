@@ -48,7 +48,7 @@
 
 @php Theme::layout('default') @endphp
 <section>
-  @includeIf("theme.armcobarriers::views.components.breadcrumb")
+  @includeIf("theme.armcobarriers::views.modules.breadcrumb")
   <div class="container-customize">
     <div class="introduction-product">
       <div class="introduction-product-title">

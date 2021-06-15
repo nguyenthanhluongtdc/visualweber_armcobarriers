@@ -24,7 +24,7 @@
 
 @endphp
 
-@includeIf("theme.armcobarriers::views.components.breadcrumb")
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 <div id="product_detail">

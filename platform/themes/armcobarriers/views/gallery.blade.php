@@ -131,6 +131,6 @@
 
   <section>
     <div class="container-customize">
-        @includeIf("theme.armcobarriers::views.components.form-signup")
+        @includeIf("theme.armcobarriers::views.modules.form-signup")
     </div>
   </section>

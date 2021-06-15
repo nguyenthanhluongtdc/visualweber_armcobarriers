@@ -128,7 +128,7 @@ class PublicProductController
 
         $categories = ProductCategory::all();
 
-        Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
+        //Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
         SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
