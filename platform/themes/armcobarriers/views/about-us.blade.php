@@ -30,7 +30,7 @@
                     <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
-                                <div class="col-lg-6">
+                                <div class="col-lg-8">
                                    <p style="font-size:17px;font-:Arial"> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="col-md-8 col-sm-12">
                     <div class="slogan">
-                        <p>{{get_field( $page ,'description')}}</p>
+                        <p>{!!get_field( $page ,'description')!!}</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                    <div class="product0">
                     <img src="{{ get_object_image(get_sub_field( $item ,'image'))}}" alt="">
                     <h3>{{get_sub_field($item , 'title')}}</h3>
-                    <p>{{get_sub_field($item , 'description')}}</p>
+                    <p>{!!get_sub_field($item , 'description')!!}</p>
                    </div>
                 </div>
                 @endforeach
