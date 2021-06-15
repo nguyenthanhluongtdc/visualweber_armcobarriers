@@ -308,7 +308,7 @@
                                     <a class="text-info" href="{{ route('public.cart') }}"><i class="fas fa-long-arrow-alt-left"></i> {{ __('Back to cart') }}</a>
                                 </div>
                                 <div class="col-md-6" style="margin-bottom: 40px">
-                                    <button type="submit" class="btn payment-checkout-btn payment-checkout-btn-step float-right" data-processing-text="{{ __('Processing. Please wait...') }}" data-error-header="{{ __('Error') }}">
+                                    <button type="submit" class="btn payment-checkout-btn payment-checkout-btn-step float-right" style="background-color: #FAD906; color: #262626;" data-processing-text="{{ __('Processing. Please wait...') }}" data-error-header="{{ __('Error') }}">
                                         {{ __('Checkout') }}
                                     </button>
                                 </div>

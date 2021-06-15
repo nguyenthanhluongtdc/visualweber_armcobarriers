@@ -1,6 +1,6 @@
 @php Theme::set('pageName', __('Shopping Cart')); $crossSellProducts = []; @endphp
 
-@includeIf("theme.armcobarriers::views.modules.breadcrumb");
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 <div class="section">
     <div class="container">
         @if (Cart::instance('cart')->count() > 0)
@@ -105,14 +105,14 @@
                                     <td colspan="6" class="px-0">
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
-                                                @if (!session()->has('applied_coupon_code'))
+                                                <!-- @if (!session()->has('applied_coupon_code'))
                                                     <div class="coupon field_form input-group form-coupon-wrapper">
                                                         <input type="text" name="coupon_code" value="{{ old('coupon_code') }}" class="form-control form-control-sm coupon-code" placeholder="{{ __('Enter Coupon Code...') }}">
                                                         <div class="input-group-append">
                                                             <button class="btn btn-fill-out btn-sm btn-apply-coupon-code" type="button" data-url="{{ route('public.coupon.apply') }}">{{ __('Apply Coupon') }}</button>
                                                         </div>
                                                     </div>
-                                                @endif
+                                                @endif -->
                                                 @if (session('applied_coupon_code'))
                                                     <div class="mt-2 text-left">
                                                         <small><strong>{{ __('Coupon code: :code', ['code' => session('applied_coupon_code')]) }}</strong> <a class="btn-remove-coupon-code text-danger" data-url="{{ route('public.coupon.remove') }}" href="javascript:void(0)"><i class="ti-close"></i></a></small>
@@ -123,7 +123,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-6 text-left text-md-right">
-                                                <button type="submit" class="btn btn-line-fill btn-sm">{{ __('Update cart') }}</button>&nbsp;&nbsp;&nbsp;
+                                                <button type="submit" class="rounded-0 btn btn-line-fill btn-sm">{{ __('Update cart') }}</button>&nbsp;&nbsp;&nbsp;
                                             </div>
                                         </div>
                                     </td>
@@ -176,7 +176,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <button type="submit" class="btn btn-fill-out" name="checkout">{{ __('Proceed To CheckOut') }}</button>
+                            <button type="submit" class="rounded-0 btn btn-fill-out" name="checkout">{{ __('Proceed To CheckOut') }}</button>
                         </div>
                     </div>
                 </div>
