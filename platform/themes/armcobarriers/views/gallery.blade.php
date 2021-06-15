@@ -1,29 +1,19 @@
-<section>
-    <div class="container-customize">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Homepage</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
-            </ol>
-        </nav>
-        <div class="title-gallery">
-            {{ $page->description }}
-        </div>
-</section>
-
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 <div class="section-slider-tab">
     <div class="container-customize">
         <div class="owl-thumbs tab-content contaier-fluid-customize" data-slider-id="1">
+            @if(has_field($page, 'slider_gallery'))
             @foreach (get_field($page, 'slider_gallery') as $item)
             <button class="owl-thumb-item bt-content active">
-                {{ get_sub_field($item, 'name_slider') }}
+                {{get_sub_field($item, 'name_slider') ? get_sub_field($item, 'name_slider'):'' }}
             </button>
             @endforeach
+            @endif
         </div>
     </div>
 
     <div class="gallery-carousel owl-carousel" data-slider-id="1">
-      
+        @if(get_field($page, 'slider_gallery'))
         @foreach (get_field($page, 'slider_gallery') as $key=>$item)
        
       
@@ -63,6 +53,7 @@
             </div>
         </div>
         @endforeach
+        @endif
         
     </div>
 </div>
@@ -73,6 +64,7 @@
             <div class="box-media pt-4">
                 <div class="content">
                     <div class="row">
+                        @if(get_post_is_featured())
                         @foreach (get_post_is_featured() as $post)
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-5">
                                 <div class="item">
@@ -92,13 +84,13 @@
                                 </div>
                             </div>
                         @endforeach
-
+                        @endif
 
                     </div>
                 </div>
             </div>
             <div class="read-more">
-                <a href="/new-all">
+                <a href="{{route('public.posts')}}">
                     <h3>Read more</h3>
                 </a>
             </div>

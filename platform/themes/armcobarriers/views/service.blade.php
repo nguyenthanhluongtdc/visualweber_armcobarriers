@@ -1,12 +1,8 @@
 <section>
+    @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="wrap-top">
         <div class="container-customize">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-                    <li class="breadcrumb-item">Services</li>
-                </ol>
-            </nav>
+           
             <div class="top2">
                 <h2>{{$page->name}}</h2>
                 <p>{{$page->description}}</p>

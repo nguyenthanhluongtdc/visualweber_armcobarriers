@@ -1,15 +1,4 @@
-<section>
-    <div class="wrap-top">
-        <div class="container-customize">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-                    <li class="breadcrumb-item">News, Event & Media</li>
-                </ol>
-            </nav> 
-        </div>
-    </div>
-</section>
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 @php
     $featured = get_featured_posts(5, [
         'author',

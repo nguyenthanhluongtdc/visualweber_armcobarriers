@@ -4,42 +4,36 @@
         <div class="container-customize">
           <div class="title-contact">
             <h1>Contact Us</h1>
-            <p>{{get_field($page ,'contact_us_desc')}}
+            <p>{{has_field($page ,'contact_us_desc') ? get_field($page ,'contact_us_desc'):''}}
             </p>
           </div>
         </div>
         <div>
       </div>
 </section>
-<section>
-    <div class="container-customize">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-        </ol>
-      </nav> 
-  </section>
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
 
 <section>
     <div class="container-customize info-contact">
         <div class="row">
             <div class="col-md-8">
                 <div class="list-group" id="list-tab" role="tablist">
-                  
+                  @if(has_field($page,'contact_us_tabs'))
                   @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
                   @if(has_sub_field($item_contact,'tabs_title'))
                       <a class="list-group-item list-group-item-action aos-init aos-animate {{ $key == 0 ? 'active' : '' }}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" data-toggle="list" href="#{{  Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tab" aria-controls="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" aria-selected="true">ARMCO®<br>
-                          <span>{{get_sub_field($item_contact,'tabs_title')}}</span> 
+                          <span>{{has_sub_field($item_contact,'tabs_title') ? get_sub_field($item_contact,'tabs_title'):''}}</span> 
                       </a>
                   @endif
                   @endforeach
+                  @endif
              
                 </div>
             </div>
         </div>
        
         <div class="tab-content" id="nav-tab-content">
+          @if(has_field($page,'contact_us_tabs'))
           @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
        
          
@@ -72,12 +66,11 @@
                  
                 </div>
               </div>
-            
-            
             @endforeach
             </div>
           </div>
           @endforeach
+          @endif
         </div>
        
                
@@ -146,7 +139,7 @@
 </section>
 <div class="container-fluid-customize">
     <div class="map-location">
-      <iframe src="{{get_field($page,'link_map')}}" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="{{has_field($page,'link_map') ? get_field($page,'link_map'):''}}" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </div>
    
