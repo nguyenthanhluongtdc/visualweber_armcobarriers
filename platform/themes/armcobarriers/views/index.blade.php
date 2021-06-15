@@ -115,19 +115,28 @@
                     <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
                 </div>
             </div>
-            @if(has_field($page, 'lists_of_image_service'))
-            @foreach(get_field($page, 'lists_of_image_service') as $item)
-                <div class="grid__item">
-                    <a href="{{ has_sub_field($item,'link_service') ? get_sub_field($item,'link_service') :''}}">
-                        <img class="img-background mw-100" src="{{ get_object_image(get_sub_field( $item ,'picture'))}}" alt="">
-                       <div class="gallery__item-text">
-                            <p>{{ get_sub_field( $item ,'service_name')}}</p>
-                            <i class="fal fa-arrow-right"></i>
-                        </div> 
-                    </a>
-                </div>
+            <?php $tabs_services = get_services() ?>
+           @if(!empty($tabs_services))
                
-            
+          
+            @foreach($tabs_services as $key => $service_show)
+               
+                <?php if(get_field($service_show, 'show_home_page') != NULL) { ?>
+                    <div class="grid__item item_sv_home" style="background-image: url('{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}')">
+                        <a href="{{ $service_show->url }}">
+                            {{-- <img class="img-background mw-100" src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
+                           <div class="gallery__item-text">
+                                <p>{{ $service_show-> name}}</p>
+                                <i class="fal fa-arrow-right"></i>
+                            </div> 
+                        </a>
+                    </div>
+                    {{-- <img src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
+                <?php } 
+                    else { ?>
+                       
+                   <?php }
+                ?>
             @endforeach
             @endif
         </div>
