@@ -40,36 +40,6 @@
                     font-family: $FolioStd-Medium;
                     text-transform: uppercase;
                 }
-                // .homepage {
-                //     h3 {
-                //         padding-bottom: 15px;
-                //     }
-                //     p {
-                //         padding: 10px 0;
-                //         a {
-                //             color: #262626;
-                //             &:hover {
-                //                 color: #000;
-                //                 text-decoration: underline;
-                //             }
-                //         }
-                //     }
-                // }
-                // .applications {
-                //     h3 {
-                //         padding-bottom: 15px;
-                //     }
-                //     p {
-                //         padding: 10px 0;
-                //         a {
-                //             color: #262626;
-                //             &:hover {
-                //                 color: #000;
-                //                 text-decoration: underline;
-                //             }
-                //         }
-                //     }
-                // }
                 .widget {
                     display: flex;
                     flex-wrap: wrap;
@@ -94,6 +64,11 @@
                     padding-top: 15px;
                     font-size: 20px;
                     color: $gray-text;
+                }
+                .connect-us {
+                    .widget {
+                        display: unset;
+                    }
                 }
             }
             .footer-bottom {

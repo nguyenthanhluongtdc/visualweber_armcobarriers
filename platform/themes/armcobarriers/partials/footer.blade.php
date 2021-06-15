@@ -33,18 +33,13 @@
                         </div>
                     </div>
                     {!! Menu::renderMenuLocation('footer-menu', [
-    'options' => [],
-    'theme' => true,
-    'view' => 'menu-footer',
-]) !!}
+                                        'options' => [],
+                                        'theme' => true,
+                                        'view' => 'menu-footer',
+                        ]) !!}
                     <div class="col-lg-2 col-md-2 mb-lg-0">
                         <div class="connect-us">
-                            <p>
-                            <h3>Connect with us</h3>
-                            </p>
-                            <a href="{{ theme_option('footer-social') }}">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
+                            {!! dynamic_sidebar('footer_sidebar') !!}
                         </div>
                     </div>
                 </div>
@@ -57,26 +52,11 @@
                             {{ theme_option('footer-copyright') }}
                         </p>
                     </div>
-                    {{-- <div class="col-md-2 col-12 order-md-2 order-1">
-                        <a href="">
-                            <p>
-                                Privacy Policy
-                            </p>
-                        </a>
-                        
-                    </div>
-                    <div class="col-md-3 col-12 order-md-3 order-2">
-                        <a href="">
-                            <p>
-                                Terms and Conditions
-                            </p>
-                        </a>
-                    </div> --}}
                     {!! Menu::renderMenuLocation('policy-terms-conditions', [
-    'options' => [],
-    'theme' => true,
-    'view' => 'policy-terms-condition',
-]) !!}
+                        'options' => [],
+                        'theme' => true,
+                        'view' => 'policy-terms-condition',
+                    ]) !!}
 
                 </div>
             </div>
@@ -99,7 +79,7 @@
                 items: 1
             },
             600: {
-                items: 2
+                items: 1
             },
             1000: {
                 items: 1

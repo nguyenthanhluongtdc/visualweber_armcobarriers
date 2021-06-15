@@ -8,10 +8,14 @@
     }
     input{
         height: 50px;
+        -webkit-text-fill-color : black!important;
+        color: black!important;
+        border: 1px solid #ced4da!important;
     }
     input:focus{
-        color: black;
+        color: black!important;
     }
+    
     button{
         height: 50px;
     }
@@ -84,6 +88,9 @@
            input{
                flex: 1;
                padding: 15px;
+               -webkit-text-fill-color : black!important;
+               color: black!important;
+               border: 1px solid #ccc!important;
            }
            button{
                width: 70px;
@@ -316,6 +323,9 @@
                 border-left: none;
                 border-bottom: none;
                 padding : 12px 15px;
+                -webkit-text-fill-color : black!important;
+                color: black!important;
+                border: 1px solid #ccc!important;
             }
             button{
                 width: 50px;
