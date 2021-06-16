@@ -90,17 +90,24 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
 
     public function getByTemplate($template = ""){
 
-        $reference_id = DB::table('pages')
+        try{
+            $reference_id = DB::table('pages')
         
-        ->where('template',$template)
-        ->select('id')
-        ->first();
-        
-        $data = DB::table('slugs')
-        ->select('key')
-        ->where('reference_id', $reference_id->id)
-        ->where('reference_type','Platform\Page\Models\Page')
-        ->first();
-        return $data->key;
+            ->where('template',$template)
+            ->select('id')
+            ->first();
+            
+            if($reference_id!=null){
+                $data = DB::table('slugs')
+                ->select('key')
+                ->where('reference_id', $reference_id->id)
+                ->where('reference_type','Platform\Page\Models\Page')
+                ->first();
+                return $data->key;
+            }
+        }catch(Exception $e){
+            return "Caught exception: $e->getMessage()";
+        }
+        return null;
     }
 }
