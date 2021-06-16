@@ -26,6 +26,8 @@ $gray_text: #262626;
                     font-size: 20px;
                     color: $gray_text;
                     padding: 25px 15px;
+                    @include str_split();
+                    -webkit-line-clamp: 2;
                 }
                 h3:hover {
                     background-color: #fad906;
