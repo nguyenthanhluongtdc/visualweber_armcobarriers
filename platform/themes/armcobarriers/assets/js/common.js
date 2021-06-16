@@ -29,7 +29,7 @@ $('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
 
     const elementOverLay = $('.overlay_background')
     if (!elementOverLay) return
-    element.hasClass('is-show') ? elementOverLay.css('display', 'block') : elementOverLay.css('display', 'none')
+    element.hasClass('is-show') ? elementOverLay.addClass('overlay_background_active') : elementOverLay.removeClass('overlay_background_active')
 });
 
 
