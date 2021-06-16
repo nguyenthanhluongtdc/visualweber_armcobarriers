@@ -66,7 +66,12 @@ class PublicController extends Controller
      * @return \Illuminate\Http\RedirectResponse|Response
      */
     public function getAllPosts() {
-        SeoHelper::setTitle(__('POSTS | ArmcoBarriers'))->setDescription(__('POSTS | ArmcoBarriers'));
+        Theme::breadcrumb()->add(__('Home'), url('/'))
+        ->add(__(ucfirst(SlugHelper::getPrefix(Post::class))), route('public.posts'));
+
+        SeoHelper::setTitle(__('POSTS | ArmcoBarriers'))
+        ->setDescription(__('POSTS | ArmcoBarriers'));
+
         $posts = Post::paginate(6);
         return Theme::scope('news-all',compact('posts'))->render();
     }
