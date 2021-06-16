@@ -70,30 +70,39 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        $(document).on('click', '.pagination a', function(event){
-            event.preventDefault(); 
-            let path = $(this).attr('href').split('page=')[1];
-            fetch_data(path);
+    $(document).on('click', '.pagination a', function(event){
+        event.preventDefault(); 
+        let path = $(this).attr('href').split('page=')[1];
+        fetch_data(path);
+    });
+
+    function fetch_data(path)
+    {
+        path = "?page="+path+"&num={{$number_per_tabs}}";
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
         });
 
-        function fetch_data(path)
-        {
-            path = "?page="+path+"&num={{$number_per_tabs}}";
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        $.ajax({
+        url:"/news-media/ajax"+path,
+        success:function(response){
+                $('.tab-pane.active').html(response)
+                if(response){
+                    window.history.pushState({}, '', path);
                 }
-            });
+            }
+        });
+    }
 
-            $.ajax({
-            url:"/news-media/ajax"+path,
-            success:function(response){
-                    $('.tab-pane.active').html(response)
-                    if(response){
-                        window.history.pushState({}, '', path);
-                    }
-                }
-            });
-        }
+    $("#tile-1 .nav-tabs a").on('click',function() {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width() * 0.3;
+        $("#tile-1 .slider").css({ "left": +position.left, "width": width });
     });
-</script>     
+    var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width() * 0.3;
+    var actPosition = $("#tile-1 .nav-tabs .active").position();
+    $("#tile-1 .slider").css({ "left": +actPosition.left, "width": actWidth });
+});
+</script>

@@ -58,9 +58,7 @@ return [
             $theme->asset()->add('carousel_thumb', 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css');
             $theme->asset()->add('fancybox', 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css');
             $theme->asset()->usePath()->add('style', 'css/common.css');
-            $theme->asset()->container('footer')->usePath()->add('custom', 'js/splide.min.js', array('core-script'));
             $theme->asset()->container('footer')->usePath()->add('script', 'js/common.js');
-            
            
             $theme->asset()->container('footer')->add('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js');
             $theme->asset()->container('footer')->add('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js');
