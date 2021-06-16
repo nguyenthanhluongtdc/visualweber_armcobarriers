@@ -10,7 +10,6 @@ register_page_template([
     'products-detail' => 'Products-detail',
     'about-us' => 'About-us',
     'media-details' =>'Media-details',
-    'news-all' => 'News-all',
     'news-media' => 'News-media',
     'news-detail' => 'News-detail',
     'services-detail' => 'Services-detail',
