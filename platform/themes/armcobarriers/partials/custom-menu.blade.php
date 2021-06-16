@@ -19,7 +19,7 @@
     <div class="toolbar-mobile">
       <ul class="list-tool">
           <li>
-            <a href="{{theme_option('hotline')}}">
+            <a href="tel:{{theme_option('hotline')}}">
                 <i class="fas fa-phone-alt"></i>
            
             </a>
@@ -47,7 +47,7 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="{{theme_option('footer-social')}}">
                 <i class="fab fa-facebook-f"></i>
             </a>
           </li>

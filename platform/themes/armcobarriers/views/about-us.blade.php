@@ -26,9 +26,7 @@ if(has_field($page, 'about_us'))
                     <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
                         <div class="container-customize h-100">
                             <div class="content-about d-flex align-items-center h-100">
-                                <div class="col-lg-8">
-                                   <p style="font-size:17px;font-:Arial"> @php echo get_sub_field($tab, 'tabs_description') @endphp</p>
-                                </div>
+                                <div>@php echo get_sub_field($tab, 'tabs_description') @endphp</div>
                             </div>
                         </div>
                     </div>
