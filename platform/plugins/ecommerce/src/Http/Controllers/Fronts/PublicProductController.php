@@ -112,15 +112,19 @@ class PublicProductController
         $page = $this->getPage();
 
         //
-        if ($query && $viewSearch) {
-            $products = $prodzuctService->getProduct($request);
+        if ($query) {
+            //$products = $productService->getProduct($request);
 
             SeoHelper::setTitle(__('Search result "' . $query . '" '))
                 ->setDescription(__('Products: ') . '"' . $request->get('q') . '"');
-            Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Search'), route('public.products'));
+            Theme::breadcrumb()
+            //->add(__('Home'), url('/'))
+            ->add(__('Search'), route('public.products'));
 
-            return Theme::scope('ecommerce.search', compact('products', 'query'),
+            if($viewSearch){
+                return Theme::scope('ecommerce.search', compact('products', 'query'),
                 'plugins/ecommerce::themes.search')->render();
+            }
         }
 
         $products = $productService->getProduct($request, null, null,
@@ -348,15 +352,15 @@ class PublicProductController
 
         SeoHelper::setSeoOpenGraph($meta);
 
-        Theme::breadcrumb()
-            ->add(__('Home'), url('/'))
-            ->add(__('Products'), route('public.products'))
-            ->add($category->name, $category->url);
-
         $id = $category->id;
         $categories = ProductCategory::all();
         $catego = $category;
         $page = $this->getPage();
+
+        Theme::breadcrumb()
+            // ->add(__('Home'), url('/'))
+            // ->add(__('Products'), route('public.products'))
+            ->add($category->name, $category->url);
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $category);
         if($request->ajax()){
