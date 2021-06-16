@@ -17,8 +17,10 @@
                 @foreach (get_latest_posts(3) as $post)
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="{{$post->url}}">
-                                <img src="{{rvMedia::getImageUrl($post->image)}}" alt="">
+                            <a href="{{$post->url}}">   
+                                <div class="post-img">
+                                    <img src="{{rvMedia::getImageUrl($post->image)}}" alt="">
+                                </div>
                                 <h3>
                                     {{$post->name}}
                                 </h3>

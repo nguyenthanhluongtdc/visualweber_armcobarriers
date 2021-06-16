@@ -1,15 +1,30 @@
+@mixin str_split {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
 .news-all-wrapper {
     .box-media {
         .content {
             .item {
-                img {
-                    max-width: 100%;
-                    min-width: 100%;
+                .post-img {
+                    height: 183px;
+                    overflow: hidden;
+                    width: 100%;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                    }
                 }
                 h3 {
                     font-size: 20px;
                     color: $gray_text;
                     padding: 25px 15px;
+                    @include str_split();
+                    -webkit-line-clamp: 2;
+                    min-height: 98px;
                 }
                 h3:hover {
                     background-color: #fad906;
@@ -17,6 +32,9 @@
                 p {
                     color: $gray_text;
                     font-size: 15px;
+                    @include str_split();
+                    -webkit-line-clamp: 4;
+                    min-height: 110px;
                 }
                 .options {
                     padding-top: 20px;

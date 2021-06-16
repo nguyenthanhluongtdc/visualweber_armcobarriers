@@ -9,7 +9,9 @@
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="{{$event->url}}">
-                                <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
+                                <div class="post-img">
+                                    <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
+                                </div>
                                 <h3>
                                     {{$event->name}}
                                 </h3>
