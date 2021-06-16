@@ -10,8 +10,6 @@ $rem2-5: 2.5rem;
 $rem3: 3rem;
 $rem3-5: 3.5rem;
 $rem4: 4rem;
-
-
 .js-cookie-consent {
     display: none;
 }
@@ -81,7 +79,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     border: 1px solid white;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: unset;
     -webkit-box-shadow: 0 0 0px 1000px transparent inset;
     transition: background-color 5000s ease-in-out 0s;
 }
@@ -115,13 +113,12 @@ select:-webkit-autofill:focus {
     @media(max-width: 1400px) {
         padding-top: 86px;
     }
-    
 }
+
 @media(max-width: 991px) {
     .page-content {
         padding-top: 63px;
     }
-
     .container-customize {
         padding: 0 15px;
     }
