@@ -66,7 +66,7 @@ if(has_field($page, 'applications'))
 <section>
     <div class="container-customize">
         <div class="pls">
-            <p>Please <a href="{{route('public.single').'/'.get_slug_by_template('aplications')}}">contact us</a>  with any enquiries you may have.</p>
+            <p>Please <a href="{{route('public.single').'/'.get_slug_by_template('contact-us')}}">contact us</a>  with any enquiries you may have.</p>
         </div>
     </div>
 </section>
