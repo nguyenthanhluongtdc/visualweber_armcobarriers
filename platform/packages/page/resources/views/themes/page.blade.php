@@ -1,7 +1,19 @@
-<div class="container">
-    <h3 class="page-intro__title">{{ $page->name }}</h3>
-    {!! Theme::breadcrumb()->render() !!}
-</div>
-<div>
-    {!! apply_filters(PAGE_FILTER_FRONT_PAGE_CONTENT, clean($page->content, 'youtube'), $page) !!}
-</div>
+<section>
+    <div class="container-fluid-customize">
+        <div class="" style="padding-top: 4%;">
+        <div class="container-customize">
+          <div class="title-contact">
+            <h1>{{ $page->name }}</h1>
+          </div>
+        </div>
+        <div>
+      </div>
+</section>
+<section>
+    <div class="container-customize">
+        @includeIf("theme.armcobarriers::views.modules.breadcrumb")
+        
+            {!! apply_filters(PAGE_FILTER_FRONT_PAGE_CONTENT, clean($page->content), $page) !!}
+       
+    </div>
+</section>
