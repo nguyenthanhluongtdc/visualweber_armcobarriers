@@ -41,9 +41,9 @@
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
             <!---product infomation-->
             <div id="product_info" class="col-sm-12 col-md-12">
-                <div class="row ml-0">
+                <div class="row">
                     <div class="col-12 col-lg-6">
-                        <div class="row">
+                        <div class="row ml-0">
                             <div id="large-slider" class="col-lg-10 col-9 pl-0">
                                 <div class="splide__track">
                                     <ul class="splide__list">

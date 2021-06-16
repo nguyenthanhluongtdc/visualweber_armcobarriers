@@ -16,6 +16,7 @@ use Illuminate\Support\Arr;
 use OrderHelper;
 use Response;
 use Theme;
+use SeoHelper;
 
 class PublicCartController extends Controller
 {
@@ -160,7 +161,7 @@ class PublicCartController extends Controller
         }
 
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Shopping Cart'), route('public.cart'));
-
+        SeoHelper::setTitle(__('Cart | ArmcoBarriers'))->setDescription(__('Cart | ArmcoBarriers'));
         return Theme::scope(
             'ecommerce.cart',
             compact('promotionDiscountAmount', 'couponDiscountAmount'),

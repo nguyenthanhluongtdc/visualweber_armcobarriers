@@ -66,6 +66,7 @@ class PublicController extends Controller
      * @return \Illuminate\Http\RedirectResponse|Response
      */
     public function getAllPosts() {
+        SeoHelper::setTitle(__('POSTS | ArmcoBarriers'))->setDescription(__('POSTS | ArmcoBarriers'));
         $posts = Post::paginate(6);
         return Theme::scope('news-all',compact('posts'))->render();
     }
@@ -82,7 +83,7 @@ class PublicController extends Controller
         if (isset($data['slug']) && $data['slug'] !== $slug->key) {
             return redirect()->to(route('public.single', SlugHelper::getPrefix(Post::class) . '/' . $data['slug']));
         }
-
+        
         return Theme::scope($data['view'], $data['data'], $data['default_view'])
             ->render();
     }

@@ -113,7 +113,7 @@ class PublicProductController
 
         //
         if ($query && $viewSearch) {
-            $products = $productService->getProduct($request);
+            $products = $prodzuctService->getProduct($request);
 
             SeoHelper::setTitle(__('Search result "' . $query . '" '))
                 ->setDescription(__('Products: ') . '"' . $request->get('q') . '"');
@@ -129,7 +129,7 @@ class PublicProductController
         $categories = ProductCategory::all();
 
         //Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Products'), route('public.products'));
-        SeoHelper::setTitle(__('Products'))->setDescription(__('Products'));
+        SeoHelper::setTitle(__('Products | ArmcoBarriers'))->setDescription(__('Products | ArmcoBarriers'));
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
         if($request->ajax()){
