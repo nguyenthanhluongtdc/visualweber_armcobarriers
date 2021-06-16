@@ -70,7 +70,7 @@
                                         <li class="logout"><a href="{{ route('customer.logout') }}"><span>{{ __('Logout') }}</span></a></li>
                                     @endif
                                 </ul>
-                                <a href="">
+                                <a href="{{theme_option('footer-social')}}">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                             </div>
