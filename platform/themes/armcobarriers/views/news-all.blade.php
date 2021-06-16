@@ -14,7 +14,7 @@
           <div class="box-media pt-5 pb-5">
             <div class="content">
                 <div class="row">
-                @foreach (get_post_is_featured() as $post)
+                @foreach (get_latest_posts(3) as $post)
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                         <div class="item">
                             <a href="{{$post->url}}">
