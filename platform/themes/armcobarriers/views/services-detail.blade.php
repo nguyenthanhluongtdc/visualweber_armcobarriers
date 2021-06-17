@@ -13,7 +13,6 @@
                 <h2>{{ $service-> name}}</h2>
                 <p> {{ get_field($service, 'short_description') }}</p>
             </div>
-            <!-- <img src="{{ RvMedia::getImageUrl(get_field($service, 'img_service_item')) }}" alt=""> -->
         </div>
     </div>
 </section>
@@ -26,7 +25,6 @@
                     @if($tabs_services = get_services())
                     @foreach($tabs_services as $key => $tab)
                     <a class="nav-item nav-link <?php if($tab->name == $service['name']) { ?> active <?php } ?>" style="color:#000000" href="{{ $tab->url }}">{{ $tab->name }}</a>
-                    <!-- <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt=""> -->
                     @endforeach
                     @endif
                 </div>
@@ -56,6 +54,7 @@
 
 <div class="container-customize">
 {!! get_field($service, 'long_description') !!}
+{{ get_field($service, 'long_description') }}
 </div>
 
 {{--
