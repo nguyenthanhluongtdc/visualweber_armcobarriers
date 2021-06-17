@@ -57,8 +57,6 @@
         </div>
        
     </div>
-    
-
 <section>
     <div class="container-customize">
         <div class="wrap-our">
@@ -91,7 +89,7 @@
             <div class="container-customize">
                 <div class="content">
                     <h3> {{get_field( $page ,'services_solutions')}}</h3>
-                    <p>{!!get_field( $page ,'services_solutions_desc')!!}</p>
+                    {!!get_field( $page ,'services_solutions_desc')!!}
                 </div>
             </div>
         </div>
