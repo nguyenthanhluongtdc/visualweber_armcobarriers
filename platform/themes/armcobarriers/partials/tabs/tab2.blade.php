@@ -7,7 +7,9 @@
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <div class="item">
                         <a href="{{$post->url}}">
-                            <img src="{{RvMedia::getImageUrl($post->image)}}" alt="">
+                            <div class="box-img">
+                                <img src="{{RvMedia::getImageUrl($post->image)}}" alt="">
+                            </div>
                             <h3> {{$post->name}} </h3>
                         </a>
                         <div class="options pt-0 pb-0">

@@ -17,6 +17,17 @@ $gray_text: #262626;
 
         .content {
             .item {
+                .box-img{
+                    width: 100%;
+                    min-height: 180px;
+                    max-height: 180px;
+                    overflow: hidden;
+
+                    img {
+                        min-width: 100%;
+                        height: auto;
+                    }
+                }
 
                 .post-img {
                     height: 183px;
