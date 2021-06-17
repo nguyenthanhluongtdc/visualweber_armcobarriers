@@ -53,7 +53,9 @@
 <?php } ?>
 
 <div class="container-customize">
-{!! get_field($service, 'long_description') !!}
+    <div class="service_detail-content ">
+        {!! get_field($service, 'long_description') !!}
+    </div>
 </div>
 
 {{--
