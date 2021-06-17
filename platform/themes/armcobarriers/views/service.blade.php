@@ -110,7 +110,7 @@
                             <div class="post-title">
                                 <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
                             </div>
-                            <p>{!!get_sub_field($item ,'product_range_description')!!}</p>
+                            {!!get_sub_field($item ,'product_range_description')!!}
                         </div>
                     </div>
                     @endforeach
