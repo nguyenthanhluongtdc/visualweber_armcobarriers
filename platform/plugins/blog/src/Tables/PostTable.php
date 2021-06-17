@@ -213,6 +213,11 @@ class PostTable extends TableAbstract
     {
         $buttons = $this->addCreateButton(route('posts.create'), 'posts.create');
 
+        $buttons['import-field-group'] = [
+            'link' => 'https://google.com',
+            'text' => view('plugins/custom-field::_partials.import')->render(),
+        ];
+
         return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Post::class);
     }
 
