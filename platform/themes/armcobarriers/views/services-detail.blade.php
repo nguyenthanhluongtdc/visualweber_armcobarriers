@@ -54,7 +54,6 @@
 
 <div class="container-customize">
 {!! get_field($service, 'long_description') !!}
-{{ get_field($service, 'long_description') }}
 </div>
 
 {{--
