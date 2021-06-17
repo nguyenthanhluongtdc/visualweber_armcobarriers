@@ -15,7 +15,9 @@
                             <div class="title-slider">{{get_sub_field($item , 'slide_title') ? get_sub_field($item , 'slide_title'):''}}</div>
                             <div class="text-slider">
                                 <p>{{has_sub_field($item , 'text_of_service') ? get_sub_field($item , 'text_of_service') : ''}}</p>
-                                <p>{{get_sub_field($item , 'service_description') ? get_sub_field($item , 'service_description'):''}}</p>
+                                <p>
+                                    {{ get_sub_field($item , 'service_description') ? get_sub_field($item , 'service_description'):''}}
+                                </p>
                             </div>
                         </div>
                     </div>  
@@ -54,7 +56,6 @@
                                 <i class="fal fa-arrow-right"></i>
                             </div> 
                         </a>
-                        
                     </div>
                 @endforeach
                 @endif
@@ -172,7 +173,7 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.single').'/'.get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single')get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
                 <div class="count">
                     <div class="row w-100 mx-0">
