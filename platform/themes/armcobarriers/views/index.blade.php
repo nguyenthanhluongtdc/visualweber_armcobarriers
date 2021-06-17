@@ -33,7 +33,6 @@
         </div>        
     </div>
 </section>
-
 <section>
     <div class="location-office-wrapper">
         <div class="container-customize">
@@ -50,8 +49,6 @@
                 @if(has_field($page, 'lists_of_image'))
                 @foreach (get_field($page, 'lists_of_image') as $key=> $item)
                     <div class="grid__item">
-                        
-                        
                         <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
                             <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="">
                            <div class="gallery__item-text">
@@ -59,7 +56,6 @@
                                 <i class="fal fa-arrow-right"></i>
                             </div> 
                         </a>
-                        
                     </div>
                 @endforeach
                 @endif
@@ -84,7 +80,7 @@
                             <div class="post-title">
                                 <h3>{{has_sub_field($item, 'product_range_title') ? get_sub_field($item, 'product_range_title'):''}}</h3>
                             </div>
-                            <p>{!!get_sub_field($item, 'product_range_description') ? get_sub_field($item, 'product_range_description'):''!!}</p>
+                            <p>{!!has_sub_field($item, 'product_range_description') ? get_sub_field($item, 'product_range_description'):''!!}</p>
                         </div>
                     </div>
                     @endforeach
@@ -125,7 +121,7 @@
                         <a href="{{ $service_show->url }}">
                             {{-- <img class="img-background mw-100" src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
                            <div class="gallery__item-text">
-                                <p>{{ $service_show-> name}}</p>
+                                <p>{{ $service_show->name}}</p>
                                 <i class="fal fa-arrow-right"></i>
                             </div> 
                         </a>
@@ -143,7 +139,7 @@
     </div>
 </div>
  
-</section>
+</section> 
 <section>
     <div class="news-event-wrapper">
         <div class="container-customize">
@@ -177,7 +173,7 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.posts') }} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single').get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
                 <div class="count">
                     <div class="row w-100 mx-0">

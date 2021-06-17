@@ -5,7 +5,7 @@
            
             <div class="top2">
                 <h2>{{$page->name}}</h2>
-                <p>{{$page->description}}</p>
+                {{$page->description}}
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
                     @foreach (get_sub_field($item_content, 'description_colum') as $item)
                        <div class="item_column">
                         <h5>{{ get_sub_field($item, 'title') }}</h5>
-                        <p>{!! get_sub_field($item, 'description') !!}</p>
+                        {!! get_sub_field($item, 'description') !!}
                        </div>
                     @endforeach
                 </div>
@@ -57,13 +57,11 @@
         </div>
        
     </div>
-    
-
 <section>
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
-                <p>Our's Services</p>
+                <p>Warehouse, Industrial & Petrochemical Solutions</p>
             </div>
             <div class="row">
                 @if($tabs_services = get_services())
@@ -91,7 +89,7 @@
             <div class="container-customize">
                 <div class="content">
                     <h3> {{get_field( $page ,'services_solutions')}}</h3>
-                    <p>{!!get_field( $page ,'services_solutions_desc')!!}</p>
+                    {!!get_field( $page ,'services_solutions_desc')!!}
                 </div>
             </div>
         </div>
@@ -112,7 +110,7 @@
                             <div class="post-title">
                                 <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
                             </div>
-                            <p>{!!get_sub_field($item ,'product_range_description')!!}</p>
+                            {!!get_sub_field($item ,'product_range_description')!!}
                         </div>
                     </div>
                     @endforeach
