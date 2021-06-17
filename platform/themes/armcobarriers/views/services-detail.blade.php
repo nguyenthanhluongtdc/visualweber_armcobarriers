@@ -54,6 +54,10 @@
 </div>
 <?php } ?>
 
+<div class="container-customize">
+{!! (get_field($service, 'long_description') !!}
+</div>
+
 {{--
 <div class="container-customize">
     <?php if(!empty(get_field($service, 'text_content_service_detail'))) { ?>
