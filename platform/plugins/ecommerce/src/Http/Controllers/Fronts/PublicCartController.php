@@ -14,6 +14,8 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Arr;
 use OrderHelper;
+use Platform\Page\Models\Page;
+use Platform\Page\Repositories\Interfaces\PageInterface;
 use Response;
 use Theme;
 use SeoHelper;
@@ -78,7 +80,7 @@ class PublicCartController extends Controller
         foreach (Cart::instance('cart')->content() as $item) {
             if ($item->id == $product->id) {
                 $originalQuantity = $product->quantity;
-                $product->quantity = (int)$product->quantity - $item->qty;
+                $product->quantity = (int) $product->quantity - $item->qty;
                 if ($product->quantity < 0) {
                     $product->quantity = 0;
                 }
@@ -123,15 +125,17 @@ class PublicCartController extends Controller
                 'content'     => $cartItems,
                 'next_url'    => $nextUrl,
             ])
-            ->setMessage(__('Added product :product to cart successfully!',
-                ['product' => $product->original_product->name]));
+            ->setMessage(__(
+                'Added product :product to cart successfully!',
+                ['product' => $product->original_product->name]
+            ));
     }
 
     /**
      * @param HandleApplyPromotionsService $applyPromotionsService
      * @return Response
      */
-    public function getView(HandleApplyPromotionsService $applyPromotionsService)
+    public function getView(HandleApplyPromotionsService $applyPromotionsService, PageInterface $pageInterface)
     {
         if (!EcommerceHelper::isCartEnabled()) {
             abort(404);
@@ -161,14 +165,13 @@ class PublicCartController extends Controller
             }
         }
 
-        //get page
-        $page = $this->getPage('cart');
+        $page = $pageInterface->getFirstBy(['template' => 'cart']);
 
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Shopping Cart'), route('public.cart'));
         SeoHelper::setTitle(__('Cart | ArmcoBarriers'))->setDescription(__('Cart | ArmcoBarriers'));
         return Theme::scope(
             'ecommerce.cart',
-            compact('promotionDiscountAmount', 'couponDiscountAmount','page'),
+            compact('promotionDiscountAmount', 'couponDiscountAmount', 'page'),
             'plugins/ecommerce::themes.cart'
         )->render();
     }
@@ -200,7 +203,7 @@ class PublicCartController extends Controller
             }
             if ($product) {
                 $originalQuantity = $product->quantity;
-                $product->quantity = (int)$product->quantity - Arr::get($item['values'], 'qty', 0) + 1;
+                $product->quantity = (int) $product->quantity - Arr::get($item['values'], 'qty', 0) + 1;
                 if ($product->quantity < 0) {
                     $product->quantity = 0;
                 }
@@ -274,14 +277,5 @@ class PublicCartController extends Controller
         return $response
             ->setData(Cart::instance('cart')->content())
             ->setMessage(__('Empty cart successfully!'));
-    }
-
-    function getPage($template)
-    {
-        $slug = SlugHelper::getSlug(get_slug_by_template($template));
-        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
-        $page = Arr::get($result, 'data.page');
-
-        return $page;
     }
 }

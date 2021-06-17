@@ -21,18 +21,20 @@ if (!function_exists('get_page_by_slug')) {
      * @return mixed
      *
      */
-    function get_page_by_slug($slug) {
+    function get_page_by_slug($slug)
+    {
         return app(PageInterface::class)->getBySlug($slug, true);
     }
 }
 
 if (!function_exists('get_slug_by_template')) {
     /**
-     * @param $slug
+     * @param $template
      * @return mixed
      *
      */
-    function get_slug_by_template($template) {
+    function get_slug_by_template($template)
+    {
         return app(PageInterface::class)->getByTemplate($template);
     }
 }

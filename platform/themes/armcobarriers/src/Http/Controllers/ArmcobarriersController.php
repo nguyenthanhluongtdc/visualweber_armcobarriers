@@ -38,17 +38,17 @@ class ArmcobarriersController extends PublicController
             ->setTitle(@theme_option('seo_title'))
             ->setSiteName(@theme_option('site_title'))
             ->setUrl(route('public.index'))
-            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'),'og'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
             ->addProperty('image:width', '1200')
             ->addProperty('image:height', '630');
 
         if (defined('PAGE_MODULE_SCREEN_NAME')) {
             $homepageId = BaseHelper::getHomepageId();
-    
+
 
             if ($homepageId) {
                 $slug = SlugHelper::getSlug(null, SlugHelper::getPrefix(Page::class), Page::class, $homepageId);
-               
+
                 if ($slug) {
                     $data = (new PageService)->handleFrontRoutes($slug);
                     return Theme::scope('index', $data['data'], $data['default_view'])->render();
@@ -76,7 +76,7 @@ class ArmcobarriersController extends PublicController
             ->setTitle(@theme_option('seo_title'))
             ->setSiteName(@theme_option('site_title'))
             ->setUrl(route('public.index'))
-            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'),'og'))
+            ->setImage(RvMedia::getImageUrl(theme_option('seo_og_image'), 'og'))
             ->addProperty('image:width', '1200')
             ->addProperty('image:height', '630');
 
@@ -104,7 +104,7 @@ class ArmcobarriersController extends PublicController
 
         event(new RenderingSingleEvent($slug));
         Theme::layout('default');
-       
+
 
         if (!empty($result) && is_array($result)) {
             return Theme::scope(isset(Arr::get($result, 'data.page')->template) ? Arr::get($result, 'data.page')->template : Arr::get($result, 'view', ''), $result['data'], Arr::get($result, 'default_view'))->render();
@@ -124,7 +124,8 @@ class ArmcobarriersController extends PublicController
         return SiteMapManager::render('xml');
     }
 
-    public function getServices($slug) {
+    public function getServices($slug)
+    {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
 
         if (!$slug) {
@@ -133,23 +134,24 @@ class ArmcobarriersController extends PublicController
 
         $data['service'] = $slug->reference;
 
-        if(blank($data)) {
+        if (blank($data)) {
             abort(404);
         }
 
         return Theme::scope('services-detail', $data)->render();
     }
 
-    public function getPostAjax(Request $request) {
-        if($request->ajax()) {
+    public function getPostAjax(Request $request)
+    {
+        if ($request->ajax()) {
             $categoryId = $request->cate;
             $paginate   = $request->num;
             $order      = $request->order;
             $tabs       = app(PostInterface::class)->getByCategory($categoryId, $paginate, 0);
-            if($order!=1){
-                return view('theme.armcobarriers::partials.tabs.tab2', compact('tabs','categoryId'))->render();
-            }else {
-                return view('theme.armcobarriers::partials.tabs.tab1', compact('tabs','categoryId'))->render();
+            if ($order != 1) {
+                return view('theme.armcobarriers::partials.tabs.tab2', compact('tabs', 'categoryId'))->render();
+            } else {
+                return view('theme.armcobarriers::partials.tabs.tab1', compact('tabs', 'categoryId'))->render();
             }
         }
     }

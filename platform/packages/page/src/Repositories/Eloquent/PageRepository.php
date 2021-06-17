@@ -3,9 +3,10 @@
 namespace Platform\Page\Repositories\Eloquent;
 
 use Platform\Base\Enums\BaseStatusEnum;
+use Platform\Page\Models\Page;
 use Platform\Page\Repositories\Interfaces\PageInterface;
 use Platform\Support\Repositories\Eloquent\RepositoriesAbstract;
-use Illuminate\Support\Facades\DB;
+use SlugHelper;
 
 class PageRepository extends RepositoriesAbstract implements PageInterface
 {
@@ -88,26 +89,16 @@ class PageRepository extends RepositoriesAbstract implements PageInterface
         return $this->applyBeforeExecuteQuery($data)->get();
     }
 
-    public function getByTemplate($template = ""){
+    public function getByTemplate($template = "")
+    {
+        $page = app(PageInterface::class)->getFirstBy(['template' => $template], ['*']);
 
-        try{
-            $reference_id = DB::table('pages')
-        
-            ->where('template',$template)
-            ->select('id')
-            ->first();
-            
-            if($reference_id!=null){
-                $data = DB::table('slugs')
-                ->select('key')
-                ->where('reference_id', $reference_id->id)
-                ->where('reference_type','Platform\Page\Models\Page')
-                ->first();
-                return $data->key;
-            }
-        }catch(Exception $e){
-            return "Caught exception: $e->getMessage()";
+        if (\blank($page)) {
+            return '';
         }
-        return null;
+
+        $slug = Slughelper::getSlug(\null, Slughelper::getPrefix(Page::class), Page::class, $page->id);
+
+        return (SlugHelper::getPrefix(Page::class) . '/' . $slug->key) ?? '';
     }
 }
