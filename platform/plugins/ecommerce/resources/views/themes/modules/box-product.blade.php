@@ -4,8 +4,8 @@
             <div class="product-item-wrapper">
             <a href="{{$product->url}}">
                 <div class="product-item">
-                <img class="product-image" src="{{rvMedia::getImageUrl($product->image)}}" alt="">
-                <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
+                    <img class="product-image" src="{{rvMedia::getImageUrl($product->image)}}" alt="">
+                    <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
                 </div>
                 <h4 class="product-name">
                     {{$product->name}}

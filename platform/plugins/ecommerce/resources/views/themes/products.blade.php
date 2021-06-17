@@ -82,7 +82,7 @@
               <ul class="list-unstyled"> 
                 @if(isset($categories))
                   @foreach($categories as $category)
-                    @includeIf('plugins/ecommerce::themes.parent', ['category'=> $category, 'catego'=>$catego])
+                    @includeIf('plugins/ecommerce::themes.modules.parent', ['category'=> $category, 'catego'=>$catego])
                   @endforeach
                 @endif
               </ul>            
@@ -132,7 +132,7 @@
                 
                 @if(count($products) > 0)
                 <div class="box-products">
-                  @includeIf("plugins/ecommerce::themes.box-product",['products'=>$products,'num'=>$num,'query'=>$query])
+                  @includeIf("plugins/ecommerce::themes.modules.box-product",['products'=>$products,'num'=>$num,'query'=>$query])
                 </div>
                 @else 
                 <p class="set-height"> There are no matching products for this option </p>
