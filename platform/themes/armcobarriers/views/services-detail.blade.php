@@ -45,7 +45,7 @@
             {{ get_field($service, 'banner_title') }}
         </h4>
         <div class="desc">
-            {{ get_field($service, 'banner_description') }}
+            {!! get_field($service, 'banner_description') !!}
         </div>
     </div>
     <div class="right">
@@ -92,7 +92,7 @@
                             {{get_sub_field($item,'title')}}
                         </h3>
                         <div class="desc">
-                            {{get_sub_field($item,'description')}}
+                            {!!get_sub_field($item,'description')!!}    
                         </div>
                     </div>
                 @endforeach
