@@ -33,7 +33,6 @@
         </div>        
     </div>
 </section>
-{!! do_shortcode('[contact-form][/contact-form]') !!}
 <section>
     <div class="location-office-wrapper">
         <div class="container-customize">
@@ -82,7 +81,7 @@
                             <div class="post-title">
                                 <h3>{{has_sub_field($item, 'product_range_title') ? get_sub_field($item, 'product_range_title'):''}}</h3>
                             </div>
-                            <p>{!!get_sub_field($item, 'product_range_description') ? get_sub_field($item, 'product_range_description'):''!!}</p>
+                            <p>{!!has_sub_field($item, 'product_range_description') ? get_sub_field($item, 'product_range_description'):''!!}</p>
                         </div>
                     </div>
                     @endforeach
@@ -141,7 +140,7 @@
     </div>
 </div>
  
-</section>
+</section> 
 <section>
     <div class="news-event-wrapper">
         <div class="container-customize">
