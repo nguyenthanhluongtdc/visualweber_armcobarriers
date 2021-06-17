@@ -2,7 +2,7 @@
 
 Route::group(['namespace' => 'Platform\Ecommerce\Http\Controllers\Fronts', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
-        Route::get('cart', [
+        Route::get(get_slug_by_template('cart'), [
             'as'   => 'public.cart',
             'uses' => 'PublicCartController@getView',
         ]);

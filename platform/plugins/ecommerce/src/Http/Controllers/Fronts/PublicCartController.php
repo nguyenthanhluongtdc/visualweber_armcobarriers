@@ -17,6 +17,7 @@ use OrderHelper;
 use Response;
 use Theme;
 use SeoHelper;
+use SlugHelper;
 
 class PublicCartController extends Controller
 {
@@ -160,11 +161,14 @@ class PublicCartController extends Controller
             }
         }
 
+        //get page
+        $page = $this->getPage('cart');
+
         Theme::breadcrumb()->add(__('Home'), url('/'))->add(__('Shopping Cart'), route('public.cart'));
         SeoHelper::setTitle(__('Cart | ArmcoBarriers'))->setDescription(__('Cart | ArmcoBarriers'));
         return Theme::scope(
             'ecommerce.cart',
-            compact('promotionDiscountAmount', 'couponDiscountAmount'),
+            compact('promotionDiscountAmount', 'couponDiscountAmount','page'),
             'plugins/ecommerce::themes.cart'
         )->render();
     }
@@ -270,5 +274,14 @@ class PublicCartController extends Controller
         return $response
             ->setData(Cart::instance('cart')->content())
             ->setMessage(__('Empty cart successfully!'));
+    }
+
+    function getPage($template)
+    {
+        $slug = SlugHelper::getSlug(get_slug_by_template($template));
+        $result = apply_filters(BASE_FILTER_PUBLIC_SINGLE_DATA, $slug);
+        $page = Arr::get($result, 'data.page');
+
+        return $page;
     }
 }
