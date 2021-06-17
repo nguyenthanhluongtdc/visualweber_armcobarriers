@@ -138,6 +138,13 @@ class ArmcobarriersController extends PublicController
             abort(404);
         }
 
+        Theme::breadcrumb()
+            ->add(__('Home'), url('/'))
+            ->add(__('Our services'), url(get_slug_by_template('service')))
+            ->add($data['service']->name, $data['service']->url);
+
+        SeoHelper::setTitle($data['service']->name)->setDescription($data['service']->description);
+
         return Theme::scope('services-detail', $data)->render();
     }
 

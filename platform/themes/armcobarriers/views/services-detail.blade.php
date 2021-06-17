@@ -1,14 +1,7 @@
 <section>
     <div class="container-customize" id="install">
         <div class="wrap-top">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Homepage</a></li>
-                    <li class="breadcrumb-item"><a href="#">Service</a></li>
-                    <li class="breadcrumb-item"> {{ $service['name']}}</li>
-                </ol>
-            </nav>
-            
+            @includeIf("theme.armcobarriers::views.modules.breadcrumb")
             <div class="top2">
                 <h2>{{ $service-> name}}</h2>
                 <p> {{ get_field($service, 'short_description') }}</p>
@@ -38,21 +31,24 @@
         @includeIf("theme.armcobarriers::views.tab",['tabs'=> []])
     </div>
 </div>
-<?php if(!empty(get_field($service, 'banner_description'))) {?>
-<div class="service-detail-banner">
-    <div class="left">
-        <h4 class="left-title">
-            {{ get_field($service, 'banner_title') }}
-        </h4>
-        <div class="desc">
-            {{ get_field($service, 'banner_description') }}
+@if(!empty(get_field($service, 'banner_description')))
+    <div class="service-detail-banner">
+        <div class="left">
+            <h4 class="left-title">
+                {{ get_field($service, 'banner_title') }}
+            </h4>
+            <div class="desc">
+                {{ get_field($service, 'banner_description') }}
+            </div>
+        </div>
+        <div class="right">
+            <img src="{{ RvMedia::getImageUrl(get_field($service, 'big_picture')) }}" alt="">
         </div>
     </div>
-    <div class="right">
-        <img src="{{ RvMedia::getImageUrl(get_field($service, 'big_picture')) }}" alt="">
-    </div>
-</div>
-<?php } ?>
+@else
+    <p> Content updating </p>
+@endif
+
 <div class="container-customize">
     <?php if(!empty(get_field($service, 'text_content_service_detail'))) { ?>
     <ul class="service_detail-content ">
