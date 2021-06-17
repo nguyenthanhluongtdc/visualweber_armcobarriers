@@ -48,7 +48,7 @@
                     @foreach (get_sub_field($item_content, 'description_colum') as $item)
                        <div class="item_column">
                         <h5>{{ get_sub_field($item, 'title') }}</h5>
-                        <p>{!! get_sub_field($item, 'description') !!}</p>
+                        {!! get_sub_field($item, 'description') !!}
                        </div>
                     @endforeach
                 </div>
