@@ -90,8 +90,11 @@ class PostTable extends TableAbstract
                     return RvMedia::getImageUrl($item->image, 'thumb', false, RvMedia::getDefaultImage());
                 }
 
-                return Html::image(RvMedia::getImageUrl($item->image, 'thumb', false, RvMedia::getDefaultImage()),
-                    $item->name, ['width' => 50]);
+                return Html::image(
+                    RvMedia::getImageUrl($item->image, 'thumb', false, RvMedia::getDefaultImage()),
+                    $item->name,
+                    ['width' => 50]
+                );
             })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
@@ -212,11 +215,6 @@ class PostTable extends TableAbstract
     public function buttons()
     {
         $buttons = $this->addCreateButton(route('posts.create'), 'posts.create');
-
-        $buttons['import-field-group'] = [
-            'link' => 'https://google.com',
-            'text' => view('plugins/custom-field::_partials.import')->render(),
-        ];
 
         return apply_filters(BASE_FILTER_TABLE_BUTTONS, $buttons, Post::class);
     }
