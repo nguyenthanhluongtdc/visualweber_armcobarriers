@@ -384,8 +384,8 @@ if (!function_exists('get_other_products')) {
      */
     function get_other_products($limit = 4)
     {
-        $other_product = Product::all()->random($limit);
-
+        $other_product = Product::all()->random()->limit($limit);
+   
         return $other_product;
     }
 }
