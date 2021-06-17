@@ -173,7 +173,7 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.single').'/'.get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single').get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
                 <div class="count">
                     <div class="row w-100 mx-0">
