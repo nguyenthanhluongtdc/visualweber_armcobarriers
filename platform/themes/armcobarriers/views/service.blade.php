@@ -5,7 +5,7 @@
            
             <div class="top2">
                 <h2>{{$page->name}}</h2>
-                <p>{{$page->description}}</p>
+                {{$page->description}}
             </div>
         </div>
     </div>
