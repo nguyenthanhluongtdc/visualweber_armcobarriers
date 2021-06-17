@@ -53,6 +53,8 @@
     </div>
 </div>
 <?php } ?>
+
+{{--
 <div class="container-customize">
     <?php if(!empty(get_field($service, 'text_content_service_detail'))) { ?>
     <ul class="service_detail-content ">
@@ -64,7 +66,7 @@
     </ul>
     <?php } ?>
 </div>
-
+--}}
 
 <div class="service_detail-imglist container-customize">
     <?php if(!empty(get_field($service, 'img_list_service_detail'))) { ?>
