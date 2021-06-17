@@ -15,9 +15,7 @@
                             <div class="title-slider">{{get_sub_field($item , 'slide_title') ? get_sub_field($item , 'slide_title'):''}}</div>
                             <div class="text-slider">
                                 <p>{{has_sub_field($item , 'text_of_service') ? get_sub_field($item , 'text_of_service') : ''}}</p>
-                                <p>
-                                    {{ get_sub_field($item , 'service_description') ? get_sub_field($item , 'service_description'):''}}
-                                </p>
+                                {!!get_sub_field($item , 'service_description') ? get_sub_field($item , 'service_description'):''!!}
                             </div>
                         </div>
                     </div>  
