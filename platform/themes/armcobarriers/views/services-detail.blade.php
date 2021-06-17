@@ -88,7 +88,7 @@
             </div>
             <div class="row">
                 @foreach (get_field($service, 'product_quality_16233289513') as $item)
-                    <div class="col-md-3 item_img_sv">
+                    <div class="col-md-4 item_img_sv">
                         <h3 class="title">
                             {{get_sub_field($item,'title')}}
                         </h3>
