@@ -19,7 +19,7 @@ $(document).ready(function() {
 })
 
 $('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
-    const element = $('.menu-pc-dropdown');
+    const element = $('#nav-bar-dropdown');
     if (!element) return
     if (element.hasClass('is-show')) {
         element.toggleClass('is-show')
