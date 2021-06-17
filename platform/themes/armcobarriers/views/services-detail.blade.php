@@ -36,7 +36,7 @@
                 {{ get_field($service, 'banner_title') }}
             </h4>
             <div class="desc">
-                {{ get_field($service, 'banner_description') }}
+                {!! get_field($service, 'banner_description') !!}
             </div>
         </div>
         <div class="right">
