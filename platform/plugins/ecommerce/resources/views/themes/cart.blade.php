@@ -1,6 +1,27 @@
 @php Theme::set('pageName', __('Shopping Cart')); $crossSellProducts = []; @endphp
 
+@if(isset($page))
+  @php 
+    $content_banner = has_field($page, 'content_banner');
+    $img_banner = has_field($page, 'image_banner');
+  @endphp
+@endif
 @includeIf("theme.armcobarriers::views.modules.breadcrumb")
+
+<section>
+  <div class="container-fluid-customize">
+    <div class="introduction-product-banner" style="margin-top: 0; margin-bottom: 50px;background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 9%) 44%, rgb(255 255 255 / 62%) 57%, rgb(239 239 239 / 99%) 68%) ,url({{ rvMedia::getImageUrl($img_banner) }})">
+    <div class="container-customize">
+      <div class="d-flex align-items-center h-100 col-lg-7 col-12">
+        <p>
+          {!! $content_banner !!}
+        </p>
+      </div>
+    </div>
+    <div>
+  </div>
+</section>
+
 <div class="section">
     <div class="container">
         @if (Cart::instance('cart')->count() > 0)
