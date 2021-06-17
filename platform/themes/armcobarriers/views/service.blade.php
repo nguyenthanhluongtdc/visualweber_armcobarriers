@@ -63,7 +63,7 @@
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
-                <p>Our's Services</p>
+                <p> Warehouse, Industrial & Petrochemical Solutions</p>
             </div>
             <div class="row">
                 @if($tabs_services = get_services())
