@@ -45,12 +45,15 @@
     opacity: 1;
     visibility: hidden;
 }
-.navbar-nav .nav-item.dropdown:hover > .overlay_background{
-    visibility: visible;
+
+.navbar-nav .nav-item.dropdown:hover>.overlay_background {
+    @media(min-width: 992px) {
+        visibility: visible;
+    }
 }
-.overlay_background:hover{
-    
-}
+
+.overlay_background:hover {}
+
 .overlay_background_active {
     opacity: 1;
     visibility: visible;
@@ -208,7 +211,7 @@
                 .menu {
                     display: flex;
                     margin-left: -20px;
-                    width: 50%;
+                    width: 75%;
                     position: relative;
                 }
                 .menu:hover .sub-menu-child,
