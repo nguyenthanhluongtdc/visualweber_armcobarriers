@@ -30,7 +30,7 @@ develop:
     - cd /home/dev/htdocs/armcobarriers/
     - git pull
     - bootstrap="$(git log -1 --pretty=%B | grep bootstrap)" && ([[ $bootstrap ]] && bash bin/bootstrap.sh -e d)
-    - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && sass public/themes/armcobarriers/sass/common.scss:public/themes/armcobarriers/css/common.css --style compressed)
+    - sass="$(git log -1 --pretty=%B | grep sass)" && ([[ $sass ]] && sass platform/themes/armcobarriers/assets/sass/common.scss:public/themes/armcobarriers/css/common.css --style compressed)
     - npm="$(git log -1 --pretty=%B | grep npm)" && ([[ $npm ]] && npm install n -g && n stable && n latest && npm install && npm update && npm run dev)
     - migrate="$(git log -1 --pretty=%B | grep migrate)" && ([[ $migrate ]] && yes | php artisan migrate)    
     - delivery="$(git log -1 --pretty=%B | grep delivery)" && ([[ $delivery ]] && bash bin/delivery.sh -e p)
