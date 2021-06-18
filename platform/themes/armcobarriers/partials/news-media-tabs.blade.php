@@ -5,16 +5,16 @@
     //get id category tabs
     $pathFull = url()->full();
     $pos = strpos($pathFull, 'category=');
-    $cateId = 0;
+    $cateActive = 0;
     if($pos!=false){
         $pathSplit = substr($pathFull, $pos+9);
-        $cateId = explode("&",$pathSplit)[0];
+        $cateActive = explode("&",$pathSplit)[0];
     }
 @endphp
 
 @php $active = false; @endphp
 @foreach($menu_nodes as $row)
-    @if($row->reference_id==$cateId) 
+    @if($row->reference_id==$cateActive) 
         @php $active = true; @endphp 
     @endif
 @endforeach
@@ -25,7 +25,7 @@
         <div class="slider" id="slide-scroll"></div>
         @foreach($menu_nodes as $key => $row)
             <li class="item">
-                 <a class="nav-link {{($key==0&&$active==false)?'active':($cateId==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                 <a class="nav-link {{($key==0&&$active==false)?'active':($cateActive==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
                     {{ $row->title }}
                 </a>
             </li>
@@ -35,31 +35,21 @@
     <!-- Tab panes -->
     <div class="tab-content" >
         @if(!empty($menu_nodes[0]))
-            @php 
-                $categoryId = $menu_nodes[0]->reference_id;
-                $tabs1 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
-            @endphp
-            <div class="tab-pane fade tab1 {{$active==false || $cateId==$categoryId ?'show active': ''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab1",["tabs"=>$tabs1, "categoryId"=>$categoryId])
-            </div>
+            @php $cateId = $menu_nodes[0]->reference_id; @endphp
+            @includeIf("theme.armcobarriers::partials.tabs.tab1",["cateActive"=>$cateActive, "cateId"=>$cateId,"active"=>$active])
         @endif
 
         @if(!empty($menu_nodes[1]))
-            @php 
-                $categoryId = $menu_nodes[1]->reference_id;
-                $tabs2 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
-            @endphp
-            <div class="tab-pane fade tab2 {{$cateId==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab1",["tabs"=>$tabs2,"categoryId"=>$categoryId])
-            </div>
+            @php $cateId = $menu_nodes[1]->reference_id; @endphp
+            @includeIf("theme.armcobarriers::partials.tabs.tab1",["cateActive"=>$cateActive, "cateId"=>$cateId, "active"=>$active])
         @endif
 
         @if(!empty($menu_nodes[2]))
             @php 
                 $categoryId = $menu_nodes[2]->reference_id;
-                $tabs3 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
+                $tabs3 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateActive?true:false);
             @endphp
-            <div class="tab-pane fade tab3 {{$cateId==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
+            <div class="tab-pane fade tab3 {{$cateActive==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
                 @includeIf("theme.armcobarriers::partials.tabs.tab2",["tabs"=>$tabs3,"categoryId"=>$categoryId])
             </div>
         @endif
@@ -70,7 +60,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        var target = $("#tab-tab{{$cateId}}").attr("href");
+        var target = $("#tab-tab{{$cateActive}}").attr("href");
         if(target) {
             $('html, body').stop().animate({
         		scrollTop: $(target).offset().top-180

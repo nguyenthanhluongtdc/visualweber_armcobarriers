@@ -1,25 +1,33 @@
 
-
-<div class="item-row" style="margin-bottom: 50px;">
-    <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
-        @foreach($tabs as $post) 
-            <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
-                <div class="row">
-                    <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
-                        <a href="{{$post->url}}">
-                            <img class="mw-100" src="{{RvMedia::getImageUrl($post->image)}}" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-7 col-md-7 col-sm-6 col-6">
-                        <h5> <a href="{{$post->url}}"> {{$post->name}} </a> </h5>
-                        <div class="date"> {{$post->created_at->format('j F Y')}} </div>
-                        <p class="des">
-                            {{$post->description}} 
-                        </p>
+@php $number_per_tabs = theme_option('number_of_posts_in_a_tabs'); @endphp
+@php
+    $cateActive = isset($cateActive) ? $cateActive : 0;
+    dd($active);
+    $active = isset($active) ? $active : false;
+    $tabs1 = get_posts_by_category($cateId, $number_per_tabs,0, $cateId==$cateActive?true:false);
+@endphp
+<div class="tab-pane fade tab1 {{$active==false || $cateActive==$cateId ?'show active': ''}}" id="tab{{$cateId}}" role="tabpanel" aria-labelledby="tab{{$cateId}}-tab">
+    <div class="item-row" style="margin-bottom: 50px;">
+        <div class="row ml-md-0 ml-sm-0 ml-xs-0 pr-md-0 pr-sm-0 pr-xs-0">
+            @foreach($tabs1 as $post) 
+                <div class="col-lg-6 mb-md-line p0-md pr-md-0 pr-sm-0 pr-xs-0 mb-3">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-6 col-6 pr-0 mb-3 mb-sm-0">
+                            <a href="{{$post->url}}">
+                                <img class="mw-100" src="{{RvMedia::getImageUrl($post->image)}}" alt="">
+                            </a>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-6 col-6">
+                            <h5> <a href="{{$post->url}}"> {{$post->name}} </a> </h5>
+                            <div class="date"> {{$post->created_at->format('j F Y')}} </div>
+                            <p class="des">
+                                {{$post->description}} 
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     </div>
 </div>
-{!! $tabs->links('vendor.pagination.tabs-custom',['category' => $categoryId, 'order'=>1]) !!}
+{!! $tabs1->links('vendor.pagination.tabs-custom',['category' => $cateId, 'order'=>1]) !!}
