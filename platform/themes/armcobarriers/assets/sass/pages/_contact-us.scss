@@ -72,14 +72,19 @@
 }
 
 .info-contact {
+    .tab-content {
+        .head-office {
+            a:focus {
+                color: #007bff;
+                ;
+            }
+        }
+    }
     h4 {
         font-weight: bold;
     }
     p {
         padding: 5px 0;
-    }
-    a {
-        color: $gray-text;
     }
 }
 
