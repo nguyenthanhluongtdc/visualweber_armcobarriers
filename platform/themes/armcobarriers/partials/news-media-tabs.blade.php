@@ -7,7 +7,7 @@
     $pos = strpos($pathFull, 'category=');
     $cateId = 0;
     if($pos!=false){
-        $pathSplit = substr($pathFull, $pos+5);
+        $pathSplit = substr($pathFull, $pos+9);
         $cateId = explode("&",$pathSplit)[0];
     }
 @endphp
