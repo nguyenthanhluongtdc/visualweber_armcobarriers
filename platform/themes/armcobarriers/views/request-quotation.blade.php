@@ -3,7 +3,7 @@
         <div class="contact-banner" style="background-image:url({{ get_object_image(get_field($page,'picture'))}})">
             <div class="container-customize">
                 <div class="title-contact">
-                    <h1>Contact Us</h1>
+                    <h1> {{$page->name}} </h1>
                     <p>{{has_field($page ,'contact_us_desc') ? get_field($page ,'contact_us_desc'):''}}
                     </p>
                 </div>
