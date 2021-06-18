@@ -4,13 +4,12 @@
 @php 
     //get id category tabs
     $pathFull = url()->full();
-    $pos = strpos($pathFull, 'cate=');
+    $pos = strpos($pathFull, 'category=');
     $cateId = 0;
     if($pos!=false){
         $pathSplit = substr($pathFull, $pos+5);
         $cateId = explode("&",$pathSplit)[0];
     }
-    
 @endphp
 
 @php $active = false; @endphp

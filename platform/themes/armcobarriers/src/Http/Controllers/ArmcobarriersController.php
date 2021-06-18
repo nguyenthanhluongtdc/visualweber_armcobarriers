@@ -151,7 +151,7 @@ class ArmcobarriersController extends PublicController
     public function getPostAjax(Request $request)
     {
         if ($request->ajax()) {
-            $categoryId = $request->cate;
+            $categoryId = $request->category;
             $paginate   = $request->num;
             $order      = $request->order;
             $tabs       = app(PostInterface::class)->getByCategory($categoryId, $paginate, 0);

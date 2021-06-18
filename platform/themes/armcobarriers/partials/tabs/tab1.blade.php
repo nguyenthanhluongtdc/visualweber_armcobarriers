@@ -22,4 +22,4 @@
         @endforeach
     </div>
 </div>
-{!! $tabs->links('vendor.pagination.tabs-custom',['cate' => $categoryId, 'order'=>1]) !!}
+{!! $tabs->links('vendor.pagination.tabs-custom',['category' => $categoryId, 'order'=>1]) !!}
