@@ -9,6 +9,7 @@ register_page_template([
     'products' => 'Products',
     'products-detail' => 'Products-detail',
     'about-us' => 'About-us',
+    'request-quotation' => 'Request-quotation',
     'media-details' =>'Media-details',
     'news-media' => 'News-media',
     'news-detail' => 'News-detail',
