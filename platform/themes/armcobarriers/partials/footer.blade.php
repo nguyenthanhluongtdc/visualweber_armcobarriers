@@ -66,6 +66,18 @@
 
 {!! Theme::footer() !!}
 <script>
+
+    $('.overlay_background').hover(function(){
+        // $('.menu-pc-dropdown').hide();
+        $('.overlay_background').hide();
+    });
+    $('.navbar-nav .nav-item.dropdown').hover(function(){
+        // $('.menu-pc-dropdown').hide();
+        $('.overlay_background').show();
+    });
+    
+</script>
+<script>
     AOS.init();
     $('.gallery-carousel').owlCarousel({
 

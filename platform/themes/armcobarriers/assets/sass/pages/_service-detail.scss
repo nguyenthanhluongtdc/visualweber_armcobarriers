@@ -215,6 +215,11 @@
 }
 
 .service_detail-content {
+    code {
+        p {
+            margin-top: 1rem;
+        }
+    }
     list-style-position: inside;
     padding: 50px 0;
     display: flex;

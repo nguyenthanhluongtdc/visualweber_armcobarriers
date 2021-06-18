@@ -32,7 +32,7 @@
 }
 
 .overlay_background {
-    top: 0;
+    top: 30%;
     bottom: 0;
     right: 0;
     position: fixed;
@@ -42,10 +42,15 @@
     left: 0;
     z-index: 1;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
 }
-
+.navbar-nav .nav-item.dropdown:hover > .overlay_background{
+    visibility: visible;
+}
+.overlay_background:hover{
+    
+}
 .overlay_background_active {
     opacity: 1;
     visibility: visible;
