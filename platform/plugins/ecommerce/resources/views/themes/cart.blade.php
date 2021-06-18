@@ -144,7 +144,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-lg-8 col-md-6 text-left text-md-right">
-                                                <button type="submit" class="rounded-0 btn btn-line-fill btn-sm">{{ __('Update cart') }}</button>&nbsp;&nbsp;&nbsp;
+                                                <button type="submit" class="btn-common btn btn-line-fill">{{ __('Update cart') }}</button>&nbsp;&nbsp;&nbsp;
                                             </div>
                                         </div>
                                     </td>
@@ -197,7 +197,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <button type="submit" class="rounded-0 btn btn-fill-out" name="checkout">{{ __('Proceed To CheckOut') }}</button>
+                            <button type="submit" class="btn-common btn btn-fill-out" name="checkout">{{ __('Proceed To CheckOut') }}</button>
                         </div>
                     </div>
                 </div>

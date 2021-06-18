@@ -4,7 +4,7 @@
 @if($category->parent_id==0)
 <li class="active">
     <div class="d-flex align-items-center justify-content-between px-3 ">
-        <a href="{{$category->url}}" class="toggle-text"><p> {!! $category->name !!} </p></a>
+        <a href="{{$category->url}}" class="toggle-text"><p class="m-0"> {!! $category->name !!} </p></a>
         <a href="#side{{$category->id}}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
          
             @if(Menu::checkChild(['parent_id' => $category->id]))
