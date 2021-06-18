@@ -63,7 +63,9 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         @foreach($menu_nodes as $key => $row)
         @if ($row->has_child)
+        
         <li class="nav-link nav-item dropdown dmenu">
+            <div class="overlay_background"></div> 
             <a id="nav-bar-dropdown" class=" nav__menu-link dropdown-toggle" href="{{$row->url }}">{{ $row->name }}</a>
             <div class="dropdown-menu sm-menu menu-pc-dropdown">
                 <div class="row">

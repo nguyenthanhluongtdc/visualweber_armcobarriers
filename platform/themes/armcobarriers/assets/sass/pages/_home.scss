@@ -214,6 +214,9 @@
         height: 176px;
     }
 }
+.item_sv_home:nth-child(8), .item_sv_home:nth-child(9) , .item_sv_home:nth-child(10), .item_sv_home:nth-child(7){
+display: none;
+}
 .bg-slider {
     padding-top: 40%;
     background-repeat: no-repeat;
