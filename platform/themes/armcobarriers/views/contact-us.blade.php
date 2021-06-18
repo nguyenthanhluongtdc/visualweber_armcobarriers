@@ -100,7 +100,7 @@
             <span class="checkmark"></span>
           </label>
           <button class="bsend-button" type="submit" value="SEND">
-              Send Message
+              Submit
           </button>
           
         </div>
