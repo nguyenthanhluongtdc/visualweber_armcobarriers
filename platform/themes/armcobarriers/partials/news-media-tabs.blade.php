@@ -22,7 +22,7 @@
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
-        <div class="slider"></div>
+        <div class="slider" id="slide-scroll"></div>
         @foreach($menu_nodes as $key => $row)
             <li class="item">
                  <a class="nav-link {{($key==0&&$active==false)?'active':($cateId==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
@@ -67,41 +67,49 @@
 </div>
                 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-    $(document).on('click', '.pagination a', function(event){
-        event.preventDefault(); 
-        let path = $(this).attr('href').split('page=')[1];
-        fetch_data(path);
-    });
-
-    function fetch_data(path)
-    {
-        path = "?page="+path+"&num={{$number_per_tabs}}";
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
+        var target = $("#tab-tab{{$cateId}}").attr("href");
+        $('html, body').stop().animate({
+        		scrollTop: $(target).offset().top-180
+        }, 600, function() {
+            location.hash = target;
         });
 
-        $.ajax({
-        url:"/news-media/ajax"+path,
-        success:function(response){
-                $('.tab-pane.active').html(response)
-                if(response){
-                    window.history.pushState({}, '', path);
+        $(document).on('click', '.pagination a', function(event){
+            event.preventDefault(); 
+            let path = $(this).attr('href').split('page=')[1];
+            fetch_data(path);
+        });
+
+        function fetch_data(path)
+        {
+            path = "?page="+path+"&num={{$number_per_tabs}}";
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
-            }
-        });
-    }
+            });
 
-    $("#tile-1 .nav-tabs a").on('click',function() {
-        var position = $(this).parent().position();
-        var width = $(this).parent().width() * 0.3;
-        $("#tile-1 .slider").css({ "left": +position.left, "width": width });
+            $.ajax({
+            url:"/news-media/ajax"+path,
+            success:function(response){
+                    $('.tab-pane.active').html(response)
+                    if(response){
+                        window.history.pushState({}, '', path);
+                    }
+                }
+            });
+        }
+
+        $("#tile-1 .nav-tabs a").on('click',function() {
+            var position = $(this).parent().position();
+            var width = $(this).parent().width() * 0.3;
+            $("#tile-1 .slider").css({ "left": +position.left, "width": width });
+        });
+        var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width() * 0.3;
+        var actPosition = $("#tile-1 .nav-tabs .active").position();
+        $("#tile-1 .slider").css({ "left": +actPosition.left, "width": actWidth });
     });
-    var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width() * 0.3;
-    var actPosition = $("#tile-1 .nav-tabs .active").position();
-    $("#tile-1 .slider").css({ "left": +actPosition.left, "width": actWidth });
-});
 </script>
