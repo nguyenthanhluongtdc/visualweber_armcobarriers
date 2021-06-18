@@ -15,6 +15,14 @@
 @includeIf("theme.armcobarriers::views.modules.breadcrumb")
 
 <section>
+    <div class="content mb-5">
+        <div class="container-customize">
+            {!!$page->content!!}
+        </div>
+    </div>
+</section>
+
+<section>
     <div class="container-customize info-contact">
         <div class="let-talk pt-3">
             <h3>Let’s talk</h3>
@@ -70,15 +78,7 @@
                     {!! Form::close() !!}
                 </div>
             </div>
-            <div class="visit-title">
-                <h3>Visit us</h3>
-            </div>
         </div>
     </div>
 </section>
-    <div class="container-fluid-customize">
-        <div class="map-location">
-        <iframe src="{{has_field($page,'link_map') ? get_field($page,'link_map'):''}}" width="1920" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </div>
 
