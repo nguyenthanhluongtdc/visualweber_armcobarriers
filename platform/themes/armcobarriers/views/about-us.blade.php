@@ -19,38 +19,40 @@ if(has_field($page, 'about_us'))
             </div>
         </nav>
 </div>
-        <div class="tab-content tabs-about" id="nav-tabContent">
-        @foreach($tabs_about as $key => $tab)
-            <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
-                <div class="container-fluid-customize">
-                    <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
-                        <div class="container-customize h-100">
-                            <div class="content-about d-flex align-items-center h-100">
-                                <div>@php echo get_sub_field($tab, 'tabs_description') @endphp</div>
-                            </div>
+
+<div class="tab-content tabs-about" id="nav-tabContent">
+    @foreach($tabs_about as $key => $tab)
+        <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
+            <div class="container-fluid-customize">
+                <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(get_sub_field( $tab ,'picture'))}})">
+                    <div class="container-customize h-100">
+                        <div class="content-about d-flex align-items-center h-100">
+                            <div class="col-xl-9 col-lg-8 col-12">@php echo get_sub_field($tab, 'tabs_description') @endphp</div>
                         </div>
                     </div>
                 </div>
             </div>
-        @endforeach
         </div>
+    @endforeach
+</div>
+
 <div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo"id="whatwedo">
             <h2> What We Do</h2>
         </div>
-                <div class="wrap1">
-                    <div class="row">
-                        @if(has_field($page, 'what_we_do'))
+        <div class="wrap1">
+            <div class="row">
+                @if(has_field($page, 'what_we_do'))
                     @foreach (get_field($page, 'what_we_do') as $item)
                         <div class="col-lg-4 col-md-6 design">
                             <h3>{{get_sub_field($item , 'tabs_title')}}</h3>
                             <p>{!!get_sub_field($item, 'tabs_description')!!}</p>
                         </div>
                     @endforeach
-                    @endif
-                    </div>
-                </div>
+                @endif
+            </div>
+        </div>
        <div class="wrap2">
            <div class="icon">
             <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">

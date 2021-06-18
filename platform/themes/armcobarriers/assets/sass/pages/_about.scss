@@ -31,7 +31,13 @@
     }
 }
 
-
+.main-scroll {
+    nav {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-bottom: 10px;        
+    }
+}
 
 .nav-tabs {
     border-bottom: none;
@@ -53,10 +59,17 @@
 .wrap-cont {
     position: relative;
     height: 460px;
-    .content-about {
+    .content-about { 
         span {
             font-size: 17px;
             font-family: $Arial;
+        }
+        >div {
+            display: -webkit-box;
+            -webkit-line-clamp: 15;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
@@ -509,17 +522,9 @@
         padding: 5% 0 !important;
     }
     .wrap-cont {
-        .content-about {
-            >div {
-                display: -webkit-box;
-                -webkit-line-clamp: 15;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            span {
-                font-size: 15px;
-            }
+       
+        span {
+            font-size: 15px;
         }
     }
     .wrap-product {
