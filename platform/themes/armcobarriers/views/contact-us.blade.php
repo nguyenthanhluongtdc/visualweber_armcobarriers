@@ -40,33 +40,10 @@
           
           <div class=" tab-pane fade {{get_sub_field($item_contact,'tabs_title')=="Head Office" ? "active show":""}}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tabpanel" aria-labelledby="nav-home-tab">
             <div class="head-office">
-            @foreach(get_sub_field($item_contact,'content_tabs') as $item1)
-            
-              <div class="info-wrapper">
-                <div class="info-prefix">
-                 
-                  <h4>{{get_sub_field($item1,'name')}}</h4>
-                  <p>Phone</p>
-                  <p>Fax</p>
-                  @if(has_sub_field($item1,'mobile'))
-                  <p style="padding: 0">Mobile</p>
-                    @endif
-                  <p>Email</p>
-                  
-                </div>
-                <div class="info-sunfix">
-                  <h4>{{get_sub_field($item1,'position')}}</h4>
-                  <p>{{get_sub_field($item1,'phone')}}</p>
-                  <p>{{get_sub_field($item1,'fax')}}</p>
-                  <p  style="padding: 0"> @if(has_sub_field($item1,'mobile'))
-                    {{get_sub_field($item1,'mobile')}}
-                    @endif
-                  </p>
-                  <p>{{get_sub_field($item1,'email')}}</p>
-                 
-                </div>
-              </div>
-            @endforeach
+              <code>
+                {!!get_sub_field($item_contact,'content_tabs')!!} 
+              </code>
+                    
             </div>
           </div>
           @endforeach
@@ -119,7 +96,7 @@
         </div>
         <div class="policy custom-checkbox">
           <label class="customcheck">
-            <input type="checkbox" checked="checked" required><a href="">I have read and accept the Privacy Policy</a>
+            <input type="checkbox" checked="checked"><a href="" data-toggle="modal" data-target="#exampleModalLong">I have read and accept the Privacy Policy</a>
             <span class="checkmark"></span>
           </label>
           <button class="bsend-button" type="submit" value="SEND">
