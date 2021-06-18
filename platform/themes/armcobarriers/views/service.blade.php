@@ -102,7 +102,6 @@
             </div>
             <div class="wrap-descrip">
                 <div class="row">
-                    @php dd(get_field($page, 'product_range')) @endphp
                     @foreach (get_field($page, 'product_range') as $item)
                     <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
                         <div class="post">
