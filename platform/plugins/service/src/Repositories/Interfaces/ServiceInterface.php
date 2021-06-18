@@ -6,4 +6,6 @@ use Platform\Support\Repositories\Interfaces\RepositoryInterface;
 
 interface ServiceInterface extends RepositoryInterface
 {
+    public function getService();
+    
 }
