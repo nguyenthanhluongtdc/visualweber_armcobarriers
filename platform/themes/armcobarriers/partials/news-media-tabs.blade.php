@@ -73,9 +73,7 @@
         var target = $("#tab-tab{{$cateId}}").attr("href");
         $('html, body').stop().animate({
         		scrollTop: $(target).offset().top-180
-        }, 600, function() {
-            location.hash = target;
-        });
+        }, 600);
 
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
