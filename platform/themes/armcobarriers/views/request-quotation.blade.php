@@ -1,10 +1,10 @@
 <section>
     <div class="container-fluid-customize">
-        <div class="contact-banner" style="background-image:url({{ get_object_image(get_field($page,'picture'))}})">
+        <div class="contact-banner" style="background-image:url({{ get_object_image(has_field($page,'image_banner_16240230432'))}})">
             <div class="container-customize">
                 <div class="title-contact">
                     <h1> {{$page->name}} </h1>
-                    <p>{{has_field($page ,'contact_us_desc') ? get_field($page ,'contact_us_desc'):''}}
+                    <p>{{has_field($page ,'content_banner_16240230431')}}
                     </p>
                 </div>
             </div>
