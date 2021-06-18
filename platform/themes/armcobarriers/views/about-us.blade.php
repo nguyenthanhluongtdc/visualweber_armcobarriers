@@ -19,7 +19,7 @@ if(has_field($page, 'about_us'))
             </div>
         </nav>
 </div>
-        <div class="tab-content" id="nav-tabContent">
+        <div class="tab-content tabs-about" id="nav-tabContent">
         @foreach($tabs_about as $key => $tab)
             <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab">
                 <div class="container-fluid-customize">

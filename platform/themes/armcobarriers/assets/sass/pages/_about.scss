@@ -31,28 +31,30 @@
     }
 }
 
-.main-scroll {
+.services-detail-tabs {
     nav {
         overflow-x: scroll;
         overflow-y: hidden;
         margin-bottom: 10px;
 
-        .nav-tabs {
-            border-bottom: none;
-            .nav-link {
-                transition: 0.3;
-                padding: 0px 25px 0px 0px;
-                color: #000000;
-                font-size: 17px !important;
-                font-family: $Arial;
-                padding-bottom: 15px;
-                border: 0px;
-            }
-            .nav-link.active {
-                color: #000000;
-                font-weight: bold;
-            }
-        }
+        
+    }
+}
+
+.nav-tabs {
+    border-bottom: none;
+    .nav-link {
+        transition: 0.3;
+        padding: 0px 25px 0px 0px;
+        color: #000000;
+        font-size: 17px !important;
+        font-family: $Arial;
+        padding-bottom: 15px;
+        border: 0px;
+    }
+    .nav-link.active {
+        color: #000000;
+        font-weight: bold;
     }
 }
 
@@ -64,6 +66,12 @@
             font-size: 17px;
             font-family: $Arial;
         }
+    }
+}
+
+.tabs-about {
+    p {
+        margin: 0;
     }
 }
 
