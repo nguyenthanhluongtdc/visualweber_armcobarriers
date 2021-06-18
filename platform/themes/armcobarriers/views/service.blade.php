@@ -72,7 +72,7 @@
                             </div>
                         </a>
                         <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt="">
-                        <p>{{ $tab->name }}</p>
+                        <p> <a href="{{ $tab->url }}">{{ $tab->name }}</a> </p>
                     </div>
                     <?php } ?>
                 @endforeach
