@@ -1,31 +1,28 @@
 <!--get tabs' post number-->
+
 @php $number_per_tabs = theme_option('number_of_posts_in_a_tabs'); @endphp
 
 @php 
     //get id category tabs
     $pathFull = url()->full();
     $pos = strpos($pathFull, 'category=');
-    $cateActive = 0;
-    if($pos!=false){
-        $pathSplit = substr($pathFull, $pos+9);
-        $cateActive = explode("&",$pathSplit)[0];
+    if(!empty($menu_nodes)){
+        $cateActive = $menu_nodes[0]->reference_id;
+        if($pos!=false){
+            $pathSplit = substr($pathFull, $pos+9);
+            $cateActive = explode("&",$pathSplit)[0];
+        }
     }
 @endphp
-
-@php $active = false; @endphp
-@foreach($menu_nodes as $row)
-    @if($row->reference_id==$cateActive) 
-        @php $active = true; @endphp 
-    @endif
-@endforeach
 
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
         <div class="slider" id="slide-scroll"></div>
         @foreach($menu_nodes as $key => $row)
+            @php $path = parse_url($row->url, PHP_URL_PATH); @endphp
             <li class="item">
-                 <a class="nav-link {{($key==0&&$active==false)?'active':($cateActive==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                 <a class="nav-link {{$cateActive==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#{!!$path!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
                     {{ $row->title }}
                 </a>
             </li>
@@ -35,23 +32,33 @@
     <!-- Tab panes -->
     <div class="tab-content" >
         @if(!empty($menu_nodes[0]))
-            @php $cateId = $menu_nodes[0]->reference_id; @endphp
-            @includeIf("theme.armcobarriers::partials.tabs.tab1",["cateActive"=>$cateActive, "cateId"=>$cateId,"active"=>$active])
+            @php 
+                $args = [ 
+                    'id'=>$menu_nodes[0]->reference_id,
+                    'path'=>parse_url($menu_nodes[0]->url, PHP_URL_PATH)
+                ];
+            @endphp
+            @includeIf("theme.armcobarriers::partials.tabs.tab1",["args"=>$args,"active"=>$cateActive])
         @endif
 
         @if(!empty($menu_nodes[1]))
-            @php $cateId = $menu_nodes[1]->reference_id; @endphp
-            @includeIf("theme.armcobarriers::partials.tabs.tab1",["cateActive"=>$cateActive, "cateId"=>$cateId, "active"=>$active])
+            @php 
+                $args = [ 
+                    'id'=>$menu_nodes[1]->reference_id,
+                    'path'=>parse_url($menu_nodes[1]->url, PHP_URL_PATH)
+                ];
+            @endphp
+            @includeIf("theme.armcobarriers::partials.tabs.tab1",["args"=>$args, 'active'=>$cateActive])
         @endif
 
         @if(!empty($menu_nodes[2]))
             @php 
-                $categoryId = $menu_nodes[2]->reference_id;
-                $tabs3 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateActive?true:false);
+                $args = [ 
+                    'id'=>$menu_nodes[2]->reference_id,
+                    'path'=>parse_url($menu_nodes[2]->url, PHP_URL_PATH)
+                ];
             @endphp
-            <div class="tab-pane fade tab3 {{$cateActive==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab2",["tabs"=>$tabs3,"categoryId"=>$categoryId])
-            </div>
+            @includeIf("theme.armcobarriers::partials.tabs.tab2",["args"=>$args, 'active'=>$cateActive])
         @endif
     </div>
 </div>
