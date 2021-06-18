@@ -74,7 +74,8 @@ class BlogService
 
                 $category = $post->categories->first();
                 if ($category) {
-                    Theme::breadcrumb()->add($category->name, $category->url);
+                    //Theme::breadcrumb()->add($category->name, $category->url);
+                    Theme::breadcrumb()->add($category->name, get_slug_by_template('news-media').'?cate='.$category->id.'#tab'.$category->id);
                 }
 
                 Theme::breadcrumb()->add($post->name, $post->url);
