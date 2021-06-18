@@ -2,13 +2,11 @@
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="wrap-top">
         <div class="container-customize">
-           
             <div class="top2">
                 <h2>{{$page->name}}</h2>
                 {{$page->description}}
             </div>
         </div>
-    </div>
     </div>
 </section>
 

@@ -47,7 +47,9 @@
         </div>
     </div>
 @else
-    <p> Content updating </p>
+    <div class="container-customize">
+         <p> Content updating </p>
+    </div>
 @endif
 
 <div class="container-customize">
