@@ -27,9 +27,9 @@ $('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
         element.toggleClass('is-show')
     }
 
-    const elementOverLay = $('.overlay_background')
-    if (!elementOverLay) return
-    element.hasClass('is-show') ? elementOverLay.addClass('overlay_background_active') : elementOverLay.removeClass('overlay_background_active')
+    // const elementOverLay = $('.overlay_background')
+    // if (!elementOverLay) return
+    // element.hasClass('is-show') ? elementOverLay.addClass('overlay_background_active') : elementOverLay.removeClass('overlay_background_active')
 });
 
 
