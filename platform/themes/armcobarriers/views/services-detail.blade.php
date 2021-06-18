@@ -1,7 +1,10 @@
+
+<!---breadcrumb--->
+@includeIf("theme.armcobarriers::views.modules.breadcrumb")
+<!--end breadcrumb---->
 <section>
     <div class="container-customize" id="install">
         <div class="wrap-top">
-            @includeIf("theme.armcobarriers::views.modules.breadcrumb")
             <div class="top2">
                 <h2>{{ $service-> name}}</h2>
                 <p> {{ get_field($service, 'short_description') }}</p>
