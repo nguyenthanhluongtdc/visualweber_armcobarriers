@@ -71,9 +71,11 @@
 <script>
     $(document).ready(function(){
         var target = $("#tab-tab{{$cateId}}").attr("href");
-        $('html, body').stop().animate({
+        if(target) {
+            $('html, body').stop().animate({
         		scrollTop: $(target).offset().top-180
-        }, 600);
+            }, 600);
+        }
 
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
