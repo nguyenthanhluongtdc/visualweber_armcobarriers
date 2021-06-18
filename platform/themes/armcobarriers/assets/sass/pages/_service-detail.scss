@@ -236,6 +236,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .item_img {
+        a {
+            display: block;
+            color: #fff;
+            font-size: 16px;
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+        }
         position: relative;
         height: 360px;
         margin-bottom: 2%;
@@ -244,11 +252,9 @@
             height: 100%;
         }
         h5 {
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
             font-size: 20px;
             color: #fff;
+            text-align: center;
         }
     }
     .item_img:first-child,

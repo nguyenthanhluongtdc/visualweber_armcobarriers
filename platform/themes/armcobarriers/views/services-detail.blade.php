@@ -75,18 +75,26 @@
 --}}
 
 <div class="service_detail-imglist container-customize">
-    <?php if(!empty(get_field($service, 'img_list_service_detail'))) { ?>
-    @foreach (get_field($service, 'img_list_service_detail') as $item2)
-    <div class="item_img">
-        <img src="{{ RvMedia::getImageUrl(get_sub_field($item2, 'img_detail_service')) }}" alt="">
-        <h5> {{get_sub_field($item2,'text_img_service')}}</h5>
+    {{-- @dd(get_field($service, 'service_list')) --}}
+    <?php if(!empty(get_field($service, 'service_list'))) { ?>
+    @foreach (get_field($service, 'service_list') as $item2)
+    <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
+        <a href="{{get_sub_field($item2,'link')}}">
+            <h5> {{get_sub_field($item2,'title')}}</h5>
+            <p>{!!get_sub_field($item2,'description')!!}</p>
+
+        </a>
+        {{-- <img src="{{ RvMedia::getImageUrl(get_sub_field($item2, 'img_detail_service')) }}" alt=""> --}}
+        
     </div>
     @endforeach
     <?php } ?>
 </div>
 
+
 <section>
     <div class="container-customize">
+        {{-- @dd($service) --}}
         <?php if(!empty(get_field($service, 'product_quality_16233289513'))) { ?>
         <div class="wrap-product-quality">
             <div class="product-quality">
