@@ -79,23 +79,25 @@
                         </code>
                         <ul class="list_info">
                             <li>
-                                <p>Model</p>
+                                <p>Model:</p>
                                 <p>{{ has_field($product, 'model_product') }}</p>
                             </li>
                             <li>
-                                <p>Brand</p>
+                                <p>Brand:</p>
                                 @if(!empty($product->brand))
                                     <p> {{$product->brand->name}} </p>
                                 @endif
                             </li>
                             <li>
-                                <p>Price</p>
+                                <p>Price:</p>
 
                                 @if ($originalProduct->front_sale_price !== $originalProduct->price)
+                                <p>
                                     <del class="d-inline">{{ format_price($originalProduct->price) }}</del>
-                                    <span>
+                                    <b class="ml-3" style="font-size: 17px;">
                                         {{ format_price($originalProduct->front_sale_price) }}
-                                    </span>
+                                    </b>
+                                </p>
                                 @else
                                     <p>
                                         {{ format_price($originalProduct->price)}}
@@ -103,7 +105,7 @@
                                 @endif
                             </li>
                             <li>
-                                <p>Tags</p>
+                                <p>Tags:</p>
                                 <p> {{implode(", ",$tags)}} </p>
                             </li>
                         </ul>
