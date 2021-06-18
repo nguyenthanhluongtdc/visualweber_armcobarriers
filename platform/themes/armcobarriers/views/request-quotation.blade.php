@@ -25,7 +25,7 @@
 <section>
     <div class="container-customize info-contact">
         <div class="let-talk pt-3">
-            <h3>Let’s talk</h3>
+            <h3>Request a Quotation</h3>
             <div id="contact-form" class="form-horizontal form-contact-us">
                 {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                 @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
