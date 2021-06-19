@@ -10,13 +10,13 @@
                                     @foreach (get_sub_field($tab, 'description') as $item)
                                     <div class="install">
                                         <h2>{{get_sub_field($item,'title_text')}}</h2>
-                                       <code><p>{!!has_sub_field($item,'description_text')!!}</p></code>
+                                        <p>{!!has_sub_field($item,'description_text')!!}</p>
                                         <div class="row">
                                             @foreach (get_sub_field($item, 'description_colum') as $item1)
                                              <div class="col-md-3 col-sm-6 col-12">
                                                  <div class="system1">
                                                      <h2>{{get_sub_field($item1,'title')}}</h2>
-                                                     <code><p>{!!has_sub_field($item1,'description')!!}</p></code>
+                                                     <p>{!!has_sub_field($item1,'description')!!}</p>
                                                  </div>
                                              </div>
                                             @endforeach

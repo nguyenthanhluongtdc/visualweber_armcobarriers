@@ -72,11 +72,11 @@
 
                     <div class="col-12 col-lg-6 info">
                         <p class="product_name"> {{$product->name}} </p>
-                        <code>
+                        <div>
                             @php 
-                                echo $product->description
+                                echo $product->content
                             @endphp
-                        </code>
+                        </div>
                         <ul class="list_info">
                             <li>
                                 <p>Model:</p>
@@ -195,7 +195,7 @@
                                     <a href="{{ $other_pro->url }}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
                                 </div>
                                 <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
-                                <code class="description"> {!! $other_pro->description !!} </code> 
+                                <p class="description"> {!! $other_pro->description !!} </p> 
                             </div>
                         @endforeach
                     </div>
