@@ -145,7 +145,6 @@
 </section>
 
 <script>
-
   $(document).ready(function() {
     let path = "";
     let num = '';
