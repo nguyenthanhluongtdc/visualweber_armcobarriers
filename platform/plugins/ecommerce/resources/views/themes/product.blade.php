@@ -195,7 +195,7 @@
                                     <a href="{{ $other_pro->url }}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
                                 </div>
                                 <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
-                                <p class="description"> {!! $other_pro->description !!} </p> 
+                                <div class="description"> {!! $other_pro->description !!} </div> 
                             </div>
                         @endforeach
                     </div>
