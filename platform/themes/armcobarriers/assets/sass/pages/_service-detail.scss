@@ -218,10 +218,11 @@
     code {
         p {
             margin-top: 1rem;
-        } 
+        }
     }
     list-style-position: inside;
     padding: 50px 0;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     .item {
@@ -274,6 +275,17 @@
     .item_img:nth-child(5),
     .item_img:nth-child(8) {
         width: 30%;
+    }
+    .item_img:first-child,
+    .item_img:last-child {
+        >a>h5 {
+            position: relative;
+            bottom: -90%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
     }
     .item_img:nth-child(2),
     .item_img:nth-child(3),

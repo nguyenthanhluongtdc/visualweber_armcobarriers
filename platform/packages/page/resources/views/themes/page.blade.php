@@ -12,8 +12,8 @@
 <section>
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.breadcrumb")
-        
-            {!! apply_filters(PAGE_FILTER_FRONT_PAGE_CONTENT, clean($page->content), $page) !!}
-       
+        <div class="content-policy">
+          {!! apply_filters(PAGE_FILTER_FRONT_PAGE_CONTENT, clean($page->content), $page) !!}
+        </div>
     </div>
 </section>
