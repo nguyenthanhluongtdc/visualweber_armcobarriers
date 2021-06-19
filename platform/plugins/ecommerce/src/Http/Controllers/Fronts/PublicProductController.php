@@ -137,7 +137,7 @@ class PublicProductController
 
         do_action(PRODUCT_MODULE_SCREEN_NAME);
         if($request->ajax()){
-            return view('plugins/ecommerce::themes.box-product', compact('products','num','query'))->render();
+            return view('plugins/ecommerce::themes.modules.box-product', compact('products','num','query'))->render();
         }
         
         return Theme::scope('ecommerce.products', compact(['products','categories','page','query','num']),
