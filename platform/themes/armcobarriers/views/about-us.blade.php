@@ -7,8 +7,8 @@ if(has_field($page, 'about_us'))
     <div class="wrap-top">
        
         <div class="cont2">
-            <h1>ARMCO - About Us</h1>
-            <h2>Roadside,Car Parks,Warehouse</h2>
+            <h1>{{$page->name}}</h1>
+            <h2>{{$page->description}}</h2>
         </div>
     </div>
         <nav>
@@ -55,7 +55,9 @@ if(has_field($page, 'about_us'))
         </div>
        <div class="wrap2">
            <div class="icon">
-            <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+            {{-- <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+             --}}
+             <i class="far fa-long-arrow-right"></i>
            </div>
            <div class="view">
                 <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>

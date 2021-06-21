@@ -35,7 +35,7 @@
     nav {
         overflow-x: scroll;
         overflow-y: hidden;
-        margin-bottom: 10px;        
+        margin-bottom: 10px;
     }
 }
 
@@ -59,7 +59,7 @@
 .wrap-cont {
     position: relative;
     height: 460px;
-    .content-about { 
+    .content-about {
         span {
             font-size: 17px;
             font-family: $Arial;
@@ -113,6 +113,9 @@
         display: flex;
         .icon {
             padding: 10px 40px 0px 0px;
+            i {
+                font-size: 25px;
+            }
         }
         .view {
             a {
@@ -522,7 +525,6 @@
         padding: 5% 0 !important;
     }
     .wrap-cont {
-       
         span {
             font-size: 15px;
         }
