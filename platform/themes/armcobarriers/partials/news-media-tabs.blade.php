@@ -78,8 +78,9 @@
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
             let path = $(this).attr('href');
-            path = "/"+path.substr(path.indexOf('/', 7) + 1)
-            fetch_ajax(path)
+            console.log(path)
+            // path = "/"+path.substr(path.indexOf('/', 7) + 1)
+            // fetch_ajax(path)
         });
 
         //method fetch ajax
