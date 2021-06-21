@@ -16,6 +16,9 @@
     .title-contact {
         position: absolute;
         bottom: 16%;
+        @media(max-width: 380px) {
+            bottom: 0;
+        }
         @media(max-width: 991px) {
             left: 7%;
         }
