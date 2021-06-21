@@ -68,6 +68,8 @@
         let paths = [<?php echo '"'.implode('","', $paths).'"' ?>];
          //scroll to tabs
         let scroll = "{{$scroll}}";
+        let path = "";
+        let num = "";
 
         //click title tabs
         $.each($('ul.nav-tabs a'), function(index, item) {
@@ -80,13 +82,13 @@
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
             if(scroll) {
-                let path = $(this).attr('href');
+                path = $(this).attr('href');
                 path = "/"+path.substr(path.indexOf('/',8) + 1)
                 fetch_ajax(path)
             }else {
-                let num = $(this).attr('href').split('?page=')[1];
+                num = $(this).attr('href').split('?page=')[1];
                 if(paths.length > 0){
-                    let path = paths[0]+`?page=${num}`;
+                    path = paths[0]+`?page=${num}`;
                     fetch_ajax(path)
                 }
             }
