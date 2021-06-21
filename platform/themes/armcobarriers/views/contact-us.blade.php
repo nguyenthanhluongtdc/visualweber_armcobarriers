@@ -15,41 +15,7 @@
 
 <section>
     <div class="container-customize info-contact">
-        {{-- <div class="row">
-            <div class="col-md-8">
-                <div class="list-group" id="list-tab" role="tablist">
-                  @if(has_field($page,'contact_us_tabs'))
-                  @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
-                  @if(has_sub_field($item_contact,'tabs_title'))
-                      <a class="list-group-item list-group-item-action aos-init aos-animate {{ $key == 0 ? 'active' : '' }}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" data-toggle="list" href="#{{  Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tab" aria-controls="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}" aria-selected="true">ARMCO®<br>
-                          <span>{{has_sub_field($item_contact,'tabs_title') ? get_sub_field($item_contact,'tabs_title'):''}}</span> 
-                      </a>
-                  @endif
-                  @endforeach
-                  @endif
-             
-                </div>
-            </div>
-        </div>
-        <div class="tab-content" id="nav-tab-content">
-          @if(has_field($page,'contact_us_tabs'))
-          @foreach(get_field($page,'contact_us_tabs') as $key => $item_contact)
-       
-         
-          
-          <div class=" tab-pane fade {{get_sub_field($item_contact,'tabs_title')=="Head Office" ? "active show":""}}" id="{{ Str::slug(get_sub_field($item_contact,'tabs_title')) }}-content" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div class="head-office">
-              <code>
-                {!!get_sub_field($item_contact,'content_tabs')!!} 
-              </code>
-                    
-            </div>
-          </div>
-          @endforeach
-          @endif
-        </div> --}}
-         {!!$page->content!!}
-               
+         {!!$page->content!!}         
     <div class="let-talk">
       <h3>Let’s talk</h3>
       <div class="row">

@@ -35,6 +35,11 @@ class ServiceForm extends FormAbstract
                 ],
                 'choices'    => BaseStatusEnum::labels(),
             ])
+            ->add('is_featured', 'onOff', [
+                'label'         => trans('core/base::forms.is_featured'),
+                'label_attr'    => ['class' => 'control-label'],
+                'default_value' => false,
+            ])
             ->setBreakFieldPoint('status');
     }
 }
