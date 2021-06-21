@@ -32,12 +32,11 @@ code {
         flex-wrap: wrap;
 
         li {
-            margin: 0 5px;
+            margin: 10px 5px;
         }
 
         .page-item.active .page-link {
             background-color: #000;
-            border-radius: 5px;
             color: $priamry_color;
         }
         .page-item a, .page-item span {
@@ -49,6 +48,8 @@ code {
             padding: 0;
             display: inline-block;
             font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0px 0px 1px 2px rgb(212, 198, 198);
         }
 
         .page-item.active, .page-item.disabled {
@@ -64,7 +65,6 @@ code {
             border: unset;
             &:hover {
                 background-color: #000;
-                border-radius: 5px;
                 color: #FAD906;
                 transition: 0.5s ease;
             }
@@ -73,6 +73,7 @@ code {
             padding: 0 5px;
         }
         .page-link-last {
+            box-shadow: 0px 0px 1px 2px rgb(212, 198, 198);
             width: 110px;
             height: 50px;
             line-height: 50px;
