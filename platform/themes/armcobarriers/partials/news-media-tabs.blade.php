@@ -66,6 +66,8 @@
 
         //
         let paths = [<?php echo '"'.implode('","', $paths).'"' ?>];
+         //scroll to tabs
+        let scroll = "{{$scroll}}";
 
         //click title tabs
         $.each($('ul.nav-tabs a'), function(index, item) {
@@ -75,12 +77,25 @@
         })
 
         //click tag a paginate
-        $(document).on('click', '.pagination a', function(event){
-            event.preventDefault(); 
-            let path = $(this).attr('href');
-            path = "/"+path.substr(path.indexOf('/',8) + 1)
-            fetch_ajax(path)
-        });
+        if(scroll) {
+            $(document).on('click', '.pagination a', function(event){
+                event.preventDefault(); 
+                let path = $(this).attr('href');
+                path = "/"+path.substr(path.indexOf('/',8) + 1)
+                fetch_ajax(path)
+            });
+        }else {
+            $(document).on('click', '.pagination a', function(event){
+                event.preventDefault(); 
+                let num = $(this).attr('href').split('?page=')[1];
+                
+                if(paths.length > 0){
+                    let path = paths[0]+`?page=${num}`;
+                    fetch_ajax(path)
+                }
+                
+            });
+        }
 
         //method fetch ajax
         function fetch_ajax(path) {
@@ -98,9 +113,6 @@
                 }
             });
         }
-
-        //scroll to tabs
-        let scroll = "{{$scroll}}";
 
         if(scroll){
             var target = $('ul.nav-tabs .nav-link.active').attr("href");
