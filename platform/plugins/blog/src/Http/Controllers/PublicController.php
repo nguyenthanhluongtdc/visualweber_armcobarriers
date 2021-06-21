@@ -98,7 +98,7 @@ class PublicController extends Controller
      * @param BlogService $blogService
      * @return \Illuminate\Http\RedirectResponse|Response
      */
-    public function getCategory($slug, BlogService $blogService)
+    public function getCategory($slug, BlogService $blogService, Request $request)
     {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Category::class));
 
@@ -112,7 +112,13 @@ class PublicController extends Controller
             return redirect()->to(route('public.single', SlugHelper::getPrefix(Category::class) . '/' . $data['slug']));
         }
 
-        return Theme::scope($data['view'], $data['data'], $data['default_view'])
-            ->render();
+        if($request->ajax()){
+            $category = $data['data']['category'];
+            $posts = $data['data']['posts'];
+            return view("theme.armcobarriers::partials.tabs.tab1", compact('category','posts'))->render();
+        }
+        return Theme::scope("news-media", $data['data'], $data['default_view'])->render();
+
+        //return Theme::scope($data['view'], $data['data'], $data['default_view'])->render();
     }
 }
