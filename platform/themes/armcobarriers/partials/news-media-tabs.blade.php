@@ -15,14 +15,13 @@
     //}
 
     $paths = [];
-    
+    $scroll = false;
     if(isset($category) && !empty($category))
-        $cateId = $category->id;
+        {$cateId = $category->id; $scroll = true;}
     else if(!empty($menu_nodes[0]))
         $cateId = $menu_nodes[0]->reference_id;
     else 
         $cateId = "";
-    
     
     if(isset($posts) && !empty($posts))
         $posts = $posts;
@@ -64,13 +63,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
+
+        //
         let paths = [<?php echo '"'.implode('","', $paths).'"' ?>];
+
+        //click title tabs
         $.each($('ul.nav-tabs a'), function(index, item) {
             $(this).on('click',function(){
                 fetch_ajax(paths[index]);
             })
         })
 
+        //click tag a paginate
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
             let path = $(this).attr('href');
@@ -78,6 +82,7 @@
             fetch_ajax(path)
         });
 
+        //method fetch ajax
         function fetch_ajax(path) {
             $.ajaxSetup({
                 headers: {
@@ -94,6 +99,17 @@
             });
         }
 
+        //scroll to tabs
+        let scroll = "{{$scroll}}";
+
+        if(scroll){
+            var target = $('ul.nav-tabs .nav-link.active').attr("href");
+            $('html, body').stop().animate({
+                    scrollTop: $(target).offset().top-170
+            }, 600);
+        }
+
+        //click tabs
         $("#tile-1 .nav-tabs a").on('click',function() {
             var position = $(this).parent().position();
             var width = $(this).parent().width() * 0.3;
