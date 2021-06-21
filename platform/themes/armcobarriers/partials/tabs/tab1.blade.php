@@ -28,4 +28,5 @@
             @endif
         </div>
     </div>
+    {!! $posts->links('vendor.pagination.custom') !!}
 </div>

@@ -210,7 +210,7 @@ class Menu
      * @return string
      * @throws Throwable
      */
-    public function renderMenuLocation(string $location, array $attributes = []): string
+    public function renderMenuLocation(string $location, array $attributes = [], array $params = []): string
     {
 
         $this->load();
@@ -223,7 +223,7 @@ class Menu
             }
 
             $attributes['slug'] = $menu->slug;
-            $html .= $this->generateMenu($attributes);
+            $html .= $this->generateMenu($attributes, $params);
         }
 
         return $html;
@@ -255,7 +255,7 @@ class Menu
      * @return mixed|null|string
      * @throws Throwable
      */
-    public function generateMenu(array $args = [])
+    public function generateMenu(array $args = [], array $params = [])
     {
         $this->load();
 
@@ -293,6 +293,8 @@ class Menu
             'menu'       => $menu,
             'menu_nodes' => $menuNodes,
         ];
+
+        $data = array_merge($data, $params);
 
         $data['options'] = $this->html->attributes(Arr::get($args, 'options', []));
 
