@@ -18,7 +18,7 @@
         </div>
         <hr>
         <div class="form-group">
-            <label class="control-label">{{ trans('plugins/ecommerce::products.cross_selling_products') }}</label>
+            <label class="control-label"> Other products </label>
             <input type="hidden" name="cross_sale_products" value="@if ($product) {{ implode(',', $product->crossSales()->allRelatedIds()->toArray()) }} @endif"/>
             <div class="box-search-advance product">
                 <div>

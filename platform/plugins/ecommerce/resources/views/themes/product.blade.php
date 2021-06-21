@@ -183,12 +183,13 @@
 
             <!--other product-->
 
-            @php $other_product = get_other_products(5); @endphp
+            @php $other_products = get_cross_sale_products($product); @endphp
             <div id="other_products" class="col-12 col-sm-12 col-md-12">
                 <p class="title">Other products</p>
                 <div class="swiper-container otherSwiper">
                     <div class="swiper-wrapper list_products">
-                        @foreach($other_product as $other_pro)
+                        @foreach($other_products as $id_product)
+                            @php $other_pro = get_product_by_id($id_product); @endphp
                             <div class="swiper-slide product_item">
                                 <div class="box-img">
                                     <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt=""> 
