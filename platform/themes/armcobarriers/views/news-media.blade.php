@@ -16,9 +16,11 @@
                 'options' => [],
                 'theme' => true,
                 'view' => 'news-media-tabs',
+            ],[
+                'posts'=>$posts??[],
+                'category'=>$category??[]
             ])
         !!}
-
 
         @includeIf("theme.armcobarriers::views.modules.form-signup") 
         

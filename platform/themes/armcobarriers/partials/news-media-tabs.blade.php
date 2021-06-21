@@ -1,31 +1,45 @@
 <!--get tabs' post number-->
-@php $number_per_tabs = theme_option('number_of_posts_in_a_tabs'); @endphp
+
+@php $number_per_tabs = theme_option('number_of_posts_in_a_category'); @endphp
 
 @php 
     //get id category tabs
-    $pathFull = url()->full();
-    $pos = strpos($pathFull, 'category=');
-    $cateId = 0;
-    if($pos!=false){
-        $pathSplit = substr($pathFull, $pos+9);
-        $cateId = explode("&",$pathSplit)[0];
-    }
-@endphp
+    //$pathFull = url()->full();
+    //$pos = strpos($pathFull, 'category=');
+    //if(!empty($menu_nodes)){
+    //   $cateActive = $menu_nodes[0]->reference_id;
+    //    if($pos!=false){
+    //        $pathSplit = substr($pathFull, $pos+9);
+    //        $cateActive = explode("&",$pathSplit)[0];
+    //    }
+    //}
 
-@php $active = false; @endphp
-@foreach($menu_nodes as $row)
-    @if($row->reference_id==$cateId) 
-        @php $active = true; @endphp 
-    @endif
-@endforeach
+    $paths = [];
+    
+    if(isset($category) && !empty($category))
+        $cateId = $category->id;
+    else if(!empty($menu_nodes[0]))
+        $cateId = $menu_nodes[0]->reference_id;
+    else 
+        $cateId = "";
+    
+    
+    if(isset($posts) && !empty($posts))
+        $posts = $posts;
+    else 
+        if($cateId!="")
+            $posts = get_posts_by_category($cateId, $number_per_tabs,0, false) 
+
+@endphp
 
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
     <ul class="nav nav-tabs nav-justified" role="tablist">
         <div class="slider" id="slide-scroll"></div>
         @foreach($menu_nodes as $key => $row)
+            @php $path = parse_url($row->url, PHP_URL_PATH); $paths[] = $path; @endphp
             <li class="item">
-                 <a class="nav-link {{($key==0&&$active==false)?'active':($cateId==$row->reference_id)?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                 <a class="nav-link {{$cateId==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
                     {{ $row->title }}
                 </a>
             </li>
@@ -34,34 +48,14 @@
 
     <!-- Tab panes -->
     <div class="tab-content" >
-        @if(!empty($menu_nodes[0]))
+        @if(!empty($posts && $cateId!=""))
             @php 
-                $categoryId = $menu_nodes[0]->reference_id;
-                $tabs1 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
+                $data = [ 
+                    'category'=>['id'=>$cateId],
+                    'posts' => $posts,
+                ];
             @endphp
-            <div class="tab-pane fade tab1 {{$active==false || $cateId==$categoryId ?'show active': ''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab1",["tabs"=>$tabs1, "categoryId"=>$categoryId])
-            </div>
-        @endif
-
-        @if(!empty($menu_nodes[1]))
-            @php 
-                $categoryId = $menu_nodes[1]->reference_id;
-                $tabs2 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
-            @endphp
-            <div class="tab-pane fade tab2 {{$cateId==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab1",["tabs"=>$tabs2,"categoryId"=>$categoryId])
-            </div>
-        @endif
-
-        @if(!empty($menu_nodes[2]))
-            @php 
-                $categoryId = $menu_nodes[2]->reference_id;
-                $tabs3 = get_posts_by_category($categoryId, $number_per_tabs,0, $categoryId==$cateId?true:false);
-            @endphp
-            <div class="tab-pane fade tab3 {{$cateId==$categoryId?'active show':''}}" id="tab{{$categoryId}}" role="tabpanel" aria-labelledby="tab{{$categoryId}}-tab">
-                @includeIf("theme.armcobarriers::partials.tabs.tab2",["tabs"=>$tabs3,"categoryId"=>$categoryId])
-            </div>
+            @includeIf("theme.armcobarriers::partials.tabs.tab1",$data)
         @endif
     </div>
 </div>
@@ -70,22 +64,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
-        var target = $("#tab-tab{{$cateId}}").attr("href");
-        if(target) {
-            $('html, body').stop().animate({
-        		scrollTop: $(target).offset().top-180
-            }, 600);
-        }
+        let paths = [<?php echo '"'.implode('","', $paths).'"' ?>];
+        $.each($('ul.nav-tabs a'), function(index, item) {
+            $(this).on('click',function(){
+                fetch_ajax(paths[index]);
+            })
+        })
 
         $(document).on('click', '.pagination a', function(event){
             event.preventDefault(); 
-            let path = $(this).attr('href').split('page=')[1];
-            fetch_data(path);
+            let path = $(this).attr('href');
+            path = "/"+path.substr(path.indexOf('/', 7) + 1)
+            fetch_ajax(path)
         });
 
-        function fetch_data(path)
-        {
-            path = "?page="+path+"&num={{$number_per_tabs}}";
+        function fetch_ajax(path) {
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -93,12 +86,10 @@
             });
 
             $.ajax({
-            url:"/news-media/ajax"+path,
+            url:path,
             success:function(response){
-                    $('.tab-pane.active').html(response)
-                    if(response){
-                        window.history.pushState({}, '', path);
-                    }
+                    $('.tab-content').html(response)
+                    window.history.pushState({}, '', path);
                 }
             });
         }
