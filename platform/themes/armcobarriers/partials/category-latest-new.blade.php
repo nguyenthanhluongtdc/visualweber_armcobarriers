@@ -71,5 +71,9 @@
         document.execCommand('copy');
     });
 
+    $input_url.on('click',function(){
+        $(this).select()
+    })
+
     $notificationButton.on('transitionend', fadeOutNotification);
 </script>
