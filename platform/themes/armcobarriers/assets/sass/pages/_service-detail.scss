@@ -217,6 +217,10 @@
 .service_detail-content {
     p {
         margin-top: 1rem;
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
     }
     list-style-position: inside;
     padding: 50px 0;
@@ -281,6 +285,10 @@
             justify-content: center;
             display: flex;
         }
+    }
+    .item_img:nth-child(2)>a {
+        position: absolute;
+        bottom: -30%;
     }
     .item_img:nth-child(2),
     .item_img:nth-child(3),
