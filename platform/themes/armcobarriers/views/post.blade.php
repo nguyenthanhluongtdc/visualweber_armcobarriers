@@ -35,8 +35,8 @@
                         <div class="by">
                             <p>{{$post->author->name}}</p>
                         </div>
-                        <div class="btn-share">
-                            <a href="">Share <i class="fal fa-share-alt"></i> </a>
+                        <div class="fb-share-button btn-share" data-href="{{$post->url}}">
+                            <span>Share</span>
                         </div>
                     </div>
                     <div class="related">
@@ -78,3 +78,25 @@
         @includeIf("theme.armcobarriers::views.modules.form-signup")
     </div>
 </section>
+
+<script>
+    //share link to facebook
+     var width  = 800,
+        height = 600,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = "",
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+
+    $(document).on('click','.fb-share-button',function() {
+        url = $(this).attr("data-href");
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+           'facebook-share-dialog', opts
+        );
+        return false;
+    })
+</script>

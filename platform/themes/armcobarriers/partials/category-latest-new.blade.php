@@ -40,7 +40,6 @@
 </div>
 
 <script>
-
     //share link to facebook
      var width  = 800,
         height = 600,
