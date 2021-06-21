@@ -25,9 +25,9 @@
                             <div class="options">
                                 <div class="date"> {{$event->created_at->format('j F Y') }} </div>
                                 <div class="box">
-                                    <span class="share"> Share </span>
-                                    <input class="share-url" value="{{$event->url}}"/>  
-                                    <button class="btn-copy"> <i class="fal fa-copy"></i> </button>
+                                    <div class="fb-share-button share" data-href="{{$event->url}}">
+                                        <span>Share</span>
+                                    </div>
                                     <a class="type"> {!! $event->categories->first()->name !!} </a>
                                 </div>
                             </div>
@@ -40,40 +40,13 @@
 </div>
 
 <script>
-    let $btnShare = $('.share');
-    let $notificationButton = $('.notification-button');
-    let $btnCopy = $('.btn-copy');
-    let $input_url = $('.share-url');
-    $share = false;
-
-    $btnShare.on('click',function(event){
-        event.preventDefault(); 
-        $(this).next().toggleClass('active');
-        $(this).next().next().toggleClass('active');
-        if(!$share){
-            $(this).text("Unshare");
-            $share = true;
-        }else {
-            $share = false;
-            $(this).text('Share');
-        }
-    });
-
-    function fadeOutNotification(){
-        setTimeout(function(){
-            $notificationButton.removeClass('active');
-        }, 2000);
-    }
-    
-    $btnCopy.on('click', function() {
-        $notificationButton.toggleClass('active');
-        var text = $(this).prev().select();
-        document.execCommand('copy');
-    });
-
-    $input_url.on('click',function(){
-        $(this).select()
+    var url = "";
+    $(document).on('click','.fb-share-button',function() {
+        url = $(this).attr("data-href");
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+           'facebook-share-dialog',
+           'width=800,height=600'
+        );
+        return false;
     })
-
-    $notificationButton.on('transitionend', fadeOutNotification);
 </script>
