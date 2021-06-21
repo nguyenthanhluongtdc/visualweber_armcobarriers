@@ -62,7 +62,7 @@
                 <p>Warehouse, Industrial & Petrochemical Solutions</p>
             </div>
             <div class="row">
-                @if($tabs_services = get_services())
+                @if($tabs_services =get_services_latest())
                 @foreach($tabs_services as $key => $tab)
                 <?php  if (!empty(get_field($tab, 'img_service_item'))) { ?>
                     <div class="col-lg-3 col-md-6 col-sm-6 asset">

@@ -55,8 +55,6 @@ if(has_field($page, 'about_us'))
         </div>
        <div class="wrap2">
            <div class="icon">
-            {{-- <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
-             --}}
              <i class="far fa-long-arrow-right"></i>
            </div>
            <div class="view">

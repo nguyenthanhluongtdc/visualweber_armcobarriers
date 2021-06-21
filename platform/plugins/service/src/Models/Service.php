@@ -24,6 +24,7 @@ class Service extends BaseModel
     protected $fillable = [
         'name',
         'status',
+        'is_featured',
     ];
 
     /**

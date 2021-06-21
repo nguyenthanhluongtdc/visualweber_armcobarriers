@@ -11,4 +11,14 @@ class ServiceCacheDecorator extends CacheAbstractDecorator implements ServiceInt
     {
         return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
     }
+    public function  getFeatured(int $limit = 3)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+    public function   getLatest()
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+   
+   
 }

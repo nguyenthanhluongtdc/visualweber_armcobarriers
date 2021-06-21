@@ -187,8 +187,7 @@
 
 .item_sv_home {
     height: 311px;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
     @media(max-width: 1680px) {
         height: 275px;
     }

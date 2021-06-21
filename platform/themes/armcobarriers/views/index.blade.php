@@ -46,19 +46,28 @@
                         <p  data-aos="" data-aos-delay="400">{{has_field( $page ,'location') ? get_field( $page ,'location'):'' }}</p>
                     </div>
                 </div>
-                @if(has_field($page, 'lists_of_image'))
                 @foreach (get_field($page, 'lists_of_image') as $key=> $item)
-                    <div class="grid__item">
-                        <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
-                            <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="">
-                           <div class="gallery__item-text">
-                                <p>{{has_sub_field( $item ,'location_text')? get_sub_field( $item ,'location_text'):'' }}</p>
-                                <i class="fal fa-arrow-right"></i>
-                            </div> 
-                        </a>
-                    </div>
+                <div class="grid__item">
+                    <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
+                        <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="">
+                       <div class="gallery__item-text">
+                            <p>{{has_sub_field( $item ,'location_text')? get_sub_field( $item ,'location_text'):'' }}</p>
+                            <i class="fal fa-arrow-right"></i>
+                        </div> 
+                    </a>
+                </div>
                 @endforeach
-                @endif
+                @foreach(get_featured_services(3) as $key => $item_service)
+                <div class="grid__item">
+                    <a href="{{$item_service->url}}">
+                        <img class="img-background mw-100" src="{{RvMedia::getImageUrl(get_field($item_service, 'img_service_item')) }}" alt="">
+                       <div class="gallery__item-text">
+                            <p>{{$item_service->name}}</p>
+                            <i class="fal fa-arrow-right"></i>
+                        </div> 
+                    </a>
+                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -111,29 +120,18 @@
                     <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
                 </div>
             </div>
-            <?php $tabs_services = get_services(); ?>
-           @if(!empty($tabs_services))
-          
-           <?php $a = '["show"]' ?>
-            @foreach($tabs_services as $key => $service_show)
-                <?php if(get_field($service_show, 'show_home_page') == $a) { ?>
-                    <div class="grid__item item_sv_home" style="background-image: url('{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}')">
-                        <a href="{{ $service_show->url }}">
-                            {{-- <img class="img-background mw-100" src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
-                           <div class="gallery__item-text">
-                                <p>{{ $service_show->name}}</p>
-                                <i class="fal fa-arrow-right"></i>
-                            </div> 
-                        </a>
-                    </div>
-                    {{-- <img src="{{ RvMedia::getImageUrl(get_field($service_show, 'img_service_item')) }}" alt=""> --}}
-                <?php } 
-                    else { ?>
-                       
-                   <?php }
-                ?>
+            @foreach(get_services_latest() as $key1 => $item_service_latest)
+                <div class="grid__item">
+                    <a href="{{$item_service_latest->url}}">
+                        <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service_latest, 'img_service_item')) }}" alt="">
+                       <div class="gallery__item-text">
+                            <p>{{$item_service_latest->name}}</p>
+                            <i class="fal fa-arrow-right"></i>
+                        </div> 
+                    </a>
+                </div>
+               
             @endforeach
-            @endif
         </div>
 
     </div>
