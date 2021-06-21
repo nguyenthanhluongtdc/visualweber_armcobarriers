@@ -1,3 +1,12 @@
+// Request A Quotation css
+.content {
+    ul {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+    }
+}
+
 .contact-banner {
     padding-top: 28%;
     background-repeat: no-repeat;
@@ -7,6 +16,9 @@
     .title-contact {
         position: absolute;
         bottom: 16%;
+        @media(max-width: 380px) {
+            bottom: 0;
+        }
         @media(max-width: 991px) {
             left: 7%;
         }
@@ -141,6 +153,9 @@
 
 .let-talk {
     .contact_infomation {
+        a:focus {
+            color: #000;
+        }
         @media(max-width: 991px) {
             margin-left: 20%;
         }
