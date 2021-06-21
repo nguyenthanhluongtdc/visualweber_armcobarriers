@@ -215,16 +215,11 @@
 }
 
 .service_detail-content {
-    code {
-        p {
-            margin-top: 1rem;
-        }
+    p {
+        margin-top: 1rem;
     }
     list-style-position: inside;
     padding: 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
     .item {
         width: 45%;
         margin-bottom: 10px;
