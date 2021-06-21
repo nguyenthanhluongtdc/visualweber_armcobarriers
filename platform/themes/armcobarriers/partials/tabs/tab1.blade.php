@@ -30,3 +30,10 @@
     </div>
     {!! $posts->links('vendor.pagination.custom') !!}
 </div>
+
+<style>
+    .pagination_style1 {
+        margin-top: 0;
+        margin-bottom: 70px;
+    }
+</style>

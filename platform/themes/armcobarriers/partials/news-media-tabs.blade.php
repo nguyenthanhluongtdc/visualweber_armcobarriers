@@ -1,6 +1,6 @@
 <!--get tabs' post number-->
 
-@php $number_per_tabs = theme_option('number_of_posts_in_a_tabs'); @endphp
+@php $number_per_tabs = theme_option('number_of_posts_in_a_category'); @endphp
 
 @php 
     //get id category tabs
@@ -70,6 +70,13 @@
                 fetch_ajax(paths[index]);
             })
         })
+
+        $(document).on('click', '.pagination a', function(event){
+            event.preventDefault(); 
+            let path = $(this).attr('href');
+            path = "/"+path.substr(path.indexOf('/', 7) + 1)
+            fetch_ajax(path)
+        });
 
         function fetch_ajax(path) {
             $.ajaxSetup({
