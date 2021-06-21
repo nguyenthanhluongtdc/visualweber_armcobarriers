@@ -1,7 +1,6 @@
 <!--get tabs' post number-->
 
 @php $number_per_tabs = theme_option('number_of_posts_in_a_category'); @endphp
-
 @php 
     //get id category tabs
     //$pathFull = url()->full();
@@ -17,7 +16,20 @@
     $paths = [];
     $scroll = false;
     if(isset($category) && !empty($category))
-        {$cateId = $category->id; $scroll = true;}
+        {
+            $cateId = $category->id; 
+            $temp = $cateId;
+            $scroll = true;
+            if(empty($menu_nodes[0])) $cateId = "";
+            else {
+                foreach($menu_nodes as $row) {
+                    if(in_array($temp, (array)$row->reference_id))
+                        {$cateId = $row->reference_id;
+                        break;}
+                    else $cateId = "";
+                }
+            }
+        }
     else if(!empty($menu_nodes[0]))
         $cateId = $menu_nodes[0]->reference_id;
     else 
@@ -28,22 +40,23 @@
     else 
         if($cateId!="")
             $posts = get_posts_by_category($cateId, $number_per_tabs,0, false) 
-
 @endphp
 
 <div class="tile" id="tile-1">
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs nav-justified" role="tablist">
-        <div class="slider" id="slide-scroll"></div>
-        @foreach($menu_nodes as $key => $row)
-            @php $path = parse_url($row->url, PHP_URL_PATH); $paths[] = $path; @endphp
-            <li class="item">
-                 <a class="nav-link {{$cateId==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
-                    {{ $row->title }}
-                </a>
-            </li>
-        @endforeach
-    </ul>
+    @if(!empty($menu_nodes[0]))
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+            <div class="slider" id="slide-scroll"></div>
+            @foreach($menu_nodes as $key => $row)
+                @php $path = parse_url($row->url, PHP_URL_PATH); $paths[] = $path; @endphp
+                <li class="item">
+                    <a class="nav-link {{$cateId==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                        {{ $row->title }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    @endif
 
     <!-- Tab panes -->
     <div class="tab-content" >
@@ -91,7 +104,6 @@
                 }
             }
         });
-        
 
         //method fetch ajax
         function fetch_ajax(path) {
