@@ -40,12 +40,23 @@
 </div>
 
 <script>
-    var url = "";
+
+    //share link to facebook
+     var width  = 800,
+        height = 600,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = "",
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+
     $(document).on('click','.fb-share-button',function() {
         url = $(this).attr("data-href");
         window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
-           'facebook-share-dialog',
-           'width=800,height=600'
+           'facebook-share-dialog', opts
         );
         return false;
     })
