@@ -21,11 +21,11 @@
 </div>
 
 @if(isset($num) && $num!=0 && isset($query) && $query!="")
-{{ $products->links('vendor.pagination.custom', ['num'=>$num,'query'=>$query]) }}
+{{ $products->links('vendor.pagination.custom-product', ['num'=>$num,'query'=>$query]) }}
 @elseif(isset($query) && $query!="")
-{{ $products->links('vendor.pagination.custom', ['query'=>$query]) }}
+{{ $products->links('vendor.pagination.custom-product', ['query'=>$query]) }}
 @elseif(isset($num) && $num!=0)
-{{ $products->links('vendor.pagination.custom', ['num'=>$num]) }}
+{{ $products->links('vendor.pagination.custom-product', ['num'=>$num]) }}
 @else
-{{ $products->links('vendor.pagination.custom') }}
+{{ $products->links('vendor.pagination.custom-product') }}
 @endif
