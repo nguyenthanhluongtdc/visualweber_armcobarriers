@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class 20171024154832CreateNewsletterTable extends Migration
+class UpdateCreateNewsletterTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,6 +14,9 @@ class 20171024154832CreateNewsletterTable extends Migration
     public function up()
     {
         //
+        Schema::table('newsletters', function (Blueprint $table) {
+            $table->string('company', 200)->nullable();
+        });
     }
 
     /**

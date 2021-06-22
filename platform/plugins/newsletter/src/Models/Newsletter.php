@@ -24,6 +24,7 @@ class Newsletter extends BaseModel
         'email',
         'name',
         'status',
+        'company',
     ];
 
     /**

@@ -56,7 +56,8 @@ class PublicController extends Controller
                             {
                                 "first_name": "' . $request->input('first_name') . '",
                                 "last_name": "' . $request->input('last_name') . '",
-                                "email": "' . $request->input('email') . '"
+                                "email": "' . $request->input('email') . '",
+                                "company": "' . $request->input('company') . '",
                             }
                         ]
                     }'
