@@ -305,6 +305,7 @@
             p:nth-child(1) {
                 font-size: 40px;
                 font-family: $FolioStd-Medium;
+                margin-bottom: 0;
                 @media (max-width: 1680px) {
                     font-size: 30px;
                 }
@@ -618,6 +619,11 @@
                     width: 71%;
                 }
             }
+            .logo-slider {
+                img {
+                    width: 35%;
+                }
+            }
         }
     }
     .product-range-wrapper {
@@ -657,7 +663,7 @@
     .swiper-slide {
         .swiper-content {
             .logo-slider img {
-                width: 50%;
+                width: 40%;
             }
             .text-slider {
                 @media(max-width: 1920px) {

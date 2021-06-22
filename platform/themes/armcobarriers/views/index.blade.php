@@ -173,7 +173,7 @@
             <div class="read-more">
                 <a href="{{ route('public.single').get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
-                <div class="count">
+                {{-- <div class="count">
                     <div class="row w-100 mx-0">
                     @if(has_field($page, 'statistic_home'))
                     @foreach (get_field($page, 'statistic_home') as $item)
@@ -191,7 +191,7 @@
                     <div class="exp">
                         <p>{{get_field( $page ,'description_home') ? get_field( $page ,'description_home'):''}} </p>
                     </div>
-                </div>
+                </div> --}}
         </div>
     </div>
 </section>
