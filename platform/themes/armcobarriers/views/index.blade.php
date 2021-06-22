@@ -159,8 +159,8 @@
                         </a>
                         <div class="news-post-time">
                             <span>{{$post->created_at->format('j F Y') }}</span>
-                            <div class="fb-share-button share" data-href="{{$post->url}}" target="_blank">
-                                <span>Share</span>
+                            <div class="fb-share-button btn-share" data-href="{{$post->url}}" target="_blank">
+                                <span>Share <i class="fal fa-share-alt"></i></span>
                             </div>
                         </div>
                     </div>
