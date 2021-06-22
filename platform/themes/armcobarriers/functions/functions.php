@@ -14,7 +14,8 @@ register_page_template([
     'news-media' => 'News-media',
     'news-detail' => 'News-detail',
     'services-detail' => 'Services-detail',
-    'cart' => 'Cart'
+    'cart' => 'Cart',
+    'privacy-policy' => 'Privacy-policy'
 ]);
 
 register_sidebar([

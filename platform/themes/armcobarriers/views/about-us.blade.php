@@ -11,18 +11,9 @@ if(has_field($page, 'about_us'))
             <h2>{{$page->description}}</h2>
         </div>
     </div>
-        {{-- <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                @foreach($tabs_about as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}}" id="nav-company-profile" data-toggle="tab" href="#nav-tab{{$key}}" role="tab" aria-controls="nav-tab{{$key}}" aria-selected="true"> {{get_sub_field($tab,'tabs_title')}} </a>
-                @endforeach
-            </div>
-        </nav> --}}
 </div>
 
 <div class="tab-content tabs-about" id="nav-tabContent">
-    {{-- @foreach($tabs_about as $key => $tab)
-        <div class="tab-pane fade {{$key==0?'active show':''}}" id="nav-tab{{$key}}" role="tabpanel" aria-labelledby="nav-tab{{$key}}-tab"> --}}
             <div class="container-fluid-customize">
                 <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}})">
                     <div class="container-customize h-100">
@@ -32,8 +23,6 @@ if(has_field($page, 'about_us'))
                     </div>
                 </div>
             </div>
-        {{-- </div>
-    @endforeach --}}
 </div>
 
 <div class="container-customize">
@@ -58,16 +47,11 @@ if(has_field($page, 'about_us'))
              <i class="far fa-long-arrow-right"></i>
            </div>
            <div class="view">
-                <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
+                <a href="{{route('public.products')}}" title="product">VIEW OUR PRODUCT</a>
            </div>
        </div>
     </div>
 </div>
-{{-- <div class="container-fluid-customize">
-    <div class="hero">
-        <img src="{{has_field( $page ,'image') ? get_object_image(get_field( $page ,'image')):''}}" alt="">
-    </div>
-</div> --}}
 <div class="container-customize" id="wrap-bot">
     <div class="wrap-bot">
         <div class="bot1">
@@ -90,8 +74,8 @@ if(has_field($page, 'about_us'))
             @foreach (get_field($page, 'key_feature') as $item)
                 <div class="col-lg-4 col-md-6">
                    <div class="product0">
-                    <img src="{{get_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}" alt="">
-                    <h3>{{get_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
+                    <img src="{{get_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}" alt="{{get_sub_field($item , 'title')}}">
+                    <h3>{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
                     <p>{!!get_sub_field($item , 'description') ? get_sub_field($item , 'description'):''!!}</p>
                    </div>
                 </div>
@@ -101,27 +85,6 @@ if(has_field($page, 'about_us'))
         </div>
     </div>
 </div>
-{{-- <div class="container-customize">
-    <div class="count">
-        <div class="row w-100 mx-0">
-            @if(has_field($page, 'statistic'))
-        @foreach (get_field($page, 'statistic') as $item)
-            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                <div class="box-count count-customers">
-                    <h2>{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h2>
-                    <p>{{get_sub_field($item , 'description') ? get_sub_field($item , 'description'):''}}</p>
-                </div>
-            </div>
-            @endforeach
-            @endif
-        </div>
-    </div>
-    <div class="experience">
-        <div class="exp">
-            <p>{{has_field( $page ,'description_16226544671') ? get_field( $page ,'description_16226544671'):''}} </p>
-        </div>
-    </div>
-</div> --}}
 <div class="container-customize">
     @includeIf("theme.armcobarriers::views.modules.form-signup")
 </div>

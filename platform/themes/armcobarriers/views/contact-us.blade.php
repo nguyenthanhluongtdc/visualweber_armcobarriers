@@ -3,7 +3,7 @@
         <div class="contact-banner" style="background-image:url({{ get_object_image(get_field($page,'picture'))}})">
         <div class="container-customize">
           <div class="title-contact">
-            <h1>Contact Us</h1>
+            <h1>{{$page->name}}</h1>
             <p>{{has_field($page ,'contact_us_desc') ? get_field($page ,'contact_us_desc'):''}}
             </p>
           </div>
@@ -69,7 +69,7 @@
             </div>
             <div class="policy custom-checkbox">
               <label class="customcheck">
-                <input type="checkbox" checked="checked"><a href="" data-toggle="modal" data-target="#exampleModalLong">I have read and accept the Privacy Policy</a>
+                <input type="checkbox" checked="checked"><a href="{{route('public.single').get_slug_by_template('Privacy-policy')}}">I have read and accept the Privacy Policy</a>
                 <span class="checkmark"></span>
               </label>
               <button class="bsend-button" type="submit" value="SEND">
