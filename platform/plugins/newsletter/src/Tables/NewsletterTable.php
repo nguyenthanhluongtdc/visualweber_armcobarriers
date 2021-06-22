@@ -84,6 +84,7 @@ class NewsletterTable extends TableAbstract
             'newsletters.id',
             'newsletters.email',
             'newsletters.name',
+            'newsletters.company',
             'newsletters.created_at',
             'newsletters.status',
         ];
@@ -163,6 +164,11 @@ class NewsletterTable extends TableAbstract
                 'title'    => trans('core/base::tables.email'),
                 'type'     => 'text',
                 'validate' => 'required|max:120|email',
+            ],
+            'newsletters.company'      => [
+                'title'    => trans('core/base::tables.company'),
+                'type'     => 'text',
+                'validate' => 'required|max:200',
             ],
             'newsletters.status'     => [
                 'title'    => trans('core/base::tables.status'),
