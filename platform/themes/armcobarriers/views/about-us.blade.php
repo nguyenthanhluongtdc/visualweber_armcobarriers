@@ -63,11 +63,11 @@ if(has_field($page, 'about_us'))
        </div>
     </div>
 </div>
-<div class="container-fluid-customize">
+{{-- <div class="container-fluid-customize">
     <div class="hero">
         <img src="{{has_field( $page ,'image') ? get_object_image(get_field( $page ,'image')):''}}" alt="">
     </div>
-</div>
+</div> --}}
 <div class="container-customize" id="wrap-bot">
     <div class="wrap-bot">
         <div class="bot1">
@@ -79,7 +79,7 @@ if(has_field($page, 'about_us'))
                 </div>
                 <div class="col-md-8 col-sm-12">
                     <div class="slogan">
-                        <p>{!! get_field( $page ,'description') ? get_field( $page ,'description'):''!!}</p>
+                        {!! get_field( $page ,'description') ? get_field( $page ,'description'):''!!}
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ if(has_field($page, 'about_us'))
         </div>
     </div>
 </div>
-<div class="container-customize">
+{{-- <div class="container-customize">
     <div class="count">
         <div class="row w-100 mx-0">
             @if(has_field($page, 'statistic'))
@@ -121,7 +121,7 @@ if(has_field($page, 'about_us'))
             <p>{{has_field( $page ,'description_16226544671') ? get_field( $page ,'description_16226544671'):''}} </p>
         </div>
     </div>
-</div>
+</div> --}}
 <div class="container-customize">
     @includeIf("theme.armcobarriers::views.modules.form-signup")
 </div>
