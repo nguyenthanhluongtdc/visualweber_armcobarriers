@@ -170,6 +170,12 @@
     .bot1 {
         padding: 20px 0px 80px;
         .slogan {
+            ul {
+                padding-inline-start: 40px;
+                li {
+                    line-height: 1.7;
+                }
+            }
             p {
                 font-size: 17px;
                 font-family: $Arial;
