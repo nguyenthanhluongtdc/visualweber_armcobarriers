@@ -3,7 +3,7 @@ require('./bootstrap')
     //menu header
 $(document).ready(function() {
     if (screen.width <= 991)
-        $('.nav-item .dropdown-toggle').click(function(e) {
+        {$('.nav-item .dropdown-toggle').click(function(e) {
             e.preventDefault()
             const element = $(this).parent().children('.sm-menu')
             if (!element) return
@@ -15,22 +15,21 @@ $(document).ready(function() {
                 element.toggleClass('is-show')
                 element.css('display', 'block')
             }
-        })
-})
+        })}
 
-$('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
-    const element = $('#nav-bar-dropdown');
-    if (!element) return
-    if (element.hasClass('is-show')) {
-        element.toggleClass('is-show')
-    } else {
-        element.toggleClass('is-show')
-    }
+    $('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
+        const element = $('#nav-bar-dropdown');
+        if (!element) return
+        if (element.hasClass('is-show')) {
+            element.toggleClass('is-show')
+        } else {
+            element.toggleClass('is-show')
+        }
 
-    // const elementOverLay = $('.overlay_background')
-    // if (!elementOverLay) return
-    // element.hasClass('is-show') ? elementOverLay.addClass('overlay_background_active') : elementOverLay.removeClass('overlay_background_active')
-});
+        // const elementOverLay = $('.overlay_background')
+        // if (!elementOverLay) return
+        // element.hasClass('is-show') ? elementOverLay.addClass('overlay_background_active') : elementOverLay.removeClass('overlay_background_active')
+    });
 
 
 
@@ -40,98 +39,122 @@ $('#nav-bar-dropdown , .menu-pc-dropdown').hover(function(e) {
 
 // const helloWorld = require("./hello-world").helloWorld();
 // console.log(helloWorld);
-var swiper = new Swiper(".mySwiper-home", {
-    speed: 800,
-    // parallax: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    var swiper = new Swiper(".mySwiper-home", {
+        speed: 800,
+        // parallax: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-var swiper2 = new Swiper(".mySwiper1", {
-    spaceBetween: 30,
-    effect: "fade",
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
-var swiper_gallery = new Swiper(".Swiper-Gallery", {
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
-    pagination: {
-        el: ".swiper-pagination",
-
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    // observer: true,
-    // observeParents: true,
-});
-var swiper_gallery = new Swiper(".mySwiper-left", {
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    // observer: true,
-    // observeParents: true,
-});
-var swiper_gallery = new Swiper(".mySwiper-right", {
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
-    pagination: {
-        el: ".swiper-pagination",
-        type: "fraction",
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    // observer: true,
-    // observeParents: true,
-});
-
-
-function clickToScroll(elButtom, elContent, minusPixel, timeScroll) {
-    $(elButtom).click(function() {
-        $(this).data('clicked', true)
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(elContent).offset().top - minusPixel
-        }, timeScroll);
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
-}
-$(document).ready(function() {
+
+    var swiper2 = new Swiper(".mySwiper1", {
+        spaceBetween: 30,
+        effect: "fade",
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    var swiper_gallery = new Swiper(".Swiper-Gallery", {
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: ".swiper-pagination",
+
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        // observer: true,
+        // observeParents: true,
+    });
+    
+    var swiper_gallery = new Swiper(".mySwiper-left", {
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        // observer: true,
+        // observeParents: true,
+    });
+
+    var swiper_gallery = new Swiper(".mySwiper-right", {
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,
+        // },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        // observer: true,
+        // observeParents: true,
+    });
+
+
+    function clickToScroll(elButtom, elContent, minusPixel, timeScroll) {
+        $(elButtom).click(function() {
+            $(this).data('clicked', true)
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $(elContent).offset().top - minusPixel
+            }, timeScroll);
+        });
+    }
     clickToScroll('#click1', '.whatwedo', 80, 1000)
     clickToScroll('#click2', '.bot1', 100, 1200)
-});
+
+
+    //button share facebook
+    var width  = 800,
+    height = 600,
+    left   = ($(window).width()  - width)  / 2,
+    top    = ($(window).height() - height) / 2,
+    url    = "",
+    opts   = 'status=1' +
+            ',width='  + width  +
+            ',height=' + height +
+            ',top='    + top    +
+            ',left='   + left;
+
+    $(document).on('click','.fb-share-button',function() {
+        url = $(this).attr("data-href");
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url,
+            'facebook-share-dialog', opts
+        );
+        return false;
+    })
+})
