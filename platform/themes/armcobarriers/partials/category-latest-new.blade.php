@@ -25,7 +25,7 @@
                             <div class="options">
                                 <div class="date"> {{$event->created_at->format('j F Y') }} </div>
                                 <div class="box">
-                                    <div class="fb-share-button share" data-href="{{$event->url}}">
+                                    <div class="fb-share-button share" data-href="{{$event->url}}" target="_blank">
                                         <span>Share</span>
                                     </div>
                                     <a class="type"> {!! $event->categories->first()->name !!} </a>
