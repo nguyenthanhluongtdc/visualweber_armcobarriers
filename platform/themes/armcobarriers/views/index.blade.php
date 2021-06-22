@@ -10,7 +10,7 @@
                     <div class="container-customize">
                         <div class="swiper-content">
                             <div class="logo-slider">
-                                <img src="{{has_sub_field($item , 'logo') ? get_object_image(get_sub_field($item , 'logo')):''}}" alt="">
+                                <img src="{{has_sub_field($item , 'logo') ? get_object_image(get_sub_field($item , 'logo')):''}}" alt="logo">
                             </div>
                             <div class="title-slider">{{get_sub_field($item , 'slide_title') ? get_sub_field($item , 'slide_title'):''}}</div>
                             <div class="text-slider">
@@ -40,7 +40,7 @@
                 <div class="left-content">
                     <div class="gallery__item">
                         <div class="gallery__item-group">
-                            <img class="mw-100" src="{{has_field( $page ,'logo') ? get_object_image(get_field( $page ,'logo')):''}}" alt="">
+                            <img class="mw-100" src="{{has_field( $page ,'logo') ? get_object_image(get_field( $page ,'logo')):''}}" alt="logo">
                             <h2 data-aos="" data-aos-delay="200">{{has_field($page ,'asset_protection_solutions') ? get_field($page ,'asset_protection_solutions'):'' }}</h2>
                         </div> 
                         <p  data-aos="" data-aos-delay="400">{{has_field( $page ,'location') ? get_field( $page ,'location'):'' }}</p>
@@ -48,8 +48,8 @@
                 </div>
                 @foreach (get_field($page, 'lists_of_image') as $key=> $item)
                 <div class="grid__item">
-                    <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}">
-                        <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="">
+                    <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}" title="link">
+                        <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="{{get_sub_field( $item ,'location_text')}}">
                        <div class="gallery__item-text">
                             <p>{{has_sub_field( $item ,'location_text')? get_sub_field( $item ,'location_text'):'' }}</p>
                             <i class="fal fa-arrow-right"></i>
@@ -59,8 +59,8 @@
                 @endforeach
                 @foreach(get_featured_services(3) as $key => $item_service)
                 <div class="grid__item">
-                    <a href="{{$item_service->url}}">
-                        <img class="img-background mw-100 item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service, 'img_service_item')) }}" alt="">
+                    <a href="{{$item_service->url}}" title="link">
+                        <img class="img-background mw-100 item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service, 'img_service_item')) }}" alt="{{$item_service->name}}">
                        <div class="gallery__item-text">
                             <p>{{$item_service->name}}</p>
                             <i class="fal fa-arrow-right"></i>
@@ -73,12 +73,11 @@
     </div>
     
 </section> 
-<section style="padding-top:4%">
+<section style="padding-top:6%">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
                 <h2>Product Range</h2>
-                <p>Roadside, Car Parks, Warehouses</p>
             </div>
             <div class="wrap-descrip">
                 <div class="row">
@@ -98,10 +97,10 @@
             </div>
             <div class="wrap2 my-5">
                 <div class="icon">
-                 <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                    <i class="far fa-long-arrow-right"></i>
                 </div>
                 <div class="view">
-                     <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
+                     <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>
@@ -114,7 +113,7 @@
             <div class="left-content">
                 <div class="gallery__item">
                     <div class="gallery__item-group">
-                        <img class="mw-100" src="{{has_field( $page ,'logo_service') ? get_object_image(get_field( $page ,'logo_service')):''}}" alt="">
+                        <img class="mw-100" src="{{has_field( $page ,'logo_service') ? get_object_image(get_field( $page ,'logo_service')):''}}" alt="logo">
                         <h2 data-aos="" data-aos-delay="200">Services</h2>
                     </div> 
                     <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
@@ -122,8 +121,8 @@
             </div>
             @foreach(get_services_latest() as $key1 => $item_service_latest)
                 <div class="grid__item">
-                    <a href="{{$item_service_latest->url}}">
-                        <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service_latest, 'img_service_item')) }}" alt="">
+                    <a href="{{$item_service_latest->url}}" title="link">
+                        <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service_latest, 'img_service_item')) }}" alt="{{$item_service_latest->name}}">
                        <div class="gallery__item-text">
                             <p>{{$item_service_latest->name}}</p>
                             <i class="fal fa-arrow-right"></i>
@@ -149,8 +148,8 @@
                 @foreach (get_post_is_featured() as $post)
                 <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="200">
-                        <a href="{{$post->url}}">
-                            <img class="img-background" src="{{ RvMedia::getImageUrl($post->image) }}" alt="">
+                        <a href="{{$post->url}}" title="link">
+                            <img class="img-background" src="{{ RvMedia::getImageUrl($post->image) }}" alt="{{ $post->name }}">
                         <div class="news-post--titlte">
                             <h4> {{ $post->name }}</h4>
                         </div>
@@ -161,7 +160,7 @@
                         <div class="news-post-time">
                             <span>{{$post->created_at->format('j F Y') }}</span>
                             <div class="btn-share">
-                                <a href="">Share <i class="fal fa-share-alt"></i> </a>
+                                <a href="" title="link">Share <i class="fal fa-share-alt"></i> </a>
                             </div>
                         </div>
                     </div>
@@ -171,27 +170,8 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.single').get_slug_by_template('News-media')}} "><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="link"><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
-                {{-- <div class="count">
-                    <div class="row w-100 mx-0">
-                    @if(has_field($page, 'statistic_home'))
-                    @foreach (get_field($page, 'statistic_home') as $item)
-                        <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-                            <div class="box-count count-customers">
-                                <h2>{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h2>
-                                <p>{{has_sub_field($item , 'description_home') ? get_sub_field($item , 'description_home'):''}}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                    @endif
-                    </div>
-                </div>
-                <div class="experience">
-                    <div class="exp">
-                        <p>{{get_field( $page ,'description_home') ? get_field( $page ,'description_home'):''}} </p>
-                    </div>
-                </div> --}}
         </div>
     </div>
 </section>

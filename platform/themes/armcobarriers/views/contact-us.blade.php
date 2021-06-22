@@ -69,7 +69,7 @@
             </div>
             <div class="policy custom-checkbox">
               <label class="customcheck">
-                <input type="checkbox" checked="checked"><a href="{{route('public.single').get_slug_by_template('Privacy-policy')}}">I have read and accept the Privacy Policy</a>
+                <input type="checkbox" checked="checked"><a href="{{route('public.single').get_slug_by_template('Privacy-policy')}}" title="policy">I have read and accept the Privacy Policy</a>
                 <span class="checkmark"></span>
               </label>
               <button class="bsend-button" type="submit" value="SEND">
