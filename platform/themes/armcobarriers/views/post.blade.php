@@ -57,7 +57,9 @@
                     <div class="row wrap-news">
                         @foreach ($featured as $featureItem)
                             <div class="col-lg-6 col-md-4 col-sm-4  img">
-                                <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="">
+                               <a href="{{$featureItem->url}}">
+                                    <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="">
+                               </a>
                             </div>
                             <div class="col-lg-6 col-md-8 col-sm-8  description">
                                 <a href="{{$featureItem->url}}" title="#">{{$featureItem->name}}</a>
