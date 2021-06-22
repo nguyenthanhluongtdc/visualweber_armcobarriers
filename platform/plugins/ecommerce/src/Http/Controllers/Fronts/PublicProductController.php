@@ -191,7 +191,9 @@ class PublicProductController
 
         $meta = new SeoOpenGraph;
         if ($product->image) {
-            $meta->setImage(RvMedia::getImageUrl($product->image));
+            $meta->setImage(RvMedia::getImageUrl($product->image))
+                ->addProperty('image:width', '1200')
+                ->addProperty('image:height', '630');
         }
         $meta->setDescription($product->description);
         $meta->setUrl($product->url);

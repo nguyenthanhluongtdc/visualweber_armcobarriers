@@ -191,7 +191,7 @@
                         @foreach($other_products as $other_pro)
                             <div class="swiper-slide product_item">
                                 <div class="box-img">
-                                    <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt=""> 
+                                    <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}"> 
                                     <a href="{{ $other_pro->url }}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
                                 </div>
                                 <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
