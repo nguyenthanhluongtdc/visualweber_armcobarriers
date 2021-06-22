@@ -3,7 +3,7 @@
     <div class="wrap-top">
         <div class="container-customize">
             <div class="top2">
-                <h2>{{$page->name}}</h2>
+                <h1>{{$page->name}}</h1>
                 {{$page->description}}
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_services())
                     @foreach($tabs_services as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}">{{ $tab->name }}</a>
+                    <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
                     <!-- <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt=""> -->
                     @endforeach
                     @endif
@@ -66,13 +66,13 @@
                 @foreach($tabs_services as $key => $tab)
                 <?php  if (!empty(get_field($tab, 'img_service_item'))) { ?>
                     <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                        <a href="{{ $tab->url }}">
+                        <a href="{{ $tab->url }}" title="link">
                             <div class="icon">
                                 <i class="fal fa-long-arrow-right"></i>
                             </div>
                         </a>
                         <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt="">
-                        <p> <a href="{{ $tab->url }}">{{ $tab->name }}</a> </p>
+                        <p> <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> </p>
                     </div>
                     <?php } ?>
                 @endforeach
@@ -119,7 +119,7 @@
                     <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@
     <div class="container-customize" id="install">
         <div class="wrap-top">
             <div class="top2">
-                <h2>{{ $service-> name}}</h2>
+                <h2>{{ $service->name}}</h2>
                 <p> {{ get_field($service, 'short_description') }}</p>
             </div>
         </div>
@@ -20,7 +20,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_services())
                     @foreach($tabs_services as $key => $tab)
-                    <a class="nav-item nav-link <?php if($tab->name == $service['name']) { ?> active <?php } ?>" style="color:#000000" href="{{ $tab->url }}">{{ $tab->name }}</a>
+                    <a class="nav-item nav-link <?php if($tab->name == $service['name']) { ?> active <?php } ?>" style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a>
                     @endforeach
                     @endif
                 </div>
@@ -77,7 +77,7 @@
     <?php if(!empty(get_field($service, 'service_list'))) { ?>
     @foreach (get_field($service, 'service_list') as $item2)
     <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
-        <a href="{{get_sub_field($item2,'link')}}">
+        <a href="{{get_sub_field($item2,'link')}}" title="link">
             <h5> {{get_sub_field($item2,'title')}}</h5>
             <p>{!!get_sub_field($item2,'description')!!}</p>
 
@@ -123,7 +123,7 @@
                     <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

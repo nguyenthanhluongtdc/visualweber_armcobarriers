@@ -1,7 +1,7 @@
 .wrap-top {
     .top2 {
         padding-bottom: 30px;
-        h2 {
+        h1 {
             font-size: 40px;
             font-family: $FolioStd-Bold;
             color: #000000;
@@ -15,11 +15,11 @@
     }
     .menu {
         .nav-tabs {
-            .nav-item.show{
-                .nav-link{
+            .nav-item.show {
+                .nav-link {
                     background: none;
                 }
-            } 
+            }
             border-bottom: 0px solid #dee2e6;
             .nav-link {
                 padding: 0px 50px 0px 0px;
@@ -33,14 +33,15 @@
         }
     }
 }
-.wrap-install{
-    .install{
-        .system1{
-            padding-top: 15%;
 
+.wrap-install {
+    .install {
+        .system1 {
+            padding-top: 15%;
         }
     }
 }
+
 .wrap-car {
     background-image: url('../../../public/images/service/carpark.jpg');
     .wrap-system {
@@ -112,7 +113,6 @@
             font-size: 20px;
             font-family: $FolioStd-Medium;
             right: 0.2%;
-
             a {
                 color: white;
             }
@@ -139,7 +139,7 @@
         visibility: inherit;
         transition: 0.5s ease;
     }
-    .asset:hover p a{
+    .asset:hover p a {
         color: $priamry_color;
     }
 }
@@ -177,38 +177,38 @@
 .product-range-children {
     margin-top: 120px;
 }
-.banner_section{
+
+.banner_section {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 80px 0;
     margin-top: 10px;
-    h3{
+    h3 {
         font-size: 20px;
         color: $priamry_color;
         font-weight: bold;
     }
-    .content{
+    .content {
         width: 60%;
-        .desc{
-       
+        .desc {
             color: #fff;
             font-size: 17px;
             margin-top: 40px;
         }
-        .dev_3_column{
+        .dev_3_column {
             display: flex;
             align-items: center;
             margin-top: 40px;
             justify-content: space-between;
             width: 100%;
             flex-wrap: wrap;
-            .item_column{
+            .item_column {
                 width: 30%;
-                h5{
+                h5 {
                     font-size: 20px;
                     color: $priamry_color;
                 }
-                p{
+                p {
                     color: #fff;
                     font-size: 17px;
                     margin-top: 10px;
@@ -216,10 +216,10 @@
             }
         }
     }
-    
 }
+
 .wrap-product {
-    .wrap2{
+    .wrap2 {
         padding-bottom: 3%;
     }
     .view-product {
@@ -249,9 +249,8 @@
         }
     }
     .wrap-descrip {
-        
-        .post:nth-child(4){
-            p{
+        .post:nth-child(4) {
+            p {
                 padding-right: 0px !important;
             }
         }
@@ -268,7 +267,7 @@
             font-family: $FolioStd-Medium;
             color: #000000;
         }
-        p{
+        p {
             font-size: 15px;
             font-family: $Arial;
             margin-top: 10px;
@@ -278,7 +277,6 @@
 }
 
 // respon
-
 @media (max-width:1680px) {
     .wrap-our {
         .asset {
@@ -313,15 +311,16 @@
         }
     }
 }
-@media(max-width:991px){
-    .banner_section{
+
+@media(max-width:991px) {
+    .banner_section {
         padding: 50px 0;
-        .content{
+        .content {
             width: 100%;
         }
     }
     .wrap-roadside {
-        .content{
+        .content {
             width: 100%;
         }
     }
@@ -331,55 +330,53 @@
     .wrap-product .wrap-descrip h3 {
         font-size: 17px;
     }
-
     .product-range-children {
         margin-top: 70px;
-
         .product-range {
             margin-bottom: 20px;
-
             >p {
                 font-size: 13px;
             }
         }
     }
-    .asset{
+    .asset {
         display: flex;
         justify-content: center;
     }
-    .container-customize{
-        padding: 0 15px  !important;
+    .container-customize {
+        padding: 0 15px !important;
     }
-  .wrap-top{
-      .top2{
-          h2{
-              font-size: 36px;
-          }
-          padding-bottom: 3% !important;
-      }
-  }
-  .wrap-product{
-      .wrap-descrip{
-          margin-bottom: 0 !important;
-          p{
-              padding-right: 0 !important;
-          }
-      }
-  }
+    .wrap-top {
+        .top2 {
+            h1 {
+                font-size: 36px;
+            }
+            padding-bottom: 3% !important;
+        }
+    }
+    .wrap-product {
+        .wrap-descrip {
+            margin-bottom: 0 !important;
+            p {
+                padding-right: 0 !important;
+            }
+        }
+    }
 }
+
 @media(max-width:768px) {
-    .wrap-top{
-        .top2{
-            h2{
+    .wrap-top {
+        .top2 {
+            h1 {
                 font-size: 30px;
             }
-            p{
+            p {
                 font-size: 17px !important;
             }
         }
     }
     .wrap-our {
-        .service{
+        .service {
             font-size: 30px;
         }
         .asset {
@@ -388,14 +385,15 @@
         }
     }
 }
+
 @media(max-width:575px) {
-    .banner_section .content .dev_3_column .item_column{
+    .banner_section .content .dev_3_column .item_column {
         width: 100%;
         margin-bottom: 15px;
     }
-    .wrap-top{
-        .top2{
-            p{
+    .wrap-top {
+        .top2 {
+            p {
                 font-size: 15px !important;
             }
         }
@@ -411,9 +409,9 @@
 }
 
 @media(max-width:380px) {
-    .wrap-top{
-        .top2{
-            p{
+    .wrap-top {
+        .top2 {
+            p {
                 font-size: 13px !important;
             }
         }
