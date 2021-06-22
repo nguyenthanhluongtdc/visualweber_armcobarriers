@@ -114,6 +114,11 @@ class NewsletterTable extends TableAbstract
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
+            'company'       => [
+                'name'  => 'newsletters.company',
+                'title' => trans('core/base::tables.company'),
+                'class' => 'text-left',
+            ],
             'created_at' => [
                 'name'  => 'newsletters.created_at',
                 'title' => trans('core/base::tables.created_at'),

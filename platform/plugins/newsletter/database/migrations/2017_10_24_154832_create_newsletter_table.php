@@ -16,6 +16,7 @@ class CreateNewsletterTable extends Migration
             $table->id();
             $table->string('email', 120);
             $table->string('name', 120)->nullable();
+            $table->string('company', 120);
             $table->string('status', 60)->default('subscribed');
             $table->timestamps();
         });
