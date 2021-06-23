@@ -23,8 +23,10 @@ class Solution extends BaseModel
      */
     protected $fillable = [
         'name',
+        'image',
         'status',
         'is_featured',
+
 
     ];
 

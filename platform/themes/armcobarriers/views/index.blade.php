@@ -57,12 +57,12 @@
                     </a>
                 </div>
                 @endforeach
-                @foreach(get_featured_services(3) as $key => $item_service)
+                @foreach(get_featured_solutions(3) as $key => $item_solution)
                 <div class="grid__item">
-                    <a href="{{$item_service->url}}" title="link">
-                        <img class="img-background mw-100 item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service, 'img_service_item')) }}" alt="{{$item_service->name}}">
+                    <a href="{{$item_solution->url}}" title="link">
+                        <img class="img-background mw-100 item_sv_home" src="{{ RvMedia::getImageUrl($item_solution->image)}}" alt="{{$item_solution->name}}">
                        <div class="gallery__item-text">
-                            <p>{{$item_service->name}}</p>
+                            <p>{{$item_solution->name}}</p>
                             <i class="fal fa-arrow-right"></i>
                         </div> 
                     </a>
