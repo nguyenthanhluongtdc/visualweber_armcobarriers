@@ -49,12 +49,12 @@ class SolutionServiceProvider extends ServiceProvider
                 'permissions' => ['solution.index'],
             ]);
         });
-       
+        \SlugHelper::registerModule(Solution::class);
+        \SlugHelper::setPrefix(Solution::class, 'solutions');
+        \SeoHelper::registerModule(Solution::class);
 
         $this->app->booted(function () {
-            \SlugHelper::registerModule(Solution::class);
-            \SlugHelper::setPrefix(Solution::class, 'solutions');
-            \SeoHelper::registerModule(Solution::class);
+            
             if (defined('SOLUTION_MODULE_SCREEN_NAME')) {
                
                 \CustomField::registerModule(Solution::class)
