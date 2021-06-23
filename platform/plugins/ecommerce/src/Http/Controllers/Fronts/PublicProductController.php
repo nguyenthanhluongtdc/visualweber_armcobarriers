@@ -219,7 +219,7 @@ class PublicProductController
 
         do_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $product);
 
-        return Theme::scope('ecommerce.product', compact('product'), 'plugins/ecommerce::themes.product')->render();
+        return Theme::scope('ecommerce.product', compact('product','category'), 'plugins/ecommerce::themes.product')->render();
     }
 
     /**

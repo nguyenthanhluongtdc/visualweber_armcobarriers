@@ -31,11 +31,13 @@
     <div class="container-customize">
         <div class="row">
             <div class="top_title col-md-12">
-                <p>Product Range</p>
-                <a href="">
-                    <i class="fas fa-chevron-left"></i>
-                    <span>Guardrail - Railgard curvature details</span>
-                </a>
+                <h3>Product Range</h3>
+                @if($category)
+                    <a href="{{$category->url}}" title="{{$category->name}}">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>{!! $category->name !!}</span>
+                    </a>
+                @endif
             </div>
            
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -71,7 +73,7 @@
                     </div>
 
                     <div class="col-12 col-lg-6 info">
-                        <p class="product_name"> {{$product->name}} </p>
+                        <h1 class="product_name"> {{$product->name}} </h1>
                         <div>
                             @php 
                                 echo $product->content
@@ -147,7 +149,7 @@
                                 @if(!empty($hasFieldTabs))
                                     @foreach($hasFieldTabs as $key => $tab)
                                     <li class="nav-item">
-                                        <a class="nav-link {{$key==0?'active':''}}" id="tab{{$key}}-tab" data-toggle="tab" href="#tab{{$key}}" role="tab" aria-controls="tab{{$key}}" aria-selected="true"> {{has_sub_field($tab,'tabs_title')}} </a>
+                                        <a class="nav-link {{$key==0?'active':''}}" id="tab{{$key}}-tab" data-toggle="tab" href="#tab{{$key}}" role="tab" aria-controls="tab{{$key}}" aria-selected="true" title="{{has_sub_field($tab,'tabs_title')}}"> {{has_sub_field($tab,'tabs_title')}} </a>
                                     </li>
                                     @endforeach
                                 @endif
@@ -192,7 +194,7 @@
                             <div class="swiper-slide product_item">
                                 <div class="box-img">
                                     <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}"> 
-                                    <a href="{{ $other_pro->url }}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
+                                    <a href="{{ $other_pro->url }}" title="{{$other_pro->name}}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
                                 </div>
                                 <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
                                 <div class="description"> {!! $other_pro->description !!} </div> 
