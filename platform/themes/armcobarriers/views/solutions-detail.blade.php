@@ -6,6 +6,7 @@
     <div class="container-customize" id="install">
         <div class="wrap-top">
             <div class="top2">
+
                 <h2>{{ $solution->name}}</h2>
                 <p> {{ get_field($solution, 'short_description') }}</p>
             </div>
@@ -32,31 +33,31 @@
         @includeIf("theme.armcobarriers::views.tab",['tabs'=> []])
     </div>
 </div>
-{{-- @if(!empty(get_field($service, 'banner_description')))
+@if(!empty(get_field($solution, 'banner_description_solution')))
     <div class="service-detail-banner">
         <div class="left">
             <h4 class="left-title">
-                {{ get_field($service, 'banner_title') }}
+                {{ get_field($solution, 'banner_title_solution') }}
             </h4>
             <div class="desc">
-                {!! get_field($service, 'banner_description') !!}
+                {!! get_field($solution, 'banner_description_solution') !!}
             </div>
         </div>
         <div class="right">
-            <img src="{{ RvMedia::getImageUrl(get_field($service, 'big_picture')) }}" alt="">
+            <img src="{{ RvMedia::getImageUrl(get_field($solution, 'big_picture_solution')) }}" alt="">
         </div>
     </div>
 @else
     <div class="container-customize">
          <p> Content updating </p>
     </div>
-@endif --}}
+@endif
 
-{{-- <div class="container-customize">
+<div class="container-customize">
     <div class="service_detail-content ">
-        {!! get_field($service, 'long_description') !!}
+        {!! get_field($solution, 'long_description_solution') !!}
     </div>
-</div> --}}
+</div>
 
 {{--
 <div class="container-customize">
@@ -88,16 +89,16 @@
 </div> --}}
 
 
-{{-- <section>
+<section>
     <div class="container-customize">
-        <?php if(!empty(get_field($service, 'product_quality_16233289513'))) { ?>
+        <?php if(!empty(get_field($solution, 'product_quality_solution'))) { ?>
         <div class="wrap-product-quality">
             <div class="product-quality">
-                <h2>{{ get_field($service, 'block_title') }}</h2>
-                <p>{{ get_field($service, 'short_description_16233289512') }}</p>
+                <h2>{{ get_field($solution, 'block_title_solution') }}</h2>
+                <p>{{ get_field($solution, 'short_description_solution_detail') }}</p>
             </div>
             <div class="row">
-                @foreach (get_field($service, 'product_quality_16233289513') as $item)
+                @foreach (get_field($solution, 'product_quality_solution') as $item)
                     <div class="col-md-4 item_img_sv">
                         <h3 class="title">
                             {{get_sub_field($item,'title')}}
@@ -111,7 +112,7 @@
         </div>
         <?php } ?>
     </div>
-</section> --}}
+</section>
 <section class="mt-5">
     <div class="container-customize">
         <div class="wrap-product">
@@ -120,7 +121,7 @@
                     <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCTS</a>
                 </div>
             </div>
         </div>

@@ -179,7 +179,7 @@ class ArmcobarriersController extends PublicController
 
         Theme::breadcrumb()
             ->add(__('Home'), url('/'))
-            ->add(__('Our Solutions'), url(get_slug_by_template('solution')))
+            ->add(__('Our Solutions'), url(get_slug_by_template('Solutions')))
             ->add($data['solution']->name, $data['solution']->url);
 
         SeoHelper::setTitle($data['solution']->name)->setDescription($data['solution']->description);
