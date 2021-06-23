@@ -7,7 +7,7 @@
         <div class="wrap-top">
             <div class="top2">
 
-                <h2>{{ $solution->name}}</h2>
+                <h1>{{ $solution->name}}</h1>
                 <p> {{ get_field($solution, 'short_description') }}</p>
             </div>
         </div>
