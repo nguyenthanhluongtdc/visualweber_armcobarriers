@@ -163,7 +163,27 @@ class ArmcobarriersController extends PublicController
         }
     }
 
-    public function getSolution() {
-        dd('solutions detail');
+    public function getSolution($slug)
+    {
+        $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Solution::class, 'solutions'));
+
+        if (!$slug) {
+            abort(404);
+        }
+
+        $data['solution'] = $slug->reference;
+
+        if (blank($data)) {
+            abort(404);
+        }
+
+        Theme::breadcrumb()
+            ->add(__('Home'), url('/'))
+            ->add(__('Our Solutions'), url(get_slug_by_template('solution')))
+            ->add($data['solution']->name, $data['solution']->url);
+
+        SeoHelper::setTitle($data['solution']->name)->setDescription($data['solution']->description);
+
+        return Theme::scope('solutions-detail', $data)->render();
     }
 }
