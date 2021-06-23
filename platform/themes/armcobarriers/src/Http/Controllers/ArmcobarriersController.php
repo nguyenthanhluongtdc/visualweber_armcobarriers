@@ -162,4 +162,8 @@ class ArmcobarriersController extends PublicController
             }
         }
     }
+
+    public function getSolution() {
+        dd('solutions detail');
+    }
 }
