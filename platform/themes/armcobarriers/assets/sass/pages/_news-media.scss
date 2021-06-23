@@ -7,39 +7,6 @@ $gray_text: #262626;
     -webkit-box-orient: vertical;
 }
 
-.notification-button {
-    position: fixed;
-    top: 40px;
-    left: 50%;
-    z-index: 101;
-    padding: 10px 20px;
-    background: #343a40;
-    color: #eeeeee;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 800;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
-}
-
-.slide-in-down {
-    transform: translateY(-100%) translateX(-50%);
-}
-
-/*fade*/
-.animate {
-    opacity: 0;
-    transition: all 1s;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
-  
-  .animate.active {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%);
-}
-
 .pages-news-media {
     .my-7.mt-n20 {
         margin-top: 2.80rem;
