@@ -48,7 +48,7 @@
                 </div>
                 @foreach (get_field($page, 'lists_of_image') as $key=> $item)
                 <div class="grid__item">
-                    <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}" title="link">
+                    <a href="{{ has_sub_field($item,'link') ? get_sub_field($item,'link') :''}}" title="{{get_sub_field( $item ,'location_text')}}">
                         <img class="img-background mw-100" src="{{has_sub_field( $item ,'picture') ? get_object_image(get_sub_field( $item ,'picture')):''}}" alt="{{get_sub_field( $item ,'location_text')}}">
                        <div class="gallery__item-text">
                             <p>{{has_sub_field( $item ,'location_text')? get_sub_field( $item ,'location_text'):'' }}</p>
@@ -59,7 +59,7 @@
                 @endforeach
                 @foreach(get_featured_solutions(3) as $key => $item_solution)
                 <div class="grid__item">
-                    <a href="{{$item_solution->url}}" title="link">
+                    <a href="{{$item_solution->url}}" title="{{$item_solution->name}}">
                         <img class="img-background mw-100 item_sv_home" src="{{ RvMedia::getImageUrl($item_solution->image)}}" alt="{{$item_solution->name}}">
                        <div class="gallery__item-text">
                             <p>{{$item_solution->name}}</p>
@@ -100,7 +100,7 @@
                     <i class="far fa-long-arrow-right"></i>
                 </div>
                 <div class="view">
-                     <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCTS</a>
+                     <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
                 </div>
             </div>
         </div>
@@ -121,7 +121,7 @@
             </div>
             @foreach(get_services_latest() as $key1 => $item_service_latest)
                 <div class="grid__item">
-                    <a href="{{$item_service_latest->url}}" title="link">
+                    <a href="{{$item_service_latest->url}}" title="{{$item_service_latest->name}}">
                         <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service_latest, 'img_service_item')) }}" alt="{{$item_service_latest->name}}">
                        <div class="gallery__item-text">
                             <p>{{$item_service_latest->name}}</p>
@@ -148,7 +148,7 @@
                 @foreach (get_post_is_featured() as $post)
                 <div class="col-lg-4 col-sm-6 col-12 mb-lg-0 mb-5">
                     <div class="news-post" data-aos="" data-aos-delay="200">
-                        <a href="{{$post->url}}" title="link">
+                        <a href="{{$post->url}}" title="{{ $post->name }}">
                             <img class="img-background" src="{{ RvMedia::getImageUrl($post->image) }}" alt="{{ $post->name }}">
                         <div class="news-post--titlte">
                             <h4> {{ $post->name }}</h4>
@@ -170,7 +170,7 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="link"><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="{{ route('public.single').get_slug_by_template('News-media')}}"><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
             </div>
         </div>
     </div>
