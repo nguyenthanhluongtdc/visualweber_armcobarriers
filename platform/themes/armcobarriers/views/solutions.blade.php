@@ -33,18 +33,18 @@
 </div>
 
 @if(!empty($service_first)) 
-    @if(!empty(get_field($service_first, 'banner_description')))
+    @if(!empty(get_field($service_first, 'banner_description_solution')))
         <div class="service-detail-banner">
             <div class="left">
                 <h4 class="left-title">
-                    {{ get_field($service_first, 'banner_title') }}
+                    {{ get_field($service_first, 'banner_title_solution') }}
                 </h4>
                 <div class="desc">
-                    {!! get_field($service_first, 'banner_description') !!}
+                    {!! get_field($service_first, 'banner_description_solution') !!}
                 </div>
             </div>
             <div class="right">
-                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
+                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'banner_description_solution')) }}" alt="">
             </div>
         </div>
     @else
