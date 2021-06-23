@@ -17,10 +17,11 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_services())
-                    @foreach($tabs_services as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
-                    <!-- <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt=""> -->
-                    @endforeach
+                        @foreach($tabs_services as $key => $tab)
+                            <a class="nav-item nav-link" style="color:#000000" href="{{ $tab->url }}" title="tab">
+                                {{ $tab->name }} 
+                            </a>
+                        @endforeach
                     @endif
                 </div>
             </nav>

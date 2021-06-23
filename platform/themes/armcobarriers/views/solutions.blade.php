@@ -62,19 +62,19 @@
             </div>
             <div class="row">
                 @if($tabs_solutions = get_solutions_latest())
-                @foreach($tabs_solutions as $key => $tab)
-                <?php  if (!empty(get_field($tab, 'img_service_item'))) { ?>
-                    <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                        <a href="{{ $tab->url }}" title="link">
-                            <div class="icon">
-                                <i class="fal fa-long-arrow-right"></i>
-                            </div>
-                        </a>
-                        <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt="">
-                        <p> <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> </p>
-                    </div>
-                    <?php } ?>
-                @endforeach
+                    @foreach($tabs_solutions as $key => $tab)
+                        <div class="col-lg-3 col-md-6 col-sm-6 asset">
+                            <a href="{{ $tab->url }}" title="link">
+                                <div class="icon">
+                                    <i class="fal fa-long-arrow-right"></i>
+                                </div>
+                            </a>
+                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="">
+                            <p> 
+                                <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> 
+                            </p>
+                        </div>
+                    @endforeach
                 @endif
             </div>
         </div>
