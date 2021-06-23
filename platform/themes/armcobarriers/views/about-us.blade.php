@@ -47,7 +47,7 @@ if(has_field($page, 'about_us'))
              <i class="far fa-long-arrow-right"></i>
            </div>
            <div class="view">
-                <a href="{{route('public.products')}}" title="product">VIEW OUR PRODUCTS</a>
+                <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
            </div>
        </div>
     </div>

@@ -56,9 +56,13 @@ class SolutionTable extends TableAbstract
                 }
                 return Html::link(route('solution.edit', $item->id), $item->name);
             })
+            // ->editColumn('image', function ($item) {
+            //     return Html::image(RvMedia::getImageUrl($item->image, 'thumb', false, RvMedia::getDefaultImage()), $item->name, ['width' => 70]);
+            // })
             ->editColumn('checkbox', function ($item) {
                 return $this->getCheckbox($item->id);
             })
+
             ->editColumn('created_at', function ($item) {
                 return BaseHelper::formatDate($item->created_at);
             })
@@ -83,6 +87,7 @@ class SolutionTable extends TableAbstract
         $select = [
             'app_solutions.id',
             'app_solutions.name',
+            'app_solutions.image',
             'app_solutions.created_at',
             'app_solutions.status',
         ];
@@ -108,6 +113,11 @@ class SolutionTable extends TableAbstract
                 'title' => trans('core/base::tables.name'),
                 'class' => 'text-left',
             ],
+            // 'image'      => [
+            //     'name'  => 'app_solutions.image',
+            //     'title' => trans('core/base::tables.image'),
+            //     'width' => '70px',
+            // ],
             'created_at' => [
                 'name'  => 'app_solutions.created_at',
                 'title' => trans('core/base::tables.created_at'),
