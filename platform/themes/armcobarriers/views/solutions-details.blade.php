@@ -6,8 +6,8 @@
     <div class="container-customize" id="install">
         <div class="wrap-top">
             <div class="top2">
-                <h2>{{ $service->name}}</h2>
-                <p> {{ get_field($service, 'short_description') }}</p>
+                <h2>{{ $solution->name}}</h2>
+                <p> {{ get_field($solution, 'short_description') }}</p>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_solutions())
                     @foreach($tabs_services as $key => $tab)
-                    <a class="nav-item nav-link <?php if($tab->name == $service['name']) { ?> active <?php } ?>" style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a>
+                    <a class="nav-item nav-link <?php if($tab->name == $solution['name']) { ?> active <?php } ?>" style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a>
                     @endforeach
                     @endif
                 </div>

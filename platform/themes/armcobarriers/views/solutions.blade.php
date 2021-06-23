@@ -54,7 +54,7 @@
         </div>
        
     </div> --}}
-{{-- <section>
+<section>
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
@@ -79,7 +79,7 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section> 
 {{-- <section style="padding-top:6%">
     <div class="container-fluid-customize">
         <div class="wrap-roadside" style="background-image:url({{ get_object_image(get_field( $page ,'services_solutions_picture'))}})">
@@ -91,8 +91,8 @@
             </div>
         </div>
     </div>
-</section>
-<section style="padding-top:4%">
+</section> --}}
+{{-- <section style="padding-top:4%">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
@@ -123,12 +123,12 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <section>
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")
     </div>
-</section> --}}
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>

@@ -125,32 +125,33 @@ class ArmcobarriersController extends PublicController
         return SiteMapManager::render('xml');
     }
 
-    public function getServices($slug)
-    {
-        $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
+    // public function getServices($slug)
+    // {
+    //     $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
   
-        if (!$slug) {
-            abort(404);
-        }
+    //     if (!$slug) {
+    //         abort(404);
+    //     }
 
-        $data['service'] = $slug->reference;
+    //     $data['service'] = $slug->reference;
 
-        if (blank($data)) {
-            abort(404);
-        }
+    //     if (blank($data)) {
+    //         abort(404);
+    //     }
 
-        Theme::breadcrumb()
-            ->add(__('Home'), url('/'))
-            ->add(__('Our services'), url(get_slug_by_template('service')))
-            ->add($data['service']->name, $data['service']->url);
+    //     Theme::breadcrumb()
+    //         ->add(__('Home'), url('/'))
+    //         ->add(__('Our services'), url(get_slug_by_template('service')))
+    //         ->add($data['service']->name, $data['service']->url);
 
-        SeoHelper::setTitle($data['service']->name)->setDescription($data['service']->description);
+    //     SeoHelper::setTitle($data['service']->name)->setDescription($data['service']->description);
 
-        return Theme::scope('services-detail', $data)->render();
-    }
+    //     return Theme::scope('services-detail', $data)->render();
+    // }
     public function getSolutions($slug)
     {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Solution::class));
+          
         if (!$slug) {
             abort(404);
         }
@@ -170,6 +171,8 @@ class ArmcobarriersController extends PublicController
 
         return Theme::scope('solutions-details', $data)->render();
     }
+   
+   
 
     public function getPostAjax(Request $request)
     {
