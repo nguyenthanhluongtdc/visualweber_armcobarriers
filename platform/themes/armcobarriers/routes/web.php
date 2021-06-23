@@ -9,7 +9,7 @@ use Platform\Service\Models\Service;
 Route::group(['namespace' => 'Theme\Armcobarriers\Http\Controllers', 'middleware' => ['web', 'core']], function () {
     Route::group(apply_filters(BASE_FILTER_GROUP_PUBLIC_ROUTE, []), function () {
         
-        Route::get(\SlugHelper::getPrefix(Service::class) . '/{slug}', [
+        Route::get(\SlugHelper::getPrefix(Service::class, 'sevices') . '/{slug}', [
             'as' => 'service-detail',
             'uses' => 'ArmcobarriersController@getServices',
         ]);
