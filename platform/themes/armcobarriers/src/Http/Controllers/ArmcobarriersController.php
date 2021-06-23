@@ -21,6 +21,7 @@ use RvMedia;
 use Platform\Blog\Models\Post;
 use Platform\Blog\Services\BlogService;
 use Platform\Service\Models\Service;
+use Platform\Solution\Models\Solution;
 use Illuminate\Http\Request;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
 
@@ -127,7 +128,7 @@ class ArmcobarriersController extends PublicController
     public function getServices($slug)
     {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Service::class));
-
+  
         if (!$slug) {
             abort(404);
         }
@@ -146,6 +147,28 @@ class ArmcobarriersController extends PublicController
         SeoHelper::setTitle($data['service']->name)->setDescription($data['service']->description);
 
         return Theme::scope('services-detail', $data)->render();
+    }
+    public function getSolutions($slug)
+    {
+        $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Solution::class));
+        if (!$slug) {
+            abort(404);
+        }
+
+        $data['solution'] = $slug->reference;
+
+        if (blank($data)) {
+            abort(404);
+        }
+
+        Theme::breadcrumb()
+            ->add(__('Home'), url('/'))
+            ->add(__('Solutions'), url(get_slug_by_template('Solutions')))
+            ->add($data['solution']->name, $data['solution']->url);
+
+        SeoHelper::setTitle($data['solution']->name)->setDescription($data['solution']->description);
+
+        return Theme::scope('solutions-details', $data)->render();
     }
 
     public function getPostAjax(Request $request)
