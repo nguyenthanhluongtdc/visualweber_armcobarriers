@@ -34,6 +34,6 @@ class ServiceRepository extends RepositoriesAbstract implements ServiceInterface
         ->orderBy('services.created_at', 'ASC');
 
         return $this->applyBeforeExecuteQuery($data)->take(4)->get();
-        }
+    }
     
 }

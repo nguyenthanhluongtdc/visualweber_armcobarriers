@@ -1,3 +1,5 @@
+@php $service_first = []; @endphp
+
 <section>
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="wrap-top">
@@ -16,44 +18,40 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_solutions = get_solutions())
-                    @foreach($tabs_solutions as $key => $tab)
-                    <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
-                    <!-- <img src="{{ RvMedia::getImageUrl(get_field($tab, 'img_service_item')) }}" alt=""> -->
-                    @endforeach
+                        @php $service_first = $tabs_solutions[0]; @endphp
+                        @foreach($tabs_solutions as $key => $tab)
+                            <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
+                        @endforeach
                     @endif
                 </div>
             </nav>
         </div>
     </div>
-
-
     {{-- <div class="item-tab-content right-tab-md">
         @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
     </div> --}}
 </div>
-{{-- <?php $item_sv = get_field($page, 'services')[0]  ?>
-    <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
-        <div class="container-customize">
-            <h3 class="over_view"> {{ get_sub_field($item_sv, 'tabs_title') }} </h3>
-            <div class="content">
-                <?php $item_content =  get_sub_field($item_sv, 'description')[0] ?>
-                <div class="desc">
-                    {!! get_sub_field($item_content, 'description_text') !!}
-                </div>
-                <?php if(!empty(get_sub_field($item_content, 'description_colum'))) { ?>
-                <div class="dev_3_column">
-                    @foreach (get_sub_field($item_content, 'description_colum') as $item)
-                       <div class="item_column">
-                        <h5>{{ get_sub_field($item, 'title') }}</h5>
-                        {!! get_sub_field($item, 'description') !!}
-                       </div>
-                    @endforeach
-                </div>
-                <?php } ?>
+
+@if(!empty(get_field($service_first, 'banner_description')))
+    <div class="service-detail-banner">
+        <div class="left">
+            <h4 class="left-title">
+                {{ get_field($service_first, 'banner_title') }}
+            </h4>
+            <div class="desc">
+                {!! get_field($service_first, 'banner_description') !!}
             </div>
         </div>
-       
-    </div> --}}
+        <div class="right">
+            <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
+        </div>
+    </div>
+@else
+    <div class="container-customize">
+         <p> Content updating </p>
+    </div>
+@endif
+
 <section>
     <div class="container-customize">
         <div class="wrap-our">
@@ -61,8 +59,8 @@
                 <p>Warehouse, Industrial & Petrochemical Solutions</p>
             </div>
             <div class="row">
-                @if($tabs_services =get_services_latest())
-                @foreach($tabs_services as $key => $tab)
+                @if($tabs_solutions = get_solutions_latest())
+                @foreach($tabs_solutions as $key => $tab)
                 <?php  if (!empty(get_field($tab, 'img_service_item'))) { ?>
                     <div class="col-lg-3 col-md-6 col-sm-6 asset">
                         <a href="{{ $tab->url }}" title="link">

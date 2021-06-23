@@ -34,5 +34,5 @@ class SolutionRepository extends RepositoriesAbstract implements SolutionInterfa
         ->orderBy('app_solutions.created_at', 'ASC');
 
         return $this->applyBeforeExecuteQuery($data)->take(4)->get();
-        }
+    }
 }
