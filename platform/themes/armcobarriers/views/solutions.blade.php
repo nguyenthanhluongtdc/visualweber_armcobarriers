@@ -80,19 +80,21 @@
         </div>
     </div>
 </section> 
-{{-- <section style="padding-top:6%">
+
+<section style="padding-top:6%">
     <div class="container-fluid-customize">
-        <div class="wrap-roadside" style="background-image:url({{ get_object_image(get_field( $page ,'services_solutions_picture'))}})">
+        <div class="wrap-roadside" style="background-image:url({{ get_object_image(get_field( $page ,'field_picture_solutions'))}})">
             <div class="container-customize">
                 <div class="content">
-                    <h3> {{get_field( $page ,'services_solutions')}}</h3>
-                    {!!get_field( $page ,'services_solutions_desc')!!}
+                    <h3> {{get_field( $page ,'field_title_solutions')}}</h3>
+                    {!!get_field( $page ,'field_des_solutions')!!}
                 </div>
             </div>
         </div>
     </div>
-</section> --}}
-{{-- <section style="padding-top:4%">
+</section>
+
+<section style="padding-top:4%">
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
@@ -101,16 +103,18 @@
             </div>
             <div class="wrap-descrip">
                 <div class="row">
-                    @foreach (get_field($page, 'product_range') as $item)
-                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
-                        <div class="post">
-                            <div class="post-title">
-                                <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
+                    @if(has_field($page, 'product_range_solutions'))
+                        @foreach (get_field($page, 'product_range_solutions') as $item)
+                            <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
+                                <div class="post">
+                                    <div class="post-title">
+                                        <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
+                                    </div>
+                                    {!!get_sub_field($item ,'product_range_description')!!}
+                                </div>
                             </div>
-                            {!!get_sub_field($item ,'product_range_description')!!}
-                        </div>
-                    </div>
-                    @endforeach
+                        @endforeach
+                    @endif
                 </div>
             </div>
             <div class="wrap2 my-5">
@@ -123,7 +127,7 @@
             </div>
         </div>
     </div>
-</section> --}}
+</section>
 <section>
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")
