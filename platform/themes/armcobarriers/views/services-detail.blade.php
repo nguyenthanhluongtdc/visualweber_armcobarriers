@@ -6,8 +6,8 @@
     <div class="container-customize" id="install">
         <div class="wrap-top">
             <div class="top2">
-                <h2>{{ $service->name}}</h2>
-                <p> {{ get_field($service, 'short_description') }}</p>
+                <h1>{{ $service->name}}</h1>
+                <h5> {{ get_field($service, 'short_description') }}</h5>
             </div>
         </div>
     </div>
