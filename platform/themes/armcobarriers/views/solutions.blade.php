@@ -32,24 +32,26 @@
     </div> --}}
 </div>
 
-@if(!empty(get_field($service_first, 'banner_description')))
-    <div class="service-detail-banner">
-        <div class="left">
-            <h4 class="left-title">
-                {{ get_field($service_first, 'banner_title') }}
-            </h4>
-            <div class="desc">
-                {!! get_field($service_first, 'banner_description') !!}
+@if(!empty($service_first)) 
+    @if(!empty(get_field($service_first, 'banner_description')))
+        <div class="service-detail-banner">
+            <div class="left">
+                <h4 class="left-title">
+                    {{ get_field($service_first, 'banner_title') }}
+                </h4>
+                <div class="desc">
+                    {!! get_field($service_first, 'banner_description') !!}
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
             </div>
         </div>
-        <div class="right">
-            <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
+    @else
+        <div class="container-customize">
+            <p> Content updating </p>
         </div>
-    </div>
-@else
-    <div class="container-customize">
-         <p> Content updating </p>
-    </div>
+    @endif
 @endif
 
 <section>
