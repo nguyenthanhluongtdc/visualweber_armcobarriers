@@ -45,7 +45,6 @@
         transition: 0.3;
         padding: 0px 25px 0px 0px;
         color: #000000;
-        font-size: 17px !important;
         font-family: $Arial;
         padding-bottom: 15px;
         border: 0px;
@@ -85,12 +84,14 @@
             padding-bottom: 5%;
             padding-right: 4%;
             h3 {
-                font-size: 20px;
+                font-size: 25px;
+                @media(max-width: 1365px) {
+                    font-size: 20px;
+                }
                 font-family: $FolioStd-Medium;
                 padding-bottom: 5%;
             }
             p {
-                font-size: 15px;
                 font-family: $Arial;
                 padding-bottom: 4%;
             }
@@ -98,12 +99,14 @@
         .installation,
         .quality {
             h3 {
-                font-size: 20px;
+                font-size: 25px;
+                @media(max-width: 1365) {
+                    font-size: 20px;
+                }
                 font-family: $FolioStd-Medium;
                 padding-bottom: 5%;
             }
             p {
-                font-size: 15px;
                 font-family: $Arial;
                 padding-bottom: 4%;
             }
@@ -158,11 +161,13 @@
             }
             h3 {
                 padding-bottom: 25px;
-                font-size: 20px;
+                font-size: 25px;
+                @media(max-width: 1365px) {
+                    font-size: 20px;
+                }
                 font-family: $FolioStd-Medium;
             }
             p {
-                font-size: 15px;
                 font-family: $Arial;
             }
         }

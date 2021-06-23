@@ -1,5 +1,5 @@
 html {
-    font-size: 15px;
+    font-size: 17px;
 }
 
 $rem0-5: 0.5rem;
@@ -10,6 +10,13 @@ $rem2-5: 2.5rem;
 $rem3: 3rem;
 $rem3-5: 3.5rem;
 $rem4: 4rem;
+
+@media (min-width: 1366px) {
+    *{
+        font-size: 1.2rem;
+    }
+}
+
 .js-cookie-consent {
     display: none;
 }

@@ -28,7 +28,9 @@
             color: #fff;
         }
         p {
-            font-size: 17px;
+            @media (max-width: 1365px) {
+                font-size: 17px; 
+            }
             font-family: $Arial;
             color: #fff;
             max-width: 61%;

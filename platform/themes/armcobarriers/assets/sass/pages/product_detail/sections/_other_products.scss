@@ -1,6 +1,9 @@
 #other_products {
     .title {
-        font-size: 20px;
+        font-size: 25px;
+        @media (max-width: 1365px) {
+            font-size: 20px; 
+        }
         font-weight: bold;
         display: block;
         border-bottom: 1px solid #efefef;
@@ -19,7 +22,13 @@
         grid-template-columns: auto auto auto auto auto;
         grid-column-gap: 2%;
         .product_item {
-            a {color: $gray-text; font-weight: bold;}
+            a {
+                color: $gray-text; font-weight: bold; 
+                font-size: 25px;
+                @media (max-width: 1365px) {
+                    font-size: 20px; 
+                }
+            }
 
             code {
                 overflow: hidden;

@@ -79,7 +79,10 @@
      }
      .the-ministry {
          p {
-             font-size: 17px;
+             font-size: 25px;
+             @media (max-width: 1365px) {
+                font-size: 20px;
+             }
              font-family: $Arial;
              font-weight: bold;
              padding-bottom: 5%;
@@ -140,13 +143,18 @@
          .title-related {
              padding-right: 5%;
              h4 {
-                 font-size: 17px;
+                 font-size: 25px;
+                 @media (max-width: 1365px) {
+                    font-size: 20px;
+                 }
                  font-family: $Arial;
                  font-weight: bold;
              }
          }
          li {
-             font-size: 17px;
+            @media (max-width: 1365px) {
+                font-size: 17px;
+             }
              font-family: $Arial;
          }
      }
@@ -164,7 +172,10 @@
      }
      .description {
          a {
-             font-size: 17px;
+            font-size: 25px;
+            @media (max-width: 1365px) {
+               font-size: 20px;
+            }
              font-weight: bold;
              font-family: $FolioStd-Medium;
              color: #000000;
@@ -175,7 +186,9 @@
          }
          p {
              padding-top: 3%;
-             font-size: 15px;
+             @media (max-width: 1365px) {
+                font-size: 15px;
+             }
              font-family: $Arial;
              @include str_split();
              -webkit-line-clamp: 3;

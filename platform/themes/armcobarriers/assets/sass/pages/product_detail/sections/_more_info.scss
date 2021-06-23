@@ -45,7 +45,10 @@
     }
     #related_products {
         .title {
-            font-size: 20px;
+            font-size: 25px;
+            @media (max-width: 1365px) {
+                font-size: 20px; 
+            }
             font-weight: bold;
             display: block;
             border-bottom: 1px solid #efefef;
@@ -72,6 +75,10 @@
                     padding: 3% 0%;
                     color: $gray-text; 
                     font-weight: bold;
+                    font-size: 25px;
+                    @media (max-width: 1365px) {
+                        font-size: 20px; 
+                    }
                 }
                 // &:hover {
                 //     .product_name {

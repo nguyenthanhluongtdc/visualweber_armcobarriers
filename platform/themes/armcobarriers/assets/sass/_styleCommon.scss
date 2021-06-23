@@ -4,10 +4,6 @@ h1,h2 {
     font-size: $rem4;
 }
 
-.nav-tabs a.nav-link{
-    font-size: $rem2-5;
-}
-
 .tabs-scroll {
     
     .nav-tabs {
@@ -139,7 +135,6 @@ code {
     }
 
     .nav-tabs a.nav-link{
-        font-size: $rem1-5;
         display: inline-block;
         padding-left: 0;
         padding-right: 80px;
