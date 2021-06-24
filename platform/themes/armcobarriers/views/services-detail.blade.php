@@ -57,23 +57,7 @@
         {!! get_field($service, 'long_description') !!}
     </div>
 </div>
-
-{{--
-<div class="container-customize">
-    <?php if(!empty(get_field($service, 'text_content_service_detail'))) { ?>
-    <ul class="service_detail-content ">
-        @foreach (get_field($service, 'text_content_service_detail') as $item)
-        <li class="item">
-            {{get_sub_field($item ,'text_column')}}
-        </li>
-        @endforeach
-    </ul>
-    <?php } ?>
-</div>
---}}
-
 <div class="service_detail-imglist container-customize">
-    {{-- @dd(get_field($service, 'service_list')) --}}
     <?php if(!empty(get_field($service, 'service_list'))) { ?>
     @foreach (get_field($service, 'service_list') as $item2)
     <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
@@ -82,8 +66,6 @@
             <p>{!!get_sub_field($item2,'description')!!}</p>
 
         </a>
-        {{-- <img src="{{ RvMedia::getImageUrl(get_sub_field($item2, 'img_detail_service')) }}" alt=""> --}}
-        
     </div>
     @endforeach
     <?php } ?>
@@ -92,7 +74,6 @@
 
 <section>
     <div class="container-customize">
-        {{-- @dd($service) --}}
         <?php if(!empty(get_field($service, 'product_quality_16233289513'))) { ?>
         <div class="wrap-product-quality">
             <div class="product-quality">

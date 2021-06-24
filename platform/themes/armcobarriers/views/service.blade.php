@@ -32,11 +32,6 @@
             </nav>
         </div>
     </div>
-
-
-    {{-- <div class="item-tab-content right-tab-md">
-        @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
-    </div> --}}
 </div>
 
 @if(!empty($service_first)) 
@@ -61,28 +56,6 @@
     @endif
 @endif
 
-{{-- <?php $item_sv = get_field($page, 'services')[0]  ?>
-    <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
-        <div class="container-customize">
-            <h3 class="over_view"> {{ get_sub_field($item_sv, 'tabs_title') }} </h3>
-            <div class="content">
-                <?php $item_content =  get_sub_field($item_sv, 'description')[0] ?>
-                <div class="desc">
-                    {!! get_sub_field($item_content, 'description_text') !!}
-                </div>
-                <?php if(!empty(get_sub_field($item_content, 'description_colum'))) { ?>
-                <div class="dev_3_column">
-                    @foreach (get_sub_field($item_content, 'description_colum') as $item)
-                       <div class="item_column">
-                        <h5>{{ get_sub_field($item, 'title') }}</h5>
-                        {!! get_sub_field($item, 'description') !!}
-                       </div>
-                    @endforeach
-                </div>
-                <?php } ?>
-            </div>
-        </div>
-    </div> --}}
 <section>
     <div class="container-customize">
         <div class="wrap-our">
@@ -160,19 +133,3 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
-    // $(document).ready(function(){
-
-    //     $widthWindow = $(window).width();
-    //     if($widthWindow < 992){
-    //         elem = $(".right-tab-md")[0];
-
-    //         let resizeObserver = new ResizeObserver(() => {
-    //             $('.left-tab-md').height($(".right-tab-md .active .content").height())
-    //         });
-
-    //         resizeObserver.observe(elem);
-    //     }
-
-    // })
-</script>
