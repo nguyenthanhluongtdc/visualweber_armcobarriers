@@ -329,18 +329,13 @@
             p:nth-child(2) {
                 font-size: 17px;
                 font-family: $Arial;
+                margin-bottom: 0;
                 @media (max-width: 1680px) {
                     font-size: 16px;
                 }
                 @media (max-width: 1440px) {
-                    font-size: 14px;
-                }
-                @media (max-width: 1440px) {
-                    font-size: 13px;
-                }
-                @media (max-width: 1440px) {
-                    font-size: 11px;
-                    width: 70%;
+                    width: 100%;
+                    font-size: 15px;
                 }
             }
         }
@@ -449,14 +444,14 @@
                     }
                 }
                 p {
-                    font-size: 13px;
+                    font-size: 15px;
                     margin-top: 5px;
                 }
             }
             .grid__item {
                 a {
                     .gallery__item-text {
-                        font-size: 13px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -486,7 +481,7 @@
                     }
                 }
                 p {
-                    font-size: 13px;
+                    font-size: 15px;
                     margin-top: 5px;
                 }
             }
@@ -494,7 +489,7 @@
                 margin-top: 30px;
                 a {
                     .gallery__item-text {
-                        font-size: 13px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -542,7 +537,7 @@
                 font-size: 30px;
             }
             p {
-                font-size: 13px;
+                font-size: 15px;
             }
         }
         .product-range-content {
@@ -550,7 +545,7 @@
                 font-size: 17px;
             }
             p {
-                font-size: 13px;
+                font-size: 15px;
             }
         }
         .product-view a {
@@ -574,9 +569,6 @@
                 font-size: 30px;
             }
         }
-        .news-post--content {
-            font-size: 13px;
-        }
         .read-more {
             margin-top: 0;
             margin-bottom: 30px;
@@ -599,11 +591,11 @@
         .swiper-content {
             .text-slider {
                 p:nth-child(1) {
-                    font-size: 15px;
+                    font-size: 17px;
                 }
             }
             .title-slider {
-                font-size: 14px;
+                font-size: 22px;
                 padding-top: 5px;
             }
         }
@@ -614,9 +606,6 @@
     .swiper-slide {
         .swiper-content {
             .text-slider {
-                p:nth-child(1) {
-                    font-size: 13px;
-                }
                 p:nth-child(2) {
                     width: 71%;
                 }
@@ -642,7 +631,7 @@
     .news-event-wrapper {
         .news-post {
             .news-post--titlte {
-                font-size: 15px;
+                font-size: 20px;
             }
         }
     }
