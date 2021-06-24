@@ -1,4 +1,4 @@
-@php $service_first = []; @endphp
+@php $soluton_first = []; @endphp
 
 <section>
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
@@ -18,7 +18,7 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_solutions = get_solutions())
-                        @php $service_first = $tabs_solutions[0]; @endphp
+                        @php $soluton_first = $tabs_solutions[0]; @endphp
                         @foreach($tabs_solutions as $key => $tab)
                             <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
                         @endforeach
@@ -32,19 +32,19 @@
     </div> --}}
 </div>
 
-@if(!empty($service_first)) 
-    @if(!empty(get_field($service_first, 'banner_description_solution')))
+@if(!empty($soluton_first)) 
+    @if(!empty(get_field($soluton_first, 'banner_description_solution')))
         <div class="service-detail-banner">
-            <div class="left ">
+            <div class="left col-md-10 col-12">
                 <h4 class="left-title">
-                    {{ get_field($service_first, 'banner_title_solution') }}
+                    {{ get_field($soluton_first, 'banner_title_solution') }}
                 </h4>
                 <div class="desc">
-                    {!! get_field($service_first, 'banner_description_solution') !!}
+                    {!! get_field($soluton_first, 'banner_description_solution') !!}
                 </div>
             </div>
             <div class="right">
-                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture_solution')) }}" alt="">
+                <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
             </div>
         </div>
     @else

@@ -1,3 +1,7 @@
+@php
+    $service_first = [];
+@endphp
+
 <section>
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="wrap-top">
@@ -17,8 +21,9 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_services())
+                        @php $service_first = $tabs_services[0]; @endphp
                         @foreach($tabs_services as $key => $tab)
-                            <a class="nav-item nav-link" style="color:#000000" href="{{ $tab->url }}" title="tab">
+                            <a class="nav-item nav-link {{$key==0?'active':''}}" style="color:#000000" href="{{ $tab->url }}" title="tab">
                                 {{ $tab->name }} 
                             </a>
                         @endforeach
@@ -33,7 +38,30 @@
         @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
     </div> --}}
 </div>
-<?php $item_sv = get_field($page, 'services')[0]  ?>
+
+@if(!empty($service_first)) 
+    @if(!empty(get_field($service_first, 'banner_description')))
+        <div class="service-detail-banner">
+            <div class="left col-md-10 col-12">
+                <h4 class="left-title">
+                    {{ get_field($service_first, 'banner_title') }}
+                </h4>
+                <div class="desc">
+                    {!! get_field($service_first, 'banner_description') !!}
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
+            </div>
+        </div>
+    @else
+        <div class="container-customize">
+            <p> Content updating </p>
+        </div>
+    @endif
+@endif
+
+{{-- <?php $item_sv = get_field($page, 'services')[0]  ?>
     <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
         <div class="container-customize">
             <h3 class="over_view"> {{ get_sub_field($item_sv, 'tabs_title') }} </h3>
@@ -54,8 +82,7 @@
                 <?php } ?>
             </div>
         </div>
-       
-    </div>
+    </div> --}}
 <section>
     <div class="container-customize">
         <div class="wrap-our">
