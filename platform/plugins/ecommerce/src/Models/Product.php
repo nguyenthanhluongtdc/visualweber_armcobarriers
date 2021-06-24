@@ -187,7 +187,7 @@ class Product extends BaseModel
     public function otherProduct()
     {
         return $this->belongsToMany(Product::class, 'ec_product_other_relations', 'from_product_id',
-            'to_product_id');
+            'to_product_id')->where('is_variation', 0);
     }
 
     /**
