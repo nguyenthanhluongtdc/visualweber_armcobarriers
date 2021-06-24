@@ -32,7 +32,7 @@
                                     <div class="fb-share-button share" data-href="{{$event->url}}" target="_blank">
                                         <span>Share</span>
                                     </div>
-                                    <a class="type" href={{$event->categories->first()->url}} title="{{$event->categories->first()->name}}"> {!! $event->categories->first()->name !!} </a>
+                                    {{-- <a class="type" href={{$event->categories->first()->url}} title="{{$event->categories->first()->name}}"> {!! $event->categories->first()->name !!} </a> --}}
                                 </div>
                             </div>
                         </div>
