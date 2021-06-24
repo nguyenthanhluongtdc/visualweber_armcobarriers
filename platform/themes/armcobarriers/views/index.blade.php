@@ -1,3 +1,4 @@
+
 <section>
     <div class="container-fluid-customize">
    
@@ -100,7 +101,9 @@
                     <i class="far fa-long-arrow-right"></i>
                 </div>
                 <div class="view">
-                     <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                     <a href="{{route('public.products')}}" title="{{route('public.products')}}">
+                        {{trans('home.view_our_products')}}
+                     </a>
                 </div>
             </div>
         </div>
@@ -170,7 +173,9 @@
             </div>
 
             <div class="read-more">
-                <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="{{ route('public.single').get_slug_by_template('News-media')}}"><h3 data-aos="" data-aos-delay="200">Read More</h3></a>
+                <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="{{ route('public.single').get_slug_by_template('News-media')}}">
+                    <h3 data-aos="" data-aos-delay="200"> {{trans('home.read_more')}} </h3>
+                </a>
             </div>
         </div>
     </div>
