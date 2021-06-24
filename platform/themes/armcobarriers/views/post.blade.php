@@ -45,7 +45,9 @@
                         </div>
                         <div class="ul">
                             @foreach (get_related_posts($post->id,5) as $post_releted)
-                            <a href="{{$post_releted->url}}" title="{{$post_releted->name}}"><li>{{$post_releted->name}}</li></a>
+                                <a href="{{$post_releted->url}}" title="{{$post_releted->name}}" title="{{$post_releted->name}}">
+                                    <li>{{$post_releted->name}}</li>
+                                </a>
                             @endforeach
                         </div>
                     </div>
@@ -58,7 +60,7 @@
                         @foreach ($featured as $featureItem)
                             <div class="col-lg-6 col-md-4 col-sm-4  img">
                                <a href="{{$featureItem->url}}" title="{{$featureItem->name}}">
-                                    <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="">
+                                    <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$featureItem->name}}">
                                </a>
                             </div>
                             <div class="col-lg-6 col-md-8 col-sm-8  description">
