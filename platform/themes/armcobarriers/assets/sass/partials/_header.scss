@@ -323,18 +323,14 @@
             align-items: center;
             padding: 19px;
             justify-content: space-between;
-            width: 240px;
             @media (max-width: 1680px) {
                 padding: 15px;
-                width: 208px;
             }
             @media (max-width: 1440px) {
                 padding: 3px;
-                width: 170px;
             }
             @media (max-width:1366px) {
                 padding: 8px;
-                width: 175px;
             }
             .left-1 {
                 display: flex;
