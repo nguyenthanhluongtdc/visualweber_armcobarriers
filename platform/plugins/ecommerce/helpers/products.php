@@ -377,16 +377,44 @@ if (!function_exists('get_related_products')) {
 
 if (!function_exists('get_other_products')) {
     /**
-     * Get related products of $product
+     * Get other products of $product
      * @param Product $product
      * @param int $limit
      * @return array
      */
-    function get_other_products($limit = 4)
+    function get_other_products($product, $limit = 5)
     {
-        $other_product = Product::inRandomOrder()->limit($limit)->get();
-   
-        return $other_product;
+        $params = [
+            'condition' => [
+                'ec_products.status'       => BaseStatusEnum::PUBLISHED,
+                'ec_products.is_variation' => 0,
+            ],
+            'order_by'  => [
+                'ec_products.order'      => 'ASC',
+                'ec_products.created_at' => 'DESC',
+            ],
+            'take'      => $limit,
+            'select'    => [
+                'ec_products.*',
+            ],
+            'with'      => [
+                'slugable',
+                'variations',
+                'productCollections',
+                'variationAttributeSwatchesForProductList',
+                'promotions',
+            ],
+        ];
+
+        $relatedIds = app(ProductInterface::class)->getOtherProductIds($product);
+
+        if (!empty($relatedIds)) {
+            $params['condition'][] = ['ec_products.id', 'IN', $relatedIds];
+        } else {
+            $params['condition'][] = ['ec_products.id', '!=', $product->id];
+        }
+
+        return app(ProductInterface::class)->getProducts($params);
     }
 }
 

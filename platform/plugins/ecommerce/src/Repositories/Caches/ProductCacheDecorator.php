@@ -125,6 +125,22 @@ class ProductCacheDecorator extends CacheAbstractDecorator implements ProductInt
     /**
      * {@inheritDoc}
      */
+    public function getOtherProducts($model)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOtherProductIds($model)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function syncCrossSaleProducts($model, $products = null)
     {
         $result = call_user_func_array([$this->repository, __FUNCTION__], func_get_args());

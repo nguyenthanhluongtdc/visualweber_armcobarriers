@@ -164,6 +164,19 @@ class ProductRepository extends RepositoriesAbstract implements ProductInterface
         }
     }
 
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOtherProductIds($model)
+    {
+        try {
+            return $model->otherProduct()->allRelatedIds()->toArray();
+        } catch (Exception $exception) {
+            return [];
+        }
+    }
+
     /**
      * {@inheritDoc}
      */

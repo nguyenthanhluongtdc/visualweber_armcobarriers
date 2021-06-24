@@ -185,7 +185,7 @@
 
             <!--other product-->
 
-            @php $other_products = get_other_products(5); @endphp
+            @php $other_products = get_other_products($product); @endphp
             <div id="other_products" class="col-12 col-sm-12 col-md-12">
                 <p class="title">Other products</p>
                 <div class="swiper-container otherSwiper">
