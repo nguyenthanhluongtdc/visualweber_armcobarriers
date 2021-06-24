@@ -86,7 +86,7 @@
             h3 {
                 font-size: 25px;
                 @media(max-width: 1365px) {
-                    font-size: 20px;
+                    font-size: 23px;
                 }
                 font-family: $FolioStd-Medium;
                 padding-bottom: 5%;
@@ -194,16 +194,16 @@
             justify-content: center;
             align-items: center;
             position: relative;
-
-            &::before {
-                position: absolute;
-                content: '\f164';
-                font-family: "Font Awesome 5 Pro";
-                top: 0;
-                right: 0;
-                font-size: 30px;
-                color: #000;
-            }
+            text-align: center;
+            // &::before {
+            //     position: absolute;
+            //     content: '\f164';
+            //     font-family: "Font Awesome 5 Pro";
+            //     top: 0;
+            //     right: 0;
+            //     font-size: 30px;
+            //     color: #000;
+            // }
             h2 {
                 color: #000000;
                 font-size: 40px;
@@ -405,7 +405,7 @@
             }
             .slogan {
                 p {
-                    font-size: 15px;
+                    font-size: 17px;
                 }
             }
         }
@@ -538,12 +538,13 @@
             .product-quality {
                 h2 {
                     font-size: 30px !important;
-                    padding-bottom: 10% !important;
+                    padding: 5%;
                 }
             }
             .slogan {
                 p {
-                    font-size: 14px !important;
+                    font-size: 17px;
+                    margin-top: 1rem;
                 }
             }
         }

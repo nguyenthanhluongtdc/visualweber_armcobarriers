@@ -36,7 +36,7 @@ if(has_field($page, 'about_us'))
                     @foreach (get_field($page, 'what_we_do') as $item)
                         <div class="col-lg-4 col-md-6 design">
                             <h3>{{get_sub_field($item , 'tabs_title')}}</h3>
-                            <p>{!!get_sub_field($item, 'tabs_description')!!}</p>
+                            {!!get_sub_field($item, 'tabs_description')!!}
                         </div>
                     @endforeach
                 @endif

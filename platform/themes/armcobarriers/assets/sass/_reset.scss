@@ -114,7 +114,10 @@ body {
     // &::-webkit-scrollbar {
     //     display: block;
     // }
-    font-size: 17px;
+    @media(min-width: 991px) {
+        font-size: 17px;
+    }
+    font-size: 15px;
     color: $gray-text;
     font-family: $Arial;
 }

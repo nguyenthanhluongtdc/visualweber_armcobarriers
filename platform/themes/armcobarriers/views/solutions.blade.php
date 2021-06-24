@@ -119,10 +119,10 @@
             </div>
             <div class="wrap2 my-5">
                 <div class="icon">
-                    <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                    <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
                 </div>
             </div>
         </div>
