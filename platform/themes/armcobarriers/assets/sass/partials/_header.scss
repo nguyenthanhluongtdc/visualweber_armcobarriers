@@ -336,10 +336,11 @@
                 display: flex;
                 align-items: center;
                 position: relative;
+                margin-right: 15px;
                 &:after {
                     content: "";
                     position: absolute;
-                    left: 120%;
+                    left: calc(100% + 7.5px);
                     background-color: #ccc;
                     width: 2px;
                     height: 15px;
