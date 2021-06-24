@@ -5,7 +5,7 @@
     <div class="widget-body">
         <div class="form-group">
             <label class="control-label">{{ trans('plugins/ecommerce::products.related_products') }}</label>
-            <input type="hidden" name="related_products" value="@if ($product) {{ implode(',', $product->products()->allRelatedIds()->toArray()) }} @endif" />
+            <input type="hidden" name="relatedddd_products" value="@if ($product) {{ implode(',', $product->products()->allRelatedIds()->toArray()) }} @endif" />
             <div class="box-search-advance product">
                 <div>
                     <input type="text" class="next-input textbox-advancesearch" placeholder="{{ trans('plugins/ecommerce::products.search_products') }}" data-target="{{ route('products.get-list-product-for-search', $product ? $product->id : 0) }}">
