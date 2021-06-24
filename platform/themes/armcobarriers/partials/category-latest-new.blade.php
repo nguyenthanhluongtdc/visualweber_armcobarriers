@@ -1,4 +1,8 @@
-@php $post_by_category = get_posts_by_category_unpaginate($menu_nodes[0]->reference_id,3); @endphp
+@php 
+    if(!empty($menu_nodes[0]))
+    $post_by_category = get_posts_by_category_unpaginate($menu_nodes[0]->reference_id,3); 
+    else $post_by_category = [];
+@endphp
 
 <div class="animate slide-in-down notification-button">
     <i class="fa fa-files-o"></i> Link Copied to Clipboard
@@ -28,7 +32,7 @@
                                     <div class="fb-share-button share" data-href="{{$event->url}}" target="_blank">
                                         <span>Share</span>
                                     </div>
-                                    <a class="type" title="{{$event->categories->first()->name}}"> {!! $event->categories->first()->name !!} </a>
+                                    <a class="type" href={{$event->categories->first()->url}} title="{{$event->categories->first()->name}}"> {!! $event->categories->first()->name !!} </a>
                                 </div>
                             </div>
                         </div>
