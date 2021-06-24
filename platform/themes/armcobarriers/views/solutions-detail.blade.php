@@ -58,37 +58,6 @@
         {!! get_field($solution, 'long_description_solution') !!}
     </div>
 </div>
-
-{{--
-<div class="container-customize">
-    <?php if(!empty(get_field($service, 'text_content_service_detail'))) { ?>
-    <ul class="service_detail-content ">
-        @foreach (get_field($service, 'text_content_service_detail') as $item)
-        <li class="item">
-            {{get_sub_field($item ,'text_column')}}
-        </li>
-        @endforeach
-    </ul>
-    <?php } ?>
-</div>
---}}
-
-{{-- <div class="service_detail-imglist container-customize">
-    <?php if(!empty(get_field($service, 'service_list'))) { ?>
-    @foreach (get_field($service, 'service_list') as $item2)
-    <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
-        <a href="{{get_sub_field($item2,'link')}}" title="link">
-            <h5> {{get_sub_field($item2,'title')}}</h5>
-            <p>{!!get_sub_field($item2,'description')!!}</p>
-
-        </a>
-        
-    </div>
-    @endforeach
-    <?php } ?>
-</div> --}}
-
-
 <section>
     <div class="container-customize">
         <?php if(!empty(get_field($solution, 'product_quality_solution'))) { ?>
@@ -118,10 +87,10 @@
         <div class="wrap-product">
             <div class="wrap2">
                 <div class="icon">
-                    <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                    <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCTS</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
                 </div>
             </div>
         </div>

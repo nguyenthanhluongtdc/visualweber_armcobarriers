@@ -23,7 +23,7 @@
                     @if($tabs_services = get_services())
                         @php $service_first = $tabs_services[0]; @endphp
                         @foreach($tabs_services as $key => $tab)
-                            <a class="nav-item nav-link {{$key==0?'active':''}}" style="color:#000000" href="{{ $tab->url }}" title="tab">
+                            <a class="nav-item nav-link {{$key==0?'active':''}}" style="color:#000000" href="{{ $tab->url }}" title=" {{ $tab->name }}">
                                 {{ $tab->name }} 
                             </a>
                         @endforeach
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="right">
-                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="">
+                <img src="{{ RvMedia::getImageUrl(get_field($service_first, 'big_picture')) }}" alt="{{ get_field($service_first, 'banner_title') }}">
             </div>
         </div>
     @else
@@ -117,10 +117,10 @@
             </div>
             <div class="wrap2 my-5">
                 <div class="icon">
-                    <img src="{{ Theme::asset()->url('images/about/iconarrow.png') }}" alt="">
+                    <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="link">VIEW OUR PRODUCT</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
                 </div>
             </div>
         </div>

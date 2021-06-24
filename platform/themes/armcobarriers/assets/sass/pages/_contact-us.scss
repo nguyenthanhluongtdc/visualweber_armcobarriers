@@ -7,6 +7,13 @@
     }
 }
 
+.title-page {
+    h1 {
+        font-size: 40px;
+        font-family: $FolioStd-Bold;
+    }
+}
+
 .contact-banner {
     padding-top: 28%;
     background-repeat: no-repeat;
@@ -29,7 +36,7 @@
         }
         p {
             @media (max-width: 1365px) {
-                font-size: 17px; 
+                font-size: 17px;
             }
             font-family: $Arial;
             color: #fff;
