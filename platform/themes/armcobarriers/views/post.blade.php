@@ -35,7 +35,7 @@
                         <div class="by">
                             <p>{{$post->author->name}}</p>
                         </div>
-                        <div class="fb-share-button btn-share" data-href="{{$post->url}}">
+                        <div class="fb-share-button btn-share share" data-href="{{$post->url}}">
                             <span>Share</span>
                         </div>
                     </div>
@@ -45,9 +45,7 @@
                         </div>
                         <div class="ul">
                             @foreach (get_related_posts($post->id,5) as $post_releted)
-                                <a href="{{$post_releted->url}}" title="{{$post_releted->name}}" title="{{$post_releted->name}}">
-                                    <li>{{$post_releted->name}}</li>
-                                </a>
+                            <a href="{{$post_releted->url}}" title="{{$post_releted->name}}"><li>{{$post_releted->name}}</li></a>
                             @endforeach
                         </div>
                     </div>
@@ -60,7 +58,7 @@
                         @foreach ($featured as $featureItem)
                             <div class="col-lg-6 col-md-4 col-sm-4  img">
                                <a href="{{$featureItem->url}}" title="{{$featureItem->name}}">
-                                    <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="{{$featureItem->name}}">
+                                    <img src="{{ RvMedia::getImageUrl($featureItem->image, 'featured', false, RvMedia::getDefaultImage()) }}" alt="">
                                </a>
                             </div>
                             <div class="col-lg-6 col-md-8 col-sm-8  description">
