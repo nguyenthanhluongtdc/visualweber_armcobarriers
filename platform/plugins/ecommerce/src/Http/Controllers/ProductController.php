@@ -333,6 +333,7 @@ class ProductController extends BaseController
                 'vendor/core/plugins/ecommerce/js/edit-product.js',
             ]);
 
+        dd('edit');
         return $formBuilder
             ->create(ProductForm::class, ['model' => $product])
             ->renderForm();
