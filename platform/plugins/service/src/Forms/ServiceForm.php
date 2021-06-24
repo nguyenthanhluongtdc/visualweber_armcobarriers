@@ -40,6 +40,10 @@ class ServiceForm extends FormAbstract
                 'label_attr'    => ['class' => 'control-label'],
                 'default_value' => false,
             ])
+            ->add('image', 'mediaImage', [
+                'label'      => trans('core/base::forms.image'),
+                'label_attr' => ['class' => 'control-label'],
+            ])
             ->setBreakFieldPoint('status');
     }
 }

@@ -122,7 +122,7 @@
             @foreach(get_services_latest() as $key1 => $item_service_latest)
                 <div class="grid__item">
                     <a href="{{$item_service_latest->url}}" title="{{$item_service_latest->name}}">
-                        <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl(get_field($item_service_latest, 'img_service_item')) }}" alt="{{$item_service_latest->name}}">
+                        <img class="img-background item_sv_home" src="{{RvMedia::getImageUrl($item_service_latest->image) }}" alt="{{$item_service_latest->name}}">
                        <div class="gallery__item-text">
                             <p>{{$item_service_latest->name}}</p>
                             <i class="fal fa-arrow-right"></i>

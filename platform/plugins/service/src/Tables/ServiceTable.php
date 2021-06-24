@@ -83,6 +83,7 @@ class ServiceTable extends TableAbstract
         $select = [
             'services.id',
             'services.name',
+            'services.image',
             'services.created_at',
             'services.status',
         ];
