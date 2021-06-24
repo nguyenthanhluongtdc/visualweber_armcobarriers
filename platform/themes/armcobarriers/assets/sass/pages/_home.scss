@@ -161,6 +161,7 @@
             align-items: center;
             .btn-share {
                 margin-left: 30px;
+                cursor: pointer;
                 span {
                     display: inline-block;
                     padding: 10px 15px;
@@ -689,7 +690,6 @@
                 align-items: center;
                 margin-bottom: 30px;
                 display: flex;
-                cursor: pointer;
                 .btn-share {
                     margin-top: 0;
                 }
