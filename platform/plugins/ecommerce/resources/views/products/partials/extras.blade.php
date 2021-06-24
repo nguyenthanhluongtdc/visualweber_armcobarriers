@@ -17,6 +17,20 @@
             @include('plugins/ecommerce::products.partials.selected-products-list', ['products' => $product ? $product->products : collect([]), 'includeVariation' => false])
         </div>
         <hr>
+         <div class="form-group">
+            <label class="control-label">{{ trans('plugins/ecommerce::products.other_products') }}</label>
+            <input type="hidden" name="other_products" value="@if ($product) {{ implode(',', $product->otherProduct()->allRelatedIds()->toArray()) }} @endif" />
+            <div class="box-search-advance product">
+                <div>
+                    <input type="text" class="next-input textbox-advancesearch" placeholder="{{ trans('plugins/ecommerce::products.search_products') }}" data-target="{{ route('products.get-list-product-for-search', $product ? $product->id : 0) }}">
+                </div>
+                <div class="panel panel-default">
+
+                </div>
+            </div>
+            @include('plugins/ecommerce::products.partials.selected-products-list', ['products' => $product ? $product->otherProduct : collect([]), 'includeVariation' => false])
+        </div>
+        <hr>
         <div class="form-group">
             <label class="control-label"> {{ trans('plugins/ecommerce::products.cross_selling_products') }} </label>
             <input type="hidden" name="cross_sale_products" value="@if ($product) {{ implode(',', $product->crossSales()->allRelatedIds()->toArray()) }} @endif"/>

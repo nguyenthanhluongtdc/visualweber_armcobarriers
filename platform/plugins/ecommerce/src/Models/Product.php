@@ -181,6 +181,15 @@ class Product extends BaseModel
             'to_product_id');
     }
 
+     /**
+     * @return BelongsToMany
+     */
+    public function otherProduct()
+    {
+        return $this->belongsToMany(Product::class, 'ec_product_other_relations', 'from_product_id',
+            'to_product_id');
+    }
+
     /**
      * @return BelongsToMany
      */
