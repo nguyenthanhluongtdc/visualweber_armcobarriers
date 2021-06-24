@@ -33,8 +33,7 @@
         @includeIf("theme.armcobarriers::views.tab",['tabs'=>$tabs_services])
     </div> --}}
 </div>
-<?php $item_sv = get_field($page, 'services')[0]  ?>
-    <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
+    {{-- <div class="banner_section" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item_sv, 'picture')) }}')">
         <div class="container-customize">
             <h3 class="over_view"> {{ get_sub_field($item_sv, 'tabs_title') }} </h3>
             <div class="content">
@@ -55,7 +54,7 @@
             </div>
         </div>
        
-    </div>
+    </div> --}}
 <section>
     <div class="container-customize">
         <div class="wrap-our">
