@@ -81,7 +81,7 @@
          p {
              font-size: 25px;
              @media (max-width: 1365px) {
-                font-size: 20px;
+                 font-size: 20px;
              }
              font-family: $Arial;
              font-weight: bold;
@@ -121,6 +121,10 @@
                  margin: 0;
              }
          }
+         .share::after {
+             font-family: "Font Awesome 5 Pro";
+             content: "\f1e0";
+         }
          .btn-share {
              background-color: $priamry_color;
              margin-left: 20px;
@@ -145,15 +149,15 @@
              h4 {
                  font-size: 25px;
                  @media (max-width: 1365px) {
-                    font-size: 20px;
+                     font-size: 20px;
                  }
                  font-family: $Arial;
                  font-weight: bold;
              }
          }
          li {
-            @media (max-width: 1365px) {
-                font-size: 17px;
+             @media (max-width: 1365px) {
+                 font-size: 17px;
              }
              font-family: $Arial;
          }
@@ -172,10 +176,10 @@
      }
      .description {
          a {
-            font-size: 25px;
-            @media (max-width: 1365px) {
-               font-size: 20px;
-            }
+             font-size: 25px;
+             @media (max-width: 1365px) {
+                 font-size: 20px;
+             }
              font-weight: bold;
              font-family: $FolioStd-Medium;
              color: #000000;
@@ -187,7 +191,7 @@
          p {
              padding-top: 3%;
              @media (max-width: 1365px) {
-                font-size: 15px;
+                 font-size: 15px;
              }
              font-family: $Arial;
              @include str_split();

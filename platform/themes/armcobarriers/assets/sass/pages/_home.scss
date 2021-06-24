@@ -150,11 +150,6 @@
             &:hover {
                 background-color: $priamry_color;
             }
-
-            font-size: 25px;
-            @media (max-width: 1365px) {
-                font-size: 20px; 
-            }
         }
     }
     .news-post {
@@ -694,6 +689,7 @@
                 align-items: center;
                 margin-bottom: 30px;
                 display: flex;
+                cursor: pointer;
                 .btn-share {
                     margin-top: 0;
                 }
