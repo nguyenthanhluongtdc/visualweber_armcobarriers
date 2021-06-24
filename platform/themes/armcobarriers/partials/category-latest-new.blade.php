@@ -11,9 +11,9 @@
                 @foreach($post_by_category as $event)
                     <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-5 mb-md-0">
                         <div class="item">
-                            <a href="{{$event->url}}">
+                            <a href="{{$event->url}}" title="{{$event->name}}">
                                 <div class="post-img">
-                                    <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="">
+                                    <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="{{$event->name}}">
                                 </div>
                                 <h3>
                                     {{$event->name}}
@@ -28,7 +28,7 @@
                                     <div class="fb-share-button share" data-href="{{$event->url}}" target="_blank">
                                         <span>Share</span>
                                     </div>
-                                    <a class="type"> {!! $event->categories->first()->name !!} </a>
+                                    <a class="type" title="{{$event->categories->first()->name}}"> {!! $event->categories->first()->name !!} </a>
                                 </div>
                             </div>
                         </div>

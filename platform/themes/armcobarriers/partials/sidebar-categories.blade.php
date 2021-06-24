@@ -2,7 +2,7 @@
     <ul class="list-unstyled">
     @foreach ($menu_nodes as $key => $row)
         <li class="active">
-            <a href="#item{{$key}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a href="#item{{$key}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" title="{{$row->name}}">
                 <p> {!! $row->name !!} </p>
                 @if ($row->has_child)
                     <i class="fas fa-chevron-down icon-menulf"></i> 
