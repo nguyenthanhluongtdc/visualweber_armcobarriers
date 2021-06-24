@@ -17,16 +17,18 @@ class ContactRequest extends Request
     {
         if (setting('enable_captcha') && is_plugin_active('captcha')) {
             return [
-                'name'                 => 'required',
-                // 'email'                => 'required|email',
-                // 'content'              => 'required',
-                // 'g-recaptcha-response' => 'required|captcha',
+                'name'                 => 'required|max:150',
+                'email'                => 'required|email',
+                'address'              => 'required|max:200',
+                'phone'                => 'required|min:11|numeric',
+                'g-recaptcha-response' => 'required|captcha',
             ];
         }
         return [
-            'name'    => 'required',
-            // 'email'   => 'required|email',
-            // 'content' => 'required',
+            'name'                 => 'required|max:150',
+            'email'                => 'required|email',
+            'address'              => 'required|max:200',
+            'phone'                => 'required|min:11|numeric',
         ];
     }
 
