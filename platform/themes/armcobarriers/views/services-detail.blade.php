@@ -34,7 +34,7 @@
 </div>
 @if(!empty(get_field($service, 'banner_description')))
     <div class="service-detail-banner">
-        <div class="left">
+        <div class="left col-lg-6 col-md-8">
             <h4 class="left-title">
                 {{ get_field($service, 'banner_title') }}
             </h4>

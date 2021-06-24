@@ -1,3 +1,10 @@
+@mixin str_split {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
 .wrap-install {
     background-image: url('../../../public/images/service-detail/services.jpg');
     height: max-content;
@@ -190,13 +197,14 @@
     height: 460px;
     position: relative;
     .left {
-        width: 50%;
         height: 100%;
         z-index: 1;
         display: flex;
+        position: absolute;
         flex-direction: column;
         justify-content: center;
         padding-left: 10%;
+        order: 1;
         h4 {
             color: $priamry_color;
             font-weight: bold;
@@ -207,13 +215,16 @@
             color: #fff;
             font-weight: 500;
             font-size: 17px;
+            @include str_split();
+            -webkit-line-clamp: 7;
         }
     }
     .right {
-        width: 50%;
         height: 100%;
+        order: 2;
+        width: 100%;
         img {
-            width: 100%;
+            max-width: 100%;
             height: 100%;
         }
     }
@@ -383,6 +394,7 @@
         height: auto;
         .left {
             width: 100%;
+            position: relative;
             padding: 50px 20px;
         }
         .right {
