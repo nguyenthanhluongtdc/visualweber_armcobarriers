@@ -150,7 +150,6 @@
             &:hover {
                 background-color: $priamry_color;
             }
-
             span {
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -207,7 +206,7 @@
         height: 275px;
     }
     @media(max-width: 1440px) {
-        height: 210px;
+        height: 220px;
     }
     @media(max-width: 1024px) {
         height: 167px;
