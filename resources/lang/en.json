@@ -2,6 +2,8 @@
     "An error may have occurred.": "An error may have occurred.",
     "Events": "Events",
     "Home": "Home",
+    "I have read and accept the Privacy Policy": "I have read and accept the Privacy Policy",
+    "Let\u2019s talk": "Let\u2019s talk",
     "News": "News",
     "Oh no": "Oh no",
     "Page could not be found": "Page could not be found",
@@ -9,11 +11,13 @@
     "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>.": "Please try again in a few minutes, or alternatively return to the homepage by <a href=\":link\">clicking here</a>.",
     "Product Range": "Product Range",
     "Read More": "Read More",
+    "Related Post": "Related Post",
     "Request a Quotation": "Request a Quotation",
     "Roadside, Car Parks, Warehouses": "Roadside, Car Parks, Warehouses",
     "Send successfully": "Send successfully",
     "Service Unavailable": "Service Unavailable",
     "Services": "Services",
+    "Share": "Share",
     "Sorry, we are doing some maintenance. Please check back soon.": "Sorry, we are doing some maintenance. Please check back soon.",
     "Submit": "Submit",
     "The link you clicked is no longer.": "The link you clicked is no longer.",
@@ -25,9 +29,5 @@
     "Visit us": "Visit us",
     "Warehouse, Industrial & Petrochemical Solutions": "Warehouse, Industrial & Petrochemical Solutions",
     "What We Do": "What We Do",
-    "You are not authorized to view the requested resource.": "You are not authorized to view the requested resource.",
-    "Related Post": "Related Post",
-    "Let’s talk": "Let’s talk",
-    "I have read and accept the Privacy Policy": "I have read and accept the Privacy Policy",
-    "Share": "Share"
+    "You are not authorized to view the requested resource.": "You are not authorized to view the requested resource."
 }
