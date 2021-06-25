@@ -45,67 +45,6 @@
     }
 }
 
-.list-group {
-    padding-bottom: 90px;
-    @media(max-width: 991px) {
-        padding-bottom: 70px;
-    }
-    flex-direction: row;
-    .list-group-item {
-        &:focus {
-            background-color: unset;
-        }
-        border: unset;
-        text-transform: uppercase;
-        padding: unset;
-    }
-}
-
-.list-group-item.active {
-    color: $gray-text;
-    background-color: unset;
-    border-color: unset;
-    span:after {
-        position: absolute;
-        content: "";
-        height: 4px;
-        bottom: -27px;
-        left: 0px;
-        left: 0;
-        right: 0;
-        width: 15%;
-        background: #FAD906;
-        transition: 0.5s;
-        @media(max-width: 991px) {
-            bottom: -14px;
-        }
-    }
-}
-
-.list-group-item-action {
-    &:hover {
-        background-color: unset;
-    }
-    @media(max-width:380px) {
-        margin-left: 11px;
-        width: unset;
-    }
-}
-
-.info-contact {
-    .tab-content {
-        .head-office {
-            a:focus {
-                color: #007bff;
-                ;
-            }
-        }
-    }
-    h4 {
-        font-weight: bold;
-    }
-}
-
 .form-contact-us {
     .form-group {
         input {
@@ -227,7 +166,7 @@
 
 .customcheck a {
     @media(max-width: 480px) {
-        font-size: 13px;
+        font-size: 15px;
     }
 }
 
@@ -295,16 +234,24 @@
     .let-talk {
         padding-top: 4% !important;
     }
+    .contact-banner {
+        padding-top: 40%;
+        .title-contact {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
 }
 
 @media(max-width:640px) {
     .contact-banner {
         .title-contact {
             h1 {
-                font-size: 30px !important;
+                font-size: 30px;
             }
             p {
-                font-size: 11px !important;
+                font-size: 15px;
             }
         }
     }
@@ -317,20 +264,8 @@
                 font-size: 20px;
             }
             p {
-                font-size: 13px;
+                font-size: 15px;
                 max-width: 95%;
-            }
-        }
-    }
-    .list-group {
-        font-size: 10px;
-        padding-bottom: 40px;
-    }
-    .tab-content {
-        h4 {
-            font-size: 12px;
-            @media (max-width: 480px) {
-                font-size: 11px;
             }
         }
     }
@@ -352,15 +287,12 @@
         .form-group input {
             margin: 10px 0;
             @media(max-width: 480px) {
-                font-size: 13px;
+                font-size: 15px;
             }
         }
         .message input {
             margin: 10px 0;
         }
-    }
-    .list-group-item.active span:after {
-        bottom: -12px;
     }
     .visit-title {
         @media(max-width: 480px) {
@@ -370,37 +302,9 @@
     }
 }
 
-@media(min-width: 992px) {
-    .head-office {
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-}
-
 @media(max-width:991px) {
     .form-contact-us {
         margin-left: 20%;
-    }
-}
-
-.info-wrapper {
-    display: grid;
-    grid-template-columns: 20% 36% 20% 36%;
-    gap: 3%;
-    @media (max-width: 1600px) {
-        grid-template-columns: 30% 57%;
-    }
-    @media(max-width: 991px) {
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 30px;
-        font-size: 13px;
-    }
-    @media(max-width: 480px) {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10%;
-        column-gap: 5%;
-        align-items: center;
     }
 }
 
@@ -416,15 +320,11 @@
     .contact-banner {
         .title-contact {
             h1 {
-                font-size: 20px!important;
+                font-size: 20px;
             }
             p {
-                font-size: 11px;
+                font-size: 15px;
             }
         }
-    }
-    .list-group {
-        font-size: 10px;
-        padding-bottom: 40px;
     }
 }
