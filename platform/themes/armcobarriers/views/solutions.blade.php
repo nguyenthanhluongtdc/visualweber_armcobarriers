@@ -57,7 +57,7 @@
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
-                <p>Warehouse, Industrial & Petrochemical Solutions</p>
+                <p>{{_('Warehouse, Industrial & Petrochemical Solutions')}}</p>
             </div>
             <div class="row">
                 @if($tabs_solutions = get_solutions_latest())
@@ -68,7 +68,7 @@
                                     <i class="fal fa-long-arrow-right"></i>
                                 </div>
                             </a>
-                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="">
+                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="{{ $tab->name }}">
                             <p> 
                                 <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> 
                             </p>
@@ -97,8 +97,8 @@
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
-                <h2>Product Range</h2>
-                <p>Roadside, Car Parks, Warehouses</p>
+                <h2>{{_('Product Range')}}</h2>
+                <p>{{_('Roadside, Car Parks, Warehouses')}}</p>
             </div>
             <div class="wrap-descrip">
                 <div class="row">
@@ -121,7 +121,7 @@
                     <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
                 </div>
             </div>
         </div>
