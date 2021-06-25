@@ -38,6 +38,7 @@ $gray_text: #262626;
                     span {
                         @include str_split(); 
                         -webkit-line-clamp: 2;
+                        min-height: 48px;
                     }
                 }
                 h3:hover {
