@@ -312,6 +312,7 @@ a[data-toggle="collapse"] {
         }
         .product-name {
             font-size: 25px;
+            display: flex;
             @media (max-width: 1365px) {
                 font-size: 20px; 
             }
