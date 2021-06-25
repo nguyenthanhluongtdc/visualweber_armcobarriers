@@ -60,7 +60,7 @@
 
     <!-- Tab panes -->
     <div class="tab-content" >
-        @if(!empty($posts && $cateId!=""))
+        @if(!empty($posts) && $cateId!="")
             @php 
                 $data = [ 
                     'category'=>['id'=>$cateId],
