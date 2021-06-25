@@ -125,6 +125,9 @@
              font-family: "Font Awesome 5 Pro";
              content: "\f1e0";
          }
+         .share {
+             cursor: pointer;
+         }
          .btn-share {
              background-color: $priamry_color;
              margin-left: 20px;
