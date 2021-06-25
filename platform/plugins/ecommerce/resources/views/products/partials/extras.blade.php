@@ -30,7 +30,7 @@
             </div>
             @include('plugins/ecommerce::products.partials.selected-products-list', ['products' => $product ? $product->otherProduct : collect([]), 'includeVariation' => false])
         </div>
-        <hr>
+        {{-- <hr>
         <div class="form-group">
             <label class="control-label"> {{ trans('plugins/ecommerce::products.cross_selling_products') }} </label>
             <input type="hidden" name="cross_sale_products" value="@if ($product) {{ implode(',', $product->crossSales()->allRelatedIds()->toArray()) }} @endif"/>
@@ -43,7 +43,7 @@
                 </div>
             </div>
             @include('plugins/ecommerce::products.partials.selected-products-list', ['products' => $product ? $product->crossSales : collect([]), 'includeVariation' => false])
-        </div>
+        </div> --}}
 
         @if (false)
             <hr>
