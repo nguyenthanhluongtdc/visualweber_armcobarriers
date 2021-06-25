@@ -74,11 +74,9 @@
 
                     <div class="col-12 col-lg-6 info">
                         <h1> {{$product->name}} </h1>
-                        <div>
-                            @php 
-                                echo $product->content
-                            @endphp
-                        </div>
+                        @php
+                            echo $product->content
+                        @endphp
                         <ul class="list_info">
                             <li>
                                 <p>Model:</p>
