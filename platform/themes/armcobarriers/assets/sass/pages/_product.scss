@@ -252,10 +252,7 @@ a[data-toggle="collapse"] {
 }
 
 .product-item-wrapper {
-    .product-name {
-        font-weight: bold;
-    }
-    code {
+    p {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -312,12 +309,16 @@ a[data-toggle="collapse"] {
         }
         .product-name {
             font-size: 25px;
-            display: flex;
-            align-items: center;
+            margin: 10px 0;
+            height: 68px;
+            &:hover {
+                font-weight: bold;
+            }
             @media (max-width: 1365px) {
                 font-size: 20px; 
+                height: 50px;
             }
-            height: 68px;
+            
             span {
                 overflow: hidden;
                 text-overflow: ellipsis;
