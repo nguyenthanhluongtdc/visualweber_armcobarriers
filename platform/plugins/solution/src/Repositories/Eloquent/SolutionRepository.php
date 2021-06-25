@@ -9,8 +9,6 @@ use Platform\Base\Enums\BaseStatusEnum;
 class SolutionRepository extends RepositoriesAbstract implements SolutionInterface
 {
     public function getSolution(){
-        $data = $this->model->where('app_solutions.status', BaseStatusEnum::PUBLISHED)->get();
-        return $data;
         $data = $this->model
             ->where('app_solutions.status', BaseStatusEnum::PUBLISHED);
 
