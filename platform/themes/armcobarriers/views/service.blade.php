@@ -21,12 +21,14 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_services = get_services())
-                        @php $service_first = $tabs_services[0]; @endphp
-                        @foreach($tabs_services as $key => $tab)
-                            <a class="nav-item nav-link {{$key==0?'active':''}}" style="color:#000000" href="{{ $tab->url }}" title=" {{ $tab->name }}">
-                                {{ $tab->name }} 
-                            </a>
-                        @endforeach
+                       @if(!empty($tabs_services[0])) 
+                            @php $service_first = $tabs_services[0]; @endphp
+                            @foreach($tabs_services as $key => $tab)
+                                <a class="nav-item nav-link {{$key==0?'active':''}}" style="color:#000000" href="{{ $tab->url }}" title=" {{ $tab->name }}">
+                                    {{ $tab->name }} 
+                                </a>
+                            @endforeach
+                       @endif
                     @endif
                 </div>
             </nav>

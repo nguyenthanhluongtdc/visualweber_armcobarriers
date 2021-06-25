@@ -18,10 +18,12 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_solutions = get_solutions())
-                        @php $soluton_first = $tabs_solutions[0]; @endphp
-                        @foreach($tabs_solutions as $key => $tab)
-                            <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
-                        @endforeach
+                        @if(!empty($tabs_solutions[0]))
+                            @php $soluton_first = $tabs_solutions[0]; @endphp
+                            @foreach($tabs_solutions as $key => $tab)
+                                <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
+                            @endforeach
+                        @endif
                     @endif
                 </div>
             </nav>
