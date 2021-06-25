@@ -90,7 +90,7 @@
                     <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
                 </div>
             </div>
         </div>

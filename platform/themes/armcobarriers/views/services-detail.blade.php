@@ -61,7 +61,7 @@
     <?php if(!empty(get_field($service, 'service_list'))) { ?>
     @foreach (get_field($service, 'service_list') as $item2)
     <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
-        <a href="{{get_sub_field($item2,'link')}}" title="link">
+        <a href="{{get_sub_field($item2,'link')}}" title="{{get_sub_field($item2,'title')}}">
             <h5> {{get_sub_field($item2,'title')}}</h5>
             <p>{!!get_sub_field($item2,'description')!!}</p>
 
@@ -104,7 +104,7 @@
                     <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
                 </div>
             </div>
         </div>
