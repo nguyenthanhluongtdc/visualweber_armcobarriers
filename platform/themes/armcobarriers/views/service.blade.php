@@ -62,7 +62,7 @@
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
-                <p>Warehouse, Industrial & Petrochemical Solutions</p>
+                <p>{{_('Warehouse, Industrial & Petrochemical Solutions')}}</p>
             </div>
             <div class="row">
                 @if($tabs_services =get_services_latest())
@@ -100,8 +100,8 @@
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
-                <h2>Product Range</h2>
-                <p>Roadside, Car Parks, Warehouses</p>
+                <h2>{{_('Product Range')}}</h2>
+                <p>{{_('Roadside, Car Parks, Warehouses')}}</p>
             </div>
             <div class="wrap-descrip">
                 <div class="row">

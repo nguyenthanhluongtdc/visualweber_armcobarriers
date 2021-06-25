@@ -36,12 +36,12 @@
                             <p>{{$post->author->name}}</p>
                         </div>
                         <div class="fb-share-button btn-share share" data-href="{{$post->url}}">
-                            <span>Share</span>
+                            <span>{{_('Share')}}</span>
                         </div>
                     </div>
                     <div class="related">
                         <div class="title-related">
-                            <h4>Related Post</h4>
+                            <h4>{{_('Related Post')}}</h4>
                         </div>
                         <div class="ul">
                             @foreach (get_related_posts($post->id,5) as $post_releted)
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
                     <div class="top-news">
-                        <h2>Top News</h2>
+                        <h2>{{_('Top News')}}</h2>
                     </div>
                     <div class="row wrap-news">
                         @foreach ($featured as $featureItem)

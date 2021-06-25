@@ -17,7 +17,7 @@
     <div class="container-customize info-contact">
          {!!$page->content!!}         
     <div class="let-talk">
-      <h3>Let’s talk</h3>
+      <h3>{{_('Let’s talk')}}</h3>
       <div class="row">
          <div class="col-lg-4">
            <div class="contact_infomation">
@@ -31,7 +31,7 @@
                 @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
                     @if (session()->has('success_msg'))
                         <div class="alert alert-success">
-                            <p>Send successfully</p>
+                            <p>{{_('Send successfully')}}</p>
                         </div>
                     @endif
                     @if (session()->has('error_msg'))
@@ -69,11 +69,11 @@
             </div>
             <div class="policy custom-checkbox">
               <label class="customcheck">
-                <input type="checkbox" checked="checked"><a href="{{route('public.single').get_slug_by_template('Privacy-policy')}}" title="{{route('public.single').get_slug_by_template('Privacy-policy')}}">I have read and accept the Privacy Policy</a>
+                <input type="checkbox" checked="checked"><a href="{{route('public.single').get_slug_by_template('Privacy-policy')}}" title="{{route('public.single').get_slug_by_template('Privacy-policy')}}">{{_('I have read and accept the Privacy Policy')}}</a>
                 <span class="checkmark"></span>
               </label>
               <button class="bsend-button" type="submit" value="SEND">
-                  Submit
+                 {{_('Submit')}}
               </button>
               
             </div>
@@ -85,7 +85,7 @@
       
     </div>
     <div class="visit-title">
-      <h3>Visit us</h3>
+      <h3>{{_('Visit us')}}</h3>
     </div>
   </div>
   

@@ -28,7 +28,7 @@ if(has_field($page, 'about_us'))
 <div class="container-customize">
     <div class="wrap-product">
         <div class="whatwedo"id="whatwedo">
-            <h2> What We Do</h2>
+            <h2> {{_('What We Do')}}</h2>
         </div>
         <div class="wrap1">
             <div class="row">
@@ -47,7 +47,7 @@ if(has_field($page, 'about_us'))
              <i class="far fa-long-arrow-right"></i>
            </div>
            <div class="view">
-                <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
            </div>
        </div>
     </div>
@@ -74,9 +74,9 @@ if(has_field($page, 'about_us'))
             @foreach (get_field($page, 'key_feature') as $item)
                 <div class="col-lg-4 col-md-6">
                    <div class="product0">
-                    <img src="{{get_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}" alt="{{get_sub_field($item , 'title')}}">
+                    <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}" alt="{{get_sub_field($item , 'title')}}">
                     <h3>{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
-                    <p>{!!get_sub_field($item , 'description') ? get_sub_field($item , 'description'):''!!}</p>
+                    {!!has_sub_field($item , 'description') ? get_sub_field($item , 'description'):''!!}
                    </div>
                 </div>
                 @endforeach

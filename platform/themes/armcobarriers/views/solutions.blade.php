@@ -21,7 +21,7 @@
                         @if(!empty($tabs_solutions[0]))
                             @php $soluton_first = $tabs_solutions[0]; @endphp
                             @foreach($tabs_solutions as $key => $tab)
-                                <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
+                                <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }} </a>
                             @endforeach
                         @endif
                     @endif
@@ -57,18 +57,18 @@
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
-                <p>Warehouse, Industrial & Petrochemical Solutions</p>
+                <p>{{_('Warehouse, Industrial & Petrochemical Solutions')}}</p>
             </div>
             <div class="row">
                 @if($tabs_solutions = get_solutions_latest())
                     @foreach($tabs_solutions as $key => $tab)
                         <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                            <a href="{{ $tab->url }}" title="link">
+                            <a href="{{ $tab->url }}" title="{{ $tab->name }}">
                                 <div class="icon">
                                     <i class="fal fa-long-arrow-right"></i>
                                 </div>
                             </a>
-                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="">
+                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="{{ $tab->name }}">
                             <p> 
                                 <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> 
                             </p>
@@ -97,8 +97,8 @@
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
-                <h2>Product Range</h2>
-                <p>Roadside, Car Parks, Warehouses</p>
+                <h2>{{_('Product Range')}}</h2>
+                <p>{{_('Roadside, Car Parks, Warehouses')}}</p>
             </div>
             <div class="wrap-descrip">
                 <div class="row">
@@ -121,7 +121,7 @@
                     <i class="fal fa-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCTS</a>
+                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
                 </div>
             </div>
         </div>

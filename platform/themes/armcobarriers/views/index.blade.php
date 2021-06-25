@@ -78,7 +78,7 @@
     <div class="container-customize">
         <div class="wrap-product">
             <div class="product-range">
-                <h2>Product Range</h2>
+                <h2>{{_('Product Range')}}</h2>
             </div>
             <div class="wrap-descrip">
                 <div class="row">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="view">
                      <a href="{{route('public.products')}}" title="{{route('public.products')}}">
-                        {{trans('home.view_our_products')}}
+                        {{_('view our products')}}
                      </a>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                 <div class="gallery__item">
                     <div class="gallery__item-group">
                         <img class="mw-100" src="{{has_field( $page ,'logo_service') ? get_object_image(get_field( $page ,'logo_service')):''}}" alt="logo">
-                        <h2 data-aos="" data-aos-delay="200">Services</h2>
+                        <h2 data-aos="" data-aos-delay="200">{{_('Services')}}</h2>
                     </div> 
                     <p  data-aos="" data-aos-delay="400">{{get_field( $page ,'service') ? get_field( $page ,'service'):''}}</p>
                 </div>
@@ -144,7 +144,7 @@
     <div class="news-event-wrapper">
         <div class="container-customize">
             <div class="news-event--title">
-                <h2 data-aos="" data-aos-delay="200">News <br>& Events</h2>
+                <h2 data-aos="" data-aos-delay="200">{{_('News')}} <br>& {{'Events'}}</h2>
             </div>
             <div class="row">
                 @if(get_post_is_featured())
@@ -163,7 +163,7 @@
                         <div class="news-post-time">
                             <span>{{$post->created_at->format('j F Y') }}</span>
                             <div class="fb-share-button btn-share" data-href="{{$post->url}}" target="_blank">
-                                <span>Share <i class="fal fa-share-alt"></i></span>
+                                <span>{{_('Share')}} <i class="fal fa-share-alt"></i></span>
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
 
             <div class="read-more">
                 <a href="{{ route('public.single').get_slug_by_template('News-media')}} " title="{{ route('public.single').get_slug_by_template('News-media')}}">
-                    <h3 data-aos="" data-aos-delay="200"> {{trans('home.read_more')}} </h3>
+                    <h3 data-aos="" data-aos-delay="200"> {{_('Read More')}} </h3>
                 </a>
             </div>
         </div>

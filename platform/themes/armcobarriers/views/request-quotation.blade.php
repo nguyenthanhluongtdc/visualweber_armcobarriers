@@ -25,13 +25,13 @@
 <section>
     <div class="container-customize info-contact">
         <div class="let-talk pt-3">
-            <h3>Request a Quotation</h3>
+            <h3>{{$page->name}}</h3>
             <div id="contact-form" class="form-horizontal form-contact-us">
                 {!! Form::open(['route' => 'public.send.contact', 'method' => 'POST']) !!}
                 @if(session()->has('success_msg') || session()->has('error_msg') || isset($errors))
                     @if (session()->has('success_msg'))
                         <div class="alert alert-success">
-                            <p>Send successfully</p>
+                            <p>{{_('Send successfully')}}</p>
                         </div>
                     @endif
                     @if (session()->has('error_msg'))
@@ -72,7 +72,7 @@
                             <span class="checkmark"></span>
                         </label>
                         <button class="bsend-button" type="submit" value="SEND">
-                            Submit
+                          {{_('Submit')}}
                         </button>
                     </div>
                     {!! Form::close() !!}
