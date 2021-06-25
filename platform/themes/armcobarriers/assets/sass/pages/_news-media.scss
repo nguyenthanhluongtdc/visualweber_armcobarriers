@@ -194,7 +194,7 @@ $gray_text: #262626;
                         font-size: 20px;
                     }
                     @include str_split();
-                    -webkit-line-clamp: 1;
+                    -webkit-line-clamp: 2;
                 }
             }
             .date,
