@@ -91,7 +91,7 @@
                                                     </a>
                                                 </td>
                                                 <td class="product-name" data-title="Product">
-                                                    <a href="{{ $product->original_product->url }}" title="{{ $product->name }}">{{ $product->name }}</a>
+                                                    <a href="{{ $product->original_product->url }}" title="{{ $product->name }}" class="text-dark">{{ $product->name }}</a>
                                                     <p style="margin-bottom: 0">
                                                         <small>{{ $cartItem->options['attributes'] ?? '' }}</small>
                                                     </p>
@@ -115,7 +115,7 @@
                                                     </div>
                                                 </td>
                                                 <td class="product-subtotal" data-title="Total">{{ format_price($cartItem->price * $cartItem->qty) }}</td>
-                                                <td class="product-remove" data-title="Remove"><a href="{{ route('public.cart.remove', $cartItem->rowId) }}" class="remove-cart-button"><i class="fal fa-trash-alt"></i></a></td>
+                                                <td class="product-remove" data-title="Remove"><a href="{{ route('public.cart.remove', $cartItem->rowId) }}" class="remove-cart-button"><i class="fal fa-trash-alt text-danger"></i></a></td>
                                             </tr>
                                         @endif
                                     @endforeach
