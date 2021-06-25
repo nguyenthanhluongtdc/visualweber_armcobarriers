@@ -34,10 +34,11 @@ $gray_text: #262626;
                         font-size: 20px; 
                     }
                     color: $gray_text;
-                    padding: 25px 15px;
-                    @include str_split();
+                    @include str_split(); 
                     -webkit-line-clamp: 2;
-                    min-height: 98px;
+                    height: 67px;
+                    padding: 15px 15px;
+                    text-align: center;
                 }
                 h3:hover {
                     background-color: #fad906;
