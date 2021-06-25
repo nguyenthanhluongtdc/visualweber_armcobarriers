@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="col-12 col-lg-6 info">
-                        <h1 class="product_name"> {{$product->name}} </h1>
+                        <h1> {{$product->name}} </h1>
                         <div>
                             @php 
                                 echo $product->content
@@ -196,7 +196,9 @@
                                     <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}"> 
                                     <a href="{{ $other_pro->url }}" title="{{$other_pro->name}}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
                                 </div>
-                                <p class="product_name"> <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> </p>
+                                <h4 class="product_name"> 
+                                    <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> 
+                                </h4>
                                 <div class="description"> {!! $other_pro->description !!} </div> 
                             </div>
                         @endforeach

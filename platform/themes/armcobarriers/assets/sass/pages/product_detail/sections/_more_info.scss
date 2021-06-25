@@ -77,17 +77,16 @@
                 .product_name {
                     padding: 3% 0%;
                     color: $gray-text; 
-                    font-weight: bold;
                     font-size: 25px;
                     @media (max-width: 1365px) {
                         font-size: 20px; 
                     }
                 }
-                // &:hover {
-                //     .product_name {
-                //         font-weight: bold;
-                //     }
-                // }
+                &:hover {
+                    .product_name {
+                        font-weight: bold;
+                    }
+                }
             }
         }
     }

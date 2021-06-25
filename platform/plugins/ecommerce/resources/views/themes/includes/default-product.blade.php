@@ -59,5 +59,5 @@
 
 <a href ="{!! $product->url !!}" class="product_item col-6 col-lg-12" title="{{$product->name}}">
     <img class="img-fluid" src="{{rvMedia::getImageUrl($product->image)}}" alt="{{$product->name}}">
-    <p class="product_name"> {{$product->name}} </p>
+    <h4 class="product_name"> {{$product->name}} </h4>
 </a>

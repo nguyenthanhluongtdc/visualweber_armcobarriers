@@ -8,6 +8,9 @@
 }
 
 #product_info {
+    h1 {
+      font-size: 1.6rem;
+    }
     .gallery {
         .main_img {
             padding-left: 3%;
@@ -16,12 +19,18 @@
     .info {
         border-bottom: 1px solid #efefef;   
         .product_name {
-            font-size: 25px;
-            @media (max-width: 1365px) {
-                font-size: 20px; 
-            }
-            font-weight: bold;
-            margin-bottom: 3%;
+          height: 68px;
+          margin: 10px 0;
+          @media (max-width: 1365px) {
+              height: 50px;
+          }
+          a {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+          }
         }
         .list_info {
             margin-top: 20px;

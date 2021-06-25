@@ -23,10 +23,14 @@
         grid-column-gap: 2%;
         .product_item {
             a {
-                color: $gray-text; font-weight: bold; 
+                color: $gray-text;
                 font-size: 25px;
                 @media (max-width: 1365px) {
                     font-size: 20px; 
+                }
+
+                &:hover {
+                    font-weight: bold;
                 }
             }
 
@@ -46,12 +50,18 @@
                 -webkit-line-clamp: 3;
             }
             .product_name {
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 2;
-                min-height: 44px;
+                height: 68px;
+                margin: 10px 0;
+                @media (max-width: 1365px) {
+                    height: 50px;
+                }
+                a {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
             }
             
             .box-img{
