@@ -1,4 +1,12 @@
 <?php
+add_action(BASE_ACTION_PUBLIC_RENDER_SINGLE, function ($screen, $data) {    
+    if (in_array($screen, [PAGE_MODULE_SCREEN_NAME, POST_MODULE_SCREEN_NAME])) {        
+        SeoHelper::meta()->addMeta('robots', 'index, follow');        
+        SeoHelper::openGraph()
+            ->addProperty('image:width', '600')            
+            ->addProperty('image:height', '300');  
+    }
+}, 120, 2);
 
 theme_option()
     // ->setField([
