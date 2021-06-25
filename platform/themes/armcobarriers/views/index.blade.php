@@ -154,7 +154,7 @@
                         <a href="{{$post->url}}" title="{{ $post->name }}">
                             <img class="img-background" src="{{ RvMedia::getImageUrl($post->image) }}" alt="{{ $post->name }}">
                         <div class="news-post--titlte">
-                            <h4> {{ $post->name }}</h4>
+                            <h4> <span> {{ $post->name }} </span> </h4>
                         </div>
                         <div class="news-post--content">
                             <p> {{ $post->description }}</p>

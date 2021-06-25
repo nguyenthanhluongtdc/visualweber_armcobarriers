@@ -20,7 +20,7 @@
                                     <img src="{{ RvMedia::getImageUrl($event->image) }}" alt="{{$event->name}}">
                                 </div>
                                 <h3>
-                                    {{$event->name}}
+                                    <span> {{$event->name}} </span>
                                 </h3>
                                 <div class="descriptions">
                                     {{$event->description}}
