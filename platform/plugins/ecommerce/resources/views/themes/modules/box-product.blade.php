@@ -8,7 +8,7 @@
                     <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
                 </div>
                 <h4 class="product-name">
-                    {{$product->name}}
+                    <span> {{$product->name}} </span>
                 </h4>
                 <?php echo $product->description ?>
             </a>
