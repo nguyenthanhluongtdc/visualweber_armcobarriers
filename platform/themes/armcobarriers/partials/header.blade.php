@@ -39,7 +39,7 @@
                            <div class="topp">
                             <div class="left">
                                 <div class="left-1">
-                                    <a href="tel:{{theme_option('hotline')}}">
+                                    <a href="tel:{{theme_option('hotline')}}" title="{{theme_option('hotline')}}">
                                         <i class="fas fa-phone-alt"></i>
                                         <span>{{theme_option('hotline')}}</span>
                                     </a>
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                             <div class="right">
-                                <a href="{{route('public.cart')}}" id="link-cart">
+                                <a href="{{route('public.cart')}}" id="link-cart" title="Cart">
                                    <div id="reload"> 
                                        <i class="fal fa-shopping-cart"></i>
                                         <span class="header__cart-notice">{{Cart::instance('cart')->count()}}</span>
@@ -64,10 +64,10 @@
                                 </a>
                                 <ul class="header_list">
                                     @if (!auth('customer')->check())
-                                        <li><a href="{{ route('customer.login') }}"><span><i class="fal fa-user"></i></span></a></li>
+                                        <li><a href="{{ route('customer.login') }}" title="Login"><span><i class="fal fa-user"></i></span></a></li>
                                     @else
-                                        <li class="img-user"><a href="{{ route('customer.overview') }}"><img class="br2" src="{{ auth('customer')->user()->avatar_url }}" alt="{{ auth('customer')->user()->name }}" ></a></li>
-                                        <li class="logout"><a href="{{ route('customer.logout') }}"><span>{{ __('Logout') }}</span></a></li>
+                                        <li class="img-user"><a href="{{ route('customer.overview') }}" title="Overview"><img class="br2" src="{{ auth('customer')->user()->avatar_url }}" alt="{{ auth('customer')->user()->name }}" ></a></li>
+                                        <li class="logout"><a href="{{ route('customer.logout') }}" title="Logout"><span>{{ __('Logout') }}</span></a></li>
                                     @endif
                                 </ul>
                                 <a href="{{theme_option('footer-social')}}">

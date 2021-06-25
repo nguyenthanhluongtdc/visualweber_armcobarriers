@@ -22,13 +22,13 @@
                             <h3>{{ theme_option('footer-title-office') }}</h3>
                             <p>{{ theme_option('footer-office-position') }} </p>
                             <p>Phone<a
-                                    href="tel:{{ theme_option('footer-phone') }}">{{ theme_option('footer-phone') }}</a>
+                                    href="tel:{{ theme_option('footer-phone') }}" title="{{ theme_option('footer-phone') }}">{{ theme_option('footer-phone') }}</a>
                             </p>
                             <p>International<a
-                                    href="tel:{{ theme_option('footer-phone-international') }}">{{ theme_option('footer-phone-international') }}</a>
+                                    href="tel:{{ theme_option('footer-phone-international') }}" title="{{ theme_option('footer-phone-international') }}">{{ theme_option('footer-phone-international') }}</a>
                             </p>
                             <p>Email<a
-                                    href="mailto:{{ theme_option('footer-email') }}">{{ theme_option('footer-email') }}</a>
+                                    href="mailto:{{ theme_option('footer-email') }}" title="{{ theme_option('footer-email') }}">{{ theme_option('footer-email') }}</a>
                             </p>
                         </div>
                     </div>

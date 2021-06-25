@@ -74,7 +74,7 @@
                                     <i class="fal fa-long-arrow-right"></i>
                                 </div>
                             </a>
-                            <img src="{{ RvMedia::getImageUrl($tab->image) }}" alt="">
+                            <img src="{{ RvMedia::getImageUrl($tab->image) }}" alt="{{$tab->name}}">
                             <p> <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> </p>
                         </div>
                     @endforeach

@@ -50,7 +50,7 @@
             @foreach($menu_nodes as $key => $row)
                 @php $path = parse_url($row->url, PHP_URL_PATH); $paths[] = $path; @endphp
                 <li class="item">
-                    <a class="nav-link {{$cateId==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true">           
+                    <a class="nav-link {{$cateId==$row->reference_id?'active':''}}" id="tab-tab{!!$row->reference_id!!}" data-toggle="tab" href="#tab{!!$row->reference_id!!}" role="tab" aria-controls="tab{!!$row->reference_id!!}" aria-selected="true" title="{{$row->title}}">           
                         {{ $row->title }}
                     </a>
                 </li>

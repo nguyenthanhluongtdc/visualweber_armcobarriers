@@ -5,7 +5,7 @@
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_solutions = get_solutions())
                         @foreach($tabs_solutions as $key => $tab)
-                            <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="tab">{{ $tab->name }} </a>
+                            <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }} </a>
                         @endforeach
                     @endif
                 </div>

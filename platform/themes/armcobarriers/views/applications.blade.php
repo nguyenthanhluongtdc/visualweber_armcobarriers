@@ -66,7 +66,7 @@ if(has_field($page, 'applications'))
 <section>
     <div class="container-customize">
         <div class="pls">
-            <p>Please <a href="{{route('public.single').get_slug_by_template('contact-us')}}">contact us</a>  with any enquiries you may have.</p>
+            <p>Please <a href="{{route('public.single').get_slug_by_template('contact-us')}}" title="{{route('public.single').get_slug_by_template('contact-us')}}">contact us</a>  with any enquiries you may have.</p>
         </div>
     </div>
 </section>
@@ -98,7 +98,7 @@ if(has_field($page, 'applications'))
                     <i class="far fa-long-arrow-right"></i>
                 </div>
                 <div class="view">
-                     <a href="{{route('public.products')}}">VIEW OUR PRODUCT</a>
+                     <a href="{{route('public.products')}}" title="{{route('public.products')}}">VIEW OUR PRODUCT</a>
                 </div>
             </div>
         </div>

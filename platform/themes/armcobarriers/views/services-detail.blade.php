@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="right">
-            <img src="{{ RvMedia::getImageUrl(get_field($service, 'big_picture')) }}" alt="">
+            <img src="{{ RvMedia::getImageUrl(get_field($service, 'big_picture')) }}" alt="{{ get_field($service, 'banner_title') }}">
         </div>
     </div>
 @else
