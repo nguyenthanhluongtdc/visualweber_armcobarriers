@@ -10,8 +10,9 @@
       </div>
 </section>
 <section>
+  @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="container-customize">
-        @includeIf("theme.armcobarriers::views.modules.breadcrumb")
+       
         <div class="content-policy content">
           {!! apply_filters(PAGE_FILTER_FRONT_PAGE_CONTENT, clean($page->content), $page) !!}
         </div>
