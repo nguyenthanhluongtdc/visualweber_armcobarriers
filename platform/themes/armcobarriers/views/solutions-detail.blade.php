@@ -58,6 +58,28 @@
 </div>
 <section class="section-armco">
     <div class="container-customize">
+        <div class="roadside-solutions general-section">
+            @if(has_field($solution, 'solution_details_content'))
+            @foreach(get_field($solution, 'solution_details_content') as $sub)
+            <div class="item">
+                <div class="box-img">
+                    <img src="{{rvMedia::getImageUrl(get_sub_field($sub, 'image'))}}" alt="">
+                </div>
+                <div class="content">
+                    <h5> {{ has_sub_field($sub, 'title') ? get_sub_field($sub, 'title'):''}} </h5>
+                    @if(has_sub_field($sub, 'content'))
+                    {!!get_sub_field($sub, 'content')!!}
+                    @endif
+                </div>
+            </div>
+            @endforeach
+            @endif
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container-customize">
         <?php if(!empty(get_field($solution, 'product_quality_solution'))) { ?>
         <div class="wrap-product-quality">
             <div class="product-quality section-armco__header__title">

@@ -524,7 +524,13 @@
     .header {
         .navbar-nav {
             position: fixed;
-            top: 55px;
+            top: 86px;
+            @media(max-width: 768px) {
+                top: 63px;
+            }
+            @media(max-width:567px) {
+                top: 50px;
+            }
             left: 0;
             bottom: 0;
             right: 0;
@@ -597,7 +603,6 @@
                 display: block !important;
                 ul {
                     li {
-                        padding: 5px 0 !important;
                         a {
                             display: block;
                             padding: 8px 0px 8px 1.5vw !important;
@@ -606,6 +611,8 @@
                 }
                 .dropdown-menu {
                     border: none;
+                    margin: 0;
+                    padding: 0;
                 }
                 .caret::before {
                     content: "";
