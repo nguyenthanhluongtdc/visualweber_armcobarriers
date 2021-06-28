@@ -1,10 +1,10 @@
 @php $soluton_first = []; @endphp
 
-<section>
+<section class="section-armco">
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="wrap-top">
         <div class="container-customize">
-            <div class="top2">
+            <div class="top2 section-armco__titleSmall">
                 <h1>{{$page->name}}</h1>
                 {{$page->description}}
             </div>
@@ -53,17 +53,16 @@
 @endif
 @endif
 
-<section>
+<section class="section-armco">
     <div class="container-customize">
         <div class="roadside-solutions general-section">
-
             @foreach(get_field($page, 'roadside_solutions') as $sub)
             <div class="item">
                 <div class="box-img">
                     <img src="{{rvMedia::getImageUrl(get_sub_field($sub, 'img'))}}" alt="" />
                 </div>
                 <div class="content">
-                    <h5> {{get_sub_field($sub, 'title')}} </h5>
+                    <h5 class="section-armco__header__column"> {{get_sub_field($sub, 'title')}} </h5>
                     {!!get_sub_field($sub, 'content')!!}
                 </div>
             </div>
@@ -72,10 +71,10 @@
     </div>
 </section>
 
-<section style="padding-top:4%">
+<section style="padding-top:4%" class="section-armco">
     <div class="container-customize">
         <div class="wrap-product">
-            <div class="product-range">
+            <div class="product-range section-armco__header__title">
                 <h2>{{_('Product Range')}}</h2>
                 <p>{{_('Roadside, Car Parks, Warehouses')}}</p>
             </div>
@@ -85,7 +84,7 @@
                     @foreach (get_field($page, 'product_range_solutions') as $item)
                     <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
                         <div class="post">
-                            <div class="post-title">
+                            <div class="section-armco__header__column">
                                 <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
                             </div>
                             {!!get_sub_field($item ,'product_range_description')!!}
@@ -106,7 +105,7 @@
         </div>
     </div>
 </section>
-<section>
+<section class="section-armco">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")
     </div>

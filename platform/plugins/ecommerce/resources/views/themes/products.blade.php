@@ -49,11 +49,11 @@ $query = isset($query) ? $query : "";
 @php $number_select = 10; @endphp
 
 @php Theme::layout('default') @endphp
-<section>
+<section class="section-armco">
     @includeIf("theme.armcobarriers::views.modules.breadcrumb")
     <div class="container-customize">
         <div class="introduction-product">
-            <div class="introduction-product-title">
+            <div class="introduction-product-title section-armco__titleSmall">
                 <h1>Product Range</h1>
                 <h4>Roadside, Car Parks, Warehouses<h4>
             </div>
@@ -121,12 +121,12 @@ $query = isset($query) ? $query : "";
                     </div>
 
                     @if(isset($categories) && !empty($catego))
-                    <h1 style="font-size: 2rem; margin-top: 40px;"> {!!$catego->name!!} </h1>
+                    <h2 style="font-size: 2rem; margin-top: 40px;"> {!!$catego->name!!} </h2>
                     @elseif(!empty($query))
-                    <h1 style="font-size: 2rem; margin-top: 40px;">
-                        Search results for keyword: <span class="text-danger">'{!!$query!!}'</span> </h1>
+                    <h2 style="font-size: 2rem; margin-top: 40px;">
+                        Search results for keyword: <span class="text-danger">'{!!$query!!}'</span> </h2>
                     @else
-                    <h1 style="font-size: 2rem; margin-top: 40px;"> All products </h1>
+                    <h2 style="font-size: 2rem; margin-top: 40px;"> All products </h2>
                     @endif
 
                     @if(count($products) > 0)

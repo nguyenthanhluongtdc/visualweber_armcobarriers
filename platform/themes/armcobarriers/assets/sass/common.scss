@@ -4,7 +4,6 @@
 @import "variables";
 @import "reset";
 @import "config";
-@import "styleCommon";
 @import "pages/home";
 @import "pages/about";
 @import "partials/header";
@@ -22,3 +21,4 @@
 @import "pages/media-detail.scss";
 @import "pages/cart.scss";
 @import "pages/solutions.scss";
+@import "styleCommon";

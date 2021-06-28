@@ -4,12 +4,10 @@
     padding-bottom: 60px;
     h1 {
       color: #000000;
-      font-size: 40px;
       font-family: $FolioStd-Bold;
     }
     h2 {
       color: #000000;
-      font-size: 20px;
       font-family: $Arial;
       font-weight: bold;
     }
@@ -84,10 +82,6 @@
       padding-bottom: 5%;
       padding-right: 4%;
       h3 {
-        font-size: 25px;
-        @media (max-width: 1365px) {
-          font-size: 23px;
-        }
         font-family: $FolioStd-Medium;
         padding-bottom: 5%;
       }
@@ -99,10 +93,6 @@
     .installation,
     .quality {
       h3 {
-        font-size: 25px;
-        @media (max-width: 1365) {
-          font-size: 20px;
-        }
         font-family: $FolioStd-Medium;
         padding-bottom: 5%;
       }
@@ -136,7 +126,6 @@
     h2 {
       color: #000000;
       font-family: $FolioStd-Bold;
-      font-size: 40px;
     }
   }
 }
@@ -162,10 +151,6 @@
       }
       h3 {
         padding-bottom: 25px;
-        font-size: 25px;
-        @media (max-width: 1365px) {
-          font-size: 20px;
-        }
         font-family: $FolioStd-Medium;
       }
       p {
@@ -207,7 +192,6 @@
       // }
       h2 {
         color: #000000;
-        font-size: 40px;
         font-family: $FolioStd-Bold;
       }
     }
@@ -401,11 +385,6 @@
 @media (max-width: 1440px) {
   .wrap-bot {
     .bot1 {
-      .product-quality {
-        h2 {
-          font-size: 35px;
-        }
-      }
       .slogan {
         p {
           font-size: 17px;
@@ -418,11 +397,6 @@
 @media (max-width: 1290px) {
   .wrap-bot {
     .bot1 {
-      .product-quality {
-        h2 {
-          font-size: 30px;
-        }
-      }
       .slogan {
         p {
           font-size: 17px;
@@ -433,18 +407,6 @@
   .wrap-top {
     .cont2 {
       padding-bottom: 40px;
-    }
-  }
-}
-
-@media (max-width: 1080px) {
-  .wrap-bot {
-    .bot1 {
-      .product-quality {
-        h2 {
-          font-size: 28px;
-        }
-      }
     }
   }
 }
@@ -469,9 +431,6 @@
   .wrap-sign .info-me button {
     padding: 15px;
     font-size: 17px;
-  }
-  .wrap-top .cont2 h1 {
-    font-size: $rem2-5;
   }
   .wrap-product {
     .whatwedo {
@@ -540,7 +499,6 @@
       padding: 20px 0px 5% !important;
       .product-quality {
         h2 {
-          font-size: 30px !important;
           padding: 5%;
         }
       }
@@ -561,11 +519,6 @@
     }
   }
   .wrap-product {
-    .whatwedo {
-      h2 {
-        font-size: 30px !important;
-      }
-    }
     .design,
     .installation,
     .warranty,
@@ -610,24 +563,3 @@
 //         }
 //     }
 // }
-@media (max-width: 480px) {
-  .wrap-top {
-    .cont2 {
-      h1 {
-        font-size: 35px;
-      }
-      h2 {
-        font-size: 18px;
-      }
-    }
-  }
-  .wrap-bot {
-    .bot1 {
-      .product-quality {
-        h2 {
-          font-size: 35px;
-        }
-      }
-    }
-  }
-}
