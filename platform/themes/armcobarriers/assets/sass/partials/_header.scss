@@ -524,7 +524,13 @@
     .header {
         .navbar-nav {
             position: fixed;
-            top: 55px;
+            top: 86px;
+            @media(max-width: 768px) {
+                top: 63px;
+            }
+            @media(max-width:567px) {
+                top: 50px;
+            }
             left: 0;
             bottom: 0;
             right: 0;
