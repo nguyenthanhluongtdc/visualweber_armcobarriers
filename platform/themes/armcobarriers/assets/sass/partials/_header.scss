@@ -58,7 +58,7 @@
 }
 
 .header {
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   position: fixed;
@@ -70,8 +70,6 @@
   }
   .logo__link {
     background-color: $priamry_color;
-
-    padding: 10px 15px;
     display: inline-block;
     width: 270px;
     height: 110px;
@@ -81,21 +79,21 @@
       height: 100%;
     }
     @media (max-width: 1700px) {
-      padding: 15px 20px;
+      width: 250px;
+      height: 90px;
     }
     @media (max-width: 1400px) {
-      padding: 20px 20px;
+      width: 200px;
+      height: 65px;
     }
-    @media (max-width: 991px) {
-      height: 100%;
-      width: auto;
-      padding: 5px 10px;
+    @media (max-width: 768px) {
+      width: 150px;
+      height: 50px;
     }
 
     @media (max-width: 567px) {
       width: 100px;
-      height: auto;
-      padding: 19px 10px;
+      height: 40px;
     }
   }
   .navbar_mobie {
@@ -523,9 +521,6 @@
     .logout {
       display: none;
     }
-  }
-  .navbar {
-    height: 63px;
   }
   .header {
     .navbar-nav {
