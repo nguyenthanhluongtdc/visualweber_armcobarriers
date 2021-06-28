@@ -79,7 +79,6 @@
      }
      .the-ministry {
          p {
-             font-size: 25px;
              @media (max-width: 1365px) {
                  font-size: 17px;
              }
@@ -150,7 +149,7 @@
          .title-related {
              padding-right: 5%;
              h4 {
-                 font-size: 25px;
+                 font-size: 20px;
                  @media (max-width: 1365px) {
                      font-size: 20px;
                  }
@@ -175,6 +174,7 @@
          img {
              max-width: 100%;
              padding-bottom: 12%;
+             width: 100%;
          }
      }
      .description {
@@ -209,7 +209,7 @@
          .description {
              a {
                  -webkit-line-clamp: 2;
-                 font-size: 15px;
+                 font-size: 17px;
              }
              p {
                  font-size: 15px;
@@ -235,7 +235,7 @@
      .wrap-news {
          .description {
              a {
-                 font-size: 14px;
+                 font-size: 17px;
                  -webkit-line-clamp: 1 !important;
              }
              p {
