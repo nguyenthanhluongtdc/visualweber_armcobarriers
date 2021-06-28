@@ -603,7 +603,6 @@
                 display: block !important;
                 ul {
                     li {
-                        padding: 5px 0 !important;
                         a {
                             display: block;
                             padding: 8px 0px 8px 1.5vw !important;
@@ -612,6 +611,8 @@
                 }
                 .dropdown-menu {
                     border: none;
+                    margin: 0;
+                    padding: 0;
                 }
                 .caret::before {
                     content: "";
