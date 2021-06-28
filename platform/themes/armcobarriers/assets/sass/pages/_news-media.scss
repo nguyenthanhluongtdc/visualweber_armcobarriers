@@ -7,6 +7,13 @@ $gray_text: #262626;
 }
 
 .pages-news-media {
+    h1 {
+        font-size: 60px;
+        font-family: $FolioStd-Medium;
+        @media(max-width: 1680px) {
+            font-size: 40px;
+        }
+    }
     .my-7.mt-n20 {
         margin-top: 2.80rem;
         margin-bottom: 4rem;
@@ -24,7 +31,7 @@ $gray_text: #262626;
                     }
                 }
                 h3 {
-                    font-size: 25px;
+                    font-size: 20px;
                     height: 90px;
                     display: flex;
                     align-items: center;
@@ -158,7 +165,7 @@ $gray_text: #262626;
                 border: none !important;
                 color: $gray_text;
                 font-family: "FolioStd-Medium";
-                font-size: 30px;
+                font-size: 25px;
                 @media (max-width: 1365px) {
                     font-size: 20px;
                 }
@@ -188,11 +195,8 @@ $gray_text: #262626;
             h5 {
                 a {
                     color: $gray_text;
-                    font-weight: bold;
-                    font-size: 25px;
-                    @media (max-width: 1365px) {
-                        font-size: 20px;
-                    }
+                    font-size: 20px;
+                    font-family: $FolioStd-Medium;
                     @include str_split();
                     -webkit-line-clamp: 2;
                 }
