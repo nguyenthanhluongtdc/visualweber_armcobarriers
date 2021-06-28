@@ -1,0 +1,55 @@
+.roadside-solutions {
+  margin-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid $priamry_color;
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+
+    .box-img,
+    .content {
+      width: 50%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .content {
+      h5 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+    }
+
+    .box-img {
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .item:nth-child(odd) {
+    .box-img {
+      order: 1;
+    }
+    .content {
+      order: 2;
+      padding: 2rem 0 2rem 2rem;
+    }
+  }
+
+  .item:nth-child(even) {
+    .box-img {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+      padding: 2rem 2rem 2rem 0;
+    }
+  }
+}

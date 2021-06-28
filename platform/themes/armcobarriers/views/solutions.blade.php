@@ -53,36 +53,22 @@
 @endif
 @endif
 
-{{-- <section>
+<section>
     <div class="container-customize">
-        <div class="wrap-our">
-            <div class="service ">
-                <p>{{_('Warehouse, Industrial & Petrochemical Solutions')}}</p>
-</div>
-<div class="row">
-    @if($tabs_solutions = get_solutions_latest())
-    @foreach($tabs_solutions as $key => $tab)
-    <div class="col-lg-3 col-md-6 col-sm-6 asset">
-        <a href="{{ $tab->url }}" title="{{ $tab->name }}">
-            <div class="icon">
-                <i class="fal fa-long-arrow-right"></i>
-            </div>
-        </a>
-        <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="{{ $tab->name }}">
-        <p>
-            <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a>
-        </p>
-    </div>
-    @endforeach
-    @endif
-</div>
-</div>
-</div>
-</section> --}}
+        <div class="roadside-solutions">
 
-<section style="padding-top:6%" class="roadside-solutions">
-    <div class="container-customize">
-        {!!get_field( $page ,'field_des_solutions')!!}
+            @foreach(get_field($page, 'roadside_solutions') as $sub)
+            <div class="item">
+                <div class="box-img">
+                    <img src="{{rvMedia::getImageUrl(get_sub_field($sub, 'img'))}}" alt="" />
+                </div>
+                <div class="content">
+                    <h5> {{get_sub_field($sub, 'title')}} </h5>
+                    {!!get_sub_field($sub, 'content')!!}
+                </div>
+            </div>
+            @endforeach
+        </div>
     </div>
 </section>
 
@@ -127,16 +113,3 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-<style>
-    .roadside-solutions ul {
-        margin: revert;
-        padding: revert;
-    }
-
-    .roadside-solutions td {
-        padding-left: 10px;
-    }
-
-</style>
