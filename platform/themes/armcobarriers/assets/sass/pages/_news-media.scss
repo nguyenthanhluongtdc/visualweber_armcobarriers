@@ -13,6 +13,9 @@ $gray_text: #262626;
         @media(max-width: 1680px) {
             font-size: 40px;
         }
+        @media(max-width: 991px) {
+            font-size: 30px;
+        }
     }
     .my-7.mt-n20 {
         margin-top: 2.80rem;
