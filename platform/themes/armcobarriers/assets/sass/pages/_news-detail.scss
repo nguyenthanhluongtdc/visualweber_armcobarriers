@@ -192,6 +192,7 @@
              color: #9999;
          }
          p {
+             margin-bottom: 0;
              padding-top: 3%;
              @media (max-width: 1365px) {
                  font-size: 15px;
@@ -213,6 +214,7 @@
              }
              p {
                  font-size: 15px;
+                 -webkit-line-clamp: 2;
              }
          }
      }
