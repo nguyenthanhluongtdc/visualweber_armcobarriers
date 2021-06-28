@@ -17,7 +17,7 @@
                         <div class="item">
                             <a href="{{$event->url}}" title="{{$event->name}}">
                                 <div class="post-img">
-                                    <img class="w-100" src="{{ RvMedia::getImageUrl($event->image) }}" alt="{{$event->name}}">
+                                    <img class="w-100 h-100" src="{{ RvMedia::getImageUrl($event->image) }}" alt="{{$event->name}}">
                                 </div>
                                 <h3>
                                     <span> {{$event->name}} </span>

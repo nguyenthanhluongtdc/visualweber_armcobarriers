@@ -64,7 +64,7 @@
      .cambodia {
          padding-top: 4%;
          h1 {
-             font-size: 35px;
+             font-size: 25px;
              font-family: $FolioStd-Medium;
              padding-bottom: 2%;
          }
@@ -81,7 +81,7 @@
          p {
              font-size: 25px;
              @media (max-width: 1365px) {
-                 font-size: 20px;
+                 font-size: 17px;
              }
              font-family: $Arial;
              font-weight: bold;
@@ -124,6 +124,9 @@
          .share::after {
              font-family: "Font Awesome 5 Pro";
              content: "\f1e0";
+         }
+         .share {
+             cursor: pointer;
          }
          .btn-share {
              background-color: $priamry_color;
@@ -209,7 +212,7 @@
                  font-size: 15px;
              }
              p {
-                 font-size: 13px;
+                 font-size: 15px;
              }
          }
      }
@@ -267,12 +270,12 @@
      .wrap-news {
          .description {
              a {
-                 font-size: 15px !important;
-                 -webkit-line-clamp: 1 !important;
+                 font-size: 15px;
+                 -webkit-line-clamp: 1;
              }
              p {
-                 font-size: 13px !important;
-                 -webkit-line-clamp: 3 !important;
+                 font-size: 15px;
+                 -webkit-line-clamp: 3;
              }
          }
      }
