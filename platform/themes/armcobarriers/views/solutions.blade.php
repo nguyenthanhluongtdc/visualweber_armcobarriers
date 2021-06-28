@@ -18,12 +18,12 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     @if($tabs_solutions = get_solutions())
-                        @if(!empty($tabs_solutions[0]))
-                            @php $soluton_first = $tabs_solutions[0]; @endphp
-                            @foreach($tabs_solutions as $key => $tab)
-                                <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }} </a>
-                            @endforeach
-                        @endif
+                    @if(!empty($tabs_solutions[0]))
+                    @php $soluton_first = $tabs_solutions[0]; @endphp
+                    @foreach($tabs_solutions as $key => $tab)
+                    <a class="nav-item nav-link {{$key==0?'active':''}} " style="color:#000000" href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }} </a>
+                    @endforeach
+                    @endif
                     @endif
                 </div>
             </nav>
@@ -31,65 +31,58 @@
     </div>
 </div>
 
-@if(!empty($soluton_first)) 
-    @if(!empty(get_field($soluton_first, 'banner_description_solution')))
-        <div class="service-detail-banner">
-            <div class="left col-md-10 col-12">
-                <h4 class="left-title">
-                    {{ get_field($soluton_first, 'banner_title_solution') }}
-                </h4>
-                <div class="desc">
-                    {!! get_field($soluton_first, 'banner_description_solution') !!}
-                </div>
-            </div>
-            <div class="right">
-                <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
-            </div>
+@if(!empty($soluton_first))
+@if(!empty(get_field($soluton_first, 'banner_description_solution')))
+<div class="service-detail-banner">
+    <div class="left col-md-10 col-12">
+        <h4 class="left-title">
+            {{ get_field($soluton_first, 'banner_title_solution') }}
+        </h4>
+        <div class="desc">
+            {!! get_field($soluton_first, 'banner_description_solution') !!}
         </div>
-    @else
-        <div class="container-customize">
-            <p> Content updating </p>
-        </div>
-    @endif
+    </div>
+    <div class="right">
+        <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
+    </div>
+</div>
+@else
+<div class="container-customize">
+    <p> Content updating </p>
+</div>
+@endif
 @endif
 
-<section>
+{{-- <section>
     <div class="container-customize">
         <div class="wrap-our">
             <div class="service ">
                 <p>{{_('Warehouse, Industrial & Petrochemical Solutions')}}</p>
+</div>
+<div class="row">
+    @if($tabs_solutions = get_solutions_latest())
+    @foreach($tabs_solutions as $key => $tab)
+    <div class="col-lg-3 col-md-6 col-sm-6 asset">
+        <a href="{{ $tab->url }}" title="{{ $tab->name }}">
+            <div class="icon">
+                <i class="fal fa-long-arrow-right"></i>
             </div>
-            <div class="row">
-                @if($tabs_solutions = get_solutions_latest())
-                    @foreach($tabs_solutions as $key => $tab)
-                        <div class="col-lg-3 col-md-6 col-sm-6 asset">
-                            <a href="{{ $tab->url }}" title="{{ $tab->name }}">
-                                <div class="icon">
-                                    <i class="fal fa-long-arrow-right"></i>
-                                </div>
-                            </a>
-                            <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="{{ $tab->name }}">
-                            <p> 
-                                <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a> 
-                            </p>
-                        </div>
-                    @endforeach
-                @endif
-            </div>
-        </div>
+        </a>
+        <img src="{{ RvMedia::getImageUrl($tab->image)}}" alt="{{ $tab->name }}">
+        <p>
+            <a href="{{ $tab->url }}" title="{{ $tab->name }}">{{ $tab->name }}</a>
+        </p>
     </div>
-</section> 
+    @endforeach
+    @endif
+</div>
+</div>
+</div>
+</section> --}}
 
-<section style="padding-top:6%">
-    <div class="container-fluid-customize">
-        <div class="wrap-roadside" style="background-image:url({{ get_object_image(get_field( $page ,'field_picture_solutions'))}})">
-            <div class="container-customize">
-                <div class="content">
-                    <h3> {{get_field( $page ,'field_title_solutions')}}</h3>
-                    {!!get_field( $page ,'field_des_solutions')!!}
-                </div>
-            </div>
-        </div>
+<section style="padding-top:6%" class="roadside-solutions">
+    <div class="container-customize">
+        {!!get_field( $page ,'field_des_solutions')!!}
     </div>
 </section>
 
@@ -103,16 +96,16 @@
             <div class="wrap-descrip">
                 <div class="row">
                     @if(has_field($page, 'product_range_solutions'))
-                        @foreach (get_field($page, 'product_range_solutions') as $item)
-                            <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
-                                <div class="post">
-                                    <div class="post-title">
-                                        <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
-                                    </div>
-                                    {!!get_sub_field($item ,'product_range_description')!!}
-                                </div>
+                    @foreach (get_field($page, 'product_range_solutions') as $item)
+                    <div class="col-lg-3 col-md-6 col-sm-6 mt-4 ">
+                        <div class="post">
+                            <div class="post-title">
+                                <h3>{{get_sub_field($item ,'product_range_title')}}</h3>
                             </div>
-                        @endforeach
+                            {!!get_sub_field($item ,'product_range_description')!!}
+                        </div>
+                    </div>
+                    @endforeach
                     @endif
                 </div>
             </div>
@@ -134,3 +127,16 @@
 </section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<style>
+    .roadside-solutions ul {
+        margin: revert;
+        padding: revert;
+    }
+
+    .roadside-solutions td {
+        padding-left: 10px;
+    }
+
+</style>
