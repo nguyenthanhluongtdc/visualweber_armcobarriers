@@ -19,15 +19,15 @@
                     <div class="news">
                         <h2>{{$post->categories->first()->name}}</h2>
                     </div>
-                    <div class="cambodia">
+                    <div class="post-name">
                         <h1>{{$post->name}}</h1>
                     </div>
                     <div class="time">
                         <p>{{$post->created_at->format('j F Y') }}</p>
                     </div>
-                    <div class="the-ministry">
+                    {{-- <div class="the-ministry">
                         <p>{{ $post->description }} </p>
-                    </div>
+                    </div> --}}
                     <div class="news-content">
                         {!!$post->content!!}
                     </div>

@@ -42,7 +42,7 @@
          border-bottom: 1px solid #9999;
          padding-bottom: 15px;
          h2 {
-             font-size: 35px;
+             font-size: 30px;
              font-family: $FolioStd-Medium;
          }
          h2:after {
@@ -61,10 +61,10 @@
              transition: .5s;
          }
      }
-     .cambodia {
+     .post-name {
          padding-top: 4%;
          h1 {
-             font-size: 20px;
+             font-size: 30px;
              font-family: $FolioStd-Medium;
              padding-bottom: 2%;
          }
@@ -77,19 +77,19 @@
              color: #9999;
          }
      }
-     .the-ministry {
-         p {
-             @media (max-width: 1365px) {
-                 font-size: 17px;
-             }
-             @media(max-width:991px) {
-                 font-size: 15px;
-             }
-             font-family: $Arial;
-             font-weight: bold;
-             padding-bottom: 5%;
-         }
-     }
+     //  .the-ministry {
+     //      p {
+     //          @media (max-width: 1365px) {
+     //              font-size: 17px;
+     //          }
+     //          @media(max-width:991px) {
+     //              font-size: 15px;
+     //          }
+     //          font-family: $Arial;
+     //          font-weight: bold;
+     //          padding-bottom: 5%;
+     //      }
+     //  }
      .according {
          p {
              padding-bottom: 2%;
