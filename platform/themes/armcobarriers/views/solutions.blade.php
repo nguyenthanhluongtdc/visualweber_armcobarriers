@@ -55,7 +55,7 @@
 
 <section>
     <div class="container-customize">
-        <div class="roadside-solutions">
+        <div class="roadside-solutions general-section">
 
             @foreach(get_field($page, 'roadside_solutions') as $sub)
             <div class="item">
