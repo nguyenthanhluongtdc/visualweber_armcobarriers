@@ -244,6 +244,9 @@
 }
 
 .service_detail-content {
+    table td {
+        vertical-align: unset;
+    }
     p {
         margin-top: 1rem;
         img {
