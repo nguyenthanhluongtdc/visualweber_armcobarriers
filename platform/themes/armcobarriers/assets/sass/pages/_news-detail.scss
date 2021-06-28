@@ -82,7 +82,9 @@
              @media (max-width: 1365px) {
                  font-size: 17px;
              }
-             font-size: 15px;
+             @media(max-width:991px) {
+                 font-size: 15px;
+             }
              font-family: $Arial;
              font-weight: bold;
              padding-bottom: 5%;
@@ -162,6 +164,9 @@
              @media (max-width: 1365px) {
                  font-size: 17px;
              }
+             @media(max-width:991px) {
+                 font-size: 15px;
+             }
              font-family: $Arial;
          }
      }
@@ -184,7 +189,6 @@
              @media (max-width: 1365px) {
                  font-size: 20px;
              }
-             font-weight: bold;
              font-family: $FolioStd-Medium;
              color: #000000;
              @include str_split();
