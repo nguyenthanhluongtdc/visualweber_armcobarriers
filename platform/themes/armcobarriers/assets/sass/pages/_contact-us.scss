@@ -230,7 +230,7 @@
         padding-top: 4% !important;
     }
     .contact-banner {
-        padding-top: 60%;
+        padding-top: 50%;
         .title-contact {
             p {
                 font-size: 15px;
@@ -241,6 +241,7 @@
 
 @media (max-width: 640px) {
     .contact-banner {
+        padding-top: 60%;
         .title-contact {
             p {
                 font-size: 15px;
