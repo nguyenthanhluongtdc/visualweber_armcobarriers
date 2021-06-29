@@ -1,93 +1,88 @@
 #more_info {
-    margin-top: 50px;
+  margin-top: 50px;
 
-    #tab {
-        .nav-tabs {
+  #tab {
+    .nav-tabs {
+      .nav-item {
+        margin-right: 10%;
+        margin-bottom: 10px;
 
-            .nav-item {
-                margin-right: 10%;
-                margin-bottom: 10px;
-
-                .nav-link {
-                    border: none;
-                    padding: 0;
-                    padding-bottom: 2%;
-                    font-weight: bold;
-                    color: $gray;
-                    font-size: 25px;
-                    @media(max-width: 1365px) {
-                        font-size: 20px;
-                    }
-                }
-                &:after {
-                    content: "";
-                    display: block;
-                    width: 50%;
-                    height: 5px;
-                    background-color: $priamry_color;
-                    transition: all 0.5s ease-in-out;
-                }
-                &:hover {
-                    &:after {
-                        width: 100%;
-                    }
-                }
-                .active {
-                    color: black;
-                }
-            }
-            
-            .nav-item:last-child {
-                margin-right: 0;
-            }
+        .nav-link {
+          border: none;
+          padding: 0;
+          padding-bottom: 2%;
+          font-weight: bold;
+          color: $gray;
+          font-size: 25px;
+          @media (max-width: 1365px) {
+            font-size: 20px;
+          }
         }
-        
-        .tab-content {
-            margin-top: 3%;
+        &:after {
+          content: "";
+          display: block;
+          width: 50%;
+          height: 5px;
+          background-color: $priamry_color;
+          transition: all 0.5s ease-in-out;
         }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+        .active {
+          color: black;
+        }
+      }
+
+      .nav-item:last-child {
+        margin-right: 0;
+      }
     }
-    #related_products {
-        .title {
-            font-size: 25px;
-            @media (max-width: 1365px) {
-                font-size: 20px; 
-            }
+
+    .tab-content {
+      margin-top: 3%;
+    }
+  }
+  #related_products {
+    .title {
+      font-size: 25px;
+      @media (max-width: 1365px) {
+        font-size: 20px;
+      }
+      font-weight: bold;
+      display: block;
+      border-bottom: 1px solid #efefef;
+      margin-bottom: 10px;
+      &:after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 5px;
+        background-color: $priamry_color;
+      }
+    }
+    .list_products {
+      margin-top: 3%;
+      img {
+        width: 100%;
+      }
+      .product_item {
+        color: black;
+        margin-bottom: 10px;
+        display: block;
+
+        .product_name {
+          padding: 3% 0%;
+          color: $gray-text;
+        }
+        &:hover {
+          .product_name {
             font-weight: bold;
-            display: block;
-            border-bottom: 1px solid #efefef;
-            margin-bottom: 10px;
-            &:after {
-                content: "";
-                display: block;
-                width: 30%;
-                height: 5px;
-                background-color: $priamry_color;
-            }
+          }
         }
-        .list_products {
-            margin-top: 3%;
-            img{
-                width: 100%;
-            }
-            .product_item {
-                color: black;
-                margin-bottom: 10px;
-                display: block;
-
-                .product_name {
-                    padding: 3% 0%;
-                    color: $gray-text; 
-                    font-size: 25px;
-                    @media (max-width: 1365px) {
-                        font-size: 20px; 
-                    }
-                }
-                &:hover {
-                    .product_name {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 }

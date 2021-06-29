@@ -1,5 +1,5 @@
 @php
-    $isConfigurable = $product->variations()->count() > 0 ? true : false;
+$isConfigurable = $product->variations()->count() > 0 ? true : false;
 @endphp
 <!-- <div class="block2">
 
@@ -57,7 +57,7 @@
 
 </div> -->
 
-<a href ="{!! $product->url !!}" class="product_item col-6 col-lg-12" title="{{$product->name}}">
+<a href="{!! $product->url !!}" class="product_item col-6 col-lg-12" title="{{$product->name}}">
     <img class="img-fluid" src="{{rvMedia::getImageUrl($product->image)}}" alt="{{$product->name}}">
-    <h4 class="product_name"> {{$product->name}} </h4>
+    <h4 class="product_name section-armco__header__column"> {{$product->name}} </h4>
 </a>

@@ -8,7 +8,7 @@ $service_first = [];
         <div class="container-customize">
             <div class="top2 section-armco__titleSmall">
                 <h1>{{$page->name}}</h1>
-                {{$page->description}}
+                <h4 class="section-armco__sub__title">{{$page->description}} </h4>
             </div>
         </div>
     </div>

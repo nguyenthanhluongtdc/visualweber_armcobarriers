@@ -8,7 +8,7 @@ $tabs_about = get_field($page, 'about_us');
         <div class="wrap-top">
             <div class="cont2 section-armco__titleSmall">
                 <h1>{{$page->name}}</h1>
-                <h2>{{$page->description}}</h2>
+                <h2 class="section-armco__sub__title">{{$page->description}}</h2>
             </div>
         </div>
     </div>

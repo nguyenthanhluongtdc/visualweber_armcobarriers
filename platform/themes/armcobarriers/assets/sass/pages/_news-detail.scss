@@ -144,17 +144,15 @@
       padding-right: 5%;
       h4 {
         font-size: 20px;
-        @media (max-width: 1365px) {
-          font-size: 20px;
+        @media (max-width: 1600px) {
+          font-size: 17px;
         }
         font-family: $Arial;
         font-weight: bold;
       }
     }
     li {
-      @media (max-width: 1365px) {
-        font-size: 17px;
-      }
+      font-size: 17px;
       font-family: $Arial;
     }
   }

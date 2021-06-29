@@ -103,30 +103,64 @@ code {
 }
 
 .section-armco {
-  &__header__title {
-    font-size: 60px;
-  }
+  @media (min-width: 1600px) {
+    &__header__title {
+      font-size: 60px;
+    }
 
-  &__header__titleSmall {
-    font-size: 40px;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  &__fs35 h1 {
-    font-size: 35px;
-  }
-
-  &__titleSmall {
-    h1 {
+    &__header__titleSmall {
       font-size: 40px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    &__fs35 h1 {
+      font-size: 35px;
+    }
+
+    &__titleSmall {
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    &__header__column {
+      font-size: 20px;
     }
   }
 
-  &__header__column {
-    font-size: 20px;
+  @media (max-width: 1659px) {
+    &__header__title {
+      font-size: 60px;
+    }
+
+    &__header__titleSmall {
+      font-size: 40px;
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    &__fs35 h1 {
+      font-size: 35px;
+    }
+
+    &__titleSmall {
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    &__header__column {
+      font-size: 17px;
+    }
+
+    &__sub__title {
+      font-size: 20px;
+    }
   }
 }
 

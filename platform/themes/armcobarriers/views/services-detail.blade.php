@@ -6,7 +6,7 @@
         <div class="wrap-top">
             <div class="top2 section-armco__titleSmall">
                 <h1>{{ $service->name}}</h1>
-                <h5> {{ get_field($service, 'short_description') }}</h5>
+                <h4 class="section-armco__sub__title"> {{ get_field($service, 'short_description') }}</h4>
             </div>
         </div>
     </div>

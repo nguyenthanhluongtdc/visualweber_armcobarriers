@@ -55,7 +55,7 @@ $query = isset($query) ? $query : "";
         <div class="introduction-product">
             <div class="introduction-product-title section-armco__titleSmall">
                 <h1>Product Range</h1>
-                <h4>Roadside, Car Parks, Warehouses<h4>
+                <h4 class="section-armco__sub__title">Roadside, Car Parks, Warehouses<h4>
             </div>
         </div>
     </div>
@@ -70,7 +70,6 @@ $query = isset($query) ? $query : "";
             </div>
             <div>
             </div>
-
 </section>
 
 <section class="product">

@@ -1,26 +1,26 @@
 @php
-    $originalProduct = $product;
-    $selectedAttrs = [];
-    $productImages = $product->images;
-    if ($product->is_variation) {
-        $product = get_parent_product($product->id);
-        $selectedAttrs = app(\Platform\Ecommerce\Repositories\Interfaces\ProductVariationInterface::class)
-            ->getAttributeIdsOfChildrenProduct($originalProduct->id);
-        if (count($productImages) == 0) {
-            $productImages = $product->images;
-        }
-    }
+$originalProduct = $product;
+$selectedAttrs = [];
+$productImages = $product->images;
+if ($product->is_variation) {
+$product = get_parent_product($product->id);
+$selectedAttrs = app(\Platform\Ecommerce\Repositories\Interfaces\ProductVariationInterface::class)
+->getAttributeIdsOfChildrenProduct($originalProduct->id);
+if (count($productImages) == 0) {
+$productImages = $product->images;
+}
+}
 
-    //get custom field tabs
-    $hasFieldTabs = has_field($product, 'tabs_product');
+//get custom field tabs
+$hasFieldTabs = has_field($product, 'tabs_product');
 
-    //create a new array tags
-    $tags = [];
-    foreach($product->tags as $tag) {
-        array_push($tags, $tag->name);
-    }
+//create a new array tags
+$tags = [];
+foreach($product->tags as $tag) {
+array_push($tags, $tag->name);
+}
 
-    //var_dump(Cart::instance('cart')->count()); exit();
+//var_dump(Cart::instance('cart')->count()); exit();
 
 @endphp
 
@@ -33,13 +33,13 @@
             <div class="top_title col-md-12">
                 <h3>Product Range</h3>
                 @if($category)
-                    <a href="{{$category->url}}" title="{{$category->name}}">
-                        <i class="fas fa-chevron-left"></i>
-                        <span>{!! $category->name !!}</span>
-                    </a>
+                <a href="{{$category->url}}" title="{{$category->name}}">
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="section-armco__header__column">{!! $category->name !!}</span>
+                </a>
                 @endif
             </div>
-           
+
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
             <!---product infomation-->
             <div id="product_info" class="col-sm-12 col-md-12">
@@ -50,22 +50,22 @@
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         @foreach($productImages as $img)
-                                            <li class="splide__slide">
-                                                <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="">
-                                            </li>
+                                        <li class="splide__slide">
+                                            <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="">
+                                        </li>
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
-                        
+
                             <div id="secondary-slider" class="splide col-lg-2 col-3">
                                 <div class="splide__track">
                                     <ul class="splide__list">
-                                    @foreach($productImages as $thumb)
+                                        @foreach($productImages as $thumb)
                                         <li class="splide__slide">
                                             <img src="{{rvMedia::getImageUrl($thumb, 'product')}}">
                                         </li>
-                                    @endforeach
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                     <div class="col-12 col-lg-6 info">
                         <h1> {{$product->name}} </h1>
                         @php
-                            echo $product->content
+                        echo $product->content
                         @endphp
                         <ul class="list_info">
                             <li>
@@ -85,7 +85,7 @@
                             <li>
                                 <p>Brand:</p>
                                 @if(!empty($product->brand))
-                                    <p> {{$product->brand->name}} </p>
+                                <p> {{$product->brand->name}} </p>
                                 @endif
                             </li>
                             <li>
@@ -99,9 +99,9 @@
                                     </b>
                                 </p>
                                 @else
-                                    <p>
-                                        {{ format_price($originalProduct->price)}}
-                                    </p>
+                                <p>
+                                    {{ format_price($originalProduct->price)}}
+                                </p>
                                 @endif
                             </li>
                             <li>
@@ -111,10 +111,9 @@
                         </ul>
                         <form class="add-to-cart-form flex-wrap" method="POST" action="{{ route('public.cart.add-to-cart') }}">
                             @csrf
-                            <input type="hidden" name="product_is_out_of_stock"
-                                   value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock"/>
-                            <input type="hidden" name="id" id="hidden-product-id" value="{{ $originalProduct->id }}"/>
-                            
+                            <input type="hidden" name="product_is_out_of_stock" value="{{ $originalProduct->isOutOfStock() }}" id="hidden-product-is_out_of_stock" />
+                            <input type="hidden" name="id" id="hidden-product-id" value="{{ $originalProduct->id }}" />
+
                             </button>
                             <div class="input_field">
                                 <button class="minus">-</button>
@@ -122,7 +121,7 @@
                                 <button class="plus">+</button>
                             </div>
                             <button id="btn-add-cart" class="add_to_cart btn btn-fill-out btn-addtocart" type="submit">Add to cart</button>
-                            
+
                             <p class="success-message text-success text-center mt-3" style="display: none;">
                                 <span></span>
                             </p>
@@ -130,7 +129,7 @@
                                 <span></span>
                             </p>
                         </form>
-                        
+
                         <!----form---->
                         <!---end form---->
 
@@ -145,36 +144,36 @@
                         <div class="row ml-0">
                             <ul class="nav nav-tabs w-100" id="myTab" role="tablist">
                                 @if(!empty($hasFieldTabs))
-                                    @foreach($hasFieldTabs as $key => $tab)
-                                    <li class="nav-item">
-                                        <a class="nav-link {{$key==0?'active':''}}" id="tab{{$key}}-tab" data-toggle="tab" href="#tab{{$key}}" role="tab" aria-controls="tab{{$key}}" aria-selected="true" title="{{has_sub_field($tab,'tabs_title')}}"> {{has_sub_field($tab,'tabs_title')}} </a>
-                                    </li>
-                                    @endforeach
+                                @foreach($hasFieldTabs as $key => $tab)
+                                <li class="nav-item">
+                                    <a class="nav-link {{$key==0?'active':''}}" id="tab{{$key}}-tab" data-toggle="tab" href="#tab{{$key}}" role="tab" aria-controls="tab{{$key}}" aria-selected="true" title="{{has_sub_field($tab,'tabs_title')}}"> {{has_sub_field($tab,'tabs_title')}} </a>
+                                </li>
+                                @endforeach
                                 @endif
                             </ul>
                         </div>
                         <div class="tab-content" id="myTabContent">
                             @if(!empty($hasFieldTabs))
-                                @foreach($hasFieldTabs as $key => $tab)
-                                    <div class="tab-pane fade {{$key==0?'active show':''}}" id="tab{{$key}}" role="tabpanel" aria-labelledby="tab{{$key}}-tab">
-                                        {{has_sub_field($tab,'tabs_content')}}
-                                    </div>
-                                @endforeach
+                            @foreach($hasFieldTabs as $key => $tab)
+                            <div class="tab-pane fade {{$key==0?'active show':''}}" id="tab{{$key}}" role="tabpanel" aria-labelledby="tab{{$key}}-tab">
+                                {{has_sub_field($tab,'tabs_content')}}
+                            </div>
+                            @endforeach
                             @endif
                         </div>
                     </div>
                     @php
-                        $relatedProducts = get_related_products($product);
+                    $relatedProducts = get_related_products($product);
                     @endphp
                     <div class="col-12 col-lg-3 mb-5">
                         <div id="related_products">
                             <p class="title">Related products</p>
                             @if(!empty($relatedProducts))
-                                <div class="list_products row">
-                                    @foreach ($relatedProducts as $related)
-                                        @include('plugins/ecommerce::themes.includes.default-product', ['product' => $related])
-                                    @endforeach
-                                </div>
+                            <div class="list_products row">
+                                @foreach ($relatedProducts as $related)
+                                @include('plugins/ecommerce::themes.includes.default-product', ['product' => $related])
+                                @endforeach
+                            </div>
                             @endif
                         </div>
                     </div>
@@ -189,16 +188,18 @@
                 <div class="swiper-container otherSwiper">
                     <div class="swiper-wrapper list_products">
                         @foreach($other_products as $other_pro)
-                            <div class="swiper-slide product_item">
-                                <div class="box-img">
-                                    <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}"> 
-                                    <a href="{{ $other_pro->url }}" title="{{$other_pro->name}}"> <p class="overlay"><i class="far fa-chevron-circle-right"></i></p> </a>
-                                </div>
-                                <h4 class="product_name"> 
-                                    <a href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a> 
-                                </h4>
-                                <div class="description"> {!! $other_pro->description !!} </div> 
+                        <div class="swiper-slide product_item">
+                            <div class="box-img">
+                                <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}">
+                                <a href="{{ $other_pro->url }}" title="{{$other_pro->name}}">
+                                    <p class="overlay"><i class="far fa-chevron-circle-right"></i></p>
+                                </a>
                             </div>
+                            <h4 class="product_name">
+                                <a class="section-armco__header__column" href="{{ $other_pro->url }}"> {!! $other_pro->name !!} </a>
+                            </h4>
+                            <div class="description"> {!! $other_pro->description !!} </div>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -217,7 +218,7 @@
         $(window).resize(function() {
             $height = $('.gallery-main').height();
             console.log($height)
-            $('.gallery-thumbs').height($height-62);
+            $('.gallery-thumbs').height($height - 62);
         });
         $(window).trigger('resize');
 
@@ -231,157 +232,157 @@
 
         })
 
-            // Create and mount the thumbnails slider.
-            var secondarySlider = new Splide( '#secondary-slider', {
-            autoHeight  : true,
-            rewind      : false,
-            fixedWidth  : 60,
-            fixedHeight : 24,
-            isNavigation: true,
-            gap         : 5,
-            focus       : 'center',
-            pagination  : false,
-            cover       : true,
-            perPage     : 4,
-            direction: 'ttb',
-            height      : '20rem',
-            breakpoints : {
+        // Create and mount the thumbnails slider.
+        var secondarySlider = new Splide('#secondary-slider', {
+            autoHeight: true
+            , rewind: false
+            , fixedWidth: 60
+            , fixedHeight: 24
+            , isNavigation: true
+            , gap: 5
+            , focus: 'center'
+            , pagination: false
+            , cover: true
+            , perPage: 4
+            , direction: 'ttb'
+            , height: '20rem'
+            , breakpoints: {
                 1920: {
-                    fixedWidth  : 95,
-                    height      : '30rem',
-                    perPage     : 5,
-                },
-                1600: {
-                    fixedWidth  : 75,
-                    height      : '25rem',
-                },
-                1400: {
-                    height      : '20rem',
-                },
-                1200: {
-                    fixedWidth  : 55,
-                    height      : '17rem',
-                },
-                992: {
-                    fixedWidth  : 100,
-                    height      : '32rem',
-                },
-                768: {
-                    fixedWidth  : 100,
-                    height      : '23rem',
-                    gap         : 10,
-                },
-                576: {
-                    fixedWidth  : 90,
-                    height      : '15rem',
-                },
-                480: {
-                    fixedWidth  : 70,
-                    height      : '12rem',
-                },
-                400: {
-                    fixedWidth  : 50,
-                    height      : '8rem',
-                }
+                    fixedWidth: 95
+                    , height: '30rem'
+                    , perPage: 5
+                , }
+                , 1600: {
+                    fixedWidth: 75
+                    , height: '25rem'
+                , }
+                , 1400: {
+                    height: '20rem'
+                , }
+                , 1200: {
+                    fixedWidth: 55
+                    , height: '17rem'
+                , }
+                , 992: {
+                    fixedWidth: 100
+                    , height: '32rem'
+                , }
+                , 768: {
+                    fixedWidth: 100
+                    , height: '23rem'
+                    , gap: 10
+                , }
+                , 576: {
+                    fixedWidth: 90
+                    , height: '15rem'
+                , }
+                , 480: {
+                    fixedWidth: 70
+                    , height: '12rem'
+                , }
+                , 400: {
+                    fixedWidth: 50
+                    , height: '8rem'
+                , }
             }
-        } ).mount();
+        }).mount();
 
         // Create the main slider.
-        var primarySlider = new Splide( '#large-slider', {
-            type       : 'fade',
-            heightRatio: 0.5,
-            pagination : false,
-            arrows     : false,
-            cover      : true,
-            autoHeight : true,
-            height     : "20rem",
-            breakpoints : {
-                992: {
-                }
+        var primarySlider = new Splide('#large-slider', {
+            type: 'fade'
+            , heightRatio: 0.5
+            , pagination: false
+            , arrows: false
+            , cover: true
+            , autoHeight: true
+            , height: "20rem"
+            , breakpoints: {
+                992: {}
             }
-        } );
+        });
 
         // Set the thumbnails slider as a sync target and then call mount.
-        primarySlider.sync( secondarySlider ).mount();
+        primarySlider.sync(secondarySlider).mount();
 
         var otherSwiper = new Swiper(".otherSwiper", {
-            slidesPerView: 1.5,
-            spaceBetween: 10,
-            breakpoints: {
-            "320": {
-                slidesPerView: 1.5,
-                spaceBetween: 10,
-            },
-            "480": {
-                slidesPerView: 2.5,
-                spaceBetween: 10,
-            },
-            "640": {
-                slidesPerView: 3.5,
-                spaceBetween: 10,
-            },
-            "992": {
-                slidesPerView: 5.5,
-                spaceBetween: 10,
-            },
-            }
+            slidesPerView: 1.5
+            , spaceBetween: 10
+            , breakpoints: {
+                "320": {
+                    slidesPerView: 1.5
+                    , spaceBetween: 10
+                , }
+                , "480": {
+                    slidesPerView: 2.5
+                    , spaceBetween: 10
+                , }
+                , "640": {
+                    slidesPerView: 3.5
+                    , spaceBetween: 10
+                , }
+                , "992": {
+                    slidesPerView: 5.5
+                    , spaceBetween: 10
+                , }
+            , }
         });
     });
 
 
-    $(document).on('click', '.add-to-cart-form button[type=submit]', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
+    $(document).on('click', '.add-to-cart-form button[type=submit]', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
 
-            let _self = $(this);
+        let _self = $(this);
 
-            if (!$('#hidden-product-id').val()) {
-                _self.prop('disabled', true).addClass('btn-disabled');
-                return;
-            }
+        if (!$('#hidden-product-id').val()) {
+            _self.prop('disabled', true).addClass('btn-disabled');
+            return;
+        }
 
-            _self.prop('disabled', true).addClass('btn-disabled').addClass('button-loading');
+        _self.prop('disabled', true).addClass('btn-disabled').addClass('button-loading');
 
-            _self.closest('form').find('.error-message').hide();
-            _self.closest('form').find('.success-message').hide();
+        _self.closest('form').find('.error-message').hide();
+        _self.closest('form').find('.success-message').hide();
 
-            $.ajax({
-                type: 'POST',
-                cache: false,
-                url: _self.closest('form').prop('action'),
-                data: new FormData(_self.closest('form')[0]),
-                contentType: false,
-                processData: false,
-                success: res => {
-                    _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
+        $.ajax({
+            type: 'POST'
+            , cache: false
+            , url: _self.closest('form').prop('action')
+            , data: new FormData(_self.closest('form')[0])
+            , contentType: false
+            , processData: false
+            , success: res => {
+                _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
 
-                    if (res.error) {
-                        _self.closest('form').find('.error-message').html(res.message).show();
-                        return false;
-                    }
-
-                    _self.closest('form').find('.success-message').html(res.message).show();
-                    $("#link-cart").load(location.href +" #reload");
-
-                    if (_self.prop('name') === 'checkout' && res.data.next_url !== undefined) {
-                        window.location.href = res.data.next_url;
-                    } else {
-                        $.ajax({
-                            url: window.siteUrl + '/ajax/cart',
-                            method: 'GET',
-                            success: function (response) {
-                                if (!response.error) {
-                                    $('.cart_box').html(response.data.html);
-                                    $('.btn-shopping-cart span').text(response.data.count);
-                                }
-                            }
-                        });
-                    }
-                },
-                error: res => {
-                    _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
-                    handleError(res, _self.closest('form'));
+                if (res.error) {
+                    _self.closest('form').find('.error-message').html(res.message).show();
+                    return false;
                 }
-            });
+
+                _self.closest('form').find('.success-message').html(res.message).show();
+                $("#link-cart").load(location.href + " #reload");
+
+                if (_self.prop('name') === 'checkout' && res.data.next_url !== undefined) {
+                    window.location.href = res.data.next_url;
+                } else {
+                    $.ajax({
+                        url: window.siteUrl + '/ajax/cart'
+                        , method: 'GET'
+                        , success: function(response) {
+                            if (!response.error) {
+                                $('.cart_box').html(response.data.html);
+                                $('.btn-shopping-cart span').text(response.data.count);
+                            }
+                        }
+                    });
+                }
+            }
+            , error: res => {
+                _self.prop('disabled', false).removeClass('btn-disabled').removeClass('button-loading');
+                handleError(res, _self.closest('form'));
+            }
         });
+    });
+
 </script>
