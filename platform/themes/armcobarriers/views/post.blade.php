@@ -53,7 +53,7 @@ $featuredList = $featured->pluck('id')->all();
                     </div>
                 </div>
                 <div class="col-xl-5 col-lg-4 col-md-12 col-sm-12">
-                    <div class="top-news section-armco__header__titleSmall">
+                    <div class="top-news section-armco__header__titleSmall mb-4">
                         <h2>{{_('Top News')}}</h2>
                     </div>
                     <div class="row wrap-news">

@@ -5,23 +5,25 @@
     .nav-tabs {
       .nav-item {
         margin-right: 10%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
 
         .nav-link {
           border: none;
           padding: 0;
           padding-bottom: 2%;
           font-weight: bold;
-          color: $gray;
-          font-size: 25px;
-          @media (max-width: 1365px) {
-            font-size: 20px;
+          opacity: 0.4;
+          margin-bottom: 5px;
+          color: $gray-text;
+          font-size: 20px;
+          @media (max-width: 1600px) {
+            font-size: 17px;
           }
         }
         &:after {
           content: "";
           display: block;
-          width: 50%;
+          width: 40px;
           height: 5px;
           background-color: $priamry_color;
           transition: all 0.5s ease-in-out;
@@ -32,7 +34,7 @@
           }
         }
         .active {
-          color: black;
+          opacity: 1;
         }
       }
 
@@ -47,18 +49,22 @@
   }
   #related_products {
     .title {
-      font-size: 25px;
-      @media (max-width: 1365px) {
-        font-size: 20px;
+      font-size: 20px;
+      position: relative;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      @media (max-width: 1600px) {
+        font-size: 17px;
       }
       font-weight: bold;
       display: block;
       border-bottom: 1px solid #efefef;
-      margin-bottom: 10px;
       &:after {
+        position: absolute;
+        bottom: 0;
         content: "";
         display: block;
-        width: 30%;
+        width: 40px;
         height: 5px;
         background-color: $priamry_color;
       }
