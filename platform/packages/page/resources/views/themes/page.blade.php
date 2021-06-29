@@ -2,7 +2,7 @@
     <div class="container-fluid-customize">
         <div class="" style="padding-top: 4%;">
         <div class="container-customize">
-          <div class="title-page">
+          <div class="title-page section-armco__header__titleSmall">
             <h1>{{ $page->name }}</h1>
           </div>
         </div>
