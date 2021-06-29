@@ -303,10 +303,6 @@ a[data-toggle="collapse"] {
     }
     .product-name {
       margin: 10px 0;
-      height: 68px;
-      @media (max-width: 1365px) {
-        height: 50px;
-      }
       span {
         overflow: hidden;
         text-overflow: ellipsis;
