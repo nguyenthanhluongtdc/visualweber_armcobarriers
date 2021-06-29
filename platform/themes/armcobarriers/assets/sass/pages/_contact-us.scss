@@ -1,312 +1,319 @@
 // Request A Quotation css
 .content {
-  ul {
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    padding-inline-start: 40px;
-  }
+    ul {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        padding-inline-start: 40px;
+    }
 }
 
 .title-page {
-  h1 {
-    font-family: $FolioStd-Bold;
-  }
+    h1 {
+        font-family: $FolioStd-Bold;
+    }
 }
 
 .contact-banner {
-  padding-top: 28%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #000;
-  position: relative;
-  .title-contact {
-    position: absolute;
-    bottom: 16%;
-    @media (max-width: 380px) {
-      bottom: 0;
+    padding-top: 28%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+    position: relative;
+    .title-contact {
+        position: absolute;
+        bottom: 16%;
+        @media (max-width: 380px) {
+            bottom: 0;
+        }
+        @media (max-width: 991px) {
+            left: 7%;
+        }
+        h1 {
+            font-family: $FolioStd-Bold;
+            color: #fff;
+        }
+        p {
+            @media (max-width: 1365px) {
+                font-size: 17px;
+            }
+            font-family: $Arial;
+            color: #fff;
+            max-width: 61%;
+        }
     }
-    @media (max-width: 991px) {
-      left: 7%;
-    }
-    h1 {
-      font-family: $FolioStd-Bold;
-      color: #fff;
-    }
-    p {
-      @media (max-width: 1365px) {
-        font-size: 17px;
-      }
-      font-family: $Arial;
-      color: #fff;
-      max-width: 61%;
-    }
-  }
 }
 
 .form-contact-us {
-  .form-group {
-    input {
-      border: none;
-      border-bottom: 1px solid rgba(112, 112, 112, 0.1);
-      border-radius: unset;
-      margin-top: 30px;
-      padding-left: 0;
+    .form-group {
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+            border-radius: unset;
+            margin-top: 30px;
+            padding-left: 0;
+        }
+        input:-webkit-autofill {
+            -webkit-text-fill-color: unset;
+        }
     }
-    input:-webkit-autofill {
-      -webkit-text-fill-color: unset;
+    .message {
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(112, 112, 112, 0.1);
+            margin-top: 30px;
+            border-radius: unset;
+            padding-left: 0;
+        }
+        input:-webkit-autofill {
+            -webkit-text-fill-color: unset;
+        }
     }
-  }
-  .message {
-    input {
-      border: none;
-      border-bottom: 1px solid rgba(112, 112, 112, 0.1);
-      margin-top: 30px;
-      border-radius: unset;
-      padding-left: 0;
+    .policy {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        a {
+            color: $gray-text;
+            opacity: 40%;
+            padding-left: 10px;
+        }
+        button {
+            width: 200px;
+            max-width: 200px;
+            height: 50px;
+            background-color: $priamry_color;
+            color: $gray-text;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     }
-    input:-webkit-autofill {
-      -webkit-text-fill-color: unset;
+    .custom-checkbox {
+        input[type="checkbox"] {
+            &:checked {
+                background-color: #000000;
+            }
+        }
     }
-  }
-  .policy {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    a {
-      color: $gray-text;
-      opacity: 40%;
-      padding-left: 10px;
-    }
-    button {
-      width: 200px;
-      max-width: 200px;
-      height: 50px;
-      background-color: $priamry_color;
-      color: $gray-text;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  }
-  .custom-checkbox {
-    input[type="checkbox"] {
-      &:checked {
-        background-color: #000000;
-      }
-    }
-  }
 }
 
 .let-talk {
-  .contact_infomation {
-    a:focus {
-      color: #000;
+    .contact_infomation {
+        a:focus {
+            color: #000;
+        }
+        @media (max-width: 991px) {
+            margin-left: 20%;
+        }
+        @media (max-width: 768px) {
+            margin-left: 0;
+        }
+        padding-top: 30px;
     }
-    @media (max-width: 991px) {
-      margin-left: 20%;
+    padding-top: 3%;
+    h3 {
+        font-size: 25px;
+        font-family: $FolioStd-Medium;
+        text-transform: uppercase;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(112, 112, 112, 0.1);
     }
-    @media (max-width: 768px) {
-      margin-left: 0;
+    .form-group,
+    .message {
+        .form-control:focus {
+            box-shadow: none;
+        }
     }
-    padding-top: 30px;
-  }
-  padding-top: 3%;
-  h3 {
-    font-size: 25px;
-    font-family: $FolioStd-Medium;
-    text-transform: uppercase;
-    padding-bottom: 25px;
-    border-bottom: 1px solid rgba(112, 112, 112, 0.1);
-  }
-  .form-group,
-  .message {
-    .form-control:focus {
-      box-shadow: none;
-    }
-  }
 }
 
 .visit-title {
-  margin-top: 5%;
-  font-size: 25px;
-  text-transform: uppercase;
-  margin-bottom: 5%;
+    margin-top: 5%;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 5%;
 }
 
 .map-location {
-  margin-bottom: -20px;
+    margin-bottom: -20px;
 }
 
 // custom check box
 .customcheck {
-  display: block;
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
 
 /* Hide the browser's default checkbox */
 
 .customcheck input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .customcheck a {
-  @media (max-width: 480px) {
-    font-size: 15px;
-  }
+    @media (max-width: 480px) {
+        font-size: 15px;
+    }
 }
+
 
 /* Create a custom checkbox */
 
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
 }
+
 
 /* On mouse-over, add a grey background color */
 
-.customcheck:hover input ~ .checkmark {
-  background-color: #ccc;
+.customcheck:hover input~.checkmark {
+    background-color: #ccc;
 }
+
 
 /* When the checkbox is checked, add a blue background */
 
-.customcheck input:checked ~ .checkmark {
-  background-color: #989898;
-  border-radius: 50%;
+.customcheck input:checked~.checkmark {
+    background-color: #989898;
+    border-radius: 50%;
 }
+
 
 /* Create the checkmark/indicator (hidden when not checked) */
 
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
+
 
 /* Show the checkmark when checked */
 
-.customcheck input:checked ~ .checkmark:after {
-  display: block;
+.customcheck input:checked~.checkmark:after {
+    display: block;
 }
+
 
 /* Style the checkmark/indicator */
 
 .customcheck .checkmark:after {
-  left: 7px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2.4px 2.4px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.4px 2.4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 @media (max-width: 991px) {
-  .let-talk {
-    padding-top: 4% !important;
-  }
-  .contact-banner {
-    padding-top: 40%;
-    .title-contact {
-      p {
-        font-size: 15px;
-      }
+    .let-talk {
+        padding-top: 4% !important;
     }
-  }
+    .contact-banner {
+        padding-top: 50%;
+        .title-contact {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
 }
 
 @media (max-width: 640px) {
-  .contact-banner {
-    .title-contact {
-      p {
-        font-size: 15px;
-      }
+    .contact-banner {
+        .title-contact {
+            p {
+                font-size: 15px;
+            }
+        }
     }
-  }
 }
 
 @media (max-width: 768px) {
-  .contact-banner {
-    .title-contact {
-      h3 {
-        font-size: 20px;
-      }
-      p {
-        font-size: 15px;
-        max-width: 95%;
-      }
-    }
-  }
-  .let-talk {
-    margin-top: 30px;
-    h3 {
-      font-size: 17px;
-    }
-    .form-contact-us {
-      margin-left: 0px;
-      .policy {
-        display: unset;
-        button {
-          width: 100%;
-          max-width: 100%;
+    .contact-banner {
+        .title-contact {
+            h3 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 15px;
+                max-width: 95%;
+            }
         }
-      }
     }
-    .form-group input {
-      margin: 10px 0;
-      @media (max-width: 480px) {
-        font-size: 15px;
-      }
+    .let-talk {
+        margin-top: 30px;
+        h3 {
+            font-size: 17px;
+        }
+        .form-contact-us {
+            margin-left: 0px;
+            .policy {
+                display: unset;
+                button {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+        .form-group input {
+            margin: 10px 0;
+            @media (max-width: 480px) {
+                font-size: 15px;
+            }
+        }
+        .message input {
+            margin: 10px 0;
+        }
     }
-    .message input {
-      margin: 10px 0;
+    .visit-title {
+        @media (max-width: 480px) {
+            font-size: 17px;
+        }
+        margin: 40px 0;
     }
-  }
-  .visit-title {
-    @media (max-width: 480px) {
-      font-size: 17px;
-    }
-    margin: 40px 0;
-  }
 }
 
 @media (max-width: 991px) {
-  .form-contact-us {
-    margin-left: 20%;
-  }
+    .form-contact-us {
+        margin-left: 20%;
+    }
 }
 
 .map-location {
-  iframe {
-    width: 100%;
-    height: 500px;
-  }
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
 }
 
 // respon
 @media (max-width: 380px) {
-  .contact-banner {
-    .title-contact {
-      p {
-        font-size: 15px;
-      }
+    .contact-banner {
+        .title-contact {
+            p {
+                font-size: 15px;
+            }
+        }
     }
-  }
 }
