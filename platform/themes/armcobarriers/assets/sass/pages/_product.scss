@@ -74,6 +74,10 @@
   display: none !important;
 }
 
+.section-armco__header__cate {
+  font-size: 16px;
+}
+
 .product-wrapper {
   padding-top: 3.5%;
   #sidebar {
@@ -85,7 +89,7 @@
       .dropdown-toggle,
       .toggle-text {
         color: #000;
-        padding: 10px 0;
+        padding: 15px 0;
       }
       .icon {
         display: none;
@@ -112,7 +116,7 @@
       }
       li {
         a {
-          padding: 9px 34px;
+          padding: 9px 0;
           display: block;
           text-decoration: none;
           font-size: 16px;
