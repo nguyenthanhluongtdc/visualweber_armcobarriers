@@ -526,14 +526,15 @@
             position: fixed;
             top: 86px;
             @media(max-width: 768px) {
-                top: 63px;
+                top: 55px;
             }
             @media(max-width:567px) {
-                top: 50px;
+                top: 41px;
             }
             left: 0;
             bottom: 0;
             right: 0;
+            overflow-x: hidden;
             overflow-y: auto !important;
             height: auto;
             .dropdown {
