@@ -19,7 +19,7 @@ $featuredList = $featured->pluck('id')->all();
                     <div class="news section-armco__header__titleSmall mb-4">
                         <h2>{{$post->categories->first()->name}}</h2>
                     </div>
-                    <div class="section-armco__fs35">
+                    <div class="section-armco__fs25">
                         <h1>{{$post->name}}</h1>
                     </div>
                     <div class="time">
