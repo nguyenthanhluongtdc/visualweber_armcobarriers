@@ -172,7 +172,6 @@
   }
   .description {
     a {
-      font-weight: bold;
       font-family: $FolioStd-Medium;
       color: #000000;
       @include str_split();
