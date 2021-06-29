@@ -2,7 +2,7 @@
 <li class="active">
     <div class="d-flex align-items-center justify-content-between px-4 ">
         <a href="{{$category->url}}" class="toggle-text">
-            <p class="m-0 section-armco__header__cate"> {!! $category->name !!} </p>
+            <p class="m-0"> {!! $category->name !!} </p>
         </a>
         <a href="#side{{$category->id}}" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
 
