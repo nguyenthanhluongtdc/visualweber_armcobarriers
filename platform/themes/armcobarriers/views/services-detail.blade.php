@@ -95,10 +95,10 @@
         <?php } ?>
     </div>
 </section>
-<section class="mt-5 section-armco">
+<section class="section-armco">
     <div class="container-customize">
         <div class="wrap-product">
-            <div class="wrap2">
+            <div class="wrap2 my-5">
                 <div class="icon">
                     <i class="fal fa-arrow-right"></i>
                 </div>
