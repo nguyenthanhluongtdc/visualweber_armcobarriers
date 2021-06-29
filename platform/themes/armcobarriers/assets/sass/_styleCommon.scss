@@ -121,6 +121,9 @@ code {
     &__titleSmall {
         h1 {
             font-size: 40px;
+            @media(max-width: 991px) {
+                font-size: 35px;
+            }
         }
     }
     &__header__column {
@@ -154,6 +157,9 @@ code {
     // }
     &__sub__title {
         font-size: 20px;
+        @media(max-width: 991px) {
+            font-size: 18px;
+        }
     }
 }
 
