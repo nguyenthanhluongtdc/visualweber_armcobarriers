@@ -125,126 +125,122 @@ code {
         font-size: 40px;
       }
     }
-    &__fs35 h1 {
-      font-size: 35px;
-      @media (max-width: 1600px) {
-        font-size: 30px;
-      }
+  }
+  &__fs35 h1 {
+    font-size: 35px;
+    @media (max-width: 1600px) {
+      font-size: 30px;
     }
-    &__titleSmall {
-      h1 {
-        font-size: 40px;
-        @media (max-width: 991px) {
-          font-size: 35px;
-        }
-      }
-    }
-    &__header__column {
-      font-size: 20px;
-      @media (max-width: 1600px) {
-        font-size: 18px;
-      }
+  }
+  &__titleSmall {
+    h1 {
+      font-size: 40px;
       @media (max-width: 991px) {
-        font-size: 17px;
-      }
-    }
-    // &__header__title {
-    //   font-size: 60px;
-    // }
-    // &__header__titleSmall {
-    //   font-size: 40px;
-    // }
-    // h1 {
-    //   font-size: 60px;
-    // }
-    // &__fs35 h1 {
-    //   font-size: 35px;
-    // }
-    // &__titleSmall {
-    //   h1 {
-    //     font-size: 40px;
-    //   }
-    // }
-    // &__header__column {
-    //   font-size: 17px;
-    // }
-    &__sub__title {
-      font-size: 20px;
-      font-weight: bold;
-      @media (max-width: 991px) {
-        font-size: 18px;
+        font-size: 35px;
       }
     }
   }
-
-  @media (min-width: 992px) {
-    .mt-lg-6 {
-      margin-top: $rem4 !important;
+  &__header__column {
+    font-size: 20px;
+    @media (max-width: 1600px) {
+      font-size: 18px;
+    }
+    @media (max-width: 991px) {
+      font-size: 17px;
     }
   }
+  // &__header__title {
+  //   font-size: 60px;
+  // }
+  // &__header__titleSmall {
+  //   font-size: 40px;
+  // }
+  // h1 {
+  //   font-size: 60px;
+  // }
+  // &__fs35 h1 {
+  //   font-size: 35px;
+  // }
+  // &__titleSmall {
+  //   h1 {
+  //     font-size: 40px;
+  //   }
+  // }
+  // &__header__column {
+  //   font-size: 17px;
+  // }
+  &__sub__title {
+    font-size: 20px;
+    font-weight: bold;
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+}
 
-  @media (max-width: 991px) {
-    .pagination_style1 {
-      margin-top: 50px;
-    }
-    h1,
-    h2 {
-      font-size: $rem2-5;
-    }
-    .main-scroll {
-      position: relative;
-    }
-    .tabs-scroll {
-      overflow-x: scroll;
-      overflow-y: hidden;
-      .fa-hand-point-right {
-        font-size: $rem1-5;
-        position: absolute;
-        top: 0;
-        display: inline-block;
-      }
-    }
-    .nav-tabs a.nav-link {
+@media (min-width: 992px) {
+  .mt-lg-6 {
+    margin-top: $rem4 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .pagination_style1 {
+    margin-top: 50px;
+  }
+  .main-scroll {
+    position: relative;
+  }
+  .tabs-scroll {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    .fa-hand-point-right {
+      font-size: $rem1-5;
+      position: absolute;
+      top: 0;
       display: inline-block;
-      padding-left: 0;
-      padding-right: 80px;
     }
   }
-
-  /*fade*/
-
-  .animate {
-    opacity: 0;
-    transition: all 1s;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    pointer-events: none;
+  .nav-tabs a.nav-link {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 80px;
   }
+}
 
-  .animate.active {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-50%);
-  }
+/*fade*/
 
-  .slide-in-down {
-    transform: translateY(-100%) translateX(-50%);
-  }
+.animate {
+  opacity: 0;
+  transition: all 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  pointer-events: none;
+}
 
-  /*notification*/
+.animate.active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
 
-  .notification-button {
-    position: fixed;
-    top: 60px;
-    left: 50%;
-    z-index: 101;
-    padding: 10px 20px;
-    background: #fad906;
-    color: #000;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 800;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
-  }
+.slide-in-down {
+  transform: translateY(-100%) translateX(-50%);
+}
+
+/*notification*/
+
+.notification-button {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  z-index: 101;
+  padding: 10px 20px;
+  background: #fad906;
+  color: #000;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.05);
 }
