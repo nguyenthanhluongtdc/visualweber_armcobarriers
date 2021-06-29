@@ -1,6 +1,6 @@
 @if($category->parent_id==0)
 <li class="active">
-    <div class="d-flex align-items-center justify-content-between px-4">
+    <div class="d-flex align-items-center justify-content-between px-4 ">
         <a href="{{$category->url}}" class="toggle-text">
             <p class="m-0 section-armco__header__cate"> {!! $category->name !!} </p>
         </a>
@@ -12,7 +12,7 @@
 
         </a>
     </div>
-    <ul class="list-unstyled list-categories collapse px-4" id="side{{$category->id}}" style="">
+    <ul class="list-unstyled list-categories collapse px-4 " id="side{{$category->id}}" style="">
         @if ($category->children)
         {!!
         Menu::generateSidebar([
