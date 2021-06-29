@@ -50,12 +50,13 @@
     <p> Content updating </p>
 </div>
 @endif
-
+@if(has_field($solution, 'long_description_solution'))
 <div class="container-customize">
     <div class="service_detail-content ">
         {!! get_field($solution, 'long_description_solution') !!}
     </div>
 </div>
+@endif
 <section class="section-armco">
     <div class="container-customize">
         <div class="roadside-solutions general-section">
