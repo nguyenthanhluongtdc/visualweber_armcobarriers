@@ -55,6 +55,7 @@
 
 <section class="section-armco">
     <div class="container-customize">
+        @if(has_field($page, 'roadside_solutions'))
         <div class="roadside-solutions general-section">
             @foreach(get_field($page, 'roadside_solutions') as $sub)
             <div class="item">
@@ -68,6 +69,7 @@
             </div>
             @endforeach
         </div>
+        @endif
     </div>
 </section>
 
