@@ -143,9 +143,6 @@ code {
   &__header__column {
     font-size: 20px;
     @media (max-width: 1600px) {
-      font-size: 18px;
-    }
-    @media (max-width: 991px) {
       font-size: 17px;
     }
   }

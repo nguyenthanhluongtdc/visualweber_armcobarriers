@@ -158,8 +158,8 @@ $gray_text: #262626;
     .nav-tabs {
       position: relative;
       background-color: #fff;
-      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-      border-radius: 6px;
+      border-radius: 0px;
+      border-bottom: 1px solid #f1f1f1;
       margin-bottom: 20px;
       li {
         margin: 0px !important;
@@ -172,8 +172,9 @@ $gray_text: #262626;
         color: $gray_text;
         font-family: "FolioStd-Medium";
         opacity: 0.5019607843137255;
+        font-size: 25px;
         @media (max-width: 1600px) {
-          font-size: 20px;
+          font-size: 22px;
         }
       }
       .active {
