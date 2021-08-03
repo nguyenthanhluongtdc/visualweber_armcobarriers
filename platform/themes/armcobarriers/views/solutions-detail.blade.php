@@ -75,7 +75,7 @@
 
 @if(has_field($solution, 'description_16279739241'))
 <div class="container-customize">
-    <div class="description_16279739241-content ">
+    <div class="service_detail-content">
         {!! get_field($solution, 'description_16279739241') !!}
     </div>
 </div>
