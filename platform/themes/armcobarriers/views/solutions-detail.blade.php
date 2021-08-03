@@ -73,10 +73,10 @@
     </div>
 </section>
 
-@if(has_field($solution, 'long_description_solution'))
+@if(has_field($solution, 'description_16279739241'))
 <div class="container-customize">
-    <div class="service_detail-content ">
-        {!! get_field($solution, 'long_description_solution') !!}
+    <div class="description_16279739241-content ">
+        {!! get_field($solution, 'description_16279739241') !!}
     </div>
 </div>
 @endif
