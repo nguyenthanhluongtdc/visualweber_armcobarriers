@@ -191,8 +191,6 @@ class ArmcobarriersController extends PublicController
             ->add(__('Our Solutions'), url(get_slug_by_template('Solutions')))
             ->add($data['solution']->name, $data['solution']->url);
 
-        SeoHelper::setTitle($data['solution']->name)->setDescription($data['solution']->description);
-
         return Theme::scope('solutions-detail', $data)->render();
     }
 }
