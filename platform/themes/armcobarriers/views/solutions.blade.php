@@ -73,7 +73,6 @@
     </div>
 </section>
 
-{{--
 <section style="padding-top:4%" class="section-armco">
     <div class="container-customize">
         <div class="wrap-product">
@@ -108,7 +107,7 @@
         </div>
     </div>
 </section>
---}}
+
 <section class="section-armco">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")
