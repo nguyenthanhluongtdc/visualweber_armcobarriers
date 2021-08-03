@@ -23,7 +23,7 @@ use Platform\Blog\Services\BlogService;
 use Platform\Service\Models\Service;
 use Illuminate\Http\Request;
 use Platform\Blog\Repositories\Interfaces\PostInterface;
-
+use MetaBox;
 class ArmcobarriersController extends PublicController
 {
     /**
@@ -163,7 +163,7 @@ class ArmcobarriersController extends PublicController
         }
     }
 
-    public function getSolution($slug)
+    public function getSolution(Request $request, $slug)
     {
         $slug = SlugHelper::getSlug($slug, SlugHelper::getPrefix(Solution::class, 'solutions'));
 
@@ -176,6 +176,15 @@ class ArmcobarriersController extends PublicController
         if (blank($data)) {
             abort(404);
         }
+        
+        $meta = MetaBox::getMetaData($data['solution'], 'seo_meta', true);
+            SeoHelper::setTitle($meta['seo_title'] ?? $data['solution']->name)
+                ->setDescription($meta['seo_description'] ?? (!blank($data['solution']->description) ? $data['solution']->description : theme_option('site_description')))
+                ->openGraph()
+                ->setUrl($request->url())
+                ->setImage(RvMedia::getImageUrl(@$data['solution']->image, 'og', false, RvMedia::getImageUrl(theme_option('seo_og_image'), 'og')))
+                ->addProperty('image:width', '1200')
+                ->addProperty('image:height', '630');
 
         Theme::breadcrumb()
             ->add(__('Home'), url('/'))
