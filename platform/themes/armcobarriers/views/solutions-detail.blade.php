@@ -6,7 +6,6 @@
         <div class="wrap-top">
             <div class="top2 section-armco__titleSmall">
                 <h1>{{ $solution->name}}</h1>
-                <h4 class="section-armco__sub__title"> {{ get_field($solution, 'short_description') }}</h4>
             </div>
         </div>
     </div>
@@ -50,13 +49,6 @@
     <p> Content updating </p>
 </div>
 @endif
-@if(has_field($solution, 'long_description_solution'))
-<div class="container-customize">
-    <div class="service_detail-content ">
-        {!! get_field($solution, 'long_description_solution') !!}
-    </div>
-</div>
-@endif
 <section class="section-armco">
     <div class="container-customize">
         @if(has_field($solution, 'solution_details_content'))
@@ -81,6 +73,13 @@
     </div>
 </section>
 
+@if(has_field($solution, 'long_description_solution'))
+<div class="container-customize">
+    <div class="service_detail-content ">
+        {!! get_field($solution, 'long_description_solution') !!}
+    </div>
+</div>
+@endif
 {{--
 <section>
     <div class="container-customize">
