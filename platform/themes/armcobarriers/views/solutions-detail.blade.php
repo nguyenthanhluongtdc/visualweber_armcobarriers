@@ -80,7 +80,7 @@
         @endif
     </div>
 </section>
-{{--
+
 <section>
     <div class="container-customize">
         <?php if(!empty(get_field($solution, 'product_quality_solution'))) { ?>
@@ -119,7 +119,7 @@
         </div>
     </div>
 </section>
---}}
+
 <section class="mt-5 section-armco">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")
