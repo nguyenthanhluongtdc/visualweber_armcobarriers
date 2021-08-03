@@ -14,7 +14,7 @@ class AddOrderingToAppSolutionsTable extends Migration
     public function up()
     {
         Schema::table('app_solutions', function (Blueprint $table) {
-            //
+            $table->tinyInteger('ordering')->nullable();
         });
     }
 
