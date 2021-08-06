@@ -15,7 +15,6 @@ use Platform\Base\Events\UpdatedContentEvent;
 use Platform\Base\Http\Responses\BaseHttpResponse;
 use Platform\Solution\Forms\SolutionForm;
 use Platform\Base\Forms\FormBuilder;
-use Assets;
 
 class SolutionController extends BaseController
 {
@@ -51,7 +50,6 @@ class SolutionController extends BaseController
     public function create(FormBuilder $formBuilder)
     {
         page_title()->setTitle(trans('plugins/solution::solution.create'));
-        Assets::addStylesDirectly(['vendor/core/plugins/solutions/css/style.css']);
 
         return $formBuilder->create(SolutionForm::class)->renderForm();
     }
@@ -64,7 +62,6 @@ class SolutionController extends BaseController
     public function store(SolutionRequest $request, BaseHttpResponse $response)
     {
         $solution = $this->solutionRepository->createOrUpdate($request->input());
-        Assets::addStylesDirectly(['vendor/core/plugins/solutions/css/style.css']);
 
         event(new CreatedContentEvent(SOLUTION_MODULE_SCREEN_NAME, $request, $solution));
 
@@ -86,8 +83,6 @@ class SolutionController extends BaseController
 
         event(new BeforeEditContentEvent($request, $solution));
 
-        Assets::addStylesDirectly(['vendor/core/plugins/solutions/css/style.css']);
-
         page_title()->setTitle(trans('plugins/solution::solution.edit') . ' "' . $solution->name . '"');
 
         return $formBuilder->create(SolutionForm::class, ['model' => $solution])->renderForm();
@@ -106,8 +101,6 @@ class SolutionController extends BaseController
         $solution->fill($request->input());
 
         $this->solutionRepository->createOrUpdate($solution);
-
-        Assets::addStylesDirectly(['vendor/core/plugins/solutions/css/style.css']);
 
         event(new UpdatedContentEvent(SOLUTION_MODULE_SCREEN_NAME, $request, $solution));
 
