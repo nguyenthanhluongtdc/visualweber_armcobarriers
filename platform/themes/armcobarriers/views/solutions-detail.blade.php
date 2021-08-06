@@ -88,16 +88,34 @@
         <a href="{{get_sub_field($item2,'link')}}" title="{{get_sub_field($item2,'title')}}">
             <h5> {{get_sub_field($item2,'title')}}</h5>
             <p>{!!get_sub_field($item2,'Link')!!}</p>
-
         </a>
     </div>
     @endforeach
     <?php } ?>
 </div>
 
-@if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
-  {!! render_object_gallery($galleries) !!}
+@php 
+    $galleries = gallery_meta_data($solution);
+@endphp
+
+@if(!empty($galleries))
+    <div class="container-customize mt-5">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                @foreach($galleries as $item)
+                    <div class="swiper-slide">
+                        <img src="{{rvMedia::getImageUrl($item['img'])}}" alt="">
+                    </div>
+                @endforeach
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 @endif
+
+{{-- @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
+  {!! render_object_gallery($galleries) !!}
+@endif --}}
 
 {{--
 <section>
@@ -144,3 +162,18 @@
         @includeIf("theme.armcobarriers::views.modules.form-signup")
     </div>
 </section>
+
+<style>
+
+</style>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+    });
+  </script>
