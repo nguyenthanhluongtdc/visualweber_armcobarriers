@@ -80,6 +80,11 @@
     </div>
 </div>
 @endif
+
+@if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
+  {!! render_object_gallery($galleries) !!}
+@endif
+
 {{--
 <section>
     <div class="container-customize">
