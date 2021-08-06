@@ -81,6 +81,20 @@
 </div>
 @endif
 
+<div class="service_detail-imglist container-customize">
+    <?php if(!empty(get_field($solution, 'service_list'))) { ?>
+    @foreach (get_field($solution, 'solution_detail_content') as $item2)
+    <div class="item_img" style="background-image: url('{{ RvMedia::getImageUrl(get_sub_field($item2, 'image')) }}')">
+        <a href="{{get_sub_field($item2,'link')}}" title="{{get_sub_field($item2,'title')}}">
+            <h5> {{get_sub_field($item2,'title')}}</h5>
+            <p>{!!get_sub_field($item2,'Link')!!}</p>
+
+        </a>
+    </div>
+    @endforeach
+    <?php } ?>
+</div>
+
 @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
   {!! render_object_gallery($galleries) !!}
 @endif
