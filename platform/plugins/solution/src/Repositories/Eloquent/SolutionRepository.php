@@ -10,7 +10,7 @@ class SolutionRepository extends RepositoriesAbstract implements SolutionInterfa
 {
     public function getSolution(){
         $data = $this->model
-            ->where('app_solutions.status', BaseStatusEnum::PUBLISHED);
+            ->where('app_solutions.status', BaseStatusEnum::PUBLISHED)->orderBy('ordering');
 
         return $this->applyBeforeExecuteQuery($data)->get();
     }

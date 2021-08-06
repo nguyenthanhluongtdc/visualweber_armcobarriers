@@ -6,7 +6,6 @@
         <div class="wrap-top">
             <div class="top2 section-armco__titleSmall">
                 <h1>{{ $solution->name}}</h1>
-                <h4 class="section-armco__sub__title"> {{ get_field($solution, 'short_description') }}</h4>
             </div>
         </div>
     </div>
@@ -50,13 +49,6 @@
     <p> Content updating </p>
 </div>
 @endif
-@if(has_field($solution, 'long_description_solution'))
-<div class="container-customize">
-    <div class="service_detail-content ">
-        {!! get_field($solution, 'long_description_solution') !!}
-    </div>
-</div>
-@endif
 <section class="section-armco">
     <div class="container-customize">
         @if(has_field($solution, 'solution_details_content'))
@@ -81,6 +73,19 @@
     </div>
 </section>
 
+@if(has_field($solution, 'description_16279739241'))
+<div class="container-customize">
+    <div class="service_detail-content">
+        {!! get_field($solution, 'description_16279739241') !!}
+    </div>
+</div>
+@endif
+
+@if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
+  {!! render_object_gallery($galleries) !!}
+@endif
+
+{{--
 <section>
     <div class="container-customize">
         <?php if(!empty(get_field($solution, 'product_quality_solution'))) { ?>
@@ -119,6 +124,7 @@
         </div>
     </div>
 </section>
+--}}
 <section class="mt-5 section-armco">
     <div class="container-customize">
         @includeIf("theme.armcobarriers::views.modules.form-signup")

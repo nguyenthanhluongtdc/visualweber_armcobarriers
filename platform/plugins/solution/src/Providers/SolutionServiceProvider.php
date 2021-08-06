@@ -33,11 +33,13 @@ class SolutionServiceProvider extends ServiceProvider
             ->loadAndPublishTranslations()
             ->loadAndPublishViews()
             ->loadRoutes(['web']);
-
+        
         Event::listen(RouteMatched::class, function () {
             // if (defined('LANGUAGE_MODULE_SCREEN_NAME')) {
             //     \Language::registerModule([Solution::class]);
             // }
+            
+            \Gallery::registerModule([Solution::class]);
 
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-solution',
