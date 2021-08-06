@@ -246,4 +246,9 @@ code {
 .list-photos-gallery>.row>.photo-gallery-item {
     flex: 0 0 25% !important;
     max-width: 25% !important;
+    
+    @media (max-width: 768px) {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
