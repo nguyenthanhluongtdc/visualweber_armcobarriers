@@ -82,11 +82,7 @@
 @endif
 
 @if (defined('GALLERY_MODULE_SCREEN_NAME') && !empty($galleries = gallery_meta_data($solution)))
-<div class="container-customize">
-    <div class="service_detail-content">
   {!! render_object_gallery($galleries) !!}
-    </div>
-</div>
 @endif
 
 {{--
