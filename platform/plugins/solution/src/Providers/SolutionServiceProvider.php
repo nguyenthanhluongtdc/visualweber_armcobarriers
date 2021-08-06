@@ -39,6 +39,8 @@ class SolutionServiceProvider extends ServiceProvider
             //     \Language::registerModule([Solution::class]);
             // }
 
+            \Gallery::registerModule([YourPluginModel::class]);
+            
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-solution',
                 'priority'    => 5,
