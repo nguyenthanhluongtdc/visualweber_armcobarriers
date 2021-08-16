@@ -78,12 +78,22 @@ $query = isset($query) ? $query : "";
             <div class="row">
                 <div class="col-lg-3 col-12 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0 mb-3 mb-lg-0">
                     <div id="sidebar" class="mw-100">
-                        <ul class="list-unstyled">
+                        {{-- <ul class="list-unstyled">
                             @if(isset($categories))
                             @foreach($categories as $category)
                             @includeIf('plugins/ecommerce::themes.modules.parent', ['category'=> $category, 'catego'=>$catego])
                             @endforeach
                             @endif
+                        </ul> --}}
+
+                        <ul class="list-unstyled">
+                        {!!
+                            Menu::renderMenuLocation('product-categories', [ 
+                                'options' => [],
+                                'theme'   => true,
+                                'view'    => 'menu-product-categories'
+                            ])
+                        !!}
                         </ul>
                     </div>
                 </div>
