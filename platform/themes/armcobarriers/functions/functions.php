@@ -36,5 +36,7 @@ register_sidebar([
     'description' => __('This the description for widget area'),
 ]);
 
+Menu::addMenuLocation('product-categories', 'Product categories menu');
+
 RvMedia::setUploadPathAndURLToPublic();
 
