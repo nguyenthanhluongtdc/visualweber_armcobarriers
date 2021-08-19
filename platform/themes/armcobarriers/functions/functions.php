@@ -40,3 +40,8 @@ Menu::addMenuLocation('product-categories', 'Product categories menu');
 
 RvMedia::setUploadPathAndURLToPublic();
 
+RvMedia::addSize('page_product', 280, 260)
+        ->addSize('page_product_detail_large', 660, 590)
+        ->addSize('page_product_detail_secondary', 90, 80);
+
+

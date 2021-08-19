@@ -211,6 +211,17 @@ theme_option()
             ],
         ],
         'helper'     => __('Copyright on footer of site'),
+    ])
+    ->setField([
+        'id'         => 'image_placholder',
+        'section_id' => 'opt-text-subsection-general',
+        'type'       => 'mediaImage',
+        'label'      => 'Image placholder',
+        'attributes' => [
+            'name'  => 'image_placholder',
+            'value' => null,
+        ],
+        'helper' => __('picture size(500x500)px'),
     ]);
 
 

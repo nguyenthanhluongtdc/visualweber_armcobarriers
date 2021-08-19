@@ -44,14 +44,16 @@ array_push($tags, $tag->name);
             <!---product infomation-->
             <div id="product_info" class="col-sm-12 col-md-12">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-md-6">
                         <div class="row ml-0">
                             <div id="large-slider" class="col-lg-10 col-9 pl-0">
                                 <div class="splide__track">
                                     <ul class="splide__list">
                                         @foreach($productImages as $img)
                                         <li class="splide__slide">
-                                            <img src="{{rvMedia::getImageUrl($img, 'product_detail')}}" alt="">
+                                            <img src="{{ Storage::disk('public')->exists($img) ? 
+                                            RvMedia::getImageUrl($img, 'page_product_detail_large') : 
+                                            RvMedia::getImageUrl(theme_option('image_placholder'), 'page_product_detail_large') }}" alt="">
                                         </li>
                                         @endforeach
                                     </ul>
@@ -63,7 +65,9 @@ array_push($tags, $tag->name);
                                     <ul class="splide__list">
                                         @foreach($productImages as $thumb)
                                         <li class="splide__slide">
-                                            <img src="{{rvMedia::getImageUrl($thumb, 'product')}}">
+                                            <img src="{{ Storage::disk('public')->exists($thumb) ? 
+                                            RvMedia::getImageUrl($thumb, 'page_product_detail_secondary') : 
+                                            RvMedia::getImageUrl(theme_option('image_placholder'), 'page_product_detail_secondary') }}">
                                         </li>
                                         @endforeach
                                     </ul>
@@ -72,11 +76,9 @@ array_push($tags, $tag->name);
                         </div>
                     </div>
 
-                    <div class="col-12 col-lg-6 info">
+                    <div class="col-12 col-md-6 info">
                         <h1> {{$product->name}} </h1>
-                        @php
-                        echo $product->content
-                        @endphp
+                        {!! $product->content !!}
                         <ul class="list_info">
                             <li>
                                 <p>Model:</p>
@@ -156,7 +158,7 @@ array_push($tags, $tag->name);
                             @if(!empty($hasFieldTabs))
                             @foreach($hasFieldTabs as $key => $tab)
                             <div class="tab-pane fade {{$key==0?'active show':''}}" id="tab{{$key}}" role="tabpanel" aria-labelledby="tab{{$key}}-tab">
-                                {{has_sub_field($tab,'tabs_content')}}
+                                {!!has_sub_field($tab,'tabs_content')!!}
                             </div>
                             @endforeach
                             @endif
@@ -190,7 +192,9 @@ array_push($tags, $tag->name);
                         @foreach($other_products as $other_pro)
                         <div class="swiper-slide product_item">
                             <div class="box-img">
-                                <img class="img-fluid" src="{{rvMedia::getImageUrl($other_pro->image)}}" alt="{{$other_pro->name}}">
+                                <img class="img-fluid" src="{{ Storage::disk('public')->exists($other_pro->image) ? 
+                                RvMedia::getImageUrl($other_pro->image, 'page_product') : 
+                                RvMedia::getImageUrl(theme_option('image_placholder'), 'page_product') }}" alt="{{$other_pro->name}}">
                                 <a href="{{ $other_pro->url }}" title="{{$other_pro->name}}">
                                     <p class="overlay"><i class="far fa-chevron-circle-right"></i></p>
                                 </a>
@@ -262,10 +266,6 @@ array_push($tags, $tag->name);
                 , 1200: {
                     fixedWidth: 55
                     , height: '17rem'
-                , }
-                , 992: {
-                    fixedWidth: 100
-                    , height: '32rem'
                 , }
                 , 768: {
                     fixedWidth: 100
