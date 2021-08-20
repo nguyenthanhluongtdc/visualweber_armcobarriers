@@ -14,13 +14,25 @@ $tabs_about = get_field($page, 'about_us');
     </div>
 </section>
 
-<div class="tab-content tabs-about wrap-cont" id="nav-tabContent">
+<div class="tab-content tabs-about section-full wrap-cont" id="nav-tabContent">
     <div class="container-fluid-customize h-100">
-        <div class="image-main">
-            {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
-            alt=""> --}}
-            <img src="https://armcobarriers.dev.gistensal.com/storage/about-us/banner-2a.jpg" alt="">
-        </div>
+            {{-- <div class="image-main">
+                <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
+                alt="">
+                <img src="https://armcobarriers.dev.gistensal.com/storage/about-us/banner-2a.jpg" alt="">
+            </div> --}}
+            
+            @if(Storage::disk('public')->exists(has_field($page, 'about_us_banner')))
+                <div class="image-main">
+                    {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
+                    alt=""> --}}
+                    <img src="{{ RvMedia::getImageUrl(has_field($page, 'about_us_banner')) }}" alt="{{ get_field($solution, 'banner_title_solution') }}">
+                </div>
+
+                @else 
+                <div class="image-background"></div>
+
+            @endif
 
         <div class="content-about d-flex align-items-center h-100">
             <div class="container-customize h-100">

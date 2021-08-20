@@ -32,25 +32,61 @@
 </div>
 
 @if(!empty($soluton_first))
-@if(!empty(get_field($soluton_first, 'banner_description_solution')))
-<div class="service-detail-banner">
-    <div class="left col-md-10 col-12">
-        <h4 class="left-title">
-            {{ get_field($soluton_first, 'banner_title_solution') }}
-        </h4>
-        <div class="desc">
-            {!! get_field($soluton_first, 'banner_description_solution') !!}
+    @if(!empty(get_field($soluton_first, 'banner_description_solution')))
+        {{-- <div class="service-detail-banner">
+            <div class="left col-md-10 col-12">
+                <h4 class="left-title">
+                    {{ get_field($soluton_first, 'banner_title_solution') }}
+                </h4>
+                <div class="desc">
+                    {!! get_field($soluton_first, 'banner_description_solution') !!}
+                </div>
+            </div>
+            <div class="right">
+                <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
+            </div>
+        </div> --}}
+
+        <div class="tab-content section-full background-n wrap-cont" id="nav-tabContent">
+            <div class="container-fluid-customize h-100">
+
+                @if(Storage::disk('public')->exists(get_field($soluton_first, 'big_picture_solution')))
+                    <div class="image-main">
+                        {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
+                        alt=""> --}}
+                        <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
+                    </div>
+
+                    @else 
+
+                    <div class="image-background"></div>
+                @endif
+        
+                <div class="content-about d-flex align-items-center h-100">
+                    <div class="container-customize h-100">
+                        <div class="d-flex align-items-center h-100">
+                           
+                            <div class="col-xl-9 col-lg-8 col-12 content">
+                                <div class="bg-opacity">
+                                
+                                </div>
+                                <h4 class="left-title">
+                                    {{ get_field($soluton_first, 'banner_title_solution') }}
+                                </h4>
+                                <div class="desc">
+                                    {!! get_field($soluton_first, 'banner_description_solution') !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="right">
-        <img src="{{ RvMedia::getImageUrl(get_field($soluton_first, 'big_picture_solution')) }}" alt="">
-    </div>
-</div>
-@else
-<div class="container-customize">
-    <p> Content updating </p>
-</div>
-@endif
+    @else
+        <div class="container-customize">
+            <p> Content updating </p>
+        </div>
+    @endif
 @endif
 
 <section class="section-armco">
