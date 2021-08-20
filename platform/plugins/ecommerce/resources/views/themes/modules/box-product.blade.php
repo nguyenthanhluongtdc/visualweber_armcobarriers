@@ -4,7 +4,12 @@
         <div class="product-item-wrapper">
             <a href="{{$product->url}}" title="{{$product->name}}">
                 <div class="product-item">
-                    <img class="product-image" src="{{rvMedia::getImageUrl($product->image)}}" alt="{{$product->name}}">
+                    @php 
+                        $image_url = Storage::disk('public')->exists($product->image) ? 
+                        RvMedia::getImageUrl($product->image, 'page_product') : 
+                        RvMedia::getImageUrl(theme_option('image_placholder'), 'page_product');
+                    @endphp
+                    <img class="product-image" src="{{ $image_url }}" alt="{{$product->name}}">
                     <div class="overlay"><i class="far fa-chevron-circle-right"></i></div>
                 </div>
                 <h4 class="product-name">

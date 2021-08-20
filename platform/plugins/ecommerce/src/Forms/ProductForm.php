@@ -168,7 +168,7 @@ class ProductForm extends FormAbstract
             $this
                 ->removeMetaBox('variations')
                 ->addAfter('content', 'images[]', 'mediaImages', [
-                    'label'      => trans('plugins/ecommerce::products.form.image'),
+                    'label'      => trans('plugins/ecommerce::products.form.image').' - (660x590)px',
                     'label_attr' => ['class' => 'control-label'],
                     'values'     => $productId ? $this->getModel()->images : [],
                 ])
