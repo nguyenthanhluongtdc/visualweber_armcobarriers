@@ -92,10 +92,17 @@ $tabs_about = get_field($page, 'about_us');
                     @foreach (get_field($page, 'key_feature') as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="product0">
-                            <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}"
+                            <a href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
+                                <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}"
                                 alt="{{get_sub_field($item , 'title')}}">
+                            </a>
+                          
+                            
                             <h3 class="section-armco__header__column">
-                                {{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
+                                <a class="text-dark" href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
+                                    {{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}
+                                </a>
+                            </h3>
                             {!!has_sub_field($item , 'description') ? get_sub_field($item , 'description'):''!!}
                         </div>
                     </div>
