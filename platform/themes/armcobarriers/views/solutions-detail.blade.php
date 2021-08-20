@@ -72,7 +72,7 @@
                                 {{ get_field($solution, 'banner_title_solution') }}
                             </h4>
                             <div class="desc">
-                                {!! get_field($solution, 'banner_title_solution') !!}
+                                {!! get_field($solution, 'banner_description_solution') !!}
                             </div>
                         </div>
                     </div>
