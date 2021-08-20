@@ -26,7 +26,7 @@ $tabs_about = get_field($page, 'about_us');
                 <div class="image-main">
                     {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
                     alt=""> --}}
-                    <img src="{{ RvMedia::getImageUrl(has_field($page, 'about_us_banner')) }}" alt="{{ get_field($solution, 'banner_title_solution') }}">
+                    <img src="{{ RvMedia::getImageUrl(has_field($page, 'about_us_banner')) }}" alt=""">
                 </div>
 
                 @else 

@@ -67,7 +67,7 @@
                         <div class="d-flex align-items-center h-100">
                            
                             <div class="col-xl-9 col-lg-8 col-12 content">
-                                <div class="bg-opacity">
+                                <div class="bg-opacity bg-gray">
                                 
                                 </div>
                                 <h4 class="left-title">

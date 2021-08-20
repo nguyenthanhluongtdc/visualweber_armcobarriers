@@ -48,7 +48,7 @@
     <div class="tab-content section-full background-n wrap-cont" id="nav-tabContent">
         <div class="container-fluid-customize h-100">
 
-            @if(Storage::disk('public')->exists(get_field($solution, 'banner_title_solution')))
+            @if(Storage::disk('public')->exists(get_field($solution, 'big_picture_solution')))
                 <div class="image-main">
                     {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
                     alt=""> --}}
@@ -65,7 +65,7 @@
                     <div class="d-flex align-items-center h-100">
                        
                         <div class="col-xl-9 col-lg-8 col-12 content">
-                            <div class="bg-opacity">
+                            <div class="bg-opacity bg-gray">
                             
                             </div>
                             <h4 class="left-title">
