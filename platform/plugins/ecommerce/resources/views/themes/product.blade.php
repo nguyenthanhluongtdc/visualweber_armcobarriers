@@ -102,7 +102,14 @@ array_push($tags, $tag->name);
                                 </p>
                                 @else
                                 <p>
-                                    {{ format_price($originalProduct->price)}}
+                                    @if($originalProduct->price > 0) 
+                                        {{ format_price($originalProduct->price)}}
+                                        @else 
+                                        <span class="text-danger">
+                                            Call us now!
+                                        </span>
+
+                                    @endif
                                 </p>
                                 @endif
                             </li>
