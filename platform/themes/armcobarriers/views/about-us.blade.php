@@ -16,7 +16,7 @@ $tabs_about = get_field($page, 'about_us');
 
 <div class="tab-content tabs-about" id="nav-tabContent">
     <div class="container-fluid-customize">
-        <div class="wrap-cont" style="background-image:linear-gradient(266deg, rgb(255 255 255 / 0%) 0%, rgb(236 229 228 / 0%) 44%, rgb(255 255 255 / 22%) 57%, rgb(255 255 255 / 95%) 68%),url({{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}})">
+        <div class="wrap-cont" style="background-image:linear-gradient(271deg, rgb(255 255 255 / 0%) -1%, rgb(236 229 228 / 0%) 0%, rgb(255 255 255 / 53%) 0%, rgb(255 255 255 / 50%) 64%),url({{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}})">
             <div class="container-customize h-100">
                 <div class="content-about d-flex align-items-center h-100">
                     <div class="col-xl-9 col-lg-8 col-12">{!!has_field($page, 'about_us_banner_description') ? get_field($page, 'about_us_banner_description'):''!!}</div>
