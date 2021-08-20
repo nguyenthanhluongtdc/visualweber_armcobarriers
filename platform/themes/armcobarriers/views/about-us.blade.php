@@ -93,12 +93,12 @@ $tabs_about = get_field($page, 'about_us');
                     <div class="col-lg-4 col-md-6">
                         <div class="product0">
                             @if(!empty(has_sub_field($item , 'link')))
-                                <a href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
+                                <a class="d-block" href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
                                     <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}"
                                     alt="{{get_sub_field($item , 'title')}}">
                                 </a>
                                 <h3 class="section-armco__header__column">
-                                    <a class="text-dark" href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
+                                    <a class="text-dark d-block" href=" {{has_sub_field($item , 'link') ? get_sub_field($item , 'link'):''}}">
                                         {{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}
                                     </a>
                                 </h3>
