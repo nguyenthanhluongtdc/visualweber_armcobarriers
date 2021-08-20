@@ -14,12 +14,24 @@ $tabs_about = get_field($page, 'about_us');
     </div>
 </section>
 
-<div class="tab-content tabs-about" id="nav-tabContent">
-    <div class="container-fluid-customize">
-        <div class="wrap-cont" style="background-image:linear-gradient(271deg, rgb(255 255 255 / 0%) -1%, rgb(236 229 228 / 0%) 0%, rgb(255 255 255 / 53%) 0%, rgb(255 255 255 / 50%) 64%),url({{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}})">
+<div class="tab-content tabs-about wrap-cont" id="nav-tabContent">
+    <div class="container-fluid-customize h-100">
+        <div class="image-main">
+            {{-- <img src="{{ get_object_image(has_field( $page ,'about_us_banner') ? get_field( $page ,'about_us_banner'):'')}}"
+            alt=""> --}}
+            <img src="https://armcobarriers.dev.gistensal.com/storage/about-us/banner-2a.jpg" alt="">
+        </div>
+
+        <div class="content-about d-flex align-items-center h-100">
             <div class="container-customize h-100">
-                <div class="content-about d-flex align-items-center h-100">
-                    <div class="col-xl-9 col-lg-8 col-12">{!!has_field($page, 'about_us_banner_description') ? get_field($page, 'about_us_banner_description'):''!!}</div>
+                <div class="d-flex align-items-center h-100">
+                   
+                    <div class="col-xl-9 col-lg-8 col-12 content">
+                        <div class="bg-opacity">
+                        
+                        </div>
+                        {!!has_field($page, 'about_us_banner_description') ?
+                        get_field($page, 'about_us_banner_description'):''!!}</div>
                 </div>
             </div>
         </div>
@@ -49,7 +61,8 @@ $tabs_about = get_field($page, 'about_us');
                     <i class="far fa-long-arrow-right"></i>
                 </div>
                 <div class="view">
-                    <a href="{{route('public.products')}}" title="{{route('public.products')}}">{{_('View our products')}}</a>
+                    <a href="{{route('public.products')}}"
+                        title="{{route('public.products')}}">{{_('View our products')}}</a>
                 </div>
             </div>
         </div>
@@ -79,8 +92,10 @@ $tabs_about = get_field($page, 'about_us');
                     @foreach (get_field($page, 'key_feature') as $item)
                     <div class="col-lg-4 col-md-6">
                         <div class="product0">
-                            <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}" alt="{{get_sub_field($item , 'title')}}">
-                            <h3 class="section-armco__header__column">{{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
+                            <img src="{{has_sub_field( $item ,'image') ? get_object_image(get_sub_field( $item ,'image')):''}}"
+                                alt="{{get_sub_field($item , 'title')}}">
+                            <h3 class="section-armco__header__column">
+                                {{has_sub_field($item , 'title') ? get_sub_field($item , 'title'):''}}</h3>
                             {!!has_sub_field($item , 'description') ? get_sub_field($item , 'description'):''!!}
                         </div>
                     </div>
