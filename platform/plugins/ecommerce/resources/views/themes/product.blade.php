@@ -82,7 +82,7 @@ array_push($tags, $tag->name);
                         <ul class="list_info">
                             <li>
                                 <p>Model:</p>
-                                <p>{{ has_field($product, 'model_product') }}</p>
+                                <p> {!! $product->sku !!} </p>
                             </li>
                             <li>
                                 <p>Brand:</p>
