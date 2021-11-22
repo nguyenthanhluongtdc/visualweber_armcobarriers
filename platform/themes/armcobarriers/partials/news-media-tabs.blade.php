@@ -142,4 +142,14 @@
         var actPosition = $("#tile-1 .nav-tabs .active").position();
         $("#tile-1 .slider").css({ "left": +actPosition.left, "width": actWidth });
     });
+
+
+    const window.SCROLL = true;
+
+    if(window.SCROLL) {
+        var target = $('ul.nav-tabs .nav-link.active').attr("href");
+        $('html, body').stop().animate({
+                scrollTop: $(target).offset().top-170
+        }, 600);
+    }
 </script>
